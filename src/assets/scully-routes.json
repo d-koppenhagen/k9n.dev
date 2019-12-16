@@ -1,0 +1,28 @@
+[
+  {
+    "route": "/blog/2019-11-ngx-semantic-version",
+    "title": "ngx-semantic-version: enhance your git and release workflow",
+    "description": "ngx-semantic-version: enhance your git and release workflow",
+    "publish": true,
+    "author": "Danny Koppenhagen",
+    "mail": "mail@d-koppenhagen.de",
+    "published": "2019-11-06T00:00:00.000Z",
+    "keywords": [
+      "Angular",
+      "Angular CLI",
+      "Angular Schematics",
+      "release",
+      "commit",
+      "commitlint",
+      "husky",
+      "commitizen",
+      "standard-version",
+      "semver",
+      "Semantic Version",
+      "Conventional Commits",
+      "Conventional Changelog"
+    ],
+    "language": "en",
+    "thumbnail": "ngx-semantic-version-header.jpg"
+  }
+]
