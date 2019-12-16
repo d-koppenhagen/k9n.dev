@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'd-koppenhagen-website'`, () => {
+  it(`should have as title 'd-koppenhagen'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('d-koppenhagen-website');
+    expect(app.title).toEqual('d-koppenhagen');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('d-koppenhagen-website app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('d-koppenhagen app is running!');
   });
 });

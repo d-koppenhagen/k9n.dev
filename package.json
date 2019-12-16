@@ -1,7 +1,9 @@
 {
   "name": "d-koppenhagen-website",
   "version": "0.0.0",
+  "description": "d-koppenhagen.de website",
   "scripts": {
+    "release": "standard-version",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -12,6 +14,12 @@
     "scully:serve": "scully serve"
   },
   "private": true,
+  "author": "Danny Koppenhagen <mail@d-koppenhagen.de> (https://d-koppenhagen.de)",
+  "homepage": "https://github.com/d-koppenhagen/d-koppenhagen-website",
+  "bugs": {
+    "url": "https://github.com/d-koppenhagen/d-koppenhagen-website/issues",
+    "email": "mail@d-koppenhagen.de"
+  },
   "dependencies": {
     "@angular/animations": "~9.0.0-rc.6",
     "@angular/common": "~9.0.0-rc.6",
@@ -24,6 +32,7 @@
     "@scullyio/init": "0.0.7",
     "@scullyio/ng-lib": "latest",
     "@scullyio/scully": "latest",
+    "ngx-markdown": "^8.2.1",
     "rxjs": "~6.5.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -33,9 +42,9 @@
     "@angular/cli": "~9.0.0-rc.6",
     "@angular/compiler-cli": "~9.0.0-rc.6",
     "@angular/language-service": "~9.0.0-rc.6",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -44,9 +53,26 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "ngx-semantic-version": "^2.0.0-beta.3",
     "protractor": "~5.4.2",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
-    "typescript": "~3.6.4"
+    "typescript": "~3.6.4",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.1.0",
+    "standard-version": "^7.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
