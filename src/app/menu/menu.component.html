@@ -1,10 +1,14 @@
 <!-- Menu -->
-<nav id="menu">
+<nav id="menu" class="is-menu-visible" cdkTrapFocus>
   <div class="inner">
     <h2>Menu</h2>
     <ul class="links">
-      <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
+      <li>
+        <a routerLink="/blog" (click)="menuClicked()" routerLinkActive="active"
+          >Blog</a
+        >
+      </li>
     </ul>
-    <a href="#" class="close">Close</a>
+    <a href="#" class="close" (click)="menuClicked()">Close</a>
   </div>
 </nav>

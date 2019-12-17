@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
+import { A11yModule } from '@angular/cdk/a11y';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
@@ -22,7 +24,7 @@ import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
     NavbarComponent,
     BlogPreviewComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, A11yModule],
   providers: [ScullyRoutesService],
   bootstrap: [AppComponent],
 })
