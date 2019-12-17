@@ -1,0 +1,19 @@
+<section
+  class="wrapper spotlight"
+  [class]="'style' + (i + 1)"
+  [ngClass]="{ alt: i % 2 === 1 }"
+  *ngFor="let post of blogPostData$ | async; let i = index"
+>
+  <div class="inner">
+    <a href="#" class="image">
+      <img [src]="post.thumbnail" alt="thumbnail" />
+    </a>
+    <div class="content">
+      <h2 class="major">{{ post.title }}</h2>
+      <p>
+        {{ post.description }}
+      </p>
+      <a [routerLink]="post.route" class="special">Read more...</a>
+    </div>
+  </div>
+</section>

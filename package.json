@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
-    "scully:serve": "scully serve"
+    "scully:serve": "scully serve",
+    "scully:all": "npm run build && npm run scully && npm run scully:serve"
   },
   "private": true,
   "author": "Danny Koppenhagen <mail@d-koppenhagen.de> (https://d-koppenhagen.de)",
