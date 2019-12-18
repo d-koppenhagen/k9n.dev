@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-$fa-font-path: '~font-awesome/fonts';
-@import '~font-awesome/scss/font-awesome.scss';
+/* Font Awesome */
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/v4-shims';
+
+/* Other */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:800&display=swap');
 @import 'assets/sass/main.scss';
