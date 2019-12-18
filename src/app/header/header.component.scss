@@ -1,5 +1,5 @@
 .header-title {
-  background-image: url('/assets/images/dk-bg.jpg');
+  background-image: url('/assets/images/bg6s.png');
   background-size: cover;
   font-size: 3.5em;
   font-family: 'Montserrat', sans-serif;
@@ -12,5 +12,17 @@
 }
 
 #banner {
-  background-image: url('/assets/images/bg3.jpg');
+  background-image: url('/assets/images/dk-header.png');
+  background-size: cover;
+}
+
+#logo {
+  padding-bottom: 1em;
+  animation: rotate 2.5s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotatey(360deg);
+  }
 }

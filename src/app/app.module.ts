@@ -13,6 +13,7 @@ import { MenuComponent } from './menu/menu.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
+
 @NgModule({
   declarations: [
     AppComponent,
