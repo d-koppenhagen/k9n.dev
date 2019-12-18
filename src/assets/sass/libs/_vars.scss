@@ -1,3 +1,7 @@
+// Colors
+$c01: #2e3141;
+$c02: #709169;
+
 // Misc.
 $misc: (
   z-index-base: 10000,
@@ -53,7 +57,7 @@ $font: (
 
 // Palette.
 $palette: (
-  bg: #2e3141,
+  bg: $c01,
   fg: #ffffff,
   fg-bold: #ffffff,
   fg-light: rgba(255, 255, 255, 0.35),
@@ -61,5 +65,5 @@ $palette: (
   border-bg: rgba(255, 255, 255, 0.025),
   border2: rgba(255, 255, 255, 0.25),
   border2-bg: rgba(255, 255, 255, 0.075),
-  accent: #709169,
+  accent: $c02,
 );
