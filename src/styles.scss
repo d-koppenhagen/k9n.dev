@@ -1,2 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+$fa-font-path: '~font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome.scss';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:800&display=swap');
+@import 'assets/sass/main.scss';
