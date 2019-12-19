@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { BlogComponent } from './blog.component';
-import { BlogPreviewComponent } from '../blog-preview/blog-preview.component';
+import { BlogOverviewComponent } from '../blog-overview/blog-overview.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: BlogPreviewComponent,
+    component: BlogOverviewComponent,
   },
   {
     path: ':slug',

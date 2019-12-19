@@ -4,9 +4,16 @@
     <h2>Menu</h2>
     <ul class="links">
       <li>
-        <a routerLink="/blog" (click)="menuClicked()" routerLinkActive="active"
-          >Blog</a
-        >
+        <a routerLink="/" (click)="menuClicked()">Home</a>
+      </li>
+      <li>
+        <a href="#about" (click)="menuClicked()">Über mich</a>
+      </li>
+      <li>
+        <a routerLink="/blog" (click)="menuClicked()">Blog</a>
+      </li>
+      <li>
+        <a href="#contact" (click)="menuClicked()">Kontakt</a>
       </li>
     </ul>
     <a href="#" class="close" (click)="menuClicked()">Close</a>

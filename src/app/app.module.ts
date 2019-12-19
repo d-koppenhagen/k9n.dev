@@ -13,6 +13,8 @@ import { MenuComponent } from './menu/menu.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
+import { PublicationsComponent } from './publications/publications.component';
+import { BlogOverviewComponent } from './blog-overview/blog-overview.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
     MenuComponent,
     NavbarComponent,
     BlogPreviewComponent,
+    PublicationsComponent,
+    BlogOverviewComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, A11yModule],
   providers: [ScullyRoutesService],
