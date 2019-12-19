@@ -11,7 +11,7 @@
   content: '';
   position: absolute;
   width: 6px;
-  background-color: lighten($c02, 10%);
+  background-color: lighten($c06, 10%);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -34,7 +34,7 @@ h2.timeline-subheading {
 span.location {
   position: absolute;
   right: 45px;
-  top: 30px;
+  top: 15px;
   display: flex;
   align-items: center;
 
@@ -46,7 +46,7 @@ span.location {
 
 /* Container around content */
 .container {
-  padding: 10px 40px;
+  padding: 10px;
   position: relative;
   background-color: inherit;
   width: 50%;
@@ -60,8 +60,8 @@ span.location {
   height: 29px;
   right: -14px;
   background-color: white;
-  border: 4px solid $c02;
-  top: 18px;
+  border: 4px solid $c06;
+  top: 25px;
   border-radius: 50%;
   z-index: 1;
 }
@@ -85,9 +85,6 @@ span.location {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid $c01;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent $c01;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -99,9 +96,6 @@ span.location {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid $c01;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent $c01 transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -111,8 +105,7 @@ span.location {
 
 /* The actual content */
 .content {
-  padding: 20px 30px;
-  background-color: $c01;
+  padding: 0px 20px;
   position: relative;
   border-radius: 6px;
 }

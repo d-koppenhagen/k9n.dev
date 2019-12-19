@@ -18,7 +18,7 @@ export class BlogPreviewComponent implements OnInit {
     this.blogPostData$ = this.srs.available$.pipe(
       map(posts => {
         if (this.max) {
-          posts = posts.slice(0, 3);
+          posts = posts.slice(0, this.max);
         }
         return posts;
       }),
