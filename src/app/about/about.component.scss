@@ -120,28 +120,25 @@ span.location {
 @media screen and (max-width: 600px) {
   /* Place the timelime to the left */
   .timeline::after {
-    left: 31px;
+    left: 20px;
   }
 
   /* Full-width containers */
   .container {
     width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+    padding-left: 30px;
+    padding-right: 0px;
+    max-height: unset;
   }
 
-  /* Make sure that all arrows are pointing leftwards */
-  .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+  .content {
+    padding-right: 0px;
   }
 
   /* Make sure all circles are at the same spot */
   .left::after,
   .right::after {
-    left: 15px;
+    left: 6px;
   }
 
   /* Make all right containers behave like the left ones */
