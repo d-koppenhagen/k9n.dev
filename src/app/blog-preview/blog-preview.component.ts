@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, take } from 'rxjs/operators';
 
 @Component({
   selector: 'dk-blog-preview',
@@ -16,6 +16,11 @@ export class BlogPreviewComponent implements OnInit {
 
   ngOnInit() {
     this.blogPostData$ = this.srs.available$.pipe(
+      map(routeList => {
+        return routeList
+          .filter((route: ScullyRoute) => route.route.startsWith(`/blog/`))
+          .filter((route: ScullyRoute) => route.route.startsWith(`/blog/`));
+      }),
       map(posts => {
         if (this.max) {
           posts = posts.slice(0, this.max);

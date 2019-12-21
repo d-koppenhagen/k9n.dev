@@ -1,3 +1,5 @@
+@import '../../assets/sass/libs/vars';
+
 .header-title {
   background-image: url('/assets/images/bg6s.png');
   background-size: cover;
@@ -11,6 +13,11 @@
   -webkit-text-fill-color: #0000004a;
 }
 
+p.sub-header {
+  color: $c01;
+  font-size: 1.2em;
+}
+
 #banner {
   background-image: url('/assets/images/dk-header.png');
   background-size: cover;
@@ -20,6 +27,7 @@
 #logo {
   position: absolute;
   top: 20px;
+  width: 70px;
   animation: move-to-top 1s ease, rotate 4s ease 1;
 }
 
@@ -35,5 +43,35 @@
   }
   100% {
     top: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-title {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  p.sub-header {
+    font-size: 1em !important;
+    padding-right: 110px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header-title {
+    font-size: 2.5em;
+    padding-right: 110px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-title {
+    font-size: 2em;
+  }
+
+  #banner {
+    background-size: cover 60%;
   }
 }

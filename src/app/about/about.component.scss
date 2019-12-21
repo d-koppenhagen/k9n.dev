@@ -19,19 +19,19 @@
 }
 
 /* Timeline Heading Style */
-h1.timeline-heading {
-  font-size: 2em;
+h2.timeline-heading {
+  font-size: 1.76em;
   text-transform: uppercase;
   margin-bottom: 0.3em;
 }
 
 /* Timeline Heading Style */
-h2 {
-  font-size: 1.2em;
-  text-transform: uppercase;
-}
 h3 {
   font-size: 1em;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 0.9em;
   text-transform: none;
   margin-bottom: 0.1em;
 }
@@ -117,7 +117,7 @@ span.location {
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   /* Place the timelime to the left */
   .timeline::after {
     left: 20px;
