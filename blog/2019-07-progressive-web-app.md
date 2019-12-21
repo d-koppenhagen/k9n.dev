@@ -19,13 +19,15 @@ language: de
 thumbnail: assets/images/blog/pwaheader.jpg
 ---
 
+# Mach aus deiner Angular-App eine PWA
+
 Immer häufiger stößt man im Webumfeld auf den Begriff der Progessive Web App – kurz: PWA. Doch was genau steckt dahinter und welche Vorteile hat eine PWA gegenüber einer herkömmlichen Webanwendung oder einer App?
 Als _Progressive Web App_ bezeichnen wir eine Webanwendung, die beim Aufruf einer Website als App auf einem lokalen Gerät installiert werden kann – zum Beispiel auf dem Telefon oder Tablet.
 Die PWA lässt sich wie jede andere App nutzen, inklusive Push-Benachrichtigungen!
 
 <hr>
 
-Inhalt:
+**Inhalt:**
 
 * [Webanwendung vs. PWA vs. App](/blog/2019-07-progressive-web-app#webanwendung-vs-pwa-vs-app)
 * [Add to Homescreen](/blog/2019-07-progressive-web-app#add-to-homescreen)
