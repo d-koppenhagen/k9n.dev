@@ -17,9 +17,9 @@ export class BlogPreviewComponent implements OnInit {
   ngOnInit() {
     this.blogPostData$ = this.srs.available$.pipe(
       map(routeList => {
-        return routeList
-          .filter((route: ScullyRoute) => route.route.startsWith(`/blog/`))
-          .filter((route: ScullyRoute) => route.route.startsWith(`/blog/`));
+        return routeList.filter((route: ScullyRoute) =>
+          route.route.startsWith(`/blog/`),
+        );
       }),
       map(posts => {
         if (this.max) {
