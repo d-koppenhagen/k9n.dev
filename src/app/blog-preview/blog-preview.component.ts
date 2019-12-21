@@ -25,7 +25,7 @@ export class BlogPreviewComponent implements OnInit {
         if (this.max) {
           posts = posts.slice(0, this.max);
         }
-        return posts;
+        return posts.reverse();
       }),
     );
   }

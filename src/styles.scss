@@ -7,10 +7,86 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/v4-shims';
 
-/* Other */
+/* Import Fonts */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:800&display=swap');
-@import 'assets/sass/main.scss';
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic');
 
+/* set max image width, so be sure images are not out of viewport */
 img {
   max-width: 100%;
 }
+
+@import 'sass/libs/vars';
+@import 'sass/libs/functions';
+@import 'sass/libs/mixins';
+@import 'sass/libs/vendor';
+@import 'sass/libs/breakpoints';
+@import 'sass/libs/html-grid';
+
+/*
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+// Breakpoints.
+
+@include breakpoints(
+  (
+    xlarge: (
+      1281px,
+      1680px,
+    ),
+    large: (
+      981px,
+      1280px,
+    ),
+    medium: (
+      737px,
+      980px,
+    ),
+    small: (
+      481px,
+      736px,
+    ),
+    xsmall: (
+      361px,
+      480px,
+    ),
+    xxsmall: (
+      null,
+      360px,
+    ),
+  )
+);
+
+// Base.
+
+@import 'sass/base/reset';
+@import 'sass/base/page';
+@import 'sass/base/typography';
+
+// Component.
+
+@import 'sass/components/row';
+@import 'sass/components/section';
+@import 'sass/components/form';
+@import 'sass/components/box';
+@import 'sass/components/icon';
+@import 'sass/components/image';
+@import 'sass/components/list';
+@import 'sass/components/actions';
+@import 'sass/components/icons';
+@import 'sass/components/contact';
+@import 'sass/components/pagination';
+@import 'sass/components/table';
+@import 'sass/components/button';
+@import 'sass/components/features';
+
+// Layout.
+
+@import 'sass/layout/header';
+@import 'sass/layout/menu';
+@import 'sass/layout/banner';
+@import 'sass/layout/wrapper';
+@import 'sass/layout/footer';
