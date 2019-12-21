@@ -1,1 +1,106 @@
-[{"route":"/"},{"route":"/impressum"},{"route":"/blog"},{"route":"/blog/2018-01-test3"},{"route":"/blog/2019-11-ngx-semantic-version"},{"route":"/blog/2019-12-test1"},{"route":"/blog/2020-01-test2"}]
+[
+  {
+    "route": "/blog/2018-01-test3",
+    "title": "Test article 3",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    "publish": true,
+    "author": "Danny Koppenhagen",
+    "mail": "mail@d-koppenhagen.de",
+    "published": "2019-11-06T00:00:00.000Z",
+    "keywords": [
+      "Angular",
+      "Angular CLI",
+      "Angular Schematics",
+      "release",
+      "commit",
+      "commitlint",
+      "husky",
+      "commitizen",
+      "standard-version",
+      "semver",
+      "Semantic Version",
+      "Conventional Commits",
+      "Conventional Changelog"
+    ],
+    "language": "en",
+    "thumbnail": "assets/images/pic03.jpg"
+  },
+  {
+    "route": "/blog/2019-11-ngx-semantic-version",
+    "title": "ngx-semantic-version: enhance your git and release workflow",
+    "description": "In this article I will introduce the new tool ngx-semantic-version. This new Angular Schematic allows you to set up all necessary tooling for consistent git commit messages and publishing new versions. It will help you to keep your CHANGELOG.md file up to date and to release new tagged versions. All this is done by leveraging great existing tools like commitizen, commitlint and standard-version.",
+    "publish": true,
+    "author": "Danny Koppenhagen",
+    "mail": "mail@d-koppenhagen.de",
+    "published": "2019-11-06T00:00:00.000Z",
+    "keywords": [
+      "Angular",
+      "Angular CLI",
+      "Angular Schematics",
+      "release",
+      "commit",
+      "commitlint",
+      "husky",
+      "commitizen",
+      "standard-version",
+      "semver",
+      "Semantic Version",
+      "Conventional Commits",
+      "Conventional Changelog"
+    ],
+    "language": "en",
+    "thumbnail": "assets/images/blog/ngx-semantic-version-header.jpg"
+  },
+  {
+    "route": "/blog/2019-12-test1",
+    "title": "Test article 1",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    "publish": true,
+    "author": "Danny Koppenhagen",
+    "mail": "mail@d-koppenhagen.de",
+    "published": "2019-11-06T00:00:00.000Z",
+    "keywords": [
+      "Angular",
+      "Angular CLI",
+      "Angular Schematics",
+      "release",
+      "commit",
+      "commitlint",
+      "husky",
+      "commitizen",
+      "standard-version",
+      "semver",
+      "Semantic Version",
+      "Conventional Commits",
+      "Conventional Changelog"
+    ],
+    "language": "en",
+    "thumbnail": "assets/images/pic01.jpg"
+  },
+  {
+    "route": "/blog/2020-01-test2",
+    "title": "Test article 2",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    "publish": true,
+    "author": "Danny Koppenhagen",
+    "mail": "mail@d-koppenhagen.de",
+    "published": "2019-11-06T00:00:00.000Z",
+    "keywords": [
+      "Angular",
+      "Angular CLI",
+      "Angular Schematics",
+      "release",
+      "commit",
+      "commitlint",
+      "husky",
+      "commitizen",
+      "standard-version",
+      "semver",
+      "Semantic Version",
+      "Conventional Commits",
+      "Conventional Changelog"
+    ],
+    "language": "en",
+    "thumbnail": "assets/images/pic02.jpg"
+  }
+]
