@@ -65,7 +65,8 @@
         margin-left: 0.75em;
       }
 
-      &[href='#menu'] {
+      &.burger-menu {
+        cursor: pointer;
         @include icon(false, solid);
         @include vendor(
           'transition',
@@ -114,7 +115,7 @@
         height: inherit;
         line-height: inherit;
 
-        &[href='#menu'] {
+        &.burger-menu {
           box-shadow: none;
           padding: 0 1em;
           border-radius: 0;
@@ -131,7 +132,7 @@
   @include breakpoint('<=xsmall') {
     nav {
       a {
-        &[href='#menu'] {
+        &.burger-menu {
           width: 4em;
           white-space: nowrap;
           text-indent: 4em;

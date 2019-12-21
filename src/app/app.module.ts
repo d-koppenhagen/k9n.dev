@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
 import { PublicationsComponent } from './publications/publications.component';
 import { BlogOverviewComponent } from './blog-overview/blog-overview.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { BlogOverviewComponent } from './blog-overview/blog-overview.component';
     BlogPreviewComponent,
     PublicationsComponent,
     BlogOverviewComponent,
+    ImpressumComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, A11yModule],
   providers: [ScullyRoutesService],

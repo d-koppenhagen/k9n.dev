@@ -4,7 +4,7 @@
     <a routerLink="/">D-Koppenhagen.de</a>
   </h1>
   <nav class="menu-dark">
-    <a href="#menu" (click)="toggleMenu()">Menu</a>
+    <a class="burger-menu" (click)="toggleMenu()">Menu</a>
   </nav>
 </header>
 <dk-menu *ngIf="menuOpen" (closeMenu)="toggleMenu()"></dk-menu>
