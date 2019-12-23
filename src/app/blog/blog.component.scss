@@ -1,8 +1,10 @@
+@import '../../sass/libs/vars';
+
 .wrapper {
   margin-top: 0;
 }
 
-.blog-content h1 {
+h1 {
   font-size: 1.4em;
 }
 
@@ -16,6 +18,35 @@ a.published-at-link {
 
 .published-at-logo {
   padding-right: 20px;
+}
+
+.share-toolbar {
+  list-style: none;
+  height: 40px;
+  padding: 0px;
+
+  > li {
+    float: left;
+
+    > a {
+      display: block;
+      cursor: pointer;
+      border-bottom: 0px;
+
+      > i {
+        border: 1px solid $c06;
+        padding: 10px;
+        border-radius: 40px;
+        color: $c06;
+        min-width: 38px;
+      }
+
+      &:hover > i {
+        border: 1px solid $c02;
+        color: $c06;
+      }
+    }
+  }
 }
 
 ::slotted(h1) {

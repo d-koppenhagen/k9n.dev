@@ -20,6 +20,7 @@ declare var ng: any;
 })
 export class BlogComponent implements OnInit, AfterViewChecked {
   post$: Observable<any>;
+  location: null;
 
   constructor(
     private route: ActivatedRoute,
@@ -47,5 +48,9 @@ export class BlogComponent implements OnInit, AfterViewChecked {
         return currentPostData[0];
       }),
     );
+  }
+
+  shareTextContent() {
+    return encodeURI(location.href);
   }
 }
