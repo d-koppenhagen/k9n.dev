@@ -6,6 +6,18 @@
   font-size: 1.4em;
 }
 
+.published-at {
+  margin-bottom: 30px;
+}
+a.published-at-link {
+  text-decoration: none;
+  border: none;
+}
+
+.published-at-logo {
+  padding-right: 20px;
+}
+
 ::slotted(h1) {
   color: rgb(51, 6, 37);
   background-color: rgb(248, 211, 236);

@@ -19,7 +19,7 @@ declare var ng: any;
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class BlogComponent implements OnInit, AfterViewChecked {
-  thumbnail$: Observable<any>;
+  post$: Observable<any>;
 
   constructor(
     private route: ActivatedRoute,
@@ -35,7 +35,7 @@ export class BlogComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
-    this.thumbnail$ = this.srs.available$.pipe(
+    this.post$ = this.srs.available$.pipe(
       map(routeList => {
         return routeList.filter(
           (route: ScullyRoute) =>
@@ -44,7 +44,7 @@ export class BlogComponent implements OnInit, AfterViewChecked {
         );
       }),
       map(currentPostData => {
-        return currentPostData[0].thumbnail;
+        return currentPostData[0];
       }),
     );
   }

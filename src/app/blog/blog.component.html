@@ -1,9 +1,26 @@
 <div class="wrapper alt">
   <div class="inner">
     <section class="blog-content">
-      <span class="image fit">
-        <img [src]="thumbnail$ | async" />
-      </span>
+      <div *ngIf="post$ | async as post">
+        <span *ngIf="post.thumbnail" class="image fit">
+          <img [src]="post.thumbnail" />
+        </span>
+        <div
+          *ngIf="post.publishedAt && post.publishedAtUrl"
+          class="published-at"
+        >
+          <a [href]="post.publishedAtUrl" class="published-at-link">
+            <img
+              *ngIf="post.publishedAtLogo"
+              class="published-at-logo"
+              [src]="post.publishedAtLogo"
+            />
+          </a>
+          Dieser Blogpost wurde im Original veröffentlicht auf:
+          <a [href]="post.publishedAtUrl">{{ post.publishedAt }}</a
+          >.
+        </div>
+      </div>
       <scully-content></scully-content>
     </section>
   </div>

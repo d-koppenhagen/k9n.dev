@@ -7,6 +7,9 @@ publish: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
 published: 2019-07-24
+publishedAt: angular-buch.com
+publishedAtUrl: https://angular-buch.com/blog/2019-07-progressive-web-app
+publishedAtLogo: https://angular-buch.com/assets/img/brand.svg
 keywords:
   - PWA
   - Progressive Web App

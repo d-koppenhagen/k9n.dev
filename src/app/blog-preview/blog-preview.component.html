@@ -7,6 +7,17 @@
     <p>
       {{ post.description }}
     </p>
+    <div *ngIf="post.publishedAt && post.publishedAtUrl" class="published-at">
+      Original veröffentlicht auf:
+      <a [href]="post.publishedAtUrl">{{ post.publishedAt }}</a>
+      <a [href]="post.publishedAtUrl" class="published-at-link">
+        <img
+          *ngIf="post.publishedAtLogo"
+          class="published-at-logo"
+          [src]="post.publishedAtLogo"
+        />
+      </a>
+    </div>
     <a [routerLink]="post.route" class="special">Weiterlesen...</a>
   </article>
 </section>

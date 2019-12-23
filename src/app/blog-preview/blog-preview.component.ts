@@ -21,12 +21,6 @@ export class BlogPreviewComponent implements OnInit {
           route.route.startsWith(`/blog/`),
         );
       }),
-      map(posts => {
-        if (this.max) {
-          posts = posts.slice(0, this.max);
-        }
-        return posts.reverse();
-      }),
     );
   }
 }

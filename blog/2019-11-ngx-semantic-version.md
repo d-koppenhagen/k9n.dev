@@ -7,6 +7,9 @@ publish: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
 published: 2019-11-06
+publishedAt: angular.schule.com
+publishedAtUrl: https://angular.schule/blog/2019-11-ngx-semantic-version
+publishedAtLogo: https://angular-schule.com/assets/img/brand.svg
 keywords:
   - Angular
   - Angular CLI
