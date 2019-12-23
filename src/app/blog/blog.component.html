@@ -3,7 +3,7 @@
     <section class="blog-content">
       <div *ngIf="post$ | async as post">
         <span *ngIf="post.thumbnail" class="image fit">
-          <img [src]="post.thumbnail" />
+          <img [src]="post.thumbnail" alt="header image" />
         </span>
         <div
           *ngIf="post.publishedAt && post.publishedAtUrl"
@@ -14,6 +14,7 @@
               *ngIf="post.publishedAtLogo"
               class="published-at-logo"
               [src]="post.publishedAtLogo"
+              alt="Logo of the published page"
             />
           </a>
           Dieser Blogpost wurde im Original veröffentlicht auf:
