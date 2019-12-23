@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 To see the static site content for the blog posts, you have to render them first using [_Scully_](https://github.com/scullyio/scully):
 
 ```bash
-npm run build
+npm run build -- --prod
 npm run scully
 npm start
 ```
