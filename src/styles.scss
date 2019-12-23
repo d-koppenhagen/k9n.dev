@@ -7,6 +7,10 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/v4-shims';
 
+/* style code with prismjs */
+@import '~prismjs/plugins/toolbar/prism-toolbar.css';
+@import '~prismjs/themes/prism-tomorrow';
+
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:800&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic');

@@ -16,6 +16,7 @@ import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
 import { PublicationsComponent } from './publications/publications.component';
 import { BlogOverviewComponent } from './blog-overview/blog-overview.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { HighlightService } from './highlight.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
     ImpressumComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, A11yModule],
-  providers: [ScullyRoutesService],
+  providers: [ScullyRoutesService, HighlightService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
