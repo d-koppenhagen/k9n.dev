@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute, Router, ROUTES } from '@angular/router';
+import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 declare var ng: any;
 @Component({
@@ -10,7 +13,25 @@ declare var ng: any;
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class BlogComponent implements OnInit {
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  thumbnail$: Observable<any>;
 
-  ngOnInit() {}
+  constructor(
+    private route: ActivatedRoute,
+    private srs: ScullyRoutesService,
+  ) {}
+
+  ngOnInit() {
+    this.thumbnail$ = this.srs.available$.pipe(
+      map(routeList => {
+        return routeList.filter(
+          (route: ScullyRoute) =>
+            route.route.startsWith(`/blog/`) &&
+            route.route.includes(this.route.snapshot.params.slug),
+        );
+      }),
+      map(currentPostData => {
+        return currentPostData[0].thumbnail;
+      }),
+    );
+  }
 }

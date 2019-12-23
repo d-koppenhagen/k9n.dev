@@ -1,6 +1,9 @@
 <div class="wrapper alt">
   <div class="inner">
     <section class="blog-content">
+      <span class="image fit">
+        <img [src]="thumbnail$ | async" />
+      </span>
       <scully-content></scully-content>
     </section>
   </div>

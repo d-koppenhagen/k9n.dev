@@ -22,11 +22,12 @@ p.sub-header {
   background-image: url('/assets/images/dk-header.png');
   background-size: cover;
   padding: 9em 0 12em 0;
+  cursor: pointer;
 }
 
 #logo {
   position: absolute;
-  top: 20px;
+  top: 0px;
   width: 70px;
   animation: move-to-top 1s ease, rotate 4s ease 1;
 }
@@ -42,7 +43,7 @@ p.sub-header {
     top: 100px;
   }
   100% {
-    top: 20px;
+    top: 0px;
   }
 }
 
