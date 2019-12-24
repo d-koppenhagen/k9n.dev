@@ -10,6 +10,7 @@ import { map, take } from 'rxjs/operators';
 })
 export class BlogPreviewComponent implements OnInit {
   @Input() max: number;
+  @Input() keyword: string;
   blogPostData$: Observable<ScullyRoute[]>;
 
   constructor(private srs: ScullyRoutesService) {}
@@ -19,6 +20,20 @@ export class BlogPreviewComponent implements OnInit {
       map(routeList => {
         return routeList.filter((route: ScullyRoute) =>
           route.route.startsWith(`/blog/`),
+        );
+      }),
+      map(routeList => {
+        if (this.max) {
+          routeList = routeList.slice(0, this.max);
+        }
+        return routeList;
+      }),
+      map(routeList => {
+        if (!this.keyword) {
+          return routeList;
+        }
+        return routeList.filter((route: ScullyRoute) =>
+          route.keywords.includes(this.keyword),
         );
       }),
     );

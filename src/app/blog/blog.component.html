@@ -18,6 +18,21 @@
         >.
       </div>
     </section>
+    <section class="blog-tags" *ngIf="post.keywords">
+      <h2 class="keywords-heading">Stichwörter</h2>
+      <div class="actions">
+        <span *ngFor="let keyword of post.keywords">
+          <button
+            routerLink="/blog"
+            [queryParams]="{ keyword: keyword }"
+            class="button xs"
+            [attr.aria-label]="'Filter for keyword: ' + keyword"
+          >
+            {{ keyword }}
+          </button>
+        </span>
+      </div>
+    </section>
     <section class="blog-content">
       <scully-content></scully-content>
     </section>
@@ -29,7 +44,8 @@
             [href]="'mailto:user@example.com?subject=' + shareTextContent()"
             target="_blank"
             alt="share this blog post via email"
-            ><i class="fa fa-envelope"></i
+            id="shareEmail"
+            ><i class="fa fa-envelope" aria-label="email icon"></i
           ></a>
         </li>
         <li>
@@ -39,7 +55,7 @@
             "
             target="_blank"
             alt="share this blog post via twitter"
-            ><i class="fa fa-twitter"></i
+            ><i class="fa fa-twitter" aria-label="twitter icon"></i
           ></a>
         </li>
         <li>
@@ -50,7 +66,7 @@
             "
             target="_blank"
             alt="share this blog post via facebook"
-            ><i class="fa fa-facebook"></i
+            ><i class="fa fa-facebook" aria-label="facebook icon"></i
           ></a>
         </li>
         <li>
@@ -61,7 +77,7 @@
             "
             target="_blank"
             alt="share this blog post via linkedin"
-            ><i class="fa fa-linkedin"></i
+            ><i class="fa fa-linkedin" aria-label="linkedIn icon"></i
           ></a>
         </li>
         <li>
@@ -73,7 +89,7 @@
             "
             target="_blank"
             alt="share this blog post via xing"
-            ><i class="fa fa-xing"></i
+            ><i class="fa fa-xing" aria-label="xing icon"></i
           ></a>
         </li>
       </ul>

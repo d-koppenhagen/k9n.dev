@@ -8,6 +8,10 @@ h1 {
   font-size: 1.4em;
 }
 
+h2.keywords-heading {
+  font-size: 0.9em;
+}
+
 .published-at {
   margin-bottom: 30px;
 }
@@ -47,6 +51,10 @@ a.published-at-link {
       }
     }
   }
+}
+
+.blog-tags {
+  padding-bottom: 2em;
 }
 
 ::slotted(h1) {
