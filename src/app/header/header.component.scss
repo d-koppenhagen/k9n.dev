@@ -30,6 +30,7 @@ p.sub-header {
   top: 0px;
   width: 70px;
   animation: move-to-top 1s ease, rotate 4s ease 1;
+  cursor: pointer;
 }
 
 @keyframes rotate {
