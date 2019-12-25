@@ -6,6 +6,106 @@
 
 /* Header */
 
+nav {
+  font-family: _font(family-heading);
+  font-size: 0.8em;
+  font-weight: _font(weight-heading-bold);
+  height: 3em;
+  letter-spacing: _font(kern-heading);
+  line-height: 3em;
+  right: 0.7em;
+  text-transform: uppercase;
+  top: 0.7em;
+  position: fixed;
+  z-index: _misc(z-index-base);
+
+  a,
+  button {
+    border: 0;
+    display: inline-block;
+    padding: 0 1em;
+
+    &:before {
+      float: right;
+      margin-left: 0.75em;
+    }
+
+    &.burger-menu {
+      cursor: pointer;
+      @include icon(false, solid);
+      @include vendor(
+        'transition',
+        'background-color #{_duration(transition)} ease-in-out'
+      );
+      border-radius: _size(border-radius);
+      box-shadow: inset 0 0 0 2px _palette(border);
+      padding: 0 1.35em;
+
+      &:before {
+        content: '\f0c9';
+        line-height: inherit;
+      }
+
+      &:hover {
+        background-color: _palette(border-bg);
+      }
+
+      &:active {
+        background-color: _palette(border2-bg);
+      }
+    }
+  }
+}
+
+@include breakpoint('<=small') {
+  nav {
+    height: 2.75em;
+    line-height: 2.75em;
+
+    a,
+    button {
+      height: inherit;
+      line-height: inherit;
+
+      &.burger-menu {
+        box-shadow: none;
+        padding: 0 1em;
+        border-radius: 0;
+
+        &:hover,
+        &:active {
+          background-color: inherit;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint('<=xsmall') {
+  nav {
+    a,
+    button {
+      &.burger-menu {
+        width: 4em;
+        white-space: nowrap;
+        text-indent: 4em;
+        position: relative;
+
+        &:before {
+          width: inherit;
+          position: absolute;
+          top: 0;
+          left: 0;
+          text-indent: 0;
+          text-align: right;
+          margin-left: 0;
+          padding-right: 1.25em;
+        }
+      }
+    }
+  }
+}
+
 #header {
   @include vendor(
     'transition',
@@ -38,57 +138,9 @@
     opacity: 1;
     visibility: visible;
 
-    a {
+    a,
+    button {
       border: 0;
-    }
-  }
-
-  nav {
-    font-family: _font(family-heading);
-    font-size: 0.8em;
-    font-weight: _font(weight-heading-bold);
-    height: 3em;
-    letter-spacing: _font(kern-heading);
-    line-height: 3em;
-    position: absolute;
-    right: 0.7em;
-    text-transform: uppercase;
-    top: 0.7em;
-
-    a {
-      border: 0;
-      display: inline-block;
-      padding: 0 1em;
-
-      &:before {
-        float: right;
-        margin-left: 0.75em;
-      }
-
-      &.burger-menu {
-        cursor: pointer;
-        @include icon(false, solid);
-        @include vendor(
-          'transition',
-          'background-color #{_duration(transition)} ease-in-out'
-        );
-        border-radius: _size(border-radius);
-        box-shadow: inset 0 0 0 2px _palette(border);
-        padding: 0 1.35em;
-
-        &:before {
-          content: '\f0c9';
-          line-height: inherit;
-        }
-
-        &:hover {
-          background-color: _palette(border-bg);
-        }
-
-        &:active {
-          background-color: _palette(border2-bg);
-        }
-      }
     }
   }
 
@@ -98,56 +150,6 @@
     h1 {
       opacity: 0;
       visibility: hidden;
-    }
-  }
-
-  @include breakpoint('<=small') {
-    height: 2.75em;
-    line-height: 2.75em;
-
-    nav {
-      height: inherit;
-      line-height: inherit;
-
-      a {
-        height: inherit;
-        line-height: inherit;
-
-        &.burger-menu {
-          box-shadow: none;
-          padding: 0 1em;
-          border-radius: 0;
-
-          &:hover,
-          &:active {
-            background-color: inherit;
-          }
-        }
-      }
-    }
-  }
-
-  @include breakpoint('<=xsmall') {
-    nav {
-      a {
-        &.burger-menu {
-          width: 4em;
-          white-space: nowrap;
-          text-indent: 4em;
-          position: relative;
-
-          &:before {
-            width: inherit;
-            position: absolute;
-            top: 0;
-            left: 0;
-            text-indent: 0;
-            text-align: right;
-            margin-left: 0;
-            padding-right: 1.25em;
-          }
-        }
-      }
     }
   }
 }

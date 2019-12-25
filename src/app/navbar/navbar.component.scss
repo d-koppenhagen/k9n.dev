@@ -1,20 +1,20 @@
 @import '../../sass/libs/vars';
 
 .menu-dark {
-  border-color: $c01;
-  color: $c01;
-  transition: background-color 0.2s ease-in-out;
   border-radius: 4px;
   box-shadow: inset 0 0 0 2px $c01;
-  filter: invert(1);
+  background-color: $c01;
+  color: #ffffff;
+  opacity: 0.8;
+  filter: alpha(opacity=90);
 
-  > a {
-    background: inherit;
-    background-clip: text;
-    color: $c01;
+  > button {
+    color: #ffffff;
+    opacity: 1;
   }
 
   &:hover {
-    box-shadow: inset 0 0 0 2px $c04;
+    box-shadow: inset 0 0 0 2px $c02;
+    color: $c01;
   }
 }

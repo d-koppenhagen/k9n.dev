@@ -1,7 +1,20 @@
 <!-- Header -->
-<header id="header" class="alt">
-  <nav class="menu-dark">
-    <a class="burger-menu" (click)="toggleMenu()">Menu</a>
-  </nav>
-</header>
+<nav
+  (keydown.enter)="toggleMenu()"
+  (keydown.arrowdown)="toggleMenu()"
+  class="menu-dark"
+  id="navigation"
+  role="navigation"
+  tabindex="0"
+>
+  <button
+    class="burger-menu"
+    role="button"
+    (click)="toggleMenu()"
+    aria-label="Open the menu"
+    aria-expanded="false"
+  >
+    Menu
+  </button>
+</nav>
 <dk-menu *ngIf="menuOpen" (closeMenu)="toggleMenu()"></dk-menu>
