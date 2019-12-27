@@ -29,10 +29,10 @@ thumbnail: assets/images/bg3.jpg
 - [Get started](/blog/2020-01-angular-scully#get-started)
 - [Turn it into a blog](/blog/2020-01-angular-scully#turn-it-into-a-blog)
 - [Use the _Scully_ service](/blog/2020-01-angular-scully#use-the-scully-service)
-- [Fetch dynamic information from an API](/blog/2020-01-angular-scully#fetch-dynamic-information-from-an-API)
+- [Fetch dynamic information from an API](/blog/2020-01-angular-scully#fetch-dynamic-information-from-an-api)
 - [Conclusion](/blog/2020-01-angular-scully#conclusion)
 
-> At this point I want to point out that _Scully_ is currently just available within an early version.
+> _Scully_ is currently just available within an early version.
 > This blog post is based on version _0.0.9_
 > However some of the commands or API calls used here may change in the future.
 > It’s my intention the keep the blog post as up-to-date as possible.
@@ -44,10 +44,11 @@ Scully will go analyze a built Angular app and detect all the routes of the app.
 It will then call every route it found, visit the page in the browser, renders the page and finally put the static rendered page on your disk.
 This is what we are calling **pre-rendering**.
 The result is a structure ready for shipping at your web server.
+
 All pre-rendered pages contain just plain HTML and CSS.
 In fact when deploying it, a user will be able to instantly access all routes and see the content with almost no delay.
-The resulting sites are very small static sites in just a few KBs so that even the access from a mobile device with a very low bandwidth is pretty good.
-It's significantly faster compared to the hundreds of KBs that are downloading when calling a “normal” Angular app.
+The resulting sites are very small static sites in just a few KBs so that even the access from a mobile device with a very low bandwidth is insane fast.
+It's significantly faster compared to the hundreds of KBs that you are downloading when calling a “normal” Angular app.
 
 But that’s not all: Once the pre-rendered page is shipped to the user, _Scully_ loads and bootstraps the “real” Angular app  in the background on top of the existing view.
 In fact _Scully_ will unite two great things:
@@ -61,7 +62,7 @@ As _Scully_ detects the content from the routes, we need to configure the Angula
 Therefore we add the appropriate flag `--routing` (we can also choose this option when the CLI prompts us).
 
 ```bash
-npx -p @angular/cli@next ng new scully-blog --routing
+npx -p @angular/cli@^9.0.0-rc ng new scully-blog --routing
 cd scully-blog  # navigate into the project
 ```
 
@@ -116,7 +117,7 @@ ng g @scullyio/init:post --name="First post"  # create a new blog post
 ```
 
 After this steps we can see that _Scully_ has now been added the `blog` directory to our project root.
-Here we can find the markdown files for creating the blog posts - one file for each post.
+Here we can find the markdown files for creating the blog posts — one file for each post.
 We now have two files there: The initially created example file from _Scully_ and this one we created with `ng g @scullyio/init:post`.
 
 Before we wanna build our site, let's get rid of the Angular auto generated content in the `AppComponent`.
@@ -243,6 +244,7 @@ Let’s imagine our app has another route called `/books/:isbn`.
 To visit this route and pre-render it, we need a way to fill the `isbn` parameter.
 Luckily _Scully_ helps us with this too.
 We can configure a — so called [_Route Plugin_](https://github.com/scullyio/scully/blob/master/docs/plugins.md) — that will call an API, fetch the data from it and pluck the `isbn` from the array of results to fill it in the router parameter.
+
 In the following example we will use [BookMonkey API](https://api3.angular-buch.com) as an API to fetch a list of books:
 
 ```js
@@ -261,7 +263,7 @@ exports.config = {
 };
 ```
 
-The result from the API will look like the following
+The result from the API call will look like the following:
 
 ```json
 [
@@ -281,9 +283,8 @@ The result from the API will look like the following
 ]
 ```
 
-After _Scully_ plucks the ISBN, it will just iterate over the final array: `['9783864906466', '9783864903571']`
-
-In fact when running _Scully_ using `npm run scully`, it will visit the following routes, after we have configured the route `/books/:isbn` in the Angular router (otherwise non used routes will be skipped).
+After _Scully_ plucks the ISBN, it will just iterate over the final array: `['9783864906466', '9783864903571']`.
+In fact when running _Scully_ using `npm run scully`, it will visit the following routes, **after we have configured the route `/books/:isbn` in the Angular router** (otherwise non used routes will be skipped).
 
 ```text
 /books/9783864906466
@@ -306,15 +307,19 @@ Route "/books/9783864903571" rendered into file: "/<path>/scully-blog/dist/stati
 Route "/books/9783864906466" rendered into file: "/<path>/scully-blog/dist/static/books/9783864906466/index.html"
 ```
 
-## Conculsion
+If you you wanna follow all the development steps in detail, check out my provided github repository
+[scully-blog-example](https://github.com/d-koppenhagen/scully-blog-example/commits).
+Each step described here is represented by one commit.
+
+## Conclusion
 
 Scully is awesome if you need a pre-rendered Angular SPA where all routes can be accessed immediately without loading the whole app at once.
 This is a great benefit for users as they don’t need to wait until the whole bunch of JavaScript has been downloaded to their devices.
 They have instantly access to the sites information.
 Furthermore _Scully_ offers a way to create very easily a blog and renders all posts written in markdown.
-It will handle and pre-render dynamic routes by fetching api data from placeholders and visiting every route filled by this placeholder.
+It will handle and pre-render dynamic routes by fetching API data from placeholders and visiting every route filled by this placeholder.
 
-Did you know that this website has also been created using _Scully_?
+Did you know that **this site** has also been created using _Scully_?
 Feel free to check out the sources at:
 
 [github.com/d-koppenhagen/d-koppenhagen.de](https://github.com/d-koppenhagen/d-koppenhagen.de)
