@@ -13,6 +13,7 @@ keywords:
   - SSR
   - SSG
   - Pre-rendering
+  - JAM Stack
 language: en
 thumbnail: assets/images/bg3.jpg
 ---
