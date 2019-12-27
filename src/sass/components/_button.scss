@@ -92,5 +92,9 @@ button,
 
   @include breakpoint('<=xsmall') {
     padding: 0;
+
+    &.xs {
+      padding: 0 1.5em;
+    }
   }
 }
