@@ -1,7 +1,7 @@
 @import '../../sass/libs/vars';
 
 .header-title {
-  background-image: url('/assets/images/bg6s.png');
+  background-image: url('/assets/images/bg6.png');
   background-size: cover;
   font-size: 3.5em;
   font-family: 'Montserrat', sans-serif;
@@ -19,8 +19,11 @@ p.sub-header {
 }
 
 #banner {
-  background-image: url('/assets/images/dk-header.png');
-  background-size: cover;
+  background-image: url('/assets/images/dk-header.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-color: #ffffff;
   padding: 9em 0 12em 0;
   cursor: pointer;
 }
@@ -64,16 +67,18 @@ p.sub-header {
 @media screen and (max-width: 620px) {
   .header-title {
     font-size: 2.5em;
-    padding-right: 110px;
+    padding-right: 40vw;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 560px) {
   .header-title {
     font-size: 2em;
+    padding-right: 50vw;
   }
 
   #banner {
-    background-size: cover 60%;
+    background-size: cover;
+    padding: 6em 0 5em 0;
   }
 }
