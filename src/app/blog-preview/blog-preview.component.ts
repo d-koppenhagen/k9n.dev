@@ -26,7 +26,7 @@ export class BlogPreviewComponent implements OnInit {
         if (this.max) {
           routeList = routeList.slice(0, this.max);
         }
-        return routeList;
+        return routeList.reverse();
       }),
       map(routeList => {
         if (!this.keyword) {
