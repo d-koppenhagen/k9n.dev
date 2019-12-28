@@ -29,7 +29,8 @@ thumbnail: assets/images/bg3.jpg
 - [About Scully](/blog/2020-01-angular-scully#about-scully)
 - [Get started](/blog/2020-01-angular-scully#get-started)
 - [Turn it into a blog](/blog/2020-01-angular-scully#turn-it-into-a-blog)
-- [Use the _Scully_ service](/blog/2020-01-angular-scully#use-the-scully-service)
+- [Let's go further](/blog/2020-01-angular-scully#lets-go-further)
+- [Use the Scully service](/blog/2020-01-angular-scully#use-the-scully-service)
 - [Fetch dynamic information from an API](/blog/2020-01-angular-scully#fetch-dynamic-information-from-an-api)
 - [Conclusion](/blog/2020-01-angular-scully#conclusion)
 
@@ -109,7 +110,7 @@ This is because currently we only have the root route configured and no more fur
 Nonetheless we can checkout the result of the static pages in the browser by running `npm run scully:serve`. This will start two servers:
 
 - `localhost:1668` : This server serves the static generated pages like a normal webserver (e.g. _nginx_ or _apache_)
-- `localhost:1864` : This server start an Angular distribution server
+- `localhost:1864` : This server represents a "normal" Angular distribution server (like when you run `npm start`)
 
 ## Turn it into a blog
 
@@ -125,7 +126,7 @@ After these steps we can see that _Scully_ has now added the `blog` directory to
 Here we can find the markdown files for creating the blog posts — one file for each post.
 We now have two files there: The initially created example file from _Scully_ and this one we created with `ng g @scullyio/init:post`.
 
-## Let's Go Further
+## Let's go further
 
 Now that we've got Scully installed and working, let's modify our Angular app to look more like an actual blog, and not just like the default Angular app.
 Therefore we want to get rid of the Angular auto generated content in the `AppComponent` first.
