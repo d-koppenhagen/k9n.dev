@@ -78,7 +78,8 @@ ng add @scullyio/init  # add _Scully_ to the project
 ```
 
 Et voilà here it is: We now have a very minimalistic Angular app that uses the power of _Scully_ to automatically find all app routes, visit them and generate static pages out of them.
-We can already try it out by building our site and run _Scully_ over it:
+It's ready for us to preview.
+Let's try it out by building our site and running _Scully_.
 
 ```bash
 npm run build   # build our Angular app
