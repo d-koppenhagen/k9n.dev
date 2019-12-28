@@ -45,6 +45,10 @@ a.published-at-link {
         min-width: 38px;
       }
 
+      i.fa-facebook::before {
+        margin-left: 2px;
+      }
+
       &:hover > i {
         border: 1px solid $c02;
         color: $c06;
