@@ -3,18 +3,8 @@
     <h2 class="major">Twitter Timeline</h2>
     <div class="twitter-timeline-wrapper">
       <ngx-twitter-timeline
-        [data]="{ sourceType: 'profile', url: 'd_koppenhagen' }"
-        [opts]="{
-          tweetLimit: 3,
-          theme: 'dark',
-          chrome: [
-            'noheader',
-            'nofooter',
-            'noborders',
-            'transparent',
-            'noscrollbar'
-          ]
-        }"
+        [data]="twitterTimelineData"
+        [opts]="twitterTimelineOpts"
       ></ngx-twitter-timeline>
     </div>
   </div>

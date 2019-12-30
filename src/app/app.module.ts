@@ -5,6 +5,7 @@ import { A11yModule } from '@angular/cdk/a11y';
 import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
@@ -13,11 +14,8 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
 import { PublicationsComponent } from './publications/publications.component';
-import { BlogOverviewComponent } from './blog-overview/blog-overview.component';
 import { ImpressumComponent } from './impressum/impressum.component';
-import { HighlightService } from './highlight.service';
 import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';
 
 @NgModule({
@@ -29,9 +27,7 @@ import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.co
     HeaderComponent,
     MenuComponent,
     NavbarComponent,
-    BlogPreviewComponent,
     PublicationsComponent,
-    BlogOverviewComponent,
     ImpressumComponent,
     TwitterTimelineComponent,
   ],
@@ -41,8 +37,9 @@ import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.co
     HttpClientModule,
     A11yModule,
     NgxTwitterTimelineModule,
+    SharedModule,
   ],
-  providers: [ScullyRoutesService, HighlightService],
+  providers: [ScullyRoutesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
