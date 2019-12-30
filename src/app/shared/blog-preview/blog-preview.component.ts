@@ -11,6 +11,7 @@ import { map } from 'rxjs/operators';
 export class BlogPreviewComponent implements OnInit, OnChanges {
   @Input() max: number;
   @Input() keyword: string;
+  @Input() search: string;
   blogPostData$: Observable<ScullyRoute[]>;
 
   constructor(private srs: ScullyRoutesService) {}
@@ -37,6 +38,20 @@ export class BlogPreviewComponent implements OnInit, OnChanges {
         return routeList.filter((route: ScullyRoute) =>
           route.keywords.includes(this.keyword),
         );
+      }),
+      map(routeList => {
+        if (!this.search) {
+          return routeList;
+        }
+        return routeList.filter((route: ScullyRoute) => {
+          const searchTerm = this.search.toLowerCase();
+          return (
+            route.keywords.includes(this.search) ||
+            route.title.toLowerCase().includes(searchTerm) ||
+            route.description.toLowerCase().includes(searchTerm) ||
+            route.author.toLowerCase().includes(searchTerm)
+          );
+        });
       }),
       map(routeList => {
         if (this.max) {
