@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { A11yModule } from '@angular/cdk/a11y';
 import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
+import { registerLocaleData } from '@angular/common';
+import localeDe from '@angular/common/locales/de';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
@@ -39,7 +41,11 @@ import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.co
     NgxTwitterTimelineModule,
     SharedModule,
   ],
-  providers: [ScullyRoutesService],
+  providers: [ScullyRoutesService, { provide: LOCALE_ID, useValue: 'de' }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    registerLocaleData(localeDe);
+  }
+}

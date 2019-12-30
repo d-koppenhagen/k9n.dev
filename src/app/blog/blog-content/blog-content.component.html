@@ -17,9 +17,12 @@
         <a [href]="post.publishedAtUrl">{{ post.publishedAt }}</a
         >.
       </div>
+      <h2 *ngIf="post.updated" class="sub-heading">
+        Letztes Update: {{ post.updated | date }}
+      </h2>
     </section>
     <section class="blog-tags" *ngIf="post.keywords">
-      <h2 class="keywords-heading">Stichwörter</h2>
+      <h2 class="sub-heading">Stichwörter</h2>
       <div class="actions">
         <span *ngFor="let keyword of post.keywords">
           <button
