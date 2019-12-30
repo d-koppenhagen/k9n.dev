@@ -8,18 +8,17 @@ import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { HighlightService } from '../highlight.service';
+import { HighlightService } from '../../shared/highlight.service';
 
-declare var ng: any;
 @Component({
-  selector: 'dk-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss'],
+  selector: 'dk-blog-content',
+  templateUrl: './blog-content.component.html',
+  styleUrls: ['./blog-content.component.scss'],
   preserveWhitespaces: true,
   encapsulation: ViewEncapsulation.Emulated,
 })
-export class BlogComponent implements OnInit, AfterViewChecked {
-  post$: Observable<any>;
+export class BlogContentComponent implements OnInit, AfterViewChecked {
+  post$: Observable<ScullyRoute>;
   location: null;
 
   constructor(
