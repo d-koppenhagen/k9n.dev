@@ -1,7 +1,7 @@
 <section class="wrapper alt">
   <div class="inner">
     <h2 class="major">Meine Blog Posts</h2>
-    <h3 *ngIf="keyword">Filter: "{{ keyword }}"</h3>
-    <dk-blog-preview [keyword]="keyword"></dk-blog-preview>
+    <h3 *ngIf="keyword$ | async as keyword">Filter: "{{ keyword }}"</h3>
+    <dk-blog-preview [keyword]="keyword$ | async"></dk-blog-preview>
   </div>
 </section>

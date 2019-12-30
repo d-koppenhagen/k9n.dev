@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
   templateUrl: './blog-preview.component.html',
   styleUrls: ['./blog-preview.component.scss'],
 })
-export class BlogPreviewComponent implements OnInit {
+export class BlogPreviewComponent implements OnInit, OnChanges {
   @Input() max: number;
   @Input() keyword: string;
   blogPostData$: Observable<ScullyRoute[]>;
@@ -16,6 +16,14 @@ export class BlogPreviewComponent implements OnInit {
   constructor(private srs: ScullyRoutesService) {}
 
   ngOnInit() {
+    this.loadPosts();
+  }
+
+  ngOnChanges() {
+    this.loadPosts();
+  }
+
+  private loadPosts() {
     this.blogPostData$ = this.srs.available$.pipe(
       map(routeList => {
         return routeList
