@@ -18,15 +18,9 @@ export class BlogPreviewComponent implements OnInit {
   ngOnInit() {
     this.blogPostData$ = this.srs.available$.pipe(
       map(routeList => {
-        return routeList.filter((route: ScullyRoute) =>
-          route.route.startsWith(`/blog/`),
-        );
-      }),
-      map(routeList => {
-        if (this.max) {
-          routeList = routeList.slice(0, this.max);
-        }
-        return routeList.reverse();
+        return routeList
+          .filter((route: ScullyRoute) => route.route.startsWith(`/blog/`))
+          .reverse();
       }),
       map(routeList => {
         if (!this.keyword) {
@@ -35,6 +29,12 @@ export class BlogPreviewComponent implements OnInit {
         return routeList.filter((route: ScullyRoute) =>
           route.keywords.includes(this.keyword),
         );
+      }),
+      map(routeList => {
+        if (this.max) {
+          routeList = routeList.slice(0, this.max);
+        }
+        return routeList;
       }),
     );
   }
