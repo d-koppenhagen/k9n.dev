@@ -7,8 +7,10 @@ import {
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
+
 import { HighlightService } from '../../shared/highlight.service';
+import { MetaService } from '../../meta.service';
 
 @Component({
   selector: 'dk-blog-content',
@@ -25,6 +27,7 @@ export class BlogContentComponent implements OnInit, AfterViewChecked {
     private route: ActivatedRoute,
     private srs: ScullyRoutesService,
     private highlightService: HighlightService,
+    private metaService: MetaService,
   ) {}
 
   /**
@@ -45,6 +48,9 @@ export class BlogContentComponent implements OnInit, AfterViewChecked {
       }),
       map(currentPostData => {
         return currentPostData[0];
+      }),
+      tap(post => {
+        this.metaService.createCanonicalURL(post.publishedAtUrl);
       }),
     );
   }
