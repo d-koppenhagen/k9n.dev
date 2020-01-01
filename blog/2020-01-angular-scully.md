@@ -1,6 +1,6 @@
 ---
-title: Create powerfull fast pre-rendered Angular Apps using _Scully_ static site generator
-description: 'With this blog post, I will show you how you can easily create a blogging app by using the power of Angular and the help of _Scully_ static site generator. It will automatically detect all app routes and create static pages out of them that are ready to ship for production.'
+title: Create powerfull fast pre-rendered Angular Apps using Scully static site generator
+description: 'With this blog post, I will show you how you can easily create a blogging app by using the power of Angular and the help of Scully static site generator. It will automatically detect all app routes and create static pages out of them that are ready to ship for production.'
 publish: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
