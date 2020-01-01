@@ -1,24 +1,32 @@
-<section class="features">
-  <article *ngFor="let post of blogPostData$ | async; let i = index">
-    <a [routerLink]="post.route" class="image">
-      <img [src]="post.thumbnail" alt="thumbnail" />
-    </a>
-    <h3 class="major">{{ post.title }}</h3>
-    <p>
-      {{ post.description }}
-    </p>
-    <div *ngIf="post.publishedAt && post.publishedAtUrl" class="published-at">
-      Original veröffentlicht auf:
-      <a [href]="post.publishedAtUrl">{{ post.publishedAt }}</a>
-      <a [href]="post.publishedAtUrl" class="published-at-link">
-        <img
-          *ngIf="post.publishedAtLogo"
-          class="published-at-logo"
-          [src]="post.publishedAtLogo"
-          alt="Logo of the published page"
-        />
+<section *ngIf="blogPostData$ | async as blogPosts" class="features">
+  <ng-container *ngIf="blogPosts.length; else emptyResultsTemplate">
+    <article *ngFor="let post of blogPosts; let i = index">
+      <a [routerLink]="post.route" class="image">
+        <img [src]="post.thumbnail" alt="thumbnail" />
       </a>
-    </div>
-    <a [routerLink]="post.route" class="special">Weiterlesen...</a>
-  </article>
+      <h3 class="major">{{ post.title }}</h3>
+      <p>
+        {{ post.description }}
+      </p>
+      <div *ngIf="post.publishedAt && post.publishedAtUrl" class="published-at">
+        Original veröffentlicht auf:
+        <a [href]="post.publishedAtUrl">{{ post.publishedAt }}</a>
+        <a [href]="post.publishedAtUrl" class="published-at-link">
+          <img
+            *ngIf="post.publishedAtLogo"
+            class="published-at-logo"
+            [src]="post.publishedAtLogo"
+            alt="Logo of the published page"
+          />
+        </a>
+      </div>
+      <a [routerLink]="post.route" class="special">Weiterlesen...</a>
+    </article>
+  </ng-container>
+  <ng-template #emptyResultsTemplate
+    >Es wurden keine passenden Einträge gefunden.</ng-template
+  >
 </section>
+<ul *ngIf="max || keyword || search" class="actions">
+  <li><a routerLink="/blog" class="button">Alle Posts ansehen</a></li>
+</ul>
