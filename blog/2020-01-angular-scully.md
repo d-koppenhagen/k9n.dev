@@ -20,7 +20,7 @@ thumbnail: assets/images/bg3.jpg
 
 # Create powerful fast pre-rendered Angular Apps using _Scully_ static site generator
 
-**On _Dec 16, 2019_ the static site generator _Scully_ for Angular [was presented](https://www.youtube.com/watch?v=Sh37rIUL-d4). _Scully_ automatically detects all app routes and create static sites out of it that are ready to ship for production. With this blog post, I want to show you how you can easily create an Angular blogging app by using _Scully_ for pre-render your complete app.**
+**You probably heard of the JAMStack. It's a new way of building websites and apps via static site generators that deliver better performance and higher security. There have been tools for many platforms, but surprisingly not yet for Angular. These times are finally over. With this blog post, I want to show you how you can easily create an Angular blogging app by using Scully for pre-render your complete app.**
 
 <hr>
 
@@ -34,15 +34,16 @@ thumbnail: assets/images/bg3.jpg
 - [Fetch dynamic information from an API](/blog/2020-01-angular-scully#fetch-dynamic-information-from-an-api)
 - [Conclusion](/blog/2020-01-angular-scully#conclusion)
 
-> _Scully_ is currently just available within an early version.
+> On _Dec 16, 2019_ the static site generator _Scully_ for Angular [was presented](https://www.youtube.com/watch?v=Sh37rIUL-d4).
+> _Scully_ automatically detects all app routes and create static sites out of it that are ready to ship for production. _Scully_ is currently just available within an early version.
 > This blog post is based on version _0.0.9_
 > However some of the commands or API calls used here may change in the future.
-> It’s my intention the keep the blog post as up-to-date as possible.
+> It’s my goal to keep this blog post as up-to-date as possible.
 
 ## About Scully
 
 Scully is a static site generator (SSG) for Angular apps.
-Scully analyzes a built Angular app and detect all the routes of the app.
+Scully analyses a built Angular app and detect all the routes of the app.
 It will then call every route it found, visit the page in the browser, renders the page and finally put the static rendered page on your disk.
 This is what we are calling **pre-rendering**.
 The result is a structure ready for shipping to your web server.
@@ -51,7 +52,7 @@ The result is a structure ready for shipping to your web server.
 > It uses a Chromium browser to visit and check all routes it found.
 
 All pre-rendered pages contain just plain HTML and CSS.
-In fact when deploying it, a user will be able to instantly access all routes and see the content with almost no delay.
+In fact, when deploying it, a user will be able to instantly access all routes and see the content with almost no delay.
 The resulting sites are very small static sites in just a few KBs so that even the access from a mobile device with a very low bandwidth is insanely fast.
 It's significantly faster compared to the hundreds of KBs that you are downloading when calling a “normal” Angular app.
 
@@ -64,7 +65,7 @@ The power of pre-rendering and very fast access to sites and the power of a full
 The first thing we have to do is to setup our Angular app.
 To use _Scully_ later, we have to use an Angular version _9.0.0-rc.0_ or greater.
 As _Scully_ detects the content from the routes, we need to configure the Angular router as well.
-Therefore we add the appropriate flag `--routing` (we can also choose this option when the CLI prompts us).
+Therefore, we add the appropriate flag `--routing` (we can also choose this option when the CLI prompts us).
 
 ```bash
 npx -p @angular/cli@^9.0.0-rc ng new scully-blog --routing
@@ -72,7 +73,7 @@ cd scully-blog  # navigate into the project
 ```
 
 The next step is to setup our static site generator _Scully_.
-Therefore we are using the provided Angular schematic:
+Therefore, we are using the provided Angular schematic:
 
 ```bash
 ng add @scullyio/init  # add _Scully_ to the project
@@ -129,7 +130,7 @@ We now have two files there: The initially created example file from _Scully_ an
 ## Let's go further
 
 Now that we've got Scully installed and working, let's modify our Angular app to look more like an actual blog, and not just like the default Angular app.
-Therefore we want to get rid of the Angular auto generated content in the `AppComponent` first.
+Therefore, we want to get rid of the Angular auto generated content in the `AppComponent` first.
 We can simply delete all the content of `app.component.html` except of the `RouterOutlet`.
 So in the end the content of our file `app.component.html` should look like this:
 
@@ -156,8 +157,8 @@ Setting up an Angular based blog has never been easier.
 
 ## Use the _Scully_ service
 
-We wanna go a little step further and we want to list an overview of all existing blog posts we have and link to their sites in our `AppComponent`.
-Therefore we can easily inject the `ScullyRoutesService`.
+We want to go a little step further and we want to list an overview of all existing blog posts we have and link to their sites in our `AppComponent`.
+Therefore, we can easily inject the `ScullyRoutesService`.
 It will return us a list of all routes _Scully_ found with the parsed information as a `ScullyRoute` array within the `available$` observable.
 We can easily inject the service and display the information as a list in our `AppComponent`.
 
@@ -182,7 +183,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-To display the results we can simply use `ngFor` with the `async` pipe and list the results.
+To display the results, we can simply use `ngFor` with the `async` pipe and list the results.
 A `ScullyRoute` will give us the routing path inside the `route` key and all other markdown meta data inside their appropriate key names.
 So we can extend for example our markdown meta data block with more keys (e.g. `thumbnail: assets/thumb.jpg`) and we can access them via those (`blog.thumbnail`) in our case.
 Our `app.component.html` can look like this:
@@ -225,7 +226,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-Wow! That was easy wasn’t it? Now you just need to add a bit of styling and content and your blog is ready for getting visited.
+Wow! That was easy, wasn’t it? Now you just need to add a bit of styling and content and your blog is ready for getting visited.
 
 ## Fetch dynamic information from an API
 
@@ -293,7 +294,7 @@ The result from the API call will look like the following:
 ```
 
 After _Scully_ plucks the ISBN, it will just iterate over the final array: `['9783864906466', '9783864903571']`.
-In fact when running _Scully_ using `npm run scully`, it will visit the following routes, **after we have configured the route `/books/:isbn` in the Angular router** (otherwise non used routes will be skipped).
+In fact, when running _Scully_ using `npm run scully`, it will visit the following routes, **after we have configured the route `/books/:isbn` in the Angular router** (otherwise non used routes will be skipped).
 
 ```text
 /books/9783864906466
@@ -316,7 +317,7 @@ Route "/books/9783864903571" rendered into file: "/<path>/scully-blog/dist/stati
 Route "/books/9783864906466" rendered into file: "/<path>/scully-blog/dist/static/books/9783864906466/index.html"
 ```
 
-If you you wanna follow all the development steps in detail, check out my provided github repository
+If you you want to follow all the development steps in detail, check out my provided github repository
 [scully-blog-example](https://github.com/d-koppenhagen/scully-blog-example/commits).
 Each step described here is represented by one commit.
 
@@ -325,7 +326,7 @@ Each step described here is represented by one commit.
 Scully is awesome if you need a pre-rendered Angular SPA where all routes can be accessed immediately without loading the whole app at once.
 This is a great benefit for users as they don’t need to wait until the whole bunch of JavaScript has been downloaded to their devices.
 They have instantly access to the sites information.
-Furthermore _Scully_ offers a way to create very easily a blog and renders all posts written in markdown.
+Furthermore, _Scully_ offers a way to create very easily a blog and renders all posts written in markdown.
 It will handle and pre-render dynamic routes by fetching API data from placeholders and visiting every route filled by this placeholder.
 Compared to pre-rending by using [Angular Universal](https://angular.io/guide/universal), _Scully_ is much easier to use and it doesn't require you to write a specific flavor of Angular.
 Also _Scully_ can easily pre-render hybrid Angular apps or Angular apps with plugins like jQuery in comparison to Angular Universal.
