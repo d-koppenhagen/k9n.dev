@@ -50,8 +50,7 @@ export class BlogContentComponent implements OnInit, AfterViewChecked {
         return currentPostData[0];
       }),
       tap(post => {
-        this.metaService.createCanonicalURL(post.publishedAtUrl);
-        this.metaService.createTwitterCard(post);
+        this.metaService.createMetaDataForPost(post);
       }),
     );
   }
