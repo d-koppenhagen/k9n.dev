@@ -110,8 +110,9 @@ This is because currently we only have the root route configured and no more fur
 
 Nonetheless we can checkout the result of the static pages in the browser by running `npm run scully:serve`. This will start two servers:
 
-- `localhost:1668` : This server serves the static generated pages like a normal webserver (e.g. _nginx_ or _apache_)
-- `localhost:1864` : This server represents a "normal" Angular distribution server (like when you run `npm start`)
+- `localhost:1668` : This server serves the static generated pages from the `dist/static` directory like a normal webserver (e.g. _nginx_ or _apache_)
+- `localhost:1864` : <!-- Not that clear yet, TODO: update when https://github.com/scullyio/scully/issues/126 is solved -->This server is there for courtesy. It serves the results from _Scully_ directly, so that you can locally interact with it.
+
 
 ## Turn it into a blog
 
