@@ -4,7 +4,7 @@ description: 'With this blog post, I will show you how you can easily create a b
 publish: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-01-02
+updated: 2020-01-01
 keywords:
   - Angular
   - Angular CLI
