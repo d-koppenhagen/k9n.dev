@@ -105,8 +105,7 @@ dist/
   ┗ vendor-es5.js.map
 ```
 
-If we take a look at it, except of the file `scully-routes.json`, that contains just an empty array.
-We don't see any differences between the two builds.
+If we take a look at it, except of the file `scully-routes.json`, that contains just an empty array, we don't see any differences between the two builds.
 This is because currently we only have the root route configured and no more further content was created.
 
 Nonetheless we can checkout the result of the static pages in the browser by running `npm run scully:serve`. This will start two servers:
@@ -347,7 +346,7 @@ Each step described here is represented by one commit.
 
 ## Conclusion
 
-Scully is an awesome tootl if you need a pre-rendered Angular SPA where all routes can be accessed immediately without loading the whole app at once.
+Scully is an awesome tool if you need a pre-rendered Angular SPA where all routes can be accessed immediately without loading the whole app at once.
 This is a great benefit for users as they don’t need to wait until the whole bunch of JavaScript has been downloaded to their devices.
 Visitors and **search engines** have instantly access to the sites information.
 Furthermore, _Scully_ offers a way to create very easily a blog and renders all posts written in markdown.
