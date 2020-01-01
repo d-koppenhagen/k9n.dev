@@ -43,22 +43,22 @@ thumbnail: assets/images/bg3.jpg
 ## About Scully
 
 Scully is a static site generator (SSG) for Angular apps.
-Scully analyses a built Angular app and detect all the routes of the app.
-It will then call every route it found, visit the page in the browser, renders the page and finally put the static rendered page on your disk.
-This is what we are calling **pre-rendering**.
-The result is a structure ready for shipping to your web server.
+It analyses a compiled Angular app and detects all the routes of the app.
+It will then call every route it found, visit the page in the browser, renders the page and finally put the static rendered page to the file system.
+This process is also known as **pre-rendering** – but with a new approach.
+The result compiled and pre-rendered app ready for shipping to your web server.
 
-> _Scully_ does not use [Angular Universal](https://angular.io/guide/universal) for the pre-rendering.
+> **Good to know:** _Scully_ does not use [Angular Universal](https://angular.io/guide/universal) for the pre-rendering.
 > It uses a Chromium browser to visit and check all routes it found.
 
 All pre-rendered pages contain just plain HTML and CSS.
 In fact, when deploying it, a user will be able to instantly access all routes and see the content with almost no delay.
-The resulting sites are very small static sites in just a few KBs so that even the access from a mobile device with a very low bandwidth is insanely fast.
-It's significantly faster compared to the hundreds of KBs that you are downloading when calling a “normal” Angular app.
+The resulting sites are very small static sites (just a few KBs) so that even the access from a mobile device with a very low bandwidth is pretty fast.
+It's significantly faster compared to the hundreds of KBs that you are downloading when calling a “normal” Angular app on initial load.
 
 But that’s not all: Once the pre-rendered page is shipped to the user, _Scully_ loads and bootstraps the “real” Angular app  in the background on top of the existing view.
 In fact _Scully_ will unite two great things:
-The power of pre-rendering and very fast access to sites and the power of a fully functional SPA written in Angular.
+The power of pre-rendering and very fast access to sites and the power of a fully functional Single Page Application (SPA) written in Angular.
 
 ## Get started
 
@@ -85,10 +85,10 @@ Let's try it out by building our site and running _Scully_.
 
 ```bash
 npm run build   # build our Angular app
-npm run scully  # Let _Scully_ run over our app build
+npm run scully  # let _Scully_ run over our app build
 ```
 
-After _Scully_ has checked our app, it will add the generated static sources to our `dist/static` directory by default.
+After _Scully_ has checked our app, it will add the generated static assets to our `dist/static` directory by default.
 Let's quickly compare the result generated from _Scully_ with the result from the initial Angular build (`dist/scully-blog`):
 
 ```text
@@ -105,8 +105,9 @@ dist/
   ┗ vendor-es5.js.map
 ```
 
-If we take a look at it, except of the file `scully-routes.json`, that contains just an empty array, we don't see any differences between the two builds.
-This is because currently we only have the root route configured and no more further content created.
+If we take a look at it, except of the file `scully-routes.json`, that contains just an empty array.
+We don't see any differences between the two builds.
+This is because currently we only have the root route configured and no more further content was created.
 
 Nonetheless we can checkout the result of the static pages in the browser by running `npm run scully:serve`. This will start two servers:
 
@@ -116,14 +117,14 @@ Nonetheless we can checkout the result of the static pages in the browser by run
 ## Turn it into a blog
 
 Let’s go a bit further and turn our site into a simple blog that will render our blog posts from separate markdown documents.
-Scully brings this feature out of the box and it’s fascinatingly easy to set it up:
+Scully brings this feature out of the box and it’s very easy to set it up:
 
 ```bash
 ng g @scullyio/init:blog                      # setup up the `BlogModule` and related sources
 ng g @scullyio/init:post --name="First post"  # create a new blog post
 ```
 
-After these steps we can see that _Scully_ has now added the `blog` directory to our project root.
+After these two steps we can see that _Scully_ has now added the `blog` directory to our project root.
 Here we can find the markdown files for creating the blog posts — one file for each post.
 We now have two files there: The initially created example file from _Scully_ and this one we created with `ng g @scullyio/init:post`.
 
@@ -150,14 +151,17 @@ When checking out our `dist/static` directory we can see that there are new sub-
 The files `index.html` in `dist/static/blog/<post-name>/` contain our static pages ready to be served.
 When we are visiting the route path `/blog/first-post` we can see the content of our markdown source file `blog/first-post.md` is rendered as HTML.
 
+Hold on a minute! 😳
+
 You may have realized: We haven’t written one line of code manually yet and we have already a fully functional blogging site that’s server site rendered. Isn’t that cool?
 Setting up an Angular based blog has never been easier.
 
-> _Scully_ also detects new routes we are adding manually to our app and it will create static sites for all those pages.
+> **Good to know:** _Scully_ also detects new routes we are adding manually to our app and it will create static sites for all those pages.
 
 ## Use the _Scully_ service
 
-We want to go a little step further and we want to list an overview of all existing blog posts we have and link to their sites in our `AppComponent`.
+We want to take the next step.
+Now we want to list an overview of all existing blog posts we have and link to their sites in our `AppComponent`.
 Therefore, we can easily inject the `ScullyRoutesService`.
 It will return us a list of all routes _Scully_ found with the parsed information as a `ScullyRoute` array within the `available$` observable.
 We can easily inject the service and display the information as a list in our `AppComponent`.
@@ -183,10 +187,19 @@ export class AppComponent implements OnInit {
 }
 ```
 
+If you like, you can write this even a little shorter:
+
+```ts
+export class AppComponent implements OnInit {
+  posts$ = this.srs.available$;
+  constructor(private srs: ScullyRoutesService) {}
+}
+```
+
 To display the results, we can simply use `ngFor` with the `async` pipe and list the results.
 A `ScullyRoute` will give us the routing path inside the `route` key and all other markdown meta data inside their appropriate key names.
-So we can extend for example our markdown meta data block with more keys (e.g. `thumbnail: assets/thumb.jpg`) and we can access them via those (`blog.thumbnail`) in our case.
-Our `app.component.html` can look like this:
+So we can extend for example our markdown metadata block with more keys (e.g. `thumbnail: assets/thumb.jpg`) and we can access them via those (`blog.thumbnail` in our case).
+We can extend `app.component.html` like this:
 
 ```html
 <ul>
@@ -250,12 +263,14 @@ exports.config = {
 };
 ```
 
-Let’s imagine our app has another route called `/books/:isbn`.
+I would like to show a second example.
+Imagine we want to display information about books from an external API.
+So our app needs another route called `/books/:isbn`.
 To visit this route and pre-render it, we need a way to fill the `isbn` parameter.
 Luckily _Scully_ helps us with this too.
 We can configure [_Router Plugin_](https://github.com/scullyio/scully/blob/master/docs/plugins.md#router-plugin) that will call an API, fetch the data from it and pluck the `isbn` from the array of results to fill it in the router parameter.
 
-In the following example we will use [BookMonkey API](https://api3.angular-buch.com) as an API to fetch a list of books:
+In the following example we will use the public service [BookMonkey API](https://api3.angular-buch.com) (we provide this service for the readers of our [German Angular book](https://angular-buch.com/)) as an API to fetch a list of books:
 
 ```js
 exports.config = {
@@ -273,7 +288,7 @@ exports.config = {
 };
 ```
 
-The result from the API call will look like the following:
+The result from the API will have this shape:
 
 ```json
 [
@@ -317,24 +332,29 @@ Route "/books/9783864903571" rendered into file: "/<path>/scully-blog/dist/stati
 Route "/books/9783864906466" rendered into file: "/<path>/scully-blog/dist/static/books/9783864906466/index.html"
 ```
 
+This is great. We have efficiently pre-rendered normal dynamic content!
+And that was it for today.
+With the shown examples, it's possible create a full-fledged website with Scully.
+
+> Did you know that **this blogpost** and the overall website your are right now reading has also been created using _Scully_?
+> Feel free to check out the sources at:
+> [github.com/d-koppenhagen/d-koppenhagen.de](https://github.com/d-koppenhagen/d-koppenhagen.de)
+
+
 If you you want to follow all the development steps in detail, check out my provided github repository
 [scully-blog-example](https://github.com/d-koppenhagen/scully-blog-example/commits).
 Each step described here is represented by one commit.
 
 ## Conclusion
 
-Scully is awesome if you need a pre-rendered Angular SPA where all routes can be accessed immediately without loading the whole app at once.
+Scully is an awesome tootl if you need a pre-rendered Angular SPA where all routes can be accessed immediately without loading the whole app at once.
 This is a great benefit for users as they don’t need to wait until the whole bunch of JavaScript has been downloaded to their devices.
-They have instantly access to the sites information.
+Visitors and **search engines** have instantly access to the sites information.
 Furthermore, _Scully_ offers a way to create very easily a blog and renders all posts written in markdown.
 It will handle and pre-render dynamic routes by fetching API data from placeholders and visiting every route filled by this placeholder.
-Compared to pre-rending by using [Angular Universal](https://angular.io/guide/universal), _Scully_ is much easier to use and it doesn't require you to write a specific flavor of Angular.
+
+Compared to "classic" pre-rending by using [Angular Universal](https://angular.io/guide/universal), _Scully_ is much easier to use and it doesn't require you to write a specific flavor of Angular.
 Also _Scully_ can easily pre-render hybrid Angular apps or Angular apps with plugins like jQuery in comparison to Angular Universal.
-
-Did you know that **this site** has also been created using _Scully_?
-Feel free to check out the sources at:
-
-[github.com/d-koppenhagen/d-koppenhagen.de](https://github.com/d-koppenhagen/d-koppenhagen.de)
 
 Any hints, suggestions or corrections? Feel free to [contact me](http://d-koppenhagen.de/#contact) or sending me a [pull request](https://github.com/d-koppenhagen/d-koppenhagen.de/pulls).
 
