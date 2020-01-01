@@ -20,7 +20,7 @@ thumbnail: assets/images/bg3.jpg
 
 # Create powerful fast pre-rendered Angular Apps using _Scully_ static site generator
 
-**You probably heard of the JAMStack. It's a new way of building websites and apps via static site generators that deliver better performance and higher security. There have been tools for many platforms, but surprisingly not yet for Angular. These times are finally over. With this blog post, I want to show you how you can easily create an Angular blogging app by using Scully for pre-render your complete app.**
+**You probably heard of the JAMStack. It's a new way of building websites and apps via static site generators that deliver better performance and higher security. There have been tools for many platforms, but surprisingly not yet for Angular. These times are finally over. With this blog post, I want to show you how you can easily create an Angular blogging app by to pre-render your complete app.**
 
 <hr>
 
