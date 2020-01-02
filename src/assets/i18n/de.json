@@ -15,5 +15,12 @@
   "thumbnail": "Vorschaubild",
   "hello": "Hallo",
   "iAm": "Ich bin {{name}}",
-  "subHeader": "Entwickler, IT-Berater, Buchautor"
+  "subHeader": "Entwickler, IT-Berater, Buchautor",
+  "contactMeHeading": "Kontaktieren Sie mich",
+  "contactParagraph": "Haben Sie Fragen oder Anregungen? Nehmen Sie gern Kontakt mit mir auf!",
+  "reportParagraph": "Vorschläge? Feedback? Bugs?",
+  "createIssue": "Stell ein Issue ein",
+  "sendPR": "sende mir einen PR",
+  "or": "oder",
+  "contactMe": "kontaktiere mich"
 }
