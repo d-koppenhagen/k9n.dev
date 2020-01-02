@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { ImpressumComponent } from './impressum/impressum.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 const routes: Routes = [
   {
@@ -10,8 +10,8 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'impressum',
-    component: ImpressumComponent,
+    path: 'imprint',
+    component: ImprintComponent,
   },
   {
     path: 'blog',

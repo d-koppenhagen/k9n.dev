@@ -17,8 +17,9 @@ import { MenuComponent } from './menu/menu.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PublicationsComponent } from './publications/publications.component';
-import { ImpressumComponent } from './impressum/impressum.component';
+import { ImprintComponent } from './imprint/imprint.component';
 import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.co
     MenuComponent,
     NavbarComponent,
     PublicationsComponent,
-    ImpressumComponent,
+    ImprintComponent,
     TwitterTimelineComponent,
   ],
   imports: [
@@ -40,6 +41,7 @@ import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.co
     A11yModule,
     NgxTwitterTimelineModule,
     SharedModule,
+    TranslocoRootModule,
   ],
   providers: [ScullyRoutesService, { provide: LOCALE_ID, useValue: 'de' }],
   bootstrap: [AppComponent],

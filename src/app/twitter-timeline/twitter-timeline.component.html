@@ -1,11 +1,13 @@
-<section class="wrapper style2">
-  <div class="inner">
-    <h2 class="major">Twitter Timeline</h2>
-    <div class="twitter-timeline-wrapper">
-      <ngx-twitter-timeline
-        [data]="twitterTimelineData"
-        [opts]="twitterTimelineOpts"
-      ></ngx-twitter-timeline>
+<ng-container *transloco="let t">
+  <section class="wrapper style2">
+    <div class="inner">
+      <h2 class="major">{{ t('twitterTimeline') }}</h2>
+      <div class="twitter-timeline-wrapper">
+        <ngx-twitter-timeline
+          [data]="twitterTimelineData"
+          [opts]="twitterTimelineOpts"
+        ></ngx-twitter-timeline>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</ng-container>

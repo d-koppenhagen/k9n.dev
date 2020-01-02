@@ -18,3 +18,9 @@
     color: $c01;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .hidden-small {
+    visibility: hidden;
+  }
+}

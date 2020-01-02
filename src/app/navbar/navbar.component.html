@@ -1,20 +1,22 @@
 <!-- Header -->
-<nav
-  (keydown.enter)="toggleMenu()"
-  (keydown.arrowdown)="toggleMenu()"
-  class="menu-dark"
-  id="navigation"
-  role="navigation"
-  tabindex="0"
->
-  <button
-    class="burger-menu"
-    role="button"
-    (click)="toggleMenu()"
-    aria-label="Open the menu"
-    aria-expanded="false"
-  >
-    Menu
-  </button>
-</nav>
-<dk-menu *ngIf="menuOpen" (closeMenu)="toggleMenu()"></dk-menu>
+<ng-container *transloco="let t">
+  <nav class="menu-dark" id="navigation" role="navigation" tabindex="0">
+    <button
+      class="burger-menu"
+      role="button"
+      (click)="toggleMenu()"
+      aria-label="Open the menu"
+      aria-expanded="false"
+    >
+      <span class="hidden-small">{{ t('menu') }}</span>
+    </button>
+
+    <button
+      (click)="switchLanguage()"
+      [attr.aria-label]="'switchLang' | transloco"
+    >
+      {{ activeLanguage | uppercase }}
+    </button>
+  </nav>
+  <dk-menu *ngIf="menuOpen" (closeMenu)="toggleMenu()"></dk-menu>
+</ng-container>
