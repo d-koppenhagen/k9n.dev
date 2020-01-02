@@ -6,8 +6,14 @@
   "contact": "Kontakt",
   "imprint": "Impressum",
   "close": "Schließen",
+  "logo": "Logo",
   "switchLang": "Sprache wechseln",
   "twitterTimeline": "Twitter Timeline",
   "recentBlogPosts": "Aktuelle Blog Posts",
-  "showAllBlogPosts": "Alle Posts ansehen"
+  "showAllBlogPosts": "Alle Posts ansehen",
+  "originallyPublishedAt": "Original veröffentlicht auf",
+  "thumbnail": "Vorschaubild",
+  "hello": "Hallo",
+  "iAm": "Ich bin {{name}}",
+  "subHeader": "Entwickler, IT-Berater, Buchautor"
 }

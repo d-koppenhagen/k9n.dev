@@ -1,13 +1,17 @@
 <!-- Banner -->
-<section id="banner" routerLink="/">
-  <div class="inner">
-    <img
-      routerLink="/"
-      src="assets/images/logo_header.png"
-      alt="d-koppenhagen.de logo"
-      id="logo"
-    />
-    <h1 class="header-title">Hallo,<br />Ich bin Danny<br />Koppenhagen</h1>
-    <p class="sub-header">Entwickler, IT-Berater, Buchautor</p>
-  </div>
-</section>
+<ng-container *transloco="let t">
+  <section id="banner" routerLink="/">
+    <div class="inner">
+      <img
+        routerLink="/"
+        src="assets/images/logo_header.png"
+        [attr.alt]="'logo' | transloco"
+        id="logo"
+      />
+      <h1 class="header-title">
+        {{ t('hello') }},<br />{{ t('iAm') }} Danny<br />Koppenhagen
+      </h1>
+      <p class="sub-header">{{ t('subHeader') }}</p>
+    </div>
+  </section>
+</ng-container>

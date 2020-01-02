@@ -6,10 +6,14 @@
   "contact": "Contakt",
   "imprint": "Imprint",
   "close": "Close",
+  "logo": "Logo",
   "switchLang": "Switch Language",
   "twitterTimeline": "Twitter Timeline",
   "recentBlogPosts": "Recent Blog Posts",
   "showAllBlogPosts": "Show all posts",
-  "originallyPublishedAt": "Original veröffentlicht auf",
-  "thumbnail": "Thumbnail"
+  "originallyPublishedAt": "Originally published at",
+  "thumbnail": "Thumbnail",
+  "hello": "Hello",
+  "iAm": "I am {{name}}",
+  "subHeader": "Developer, IT Consultant, Author"
 }
