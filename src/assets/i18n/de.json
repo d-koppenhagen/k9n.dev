@@ -24,6 +24,11 @@
   "sendPR": "sende mir einen PR",
   "or": "oder",
   "contactMe": "kontaktiere mich",
+  "publicationsPage": {
+    "title": "Angular: Grundlagen, fortgeschrittene Themen und Best Practices – ab Angular 8",
+    "description": "Entwickeln Sie moderne Apps für Web und Mobile. Mit Angular setzen Sie auf ein modernes und modulares Web-Framework. Dieses Buch stellt Ihnen die Bausteine von Angular, viele Best Practices und die notwendigen Werkzeuge vor. Beginnen Sie Ihren Einstieg mit einer praxisnahen Einführung.",
+    "readOn": "Mehr erfahren"
+  },
   "blogPage": {
     "thumbnail": "Blog-Post Vorschaubild",
     "originallyPublishedAt": "Original veröffentlicht auf",

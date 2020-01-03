@@ -3,7 +3,7 @@
   "home": "Home",
   "about": "About me",
   "blog": "Blog",
-  "contact": "Contakt",
+  "contact": "Contact",
   "imprint": "Imprint",
   "close": "Close",
   "logo": "Logo",
@@ -24,6 +24,11 @@
   "sendPR": "send me a PR",
   "or": "or",
   "contactMe": "contact me",
+  "publicationsPage": {
+    "title": "Angular: \"Grundlagen, fortgeschrittene Themen und Best Practices – ab Angular 8\"",
+    "description": "This German Angular book will teach you how to develop modern apps for web and mobile. You will learn about the basic concepts of Angular, the best practices and related tools.",
+    "readOn": "Mehr erfahren"
+  },
   "blogPage": {
     "thumbnail": "Blog post thumbnail",
     "originallyPublishedAt": "Originally published at",

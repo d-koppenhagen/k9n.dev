@@ -1,4 +1,4 @@
-<ng-container *transloco="let t">
+<ng-container *transloco="let t; read: 'publicationsPage'">
   <section id="wrapper">
     <section id="one" class="wrapper spotlight style1">
       <div class="inner">
@@ -8,18 +8,11 @@
             [attr.alt]="'thumbnail' | transloco"
         /></a>
         <div class="content">
-          <h2 class="major">
-            Angular: Grundlagen, fortgeschrittene Themen und Best Practices – ab
-            Angular 8
-          </h2>
-          <p>
-            Entwickeln Sie moderne Apps für Web und Mobile. Mit Angular setzen
-            Sie auf ein modernes und modulares Web-Framework. Dieses Buch stellt
-            Ihnen die Bausteine von Angular, viele Best Practices und die
-            notwendigen Werkzeuge vor. Beginnen Sie Ihren Einstieg mit einer
-            praxisnahen Einführung.
-          </p>
-          <a href="https://angular-buch.com" class="special">Mehr erfahren</a>
+          <h2 class="major">{{ t('title') }}</h2>
+          <p>{{ t('description') }}</p>
+          <a href="https://angular-buch.com" class="special">{{
+            t('readOn')
+          }}</a>
         </div>
       </div>
     </section>
