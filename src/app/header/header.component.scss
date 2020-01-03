@@ -3,7 +3,7 @@
 .header-title {
   background-image: url('/assets/images/bg6.png');
   background-size: cover;
-  font-size: 3.5em;
+  font-size: 3.2em;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.1;
   font-weight: 700;
@@ -51,6 +51,12 @@ p.sub-header {
   }
 }
 
+@media screen and (max-width: 1150px) {
+  #banner {
+    background-position: right -200px top;
+  }
+}
+
 @media screen and (max-width: 980px) {
   #banner {
     background-size: contain;
@@ -61,7 +67,7 @@ p.sub-header {
 
 @media screen and (max-width: 800px) {
   .header-title {
-    font-size: 3em;
+    font-size: 2.6em;
   }
 }
 
@@ -78,19 +84,29 @@ p.sub-header {
 
 @media screen and (max-width: 620px) {
   .header-title {
-    font-size: 2.5em;
+    font-size: 2.3em;
     padding-right: 40vw;
   }
 
   #banner {
     background-size: cover;
-    background-position: right -100px top;
+    background-position: right -180px top;
   }
 }
 
 @media screen and (max-width: 560px) {
   .header-title {
-    font-size: 2em;
+    font-size: 1.7em;
+    padding-right: 50vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-title {
+    background-image: unset;
+    background-color: $c01;
+    opacity: 0.8;
+    font-size: 1.7em;
     padding-right: 50vw;
   }
 }
