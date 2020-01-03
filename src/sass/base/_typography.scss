@@ -17,19 +17,19 @@ textarea {
   line-height: 1.65;
 
   @include breakpoint('<=xlarge') {
-    font-size: 13pt;
+    font-size: 14pt;
   }
 
   @include breakpoint('<=large') {
-    font-size: 12pt;
+    font-size: 14pt;
   }
 
   @include breakpoint('<=medium') {
-    font-size: 12pt;
+    font-size: 13pt;
   }
 
   @include breakpoint('<=small') {
-    font-size: 12pt;
+    font-size: 13pt;
   }
 
   @include breakpoint('<=xsmall') {
