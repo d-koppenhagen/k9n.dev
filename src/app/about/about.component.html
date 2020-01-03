@@ -1,141 +1,36 @@
-<section id="about" class="wrapper alt style1">
-  <div class="inner">
-    <h3 class="major">Über mich</h3>
-    <p>
-      Mein Name ist Danny Koppenhagen und ich arbeite leidenschaftlich als
-      Softwareentwickler und IT-Berater. Mein Metier ist die Konzeption und
-      Entwicklung von Web-Anwendungen &ndash; insbesondere von
-      Single-Page-Applications (SPA). Zum Einsatz kommen hier vor allem Angular,
-      RxJS, NgRx aber auch Vue.js und NativeScript. Des Weiteren entwickle ich
-      Backend-Anwendungen auf Basis von JavaScript und TypeScript und bin als
-      IT-Berater für Webarchitekturen und -Frameworks tätig. Bei der Umsetzung
-      meiner täglichen Arbeit steht stets der Nutzer im Fokus.
-    </p>
-    <h3 class="major">Mein Werdegang</h3>
-    <section class="features">
-      <div class="timeline">
-        <div class="container left">
-          <div class="content">
-            <span class="location">Berlin</span>
-            <h2 class="timeline-heading">2019</h2>
-            <h3>
-              Buchautor
-            </h3>
-            <h4>
-              dpunkt.verlag
-            </h4>
-            <p>
-              Zweite Auflage des Buches:
-              <a
-                href="https://www.dpunkt.de/buecher/13231/9783864906466-angular.html"
-                >Angular: Grundlagen, fortgeschrittene Themen und Best Practices
-                – inklusive NativeScript und NgRx.</a
-              >
-            </p>
+<ng-container *transloco="let t">
+  <section id="about" class="wrapper alt style1">
+    <div class="inner">
+      <h3 class="major">{{ t('about') }}</h3>
+      <p>{{ t('aboutPage.intro') }}</p>
+      <h3 class="major">{{ t('aboutPage.career') }}</h3>
+      <section class="features">
+        <div class="timeline">
+          <div
+            *ngFor="let i of [0, 1, 2, 3, 4, 5, 6].reverse(); let odd = odd"
+            class="container"
+            [ngClass]="odd ? 'right' : 'left'"
+          >
+            <div class="content">
+              <span class="location">{{
+                t('aboutPage.' + i + '.location')
+              }}</span>
+              <h2 class="timeline-heading">
+                {{ t('aboutPage.' + i + '.when') }}
+              </h2>
+              <h3>
+                {{ t('aboutPage.' + i + '.what') }}
+              </h3>
+              <h4>
+                {{ t('aboutPage.' + i + '.where') }}
+              </h4>
+              <p>
+                {{ t('aboutPage.' + i + '.info') }}
+              </p>
+            </div>
           </div>
         </div>
-        <div class="container right">
-          <div class="content">
-            <span class="location">Berlin</span>
-            <h2 class="timeline-heading">2019</h2>
-            <h3>
-              Spezialist: Entwickler Und IT-Berater
-            </h3>
-            <h4>
-              DB Systel GmbH
-            </h4>
-            <p>
-              Entwicklung nutzerzentrierter Webanwendungen im Enterprise-Umfeld.
-              Beratung zur Umsetzung von Web-Anwendungen und -Architekturen
-              sowie User Experience (UX) Consulting.
-            </p>
-          </div>
-        </div>
-        <div class="container left">
-          <div class="content">
-            <span class="location">Berlin</span>
-            <h2 class="timeline-heading">2017</h2>
-            <h3>
-              Buchautor
-            </h3>
-            <h4>
-              dpunkt.verlag
-            </h4>
-            <p>
-              Erste Auflage des Buches:
-              <a href="https://www.amazon.de/dp/3864903572"
-                >Angular: Grundlagen, fortgeschrittene Techniken und Best
-                Practices mit TypeScript.</a
-              >
-            </p>
-          </div>
-        </div>
-        <div class="container right">
-          <div class="content">
-            <span class="location">Berlin</span>
-            <h2 class="timeline-heading">2015</h2>
-            <h3>
-              Entwickler TETRA Support Und Umsetzung
-            </h3>
-            <h4>
-              Deutsche Telekom Healthcare & Security Solutions GmbH
-            </h4>
-            <p>
-              Umsetzung von Client- und Serversystemen im Bereich des TETRA-BOS.
-              Administration, Konfiguration, Integration und Test von
-              IT-Systemen.
-            </p>
-          </div>
-        </div>
-        <div class="container left">
-          <div class="content">
-            <span class="location">Leipzig</span>
-            <h2 class="timeline-heading">2015</h2>
-            <h3>
-              Bachelor Of Engineering
-            </h3>
-            <h4>
-              Kommunikations- Und Medieninformatik
-            </h4>
-            <p>
-              Netzwerk- und Übertragungstechnik, Software Engineering,
-              IT-Architektur, Protokollengineering sowie Web und
-              Medien-Technologien.
-            </p>
-          </div>
-        </div>
-        <div class="container right">
-          <div class="content">
-            <span class="location">Cottbus</span>
-            <h2 class="timeline-heading">2012</h2>
-            <h3>
-              Sachbearbeiter Technische Kundenberatung
-            </h3>
-            <h4>
-              Deutsche Telekom Technischer Service GmbH (Customer Competence
-              Center)
-            </h4>
-            <p>
-              Second Level Support für VoIP und WLAN Produkte.
-            </p>
-          </div>
-        </div>
-        <div class="container left">
-          <div class="content">
-            <span class="location">Frankfurt (Oder)</span>
-            <h2 class="timeline-heading">2012</h2>
-            <h3>
-              Facharbeiter IT-Systemelektroniker
-            </h3>
-            <h4>
-              Deutschen Telekom AG
-            </h4>
-            <p>
-              Informatik, Telekommunikationstechnik sowie Elektrotechnik
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-</section>
+      </section>
+    </div>
+  </section>
+</ng-container>

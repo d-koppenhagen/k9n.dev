@@ -22,5 +22,58 @@
   "createIssue": "Create an issue",
   "sendPR": "send me a PR",
   "or": "or",
-  "contactMe": "contact me"
+  "contactMe": "contact me",
+  "aboutPage": {
+    "intro": "My name is Danny Koppenhagen and  I am a passionate software developer and IT consultant. My profession is the development of web applications – especially of single page applications (SPA). My technology stack includes mainly Angular, RxJS, NgRx but also Vue.js and NativeScript. Furthermore I develop Node.js backends based on JavaScript and TypeScript. I am a IT consultant for web-architectures and -frameworks. During the development I am very focussed on the user experience (UX).",
+    "career": "My Career Path",
+    "0": {
+      "location": "Frankfurt (Oder)",
+      "when": "2012",
+      "what": "IT Systems Technician",
+      "where": "Deutschen Telekom AG",
+      "info": "Informatics, telecommunication technology and electrical engineering"
+    },
+    "1": {
+      "location": "Cottbus",
+      "when": "2012",
+      "what": "Advisor: Technical Custome Consulting",
+      "where": "Deutsche Telekom Technischer Service GmbH (Customer Competence Center)",
+      "info": "Second level support for VoIP and WLAN products."
+    },
+    "2": {
+      "location": "Leipzig",
+      "when": "2015",
+      "what": "Bachelor of Engineering (Computer Science and Telecommunications)",
+      "where": "Deutsche Telekom Hochschule für Telekommunikation (University of Applied Science)",
+      "info": "Network and transfer technologies, software engineering, IT architecture, protocol engineering as well as web and media technologies."
+    },
+    "3": {
+      "location": "Berlin",
+      "when": "2015",
+      "what": "Developer: TETRA Support and Implementation",
+      "where": "Deutsche Telekom Healthcare & Security Solutions GmbH",
+      "info": "Implementation of client- server architectures in the TETRA-BOS infrastructure. Administration, configuration, integration and test of IT systems."
+    },
+    "4": {
+      "location": "Berlin",
+      "when": "2017",
+      "what": "Author",
+      "where": "dpunkt.verlag",
+      "info": "First edition of the German book: \"Angular: Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript\"."
+    },
+    "5": {
+      "location": "Berlin",
+      "when": "2019",
+      "what": "Specialist: Developer and IT Consultant",
+      "where": "DB Systel GmbH",
+      "info": "Development of UX centered enterprise web applications. Consulting and implementation of web applications and -architectures and UX consulting."
+    },
+    "6": {
+      "location": "Berlin",
+      "when": "2019",
+      "what": "Author",
+      "where": "dpunkt.verlag",
+      "info": "Second edition of the German book: \"Angular: Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx\"."
+    }
+  }
 }

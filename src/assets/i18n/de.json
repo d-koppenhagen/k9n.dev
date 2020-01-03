@@ -22,5 +22,58 @@
   "createIssue": "Stell ein Issue ein",
   "sendPR": "sende mir einen PR",
   "or": "oder",
-  "contactMe": "kontaktiere mich"
+  "contactMe": "kontaktiere mich",
+  "aboutPage": {
+    "intro": "Mein Name ist Danny Koppenhagen und ich arbeite leidenschaftlich als Softwareentwickler und IT-Berater. Mein Metier ist die Konzeption und Entwicklung von Web-Anwendungen – insbesondere von Single-Page-Applications (SPA). Zum Einsatz kommen hier vor allem Angular, RxJS, NgRx aber auch Vue.js und NativeScript. Des Weiteren entwickle ich Backend-Anwendungen auf Basis von JavaScript und TypeScript und bin als IT-Berater für Webarchitekturen und -Frameworks tätig. Bei der Umsetzung meiner täglichen Arbeit steht stets der Nutzer im Fokus.",
+    "career": "Mein Werdegang",
+    "0": {
+      "location": "Frankfurt (Oder)",
+      "when": "2012",
+      "what": "Facharbeiter IT-Systemelektroniker",
+      "where": "Deutschen Telekom AG",
+      "info": "Informatik, Telekommunikationstechnik sowie Elektrotechnik"
+    },
+    "1": {
+      "location": "Cottbus",
+      "when": "2012",
+      "what": "Sachbearbeiter Technische Kundenberatung",
+      "where": "Deutsche Telekom Technischer Service GmbH (Customer Competence Center)",
+      "info": "Second Level Support für VoIP und WLAN Produkte."
+    },
+    "2": {
+      "location": "Leipzig",
+      "when": "2015",
+      "what": "Bachelor Of Engineering",
+      "where": "Kommunikations- Und Medieninformatik",
+      "info": "Netzwerk- und Übertragungstechnik, Software Engineering, IT-Architektur, Protokollengineering sowie Web und Medien-Technologien."
+    },
+    "3": {
+      "location": "Berlin",
+      "when": "2015",
+      "what": "Entwickler TETRA Support Und Umsetzung",
+      "where": "Deutsche Telekom Healthcare & Security Solutions GmbH",
+      "info": "Umsetzung von Client- und Serversystemen im Bereich des TETRA-BOS. Administration, Konfiguration, Integration und Test von IT-Systemen."
+    },
+    "4": {
+      "location": "Berlin",
+      "when": "2017",
+      "what": "Buchautor",
+      "where": "dpunkt.verlag",
+      "info": "Erste Auflage des Buches: \"Angular: Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript\"."
+    },
+    "5": {
+      "location": "Berlin",
+      "when": "2019",
+      "what": "Spezialist: Entwickler Und IT-Berater",
+      "where": "DB Systel GmbH",
+      "info": "Entwicklung nutzerzentrierter Webanwendungen im Enterprise-Umfeld. Beratung zur Umsetzung von Web-Anwendungen und -Architekturen sowie User Experience (UX) Consulting."
+    },
+    "6": {
+      "location": "Berlin",
+      "when": "2019",
+      "what": "Buchautor",
+      "where": "dpunkt.verlag",
+      "info": "Zweite Auflage des Buches: \"Angular: Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx\"."
+    }
+  }
 }
