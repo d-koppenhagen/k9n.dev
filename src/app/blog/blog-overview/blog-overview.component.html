@@ -1,18 +1,22 @@
-<section class="wrapper alt">
-  <div class="inner">
-    <h2 class="major">Meine Blog Posts</h2>
-    <input
-      type="text"
-      placeholder="Suche"
-      name="demo-name"
-      aria-required="false"
-      aria-label="Liste der Blogposts durchsuchen"
-      #input
-    />
-    <h3 *ngIf="keyword$ | async as keyword">Filter: "{{ keyword }}"</h3>
-    <dk-blog-preview
-      [keyword]="keyword$ | async"
-      [search]="searchString"
-    ></dk-blog-preview>
-  </div>
-</section>
+<ng-container *transloco="let t; read: 'blogPage'">
+  <section class="wrapper alt">
+    <div class="inner">
+      <h2 class="major">{{ t('myBlogPosts') }}</h2>
+      <input
+        type="text"
+        [attr.placeholder]="'blogPage.search' | transloco"
+        name="demo-name"
+        aria-required="false"
+        aria-label="Liste der Blogposts durchsuchen"
+        #input
+      />
+      <h3 *ngIf="keyword$ | async as keyword">
+        {{ t('filter') }}: "{{ keyword }}"
+      </h3>
+      <dk-blog-preview
+        [keyword]="keyword$ | async"
+        [search]="searchString"
+      ></dk-blog-preview>
+    </div>
+  </section>
+</ng-container>

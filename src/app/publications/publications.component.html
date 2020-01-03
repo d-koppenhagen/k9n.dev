@@ -1,26 +1,27 @@
-<section id="wrapper">
-  <!-- One -->
-  <section id="one" class="wrapper spotlight style1">
-    <div class="inner">
-      <a href="https://angular-buch.com" class="image"
-        ><img
-          src="assets/images/book-cover.png"
-          alt="Vorschau: Angular: Grundlagen, fortgeschrittene Themen und Best Practices"
-      /></a>
-      <div class="content">
-        <h2 class="major">
-          Angular: Grundlagen, fortgeschrittene Themen und Best Practices – ab
-          Angular 8
-        </h2>
-        <p>
-          Entwickeln Sie moderne Apps für Web und Mobile. Mit Angular setzen Sie
-          auf ein modernes und modulares Web-Framework. Dieses Buch stellt Ihnen
-          die Bausteine von Angular, viele Best Practices und die notwendigen
-          Werkzeuge vor. Beginnen Sie Ihren Einstieg mit einer praxisnahen
-          Einführung.
-        </p>
-        <a href="https://angular-buch.com" class="special">Mehr erfahren</a>
+<ng-container *transloco="let t">
+  <section id="wrapper">
+    <section id="one" class="wrapper spotlight style1">
+      <div class="inner">
+        <a href="https://angular-buch.com" class="image"
+          ><img
+            src="assets/images/book-cover.png"
+            [attr.alt]="'thumbnail' | transloco"
+        /></a>
+        <div class="content">
+          <h2 class="major">
+            Angular: Grundlagen, fortgeschrittene Themen und Best Practices – ab
+            Angular 8
+          </h2>
+          <p>
+            Entwickeln Sie moderne Apps für Web und Mobile. Mit Angular setzen
+            Sie auf ein modernes und modulares Web-Framework. Dieses Buch stellt
+            Ihnen die Bausteine von Angular, viele Best Practices und die
+            notwendigen Werkzeuge vor. Beginnen Sie Ihren Einstieg mit einer
+            praxisnahen Einführung.
+          </p>
+          <a href="https://angular-buch.com" class="special">Mehr erfahren</a>
+        </div>
       </div>
-    </div>
+    </section>
   </section>
-</section>
+</ng-container>

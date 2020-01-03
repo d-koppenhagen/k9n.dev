@@ -1,9 +1,9 @@
-<ng-container *transloco="let t">
+<ng-container *transloco="let t; read: 'aboutPage'">
   <section id="about" class="wrapper alt style1">
     <div class="inner">
       <h3 class="major">{{ t('about') }}</h3>
-      <p>{{ t('aboutPage.intro') }}</p>
-      <h3 class="major">{{ t('aboutPage.career') }}</h3>
+      <p>{{ t('intro') }}</p>
+      <h3 class="major">{{ t('career') }}</h3>
       <section class="features">
         <div class="timeline">
           <div
@@ -12,20 +12,18 @@
             [ngClass]="odd ? 'right' : 'left'"
           >
             <div class="content">
-              <span class="location">{{
-                t('aboutPage.' + i + '.location')
-              }}</span>
+              <span class="location">{{ t(i + '.location') }}</span>
               <h2 class="timeline-heading">
-                {{ t('aboutPage.' + i + '.when') }}
+                {{ t(i + '.when') }}
               </h2>
               <h3>
-                {{ t('aboutPage.' + i + '.what') }}
+                {{ t(i + '.what') }}
               </h3>
               <h4>
-                {{ t('aboutPage.' + i + '.where') }}
+                {{ t(i + '.where') }}
               </h4>
               <p>
-                {{ t('aboutPage.' + i + '.info') }}
+                {{ t(i + '.info') }}
               </p>
             </div>
           </div>

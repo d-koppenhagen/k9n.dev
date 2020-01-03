@@ -4,10 +4,11 @@ import { RouterModule } from '@angular/router';
 
 import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
 import { HighlightService } from './highlight.service';
+import { TranslocoRootModule } from '../transloco-root.module';
 
 @NgModule({
   declarations: [BlogPreviewComponent],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslocoRootModule],
   providers: [HighlightService],
   exports: [BlogPreviewComponent],
 })

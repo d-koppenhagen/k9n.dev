@@ -5,7 +5,7 @@
       class="burger-menu"
       role="button"
       (click)="toggleMenu()"
-      aria-label="Open the menu"
+      [attr.aria-label]="'openMenu' | transloco"
       aria-expanded="false"
     >
       <span class="hidden-small">{{ t('menu') }}</span>

@@ -7,6 +7,7 @@
   "imprint": "Imprint",
   "close": "Close",
   "logo": "Logo",
+  "openMenu": "Open menu",
   "switchLang": "Switch Language",
   "twitterTimeline": "Twitter Timeline",
   "recentBlogPosts": "Recent Blog Posts",
@@ -23,7 +24,47 @@
   "sendPR": "send me a PR",
   "or": "or",
   "contactMe": "contact me",
+  "blogPage": {
+    "thumbnail": "Blog post thumbnail",
+    "originallyPublishedAt": "Originally published at",
+    "readOn": "Read more",
+    "listEmpty": "No matching blog posts found.",
+    "showAll": "Show all",
+    "myBlogPosts": "My Blog Posts",
+    "search": "Search",
+    "filter": "Filter",
+    "headerImage": "Blog-Post title image",
+    "publisherLogo": "Logo of the original publisher",
+    "originallyPublishedAtLong": "This blog post has been published originally at",
+    "lastUpdate": "Last update",
+    "keywords": "Keywords",
+    "keywordAriaLabel": "Filtern for keyword: {{value}}",
+    "share": {
+      "label": "Share this page",
+      "email": {
+        "alt": "Share this page via E-Mail",
+        "aria": "E-Mail Icon"
+      },
+      "twitter": {
+        "alt": "Share this page via Twitter",
+        "aria": "Twitter Icon"
+      },
+      "facebook": {
+        "alt": "Share this page via Facebook",
+        "aria": "Facebook Icon"
+      },
+      "linkedIn": {
+        "alt": "Share this page via LinkedIn",
+        "aria": "LinkedIn Icon"
+      },
+      "xing": {
+        "alt": "Share this page via Xing",
+        "aria": "Xing Icon"
+      }
+    }
+  },
   "aboutPage": {
+    "about": "About me",
     "intro": "My name is Danny Koppenhagen and  I am a passionate software developer and IT consultant. My profession is the development of web applications – especially of single page applications (SPA). My technology stack includes mainly Angular, RxJS, NgRx but also Vue.js and NativeScript. Furthermore I develop Node.js backends based on JavaScript and TypeScript. I am a IT consultant for web-architectures and -frameworks. During the development I am very focussed on the user experience (UX).",
     "career": "My Career Path",
     "0": {

@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { A11yModule } from '@angular/cdk/a11y';
@@ -15,7 +16,6 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HttpClientModule } from '@angular/common/http';
 import { PublicationsComponent } from './publications/publications.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';

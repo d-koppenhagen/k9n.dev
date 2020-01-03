@@ -1,103 +1,126 @@
-<div class="wrapper alt">
-  <div class="inner" *ngIf="post$ | async as post">
-    <section class="blog-header">
-      <span *ngIf="post.thumbnail" class="image fit">
-        <img [src]="post.thumbnail" alt="header image" />
-      </span>
-      <div *ngIf="post.publishedAt && post.publishedAtUrl" class="published-at">
-        <a [href]="post.publishedAtUrl" class="published-at-link">
+<ng-container *transloco="let t; read: 'blogPage'">
+  <div class="wrapper alt">
+    <div class="inner" *ngIf="post$ | async as post">
+      <section class="blog-header">
+        <span *ngIf="post.thumbnail" class="image fit">
           <img
-            *ngIf="post.publishedAtLogo"
-            class="published-at-logo"
-            [src]="post.publishedAtLogo"
-            alt="Logo of the published page"
+            [src]="post.thumbnail"
+            [attr.alt]="'blogPage.headerImage' | transloco"
           />
-        </a>
-        Dieser Blogpost wurde im Original veröffentlicht auf:
-        <a [href]="post.publishedAtUrl">{{ post.publishedAt }}</a
-        >.
-      </div>
-      <h2 *ngIf="post.updated" class="sub-heading">
-        Letztes Update: {{ post.updated | date }}
-      </h2>
-    </section>
-    <section class="blog-tags" *ngIf="post.keywords">
-      <h2 class="sub-heading">Stichwörter</h2>
-      <div class="actions">
-        <span *ngFor="let keyword of post.keywords">
-          <button
-            routerLink="/blog"
-            [queryParams]="{ keyword: keyword }"
-            class="button xs"
-            [attr.aria-label]="'Filter for keyword: ' + keyword"
-          >
-            {{ keyword }}
-          </button>
         </span>
-      </div>
-    </section>
-    <section class="blog-content">
-      <scully-content></scully-content>
-    </section>
-    <section class="blog-footer">
-      <h3>Diese Seite teilen</h3>
-      <ul class="share-toolbar">
-        <li>
-          <a
-            [href]="
-              'mailto:mail@d-koppenhagen.de?subject=' + shareTextContent()
-            "
-            target="_blank"
-            alt="share this blog post via email"
-            id="shareEmail"
-            ><i class="fa fa-envelope" aria-label="email icon"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            [href]="
-              'https://twitter.com/intent/tweet?text=' + shareTextContent()
-            "
-            target="_blank"
-            alt="share this blog post via twitter"
-            ><i class="fa fa-twitter" aria-label="twitter icon"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            [href]="
-              'https://www.facebook.com/sharer/sharer.php?u=' +
-              shareTextContent()
-            "
-            target="_blank"
-            alt="share this blog post via facebook"
-            ><i class="fa fa-facebook" aria-label="facebook icon"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            [href]="
-              'https://www.linkedin.com/shareArticle?mini=true&url=' +
-              shareTextContent()
-            "
-            target="_blank"
-            alt="share this blog post via linkedin"
-            ><i class="fa fa-linkedin" aria-label="linkedIn icon"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            [href]="
-              'https://www.xing.com/app/user?op=share;url=' +
-              shareTextContent() +
-              '&quot'
-            "
-            target="_blank"
-            alt="share this blog post via xing"
-            ><i class="fa fa-xing" aria-label="xing icon"></i
-          ></a>
-        </li>
-      </ul>
-    </section>
+        <div
+          *ngIf="post.publishedAt && post.publishedAtUrl"
+          class="published-at"
+        >
+          <a [href]="post.publishedAtUrl" class="published-at-link">
+            <img
+              *ngIf="post.publishedAtLogo"
+              class="published-at-logo"
+              [src]="post.publishedAtLogo"
+              [attr.alt]="'blogPage.publisherLogo' | transloco"
+            />
+          </a>
+          {{ t('originallyPublishedAtLong') }}:
+          <a [href]="post.publishedAtUrl">{{ post.publishedAt }}</a
+          >.
+        </div>
+        <h2 *ngIf="post.updated" class="sub-heading">
+          {{ t('lastUpdate') }}: {{ post.updated | date }}
+        </h2>
+      </section>
+      <section class="blog-tags" *ngIf="post.keywords">
+        <h2 class="sub-heading">{{ t('keywords') }}</h2>
+        <div class="actions">
+          <span *ngFor="let keyword of post.keywords">
+            <button
+              routerLink="/blog"
+              [queryParams]="{ keyword: keyword }"
+              class="button xs"
+              [attr.aria-label]="
+                'blogPage.keywordAriaLabel' | transloco: { value: keyword }
+              "
+            >
+              {{ keyword }}
+            </button>
+          </span>
+        </div>
+      </section>
+      <section class="blog-content">
+        <scully-content></scully-content>
+      </section>
+      <section class="blog-footer">
+        <h3>{{ t('share.label') }}</h3>
+        <ul class="share-toolbar">
+          <li>
+            <a
+              [href]="'mailto:user@example.com?subject=' + shareTextContent()"
+              target="_blank"
+              [attr.alt]="'blogPage.share.email.alt' | transloco"
+              id="shareEmail"
+              ><i
+                class="fa fa-envelope"
+                [attr.aria-label]="'blogPage.share.email.aria' | transloco"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a
+              [href]="
+                'https://twitter.com/intent/tweet?text=' + shareTextContent()
+              "
+              target="_blank"
+              [attr.alt]="'blogPage.share.twitter.alt' | transloco"
+              ><i
+                class="fa fa-twitter"
+                [attr.aria-label]="'blogPage.share.twitter.aria' | transloco"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a
+              [href]="
+                'https://www.facebook.com/sharer/sharer.php?u=' +
+                shareTextContent()
+              "
+              target="_blank"
+              [attr.alt]="'blogPage.share.facebook.alt' | transloco"
+              ><i
+                class="fa fa-facebook"
+                [attr.aria-label]="'blogPage.share.facebook.aria' | transloco"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a
+              [href]="
+                'https://www.linkedin.com/shareArticle?mini=true&url=' +
+                shareTextContent()
+              "
+              target="_blank"
+              [attr.alt]="'blogPage.share.linkedIn.alt' | transloco"
+              ><i
+                class="fa fa-linkedin"
+                [attr.aria-label]="'blogPage.share.linkedIn.aria' | transloco"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a
+              [href]="
+                'https://www.xing.com/app/user?op=share;url=' +
+                shareTextContent() +
+                '&quot'
+              "
+              target="_blank"
+              [attr.alt]="'blogPage.share.xing.alt' | transloco"
+              ><i
+                class="fa fa-xing"
+                [attr.aria-label]="'blogPage.share.xing.aria' | transloco"
+              ></i
+            ></a>
+          </li>
+        </ul>
+      </section>
+    </div>
   </div>
-</div>
+</ng-container>
