@@ -26,11 +26,10 @@ export class TranslocoHttpLoader implements TranslocoLoader {
       provide: TRANSLOCO_CONFIG,
       useValue: translocoConfig({
         availableLangs: ['de', 'en'],
-        defaultLang: 'de',
-        // Remove this option if your application doesn't support changing language in runtime.
+        defaultLang: navigator.language.substring(0, 2) || 'en',
         reRenderOnLangChange: true,
         prodMode: environment.production,
-        fallbackLang: 'en',
+        fallbackLang: 'de',
         missingHandler: {
           useFallbackTranslation: true,
         },
