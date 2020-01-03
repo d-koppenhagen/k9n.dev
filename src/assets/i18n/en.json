@@ -25,9 +25,9 @@
   "or": "or",
   "contactMe": "contact me",
   "publicationsPage": {
-    "title": "Angular: \"Grundlagen, fortgeschrittene Themen und Best Practices – ab Angular 8\"",
+    "title": "Angular: 'Grundlagen, fortgeschrittene Themen und Best Practices – ab Angular 8'",
     "description": "This German Angular book will teach you how to develop modern apps for web and mobile. You will learn about the basic concepts of Angular, the best practices and related tools.",
-    "readOn": "Mehr erfahren"
+    "readOn": "Learn more"
   },
   "blogPage": {
     "thumbnail": "Blog post thumbnail",
@@ -70,7 +70,7 @@
   },
   "aboutPage": {
     "about": "About me",
-    "intro": "My name is Danny Koppenhagen and  I am a passionate software developer and IT consultant. My profession is the development of web applications – especially of single page applications (SPA). My technology stack includes mainly Angular, RxJS, NgRx but also Vue.js and NativeScript. Furthermore I develop Node.js backends based on JavaScript and TypeScript. I am a IT consultant for web-architectures and -frameworks. During the development I am very focussed on the user experience (UX).",
+    "intro": "My name is Danny Koppenhagen and  I am a passionate software developer and IT consultant. My profession is the development of web applications – especially of single page applications (SPA). My technology stack includes mainly Angular, RxJS, NgRx but also Vue.js and NativeScript. Furthermore I develop Node.js backends based on JavaScript and TypeScript. I am an IT consultant for web-architectures and -frameworks. During the development I am very focussed on the user experience (UX).",
     "career": "My Career Path",
     "0": {
       "location": "Frankfurt (Oder)",
@@ -105,7 +105,7 @@
       "when": "2017",
       "what": "Author",
       "where": "dpunkt.verlag",
-      "info": "First edition of the German book: \"Angular: Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript\"."
+      "info": "First edition of the German book: 'Angular: Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript'."
     },
     "5": {
       "location": "Berlin",
@@ -119,7 +119,7 @@
       "when": "2019",
       "what": "Author",
       "where": "dpunkt.verlag",
-      "info": "Second edition of the German book: \"Angular: Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx\"."
+      "info": "Second edition of the German book: 'Angular: Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx'."
     }
   }
 }
