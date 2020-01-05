@@ -24,6 +24,7 @@
     "url": "https://github.com/d-koppenhagen/d-koppenhagen-website/issues",
     "email": "mail@d-koppenhagen.de"
   },
+  "license" : "SEE LICENSE IN LICENSE",
   "dependencies": {
     "@angular/animations": "~9.0.0-rc.6",
     "@angular/cdk": "^9.0.0-rc.5",
