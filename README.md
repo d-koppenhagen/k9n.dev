@@ -13,4 +13,10 @@ npm run scully
 npm start
 ```
 
+The file `src/environments/environment.prod.ts` is ignored as it contains some specific API keys, etc. Please copy the files from `environment.ts` before:
+
+```bash
+cp src/environments/environment.ts src/environments/environment.prod.ts
+```
+
 Or you can use `npm run scully:all` to see the completely rendered page.
