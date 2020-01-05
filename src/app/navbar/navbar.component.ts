@@ -17,7 +17,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.availableLanguages = this.translocoService.getAvailableLangs();
     this.activeLanguage = this.translocoService.getActiveLang();
-    console.log(this.availableLanguages);
   }
 
   toggleMenu() {
