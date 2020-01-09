@@ -57,6 +57,39 @@ a.published-at-link {
   }
 }
 
+@media screen and (max-width: 560px) {
+  .blog-footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: $c01;
+    opacity: 0.9;
+    z-index: 1;
+    padding: 0 35px;
+
+    > h3 {
+      display: none;
+    }
+
+    > ul {
+      margin: 10px 0px;
+      display: flex;
+      justify-content: space-between;
+
+      > li {
+        padding-left: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .blog-footer {
+    padding: 0 24px;
+  }
+}
+
 .blog-tags {
   padding-bottom: 2em;
 }
