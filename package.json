@@ -15,7 +15,8 @@
     "scully": "scully",
     "scully:watch": "scully watch",
     "scully:serve": "scully serve",
-    "scully:all": "npm run build -- --prod && npm run scully && npm run scully:serve"
+    "scully:all": "npm run build -- --prod && npm run scully && npm run scully:serve",
+    "post": "ng g @scullyio/init:post --metaDataFile='blog-meta.yaml' --target='blog-draft'"
   },
   "private": true,
   "author": "Danny Koppenhagen <mail@d-koppenhagen.de> (https://d-koppenhagen.de)",
@@ -37,9 +38,9 @@
     "@angular/router": "~9.0.0-rc.6",
     "@fortawesome/fontawesome-free": "^5.12.0",
     "@ngneat/transloco": "^2.12.4",
-    "@scullyio/init": "0.0.9",
-    "@scullyio/ng-lib": "latest",
-    "@scullyio/scully": "latest",
+    "@scullyio/init": "^0.0.11",
+    "@scullyio/ng-lib": "^0.0.8",
+    "@scullyio/scully": "^0.0.53",
     "ngx-twitter-timeline": "^0.1.5",
     "prismjs": "^1.17.1",
     "rxjs": "~6.5.3",
