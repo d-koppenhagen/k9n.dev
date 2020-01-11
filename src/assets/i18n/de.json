@@ -37,6 +37,7 @@
     "showAll": "Alle Posts ansehen",
     "myBlogPosts": "Meine Blog Posts",
     "search": "Suche",
+    "searchAriaLabel": "Liste der Blogposts durchsuchen",
     "filter": "Filter",
     "headerImage": "Blog-Post Titelbild",
     "publisherLogo": "Logo des original Autors",

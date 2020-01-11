@@ -7,7 +7,7 @@
         [attr.placeholder]="'blogPage.search' | transloco"
         name="demo-name"
         aria-required="false"
-        aria-label="Liste der Blogposts durchsuchen"
+        [attr.aria-label]="'blogPage.searchAriaLabel' | transloco"
         #input
       />
       <h3 *ngIf="keyword$ | async as keyword">

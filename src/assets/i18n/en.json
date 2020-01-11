@@ -37,6 +37,7 @@
     "showAll": "Show all",
     "myBlogPosts": "My Blog Posts",
     "search": "Search",
+    "searchAriaLabel": "Search in the list of all blog posts",
     "filter": "Filter",
     "headerImage": "Blog-Post title image",
     "publisherLogo": "Logo of the original publisher",
