@@ -4,7 +4,7 @@ description: 'With this blog post, I will show you how you can easily create a b
 publish: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-01-01
+updated: 2020-01-21
 keywords:
   - Angular
   - Angular CLI
@@ -35,7 +35,7 @@ thumbnail: assets/images/bg3.jpg
 - [Conclusion](/blog/2020-01-angular-scully#conclusion)
 
 > On _Dec 16, 2019_ the static site generator _Scully_ for Angular [was presented](https://www.youtube.com/watch?v=Sh37rIUL-d4).
-> _Scully_ automatically detects all app routes and create static sites out of it that are ready to ship for production. _Scully_ is currently just available within an early version.
+> _Scully_ automatically detects all app routes and creates static sites out of it that are ready to ship for production. _Scully_ is currently just available within an early version.
 > This blog post is based on version _0.0.9_
 > However some of the commands or API calls used here may change in the future.
 > It’s my goal to keep this blog post as up-to-date as possible.
@@ -113,7 +113,6 @@ Nonetheless we can checkout the result of the static pages in the browser by run
 - `localhost:1668` : This server serves the static generated pages from the `dist/static` directory like a normal webserver (e.g. _nginx_ or _apache_)
 - `localhost:1864` : <!-- Not that clear yet, TODO: update when https://github.com/scullyio/scully/issues/126 is solved -->This server is there for courtesy. It serves the results from _Scully_ directly, so that you can locally interact with it.
 
-
 ## Turn it into a blog
 
 Let’s go a bit further and turn our site into a simple blog that will render our blog posts from separate markdown documents.
@@ -150,6 +149,16 @@ npm run scully:serve  # serve static build
 When checking out our `dist/static` directory we can see that there are new sub-directories for the routes of our static blogging sites.
 The files `index.html` in `dist/static/blog/<post-name>/` contain our static pages ready to be served.
 When we are visiting the route path `/blog/first-post` we can see the content of our markdown source file `blog/first-post.md` is rendered as HTML.
+
+If you want to prove that the page is actually really pre-rendered, just disable JavaScript by using your Chrome Developer Tools.
+You can reload the page and see that the content is still displayed.
+Awesome isn't it?
+
+![a simple blog created with scully](/assets/images/blog/scully-pre-rendered-js-disabled.png)
+
+> When JavaScript is enabled, _Scully_ configures your static sites in that way, that you will see initially the static content.
+> In the background it will bootstrap your Angular app, and refresh the content with it.
+> You won't see anything flickering.
 
 Hold on a minute! 😳
 
@@ -252,6 +261,7 @@ This has been configured from the schematics we ran before in the file `scully.c
 ```js
 exports.config = {
   projectRoot: "./src/app",
+  outDir: './dist/static',
   routes: {
     '/blog/:slug': {
       type: 'contentFolder',
