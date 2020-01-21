@@ -45,12 +45,16 @@ export class MetaService {
 
   private createTwitterCardForBlogPost(post: ScullyRoute) {
     this.meta.updateTag({
-      name: 'twitter:title',
-      content: post.title,
+      name: 'twitter:card',
+      content: 'summary_large_image',
     });
     this.meta.updateTag({
       name: 'twitter:site',
-      content: '@d-koppenhagen',
+      content: '@d_koppenhagen',
+    });
+    this.meta.updateTag({
+      name: 'twitter:title',
+      content: post.title,
     });
     this.meta.updateTag({
       name: 'twitter:description',
