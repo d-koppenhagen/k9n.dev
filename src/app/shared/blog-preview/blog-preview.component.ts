@@ -29,6 +29,7 @@ export class BlogPreviewComponent implements OnInit, OnChanges {
       map(routeList => {
         return routeList
           .filter((route: ScullyRoute) => route.route.startsWith(`/blog/`))
+          .filter((route: ScullyRoute) => route.publish !== false)
           .reverse();
       }),
       map(routeList => {
