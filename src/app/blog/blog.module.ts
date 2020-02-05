@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ComponentsModule } from '@scullyio/ng-lib';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 import { BlogRoutingModule } from './blog-routing.module';
 import { BlogContentComponent } from './blog-content/blog-content.component';
 import { BlogOverviewComponent } from './blog-overview/blog-overview.component';
@@ -12,7 +12,7 @@ import { TranslocoRootModule } from '../transloco-root.module';
   imports: [
     CommonModule,
     BlogRoutingModule,
-    ComponentsModule,
+    ScullyLibModule,
     SharedModule,
     TranslocoRootModule,
   ],

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule, LOCALE_ID } from '@angular/core';
-import { ScullyRoutesService } from '@scullyio/ng-lib';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 import { A11yModule } from '@angular/cdk/a11y';
 import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 import { registerLocaleData } from '@angular/common';
@@ -42,8 +42,9 @@ import { TranslocoRootModule } from './transloco-root.module';
     NgxTwitterTimelineModule,
     SharedModule,
     TranslocoRootModule,
+    ScullyLibModule,
   ],
-  providers: [ScullyRoutesService, { provide: LOCALE_ID, useValue: 'de' }],
+  providers: [{ provide: LOCALE_ID, useValue: 'de' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {

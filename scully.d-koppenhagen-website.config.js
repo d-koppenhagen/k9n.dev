@@ -1,6 +1,7 @@
 exports.config = {
-  projectRoot: "./src/app",
-  outDir: "./dist/static",
+  projectRoot: "./src",
+  projectName: "d-koppenhagen-website",
+  outDir: './dist/static',
   routes: {
     '/blog/:slug': {
       type: 'contentFolder',
