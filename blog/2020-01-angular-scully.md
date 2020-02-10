@@ -4,7 +4,7 @@ description: 'With this blog post, I will show you how you can easily create a b
 publish: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-01-21
+updated: 2020-02-10
 keywords:
   - Angular
   - Angular CLI
@@ -36,7 +36,12 @@ thumbnail: assets/images/bg3.jpg
 
 > On _Dec 16, 2019_ the static site generator _Scully_ for Angular [was presented](https://www.youtube.com/watch?v=Sh37rIUL-d4).
 > _Scully_ automatically detects all app routes and creates static sites out of it that are ready to ship for production. _Scully_ is currently just available within an early version.
-> This blog post is based on version _0.0.9_
+> This blog post is based on versions:
+> ```
+> @scullyio/ng-lib: 0.0.18
+> @scullyio/init: 0.0.22
+> @scullyio/scully: 0.0.68
+> ```
 > However some of the commands or API calls used here may change in the future.
 > It’s my goal to keep this blog post as up-to-date as possible.
 
@@ -68,7 +73,7 @@ As _Scully_ detects the content from the routes, we need to configure the Angula
 Therefore, we add the appropriate flag `--routing` (we can also choose this option when the CLI prompts us).
 
 ```bash
-npx -p @angular/cli@^9.0.0-rc ng new scully-blog --routing
+npx -p @angular/cli ng new scully-blog --routing
 cd scully-blog  # navigate into the project
 ```
 
@@ -256,11 +261,12 @@ As you may have realized: _Scully_ needs a data source to fetch all dynamic rout
 In case of our blog example _Scully_ uses the `:slug` router param as a placeholder.
 Scully will fill this placeholder with appropriate content to visit and pre-render the site.
 The content for the placeholder comes in our blog example from the files in the `/blog` directory.
-This has been configured from the schematics we ran before in the file `scully.config.js`:
+This has been configured from the schematics we ran before in the file `scully.scully-blog.config.js`:
 
 ```js
 exports.config = {
   projectRoot: "./src/app",
+  projectName: "scully-blog",
   outDir: './dist/static',
   routes: {
     '/blog/:slug': {
@@ -285,6 +291,7 @@ In the following example we will use the public service [BookMonkey API](https:/
 ```js
 exports.config = {
   projectRoot: "./src/app",
+  projectName: "scully-blog",
   routes: {
     ...
     '/books/:isbn': {
@@ -330,16 +337,28 @@ We can see the result in the log:
 
 ```text
  ☺   new Angular build imported
-Background servers already running.
-servers available
+ ☺   Started servers in background
 Finding all routes in application.
 Pull in data to create additional routes.
-Finding files in folder "<path>/scully-blog/blog"
+Finding files in folder "/<path>/blog"
 Route list created in files:
-      src/assets/scully-routes.json
-      /<path>/scully-blog/dist/static/assets/scully-routes.json
-Route "/books/9783864903571" rendered into file: "/<path>/scully-blog/dist/static/books/9783864903571/index.html"
-Route "/books/9783864906466" rendered into file: "/<path>/scully-blog/dist/static/books/9783864906466/index.html"
+  "/<path>/src/assets/scully-routes.json",
+  "/<path>/dist/static/assets/scully-routes.json",
+  "/<path>/dist/scully-blog/assets/scully-routes.json"
+
+Route "/books/9783864903571" rendered into file: "/<path>/dist/static/books/9783864903571/index.html"
+Route "/books/9783864906466" rendered into file: "/<path>/dist/static/books/9783864906466/index.html"
+Route "/blog/12-27-2019-blog" rendered into file: "/<path>/dist/static/blog/12-27-2019-blog/index.html"
+Route "/blog/first-post" rendered into file: "/<path>/dist/static/blog/first-post/index.html"
+Route "/" rendered into file: "/<path>/dist/static/index.html"
+
+Generating took 4.9 seconds for 10 pages:
+  That is 2.04 pages per second,
+  or 491 milliseconds for each page.
+  
+  Finding routes in the angular app took 2.98 seconds
+  Pulling in route-data took 212 milliseconds
+  Rendering the pages took 1.04 seconds
 ```
 
 This is great. We have efficiently pre-rendered normal dynamic content!
@@ -349,7 +368,6 @@ With the shown examples, it's possible create a full-fledged website with Scully
 > Did you know that **this blogpost** and the overall website your are right now reading has also been created using _Scully_?
 > Feel free to check out the sources at:
 > [github.com/d-koppenhagen/d-koppenhagen.de](https://github.com/d-koppenhagen/d-koppenhagen.de)
-
 
 If you you want to follow all the development steps in detail, check out my provided github repository
 [scully-blog-example](https://github.com/d-koppenhagen/scully-blog-example/commits).
