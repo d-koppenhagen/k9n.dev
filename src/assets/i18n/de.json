@@ -72,6 +72,8 @@
   "aboutPage": {
     "about": "Über mich",
     "intro": "Mein Name ist Danny Koppenhagen und ich arbeite leidenschaftlich als Softwareentwickler und IT-Berater. Mein Metier ist die Konzeption und Entwicklung von Web-Anwendungen – insbesondere von Single-Page-Applications (SPA). Zum Einsatz kommen hier vor allem Angular, RxJS, NgRx aber auch Vue.js und NativeScript. Des Weiteren entwickle ich Backend-Anwendungen auf Basis von JavaScript und TypeScript und bin als IT-Berater für Webarchitekturen und -Frameworks tätig. Bei der Umsetzung meiner täglichen Arbeit steht stets der Nutzer im Fokus.",
+    "meetup": "Ich besuche regelmäßig das Angular Berlin Meetup und helfe bei der Organisation. Bei dem Meetup werden immer wieder interessante Themen rund um Angular, RxJS, NgRx und andere Tools vorgestellt.",
+    "meetupCta": "Zum Angular Berlin Meetup",
     "career": "Mein Werdegang",
     "0": {
       "location": "Frankfurt (Oder)",
