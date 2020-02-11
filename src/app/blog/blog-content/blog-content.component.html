@@ -53,7 +53,12 @@
         <ul class="share-toolbar">
           <li>
             <a
-              [href]="'mailto:user@example.com?subject=' + shareTextContent()"
+              [href]="
+                'mailto:user@example.com?subject=' +
+                shareTextContent('Danny Koppenhagen') +
+                '&body=' +
+                shareTextContent('Danny Koppenhagen')
+              "
               target="_blank"
               rel="noopener noreferrer"
               [attr.alt]="'blogPage.share.email.alt' | transloco"
@@ -61,13 +66,14 @@
               ><i
                 class="fa fa-envelope"
                 [attr.aria-label]="'blogPage.share.email.aria' | transloco"
-              ></i
-            ></a>
+              ></i>
+            </a>
           </li>
           <li>
             <a
               [href]="
-                'https://twitter.com/intent/tweet?text=' + shareTextContent()
+                'https://twitter.com/intent/tweet?text=' +
+                shareTextContent('@d_koppenhagen')
               "
               target="_blank"
               rel="noopener noreferrer"
@@ -75,14 +81,14 @@
               ><i
                 class="fa fa-twitter"
                 [attr.aria-label]="'blogPage.share.twitter.aria' | transloco"
-              ></i
-            ></a>
+              ></i>
+            </a>
           </li>
           <li>
             <a
               [href]="
                 'https://www.facebook.com/sharer/sharer.php?u=' +
-                shareTextContent()
+                shareTextContent('@dannykoppenhagen')
               "
               target="_blank"
               rel="noopener noreferrer"
@@ -90,14 +96,14 @@
               ><i
                 class="fa fa-facebook"
                 [attr.aria-label]="'blogPage.share.facebook.aria' | transloco"
-              ></i
-            ></a>
+              ></i>
+            </a>
           </li>
           <li>
             <a
               [href]="
-                'https://www.linkedin.com/shareArticle?mini=true&url=' +
-                shareTextContent()
+                'https://www.linkedin.com/shareArticle?mini=true&title=' +
+                shareTextContent('@d-koppenhagen')
               "
               target="_blank"
               rel="noopener noreferrer"
@@ -105,14 +111,14 @@
               ><i
                 class="fa fa-linkedin"
                 [attr.aria-label]="'blogPage.share.linkedIn.aria' | transloco"
-              ></i
-            ></a>
+              ></i>
+            </a>
           </li>
           <li>
             <a
               [href]="
                 'https://www.xing.com/app/user?op=share;url=' +
-                shareTextContent() +
+                shareTextContent('@Danny_Koppenhagen') +
                 '&quot'
               "
               target="_blank"
@@ -121,8 +127,8 @@
               ><i
                 class="fa fa-xing"
                 [attr.aria-label]="'blogPage.share.xing.aria' | transloco"
-              ></i
-            ></a>
+              ></i>
+            </a>
           </li>
         </ul>
       </section>

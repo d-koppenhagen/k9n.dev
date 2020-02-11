@@ -55,7 +55,9 @@ export class BlogContentComponent implements OnInit, AfterViewChecked {
     );
   }
 
-  shareTextContent() {
-    return encodeURI(location.href);
+  shareTextContent(username?) {
+    return encodeURI(
+      `Check out the blogpost from ${username}: ${location.href}.`,
+    );
   }
 }
