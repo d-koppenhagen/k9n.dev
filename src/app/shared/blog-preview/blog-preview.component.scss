@@ -1,3 +1,7 @@
+a.card-image > img {
+  height: 180px;
+  object-fit: cover;
+}
 .published-at {
   margin-bottom: 15px;
 }
@@ -7,4 +11,17 @@ a.published-at-link {
 }
 .published-at-logo {
   margin-top: 10px;
+}
+
+/* media queries */
+@media screen and (max-width: 980px) {
+  a.card-image > img {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  a.card-image > img {
+    height: 120px;
+  }
 }

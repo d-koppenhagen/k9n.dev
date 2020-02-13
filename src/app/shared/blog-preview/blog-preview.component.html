@@ -2,7 +2,7 @@
   <section *ngIf="blogPostData$ | async as blogPosts" class="features">
     <ng-container *ngIf="blogPosts.length; else emptyResultsTemplate">
       <article *ngFor="let post of blogPosts; let i = index">
-        <a [routerLink]="post.route" class="image">
+        <a [routerLink]="post.route" class="image card-image">
           <img [src]="post.thumbnail" [attr.alt]="'thumbnail' | transloco" />
         </a>
         <h3 class="major">{{ post.title }}</h3>
