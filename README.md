@@ -1,4 +1,4 @@
-# d-koppenhagen.de
+# d-koppenhagen.de website
 
 ![Scully Publish](https://github.com/d-koppenhagen/d-koppenhagen.de/workflows/Scully%20Publish/badge.svg)
 
