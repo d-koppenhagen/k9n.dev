@@ -1,5 +1,7 @@
 # d-koppenhagen.de
 
+![Scully Publish](https://github.com/d-koppenhagen/d-koppenhagen.de/workflows/Scully%20Publish/badge.svg)
+
 This project contains the source code for my personal website [d-koppenhagen.de](https://d-koppenhagen.de).
 
 ## Development
