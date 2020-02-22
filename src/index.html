@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <base href="/" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <base href="/"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png"/>
 
+    <!-- Apple PWA Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="assets/icons/icon-512x512.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/icon-152x152.png">
+    <link href="assets/icons/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="assets/icons/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="assets/icons/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="assets/icons/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="assets/icons/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="assets/icons/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="assets/icons/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="assets/icons/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="assets/icons/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="assets/icons/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+        
     <!-- Basic Site Information -->
     <title>D-Koppenhagen.de</title>
-    <meta
-      name="description"
-      content="Danny Koppenhagen: Entwickler, IT-Berater, Buchautor"
-    />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Danny Koppenhagen" />
+    <meta name="description" content="Danny Koppenhagen: Entwickler, IT-Berater, Buchautor"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="Danny Koppenhagen"/>
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@d-koppenhagen" />
-    <meta
-      name="twitter:title"
-      content="Danny Koppenhagen: Entwickler, IT-Berater, Buchautor"
-    />
-    <meta
-      name="twitter:image"
-      content="https://d-koppenhagen.de/assets/images/dk.jpg"
-    />
-    <meta
-      name="twitter:description"
-      content="📦 #nodejs 🅰️ #Angular,💡#TypeScript,⚡️ #RxJS, ♻️ #NgRx and 📲 #NativeScript 👨🏻‍💻 Developer
-    @dbsystel #dxhouse, 📕Author @angular_buch https://angular-buch.com"
-    />
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@d-koppenhagen"/>
+    <meta name="twitter:title" content="Danny Koppenhagen: Entwickler, IT-Berater, Buchautor"/>
+    <meta name="twitter:image" content="https://d-koppenhagen.de/assets/images/dk.jpg"/>
+    <meta name="twitter:description" content="📦 #nodejs 🅰️ #Angular,💡#TypeScript,⚡️ #RxJS, ♻️ #NgRx and 📲 #NativeScript 👨🏻‍💻 Developer
+    @dbsystel #dxhouse, 📕Author @angular_buch https://angular-buch.com"/>
 
     <!-- Open Graph Profile -->
-    <meta property="og:type" content="profile" />
-    <meta property="og:title" content="D-Koppenhagen.de" />
-    <meta property="og:url" content="https://d-koppenhagen.de" />
-    <meta
-      property="og:image"
-      content="https://d-koppenhagen.de/assets/images/dk.jpg"
-    />
-    <meta property="profile:first_name" content="Danny" />
-    <meta property="profile:last_name" content="Koppenhagen" />
-  </head>
+    <meta property="og:type" content="profile"/>
+    <meta property="og:title" content="D-Koppenhagen.de"/>
+    <meta property="og:url" content="https://d-koppenhagen.de"/>
+    <meta property="og:image" content="https://d-koppenhagen.de/assets/images/dk.jpg"/>
+    <meta property="profile:first_name" content="Danny"/>
+    <meta property="profile:last_name" content="Koppenhagen"/>
+    <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
+</head>
   <body role="main" id="page-wrapper">
     <!-- Angular -->
     <dk-root></dk-root>
@@ -54,5 +57,6 @@
       }
       gtag('js', new Date());
     </script>
-  </body>
+    <noscript>Please enable JavaScript to continue using this application.</noscript>
+</body>
 </html>

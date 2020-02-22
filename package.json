@@ -36,6 +36,7 @@
     "@angular/platform-browser": "~9.0.0",
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
+    "@angular/service-worker": "~9.0.0",
     "@fortawesome/fontawesome-free": "^5.12.1",
     "@ngneat/transloco": "^2.13.2",
     "@scullyio/ng-lib": "^0.0.18",

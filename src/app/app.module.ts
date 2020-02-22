@@ -20,6 +20,8 @@ import { PublicationsComponent } from './publications/publications.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';
 import { TranslocoRootModule } from './transloco-root.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { TranslocoRootModule } from './transloco-root.module';
     SharedModule,
     TranslocoRootModule,
     ScullyLibModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'de' }],
   bootstrap: [AppComponent],
