@@ -16,6 +16,7 @@ keywords:
   - JAM Stack
 language: en
 thumbnail: assets/images/blog/scully-header.jpg
+thumbnailSmall: assets/images/blog/scully-header-small.jpg
 ---
 
 # Create powerful fast pre-rendered Angular Apps using _Scully_ static site generator

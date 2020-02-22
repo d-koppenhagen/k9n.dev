@@ -26,6 +26,7 @@ keywords:
   - Conventional Changelog
 language: en
 thumbnail: assets/images/blog/ngx-semantic-version-header.jpg
+thumbnailSmall: assets/images/blog/ngx-semantic-version-header-small.jpg
 ---
 
 # ngx-semantic-version: enhance your git and release workflow
