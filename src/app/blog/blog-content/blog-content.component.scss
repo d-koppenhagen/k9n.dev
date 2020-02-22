@@ -36,12 +36,13 @@ a.published-at-link {
       display: block;
       cursor: pointer;
       border-bottom: 0px;
+      outline: none;
 
       > i {
-        border: 1px solid $c06;
+        border: 1px solid $white;
         padding: 10px;
         border-radius: 40px;
-        color: $c06;
+        color: $white;
         min-width: 38px;
       }
 
@@ -49,9 +50,9 @@ a.published-at-link {
         margin-left: 2px;
       }
 
-      &:hover > i {
+      &:hover > i, &:focus > i {
         border: 1px solid $c02;
-        color: $c06;
+        color: $white;
       }
     }
   }
