@@ -7,7 +7,7 @@
     "release": "standard-version",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "build:watch": "ng build --watch",
     "test": "ng test",
     "lint": "ng lint",
@@ -15,7 +15,7 @@
     "scully": "scully",
     "scully:watch": "scully watch",
     "scully:serve": "scully serve",
-    "scully:all": "npm run build -- --prod && npm run scully && npm run scully:serve",
+    "scully:all": "npm run build && npm run scully && npm run scully:serve",
     "post": "ng g @scullyio/init:post --metaDataFile='blog-meta.yaml' --target='blog-draft'"
   },
   "private": true,
