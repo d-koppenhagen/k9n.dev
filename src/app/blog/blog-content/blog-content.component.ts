@@ -69,9 +69,31 @@ export class BlogContentComponent implements OnInit, AfterViewChecked {
     }
   }
 
-  shareTextContent(username?) {
-    return encodeURI(
-      `Check out the blogpost from ${username}: ${location.href}.`,
-    );
+  shareEmail(title: string, description: string, author: string) {
+    const subject = encodeURI(`d-koppenhagen.de | Blogpost: ${title} | ${author}`);
+    const body = encodeURI(`${title} | ${author}
+
+${description}
+
+> ${location.href}
+    `);
+    return `mailto:?subject=${subject}&body=${body}`;
+  }
+
+  shareTwitter() {
+    const text = encodeURI(`Check out the blogpost from @d_koppenhagen: ${location.href}`);
+    return `https://twitter.com/intent/tweet?text=${text}`;
+  }
+
+  shareFacebook() {
+    return `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(location.href)}`;
+  }
+
+  shareLinkedIn() {
+    return `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURI(location.href)}`;
+  }
+
+  shareXing() {
+    return `https://www.xing.com/app/user?op=share;url=${location.href}`;
   }
 }
