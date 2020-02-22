@@ -47,6 +47,3 @@ Thumbs.db
 
 # ignore blog drafts
 blog-draft
-
-# ignore prod environment config with API key etc.
-src/environments/environment.prod.ts
