@@ -53,13 +53,22 @@
         <ul class="share-toolbar">
           <li>
             <a
+              (click)="shareApi(post.title, post.description)"
+              [attr.alt]="'blogPage.share.common.alt' | transloco"
+              ><i
+                class="fa fa-share-alt"
+                [attr.aria-label]="'blogPage.share.common.aria' | transloco"
+              ></i>
+            </a>
+          </li>
+          <li>
+            <a
               [href]="
                 'mailto:user@example.com?subject=' +
                 shareTextContent('Danny Koppenhagen') +
                 '&body=' +
                 shareTextContent('Danny Koppenhagen')
               "
-              target="_blank"
               rel="noopener noreferrer"
               [attr.alt]="'blogPage.share.email.alt' | transloco"
               id="shareEmail"

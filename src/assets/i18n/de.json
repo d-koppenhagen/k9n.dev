@@ -47,6 +47,10 @@
     "keywordAriaLabel": "Filtern nach dem Stichwort: {{value}}",
     "share": {
       "label": "Diese Seite teilen",
+      "common": {
+        "alt": "Diese Seite teilen",
+        "aria": "Teilen Icon"
+      },
       "email": {
         "alt": "Diese Seite per E-Mail teilen",
         "aria": "E-Mail Icon"

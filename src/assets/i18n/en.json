@@ -47,6 +47,10 @@
     "keywordAriaLabel": "Filtern for keyword: {{value}}",
     "share": {
       "label": "Share this page",
+      "common": {
+        "alt": "Share this page",
+        "aria": "Share Icon"
+      },
       "email": {
         "alt": "Share this page via E-Mail",
         "aria": "E-Mail Icon"

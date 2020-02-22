@@ -39,6 +39,7 @@
     "@fortawesome/fontawesome-free": "^5.12.1",
     "@ngneat/transloco": "^2.13.2",
     "@scullyio/ng-lib": "^0.0.18",
+    "ng-navigator-share": "^1.0.1",
     "ngx-twitter-timeline": "^0.1.5",
     "prismjs": "^1.19.0",
     "rxjs": "~6.5.4",

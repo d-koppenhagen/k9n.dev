@@ -8,6 +8,7 @@ import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
+import { NgNavigatorShareService } from 'ng-navigator-share';
 
 import { HighlightService } from '../../shared/highlight.service';
 import { MetaService } from '../../meta.service';
@@ -28,6 +29,7 @@ export class BlogContentComponent implements OnInit, AfterViewChecked {
     private srs: ScullyRoutesService,
     private highlightService: HighlightService,
     private metaService: MetaService,
+    private ngNavigatorShareService: NgNavigatorShareService,
   ) {}
 
   /**
@@ -53,6 +55,18 @@ export class BlogContentComponent implements OnInit, AfterViewChecked {
         this.metaService.createMetaDataForPost(post);
       }),
     );
+  }
+
+  async shareApi(title: string, description: string) {
+    try{
+      await this.ngNavigatorShareService.share({
+        title,
+        text: description,
+        url: location.href
+      });
+    } catch(error) {
+      console.warn('You app is not shared, reason: ', error);
+    }
   }
 
   shareTextContent(username?) {
