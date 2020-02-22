@@ -13,3 +13,4 @@ jobs:
       - uses: cmgriffing/scully-gh-pages-action@v4
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-branch: gh-pages
