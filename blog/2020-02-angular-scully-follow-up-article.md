@@ -31,7 +31,7 @@ thumbnailSmall: assets/images/blog/scully-header-small.jpg
 - [Generate a post with a meta data template](/blog/2020-02-angular-scully-follow-up-article#generate-a-post-with-a-meta-data-template)
 - [Generate a custom Markdown module](/blog/2020-02-angular-scully-follow-up-article#generate-a-custom-markdown-module)
 - [Switch to AsciiDoc](/blog/2020-02-angular-scully-follow-up-article#switch-to-ascii-doc)
-- [Handle protected routes](/blog/2020-02-angular-scully-follow-up-article#handle-protected-routes)
+- [Protect your routes with a custom plugin](/blog/2020-02-angular-scully-follow-up-article#protect-your-routes-with-a-custom-plugin)
 - [Conclusion](/blog/2020-02-angular-scully-follow-up-article#conclusion)
 
 ## Introduction
@@ -39,7 +39,7 @@ thumbnailSmall: assets/images/blog/scully-header-small.jpg
 In my [last](/blog/2020-01-angular-scully) blog post I gave you a short introduction to _Scully_ and how to easily set up a very simple blogging website that is server side rendered and ready to be shipped for production.
 In the following article I will introduce some more advanced things you can do with _Scully_.
 You will learn how you can setup a cutom markdown module or even use asciidoc instead of markdown.
-I will guide you through the process of how to handle protected routes using _Scully_ and learn about the _Scully_ TransferState.
+I will guide you through the process of how to handle protected routes using a custom route plugin.
 
 ## Generate a post with a meta data template
 
@@ -150,7 +150,7 @@ Great, as we can see: AsciiDoc files will be rendered as well out-of-the-box.
 You can also define your own File Handler Plugin for other content formats.
 Check out the [official docs](https://github.com/scullyio/scully/blob/master/docs/plugins.md#file-plugin) for it to see how it works.
 
-## Handle protected routes
+## Protect your routes with a custom plugin
 
 Let's assume we have a protected space at our site that should only be visible for specific users.
 For sure we can secure this space using an Angular Route Guard that checks if we have the correct permissions to see the space.
@@ -220,3 +220,6 @@ Skip Route "/secure"
 Perfect! As you can see the route is ignored by _Scully_ now.
 
 ## Conclusion
+
+In this follow up article you learned how to add a custom markdown module to _Scully_ as well as how you can use the AsciiDocn plugin for rendering `adoc` files.
+Also you can now handle protected routes by using a custom _Scully_ route plugin.
