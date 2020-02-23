@@ -1,6 +1,6 @@
 // Colors
 $c01: #2e3141;
-$c02: #709169;
+$c02: #5e7959;
 $c03: #839057;
 $c04: #ada789;
 $c05: #aca26a;
@@ -12,6 +12,9 @@ $c10: #b46b48;
 $c11: #b56b4a;
 $c12: #223641;
 $c13: #0b3638;
+
+$white: #fdfdfd;
+$black: #000000;
 
 // Misc.
 $misc: (
@@ -69,8 +72,8 @@ $font: (
 // Palette.
 $palette: (
   bg: $c01,
-  fg: #ffffff,
-  fg-bold: #ffffff,
+  fg: $white,
+  fg-bold: $white,
   fg-light: rgba(255, 255, 255, 0.35),
   border: rgba(255, 255, 255, 0.125),
   border-bg: rgba(255, 255, 255, 0.025),

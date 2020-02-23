@@ -53,76 +53,73 @@
         <ul class="share-toolbar">
           <li>
             <a
-              [href]="'mailto:user@example.com?subject=' + shareTextContent()"
-              target="_blank"
+              (click)="shareApi(post.title, post.description)"
+              [attr.alt]="'blogPage.share.common.alt' | transloco"
+              ><i
+                class="fa fa-share-alt"
+                [attr.aria-label]="'blogPage.share.common.aria' | transloco"
+              ></i>
+            </a>
+          </li>
+          <li>
+            <a
+              [href]="shareEmail(post.title, post.description, post.author)"
               rel="noopener noreferrer"
               [attr.alt]="'blogPage.share.email.alt' | transloco"
               id="shareEmail"
               ><i
                 class="fa fa-envelope"
                 [attr.aria-label]="'blogPage.share.email.aria' | transloco"
-              ></i
-            ></a>
+              ></i>
+            </a>
           </li>
           <li>
             <a
-              [href]="
-                'https://twitter.com/intent/tweet?text=' + shareTextContent()
-              "
+              [href]="shareTwitter()"
               target="_blank"
               rel="noopener noreferrer"
               [attr.alt]="'blogPage.share.twitter.alt' | transloco"
               ><i
                 class="fa fa-twitter"
                 [attr.aria-label]="'blogPage.share.twitter.aria' | transloco"
-              ></i
-            ></a>
+              ></i>
+            </a>
           </li>
           <li>
             <a
-              [href]="
-                'https://www.facebook.com/sharer/sharer.php?u=' +
-                shareTextContent()
-              "
+              [href]="shareFacebook()"
               target="_blank"
               rel="noopener noreferrer"
               [attr.alt]="'blogPage.share.facebook.alt' | transloco"
               ><i
                 class="fa fa-facebook"
                 [attr.aria-label]="'blogPage.share.facebook.aria' | transloco"
-              ></i
-            ></a>
+              ></i>
+            </a>
           </li>
           <li>
             <a
-              [href]="
-                'https://www.linkedin.com/shareArticle?mini=true&url=' +
-                shareTextContent()
-              "
+              [href]="shareLinkedIn()"
               target="_blank"
               rel="noopener noreferrer"
               [attr.alt]="'blogPage.share.linkedIn.alt' | transloco"
               ><i
                 class="fa fa-linkedin"
                 [attr.aria-label]="'blogPage.share.linkedIn.aria' | transloco"
-              ></i
-            ></a>
+              ></i>
+            </a>
           </li>
           <li>
             <a
-              [href]="
-                'https://www.xing.com/app/user?op=share;url=' +
-                shareTextContent() +
-                '&quot'
-              "
+              [href]="shareXing()"
               target="_blank"
               rel="noopener noreferrer"
               [attr.alt]="'blogPage.share.xing.alt' | transloco"
               ><i
                 class="fa fa-xing"
                 [attr.aria-label]="'blogPage.share.xing.aria' | transloco"
-              ></i
-            ></a>
+              ></i>
+            </a>
           </li>
         </ul>
       </section>

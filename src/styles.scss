@@ -13,7 +13,14 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic&display=swap');
+
+/* default outline settings */
+img:focus,
+a:focus,
+nav:focus {
+  outline: thin dotted;
+}
 
 /* set max image width, so be sure images are not out of viewport */
 img {

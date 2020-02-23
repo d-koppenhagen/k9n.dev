@@ -189,6 +189,29 @@ blockquote {
     _size(element-margin);
 }
 
+hr {
+  border: 0;
+  border-bottom: solid 2px _palette(border);
+  margin: (_size(element-margin) * 1.25) 0;
+
+  &.major {
+    margin: (_size(element-margin) * 2) 0;
+  }
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+/* Style source code */
 code {
   background: _palette(border-bg);
   border-radius: 0px; // _size(border-radius);
@@ -213,24 +236,15 @@ pre {
   }
 }
 
-hr {
-  border: 0;
-  border-bottom: solid 2px _palette(border);
-  margin: (_size(element-margin) * 1.25) 0;
-
-  &.major {
-    margin: (_size(element-margin) * 2) 0;
-  }
-}
-
-.align-left {
-  text-align: left;
-}
-
-.align-center {
-  text-align: center;
-}
-
-.align-right {
-  text-align: right;
+li > a > code,
+h1 > code,
+h2 > code,
+h3 > code,
+h4 > code,
+h5 > code,
+h6 > code {
+  padding: 0;
+  margin: 0;
+  background: initial;
+  font-size: inherit;
 }

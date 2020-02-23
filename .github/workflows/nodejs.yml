@@ -1,0 +1,22 @@
+name: Scully Publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "UA-XXXXXXXXX-X"
+          replace: ${{ secrets.G_TAG_CODE }}
+          include: "src/environments/environment*" # Replace google Tag
+      - uses: cmgriffing/scully-gh-pages-action@v4
+        with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-branch: gh-pages

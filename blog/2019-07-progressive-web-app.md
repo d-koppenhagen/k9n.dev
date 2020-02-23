@@ -20,6 +20,7 @@ keywords:
   - Push Notification
 language: de
 thumbnail: assets/images/blog/pwaheader.jpg
+thumbnailSmall: assets/images/blog/pwaheader-small.jpg
 ---
 
 # Mach aus deiner Angular-App eine PWA

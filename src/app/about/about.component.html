@@ -1,8 +1,17 @@
 <ng-container *transloco="let t; read: 'aboutPage'">
   <section id="about" class="wrapper alt style1">
     <div class="inner">
-      <h3 class="major">{{ t('about') }}</h3>
-      <p>{{ t('intro') }}</p>
+      <section class="about">
+        <h3 class="major">{{ t('about') }}</h3>
+        <p>{{ t('intro') }}</p>
+        <p>{{ t('meetup') }}</p>
+        <a
+          class="button primary small"
+          rel="noopener noreferrer"
+          href="https://www.meetup.com/de-DE/Angular-Meetup-Berlin/"
+          >{{ t('meetupCta') }}</a
+        >
+      </section>
       <h3 class="major">{{ t('career') }}</h3>
       <section class="features">
         <div class="timeline">
