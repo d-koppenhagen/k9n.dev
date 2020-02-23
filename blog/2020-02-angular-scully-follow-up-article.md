@@ -4,7 +4,7 @@ description: Add some description for the blog overview page here
 publish: false
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-01-01T00:00:00.000Z
+updated: 2020-02-25
 keywords:
   - Angular
   - Angular CLI
@@ -15,7 +15,8 @@ keywords:
   - Pre-rendering
   - JAM Stack
 language: en
-thumbnail: assets/images/bg3.jpg
+thumbnail: assets/images/blog/scully-header.jpg
+thumbnailSmall: assets/images/blog/scully-header-small.jpg
 ---
 
 # Dig deeper into _Scully_ and use the most out of it
@@ -31,14 +32,14 @@ thumbnail: assets/images/bg3.jpg
 - [Generate a custom Markdown module](/blog/2020-02-angular-scully-follow-up-article#generate-a-custom-markdown-module)
 - [Switch to AsciiDoc](/blog/2020-02-angular-scully-follow-up-article#switch-to-ascii-doc)
 - [Handle protected routes](/blog/2020-02-angular-scully-follow-up-article#handle-protected-routes)
-- [TransferState](/blog/2020-02-angular-scully-follow-up-article#TransferState)
+- [Conclusion](/blog/2020-02-angular-scully-follow-up-article#conclusion)
 
 ## Introduction
 
-In my [last](/blog/2020-01-angular-scully) blog post I gave you an introduction to _Scully_ and how to easily set up a very simple blogging website that is server side rendered and ready to be shipped to production.
+In my [last](/blog/2020-01-angular-scully) blog post I gave you a short introduction to _Scully_ and how to easily set up a very simple blogging website that is server side rendered and ready to be shipped for production.
 In the following article I will introduce some more advanced things you can do with _Scully_.
 You will learn how you can setup a cutom markdown module or even use asciidoc instead of markdown.
-I will guide yuout through the process of how to handle protected routes using _Scully_ and learn about the _Scully_ TransferState.
+I will guide you through the process of how to handle protected routes using _Scully_ and learn about the _Scully_ TransferState.
 
 ## Generate a post with a meta data template
 
@@ -74,9 +75,9 @@ When we are checking our `blog` directory now we will see that the schematic add
 
 ## Generate a custom Markdown module
 
-We want to add another module to our blogging website.
+Let's assume we want to add another module to our blogging website.
 We want to have a `projects` section at our site that will list some information about current projects we are working on.
-As well as for our `blog` section, we want to easily write our content using `makrdown`.
+Like for our `blog` section, we want to easily write our content using `markdown`.
 Therefor we can use the schematic `@scullyio/init:markdown`:
 
 ```bash
@@ -86,9 +87,9 @@ ng g @scullyio/init:markdown --name="projects" --slug="projectId" --sourceDir="p
 let's have a look at the options we set:
 
 - `name`: This is the base name for the generated angular module scully created for us.
-- `slug`: Here we define the placeholder name for the URL that will be filled with the basename of the markdown files
+- `slug`: Here we define the placeholder name for the URL that will be filled with the basename of the markdown files.
 - `sourceDir`: That's where we will store our markdown files that's content is rendered by the scully markdown file plugin.
-- `route`: This is the name for the route before the `:slug` in the URLs where we can see our rendered content later
+- `route`: This is the name for the route before the `:slug` in the URLs where we can see our rendered content later.
 
 > Good to know: Under the hood the schematic `@scullyio/init:blog` is just calling `@scullyio/init:markdown` with default options set. So in fact it's just a shortcut.
 
@@ -105,9 +106,9 @@ npm run scully:serve  # serve static build
 
 ## Switch to AsciiDoc
 
-Scully provides another FileHanle plugin out-of-the-box: The AsciiDoc plugin.
+Scully provides another _File Handler plugin_ out-of-the-box: The _AsciiDoc_ plugin.
 You can easily change the file extension of a generated post file by using the `extension` option.
-When you want to put the generated post files in a specific directory (not `blog`), you can set this via the `target` option.
+When you want to put the generated post files in a specific directory (not `blog`), you can choose this via the `target` option.
 
 ```bash
 ng g @scullyio/init:post --name="asciidoc example" --target="projects" --extension="adoc"
@@ -134,7 +135,7 @@ Let's show some source code!
 ----
 ```
 
-Ans finally we build our project again and see if it works:
+And finally we build our project again and see if it works:
 
 ```bash
 npm run build         # Angular build
@@ -156,23 +157,66 @@ For sure we can secure this space using an Angular Route Guard that checks if we
 
 _Scully_ will by default try to identify all app routes available.
 In fact it will try to visit also the protected space and pre-render the result.
-So when the route guard will redirect us to a error page or maybe to a login page, etc., that's what scully will see and render.
-This default behaviour is pretty okay, as scully shouldn't expose any protected information by creating static content from the protected data.
-But on the other hand, we don't want to pre-render such space at all, so we need a way to tell _Scully_ what pages / space to exclude from the rendering.
-Luckily this is quite easy. We will use the provided `Void Plugin` in our `scully.config.js` configuration file that will skip such routes:
+When _Scully_ is trying this, the Angular route guard kicks in and redirect us to an error or login page.
+The page show after redirect is the page _Scully_ will see and render.
+This default behaviour is pretty okay, as _Scully_ won't expose any protected information by creating static content from the protected data.
+But on the other hand, we don't want to pre-render such pages at all, so we need a way to tell _Scully_ what pages / space to exclude from the rendering.
+Another scenario you can imagine is when a Page displays a prompt or a confirm dialog.
+When _Scully_ tries to render such pages it runs into a timeout:
+
+```
+...
+Puppeteer error while rendering "/secure" TimeoutError: Navigation timeout of 30000 ms exceeded
+```
+
+To prevent _Scully_ from rendering such kind of pages we can simply create a custom pliugin that will skip such routes.
+
+Therefore we will create a new directory `extraPlugin` with the file `skip.js` inside:
 
 ```js
+const { configValidator, registerPlugin } = require('@scullyio/scully');
+const { log, yellow } = require('@scullyio/scully/utils/log');
+
+const skipPlugin = async (route, options) => {
+  log(`Skip Route "${yellow(route)}"`);
+  return [];
+};
+
+voidPlugin[configValidator] = async conf => [];
+registerPlugin('router', 'skip', skipPlugin);
+```
+
+We will import the function `registerPlugin` which will register a new router plugin called `skip`.
+The last parameter is the plugin function `skipPlugin` that will return a promise resolving the routes to resolve.
+It receives the route and options for the route that should be handled.
+We will simply return an empty array as we won't proceed routes handled by the plugin.
+We can your the exportet log function from scully to log the action in a nice way.
+
+Last but not least we will use the `skip` plugin in our `scully.config.js` configuration file and tell the plugin which routes to handle:
+
+```js
+require('./extraPlugin/skip');
+
 exports.config = {
-  projectRoot: "./src/app",
-  outDir: './dist/static',
+  // ...
   routes: {
-    '/secure': { type: 'void' },
-    ...
+    // ...
+    '/secure': { type: 'skip' },
   }
 };
 ```
 
-## TransferState
+Checking the plugin by running `npm run scully` will output us the following result:
 
-The last thing we want to have a look at is the TransferState.
+```
+ ☺   new Angular build imported
+ ☺   Started servers in background
+Finding all routes in application.
+...
+Skip Route "/secure"
+...
+```
 
+Perfect! As you can see the route is ignored by _Scully_ now.
+
+## Conclusion
