@@ -219,6 +219,8 @@ Skip Route "/secure"
 
 Perfect! As you can see the route is ignored by _Scully_ now.
 
+You can have a look at a more detailed example in my [scully-blog-example](https://github.com/d-koppenhagen/scully-blog-example/commits) repository.
+
 ## Conclusion
 
 In this follow up article you learned how to add a custom markdown module to _Scully_ as well as how you can use the AsciiDocn plugin for rendering `adoc` files.
