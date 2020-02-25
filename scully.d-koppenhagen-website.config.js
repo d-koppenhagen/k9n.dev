@@ -1,3 +1,5 @@
+require('./scully-plugins/toc');
+
 exports.config = {
   projectRoot: "./src",
   projectName: "d-koppenhagen-website",
@@ -5,6 +7,7 @@ exports.config = {
   routes: {
     '/blog/:slug': {
       type: 'contentFolder',
+      postRenderers: ['toc'],
       slug: {
         folder: "./blog"
       }

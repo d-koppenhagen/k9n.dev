@@ -31,13 +31,7 @@ Die PWA lässt sich wie jede andere App nutzen, inklusive Push-Benachrichtigunge
 
 <hr>
 
-**Inhalt:**
-
-* [Webanwendung vs. PWA vs. App](/blog/2019-07-progressive-web-app#webanwendung-vs-pwa-vs-app)
-* [Add to Homescreen](/blog/2019-07-progressive-web-app#add-to-homescreen)
-* [Offline-Funktionalität](/blog/2019-07-progressive-web-app#offline-funktionalit-t)
-* [Push Notifications](/blog/2019-07-progressive-web-app#push-notifications)
-* [Zusammenfassung](/blog/2019-07-progressive-web-app#zusammenfassung)
+<div id="toc"></div>
 
 ## Webanwendung vs. PWA vs. App
 
