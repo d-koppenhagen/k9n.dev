@@ -25,15 +25,7 @@ thumbnailSmall: assets/images/blog/scully-header-small.jpg
 
 <hr>
 
-**Table of contents:**
-
-- [About Scully](/blog/2020-01-angular-scully#about-scully)
-- [Get started](/blog/2020-01-angular-scully#get-started)
-- [Turn it into a blog](/blog/2020-01-angular-scully#turn-it-into-a-blog)
-- [Let's go further](/blog/2020-01-angular-scully#lets-go-further)
-- [Use the Scully service](/blog/2020-01-angular-scully#use-the-scully-service)
-- [Fetch dynamic information from an API](/blog/2020-01-angular-scully#fetch-dynamic-information-from-an-api)
-- [Conclusion](/blog/2020-01-angular-scully#conclusion)
+<div id="toc"></div>
 
 > On _Dec 16, 2019_ the static site generator _Scully_ for Angular [was presented](https://www.youtube.com/watch?v=Sh37rIUL-d4).
 > _Scully_ automatically detects all app routes and creates static sites out of it that are ready to ship for production. _Scully_ is currently just available within an early version.
@@ -119,6 +111,27 @@ Nonetheless we can checkout the result of the static pages in the browser by run
 - `localhost:1668` : This server serves the static generated pages from the `dist/static` directory like a normal webserver (e.g. _nginx_ or _apache_)
 - `localhost:1864` : <!-- Not that clear yet, TODO: update when https://github.com/scullyio/scully/issues/126 is solved -->This server is there for courtesy. It serves the results from _Scully_ directly, so that you can locally interact with it.
 
+## The `ScullyLibModule`
+
+You may have realized, that after running the _Scully_ schematic, the `ScullyLibModule` has been added to your `AppComponent`:
+
+```ts
+// ...
+import { ScullyLibModule } from '@scullyio/ng-lib';
+
+@NgModule({
+  // ...
+  imports: [
+    // ...
+    ScullyLibModule
+  ]
+})
+export class AppModule { }
+```
+
+This module is used by _Scully_ to hook into the angular router and to determine once the page _Scully_ tries to enter is fully loaded and ready to be rendered by using the `IdleMonitorService` from _Scully_ internally.
+If we will remove the import of the module, _Scully_ will still work but it takes much longer to render your site as it will use a timeour for accessing the pages. So in that case even if the a page has been fully loaded, _Scully_ would wait until the timer is expired.
+
 ## Turn it into a blog
 
 Let’s go a bit further and turn our site into a simple blog that will render our blog posts from separate markdown documents.
@@ -173,7 +186,7 @@ Setting up an Angular based blog has never been easier.
 
 > **Good to know:** _Scully_ also detects new routes we are adding manually to our app and it will create static sites for all those pages.
 
-## Use the _Scully_ service
+## Use the `ScullyRoutesService`
 
 We want to take the next step.
 Now we want to list an overview of all existing blog posts we have and link to their sites in our `AppComponent`.
