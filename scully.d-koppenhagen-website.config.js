@@ -1,4 +1,4 @@
-require('./scully-plugins/toc');
+require('scully-plugin-toc');
 
 exports.config = {
   projectRoot: "./src",
