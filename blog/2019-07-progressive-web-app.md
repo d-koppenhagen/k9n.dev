@@ -101,11 +101,6 @@ Navigieren wir allerdings zur Buchliste, so können keine Bücher angezeigt werd
 > Achtung: Die PWA verwendet Service Worker. Diese können ausschließlich über gesicherte Verbindungen mit HTTPS oder über eine `localhost`-Verbindung genutzt werden. Rufen Sie die App, die mittels `angular-http-server` ohne SSL ausgeliefert wird, also über ein anderes Gerät auf, so werden die Service Worker nicht wie gewünscht funktionieren.
 
 ## Add to Homescreen
-### Test h3
-#### Test h4
-##### Test h5
-###### Test h6
-#### Test h4 (2)
 
 Prinzipiell kann jede Website unter Android oder iOS zum Homescreen hinzugefügt werden.
 Sie erhält dann ein eigenes App-Icon erhält und sieht zunächst schon wie eine native App aus.
