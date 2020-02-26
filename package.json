@@ -7,7 +7,7 @@
     "release": "standard-version",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build",
     "build:watch": "ng build --watch",
     "test": "ng test",
     "lint": "ng lint",
