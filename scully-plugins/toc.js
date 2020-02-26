@@ -13,7 +13,8 @@ const tocPlugin = async (html, route) => {
     if (!insertPoint) { return html; }
 
     // get h2 and h3 headings
-    const headers = window.document.querySelectorAll('.blog-content>h2,.blog-content>h3');
+    const headers = window.document.querySelectorAll(`${route.config.toc.blogAreaSelector}>h2,${route.config.toc.blogAreaSelector}>h3`);
+
     let previousTag = null;
     let toc = '';
     headers.forEach(c => {
@@ -29,8 +30,13 @@ const tocPlugin = async (html, route) => {
     });
 
     // append toc title as child
-    const tocTitle = (route.data.language && route.data.language.toLowerCase() === 'en') ? 'Table of contents' : 'Inhalt'
-    const tocHeading = window.document.createElement('h2')
+    let tocTitle = '';
+    try {
+      tocTitle = route.config.toc.heading.title[route.data.language.toLowerCase()]
+    } catch (error) {
+      tocTitle = route.config.toc.heading.title[route.config.toc.heading.defaultLang] || '';
+    }
+    const tocHeading = window.document.createElement(route.config.toc.heading.tag || 'h2');
     tocHeading.innerHTML = tocTitle;
     insertPoint.appendChild(tocHeading)
 

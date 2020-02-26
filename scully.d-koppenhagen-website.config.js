@@ -10,6 +10,17 @@ exports.config = {
       postRenderers: ['toc'],
       slug: {
         folder: "./blog"
+      },
+      toc: {
+        blogAreaSelector: '.blog-content',
+        heading: {
+          tag: 'h2',
+          defaultLang: 'de',
+          title: {
+            en: 'Table of contents',
+            de: 'Inhalt',
+          }
+        }
       }
     },
   }
