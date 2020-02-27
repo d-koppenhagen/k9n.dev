@@ -31,7 +31,7 @@ Die PWA lässt sich wie jede andere App nutzen, inklusive Push-Benachrichtigunge
 
 <hr>
 
-<div id="toc"></div>
+<div id="toc"><h2>Inhalt</h2></div>
 
 ## Webanwendung vs. PWA vs. App
 
