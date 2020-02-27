@@ -15,14 +15,6 @@ exports.config = {
         blogAreaSelector: '.blog-content',
         insertSelector: '#toc',
         level: ['h2', 'h3'],
-        heading: {
-          tag: 'h2',
-          defaultLang: 'de',
-          title: {
-            en: 'Table of contents',
-            de: 'Inhalt',
-          }
-        }
       }
     },
   }

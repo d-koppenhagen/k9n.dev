@@ -37,7 +37,7 @@ It will help you to keep your `CHANGELOG.md` file up to date and to release new 
 
 <hr>
 
-<div id="toc"></div>
+<div id="toc"><h2>Table of contents</h2></div>
 
 ## TL;DR
 
