@@ -73,7 +73,7 @@
     "ngx-semantic-version": "^2.0.0-beta.4",
     "npm-run-all": "^4.1.5",
     "protractor": "~5.4.3",
-    "scully-plugin-toc": "^0.0.5",
+    "scully-plugin-toc": "^0.0.6",
     "standard-version": "^7.1.0",
     "ts-node": "~8.6.2",
     "tslint": "~6.0.0",
