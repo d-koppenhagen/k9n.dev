@@ -31,9 +31,9 @@ thumbnailSmall: assets/images/blog/scully-header-small.jpg
 > _Scully_ automatically detects all app routes and creates static sites out of it that are ready to ship for production. _Scully_ is currently just available within an early version.
 > This blog post is based on versions:
 > ```
-> @scullyio/ng-lib: 0.0.18
+> @scullyio/ng-lib: 0.0.19
 > @scullyio/init: 0.0.23
-> @scullyio/scully: 0.0.75
+> @scullyio/scully: 0.0.78
 > ```
 > However some of the commands or API calls used here may change in the future.
 > It’s my goal to keep this blog post as up-to-date as possible.
@@ -61,7 +61,6 @@ The power of pre-rendering and very fast access to sites and the power of a full
 ## Get started
 
 The first thing we have to do is to setup our Angular app.
-To use _Scully_ later, we have to use an Angular version _9.0.0-rc.0_ or greater.
 As _Scully_ detects the content from the routes, we need to configure the Angular router as well.
 Therefore, we add the appropriate flag `--routing` (we can also choose this option when the CLI prompts us).
 
@@ -85,6 +84,8 @@ Let's try it out by building our site and running _Scully_.
 npm run build   # build our Angular app
 npm run scully  # let _Scully_ run over our app build
 ```
+
+> _Scully_ will run in watch mode by default. To let _Scully_ just run once, just add the `--nw` option (`npm run scully -- --nw`).
 
 After _Scully_ has checked our app, it will add the generated static assets to our `dist/static` directory by default.
 Let's quickly compare the result generated from _Scully_ with the result from the initial Angular build (`dist/scully-blog`):
@@ -160,9 +161,9 @@ So in the end the content of our file `app.component.html` should look like this
 Let’s run the build again and have a look at the results:
 
 ```bash
-npm run build         # Angular build
-npm run scully        # generate static build
-npm run scully:serve  # serve static build
+npm run build           # Angular build
+npm run scully -- --nw  # generate static build (just once woithout watching)
+npm run scully:serve    # serve static build
 ```
 
 When checking out our `dist/static` directory we can see that there are new sub-directories for the routes of our static blogging sites.
@@ -350,9 +351,15 @@ In fact, when running _Scully_ using `npm run scully`, it will visit the followi
 We can see the result in the log:
 
 ```text
+enable reload on port 2667
  ☺   new Angular build imported
  ☺   Started servers in background
+--------------------------------------------------
+Watching blog for change.
+--------------------------------------------------
+ ☺   new Angular build imported
 Finding all routes in application.
+Using stored unhandled routes
 Pull in data to create additional routes.
 Finding files in folder "/<path>/blog"
 Route list created in files:
@@ -366,13 +373,18 @@ Route "/blog/12-27-2019-blog" rendered into file: "/<path>/dist/static/blog/12-2
 Route "/blog/first-post" rendered into file: "/<path>/dist/static/blog/first-post/index.html"
 Route "/" rendered into file: "/<path>/dist/static/index.html"
 
-Generating took 4.9 seconds for 10 pages:
-  That is 2.04 pages per second,
-  or 491 milliseconds for each page.
+Generating took 3.3 seconds for 7 pages:
+  That is 2.12 pages per second,
+  or 473 milliseconds for each page.
   
-  Finding routes in the angular app took 2.98 seconds
-  Pulling in route-data took 212 milliseconds
-  Rendering the pages took 1.04 seconds
+  Finding routes in the angular app took 0 milliseconds
+  Pulling in route-data took 26 milliseconds
+  Rendering the pages took 2.58 seconds
+
+The server is available on "http://localhost:1668/"
+------------------------------------------------------------
+Press r for re-run Scully, or q for close the servers.
+------------------------------------------------------------
 ```
 
 This is great. We have efficiently pre-rendered normal dynamic content!
