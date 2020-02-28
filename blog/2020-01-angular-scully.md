@@ -82,10 +82,10 @@ Let's try it out by building our site and running _Scully_.
 
 ```bash
 npm run build   # build our Angular app
-npm run scully  # let _Scully_ run over our app build
+npm run scully  # let _Scully_ run over our app build and serve it
 ```
 
-> _Scully_ will run in watch mode by default. To let _Scully_ just run once, just add the `--nw` option (`npm run scully -- --nw`).
+> _Scully_ will run in watch mode by default and serves the result. To let _Scully_ just run once without serving the result, just add the `--nw` option (`npm run scully -- --nw`).
 
 After _Scully_ has checked our app, it will add the generated static assets to our `dist/static` directory by default.
 Let's quickly compare the result generated from _Scully_ with the result from the initial Angular build (`dist/scully-blog`):
@@ -107,7 +107,7 @@ dist/
 If we take a look at it, except of the file `scully-routes.json`, that contains just an empty array, we don't see any differences between the two builds.
 This is because currently we only have the root route configured and no more further content was created.
 
-Nonetheless we can checkout the result of the static pages in the browser by running `npm run scully:serve`. This will start two servers:
+Nonetheless we can checkout the result by visiting the following URLs:
 
 - `localhost:1668` : This server serves the static generated pages from the `dist/static` directory like a normal webserver (e.g. _nginx_ or _apache_)
 - `localhost:1864` : <!-- Not that clear yet, TODO: update when https://github.com/scullyio/scully/issues/126 is solved -->This server is there for courtesy. It serves the results from _Scully_ directly, so that you can locally interact with it.
@@ -161,9 +161,8 @@ So in the end the content of our file `app.component.html` should look like this
 Let’s run the build again and have a look at the results:
 
 ```bash
-npm run build           # Angular build
-npm run scully -- --nw  # generate static build (just once woithout watching)
-npm run scully:serve    # serve static build
+npm run build   # Angular build
+npm run scully  # generate static build and serve the app
 ```
 
 When checking out our `dist/static` directory we can see that there are new sub-directories for the routes of our static blogging sites.
