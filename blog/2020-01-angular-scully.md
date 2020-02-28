@@ -4,7 +4,7 @@ description: 'With this blog post, I will show you how you can easily create a b
 publish: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-02-10
+updated: 2020-02-28
 keywords:
   - Angular
   - Angular CLI
@@ -32,8 +32,8 @@ thumbnailSmall: assets/images/blog/scully-header-small.jpg
 > This blog post is based on versions:
 > ```
 > @scullyio/ng-lib: 0.0.18
-> @scullyio/init: 0.0.22
-> @scullyio/scully: 0.0.68
+> @scullyio/init: 0.0.23
+> @scullyio/scully: 0.0.75
 > ```
 > However some of the commands or API calls used here may change in the future.
 > It’s my goal to keep this blog post as up-to-date as possible.
@@ -130,7 +130,7 @@ export class AppModule { }
 ```
 
 This module is used by _Scully_ to hook into the angular router and to determine once the page _Scully_ tries to enter is fully loaded and ready to be rendered by using the `IdleMonitorService` from _Scully_ internally.
-If we will remove the import of the module, _Scully_ will still work but it takes much longer to render your site as it will use a timeour for accessing the pages. So in that case even if the a page has been fully loaded, _Scully_ would wait until the timer is expired.
+If we will remove the import of the module, _Scully_ will still work but it takes much longer to render your site as it will use a timeout for accessing the pages. So in that case even if the a page has been fully loaded, _Scully_ would wait until the timer is expired.
 
 ## Turn it into a blog
 
