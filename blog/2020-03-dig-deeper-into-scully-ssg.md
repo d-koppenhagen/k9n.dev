@@ -6,7 +6,7 @@ I will guide you through the process of how to handle protected routes using a c
 publish: false
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-03-02
+updated: 2020-03-01
 keywords:
   - Angular
   - Angular CLI
