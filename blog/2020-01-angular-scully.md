@@ -15,8 +15,8 @@ keywords:
   - Pre-rendering
   - JAM Stack
 language: en
-thumbnail: assets/images/blog/scully-header.jpg
-thumbnailSmall: assets/images/blog/scully-header-small.jpg
+thumbnail: assets/images/blog/scully/scully-header.jpg
+thumbnailSmall: assets/images/blog/scully/scully-header-small.jpg
 ---
 
 # Create powerful fast pre-rendered Angular Apps using _Scully_ static site generator
@@ -107,10 +107,8 @@ dist/
 If we take a look at it, except of the file `scully-routes.json`, that contains just an empty array, we don't see any differences between the two builds.
 This is because currently we only have the root route configured and no more further content was created.
 
-Nonetheless we can checkout the result by visiting the following URLs:
-
-- `localhost:1668` : This server serves the static generated pages from the `dist/static` directory like a normal webserver (e.g. _nginx_ or _apache_)
-- `localhost:1864` : <!-- Not that clear yet, TODO: update when https://github.com/scullyio/scully/issues/126 is solved -->This server is there for courtesy. It serves the results from _Scully_ directly, so that you can locally interact with it.
+Nonetheless we can checkout the result by visiting the following URL: `localhost:1668`.
+This server serves the static generated pages from the `dist/static` directory like a normal webserver (e.g. _nginx_ or _apache_).
 
 ## The `ScullyLibModule`
 
@@ -173,7 +171,7 @@ If you want to prove that the page is actually really pre-rendered, just disable
 You can reload the page and see that the content is still displayed.
 Awesome isn't it?
 
-![a simple blog created with scully](/assets/images/blog/scully-pre-rendered-js-disabled.png)
+![a simple blog created with scully](/assets/images/blog/scully/scully-pre-rendered-js-disabled.png)
 
 > When JavaScript is enabled, _Scully_ configures your static sites in that way, that you will see initially the static content.
 > In the background it will bootstrap your Angular app, and refresh the content with it.
@@ -243,7 +241,7 @@ We can extend `app.component.html` like this:
 
 This will give us a fully routed blog page:
 
-![a simple blog created with scully](/assets/images/blog/scully-blog.gif)
+![a simple blog created with scully](/assets/images/blog/scully/scully-blog.gif)
 
 The `ScullyRoutesService` contains all of the available routes in your app.
 In fact, any route that we add to our Angular app will be detected by _Scully_ and made available via the `ScullyRoutesService.available$` observable.
@@ -409,8 +407,10 @@ It will handle and pre-render dynamic routes by fetching API data from placehold
 Compared to "classic" pre-rending by using [Angular Universal](https://angular.io/guide/universal), _Scully_ is much easier to use and it doesn't require you to write a specific flavor of Angular.
 Also _Scully_ can easily pre-render hybrid Angular apps or Angular apps with plugins like jQuery in comparison to Angular Universal.
 
+If you want to dig a bit deeper into the features _Scully_ offers, check out my [second article](/blog/2020-03-dig-deeper-into-scully-ssg).
+
 Any hints, suggestions or corrections? Feel free to [contact me](http://d-koppenhagen.de/#contact) or sending me a [pull request](https://github.com/d-koppenhagen/d-koppenhagen.de/pulls).
 
-## Thank you
+**Thank you**
 
 Special thanks go to [Aaron Frost (Frosty ⛄️)](https://twitter.com/aaronfrost) from the _Scully_ core team, [Ferdinand Malcher](https://twitter.com/fmalcher01) and [Johannes Hoppe](https://twitter.com/JohannesHoppe) for revising this article.
