@@ -262,6 +262,6 @@ And if you have any improvements, I'm particularly happy about a [pull request](
 
 <hr>
 
-## Thank you
+**Thank you**
 
 Special thanks go to [Ferdinand Malcher](https://twitter.com/fmalcher01) and [Johannes Hoppe](https://twitter.com/JohannesHoppe) for revising this article and discussing things.

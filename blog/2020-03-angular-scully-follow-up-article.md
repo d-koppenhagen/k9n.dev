@@ -1,10 +1,12 @@
 ---
-title: angular-scully-follow-up-article
-description: Add some description for the blog overview page here
+title: Dig deeper into Scully and use the most out of it
+description: 'In this article about Scully, I will introduce some more advanced features.
+You will learn how you can setup a cutom markdown module and how you can use AsciiDoc with Scully.
+I will guide you through the process of how to handle protected routes using a custom route plugin.'
 publish: false
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-03-05
+updated: 2020-03-02
 keywords:
   - Angular
   - Angular CLI
@@ -217,3 +219,7 @@ You can have a look at a more detailed example in my [scully-blog-example](https
 
 In this follow up article you learned how to add a custom markdown module to _Scully_ as well as how you can use the AsciiDoc plugin for rendering `adoc` files.
 Also you can now handle protected routes by using a custom _Scully_ route plugin.
+
+**Thank you**
+
+Special thanks go to [Jorge Cano](https://twitter.com/jorgeucano) from the _Scully_ core team for revising this article.

@@ -409,6 +409,6 @@ Also _Scully_ can easily pre-render hybrid Angular apps or Angular apps with plu
 
 Any hints, suggestions or corrections? Feel free to [contact me](http://d-koppenhagen.de/#contact) or sending me a [pull request](https://github.com/d-koppenhagen/d-koppenhagen.de/pulls).
 
-## Thank you
+**Thank you**
 
 Special thanks go to [Aaron Frost (Frosty ⛄️)](https://twitter.com/aaronfrost) from the _Scully_ core team, [Ferdinand Malcher](https://twitter.com/fmalcher01) and [Johannes Hoppe](https://twitter.com/JohannesHoppe) for revising this article.
