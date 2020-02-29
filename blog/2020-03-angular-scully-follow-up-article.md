@@ -1,5 +1,5 @@
 ---
-title: Dig deeper into Scully and use the most out of it
+title: Dig deeper into static site generation with Scully and use the most out of it
 description: 'In this article about Scully, I will introduce some more advanced features.
 You will learn how you can setup a custom Markdown module and how you can use AsciiDoc with Scully.
 I will guide you through the process of how to handle protected routes using a custom route plugin.'
@@ -23,7 +23,7 @@ thumbnail: assets/images/blog/scully/scully-header2.jpg
 thumbnailSmall: assets/images/blog/scully/scully-header2-small.jpg
 ---
 
-# Dig deeper into _Scully_ and use the most out of it
+# Dig deeper into static site generation with _Scully_ and use the most out of it
 
 **If you haven't heard about _Scully_ yet, you should first check out my introduction article about it: _[»Create powerful fast pre-rendered Angular Apps using Scully static site generator«](/blog/2020-01-angular-scully)_.**
 
