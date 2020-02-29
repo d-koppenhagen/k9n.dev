@@ -107,10 +107,8 @@ dist/
 If we take a look at it, except of the file `scully-routes.json`, that contains just an empty array, we don't see any differences between the two builds.
 This is because currently we only have the root route configured and no more further content was created.
 
-Nonetheless we can checkout the result by visiting the following URLs:
-
-- `localhost:1668` : This server serves the static generated pages from the `dist/static` directory like a normal webserver (e.g. _nginx_ or _apache_)
-- `localhost:1864` : <!-- Not that clear yet, TODO: update when https://github.com/scullyio/scully/issues/126 is solved -->This server is there for courtesy. It serves the results from _Scully_ directly, so that you can locally interact with it.
+Nonetheless we can checkout the result by visiting the following URL: `localhost:1668`.
+This server serves the static generated pages from the `dist/static` directory like a normal webserver (e.g. _nginx_ or _apache_).
 
 ## The `ScullyLibModule`
 
