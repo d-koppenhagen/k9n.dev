@@ -17,8 +17,8 @@ keywords:
   - Pre-rendering
   - JAM Stack
 language: en
-thumbnail: assets/images/blog/scully-header.jpg
-thumbnailSmall: assets/images/blog/scully-header-small.jpg
+thumbnail: assets/images/blog/scully/scully-header2.jpg
+thumbnailSmall: assets/images/blog/scully/scully-header2-small.jpg
 ---
 
 # Dig deeper into _Scully_ and use the most out of it
@@ -76,7 +76,7 @@ Like for our `blog` section, we want to easily write our content using `markdown
 Therefore we can use the schematic `@scullyio/init:markdown`:
 
 ```bash
-ng g @scullyio/init:markdown --name="projects" --slug="projectId" --sourceDir="projects" --route="projects"
+ng g @scullyio/init:markdown --name=projects --slug=projectId --sourceDir=projects --route=projects
 ```
 
 let's have a look at the options we set:
@@ -96,7 +96,7 @@ npm run build   # Angular build
 npm run scully  # generate static build, start scully server and watch for changes
 ```
 
-![the initial projects post generated with the markdown schematic](/assets/images/blog/scully-markdown-projects.png)
+![the initial projects post generated with the markdown schematic](/assets/images/blog/scully/scully-markdown-projects.png)
 
 ## The `AsciiDoc` File Handler Plugin
 
@@ -105,7 +105,7 @@ You can easily change the file extension of a generated post file by using the `
 When you want to put the generated post files in a specific directory (not `blog`), you can define this via the `target` option.
 
 ```bash
-ng g @scullyio/init:post --name="asciidoc example" --target="projects" --extension="adoc"
+ng g @scullyio/init:post --name="asciidoc example" --target=projects --extension=adoc
 ```
 
 Let's add a bit of content after it has been generated:
@@ -139,7 +139,7 @@ npm run scully:serve  # serve static build
 
 Great, as we can see: AsciiDoc files will be rendered as well out-of-the-box.
 
-![a scully rendered asciidoc file](/assets/images/blog/scully-asciidoc-projects.png)
+![a scully rendered asciidoc file](/assets/images/blog/scully/scully-asciidoc-projects.png)
 
 You can also define your own File Handler Plugin for other content formats.
 Check out the [official docs](https://github.com/scullyio/scully/blob/master/docs/plugins.md#file-plugin) for it to see how it works.
@@ -222,4 +222,4 @@ Also you can now handle protected routes by using a custom _Scully_ route plugin
 
 **Thank you**
 
-Special thanks go to [Jorge Cano](https://twitter.com/jorgeucano) from the _Scully_ core team for revising this article.
+Special thanks go to [Jorge Cano](https://twitter.com/jorgeucano) from the _Scully_ core team and [Ferdinand Malcher](https://twitter.com/fmalcher01) for revising this article.
