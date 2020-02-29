@@ -83,9 +83,9 @@ ng g @scullyio/init:markdown --name=projects --slug=projectId --sourceDir=projec
 
 Let's have a look at the options we set:
 
-- `name`: This is the base name for the generated Angular module that Scully created for us.
+- `name`: This is the base name for the generated Angular module that _Scully_ created for us.
 - `slug`: Here we define the placeholder name for the URL that will be filled with the basename of the Markdown files.
-- `sourceDir`: That's where we will store our Markdown files whose content is rendered by the Scully Markdown file plugin.
+- `sourceDir`: That's where we will store our Markdown files whose content is rendered by the _Scully_ Markdown file plugin.
 - `route`: This is the name for the route before the `:slug` in the URLs where we can see our rendered content later.
 
 > Good to know: Under the hood the `@scullyio/init:blog` schematic just calls `@scullyio/init:markdown` with default options set. So in fact it's just a shortcut.
@@ -102,7 +102,7 @@ npm run scully  # generate static build, start scully server and watch for chang
 
 ## The `AsciiDoc` File Handler Plugin
 
-Scully provides another _File Handler Plugin_ out-of-the-box: The _AsciiDoc_ plugin.
+_Scully_ provides another _File Handler Plugin_ out-of-the-box: The _AsciiDoc_ plugin.
 You can easily change the file extension of a generated post file by using the `extension` option.
 When you want to put the generated post files in a specific directory (not `blog`), you can define this via the `target` option.
 
@@ -182,11 +182,11 @@ voidPlugin[configValidator] = async conf => [];
 registerPlugin('router', 'skip', skipPlugin);
 ```
 
-We will import the function `registerPlugin` which will register a new router plugin called `skip`.
-The last parameter is the plugin function `skipPlugin` that will return a promise resolving the routes.
+We will import the function `registerPlugin()` which will register a new router plugin called `skip`.
+The last parameter is the plugin function `skipPlugin()` that will return a promise resolving the routes.
 It receives the route and options for the route that should be handled.
 We will simply return an empty array as we won't proceed routes handled by the plugin.
-We can use the exported `log` function from Scully to log the action in a nice way.
+We can use the exported `log()` function from _Scully_ to log the action in a nice way.
 
 Last but not least we will use the `skip` plugin in our `scully.config.js` configuration file and tell the plugin which routes to handle:
 
