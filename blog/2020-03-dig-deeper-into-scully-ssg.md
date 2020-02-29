@@ -62,7 +62,7 @@ thumbnail: assets/images/default.jpg
 We can use the template when calling the `@scullyio/init:post` schematic:
 
 ```bash
-ng g @scullyio/init:post --name="a new post" --meta-data-file="meta.yml"
+ng g @scullyio/init:post --name="a new post" --meta-data-file=meta.yml
 ```
 
 When we check our `blog` directory now we will see that the schematic added our YAML template to the meta data section of the newly created post file `a-new-post.md`.
