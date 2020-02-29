@@ -15,8 +15,8 @@ keywords:
   - Pre-rendering
   - JAM Stack
 language: en
-thumbnail: assets/images/blog/scully-header.jpg
-thumbnailSmall: assets/images/blog/scully-header-small.jpg
+thumbnail: assets/images/blog/scully/scully-header.jpg
+thumbnailSmall: assets/images/blog/scully/scully-header-small.jpg
 ---
 
 # Create powerful fast pre-rendered Angular Apps using _Scully_ static site generator
@@ -171,7 +171,7 @@ If you want to prove that the page is actually really pre-rendered, just disable
 You can reload the page and see that the content is still displayed.
 Awesome isn't it?
 
-![a simple blog created with scully](/assets/images/blog/scully-pre-rendered-js-disabled.png)
+![a simple blog created with scully](/assets/images/blog/scully/scully-pre-rendered-js-disabled.png)
 
 > When JavaScript is enabled, _Scully_ configures your static sites in that way, that you will see initially the static content.
 > In the background it will bootstrap your Angular app, and refresh the content with it.
@@ -241,7 +241,7 @@ We can extend `app.component.html` like this:
 
 This will give us a fully routed blog page:
 
-![a simple blog created with scully](/assets/images/blog/scully-blog.gif)
+![a simple blog created with scully](/assets/images/blog/scully/scully-blog.gif)
 
 The `ScullyRoutesService` contains all of the available routes in your app.
 In fact, any route that we add to our Angular app will be detected by _Scully_ and made available via the `ScullyRoutesService.available$` observable.
