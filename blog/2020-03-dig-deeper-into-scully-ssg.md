@@ -62,7 +62,7 @@ thumbnail: assets/images/default.jpg
 We can use the template when calling the `@scullyio/init:post` schematic:
 
 ```bash
-ng g @scullyio/init:post --name="a new post" --meta-data-file="meta.yml"
+ng g @scullyio/init:post --name="a new post" --meta-data-file=meta.yml
 ```
 
 When we check our `blog` directory now we will see that the schematic added our YAML template to the meta data section of the newly created post file `a-new-post.md`.
@@ -103,14 +103,14 @@ npm run scully  # generate static build, start scully server and watch for chang
 ## The `AsciiDoc` File Handler Plugin
 
 _Scully_ provides another _File Handler Plugin_ out-of-the-box: The _AsciiDoc_ plugin.
-You can easily change the file extension of a generated post file by using the `extension` option.
 When you want to put the generated post files in a specific directory (not `blog`), you can define this via the `target` option.
 
 ```bash
-ng g @scullyio/init:post --name="asciidoc example" --target=projects --extension=adoc
+ng g @scullyio/init:post --name="asciidoc example" --target=projects
 ```
 
-Let's add a bit of content after it has been generated:
+The generated file will be a Markdown file initially.
+Let's change the file extension, rename it to `*.adoc` and add a bit of content after it has been generated:
 
 ```adoc
 :title: 2020-01-21-projects
@@ -135,8 +135,7 @@ And finally we build our project again and see if it works:
 
 ```bash
 npm run build         # Angular build
-npm run scully        # generate static build
-npm run scully:serve  # serve static build
+npm run scully  # generate static build, start scully server and watch for changes
 ```
 
 Great, as we can see: AsciiDoc files will be rendered as well out-of-the-box.
@@ -178,7 +177,6 @@ const skipPlugin = async (route, options) => {
   return [];
 };
 
-voidPlugin[configValidator] = async conf => [];
 registerPlugin('router', 'skip', skipPlugin);
 ```
 
