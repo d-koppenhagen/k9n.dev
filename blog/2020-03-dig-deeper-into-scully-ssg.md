@@ -3,7 +3,7 @@ title: Dig deeper into static site generation with Scully and use the most out o
 description: 'In this article about Scully, I will introduce some more advanced features.
 You will learn how you can setup a custom Markdown module and how you can use AsciiDoc with Scully.
 I will guide you through the process of how to handle protected routes using a custom route plugin.'
-publish: false
+publish: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
 updated: 2020-03-01
@@ -169,7 +169,7 @@ To prevent _Scully_ from rendering specific pages we can simply create a custom 
 To do so, we will create a new directory `extraPlugin` with the file `skip.js` inside:
 
 ```js
-const { configValidator, registerPlugin } = require('@scullyio/scully');
+const { registerPlugin } = require('@scullyio/scully');
 const { log, yellow } = require('@scullyio/scully/utils/log');
 
 const skipPlugin = async (route, options) => {
