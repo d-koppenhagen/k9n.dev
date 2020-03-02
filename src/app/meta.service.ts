@@ -53,6 +53,10 @@ export class MetaService {
       content: '@d_koppenhagen',
     });
     this.meta.updateTag({
+      name: 'twitter:creator',
+      content: '@d_koppenhagen',
+    });
+    this.meta.updateTag({
       name: 'twitter:title',
       content: post.title,
     });
