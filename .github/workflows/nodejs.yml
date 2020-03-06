@@ -16,9 +16,8 @@ jobs:
           find: "UA-XXXXXXXXX-X"
           replace: ${{ secrets.G_TAG_CODE }}
           include: "src/environments/environment*" # Replace google Tag
-      - uses: cmgriffing/scully-gh-pages-action@v5
+      - uses: cmgriffing/scully-gh-pages-action@v7
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
-          build-args: "-- --prod"
-          scully-args: "-- --nw"
+          build-args: "--prod"
