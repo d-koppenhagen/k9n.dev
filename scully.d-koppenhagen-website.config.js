@@ -1,4 +1,10 @@
-require('scully-plugin-toc');
+const { TOC } = require('scully-plugin-toc');
+
+const tocOptions = {
+  blogAreaSelector: '.blog-content',
+  insertSelector: '#toc',
+  level: ['h2', 'h3'],
+}
 
 exports.config = {
   projectRoot: "./src",
@@ -7,15 +13,11 @@ exports.config = {
   routes: {
     '/blog/:slug': {
       type: 'contentFolder',
-      postRenderers: ['toc'],
+      postRenderers: [TOC],
       slug: {
         folder: "./blog"
       },
-      toc: {
-        blogAreaSelector: '.blog-content',
-        insertSelector: '#toc',
-        level: ['h2', 'h3'],
-      }
+      toc: tocOptions,
     },
   }
 };
