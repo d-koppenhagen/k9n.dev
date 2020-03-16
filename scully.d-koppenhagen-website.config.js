@@ -1,4 +1,13 @@
 const { TOC } = require('scully-plugin-toc');
+const { Sitemap } = require('@gammastream/scully-plugin-sitemap');
+
+const defaultPostRenderers = [Sitemap];
+
+const sitemapOptions = {
+  urlPrefix: 'https://d-koppenhagen.de',
+  sitemapFilename: 'sitemap.xml',
+  changeFreq: 'monthly'
+};
 
 const tocOptions = {
   blogAreaSelector: '.blog-content',
@@ -10,6 +19,8 @@ exports.config = {
   projectRoot: "./src",
   projectName: "d-koppenhagen-website",
   outDir: './dist/static',
+  sitemapOptions,
+  defaultPostRenderers,
   routes: {
     '/blog/:slug': {
       type: 'contentFolder',
