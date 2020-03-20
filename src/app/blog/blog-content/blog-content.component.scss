@@ -39,11 +39,16 @@ a.published-at-link {
       outline: none;
 
       > i {
-        border: 1px solid $white;
         padding: 10px;
-        border-radius: 40px;
         color: $white;
         min-width: 38px;
+        /*
+         * Neumorphism effect
+         * @see https://neumorphism.io/#2e3141
+         */
+        border-radius: 50px;
+        background: #2e3141;
+        box-shadow:  4px 4px 9px #262936, -4px -4px 9px #36394c;
       }
 
       i.fa-facebook::before {
@@ -51,7 +56,7 @@ a.published-at-link {
       }
 
       &:hover > i, &:focus > i {
-        border: 1px solid $c02;
+        box-shadow:  0 0 12px $c02;
         color: $white;
       }
     }
