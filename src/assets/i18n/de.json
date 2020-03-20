@@ -34,7 +34,7 @@
     "originallyPublishedAt": "Original veröffentlicht auf",
     "readOn": "Weiterlesen",
     "listEmpty": "Es wurden keine passenden Einträge gefunden.",
-    "showAll": "Alle Posts ansehen",
+    "showAll": "Alle Posts ansehen ({{value}})",
     "myBlogPosts": "Meine Blog Posts",
     "search": "Suche",
     "searchAriaLabel": "Liste der Blogposts durchsuchen",

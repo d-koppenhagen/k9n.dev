@@ -34,7 +34,7 @@
     "originallyPublishedAt": "Originally published at",
     "readOn": "Read more",
     "listEmpty": "No matching blog posts found.",
-    "showAll": "Show all",
+    "showAll": "Show all ({{value}})",
     "myBlogPosts": "My Blog Posts",
     "search": "Search",
     "searchAriaLabel": "Search in the list of all blog posts",

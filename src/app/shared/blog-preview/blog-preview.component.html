@@ -34,9 +34,9 @@
     </ng-container>
     <ng-template #emptyResultsTemplate>{{ t('listEmpty') }}</ng-template>
   </section>
-  <ul *ngIf="max || keyword || search" class="actions">
+  <ul *ngIf="(max && max < cntAll) || keyword || search" class="actions">
     <li>
-      <a routerLink="/blog" class="button">{{ t('showAll') }}</a>
+      <a routerLink="/blog" class="button">{{ t('showAll', { value: cntAll }) }}</a>
     </li>
   </ul>
 </ng-container>

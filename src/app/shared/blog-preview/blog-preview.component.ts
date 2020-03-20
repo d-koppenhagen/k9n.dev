@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'dk-blog-preview',
@@ -13,6 +13,7 @@ export class BlogPreviewComponent implements OnInit, OnChanges {
   @Input() keyword: string;
   @Input() search: string;
   blogPostData$: Observable<ScullyRoute[]>;
+  cntAll: number;
 
   constructor(private srs: ScullyRoutesService) {}
 
@@ -32,6 +33,7 @@ export class BlogPreviewComponent implements OnInit, OnChanges {
           .filter((route: ScullyRoute) => route.publish !== false)
           .reverse();
       }),
+      tap(routeList => this.cntAll = routeList.length),
       map(routeList => {
         if (!this.keyword) {
           return routeList;
