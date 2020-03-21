@@ -71,7 +71,8 @@
         "alt": "Share this page via Xing",
         "aria": "Xing Icon"
       }
-    }
+    },
+    "editOnGithub": "Found an error? Edit this page on Github"
   },
   "aboutPage": {
     "about": "About me",

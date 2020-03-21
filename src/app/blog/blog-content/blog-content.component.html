@@ -47,6 +47,15 @@
       </section>
       <section class="blog-content">
         <scully-content></scully-content>
+        <div class="edit-on-github">
+          <a
+            [href]="editOnGithubLink()"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ t('editOnGithub') }}
+          </a>
+        </div>
       </section>
       <section class="blog-footer">
         <h3>{{ t('share.label') }}</h3>

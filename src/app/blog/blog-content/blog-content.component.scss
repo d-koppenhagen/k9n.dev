@@ -12,7 +12,8 @@ h2.sub-heading {
   font-size: 0.9em;
 }
 
-.published-at {
+.published-at,
+.edit-on-github {
   margin-bottom: 30px;
 }
 a.published-at-link {
@@ -48,15 +49,16 @@ a.published-at-link {
          */
         border-radius: 50px;
         background: #2e3141;
-        box-shadow:  4px 4px 9px #262936, -4px -4px 9px #36394c;
+        box-shadow: 4px 4px 9px #262936, -4px -4px 9px #36394c;
       }
 
       i.fa-facebook::before {
         margin-left: 2px;
       }
 
-      &:hover > i, &:focus > i {
-        box-shadow:  0 0 12px $c02;
+      &:hover > i,
+      &:focus > i {
+        box-shadow: 0 0 12px $c02;
         color: $white;
       }
     }

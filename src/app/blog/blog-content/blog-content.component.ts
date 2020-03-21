@@ -96,4 +96,8 @@ ${description}
   shareXing() {
     return `https://www.xing.com/app/user?op=share;url=${location.href}`;
   }
+
+  editOnGithubLink() {
+    return `https://github.com/d-koppenhagen/d-koppenhagen.de/edit/master${location.pathname}.md`;
+  }
 }
