@@ -10,9 +10,18 @@
         [attr.aria-label]="'blogPage.searchAriaLabel' | transloco"
         #input
       />
-      <h3 *ngIf="keyword$ | async as keyword">
-        {{ t('filter') }}: "{{ keyword }}"
-      </h3>
+
+      <div *ngIf="keyword$ | async as keyword" class="active-keyword-filter">
+        <h3>{{ t('filter') }}:</h3>
+        <button
+          class="button xs"
+          [title]="'blogPage.keywordRemove' | transloco: { value: keyword }"
+          (click)="removeKeywordFilter()"
+        >
+          {{ keyword }}
+          <i class="fa fa-close"></i>
+        </button>
+      </div>
       <dk-blog-preview
         [keyword]="keyword$ | async"
         [search]="searchString"

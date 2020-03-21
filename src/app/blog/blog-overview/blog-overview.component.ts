@@ -5,7 +5,7 @@ import {
   ElementRef,
   AfterViewInit,
 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, fromEvent } from 'rxjs';
 import {
   pluck,
@@ -24,7 +24,7 @@ export class BlogOverviewComponent implements OnInit, AfterViewInit {
   searchString: string;
   @ViewChild('input') input: ElementRef;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
     this.keyword$ = this.route.queryParams.pipe(pluck('keyword'));
@@ -36,5 +36,14 @@ export class BlogOverviewComponent implements OnInit, AfterViewInit {
       .subscribe((text: string) => {
         this.searchString = this.input.nativeElement.value;
       });
+  }
+
+  removeKeywordFilter() {
+    this.router.navigate([], {
+      queryParams: {
+        keyword: null,
+      },
+      queryParamsHandling: 'merge',
+    });
   }
 }

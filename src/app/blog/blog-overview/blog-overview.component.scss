@@ -1,5 +1,15 @@
 .wrapper {
   margin-top: 0;
+
+  .active-keyword-filter {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+
+    > h3 {
+      margin: 0px 10px 0px 0px;
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {

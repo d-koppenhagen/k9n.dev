@@ -45,6 +45,7 @@
     "lastUpdate": "Letztes Update",
     "keywords": "Stichwörter",
     "keywordAriaLabel": "Filtern nach dem Stichwort: {{value}}",
+    "keywordRemove": "Filter \"{{value}}\" entfernen",
     "share": {
       "label": "Diese Seite teilen",
       "common": {
