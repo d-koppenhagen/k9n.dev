@@ -22,5 +22,6 @@
     "panel.border": "#759570",
     "sideBar.border": "#759570",
     "editorGroup.border": "#759570"
-  }
+  },
+  "editor.formatOnSave": true,
 }
