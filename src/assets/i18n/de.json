@@ -12,7 +12,7 @@
   "twitterTimeline": "Twitter Timeline",
   "recentBlogPosts": "Aktuelle Blog Posts",
   "showAllBlogPosts": "Alle Posts ansehen",
-  "originallyPublishedAt": "Original veröffentlicht auf",
+  "originallyPublishedAt": "Original veröffentlicht auf: {{value}}",
   "thumbnail": "Vorschaubild",
   "hello": "Hallo",
   "iAm": "Ich bin {{name}}",

@@ -1,27 +1,73 @@
-a.card-image > img {
-  height: 180px;
-  object-fit: cover;
-}
-.published-at {
-  margin-bottom: 15px;
-}
-a.published-at-link {
-  text-decoration: none;
-  border: none;
-}
-.published-at-logo {
-  margin-top: 10px;
-}
+@import '../../../sass/libs/vars';
 
+.features {
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  a.card-image > img {
+    height: 180px;
+    object-fit: cover;
+  }
+  .card-header {
+    .major {
+      min-height: 100px;
+    }
+  }
+  .card-content {
+    align-self: flex-start;
+  }
+  .card-footer {
+    margin-bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    .read-on {
+      white-space: nowrap;
+      margin-right: 10px;
+    }
+
+    .published-at-link {
+      text-decoration: none;
+      border: none;
+      float: right;
+      width: 150px;
+
+      > img.published-at-logo {
+        float: right;
+      }
+    }
+  }
+}
 /* media queries */
 @media screen and (max-width: 980px) {
   a.card-image > img {
     height: 150px;
+  }
+
+  .read-on {
+    font-size: 0.7em !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .read-on {
+    font-size: 0.6em !important;
   }
 }
 
 @media screen and (max-width: 736px) {
   a.card-image > img {
     height: 120px;
+  }
+
+  .read-on {
+    visibility: hidden;
+    &::before {
+      visibility: visible;
+    }
   }
 }
