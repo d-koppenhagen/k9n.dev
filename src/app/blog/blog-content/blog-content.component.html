@@ -8,28 +8,14 @@
             [attr.alt]="'blogPage.headerImage' | transloco"
           />
         </span>
-        <div
-          *ngIf="post.publishedAt && post.publishedAtUrl"
-          class="published-at"
-        >
-          <a [href]="post.publishedAtUrl" class="published-at-link">
-            <img
-              *ngIf="post.publishedAtLogo"
-              class="published-at-logo"
-              [src]="post.publishedAtLogo"
-              [attr.alt]="'blogPage.publisherLogo' | transloco"
-            />
-          </a>
-          {{ t('originallyPublishedAtLong') }}:
-          <a [href]="post.publishedAtUrl">{{ post.publishedAt }}</a
-          >.
-        </div>
-        <h2 *ngIf="post.updated" class="sub-heading">
-          {{ t('lastUpdate') }}: {{ post.updated | date }}
-        </h2>
       </section>
-      <section class="blog-tags" *ngIf="post.keywords">
-        <h2 class="sub-heading">{{ t('keywords') }}</h2>
+      <section class="extra-section" *ngIf="post.keywords">
+        <div class="extra-info">
+          <h2 class="sub-heading">{{ t('keywords') }}</h2>
+          <h2 *ngIf="post.updated" class="sub-heading">
+            {{ t('lastUpdate') }}: {{ post.updated | date }}
+          </h2>
+        </div>
         <div class="actions">
           <span *ngFor="let keyword of post.keywords">
             <button
@@ -43,6 +29,26 @@
               {{ keyword }}
             </button>
           </span>
+        </div>
+        <div
+          *ngIf="post.publishedAt && post.publishedAtUrl"
+          class="published-at"
+        >
+          <div>
+            <a [href]="post.publishedAtUrl" class="published-at-link">
+              <img
+                *ngIf="post.publishedAtLogo"
+                class="published-at-logo"
+                [src]="post.publishedAtLogo"
+                [attr.alt]="'blogPage.publisherLogo' | transloco"
+              />
+            </a>
+          </div>
+          <div>
+            {{ t('originallyPublishedAtLong') }}:
+            <a [href]="post.publishedAtUrl">{{ post.publishedAt }}</a
+            >.
+          </div>
         </div>
       </section>
       <section class="blog-content">
