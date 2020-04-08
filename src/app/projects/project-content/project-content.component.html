@@ -1,12 +1,9 @@
-<ng-container *transloco="let t; read: 'projectPage'">
+<ng-container *transloco="let t">
   <div class="wrapper alt">
     <div class="inner" *ngIf="post$ | async as post">
       <section class="project-header">
         <span *ngIf="post.thumbnail" class="image fit">
-          <img
-            [src]="post.thumbnail"
-            [attr.alt]="'projectPage.headerImage' | transloco"
-          />
+          <img [src]="post.thumbnail" [attr.alt]="'headerImage' | transloco" />
         </span>
       </section>
       <section class="project-content">

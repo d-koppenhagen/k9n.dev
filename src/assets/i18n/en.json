@@ -12,7 +12,6 @@
   "twitterTimeline": "Twitter Timeline",
   "recentBlogPosts": "Recent Blog Posts",
   "showAllBlogPosts": "Show all posts",
-  "originallyPublishedAt": "Originally published at: {{value}}",
   "thumbnail": "Thumbnail",
   "hello": "Hello",
   "iAm": "I am {{name}}",
@@ -29,57 +28,50 @@
     "description": "This German Angular book will teach you how to develop modern apps for web and mobile. You will learn about the basic concepts of Angular, the best practices and related tools.",
     "readOn": "Learn more"
   },
-  "projectPage": {
-    "myProjects": "My Projects",
-    "headerImage": "Project title image",
-    "editOnGithub": "Found an error? Edit this page on Github"
-  },
-  "blogPage": {
-    "thumbnail": "Blog post thumbnail",
-    "originallyPublishedAt": "Originally published at",
-    "readOn": "Read more",
-    "listEmpty": "No matching blog posts found.",
-    "showAll": "Show all ({{value}})",
-    "myBlogPosts": "My Blog Posts",
-    "search": "Search",
-    "searchAriaLabel": "Search in the list of all blog posts",
-    "filter": "Filter",
-    "headerImage": "Blog-Post title image",
-    "publisherLogo": "Logo of the original publisher",
-    "originallyPublishedAtLong": "This blog post has been published originally at",
-    "lastUpdate": "Last update",
-    "keywords": "Keywords",
-    "keywordAriaLabel": "Filter for keyword: {{value}}",
-    "keywordRemove": "Remove Filter '{{value}}'",
-    "share": {
-      "label": "Share this page",
-      "common": {
-        "alt": "Share this page",
-        "aria": "Share Icon"
-      },
-      "email": {
-        "alt": "Share this page via E-Mail",
-        "aria": "E-Mail Icon"
-      },
-      "twitter": {
-        "alt": "Share this page via Twitter",
-        "aria": "Twitter Icon"
-      },
-      "facebook": {
-        "alt": "Share this page via Facebook",
-        "aria": "Facebook Icon"
-      },
-      "linkedIn": {
-        "alt": "Share this page via LinkedIn",
-        "aria": "LinkedIn Icon"
-      },
-      "xing": {
-        "alt": "Share this page via Xing",
-        "aria": "Xing Icon"
-      }
+  "myProjects": "My Projects",
+  "originallyPublishedAt": "Originally published at",
+  "readOn": "Read more",
+  "listEmpty": "No matching blog posts found.",
+  "showAll": "Show all ({{value}})",
+  "myBlogPosts": "My Blog Posts",
+  "search": "Search",
+  "searchAriaLabel": "Search in the list of all blog posts",
+  "filter": "Filter",
+  "headerImage": "Blog-Post title image",
+  "publisherLogo": "Logo of the original publisher",
+  "originallyPublishedAtLong": "This blog post has been published originally at",
+  "lastUpdate": "Last update",
+  "keywords": "Keywords",
+  "keywordAriaLabel": "Filter for keyword: {{value}}",
+  "keywordRemove": "Remove Filter '{{value}}'",
+  "share": {
+    "label": "Share this page",
+    "common": {
+      "alt": "Share this page",
+      "aria": "Share Icon"
     },
-    "editOnGithub": "Found an error? Edit this page on Github"
+    "email": {
+      "alt": "Share this page via E-Mail",
+      "aria": "E-Mail Icon"
+    },
+    "twitter": {
+      "alt": "Share this page via Twitter",
+      "aria": "Twitter Icon"
+    },
+    "facebook": {
+      "alt": "Share this page via Facebook",
+      "aria": "Facebook Icon"
+    },
+    "linkedIn": {
+      "alt": "Share this page via LinkedIn",
+      "aria": "LinkedIn Icon"
+    },
+    "xing": {
+      "alt": "Share this page via Xing",
+      "aria": "Xing Icon"
+    }
   },
+  "editOnGithub": "Found an error? Edit this page on Github",
   "aboutPage": {
     "about": "About me",
     "intro": "My name is Danny Koppenhagen and  I am a passionate software developer and IT consultant. My profession is the development of web applications – especially of single page applications (SPA). My technology stack includes mainly Angular, RxJS, NgRx but also Vue.js and NativeScript. Furthermore I develop Node.js backends based on JavaScript and TypeScript. I am an IT consultant for web-architectures and -frameworks. During the development I am very focussed on the user experience (UX).",

@@ -1,12 +1,9 @@
-<ng-container *transloco="let t; read: 'blogPage'">
+<ng-container *transloco="let t">
   <div class="wrapper alt">
     <div class="inner" *ngIf="post$ | async as post">
       <section class="blog-header">
         <span *ngIf="post.thumbnail" class="image fit">
-          <img
-            [src]="post.thumbnail"
-            [attr.alt]="'blogPage.headerImage' | transloco"
-          />
+          <img [src]="post.thumbnail" [attr.alt]="'headerImage' | transloco" />
         </span>
       </section>
       <section class="extra-section" *ngIf="post.keywords">
@@ -23,7 +20,7 @@
               [queryParams]="{ keyword: keyword }"
               class="button xs"
               [attr.aria-label]="
-                'blogPage.keywordAriaLabel' | transloco: { value: keyword }
+                'keywordAriaLabel' | transloco: { value: keyword }
               "
             >
               {{ keyword }}
@@ -40,7 +37,7 @@
                 *ngIf="post.publishedAtLogo"
                 class="published-at-logo"
                 [src]="post.publishedAtLogo"
-                [attr.alt]="'blogPage.publisherLogo' | transloco"
+                [attr.alt]="'publisherLogo' | transloco"
               />
             </a>
           </div>
@@ -69,10 +66,10 @@
           <li>
             <a
               (click)="shareApi(post.title, post.description)"
-              [attr.alt]="'blogPage.share.common.alt' | transloco"
+              [attr.alt]="'share.common.alt' | transloco"
               ><i
                 class="fa fa-share-alt"
-                [attr.aria-label]="'blogPage.share.common.aria' | transloco"
+                [attr.aria-label]="'share.common.aria' | transloco"
               ></i>
             </a>
           </li>
@@ -80,11 +77,11 @@
             <a
               [href]="shareEmail(post.title, post.description, post.author)"
               rel="noopener noreferrer"
-              [attr.alt]="'blogPage.share.email.alt' | transloco"
+              [attr.alt]="'share.email.alt' | transloco"
               id="shareEmail"
               ><i
                 class="fa fa-envelope"
-                [attr.aria-label]="'blogPage.share.email.aria' | transloco"
+                [attr.aria-label]="'share.email.aria' | transloco"
               ></i>
             </a>
           </li>
@@ -93,10 +90,10 @@
               [href]="shareTwitter()"
               target="_blank"
               rel="noopener noreferrer"
-              [attr.alt]="'blogPage.share.twitter.alt' | transloco"
+              [attr.alt]="'share.twitter.alt' | transloco"
               ><i
                 class="fa fa-twitter"
-                [attr.aria-label]="'blogPage.share.twitter.aria' | transloco"
+                [attr.aria-label]="'share.twitter.aria' | transloco"
               ></i>
             </a>
           </li>
@@ -105,10 +102,10 @@
               [href]="shareFacebook()"
               target="_blank"
               rel="noopener noreferrer"
-              [attr.alt]="'blogPage.share.facebook.alt' | transloco"
+              [attr.alt]="'share.facebook.alt' | transloco"
               ><i
                 class="fa fa-facebook"
-                [attr.aria-label]="'blogPage.share.facebook.aria' | transloco"
+                [attr.aria-label]="'share.facebook.aria' | transloco"
               ></i>
             </a>
           </li>
@@ -117,10 +114,10 @@
               [href]="shareLinkedIn()"
               target="_blank"
               rel="noopener noreferrer"
-              [attr.alt]="'blogPage.share.linkedIn.alt' | transloco"
+              [attr.alt]="'share.linkedIn.alt' | transloco"
               ><i
                 class="fa fa-linkedin"
-                [attr.aria-label]="'blogPage.share.linkedIn.aria' | transloco"
+                [attr.aria-label]="'share.linkedIn.aria' | transloco"
               ></i>
             </a>
           </li>
@@ -129,10 +126,10 @@
               [href]="shareXing()"
               target="_blank"
               rel="noopener noreferrer"
-              [attr.alt]="'blogPage.share.xing.alt' | transloco"
+              [attr.alt]="'share.xing.alt' | transloco"
               ><i
                 class="fa fa-xing"
-                [attr.aria-label]="'blogPage.share.xing.aria' | transloco"
+                [attr.aria-label]="'share.xing.aria' | transloco"
               ></i>
             </a>
           </li>

@@ -1,4 +1,4 @@
-<ng-container *transloco="let t; read: 'blogPage'">
+<ng-container *transloco="let t">
   <section *ngIf="blogPostData$ | async as blogPosts" class="features">
     <ng-container *ngIf="blogPosts.length; else emptyResultsTemplate">
       <article *ngFor="let post of blogPosts; let i = index">
@@ -41,7 +41,9 @@
               alt="Logo of the published page"
             />
             <ng-template #showPublisherName>{{
-              t('post.publishedAt', { value: post.publishedAtUrl })
+              t('originallyPublishedAt', {
+                value: post.publishedAtUrl
+              })
             }}</ng-template>
           </a>
         </div>

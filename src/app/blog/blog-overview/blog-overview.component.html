@@ -1,13 +1,13 @@
-<ng-container *transloco="let t; read: 'blogPage'">
+<ng-container *transloco="let t">
   <section class="wrapper alt">
     <div class="inner">
       <h2 class="major">{{ t('myBlogPosts') }}</h2>
       <input
         type="text"
-        [attr.placeholder]="'blogPage.search' | transloco"
+        [attr.placeholder]="'search' | transloco"
         name="demo-name"
         aria-required="false"
-        [attr.aria-label]="'blogPage.searchAriaLabel' | transloco"
+        [attr.aria-label]="'searchAriaLabel' | transloco"
         #input
       />
 
@@ -15,7 +15,7 @@
         <h3>{{ t('filter') }}:</h3>
         <button
           class="button xs"
-          [title]="'blogPage.keywordRemove' | transloco: { value: keyword }"
+          [title]="'keywordRemove' | transloco: { value: keyword }"
           (click)="removeKeywordFilter()"
         >
           {{ keyword }}

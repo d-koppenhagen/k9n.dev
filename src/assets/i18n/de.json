@@ -12,7 +12,6 @@
   "twitterTimeline": "Twitter Timeline",
   "recentBlogPosts": "Aktuelle Blog Posts",
   "showAllBlogPosts": "Alle Posts ansehen",
-  "originallyPublishedAt": "Original veröffentlicht auf: {{value}}",
   "thumbnail": "Vorschaubild",
   "hello": "Hallo",
   "iAm": "Ich bin {{name}}",
@@ -29,57 +28,50 @@
     "description": "Entwickeln Sie moderne Apps für Web und Mobile. Mit Angular setzen Sie auf ein modernes und modulares Web-Framework. Dieses Buch stellt Ihnen die Bausteine von Angular, viele Best Practices und die notwendigen Werkzeuge vor. Beginnen Sie Ihren Einstieg mit einer praxisnahen Einführung.",
     "readOn": "Mehr erfahren"
   },
-  "projectPage": {
-    "myProjects": "Meine Projekte",
-    "headerImage": "Projekt Titelbild",
-    "editOnGithub": "Fehler gefunden? Bearbeiten Sie diese Seite auf Github."
-  },
-  "blogPage": {
-    "thumbnail": "Blog-Post Vorschaubild",
-    "originallyPublishedAt": "Original veröffentlicht auf",
-    "readOn": "Weiterlesen",
-    "listEmpty": "Es wurden keine passenden Einträge gefunden.",
-    "showAll": "Alle Posts ansehen ({{value}})",
-    "myBlogPosts": "Meine Blog Posts",
-    "search": "Suche",
-    "searchAriaLabel": "Liste der Blogposts durchsuchen",
-    "filter": "Filter",
-    "headerImage": "Blog-Post Titelbild",
-    "publisherLogo": "Logo des original Autors",
-    "originallyPublishedAtLong": "Dieser Blogpost wurde im Original veröffentlicht auf",
-    "lastUpdate": "Letztes Update",
-    "keywords": "Stichwörter",
-    "keywordAriaLabel": "Filtern nach dem Stichwort: {{value}}",
-    "keywordRemove": "Filter \"{{value}}\" entfernen",
-    "share": {
-      "label": "Diese Seite teilen",
-      "common": {
-        "alt": "Diese Seite teilen",
-        "aria": "Teilen Icon"
-      },
-      "email": {
-        "alt": "Diese Seite per E-Mail teilen",
-        "aria": "E-Mail Icon"
-      },
-      "twitter": {
-        "alt": "Diese Seite auf Twitter teilen",
-        "aria": "Twitter Icon"
-      },
-      "facebook": {
-        "alt": "Diese Seite auf Facebook teilen",
-        "aria": "Facebook Icon"
-      },
-      "linkedIn": {
-        "alt": "Diese Seite auf LinkedIn teilen",
-        "aria": "LinkedIn Icon"
-      },
-      "xing": {
-        "alt": "Diese Seite auf Xing teilen",
-        "aria": "Xing Icon"
-      }
+  "myProjects": "Meine Projekte",
+  "originallyPublishedAt": "Original veröffentlicht auf",
+  "readOn": "Weiterlesen",
+  "listEmpty": "Es wurden keine passenden Einträge gefunden.",
+  "showAll": "Alle Posts ansehen ({{value}})",
+  "myBlogPosts": "Meine Blog Posts",
+  "search": "Suche",
+  "searchAriaLabel": "Liste der Blogposts durchsuchen",
+  "filter": "Filter",
+  "headerImage": "Blog-Post Titelbild",
+  "publisherLogo": "Logo des original Autors",
+  "originallyPublishedAtLong": "Dieser Blogpost wurde im Original veröffentlicht auf",
+  "lastUpdate": "Letztes Update",
+  "keywords": "Stichwörter",
+  "keywordAriaLabel": "Filtern nach dem Stichwort: {{value}}",
+  "keywordRemove": "Filter \"{{value}}\" entfernen",
+  "share": {
+    "label": "Diese Seite teilen",
+    "common": {
+      "alt": "Diese Seite teilen",
+      "aria": "Teilen Icon"
     },
-    "editOnGithub": "Fehler gefunden? Bearbeiten Sie diese Seite auf Github."
+    "email": {
+      "alt": "Diese Seite per E-Mail teilen",
+      "aria": "E-Mail Icon"
+    },
+    "twitter": {
+      "alt": "Diese Seite auf Twitter teilen",
+      "aria": "Twitter Icon"
+    },
+    "facebook": {
+      "alt": "Diese Seite auf Facebook teilen",
+      "aria": "Facebook Icon"
+    },
+    "linkedIn": {
+      "alt": "Diese Seite auf LinkedIn teilen",
+      "aria": "LinkedIn Icon"
+    },
+    "xing": {
+      "alt": "Diese Seite auf Xing teilen",
+      "aria": "Xing Icon"
+    }
   },
+  "editOnGithub": "Fehler gefunden? Bearbeiten Sie diese Seite auf Github.",
   "aboutPage": {
     "about": "Über mich",
     "intro": "Mein Name ist Danny Koppenhagen und ich arbeite leidenschaftlich als Softwareentwickler und IT-Berater. Mein Metier ist die Konzeption und Entwicklung von Web-Anwendungen – insbesondere von Single-Page-Applications (SPA). Zum Einsatz kommen hier vor allem Angular, RxJS, NgRx aber auch Vue.js und NativeScript. Des Weiteren entwickle ich Backend-Anwendungen auf Basis von JavaScript und TypeScript und bin als IT-Berater für Webarchitekturen und -Frameworks tätig. Bei der Umsetzung meiner täglichen Arbeit steht stets der Nutzer im Fokus.",
