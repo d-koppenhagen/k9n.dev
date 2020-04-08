@@ -13,9 +13,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
-    "scully:serve": "scully --watch",
+    "scully:serve": "scully serve",
     "scully:all": "npm run build && npm run scully && npm run scully:serve",
-    "post": "ng g @scullyio/init:post --metaDataFile='blog-meta.yaml' --target='blog-draft'"
+    "post": "ng g @scullyio/init:post --metaDataFile='templates/blog-meta.yaml' --target='blog'",
+    "project": "ng g @scullyio/init:post --metaDataFile='templates/project-meta.yaml' --target='projects'"
   },
   "private": true,
   "author": "Danny Koppenhagen <mail@d-koppenhagen.de> (https://d-koppenhagen.de)",

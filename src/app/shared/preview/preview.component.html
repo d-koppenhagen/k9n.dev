@@ -1,7 +1,7 @@
 <ng-container *transloco="let t">
-  <section *ngIf="blogPostData$ | async as blogPosts" class="features">
-    <ng-container *ngIf="blogPosts.length; else emptyResultsTemplate">
-      <article *ngFor="let post of blogPosts; let i = index">
+  <section *ngIf="postData$ | async as posts" class="features">
+    <ng-container *ngIf="posts.length; else emptyResultsTemplate">
+      <article *ngFor="let post of posts; let i = index">
         <div class="card-header">
           <a
             [routerLink]="post.route"
@@ -53,7 +53,7 @@
   </section>
   <ul *ngIf="(max && max < cntAll) || keyword || search" class="actions">
     <li>
-      <a routerLink="/blog" class="button">{{
+      <a [routerLink]="['/', 'content']" class="button">{{
         t('showAll', { value: cntAll })
       }}</a>
     </li>

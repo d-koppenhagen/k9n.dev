@@ -13,7 +13,7 @@ export class PreviewComponent implements OnInit, OnChanges {
   @Input() max: number;
   @Input() keyword: string;
   @Input() search: string;
-  blogPostData$: Observable<ScullyRoute[]>;
+  postData$: Observable<ScullyRoute[]>;
   cntAll: number;
 
   constructor(private srs: ScullyRoutesService) {}
@@ -27,9 +27,8 @@ export class PreviewComponent implements OnInit, OnChanges {
   }
 
   private loadPosts() {
-    this.blogPostData$ = this.srs.available$.pipe(
+    this.postData$ = this.srs.available$.pipe(
       map((routeList) => {
-        console.log(routeList);
         return routeList
           .filter((route: ScullyRoute) =>
             route.route.startsWith(`/${this.content}/`),

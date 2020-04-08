@@ -4,6 +4,9 @@ publish: false
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
 updated: 2020-01-01
+publishedAt: Publisher Name
+publishedAtUrl: https://example.com
+publishedAtLogo: https://example.com/img/brand.svg
 keywords:
   - Angular
 language: en
