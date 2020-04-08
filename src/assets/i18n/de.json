@@ -29,6 +29,11 @@
     "description": "Entwickeln Sie moderne Apps für Web und Mobile. Mit Angular setzen Sie auf ein modernes und modulares Web-Framework. Dieses Buch stellt Ihnen die Bausteine von Angular, viele Best Practices und die notwendigen Werkzeuge vor. Beginnen Sie Ihren Einstieg mit einer praxisnahen Einführung.",
     "readOn": "Mehr erfahren"
   },
+  "projectPage": {
+    "myProjects": "Meine Projekte",
+    "headerImage": "Projekt Titelbild",
+    "editOnGithub": "Fehler gefunden? Bearbeiten Sie diese Seite auf Github."
+  },
   "blogPage": {
     "thumbnail": "Blog-Post Vorschaubild",
     "originallyPublishedAt": "Original veröffentlicht auf",

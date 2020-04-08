@@ -2,10 +2,16 @@
   <section class="wrapper alt style1">
     <div class="inner">
       <h2 class="major">{{ t('recentBlogPosts') }}</h2>
-      <dk-blog-preview [max]="4"></dk-blog-preview>
+      <dk-preview content="blog" [max]="2"></dk-preview>
     </div>
   </section>
   <dk-publications></dk-publications>
+  <section class="wrapper alt style3">
+    <div class="inner">
+      <h2 class="major">{{ t('recentBlogPosts') }}</h2>
+      <dk-preview content="projects" [max]="2"></dk-preview>
+    </div>
+  </section>
   <dk-about></dk-about>
   <dk-twitter-timeline *ngIf="!scullyRunning"></dk-twitter-timeline>
 </ng-container>

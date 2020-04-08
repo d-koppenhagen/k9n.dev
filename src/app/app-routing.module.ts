@@ -15,7 +15,12 @@ const routes: Routes = [
   },
   {
     path: 'blog',
-    loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule),
+    loadChildren: () => import('./blog/blog.module').then((m) => m.BlogModule),
+  },
+  {
+    path: 'projects',
+    loadChildren: () =>
+      import('./projects/projects.module').then((m) => m.ProjectsModule),
   },
   { path: '**', redirectTo: '' },
 ];

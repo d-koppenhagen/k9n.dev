@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
+import { PreviewComponent } from './preview/preview.component';
 import { HighlightService } from './highlight.service';
 import { TranslocoRootModule } from '../transloco-root.module';
 
 @NgModule({
-  declarations: [BlogPreviewComponent],
+  declarations: [PreviewComponent],
   imports: [CommonModule, RouterModule, TranslocoRootModule],
   providers: [HighlightService],
-  exports: [BlogPreviewComponent],
+  exports: [PreviewComponent],
 })
 export class SharedModule {}

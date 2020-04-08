@@ -4,11 +4,12 @@ import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
 @Component({
-  selector: 'dk-blog-preview',
-  templateUrl: './blog-preview.component.html',
-  styleUrls: ['./blog-preview.component.scss'],
+  selector: 'dk-preview',
+  templateUrl: './preview.component.html',
+  styleUrls: ['./preview.component.scss'],
 })
-export class BlogPreviewComponent implements OnInit, OnChanges {
+export class PreviewComponent implements OnInit, OnChanges {
+  @Input() content: string;
   @Input() max: number;
   @Input() keyword: string;
   @Input() search: string;
@@ -27,14 +28,17 @@ export class BlogPreviewComponent implements OnInit, OnChanges {
 
   private loadPosts() {
     this.blogPostData$ = this.srs.available$.pipe(
-      map(routeList => {
+      map((routeList) => {
+        console.log(routeList);
         return routeList
-          .filter((route: ScullyRoute) => route.route.startsWith(`/blog/`))
+          .filter((route: ScullyRoute) =>
+            route.route.startsWith(`/${this.content}/`),
+          )
           .filter((route: ScullyRoute) => route.publish !== false)
           .reverse();
       }),
-      tap(routeList => this.cntAll = routeList.length),
-      map(routeList => {
+      tap((routeList) => (this.cntAll = routeList.length)),
+      map((routeList) => {
         if (!this.keyword) {
           return routeList;
         }
@@ -42,7 +46,7 @@ export class BlogPreviewComponent implements OnInit, OnChanges {
           route.keywords.includes(this.keyword),
         );
       }),
-      map(routeList => {
+      map((routeList) => {
         if (!this.search) {
           return routeList;
         }
@@ -56,7 +60,7 @@ export class BlogPreviewComponent implements OnInit, OnChanges {
           );
         });
       }),
-      map(routeList => {
+      map((routeList) => {
         if (this.max) {
           routeList = routeList.slice(0, this.max);
         }

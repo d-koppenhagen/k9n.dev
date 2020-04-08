@@ -22,10 +22,11 @@
           <i class="fa fa-close"></i>
         </button>
       </div>
-      <dk-blog-preview
+      <dk-preview
+        content="blog"
         [keyword]="keyword$ | async"
         [search]="searchString"
-      ></dk-blog-preview>
+      ></dk-preview>
     </div>
   </section>
 </ng-container>
