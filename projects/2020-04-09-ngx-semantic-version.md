@@ -1,5 +1,5 @@
 ---
-title: ngx-semantic-version
+title: ngx-semantic-version — An Angular Schematic to enhance your release workflow
 description: Simply add and configure commitlint, husky, commitizen and standard-version for your Angular project by using Angular Schematics
 publish: true
 author: Danny Koppenhagen
@@ -20,8 +20,8 @@ keywords:
   - Conventional Commits
   - Conventional Changelog
 language: en
-thumbnail: assets/images/projects/ngx-semantic-version.png
-thumbnailSmall: assets/images/projects/ngx-semantic-version-small.png
+thumbnail: assets/images/projects/semver-header.jpg
+thumbnailSmall: assets/images/projects/semver-header-small.jpg
 ---
 
 # ngx-semantic-version
@@ -32,6 +32,10 @@ All you have to do for the setup is to execute this command in your Angular CLI 
 ```bash
 ng add ngx-semantic-version
 ```
+
+<br/>
+
+![File-Tree-To-Text Demo GIF](/assets/images/projects/file-tree-to-text.gif)
 
 Check out my article [_ngx-semantic-version: enhance your git and release workflow_](/blog/2019-11-ngx-semantic-version) to learn more about it.
 
