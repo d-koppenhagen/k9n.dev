@@ -35,7 +35,7 @@ ng add ngx-semantic-version
 
 <br/>
 
-![File-Tree-To-Text Demo GIF](/assets/images/projects/file-tree-to-text.gif)
+![commitizen](/assets/images/projects/ngx-semantic-version.png)
 
 Check out my article [_ngx-semantic-version: enhance your git and release workflow_](/blog/2019-11-ngx-semantic-version) to learn more about it.
 

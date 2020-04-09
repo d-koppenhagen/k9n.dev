@@ -29,7 +29,7 @@ It supports the following formats out-of-the-box:
 - LaTeX (DirTree)
 - ASCII
 
-![Commitizen](/assets/images/projects/file-tree-header-image.jpg)
+![File Tree To Text Gif](/assets/images/projects/file-tree-to-text.gif)
 
 Furthermore it allows you also to create custom directory tree output formats or changes the defaults to satisfy your custom needs.
 
