@@ -7,6 +7,7 @@ updated: 2020-01-01
 publishedAt: Publisher Name
 publishedAtUrl: https://example.com
 publishedAtLogo: https://example.com/img/brand.svg
+devTo: https://dev.to/foo
 keywords:
   - Angular
 language: en

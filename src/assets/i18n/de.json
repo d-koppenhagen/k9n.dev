@@ -45,6 +45,7 @@
   "keywords": "Stichwörter",
   "keywordAriaLabel": "Filtern nach dem Stichwort: {{value}}",
   "keywordRemove": "Filter \"{{value}}\" entfernen",
+  "readOnDevTo": "Diesen Artikel auf Dev.to lesen",
   "share": {
     "label": "Diese Seite teilen",
     "common": {

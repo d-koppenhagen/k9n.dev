@@ -14,6 +14,7 @@ keywords:
   - SSG
   - Pre-rendering
   - JAM Stack
+devTo: https://dev.to/dkoppenhagen/create-powerfull-fast-pre-rendered-angular-apps-using-scully-static-site-generator-31fb
 language: en
 thumbnail: assets/images/blog/scully/scully-header.jpg
 thumbnailSmall: assets/images/blog/scully/scully-header-small.jpg

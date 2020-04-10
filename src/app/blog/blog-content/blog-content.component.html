@@ -48,6 +48,9 @@
           </div>
         </div>
       </section>
+      <section class="external-links">
+        <a *ngIf="post.devTo" [href]="post.devTo">{{ t('readOnDevTo') }}</a>
+      </section>
       <section class="blog-content">
         <scully-content></scully-content>
         <div class="edit-on-github">

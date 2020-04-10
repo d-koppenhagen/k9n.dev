@@ -21,7 +21,9 @@
     "statusBar.foreground": "#e7e7e7",
     "panel.border": "#759570",
     "sideBar.border": "#759570",
-    "editorGroup.border": "#759570"
+    "editorGroup.border": "#759570",
+    "statusBar.border": "#5e7959",
+    "titleBar.border": "#5e7959"
   },
   "editor.formatOnSave": true,
 }

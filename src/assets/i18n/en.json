@@ -45,6 +45,7 @@
   "keywords": "Keywords",
   "keywordAriaLabel": "Filter for keyword: {{value}}",
   "keywordRemove": "Remove Filter '{{value}}'",
+  "readOnDevTo": "Read this article on Dev.to",
   "share": {
     "label": "Share this page",
     "common": {
