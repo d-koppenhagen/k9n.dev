@@ -53,7 +53,7 @@
   </section>
   <ul *ngIf="(max && max < cntAll) || keyword || search" class="actions">
     <li>
-      <a [routerLink]="['/', 'content']" class="button">{{
+      <a [routerLink]="['/', content]" class="button">{{
         t('showAll', { value: cntAll })
       }}</a>
     </li>
