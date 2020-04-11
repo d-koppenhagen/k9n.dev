@@ -1,5 +1,10 @@
 @import '../../sass/libs/vars';
 
+#banner {
+  position: sticky;
+  top: 0;
+}
+
 .header-title {
   background-image: url('/assets/images/bg6.png');
   background-size: cover;
