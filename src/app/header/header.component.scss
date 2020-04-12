@@ -31,6 +31,16 @@ p.sub-header {
   background-color: $white;
   padding: 9em 0 12em 0;
   cursor: pointer;
+  animation: headerFadeIn 3s;
+}
+
+@keyframes headerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #logo {
