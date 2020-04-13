@@ -2,3 +2,7 @@
 <dk-header></dk-header>
 <router-outlet></router-outlet>
 <dk-contact></dk-contact>
+<dk-cookie-banner
+  *ngIf="!cookiesAccepted"
+  (accepted)="toggleCookiesAccepted()"
+></dk-cookie-banner>

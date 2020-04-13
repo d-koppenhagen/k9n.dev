@@ -22,6 +22,7 @@ import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.co
 import { TranslocoRootModule } from './transloco-root.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { environment } from '../environments/environment';
     PublicationsComponent,
     ImprintComponent,
     TwitterTimelineComponent,
+    CookieBannerComponent,
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,8 @@ declare var gtag;
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  cookiesAccepted = false;
+
   constructor(
     readonly router: Router,
     readonly viewportScroller: ViewportScroller,
@@ -20,11 +22,17 @@ export class AppComponent {
   ) {
     this.setupScrollBehaviourForAnker();
     this.setupGtag();
+    this.cookiesAccepted = Boolean(localStorage.getItem('cookiesAccepted'));
+  }
+
+  toggleCookiesAccepted() {
+    this.cookiesAccepted = true;
+    localStorage.setItem('cookiesAccepted', 'true');
   }
 
   private setupScrollBehaviourForAnker() {
     this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
+      .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
         if (!/\#.*/.test(event.url)) {
           this.viewportScroller.scrollToPosition([0, 0]);
@@ -34,7 +42,7 @@ export class AppComponent {
 
   private setupGtag() {
     const navEndEvent$ = this.router.events.pipe(
-      filter(e => e instanceof NavigationEnd),
+      filter((e) => e instanceof NavigationEnd),
     );
     navEndEvent$.subscribe((e: NavigationEnd) => {
       gtag('config', this.gtagCode, { page_path: e.urlAfterRedirects });
