@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { A11yModule } from '@angular/cdk/a11y';
@@ -42,12 +43,15 @@ import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     A11yModule,
     NgxTwitterTimelineModule,
     SharedModule,
     TranslocoRootModule,
     ScullyLibModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'de' }],
   bootstrap: [AppComponent],

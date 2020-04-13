@@ -3,6 +3,7 @@
 <router-outlet></router-outlet>
 <dk-contact></dk-contact>
 <dk-cookie-banner
+  [@fadeInOut]
   *ngIf="!cookiesAccepted"
   (accepted)="toggleCookiesAccepted()"
 ></dk-cookie-banner>
