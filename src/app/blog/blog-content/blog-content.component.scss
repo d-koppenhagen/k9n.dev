@@ -67,8 +67,8 @@ h2.sub-heading {
          * @see https://neumorphism.io/#2e3141
          */
         border-radius: 50px;
-        background: #2e3141;
-        box-shadow: 4px 4px 9px #262936, -4px -4px 9px #36394c;
+        background: $c01;
+        box-shadow: 4px 4px 9px $c14, -4px -4px 9px $c15;
       }
 
       i.fa-facebook::before {
