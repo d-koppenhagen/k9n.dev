@@ -4,7 +4,7 @@ description: 'You probably heard of the JAMStack. It is a new way of building we
 publish: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-02-28
+updated: 2020-04-14
 keywords:
   - Angular
   - Angular CLI
@@ -32,9 +32,9 @@ thumbnailSmall: assets/images/blog/scully/scully-header-small.jpg
 > _Scully_ automatically detects all app routes and creates static sites out of it that are ready to ship for production. _Scully_ is currently just available within an early version.
 > This blog post is based on versions:
 > ```
-> @scullyio/ng-lib: 0.0.19
-> @scullyio/init: 0.0.23
-> @scullyio/scully: 0.0.78
+> @scullyio/ng-lib: 0.0.22
+> @scullyio/init: 0.0.25
+> @scullyio/scully: 0.0.86
 > ```
 > However some of the commands or API calls used here may change in the future.
 > It’s my goal to keep this blog post as up-to-date as possible.
@@ -83,10 +83,11 @@ Let's try it out by building our site and running _Scully_.
 
 ```bash
 npm run build   # build our Angular app
-npm run scully  # let _Scully_ run over our app build and serve it
+npm run scully  # let Scully run over our app and build it
+npm run scully serve # serve the scully results
 ```
 
-> _Scully_ will run in watch mode by default and serves the result. To let _Scully_ just run once without serving the result, just add the `--nw` option (`npm run scully -- --nw`).
+> _Scully_ will run only once by default. To let _Scully_ run and watch for file changes, just add the `--watch` option (`npm run scully -- --watch`).
 
 After _Scully_ has checked our app, it will add the generated static assets to our `dist/static` directory by default.
 Let's quickly compare the result generated from _Scully_ with the result from the initial Angular build (`dist/scully-blog`):
