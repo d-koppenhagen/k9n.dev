@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const scully_1 = require("@scullyio/scully");
+const toc_1 = require("./toc");
+const toc_validator_1 = require("./toc-validator");
+exports.TOC = 'toc';
+scully_1.registerPlugin('render', exports.TOC, toc_1.tocPlugin, toc_validator_1.validator);
+module.exports.tocPlugin = toc_1.tocPlugin;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBa0Q7QUFDbEQsK0JBQWtDO0FBQ2xDLG1EQUE0QztBQUUvQixRQUFBLEdBQUcsR0FBRyxLQUFLLENBQUM7QUFFekIsdUJBQWMsQ0FBQyxRQUFRLEVBQUUsV0FBRyxFQUFFLGVBQVMsRUFBRSx5QkFBUyxDQUFDLENBQUM7QUFFcEQsTUFBTSxDQUFDLE9BQU8sQ0FBQyxTQUFTLEdBQUcsZUFBUyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgcmVnaXN0ZXJQbHVnaW4gfSBmcm9tICdAc2N1bGx5aW8vc2N1bGx5JztcbmltcG9ydCB7IHRvY1BsdWdpbiB9IGZyb20gJy4vdG9jJztcbmltcG9ydCB7IHZhbGlkYXRvciB9IGZyb20gJy4vdG9jLXZhbGlkYXRvcic7XG5cbmV4cG9ydCBjb25zdCBUT0MgPSAndG9jJztcblxucmVnaXN0ZXJQbHVnaW4oJ3JlbmRlcicsIFRPQywgdG9jUGx1Z2luLCB2YWxpZGF0b3IpO1xuXG5tb2R1bGUuZXhwb3J0cy50b2NQbHVnaW4gPSB0b2NQbHVnaW47XG4iXX0=

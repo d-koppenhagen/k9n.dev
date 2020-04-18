@@ -1,4 +1,4 @@
-const { TOC } = require('scully-plugin-toc');
+const { TOC } = require('./plugins/scully-plugin-toc');
 const { Sitemap } = require('@gammastream/scully-plugin-sitemap');
 
 const defaultPostRenderers = [Sitemap];
