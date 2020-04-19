@@ -17,8 +17,12 @@
         <div class="timeline">
           <div
             *ngFor="let i of [0, 1, 2, 3, 4, 5, 6].reverse(); let odd = odd"
-            class="container"
+            class="container hidden list-item"
             [ngClass]="odd ? 'right' : 'left'"
+            animateOnScroll
+            [animationName]="
+              odd ? 'animated slideInRight' : 'animated slideInLeft'
+            "
           >
             <div class="content">
               <span class="location">{{ t(i + '.location') }}</span>
