@@ -6,7 +6,7 @@
   "display": "minimal-ui",
   "orientation": "portrait",
   "Scope": "/",
-  "start_url": "/",
+  "start_url": "https://d-koppenhagen.de/index.html",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
