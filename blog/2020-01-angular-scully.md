@@ -1,10 +1,10 @@
 ---
 title: Create powerful fast pre-rendered Angular Apps using Scully static site generator
 description: 'You probably heard of the JAMStack. It is a new way of building websites and apps via static site generators that deliver better performance and higher security. With this blog post, I will show you how you can easily create a blogging app by using the power of Angular and the help of Scully static site generator. It will automatically detect all app routes and create static pages out of them that are ready to ship for production.'
-publish: true
+published: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-04-14
+updated: 2020-05-02
 keywords:
   - Angular
   - Angular CLI
@@ -28,16 +28,20 @@ thumbnailSmall: assets/images/blog/scully/scully-header-small.jpg
 
 <div id="toc"><h2>Table of contents</h2></div>
 
+<hr>
+
 > On _Dec 16, 2019_ the static site generator _Scully_ for Angular [was presented](https://www.youtube.com/watch?v=Sh37rIUL-d4).
 > _Scully_ automatically detects all app routes and creates static sites out of it that are ready to ship for production. _Scully_ is currently just available within an early version.
 > This blog post is based on versions:
 > ```
 > @scullyio/ng-lib: 0.0.22
-> @scullyio/init: 0.0.25
-> @scullyio/scully: 0.0.86
+> @scullyio/init: 0.0.26
+> @scullyio/scully: 0.0.90
 > ```
 > However some of the commands or API calls used here may change in the future.
 > It’s my goal to keep this blog post as up-to-date as possible.
+
+<hr>
 
 ## About Scully
 
@@ -158,15 +162,37 @@ So in the end the content of our file `app.component.html` should look like this
 <router-outlet></router-outlet>
 ```
 
-Let’s run the build again and have a look at the results:
+Let’s run the build again and have a look at the results.
+Scully assumes by default the route configuration hasn't changed meanwhile and it can happen that it's not detecting the new bog entry we just created.
+To be sure it will re-scan the routes, we will pass through the parameter `--scanRoutes`:
 
 ```bash
-npm run build   # Angular build
-npm run scully  # generate static build and serve the app
+npm run build                   # Angular build
+npm run scully -- --scanRoutes  # generate static build and force checking new routes
+npm run scully serve            # serve the scully results
 ```
 
 When checking out our `dist/static` directory we can see that there are new sub-directories for the routes of our static blogging sites.
-The files `index.html` in `dist/static/blog/<post-name>/` contain our static pages ready to be served.
+But what's that: When we will check the directory `dist/static/blog/`, we see somewhat like this:
+
+```text
+blog/
+┣ ___UNPUBLISHED___k9pg4tmo_2DDScsUiieFlld4R2FwvnJHEBJXcgulw
+  ┗ index.html
+```
+
+This feels strange doesn't it? But Checking the content of the file `index.html` inside will tell us it contains actually the content of the just created blog post.
+This is by intention: Ths _Scully_ schematic created the markdown file with a meta flag called `publsihed` that is by default set to `false`.
+The internally used renderer plugin from _Scully_ will handle this flag and it creates an unguessable name for the route.
+This allows us to create blog post drafts that we can already publish and share by using the link for example to let someone else review the article.
+You can also use this route if you dont't care about the route name.
+But normally you would just like to change the meta data in the Markdown file to:
+
+```yaml
+published: true
+```
+
+After this, run the build process again and the files `index.html` in `dist/static/blog/<post-name>/` contain now our static pages ready to be served.
 When we are visiting the route path `/blog/first-post` we can see the content of our markdown source file `blog/first-post.md` is rendered as HTML.
 
 If you want to prove that the page is actually really pre-rendered, just disable JavaScript by using your Chrome Developer Tools.

@@ -3,10 +3,10 @@ title: Dig deeper into static site generation with Scully and use the most out o
 description: 'In this article about Scully, I will introduce some more advanced features.
 You will learn how you can setup a custom Markdown module and how you can use AsciiDoc with Scully.
 I will guide you through the process of how to handle protected routes using a custom route plugin.'
-publish: true
+published: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-03-01
+updated: 2020-05-02
 keywords:
   - Angular
   - Angular CLI
@@ -39,6 +39,17 @@ I will guide you through the process of how to handle protected routes using a c
 
 <hr>
 
+> This blog post is based on versions:
+> ```
+> @scullyio/ng-lib: 0.0.22
+> @scullyio/init: 0.0.26
+> @scullyio/scully: 0.0.90
+> ```
+> However some of the commands or API calls used here may change in the future.
+> It’s my goal to keep this blog post as up-to-date as possible.
+
+<hr>
+
 ## Generate a post with a meta data template
 
 As we already created our blogging site using _Scully_, we want to fill it with content now.
@@ -50,7 +61,7 @@ To make things easier we can specify a YAML template file with the meta informat
 
 ```yaml
 description: <fill in a short description for the overview page>
-publish: false
+published: false
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
 updated: dd.mm.yyyy
@@ -95,8 +106,9 @@ The basic things we need for our projects page are now available.
 Let's have a look at it and see if it's working:
 
 ```bash
-npm run build   # Angular build
-npm run scully  # generate static build, start scully server and watch for changes
+npm run build                   # Angular build
+npm run scully -- --scanRoutes  # generate static build and force checking new routes
+npm run scully serve            # serve the scully results
 ```
 
 ![the initial projects post generated with the Markdown schematic](/assets/images/blog/scully/scully-markdown-projects.png)
@@ -116,7 +128,7 @@ Let's change the file extension, rename it to `*.adoc` and add a bit of content 
 ```adoc
 :title: 2020-01-21-projects
 :description: blog description
-:publish: false
+:published: false
 
 = 2020-01-21-projects
 
@@ -135,8 +147,9 @@ Let's show some source code!
 And finally we build our project again and see if it works:
 
 ```bash
-npm run build         # Angular build
-npm run scully  # generate static build, start scully server and watch for changes
+npm run build                   # Angular build
+npm run scully -- --scanRoutes  # generate static build and force checking new routes
+npm run scully serve            # serve the scully results
 ```
 
 Great, as we can see: AsciiDoc files will be rendered as well out-of-the-box.

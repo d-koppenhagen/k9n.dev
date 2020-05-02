@@ -1,7 +1,7 @@
 ---
 title: angular-tag-cloud-module — Generated word clouds for your Angular app
 description: My module angular-tag-cloud-module lets you generate word clouds / tag clouds for your Angular app
-publish: true
+published: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
 updated: 2020-04-09

@@ -1,7 +1,7 @@
 ---
 title: vscode-file-tree-to-text-generator — A Visual Studio Code Extension to generate file trees
 description: Generate file trees from your VS Code Explorer for different Markdown, LaTeX, ASCII or a userdefined format
-publish: true
+published: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
 updated: 2020-02-02

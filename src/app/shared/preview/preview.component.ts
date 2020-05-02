@@ -33,7 +33,7 @@ export class PreviewComponent implements OnInit, OnChanges {
           .filter((route: ScullyRoute) =>
             route.route.startsWith(`/${this.content}/`),
           )
-          .filter((route: ScullyRoute) => route.publish !== false)
+          .filter((route: ScullyRoute) => route.published !== false)
           .reverse();
       }),
       tap((routeList) => (this.cntAll = routeList.length)),
