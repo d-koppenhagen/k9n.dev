@@ -15,6 +15,7 @@ keywords:
   - Pre-rendering
   - JAM Stack
 devTo: https://dev.to/dkoppenhagen/create-powerfull-fast-pre-rendered-angular-apps-using-scully-static-site-generator-31fb
+medium: https://medium.com/@danny.koppenhagen/create-powerful-fast-pre-rendered-angular-apps-using-scully-static-site-generator-79832a549787
 language: en
 thumbnail: assets/images/blog/scully/scully-header.jpg
 thumbnailSmall: assets/images/blog/scully/scully-header-small.jpg

@@ -19,6 +19,7 @@ keywords:
   - Pre-rendering
   - JAM Stack
 devTo: https://dev.to/dkoppenhagen/dig-deeper-into-static-site-generation-with-scully-and-use-the-most-out-of-it-4cn5
+medium: https://medium.com/@danny.koppenhagen/dig-deeper-into-static-site-generation-with-scully-and-use-the-most-out-of-it-ac86f216a6a7
 language: en
 thumbnail: assets/images/blog/scully/scully-header2.jpg
 thumbnailSmall: assets/images/blog/scully/scully-header2-small.jpg
