@@ -26,4 +26,5 @@
     "titleBar.border": "#5e7959"
   },
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

@@ -65,7 +65,7 @@
     "codelyzer": "^5.2.1",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.1.0",
-    "husky": "^4.2.3",
+    "husky": "^4.2.5",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "jsdom": "^16.2.1",
@@ -76,6 +76,8 @@
     "karma-jasmine-html-reporter": "^1.5.2",
     "ngx-semantic-version": "^2.0.0-beta.4",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
     "protractor": "~5.4.3",
     "scully-plugin-toc": "0.0.8",
     "standard-version": "^7.1.0",
@@ -85,6 +87,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "pretty-quick --staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
