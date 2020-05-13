@@ -4,7 +4,7 @@
   "dataGroups": [
     {
       "name": "Blog Posts",
-      "urls": [ "/blog/**"],
+      "urls": ["/blog/**"],
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 20,
@@ -26,7 +26,8 @@
           "/*.js"
         ]
       }
-    }, {
+    },
+    {
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
