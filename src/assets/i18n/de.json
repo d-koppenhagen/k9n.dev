@@ -47,7 +47,6 @@
   "keywords": "Stichwörter",
   "keywordAriaLabel": "Filtern nach dem Stichwort: {{value}}",
   "keywordRemove": "Filter \"{{value}}\" entfernen",
-  "readOnDevTo": "Diesen Artikel auf Dev.to lesen",
   "share": {
     "label": "Diese Seite teilen",
     "common": {
@@ -82,54 +81,62 @@
     "meetup": "Ich besuche regelmäßig das Angular Berlin Meetup und helfe bei der Organisation. Bei dem Meetup werden immer wieder interessante Themen rund um Angular, RxJS, NgRx und andere Tools vorgestellt.",
     "meetupCta": "Zum Angular Berlin Meetup",
     "career": "Mein Werdegang",
-    "0": {
-      "location": "Frankfurt (Oder)",
-      "when": "2012",
-      "what": "Facharbeiter IT-Systemelektroniker",
-      "where": "Deutschen Telekom AG",
-      "info": "Informatik, Telekommunikationstechnik sowie Elektrotechnik"
+    "interviews": "Interviews",
+    "interviewDescriptions": {
+      "blackCoffee": {
+        "heading": "DB Systel - #000000 c0ffee"
+      }
     },
-    "1": {
-      "location": "Cottbus",
-      "when": "2012",
-      "what": "Sachbearbeiter Technische Kundenberatung",
-      "where": "Deutsche Telekom Technischer Service GmbH (Customer Competence Center)",
-      "info": "Second Level Support für VoIP und WLAN Produkte."
-    },
-    "2": {
-      "location": "Leipzig",
-      "when": "2015",
-      "what": "Bachelor Of Engineering",
-      "where": "Kommunikations- Und Medieninformatik",
-      "info": "Netzwerk- und Übertragungstechnik, Software Engineering, IT-Architektur, Protokollengineering sowie Web und Medien-Technologien."
-    },
-    "3": {
-      "location": "Berlin",
-      "when": "2015",
-      "what": "Entwickler TETRA Support Und Umsetzung",
-      "where": "Deutsche Telekom Healthcare & Security Solutions GmbH",
-      "info": "Umsetzung von Client- und Serversystemen im Bereich des TETRA-BOS. Administration, Konfiguration, Integration und Test von IT-Systemen."
-    },
-    "4": {
-      "location": "Berlin",
-      "when": "2017",
-      "what": "Buchautor",
-      "where": "dpunkt.verlag",
-      "info": "Erste Auflage des Buches: \"Angular: Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript\"."
-    },
-    "5": {
-      "location": "Berlin",
-      "when": "2019",
-      "what": "Spezialist: Entwickler Und IT-Berater",
-      "where": "DB Systel GmbH",
-      "info": "Entwicklung nutzerzentrierter Webanwendungen im Enterprise-Umfeld. Beratung zur Umsetzung von Web-Anwendungen und -Architekturen sowie User Experience (UX) Consulting."
-    },
-    "6": {
-      "location": "Berlin",
-      "when": "2019",
-      "what": "Buchautor",
-      "where": "dpunkt.verlag",
-      "info": "Zweite Auflage des Buches: \"Angular: Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx\"."
+    "careerSteps": {
+      "0": {
+        "location": "Frankfurt (Oder)",
+        "when": "2012",
+        "what": "Facharbeiter IT-Systemelektroniker",
+        "where": "Deutschen Telekom AG",
+        "info": "Informatik, Telekommunikationstechnik sowie Elektrotechnik"
+      },
+      "1": {
+        "location": "Cottbus",
+        "when": "2012",
+        "what": "Sachbearbeiter Technische Kundenberatung",
+        "where": "Deutsche Telekom Technischer Service GmbH (Customer Competence Center)",
+        "info": "Second Level Support für VoIP und WLAN Produkte."
+      },
+      "2": {
+        "location": "Leipzig",
+        "when": "2015",
+        "what": "Bachelor Of Engineering",
+        "where": "Kommunikations- Und Medieninformatik",
+        "info": "Netzwerk- und Übertragungstechnik, Software Engineering, IT-Architektur, Protokollengineering sowie Web und Medien-Technologien."
+      },
+      "3": {
+        "location": "Berlin",
+        "when": "2015",
+        "what": "Entwickler TETRA Support Und Umsetzung",
+        "where": "Deutsche Telekom Healthcare & Security Solutions GmbH",
+        "info": "Umsetzung von Client- und Serversystemen im Bereich des TETRA-BOS. Administration, Konfiguration, Integration und Test von IT-Systemen."
+      },
+      "4": {
+        "location": "Berlin",
+        "when": "2017",
+        "what": "Buchautor",
+        "where": "dpunkt.verlag",
+        "info": "Erste Auflage des Buches: \"Angular: Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript\"."
+      },
+      "5": {
+        "location": "Berlin",
+        "when": "2019",
+        "what": "Spezialist: Entwickler Und IT-Berater",
+        "where": "DB Systel GmbH",
+        "info": "Entwicklung nutzerzentrierter Webanwendungen im Enterprise-Umfeld. Beratung zur Umsetzung von Web-Anwendungen und -Architekturen sowie User Experience (UX) Consulting."
+      },
+      "6": {
+        "location": "Berlin",
+        "when": "2019",
+        "what": "Buchautor",
+        "where": "dpunkt.verlag",
+        "info": "Zweite Auflage des Buches: \"Angular: Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx\"."
+      }
     }
   }
 }

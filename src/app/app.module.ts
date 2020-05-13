@@ -8,6 +8,7 @@ import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
@@ -54,6 +55,7 @@ import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
+    YouTubePlayerModule,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'de' }],
   bootstrap: [AppComponent],

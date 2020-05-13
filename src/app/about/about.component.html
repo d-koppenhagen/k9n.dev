@@ -12,6 +12,13 @@
           >{{ t('meetupCta') }}</a
         >
       </section>
+      <!--
+      <h3 class="major">{{ t('interviews') }}</h3>
+      <section class="interviews">
+        <h4>{{ t('interviewDescriptions.blackCoffee.heading') }}</h4>
+        <youtube-player videoId="dQw4w9WgXcQ"></youtube-player>
+      </section>
+      -->
       <h3 class="major">{{ t('career') }}</h3>
       <section class="features">
         <div class="timeline">
@@ -27,16 +34,16 @@
             <div class="content">
               <span class="location">{{ t(i + '.location') }}</span>
               <h2 class="timeline-heading">
-                {{ t(i + '.when') }}
+                {{ t('careerSteps.' + i + '.when') }}
               </h2>
               <h3>
-                {{ t(i + '.what') }}
+                {{ t('careerSteps.' + i + '.what') }}
               </h3>
               <h4>
-                {{ t(i + '.where') }}
+                {{ t('careerSteps.' + i + '.where') }}
               </h4>
               <p>
-                {{ t(i + '.info') }}
+                {{ t('careerSteps.' + i + '.info') }}
               </p>
             </div>
           </div>
