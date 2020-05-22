@@ -1,9 +1,8 @@
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-var scully_1 = require('@scullyio/scully');
-var scully_plugin_sitemap_1 = require('@gammastream/scully-plugin-sitemap');
-var SitemapPlugin = scully_plugin_sitemap_1.getSitemapPlugin();
-scully_1.setPluginConfig(SitemapPlugin, {
+import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
+import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
+
+const SitemapPlugin = getSitemapPlugin();
+setPluginConfig(SitemapPlugin, {
   urlPrefix: 'https://d-koppenhagen.de',
   sitemapFilename: 'sitemap.xml',
   changeFreq: 'monthly',
@@ -41,12 +40,14 @@ scully_1.setPluginConfig(SitemapPlugin, {
     },
   },
 });
-var tocOptions = {
+
+const tocOptions = {
   blogAreaSelector: '.blog-content',
   insertSelector: '#toc',
   level: ['h2', 'h3'],
 };
-exports.config = {
+
+export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'd-koppenhagen-website',
   outDir: './dist/static',
@@ -64,6 +65,7 @@ exports.config = {
       slug: {
         folder: './blog',
       },
+      // toc: tocOptions,
     },
   },
 };

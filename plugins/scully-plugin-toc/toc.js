@@ -1,6 +1,6 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-const log_1 = require('@scullyio/scully/utils/log');
+const log_1 = require('@scullyio/scully/lib/utils/log');
 const jsdom_1 = require('jsdom');
 exports.headingLevel = (tag) => {
   const match = tag.match(/(?!h)[123456]/g);
