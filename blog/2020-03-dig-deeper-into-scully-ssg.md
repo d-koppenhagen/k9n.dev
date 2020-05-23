@@ -6,7 +6,7 @@ I will guide you through the process of how to handle protected routes using a c
 published: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-05-02
+updated: 2020-05-23
 keywords:
   - Angular
   - Angular CLI
@@ -43,8 +43,8 @@ I will guide you through the process of how to handle protected routes using a c
 > This blog post is based on versions:
 > ```
 > @scullyio/ng-lib: 0.0.22
-> @scullyio/init: 0.0.26
-> @scullyio/scully: 0.0.90
+> @scullyio/init: 0.0.28
+> @scullyio/scully: 0.0.92
 > ```
 > However some of the commands or API calls used here may change in the future.
 > It’s my goal to keep this blog post as up-to-date as possible.
@@ -158,7 +158,7 @@ Great, as we can see: AsciiDoc files will be rendered as well out-of-the-box.
 ![a scully rendered asciidoc file](/assets/images/blog/scully/scully-asciidoc-projects.png)
 
 You can also define your own File Handler Plugin for other content formats.
-Check out the [official docs](https://github.com/scullyio/scully/blob/master/docs/plugins.md#file-plugin) for it to see how it works.
+Check out the [official docs](https://scully.io/docs/plugins#file-plugin) for it to see how it works.
 
 ## Protect your routes with a custom plugin
 
@@ -184,15 +184,16 @@ To prevent _Scully_ from rendering specific pages we can simply create a custom 
 To do so, we will create a new directory `extraPlugin` with the file `skip.js` inside:
 
 ```js
-const { registerPlugin } = require('@scullyio/scully');
-const { log, yellow } = require('@scullyio/scully/utils/log');
+const { registerPlugin, log, yellow } = require('@scullyio/scully');
 
-const skipPlugin = async (route, options) => {
+function skipPlugin(route, config = {}) {
   log(`Skip Route "${yellow(route)}"`);
-  return [];
-};
+  return Promise.resolve([]);
+}
 
-registerPlugin('router', 'skip', skipPlugin);
+const validator = async conf => [];
+registerPlugin('router', 'skip', skipPlugin, validator);
+module.exports.skipPlugin = skipPlugin;
 ```
 
 We will import the function `registerPlugin()` which will register a new router plugin called `skip`.
@@ -201,12 +202,14 @@ It receives the route and options for the route that should be handled.
 We will simply return an empty array as we won't proceed routes handled by the plugin.
 We can use the exported `log()` function from _Scully_ to log the action in a nice way.
 
-Last but not least we will use the `skip` plugin in our `scully.config.js` configuration file and tell the plugin which routes to handle:
+Last but not least we will use the `skip` plugin in our `scully.scully-blog.config.ts` configuration file and tell the plugin which routes to handle:
 
-```js
+```ts
+import { ScullyConfig } from '@scullyio/scully';
+
 require('./extraPlugin/skip');
 
-exports.config = {
+export const config: ScullyConfig = {
   // ...
   routes: {
     // ...
@@ -228,7 +231,7 @@ Skip Route "/secure"
 
 Perfect! As you can see the route is ignored by _Scully_ now.
 
-You can have a look at a more detailed example in my [scully-blog-example](https://github.com/d-koppenhagen/scully-blog-example/commits) repository.
+You can have a look at a more detailed example in my [scully-blog-example](https://github.com/d-koppenhagen/scully-blog-example) repository.
 
 ## Conclusion
 

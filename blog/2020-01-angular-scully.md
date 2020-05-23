@@ -4,7 +4,7 @@ description: 'You probably heard of the JAMStack. It is a new way of building we
 published: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-05-02
+updated: 2020-05-23
 keywords:
   - Angular
   - Angular CLI
@@ -36,8 +36,8 @@ thumbnailSmall: assets/images/blog/scully/scully-header-small.jpg
 > This blog post is based on versions:
 > ```
 > @scullyio/ng-lib: 0.0.22
-> @scullyio/init: 0.0.26
-> @scullyio/scully: 0.0.90
+> @scullyio/init: 0.0.28
+> @scullyio/scully: 0.0.92
 > ```
 > However some of the commands or API calls used here may change in the future.
 > It’s my goal to keep this blog post as up-to-date as possible.
@@ -302,13 +302,16 @@ As you may have realized: _Scully_ needs a data source to fetch all dynamic rout
 In case of our blog example _Scully_ uses the `:slug` router param as a placeholder.
 Scully will fill this placeholder with appropriate content to visit and pre-render the site.
 The content for the placeholder comes in our blog example from the files in the `/blog` directory.
-This has been configured from the schematics we ran before in the file `scully.scully-blog.config.js`:
+This has been configured from the schematics we ran before in the file `scully.scully-blog.config.ts`:
 
-```js
-exports.config = {
+```ts
+import { ScullyConfig } from '@scullyio/scully';
+
+export const config: ScullyConfig = {
   projectRoot: "./src/app",
   projectName: "scully-blog",
   outDir: './dist/static',
+  defaultPostRenderers: [],
   routes: {
     '/blog/:slug': {
       type: 'contentFolder',
@@ -325,14 +328,18 @@ Imagine we want to display information about books from an external API.
 So our app needs another route called `/books/:isbn`.
 To visit this route and pre-render it, we need a way to fill the `isbn` parameter.
 Luckily _Scully_ helps us with this too.
-We can configure [_Router Plugin_](https://github.com/scullyio/scully/blob/master/docs/plugins.md#router-plugin) that will call an API, fetch the data from it and pluck the `isbn` from the array of results to fill it in the router parameter.
+We can configure [_Router Plugin_](https://scully.io/docs/plugins#router-plugin) that will call an API, fetch the data from it and pluck the `isbn` from the array of results to fill it in the router parameter.
 
 In the following example we will use the public service [BookMonkey API](https://api3.angular-buch.com) (we provide this service for the readers of our [German Angular book](https://angular-buch.com/)) as an API to fetch a list of books:
 
 ```js
-exports.config = {
+import { ScullyConfig } from '@scullyio/scully';
+
+export const config: ScullyConfig = {
   projectRoot: "./src/app",
   projectName: "scully-blog",
+  outDir: './dist/static',
+  defaultPostRenderers: [],
   routes: {
     ...
     '/books/:isbn': {
@@ -406,11 +413,6 @@ Generating took 3.3 seconds for 7 pages:
   Finding routes in the angular app took 0 milliseconds
   Pulling in route-data took 26 milliseconds
   Rendering the pages took 2.58 seconds
-
-The server is available on "http://localhost:1668/"
-------------------------------------------------------------
-Press r for re-run Scully, or q for close the servers.
-------------------------------------------------------------
 ```
 
 This is great. We have efficiently pre-rendered normal dynamic content!
@@ -422,8 +424,7 @@ With the shown examples, it's possible create a full-fledged website with Scully
 > [github.com/d-koppenhagen/d-koppenhagen.de](https://github.com/d-koppenhagen/d-koppenhagen.de)
 
 If you you want to follow all the development steps in detail, check out my provided github repository
-[scully-blog-example](https://github.com/d-koppenhagen/scully-blog-example/commits).
-Each step described here is represented by one commit.
+[scully-blog-example](https://github.com/d-koppenhagen/scully-blog-example).
 
 ## Conclusion
 
@@ -435,10 +436,9 @@ It will handle and pre-render dynamic routes by fetching API data from placehold
 
 Compared to "classic" pre-rending by using [Angular Universal](https://angular.io/guide/universal), _Scully_ is much easier to use and it doesn't require you to write a specific flavor of Angular.
 Also _Scully_ can easily pre-render hybrid Angular apps or Angular apps with plugins like jQuery in comparison to Angular Universal.
+If you want to compare _Scully_ with Angular Universal in detail, check out the blog post from Sam Vloeberghs: [Scully or Angular Universal, what is the difference?](https://samvloeberghs.be/posts/scully-or-angular-universal-what-is-the-difference)
 
 If you want to dig a bit deeper into the features _Scully_ offers, check out my [second article](/blog/2020-03-dig-deeper-into-scully-ssg).
-
-Any hints, suggestions or corrections? Feel free to [contact me](http://d-koppenhagen.de/#contact) or sending me a [pull request](https://github.com/d-koppenhagen/d-koppenhagen.de/pulls).
 
 **Thank you**
 

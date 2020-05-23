@@ -1,6 +1,6 @@
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
-import { getTocPlugin, TocConfig } from 'scully-plugin-toc';
+import { getTocPlugin } from 'scully-plugin-toc';
 
 const SitemapPlugin = getSitemapPlugin();
 setPluginConfig(SitemapPlugin, {
@@ -42,7 +42,7 @@ setPluginConfig(SitemapPlugin, {
   },
 });
 
-const tocOptions: TocConfig = {
+const tocOptions = {
   blogAreaSelector: '.blog-content',
   insertSelector: '#toc',
   level: ['h2', 'h3'],
