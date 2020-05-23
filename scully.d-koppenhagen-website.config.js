@@ -1,9 +1,10 @@
-import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
-import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
-import { getTocPlugin, TocPluginName, TocConfig } from 'scully-plugin-toc';
-
-const SitemapPlugin = getSitemapPlugin();
-setPluginConfig(SitemapPlugin, {
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+var scully_1 = require('@scullyio/scully');
+var scully_plugin_sitemap_1 = require('@gammastream/scully-plugin-sitemap');
+var scully_plugin_toc_1 = require('scully-plugin-toc');
+var SitemapPlugin = scully_plugin_sitemap_1.getSitemapPlugin();
+scully_1.setPluginConfig(SitemapPlugin, {
   urlPrefix: 'https://d-koppenhagen.de',
   sitemapFilename: 'sitemap.xml',
   changeFreq: 'monthly',
@@ -41,16 +42,14 @@ setPluginConfig(SitemapPlugin, {
     },
   },
 });
-
-const tocOptions: TocConfig = {
+var tocOptions = {
   blogAreaSelector: '.blog-content',
   insertSelector: '#toc',
   level: ['h2', 'h3'],
 };
-const TocPlugin = getTocPlugin();
-setPluginConfig(TocPlugin, tocOptions);
-
-export const config: ScullyConfig = {
+var TocPlugin = scully_plugin_toc_1.getTocPlugin();
+scully_1.setPluginConfig(TocPlugin, tocOptions);
+exports.config = {
   projectRoot: './src',
   projectName: 'd-koppenhagen-website',
   outDir: './dist/static',
@@ -64,7 +63,7 @@ export const config: ScullyConfig = {
     },
     '/blog/:slug': {
       type: 'contentFolder',
-      postRenderers: [TocPluginName],
+      postRenderers: [scully_plugin_toc_1.TocPluginName],
       slug: {
         folder: './blog',
       },
