@@ -1,5 +1,6 @@
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
+import { getTocPlugin, TocConfig } from 'scully-plugin-toc';
 
 const SitemapPlugin = getSitemapPlugin();
 setPluginConfig(SitemapPlugin, {
@@ -41,11 +42,13 @@ setPluginConfig(SitemapPlugin, {
   },
 });
 
-const tocOptions = {
+const tocOptions: TocConfig = {
   blogAreaSelector: '.blog-content',
   insertSelector: '#toc',
   level: ['h2', 'h3'],
 };
+const TocPlugin = getTocPlugin();
+setPluginConfig(TocPlugin, tocOptions);
 
 export const config: ScullyConfig = {
   projectRoot: './src',
@@ -61,11 +64,10 @@ export const config: ScullyConfig = {
     },
     '/blog/:slug': {
       type: 'contentFolder',
-      // postRenderers: [TOC],
+      postRenderers: ['toc'],
       slug: {
         folder: './blog',
       },
-      // toc: tocOptions,
     },
   },
 };
