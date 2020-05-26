@@ -2,6 +2,8 @@ import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
 import { getTocPlugin, TocPluginName, TocConfig } from 'scully-plugin-toc';
 
+setPluginConfig('md', { enableSyntaxHighlighting: true });
+
 const SitemapPlugin = getSitemapPlugin();
 setPluginConfig(SitemapPlugin, {
   urlPrefix: 'https://d-koppenhagen.de',

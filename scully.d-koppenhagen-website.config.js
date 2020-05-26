@@ -3,6 +3,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var scully_1 = require('@scullyio/scully');
 var scully_plugin_sitemap_1 = require('@gammastream/scully-plugin-sitemap');
 var scully_plugin_toc_1 = require('scully-plugin-toc');
+scully_1.setPluginConfig('md', { enableSyntaxHighlighting: true });
 var SitemapPlugin = scully_plugin_sitemap_1.getSitemapPlugin();
 scully_1.setPluginConfig(SitemapPlugin, {
   urlPrefix: 'https://d-koppenhagen.de',
