@@ -1,9 +1,16 @@
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
 import { getTocPlugin, TocPluginName, TocConfig } from 'scully-plugin-toc';
+import { MinifyHtml } from 'scully-plugin-minify-html';
 
+/**
+ * configuration for the markdown plugin
+ */
 setPluginConfig('md', { enableSyntaxHighlighting: true });
 
+/**
+ * configuration for the sitemap plugin
+ */
 const SitemapPlugin = getSitemapPlugin();
 setPluginConfig(SitemapPlugin, {
   urlPrefix: 'https://d-koppenhagen.de',
@@ -44,6 +51,9 @@ setPluginConfig(SitemapPlugin, {
   },
 });
 
+/**
+ * configuration for the TOC plugin
+ */
 const tocOptions: TocConfig = {
   blogAreaSelector: '.blog-content',
   insertSelector: '#toc',
@@ -52,11 +62,14 @@ const tocOptions: TocConfig = {
 const TocPlugin = getTocPlugin();
 setPluginConfig(TocPlugin, tocOptions);
 
+/**
+ * the actual scully configuration
+ */
 export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'd-koppenhagen-website',
   outDir: './dist/static',
-  defaultPostRenderers: [],
+  defaultPostRenderers: [MinifyHtml],
   routes: {
     '/projects/:slug': {
       type: 'contentFolder',
@@ -66,7 +79,7 @@ export const config: ScullyConfig = {
     },
     '/blog/:slug': {
       type: 'contentFolder',
-      postRenderers: [TocPluginName],
+      postRenderers: [TocPluginName, MinifyHtml],
       slug: {
         folder: './blog',
       },
