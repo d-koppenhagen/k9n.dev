@@ -1,6 +1,18 @@
 @import '../../sass/libs/vars';
 
+p {
+  white-space: pre-wrap;
+}
+
 .about {
+  padding-bottom: 30px;
+}
+
+/* viso contents */
+.video-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 30px;
 }
 

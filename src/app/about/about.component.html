@@ -12,13 +12,14 @@
           >{{ t('meetupCta') }}</a
         >
       </section>
-      <!--
       <h3 class="major">{{ t('interviews') }}</h3>
       <section class="interviews">
         <h4>{{ t('interviewDescriptions.blackCoffee.heading') }}</h4>
-        <youtube-player videoId="dQw4w9WgXcQ"></youtube-player>
+        <p>{{ t('interviewDescriptions.blackCoffee.text') }}</p>
+        <div class="video-box">
+          <youtube-player videoId="O3bYfZ8tcLc"></youtube-player>
+        </div>
       </section>
-      -->
       <h3 class="major">{{ t('career') }}</h3>
       <section class="features">
         <div class="timeline">
@@ -32,19 +33,15 @@
             "
           >
             <div class="content">
-              <span class="location">{{ t(i + '.location') }}</span>
+              <span class="location">{{
+                t('careerSteps.' + i + '.location')
+              }}</span>
               <h2 class="timeline-heading">
                 {{ t('careerSteps.' + i + '.when') }}
               </h2>
-              <h3>
-                {{ t('careerSteps.' + i + '.what') }}
-              </h3>
-              <h4>
-                {{ t('careerSteps.' + i + '.where') }}
-              </h4>
-              <p>
-                {{ t('careerSteps.' + i + '.info') }}
-              </p>
+              <h3>{{ t('careerSteps.' + i + '.what') }}</h3>
+              <h4>{{ t('careerSteps.' + i + '.where') }}</h4>
+              <p>{{ t('careerSteps.' + i + '.info') }}</p>
             </div>
           </div>
         </div>

@@ -78,13 +78,14 @@
   "aboutPage": {
     "about": "Über mich",
     "intro": "Mein Name ist Danny Koppenhagen und ich arbeite leidenschaftlich als Softwareentwickler und IT-Berater. Mein Metier ist die Konzeption und Entwicklung von Web-Anwendungen – insbesondere von Single-Page-Applications (SPA). Zum Einsatz kommen hier vor allem Angular, RxJS, NgRx aber auch Vue.js und NativeScript. Des Weiteren entwickle ich Backend-Anwendungen auf Basis von JavaScript und TypeScript und bin als IT-Berater für Webarchitekturen und -Frameworks tätig. Bei der Umsetzung meiner täglichen Arbeit steht stets der Nutzer im Fokus.",
-    "meetup": "Ich besuche regelmäßig das Angular Berlin Meetup und helfe bei der Organisation. Bei dem Meetup werden immer wieder interessante Themen rund um Angular, RxJS, NgRx und andere Tools vorgestellt.",
+    "meetup": "Ich besuche regelmäßig das Angular Berlin Meetup und helfe bei der Organisation. Bei dem Meetup werden immer wieder interessante Themen rund um Angular, RxJS, NgRx und andere Tools rund um das Angular-Ökosystem vorgestellt.",
     "meetupCta": "Zum Angular Berlin Meetup",
     "career": "Mein Werdegang",
     "interviews": "Interviews",
     "interviewDescriptions": {
       "blackCoffee": {
-        "heading": "DB Systel - #000000 c0ffee"
+        "heading": "#000000 c0ffee Tech-Talk der DB Systel",
+        "text": "Im Mai war ich zu Gast beim #000000 c0ffee Tech-Talk der DB Systel, der Auf Grund der welteweiten Corona Pandemie remote stattfand.\r\n Im Interview spreche ich über meine Erfahrungen mit Vue.js und Angular und gehe darauf ein, welches Framework sich für welche Anwendungszwecke eignet. Außerdem erläutere ich, wie der aktuelle Stand der Technik für Progressive Webapps (PWA) ist. Im letzten Teil sprechen wir über die Anbindung von APIs und über das Architekturmuster \"Backend For Frontends\" (BFF)."
       }
     },
     "careerSteps": {
