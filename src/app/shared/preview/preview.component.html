@@ -15,11 +15,11 @@
           </a>
           <h3 class="major">{{ post.title }}</h3>
         </div>
-        <div class="card-content">
+        <summary class="card-content">
           <p>
             {{ post.description }}
           </p>
-        </div>
+        </summary>
         <div class="card-footer">
           <a [routerLink]="post.route" class="special read-on"
             >{{ t('readOn') }}...</a

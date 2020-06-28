@@ -1,5 +1,5 @@
 <ng-container *transloco="let t">
-  <div class="wrapper alt">
+  <article class="wrapper alt">
     <div class="inner" *ngIf="post$ | async as post">
       <section class="blog-header">
         <span *ngIf="post.thumbnail" class="image fit">
@@ -141,5 +141,5 @@
         </ul>
       </section>
     </div>
-  </div>
+  </article>
 </ng-container>

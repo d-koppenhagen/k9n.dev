@@ -21,7 +21,8 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 /* default outline settings */
 img:focus,
 a:focus,
-nav:focus {
+nav:focus,
+button:focus {
   outline: thin dotted;
 }
 
