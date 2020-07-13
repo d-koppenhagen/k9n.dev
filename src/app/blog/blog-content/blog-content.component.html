@@ -67,78 +67,26 @@
       </section>
       <section class="blog-footer">
         <h2 class="sub-heading">{{ t('share.label') }}</h2>
-        <ul class="share-toolbar">
-          <li>
-            <a
-              (click)="shareApi(post.title, post.description)"
-              [attr.alt]="'share.common.alt' | transloco"
-              ><i
-                class="fa fa-share-alt"
-                [attr.aria-label]="'share.common.aria' | transloco"
-              ></i>
-            </a>
-          </li>
-          <li>
-            <a
-              [href]="shareEmail(post.title, post.description, post.author)"
-              rel="noopener noreferrer"
-              [attr.alt]="'share.email.alt' | transloco"
-              id="shareEmail"
-              ><i
-                class="fa fa-envelope"
-                [attr.aria-label]="'share.email.aria' | transloco"
-              ></i>
-            </a>
-          </li>
-          <li>
-            <a
-              [href]="shareTwitter()"
-              target="_blank"
-              rel="noopener noreferrer"
-              [attr.alt]="'share.twitter.alt' | transloco"
-              ><i
-                class="fa fa-twitter"
-                [attr.aria-label]="'share.twitter.aria' | transloco"
-              ></i>
-            </a>
-          </li>
-          <li>
-            <a
-              [href]="shareFacebook()"
-              target="_blank"
-              rel="noopener noreferrer"
-              [attr.alt]="'share.facebook.alt' | transloco"
-              ><i
-                class="fa fa-facebook"
-                [attr.aria-label]="'share.facebook.aria' | transloco"
-              ></i>
-            </a>
-          </li>
-          <li>
-            <a
-              [href]="shareLinkedIn()"
-              target="_blank"
-              rel="noopener noreferrer"
-              [attr.alt]="'share.linkedIn.alt' | transloco"
-              ><i
-                class="fa fa-linkedin"
-                [attr.aria-label]="'share.linkedIn.aria' | transloco"
-              ></i>
-            </a>
-          </li>
-          <li>
-            <a
-              [href]="shareXing()"
-              target="_blank"
-              rel="noopener noreferrer"
-              [attr.alt]="'share.xing.alt' | transloco"
-              ><i
-                class="fa fa-xing"
-                [attr.aria-label]="'share.xing.aria' | transloco"
-              ></i>
-            </a>
-          </li>
-        </ul>
+        <share-buttons
+          [theme]="'circles-dark'"
+          [include]="[
+            'copy',
+            'twitter',
+            'email',
+            'whatsapp',
+            'facebook',
+            'telegram',
+            'messenger',
+            'linkedin',
+            'xing',
+            'sms',
+            'print'
+          ]"
+          [show]="5"
+          [url]="shareData(post).url"
+          [description]="shareData(post).description"
+          [autoSetMeta]="false"
+        ></share-buttons>
       </section>
     </div>
   </article>

@@ -44,45 +44,6 @@ h2.sub-heading {
   }
 }
 
-.share-toolbar {
-  list-style: none;
-  height: 40px;
-  padding: 0px;
-
-  > li {
-    float: left;
-
-    > a {
-      display: block;
-      cursor: pointer;
-      border-bottom: 0px;
-
-      > i {
-        padding: 10px;
-        color: $white;
-        min-width: 38px;
-        /*
-         * Neumorphism effect
-         * @see https://neumorphism.io/#2e3141
-         */
-        border-radius: 50px;
-        background: $c01;
-        box-shadow: 4px 4px 9px $c14, -4px -4px 9px $c15;
-      }
-
-      i.fa-facebook::before {
-        margin-left: 2px;
-      }
-
-      &:hover > i,
-      &:focus > i {
-        box-shadow: 0 0 12px $c02;
-        color: $white;
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 560px) {
   .blog-footer {
     position: fixed;

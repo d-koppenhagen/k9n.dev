@@ -41,60 +41,26 @@ export class BlogContentComponent implements OnInit, AfterViewChecked {
 
   ngOnInit() {
     this.post$ = this.srs.available$.pipe(
-      map(routeList => {
+      map((routeList) => {
         return routeList.filter(
           (route: ScullyRoute) =>
             route.route.startsWith(`/blog/`) &&
             route.route.includes(this.route.snapshot.params.slug),
         );
       }),
-      map(currentPostData => {
+      map((currentPostData: ScullyRoute[]) => {
         return currentPostData[0];
       }),
-      tap(post => {
+      tap((post: ScullyRoute) => {
         this.metaService.createMetaDataForPost(post);
       }),
     );
   }
 
-  async shareApi(title: string, description: string) {
-    try{
-      await this.ngNavigatorShareService.share({
-        title,
-        text: description,
-        url: location.href
-      });
-    } catch(error) {
-      console.warn('You app is not shared, reason: ', error);
-    }
-  }
-
-  shareEmail(title: string, description: string, author: string) {
-    const subject = encodeURI(`d-koppenhagen.de | Blogpost: ${title} | ${author}`);
-    const body = encodeURI(`${title} | ${author}
-
-${description}
-
-> ${location.href}
-    `);
-    return `mailto:?subject=${subject}&body=${body}`;
-  }
-
-  shareTwitter() {
-    const text = encodeURI(`Check out the blogpost from @d_koppenhagen: ${location.href}`);
-    return `https://twitter.com/intent/tweet?text=${text}`;
-  }
-
-  shareFacebook() {
-    return `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(location.href)}`;
-  }
-
-  shareLinkedIn() {
-    return `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURI(location.href)}`;
-  }
-
-  shareXing() {
-    return `https://www.xing.com/app/user?op=share;url=${location.href}`;
+  shareData(post: ScullyRoute) {
+    const url = `${location.href}${post.route}`;
+    const description = `${post.title} | ${post.author}\n`;
+    return { url, description };
   }
 
   editOnGithubLink() {
