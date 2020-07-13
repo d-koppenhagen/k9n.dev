@@ -135,6 +135,31 @@
     "thumbnailSmall": "assets/images/blog/scully/scully-header2-small.jpg",
     "sourceFile": "2020-03-dig-deeper-into-scully-ssg.md"
   },
+  {
+    "route": "/blog/2020-06-angular10",
+    "title": "Angular 10 ist da! Die wichtigsten Neuerungen im Überblick",
+    "description": "Nach nur vier Monaten Entwicklungszeit wurde am 24. Juni 2020 die neue Major-Version Angular 10.0 veröffentlicht! Wir werden Ihnen in diesem Artikel die wichtigsten Neuerungen vorstellen.",
+    "published": true,
+    "author": "Angular Buch Team",
+    "mail": "team@angular-buch.com",
+    "updated": "2020-06-29T00:00:00.000Z",
+    "publishedAt": "angular-buch.com",
+    "publishedAtUrl": "https://angular-buch.com/blog/2020-06-angular10",
+    "publishedAtLogo": "https://angular-buch.com/assets/img/brand.svg",
+    "keywords": [
+      "Angular",
+      "Angular 10",
+      "TypeScript",
+      "TSLint",
+      "Browserslist",
+      "tsconfig",
+      "CommonJS"
+    ],
+    "language": "de",
+    "thumbnail": "assets/images/blog/ng10/angular10.jpg",
+    "thumbnailSmall": "assets/images/blog/ng10/angular10-small.jpg",
+    "sourceFile": "2020-06-angular10.md"
+  },
   { "route": "/projects" },
   {
     "route": "/projects/2019-11-20-angular-tag-cloud-module",
