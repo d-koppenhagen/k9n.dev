@@ -13,11 +13,11 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: "UA-XXXXXXXXX-X"
+          find: 'UA-XXXXXXXXX-X'
           replace: ${{ secrets.G_TAG_CODE }}
-          include: "src/environments/environment*" # Replace google Tag
-      - uses: cmgriffing/scully-gh-pages-action@v8
+          include: 'src/environments/environment*' # Replace google Tag
+      - uses: cmgriffing/scully-gh-pages-action@v9
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
-          build-args: "--prod"
+          build-args: '--prod'
