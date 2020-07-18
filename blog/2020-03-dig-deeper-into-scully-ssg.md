@@ -6,7 +6,7 @@ I will guide you through the process of how to handle protected routes using a c
 published: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-05-23
+updated: 2020-07-18
 keywords:
   - Angular
   - Angular CLI
@@ -42,9 +42,9 @@ I will guide you through the process of how to handle protected routes using a c
 
 > This blog post is based on versions:
 > ```
-> @scullyio/ng-lib: 0.0.22
-> @scullyio/init: 0.0.28
-> @scullyio/scully: 0.0.92
+> @scullyio/ng-lib: 1.0.0-beta.0
+> @scullyio/init: 1.0.0-beta.0
+> @scullyio/scully: 1.0.0-beta.0
 > ```
 > However some of the commands or API calls used here may change in the future.
 > It’s my goal to keep this blog post as up-to-date as possible.

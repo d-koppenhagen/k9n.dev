@@ -4,7 +4,7 @@ description: 'You probably heard of the JAMStack. It is a new way of building we
 published: true
 author: Danny Koppenhagen
 mail: mail@d-koppenhagen.de
-updated: 2020-05-23
+updated: 2020-07-18
 keywords:
   - Angular
   - Angular CLI
@@ -35,9 +35,9 @@ thumbnailSmall: assets/images/blog/scully/scully-header-small.jpg
 > _Scully_ automatically detects all app routes and creates static sites out of it that are ready to ship for production. _Scully_ is currently just available within an early version.
 > This blog post is based on versions:
 > ```
-> @scullyio/ng-lib: 0.0.22
-> @scullyio/init: 0.0.28
-> @scullyio/scully: 0.0.92
+> @scullyio/ng-lib: 1.0.0-beta.0
+> @scullyio/init: 1.0.0-beta.0
+> @scullyio/scully: 1.0.0-beta.0
 > ```
 > However some of the commands or API calls used here may change in the future.
 > It’s my goal to keep this blog post as up-to-date as possible.
