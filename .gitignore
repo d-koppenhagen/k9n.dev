@@ -46,4 +46,4 @@ testem.log
 Thumbs.db
 
 # ignore js version of scully config
-scully.d-koppenhagen-website.config.js
+scully.log
