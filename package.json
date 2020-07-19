@@ -45,6 +45,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.1",
     "@ngneat/transloco": "^2.17.3",
     "@scullyio/ng-lib": "~1.0.0-beta.0",
+    "@scullyio/scully-plugin-google-analytics": "^1.0.0-beta.0",
     "animate.css": "^4.1.0",
     "ng-navigator-share": "^1.0.4",
     "ng2-animate-on-scroll": "^2.0.0",

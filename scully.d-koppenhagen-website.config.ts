@@ -1,4 +1,5 @@
-import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
+import { ScullyConfig, setPluginConfig, prod } from '@scullyio/scully';
+import { GoogleAnalytics } from '@scullyio/scully-plugin-google-analytics';
 import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
 import { getTocPlugin, TocPluginName, TocConfig } from 'scully-plugin-toc';
 import { MinifyHtml } from 'scully-plugin-minify-html';
@@ -63,23 +64,38 @@ const TocPlugin = getTocPlugin();
 setPluginConfig(TocPlugin, tocOptions);
 
 /**
+ * Gtag plugin config
+ */
+setPluginConfig(GoogleAnalytics, { globalSiteTag: 'UA-XXXXXXXXX-X' });
+
+/**
+ * configure defualt postRenderers
+ */
+const defaultPostRenderers = [GoogleAnalytics, MinifyHtml];
+
+/**
+ * configuration for HTML minification plugin
+ */
+
+/**
  * the actual scully configuration
  */
 export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'd-koppenhagen-website',
   outDir: './dist/static',
-  defaultPostRenderers: [MinifyHtml],
+  defaultPostRenderers,
   routes: {
     '/projects/:slug': {
       type: 'contentFolder',
       slug: {
         folder: './projects',
       },
+      postRenderers: [...defaultPostRenderers],
     },
     '/blog/:slug': {
       type: 'contentFolder',
-      postRenderers: [TocPluginName, MinifyHtml],
+      postRenderers: [TocPluginName, ...defaultPostRenderers],
       slug: {
         folder: './blog',
       },
