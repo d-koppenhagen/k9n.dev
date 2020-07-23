@@ -11,7 +11,7 @@ export class TwitterTimelineComponent implements OnInit {
     url: 'd_koppenhagen',
   };
   readonly twitterTimelineOpts = {
-    tweetLimit: 3,
+    tweetLimit: 10,
     theme: 'dark',
     chrome: ['noheader', 'nofooter', 'noborders', 'transparent', 'noscrollbar'],
   };

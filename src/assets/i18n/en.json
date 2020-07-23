@@ -27,7 +27,7 @@
   "or": "or",
   "contactMe": "contact me",
   "publicationsPage": {
-    "title": "Angular: 'Grundlagen, fortgeschrittene Themen und Best Practices – ab Angular 8'",
+    "title": "Angular: 'Grundlagen, fortgeschrittene Themen und Best Practices – ab Angular 10'",
     "description": "This German Angular book will teach you how to develop modern apps for web and mobile. You will learn about the basic concepts of Angular, the best practices and related tools.",
     "readOn": "angular-buch.com"
   },
@@ -93,51 +93,58 @@
       "0": {
         "location": "Frankfurt (Oder)",
         "when": "2012",
-        "what": "IT Systems Technician",
+        "what": "🧰 IT Systems Technician",
         "where": "Deutschen Telekom AG",
         "info": "Informatics, telecommunication technology and electrical engineering"
       },
       "1": {
         "location": "Cottbus",
         "when": "2012",
-        "what": "Advisor: Technical Custome Consulting",
+        "what": "☎️ Advisor\nTechnical Custome Consulting",
         "where": "Deutsche Telekom Technischer Service GmbH (Customer Competence Center)",
         "info": "Second level support for VoIP and WLAN products."
       },
       "2": {
         "location": "Leipzig",
         "when": "2015",
-        "what": "Bachelor of Engineering (Computer Science and Telecommunications)",
-        "where": "Deutsche Telekom Hochschule für Telekommunikation (University of Applied Science)",
+        "what": "🎓 Bachelor of Engineering\nComputer Science and Telecommunications",
+        "where": "Deutsche Telekom University of Applied Science",
         "info": "Network and transfer technologies, software engineering, IT architecture, protocol engineering as well as web and media technologies."
       },
       "3": {
         "location": "Berlin",
         "when": "2015",
-        "what": "Developer: TETRA Support and Implementation",
+        "what": "🚨 Developer: TETRA Support and Implementation",
         "where": "Deutsche Telekom Healthcare & Security Solutions GmbH",
         "info": "Implementation of client- server architectures in the TETRA-BOS infrastructure. Administration, configuration, integration and test of IT systems."
       },
       "4": {
-        "location": "Berlin",
+        "location": " ",
         "when": "2017",
-        "what": "Author",
+        "what": "📕 Angular (1st edition)",
         "where": "dpunkt.verlag",
-        "info": "First edition of the German book: 'Angular: Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript'."
+        "info": "'Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript'"
       },
       "5": {
         "location": "Berlin",
         "when": "2019",
-        "what": "Specialist: Developer and IT Consultant",
+        "what": "💎 Specialist\nDeveloper and IT Consultant",
         "where": "DB Systel GmbH",
         "info": "Development of UX centered enterprise web applications. Consulting and implementation of web applications and -architectures and UX consulting."
       },
       "6": {
-        "location": "Berlin",
+        "location": " ",
         "when": "2019",
-        "what": "Author",
+        "what": "📕 Angular (2nd edition)",
         "where": "dpunkt.verlag",
-        "info": "Second edition of the German book: 'Angular: Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx'."
+        "info": "'Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx'"
+      },
+      "7": {
+        "location": " ",
+        "when": "2020",
+        "what": "📕 Angular (3rd edition)",
+        "where": "dpunkt.verlag",
+        "info": "'Grundlagen, fortgeschrittene Themen und Best Practices – inklusive RxJS, NgRx und PWA'"
       }
     }
   }
