@@ -17,7 +17,10 @@
         <h4>{{ t('interviewDescriptions.blackCoffee.heading') }}</h4>
         <p>{{ t('interviewDescriptions.blackCoffee.text') }}</p>
         <div class="video-box">
-          <youtube-player videoId="O3bYfZ8tcLc"></youtube-player>
+          <youtube-player
+            videoId="O3bYfZ8tcLc"
+            [width]="youtubePlayerWidth"
+          ></youtube-player>
         </div>
       </section>
       <h3 class="major">{{ t('career') }}</h3>
