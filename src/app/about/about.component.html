@@ -14,13 +14,30 @@
       </section>
       <h3 class="major">{{ t('interviews') }}</h3>
       <section class="interviews">
-        <h4>{{ t('interviewDescriptions.blackCoffee.heading') }}</h4>
-        <p>{{ t('interviewDescriptions.blackCoffee.text') }}</p>
-        <div class="video-box">
-          <youtube-player
-            videoId="O3bYfZ8tcLc"
-            [width]="youtubePlayerWidth"
-          ></youtube-player>
+        <div class="row">
+          <div class="col-6 col-12-small">
+            <h4>{{ t('interviewDescriptions.blackCoffee.heading') }}</h4>
+            <p>{{ t('interviewDescriptions.blackCoffee.text') }}</p>
+            <div class="video-box" #videoBox>
+              <youtube-player
+                videoId="O3bYfZ8tcLc"
+                [width]="youtubePlayerWidth"
+              ></youtube-player>
+            </div>
+          </div>
+          <div class="col-6 col-12-small">
+            <h4>{{ t('interviewDescriptions.agiledrop.heading') }}</h4>
+            <p>{{ t('interviewDescriptions.agiledrop.text') }}</p>
+            <p>
+              <a
+                href="https://www.agiledrop.com/blog/interview-danny-koppenhagen-vuejs-angular-buch-scully-and-web-components"
+                >{{ t('interviewDescriptions.agiledrop.link') }}</a
+              >
+            </p>
+            <img
+              src="https://www.agiledrop.com/sites/default/files/styles/blog_big_teaser/public/2020-07/Untitled%20design%20%289%29.png?itok=b7pnZ4kD"
+            />
+          </div>
         </div>
       </section>
       <h3 class="major">{{ t('career') }}</h3>

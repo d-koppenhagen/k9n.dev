@@ -86,6 +86,11 @@
       "blackCoffee": {
         "heading": "#000000 c0ffee Tech-Talk der DB Systel",
         "text": "Im Mai war ich zu Gast beim #000000 c0ffee Tech-Talk der DB Systel, der Auf Grund der welteweiten Corona Pandemie remote stattfand.\r\n Im Interview spreche ich über meine Erfahrungen mit Vue.js und Angular und gehe darauf ein, welches Framework sich für welche Anwendungszwecke eignet. Außerdem erläutere ich, wie der aktuelle Stand der Technik für Progressive Webapps (PWA) ist. Im letzten Teil sprechen wir über die Anbindung von APIs und über das Architekturmuster \"Backend For Frontends\" (BFF)."
+      },
+      "agiledrop": {
+        "heading": "Interview mit Agiledrop",
+        "text": "Im Interview mit Agiledrop spreche ich über meinen Weg zur Webentwicklung und wie ich dazu kam Co-Autor des deutschsprachigen Angular Buchs zu sein. Weiterhin berichte ich von meinen praktischen Erfahrungen mit Angular und Vue.js und in welchem Fall ich auf Angular oder Vue.js setzen würde. Zum Abschluss gehe ich auf den Static-Site-Generator \"Scully\" und Webcomponents sowie auf meine Erwartungen an die zukünftige Entwicklung im Bereich Webtechnologien ein.",
+        "link": "Zum kompletten Interview"
       }
     },
     "careerSteps": {
