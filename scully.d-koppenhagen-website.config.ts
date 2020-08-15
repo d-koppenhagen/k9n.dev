@@ -1,8 +1,8 @@
-import { ScullyConfig, setPluginConfig, prod } from '@scullyio/scully';
-import { GoogleAnalytics } from '@scullyio/scully-plugin-google-analytics';
 import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
-import { getTocPlugin, TocPluginName, TocConfig } from 'scully-plugin-toc';
+import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
+import { GoogleAnalytics } from '@scullyio/scully-plugin-google-analytics';
 import { MinifyHtml } from 'scully-plugin-minify-html';
+import { getTocPlugin, TocConfig, TocPluginName } from 'scully-plugin-toc';
 
 /**
  * configuration for the markdown plugin
@@ -59,6 +59,7 @@ const tocOptions: TocConfig = {
   blogAreaSelector: '.blog-content',
   insertSelector: '#toc',
   level: ['h2', 'h3'],
+  trailingSlash: true,
 };
 const TocPlugin = getTocPlugin();
 setPluginConfig(TocPlugin, tocOptions);
