@@ -344,7 +344,7 @@ Then just contact me via [E-Mail](mailto:mail@d-koppenhagen.de) or [Twitter](htt
 
 **Thank you**
 
-Special thanks go to [Ferdinand Malcher](https://twitter.com/fmalcher01) for revising this article.
+Special thanks goes to [Ferdinand Malcher](https://twitter.com/fmalcher01) for revising this article.
 
 <hr>
 
