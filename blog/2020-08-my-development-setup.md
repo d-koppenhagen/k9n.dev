@@ -1,10 +1,10 @@
 ---
 title: 'My Development Setup'
 description: 'In this article I will present you what tools I am using during my day-to-day development. Also I will show you a list of extensions and their purpose that help me (and probably you too!) to be more productive.'
-published: false
+published: true
 author: 'Danny Koppenhagen'
 mail: mail@d-koppenhagen.de
-updated: 2020-08-28T00:00:00.000Z
+updated: 2020-08-27T00:00:00.000Z
 keywords:
     - Angular
     - Vue.js
@@ -20,6 +20,7 @@ language: en
 thumbnail: assets/images/blog/dev-setup/dev-setup-header.jpg
 thumbnailSmall: assets/images/blog/dev-setup/dev-setup-header-small.jpg
 ---
+
 # My Development Setup
 
 In the following article I will present you what tools I am using during my day-to-day development workflow. Also, I will show you a list of extensions and their purpose that will help me and probably you too being more productive.
