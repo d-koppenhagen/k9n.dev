@@ -56,7 +56,7 @@ With all the hustle and bustle, there's literally no time to write proper commit
 
 If we don't take this job serious, at the end of the day our git history will look like this:
 
-```text
+```
 * 65f597a (HEAD -> master) adjust readme
 * f874d16 forgot to bump up version
 * 3fa9f1e release
@@ -92,7 +92,7 @@ We will take a look at each tool in this article.
 
 [Commitlint](https://commitlint.js.org) will give you the ability to check your commit messages for a common pattern. A very prominent project following this pattern is the Angular repository itself. The [_conventional-commit_](https://www.conventionalcommits.org) pattern requires us to follow this simple syntax:
 
-```text
+```
 <type>[optional scope]: <description>
 
 [optional body]
@@ -122,7 +122,7 @@ Let's see what is the meaning of these parameters:
 
 An example message could look like that:
 
-```text
+```
 refactor(footer): move footer widget into separate module
 
 BREAKING CHANGES
@@ -161,7 +161,7 @@ It will add this part to your `package.json`:
 
 Husky uses the environment variable `HUSKY_GIT_PARAMS` containing the current git message you entered and it will pass this through _commitlint_ so it can be evaluated.
 
-Whenever you commit, _commitlint_ will now automatically check your message. 
+Whenever you commit, _commitlint_ will now automatically check your message.
 
 ### commitizen: Easily write conventional commit messages <a name="commitizen"></a>
 

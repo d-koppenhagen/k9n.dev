@@ -183,6 +183,7 @@
     "language": "en",
     "thumbnail": "assets/images/blog/dev-setup/dev-setup-header.jpg",
     "thumbnailSmall": "assets/images/blog/dev-setup/dev-setup-header-small.jpg",
+    "devTo": "https://dev.to/dkoppenhagen/my-development-setup-1ne2",
     "sourceFile": "2020-08-my-development-setup.md"
   },
   { "route": "/projects" },

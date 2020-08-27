@@ -319,7 +319,7 @@ For sure: You can exclude them in the same way, but this is very sophisticated a
 Therefore, I am using a simple script.
 It looks for all `node_modules` directories in my development directory (`~/dev` in my case) and excludes them from the backup:
 
-```sh
+```bash
 #!/bin/bash
 # exclude all `node_modules` folders within the dev directory
 find "$HOME/dev" -name 'node_modules' -prune -type d -exec tmutil addexclusion {} \; -exec tmutil isexcluded {} \;

@@ -126,7 +126,7 @@ ng g @scullyio/init:post --name="asciidoc example" --target=projects
 The generated file will be a Markdown file initially.
 Let's change the file extension, rename it to `*.adoc` and add a bit of content after it has been generated:
 
-```adoc
+```asciidoc
 :title: 2020-01-21-projects
 :description: blog description
 :published: false

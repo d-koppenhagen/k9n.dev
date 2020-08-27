@@ -97,7 +97,7 @@ npm run scully serve # serve the scully results
 After _Scully_ has checked our app, it will add the generated static assets to our `dist/static` directory by default.
 Let's quickly compare the result generated from _Scully_ with the result from the initial Angular build (`dist/scully-blog`):
 
-```text
+```
 dist/
 ┣ scully-blog/
 ┃ ┣ favicon.ico
@@ -176,7 +176,7 @@ npm run scully serve            # serve the scully results
 When checking out our `dist/static` directory we can see that there are new sub-directories for the routes of our static blogging sites.
 But what's that: When we will check the directory `dist/static/blog/`, we see somewhat like this:
 
-```text
+```
 blog/
 ┣ ___UNPUBLISHED___k9pg4tmo_2DDScsUiieFlld4R2FwvnJHEBJXcgulw
   ┗ index.html
@@ -376,14 +376,14 @@ The result from the API will have this shape:
 After _Scully_ plucks the ISBN, it will just iterate over the final array: `['9783864906466', '9783864903571']`.
 In fact, when running _Scully_ using `npm run scully`, it will visit the following routes, **after we have configured the route `/books/:isbn` in the Angular router** (otherwise non used routes will be skipped).
 
-```text
+```
 /books/9783864906466
 /books/9783864903571
 ```
 
 We can see the result in the log:
 
-```text
+```
 enable reload on port 2667
  ☺   new Angular build imported
  ☺   Started servers in background
@@ -409,7 +409,7 @@ Route "/" rendered into file: "/<path>/dist/static/index.html"
 Generating took 3.3 seconds for 7 pages:
   That is 2.12 pages per second,
   or 473 milliseconds for each page.
-  
+
   Finding routes in the angular app took 0 milliseconds
   Pulling in route-data took 26 milliseconds
   Rendering the pages took 2.58 seconds
