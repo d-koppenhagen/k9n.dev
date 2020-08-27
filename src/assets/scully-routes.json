@@ -160,6 +160,33 @@
     "thumbnailSmall": "assets/images/blog/ng10/angular10-small.jpg",
     "sourceFile": "2020-06-angular10.md"
   },
+  {
+    "route": "/blog/___UNPUBLISHED___kechd4l6_DKLVhTsmvJKjUJ50JqsJs1L28AhWRek2",
+    "title": "My Development Setup",
+    "description": "In this article I will present you what tools I am using during my day-to-day development. Also I will show you a list of extensions and their purpose that help me (and probably you too!) to be more productive.",
+    "published": false,
+    "author": "Danny Koppenhagen",
+    "mail": "mail@d-koppenhagen.de",
+    "updated": "2020-08-28T00:00:00.000Z",
+    "keywords": [
+      "Angular",
+      "Vue.js",
+      "Console",
+      "Development",
+      "Setup",
+      "VSCode",
+      "Visual Studio Code",
+      "Google Chrome",
+      "Extension",
+      "macOS"
+    ],
+    "language": "en",
+    "thumbnail": "assets/images/blog/dev-setup/dev-setup-header.jpg",
+    "thumbnailSmall": "assets/images/blog/dev-setup/dev-setup-header-small.jpg",
+    "slugs": ["___UNPUBLISHED___kechd4l6_DKLVhTsmvJKjUJ50JqsJs1L28AhWRek2"],
+    "slug": "___UNPUBLISHED___kechd4l6_DKLVhTsmvJKjUJ50JqsJs1L28AhWRek2",
+    "sourceFile": "2020-08-my-development-setup.md"
+  },
   { "route": "/projects" },
   {
     "route": "/projects/2019-11-20-angular-tag-cloud-module",
