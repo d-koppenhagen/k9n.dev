@@ -1,58 +1,63 @@
 <ng-container *transloco="let t">
   <article class="wrapper alt">
-    <div class="inner" *ngIf="post$ | async as post">
-      <section class="blog-header">
-        <span *ngIf="post.thumbnail" class="image fit">
-          <img [src]="post.thumbnail" [attr.alt]="'headerImage' | transloco" />
-        </span>
-      </section>
-      <section class="extra-section" *ngIf="post.keywords">
-        <div class="extra-info">
-          <h2 class="sub-heading">{{ t('keywords') }}</h2>
-          <h2 *ngIf="post.updated" class="sub-heading">
-            {{ t('lastUpdate') }}: {{ post.updated | date }}
-          </h2>
-        </div>
-        <div class="actions">
-          <span *ngFor="let keyword of post.keywords">
-            <button
-              routerLink="/blog"
-              [queryParams]="{ keyword: keyword }"
-              class="button xs"
-              [attr.aria-label]="
-                'keywordAriaLabel' | transloco: { value: keyword }
-              "
-            >
-              {{ keyword }}
-            </button>
+    <div class="inner">
+      <ng-container *ngIf="post$ | async as post">
+        <section class="blog-header">
+          <span *ngIf="post.thumbnail" class="image fit">
+            <img
+              [src]="post.thumbnail"
+              [attr.alt]="'headerImage' | transloco"
+            />
           </span>
-        </div>
-        <div
-          *ngIf="post.publishedAt && post.publishedAtUrl"
-          class="published-at"
-        >
-          <div>
-            <a [href]="post.publishedAtUrl" class="published-at-link">
-              <img
-                *ngIf="post.publishedAtLogo"
-                class="published-at-logo"
-                [src]="post.publishedAtLogo"
-                [attr.alt]="'publisherLogo' | transloco"
-              />
-            </a>
+        </section>
+        <section class="extra-section" *ngIf="post.keywords">
+          <div class="extra-info">
+            <h2 class="sub-heading">{{ t('keywords') }}</h2>
+            <h2 *ngIf="post.updated" class="sub-heading">
+              {{ t('lastUpdate') }}: {{ post.updated | date }}
+            </h2>
           </div>
-          <div>
-            {{ t('originallyPublishedAtLong') }}:
-            <a [href]="post.publishedAtUrl">{{ post.publishedAt }}</a
-            >.
+          <div class="actions">
+            <span *ngFor="let keyword of post.keywords">
+              <button
+                routerLink="/blog"
+                [queryParams]="{ keyword: keyword }"
+                class="button xs"
+                [attr.aria-label]="
+                  'keywordAriaLabel' | transloco: { value: keyword }
+                "
+              >
+                {{ keyword }}
+              </button>
+            </span>
           </div>
-        </div>
-      </section>
-      <section class="external-links">
-        <a *ngIf="post.devTo" [href]="post.devTo">Dev.to</a>
-        <span *ngIf="post.devTo && post.medium"> | </span>
-        <a *ngIf="post.medium" [href]="post.medium">Medium.com</a>
-      </section>
+          <div
+            *ngIf="post.publishedAt && post.publishedAtUrl"
+            class="published-at"
+          >
+            <div>
+              <a [href]="post.publishedAtUrl" class="published-at-link">
+                <img
+                  *ngIf="post.publishedAtLogo"
+                  class="published-at-logo"
+                  [src]="post.publishedAtLogo"
+                  [attr.alt]="'publisherLogo' | transloco"
+                />
+              </a>
+            </div>
+            <div>
+              {{ t('originallyPublishedAtLong') }}:
+              <a [href]="post.publishedAtUrl">{{ post.publishedAt }}</a
+              >.
+            </div>
+          </div>
+        </section>
+        <section class="external-links">
+          <a *ngIf="post.devTo" [href]="post.devTo">Dev.to</a>
+          <span *ngIf="post.devTo && post.medium"> | </span>
+          <a *ngIf="post.medium" [href]="post.medium">Medium.com</a>
+        </section>
+      </ng-container>
       <section class="blog-content">
         <scully-content></scully-content>
         <div class="edit-on-github">
@@ -83,8 +88,8 @@
             'print'
           ]"
           [show]="5"
-          [url]="shareData(post).url"
-          [description]="shareData(post).description"
+          [url]="shareData.url"
+          [description]="shareData.description"
           [autoSetMeta]="false"
         ></share-buttons>
       </section>
