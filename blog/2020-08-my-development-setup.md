@@ -19,9 +19,6 @@ keywords:
 language: en
 thumbnail: assets/images/blog/dev-setup/dev-setup-header.jpg
 thumbnailSmall: assets/images/blog/dev-setup/dev-setup-header-small.jpg
-slugs:
-    - ___UNPUBLISHED___kechd4l6_DKLVhTsmvJKjUJ50JqsJs1L28AhWRek2
-
 ---
 # My Development Setup
 
