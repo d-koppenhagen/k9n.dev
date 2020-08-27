@@ -344,6 +344,10 @@ The actual cronjob config is the following:
 Now as you know my dev setup, it's your turn! Is there any great tool or plugin you can recommend?
 Then just contact me via [E-Mail](mailto:mail@d-koppenhagen.de) or [Twitter](https://twitter.com/d_koppenhagen) and let me know!
 
+**Thank you**
+
+Special thanks go to [Ferdinand Malcher](https://twitter.com/fmalcher01) for revising this article.
+
 <hr>
 
 <span>Photo by <a href="https://unsplash.com/@toddquackenbush">Todd Quackenbush</a> on <a href="https://unsplash.com/">Unsplash</a></span>
