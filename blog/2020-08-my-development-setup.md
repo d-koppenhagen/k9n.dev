@@ -19,6 +19,7 @@ keywords:
 language: en
 thumbnail: assets/images/blog/dev-setup/dev-setup-header.jpg
 thumbnailSmall: assets/images/blog/dev-setup/dev-setup-header-small.jpg
+devTo: https://dev.to/dkoppenhagen/my-development-setup-1ne2
 ---
 
 # My Development Setup
