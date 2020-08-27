@@ -23,6 +23,10 @@ import { MetaService } from '../../meta.service';
 export class BlogContentComponent implements OnInit, AfterViewChecked {
   post$: Observable<ScullyRoute>;
   location: null;
+  shareData: { url: string; description: string } = {
+    url: '',
+    description: '',
+  };
 
   constructor(
     private route: ActivatedRoute,
@@ -53,14 +57,11 @@ export class BlogContentComponent implements OnInit, AfterViewChecked {
       }),
       tap((post: ScullyRoute) => {
         this.metaService.createMetaDataForPost(post);
+        const url = `${location.href}${post.route}`;
+        const description = `${post.title} | ${post.author}\n`;
+        this.shareData = { url, description };
       }),
     );
-  }
-
-  shareData(post: ScullyRoute) {
-    const url = `${location.href}${post.route}`;
-    const description = `${post.title} | ${post.author}\n`;
-    return { url, description };
   }
 
   editOnGithubLink() {
