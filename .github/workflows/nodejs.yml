@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - 'blog/**'
+      - schematics-helpers
 
 jobs:
   build:
