@@ -86,7 +86,7 @@
       "blackCoffee": {
         "heading": "#000000 c0ffee Tech-Talk by DB Systel",
         "text": "In May I was a guest at DB Systel's #000000 c0ffee tech talk, which took place remotely due to the global corona pandemic.\r\nIn the interview, I talk about my developer experience with Vue.js and Angular and about my opinion which framework is suitable for which application. I also talk about the current state of the art for Progressive Webapps (PWA). In the last part we talk about the connection of APIs and the architecture pattern \"Backend For Frontends\" (BFF).",
-        "text2": "Im Mai war ich zu Gast beim #000000 c0ffee Tech-Talk der DB Systel, der Auf Grund der welteweiten Corona Pandemie remote stattfand.\r\nIm Interview spreche ich über meine Erfahrungen mit Vue.js und Angular und gehe darauf ein, welches Framework sich für welche Anwendungszwecke eignet. Außerdem erläutere ich, wie der aktuelle Stand der Technik für Progressive Webapps (PWA) ist. Im letzten Teil sprechen wir über die Anbindung von APIs und über das Architekturmuster \"Backend For Frontends\" (BFF)."
+        "text2": "Im Mai war ich zu Gast beim #000000 c0ffee Tech-Talk der DB Systel, der Auf Grund der weltweiten Corona Pandemie remote stattfand.\r\nIm Interview spreche ich über meine Erfahrungen mit Vue.js und Angular und gehe darauf ein, welches Framework sich für welche Anwendungszwecke eignet. Außerdem erläutere ich, wie der aktuelle Stand der Technik für Progressive Webapps (PWA) ist. Im letzten Teil sprechen wir über die Anbindung von APIs und über das Architekturmuster \"Backend For Frontends\" (BFF)."
       },
       "agiledrop": {
         "heading": "Interview with Agiledrop",
@@ -105,7 +105,7 @@
       "1": {
         "location": "Cottbus",
         "when": "2012",
-        "what": "☎️ Advisor\nTechnical Custome Consulting",
+        "what": "☎️ Advisor\nTechnical Customer Consulting",
         "where": "Deutsche Telekom Technischer Service GmbH (Customer Competence Center)",
         "info": "Second level support for VoIP and WLAN products."
       },
