@@ -214,12 +214,12 @@ hr {
 /* Style source code */
 code {
   background: _palette(border-bg);
-  border-radius: 0px; // _size(border-radius);
+  border-radius: 4px; // _size(border-radius);
   border: 0; // solid 2px _palette(border);
   font-family: _font(family-fixed);
   font-size: 0.9em;
   margin: 0 0.25em;
-  padding: 0.25em 0.65em;
+  padding: 0.2em 0.4em;
 }
 
 pre {
