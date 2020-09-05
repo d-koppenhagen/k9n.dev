@@ -72,26 +72,28 @@
       </section>
       <section class="blog-footer">
         <h2 class="sub-heading">{{ t('share.label') }}</h2>
-        <share-buttons
-          [theme]="'circles-dark'"
-          [include]="[
-            'copy',
-            'twitter',
-            'email',
-            'whatsapp',
-            'facebook',
-            'telegram',
-            'messenger',
-            'linkedin',
-            'xing',
-            'sms',
-            'print'
-          ]"
-          [show]="5"
-          [url]="shareData.url"
-          [description]="shareData.description"
-          [autoSetMeta]="false"
-        ></share-buttons>
+        <div #shareBtnBox>
+          <share-buttons
+            [theme]="'circles-dark'"
+            [include]="[
+              'copy',
+              'twitter',
+              'email',
+              'whatsapp',
+              'facebook',
+              'telegram',
+              'messenger',
+              'linkedin',
+              'xing',
+              'sms',
+              'print'
+            ]"
+            [show]="shareBtnCnt"
+            [url]="shareData.url"
+            [description]="shareData.description"
+            [autoSetMeta]="false"
+          ></share-buttons>
+        </div>
       </section>
     </div>
   </article>
