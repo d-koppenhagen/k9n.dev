@@ -60,11 +60,13 @@ export class BlogContentComponent
       map((currentPostData: ScullyRoute[]) => {
         return currentPostData[0];
       }),
-      tap((post: ScullyRoute) => {
+      tap((post?: ScullyRoute) => {
+        if (!post) {
+          return;
+        }
         this.metaService.createMetaDataForPost(post);
-        const url = `${location.href}${post.route}`;
-        const description = `${post.title} | ${post.author}\n`;
-        this.shareData = { url, description };
+        this.shareData.url = `${location.href}${post.route}`;
+        this.shareData.description = `${post.title} | ${post.author}\n`;
       }),
     );
   }

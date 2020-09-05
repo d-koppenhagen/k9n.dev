@@ -26,11 +26,7 @@ export class MetaService {
     }
   }
 
-  createMetaDataForPost(post: ScullyRoute | undefined) {
-    // handle the unpublished posts properly
-    if (!post) {
-      return;
-    }
+  createMetaDataForPost(post: ScullyRoute) {
     this.removeAllKnownTags();
     this.setTitle(post.title);
     this.setDescription(post.description);

@@ -48,10 +48,13 @@ export class ProjectContentComponent implements OnInit, AfterViewChecked {
             route.route.includes(this.route.snapshot.params.slug),
         );
       }),
-      map((currentPostData) => {
+      map((currentPostData: ScullyRoute[]) => {
         return currentPostData[0];
       }),
-      tap((post) => {
+      tap((post?: ScullyRoute) => {
+        if (!post) {
+          return;
+        }
         this.metaService.createMetaDataForPost(post);
       }),
     );
