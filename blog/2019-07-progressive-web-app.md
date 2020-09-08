@@ -4,12 +4,14 @@ description: 'Immer häufiger stößt man im Webumfeld auf den Begriff der Proge
 Als Progressive Web App bezeichnen wir eine Webanwendung, die beim Aufruf einer Website als App auf einem lokalen Gerät installiert werden kann – zum Beispiel auf dem Telefon oder Tablet.
 Die PWA lässt sich wie jede andere App nutzen, inklusive Push-Benachrichtigungen!'
 published: true
-author: Danny Koppenhagen
-mail: mail@d-koppenhagen.de
+author:
+  name: Danny Koppenhagen
+  mail: mail@d-koppenhagen.de
 updated: 2019-07-24
-publishedAt: angular-buch.com
-publishedAtUrl: https://angular-buch.com/blog/2019-07-progressive-web-app
-publishedAtLogo: https://angular-buch.com/assets/img/brand.svg
+publishedAt:
+  name: angular-buch.com
+  url: https://angular-buch.com/blog/2019-07-progressive-web-app
+  logo: https://angular-buch.com/assets/img/brand.svg
 keywords:
   - PWA
   - Progressive Web App
@@ -19,8 +21,9 @@ keywords:
   - Caching
   - Push Notification
 language: de
-thumbnail: assets/images/blog/pwaheader.jpg
-thumbnailSmall: assets/images/blog/pwaheader-small.jpg
+thumbnail:
+  header: assets/images/blog/pwaheader.jpg
+  card: assets/images/blog/pwaheader-small.jpg
 ---
 
 # Mach aus deiner Angular-App eine PWA
@@ -172,11 +175,11 @@ Als Letztes haben wir noch die Möglichkeit, die Statusbar der App hinsichtlich 
 
 Wir können als Wert für `content` zwischen den folgenden Einstellungen wählen:
 
-|                     | Text- und Iconfarbe | Hintergrundfarbe                        |
-|---------------------|---------------------|-----------------------------------------|
-| `default`           | Schwarz             | Weiß                                    |
-| `white`             | Schwarz             | Weiß                                    |
-| `black`             | Weiß                | Schwarz                                 |
+|                     | Text- und Iconfarbe | Hintergrundfarbe                          |
+| ------------------- | ------------------- | ----------------------------------------- |
+| `default`           | Schwarz             | Weiß                                      |
+| `white`             | Schwarz             | Weiß                                      |
+| `black`             | Weiß                | Schwarz                                   |
 | `black-translucent` | Weiß                | Hintergrundfarbe der App (`body`-Element) |
 
 Wir schauen uns das Ergebnis nun im Safari-Browser unter iOS an. Nach dem Öffnen der Seite können wir diese über die Funktion "Add to Homescreen" auf dem Apple-Gerät speichern.
@@ -457,9 +460,9 @@ Lehnen wir hingegen ab, Benachrichtigungen zu erhalten, so färbt sich der Butto
 
 Unter iOS wird die Funktionalität nicht unterstützt, daher bleibt der Button ausgegraut:
 
-Screenshot Android | Screenshot iOS
-:---:|:---:
-![Screenshot Android](/assets/images/blog/pwa-notification-enabled-android.png) <small>Benachrichtigungen werden unterstützt</small> | ![Screenshot iOS](/assets/images/blog/pwa-notification-not-enabled-ios.png)  <small>Benachrichtigungen werden nicht unterstützt</small>
+|                                                          Screenshot Android                                                          |                                                             Screenshot iOS                                                              |
+| :----------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: |
+| ![Screenshot Android](/assets/images/blog/pwa-notification-enabled-android.png) <small>Benachrichtigungen werden unterstützt</small> | ![Screenshot iOS](/assets/images/blog/pwa-notification-not-enabled-ios.png)  <small>Benachrichtigungen werden nicht unterstützt</small> |
 
 
 
@@ -532,8 +535,8 @@ Dank der vorbereiteten Schematics können wir uns auf die eigentliche Implementi
 Dies war aber nur ein kleiner Einblick in Progressive Web Apps mit Angular.
 Wer noch mehr zum Thema erfahren möchte, dem sei der Blogpost ["Build a production ready PWA with Angular and Firebase"](https://itnext.io/build-a-production-ready-pwa-with-angular-and-firebase-8f2a69824fcc) von Önder Ceylan empfohlen.
 
-Den vollständigen Quelltext aus diesem Artikel können Sie auf [auf GitHub](https://github.com/angular-buch/book-monkey3-pwa) herunterladen.  
-Eine **Demo des BookMonkey als PWA** finden Sie unter der https://bm3-pwa.angular-buch.com – probieren Sie die App am Besten auf Ihrem Smartphone aus! 
+Den vollständigen Quelltext aus diesem Artikel können Sie auf [auf GitHub](https://github.com/angular-buch/book-monkey3-pwa) herunterladen.
+Eine **Demo des BookMonkey als PWA** finden Sie unter der https://bm3-pwa.angular-buch.com – probieren Sie die App am Besten auf Ihrem Smartphone aus!
 
 Viel Spaß beim Programmieren!
 

@@ -4,12 +4,14 @@ description: 'In this article I will introduce the new tool ngx-semantic-version
 This new Angular Schematic allows you to set up all necessary tooling for consistent git commit messages and publishing new versions.
 It will help you to keep your CHANGELOG.md file up to date and to release new tagged versions. All this is done by leveraging great existing tools like commitizen, commitlint and standard-version.'
 published: true
-author: Danny Koppenhagen
-mail: mail@d-koppenhagen.de
+author:
+  name: Danny Koppenhagen
+  mail: mail@d-koppenhagen.de
 updated: 2019-11-06
-publishedAt: angular.schule.com
-publishedAtUrl: https://angular.schule/blog/2019-11-ngx-semantic-version
-publishedAtLogo: https://angular-schule.com/assets/img/brand.svg
+publishedAt:
+  name: angular.schule.com
+  url: https://angular.schule/blog/2019-11-ngx-semantic-version
+  logo: https://angular-schule.com/assets/img/brand.svg
 keywords:
   - Angular
   - Angular CLI
@@ -25,8 +27,9 @@ keywords:
   - Conventional Commits
   - Conventional Changelog
 language: en
-thumbnail: assets/images/blog/ngx-semantic-version-header.jpg
-thumbnailSmall: assets/images/blog/ngx-semantic-version-header-small.jpg
+thumbnail:
+  header: assets/images/blog/ngx-semantic-version-header.jpg
+  card: assets/images/blog/ngx-semantic-version-header-small.jpg
 ---
 
 # ngx-semantic-version: enhance your git and release workflow

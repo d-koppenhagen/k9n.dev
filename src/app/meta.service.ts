@@ -30,7 +30,7 @@ export class MetaService {
     this.removeAllKnownTags();
     this.setTitle(post.title);
     this.setDescription(post.description);
-    this.createCanonicalURL(post.publishedAtUrl);
+    this.createCanonicalURL(post.publishedAt.url);
     this.createTwitterCardForBlogPost(post);
     this.createOpenGraphProfileForBlogPost(post);
   }
@@ -66,7 +66,7 @@ export class MetaService {
     });
     this.meta.updateTag({
       name: 'twitter:image',
-      content: `https://d-koppenhagen.de/${post.thumbnail}`,
+      content: `https://d-koppenhagen.de/${post.thumbnail.header}`,
     });
   }
 
@@ -78,7 +78,7 @@ export class MetaService {
     });
     this.meta.updateTag({
       name: 'og:image',
-      content: `https://d-koppenhagen.de/${post.thumbnail}`,
+      content: `https://d-koppenhagen.de/${post.thumbnail.header}`,
     });
     this.meta.updateTag({
       name: 'og:url',

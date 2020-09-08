@@ -66,7 +66,7 @@ export class BlogContentComponent
         }
         this.metaService.createMetaDataForPost(post);
         this.shareData.url = `${location.href}${post.route}`;
-        this.shareData.description = `${post.title} | ${post.author}\n`;
+        this.shareData.description = `${post.title} | ${post.author.name}\n`;
       }),
     );
   }

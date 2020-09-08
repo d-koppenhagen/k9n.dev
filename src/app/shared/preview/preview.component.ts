@@ -55,7 +55,8 @@ export class PreviewComponent implements OnInit, OnChanges {
             route.keywords.includes(this.search) ||
             route.title.toLowerCase().includes(searchTerm) ||
             route.description.toLowerCase().includes(searchTerm) ||
-            route.author.toLowerCase().includes(searchTerm)
+            route.author.name.toLowerCase().includes(searchTerm) ||
+            route.author.mail.toLowerCase().includes(searchTerm)
           );
         });
       }),

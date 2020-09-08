@@ -2,8 +2,9 @@
 title: ngx-semantic-version — An Angular Schematic to enhance your release workflow
 description: Simply add and configure commitlint, husky, commitizen and standard-version for your Angular project by using Angular Schematics
 published: true
-author: Danny Koppenhagen
-mail: mail@d-koppenhagen.de
+author:
+  name: Danny Koppenhagen
+  mail: mail@d-koppenhagen.de
 updated: 2020-04-09
 keywords:
   - Angular
@@ -20,8 +21,9 @@ keywords:
   - Conventional Commits
   - Conventional Changelog
 language: en
-thumbnail: assets/images/projects/semver-header.jpg
-thumbnailSmall: assets/images/projects/semver-header-small.jpg
+thumbnail:
+  header: assets/images/projects/semver-header.jpg
+  card: assets/images/projects/semver-header-small.jpg
 ---
 
 # ngx-semantic-version

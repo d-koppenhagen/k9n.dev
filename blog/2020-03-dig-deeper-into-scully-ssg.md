@@ -4,8 +4,9 @@ description: 'In this article about Scully, I will introduce some more advanced 
 You will learn how you can setup a custom Markdown module and how you can use AsciiDoc with Scully.
 I will guide you through the process of how to handle protected routes using a custom route plugin.'
 published: true
-author: Danny Koppenhagen
-mail: mail@d-koppenhagen.de
+author:
+  name: Danny Koppenhagen
+  mail: mail@d-koppenhagen.de
 updated: 2020-07-18
 keywords:
   - Angular
@@ -18,11 +19,13 @@ keywords:
   - Static Site Generator
   - Pre-rendering
   - JAM Stack
-devTo: https://dev.to/dkoppenhagen/dig-deeper-into-static-site-generation-with-scully-and-use-the-most-out-of-it-4cn5
-medium: https://medium.com/@danny.koppenhagen/dig-deeper-into-static-site-generation-with-scully-and-use-the-most-out-of-it-ac86f216a6a7
+linked:
+  devTo: https://dev.to/dkoppenhagen/dig-deeper-into-static-site-generation-with-scully-and-use-the-most-out-of-it-4cn5
+  medium: https://medium.com/@danny.koppenhagen/dig-deeper-into-static-site-generation-with-scully-and-use-the-most-out-of-it-ac86f216a6a7
 language: en
-thumbnail: assets/images/blog/scully/scully-header2.jpg
-thumbnailSmall: assets/images/blog/scully/scully-header2-small.jpg
+thumbnail:
+  header: assets/images/blog/scully/scully-header2.jpg
+  card: assets/images/blog/scully/scully-header2-small.jpg
 ---
 
 # Dig deeper into static site generation with _Scully_ and use the most out of it
@@ -63,8 +66,9 @@ To make things easier we can specify a YAML template file with the meta informat
 ```yaml
 description: <fill in a short description for the overview page>
 published: false
-author: Danny Koppenhagen
-mail: mail@d-koppenhagen.de
+author:
+  name: Danny Koppenhagen
+  mail: mail@d-koppenhagen.de
 updated: dd.mm.yyyy
 keywords:
   - Angular

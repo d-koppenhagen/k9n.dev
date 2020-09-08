@@ -1,11 +1,13 @@
 title: Title (should be replace by scully)
 description: Add some description for the project overview page here
 published: false
-author: Danny Koppenhagen
-mail: mail@d-koppenhagen.de
+author:
+  name: Danny Koppenhagen
+  mail: mail@d-koppenhagen.de
 updated: 2020-01-01
 keywords:
   - foo
 language: en
-thumbnail: assets/images/bg1.jpg
-thumbnailSmall: assets/images/bg1.jpg
+thumbnail:
+  header: assets/images/bg3.jpg
+  card: assets/images/bg3.jpg

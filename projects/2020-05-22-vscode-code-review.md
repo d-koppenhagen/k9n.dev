@@ -2,16 +2,18 @@
 title: 'vscode-code-review - Create exportable code reviews in vscode'
 description: 'Create exportable code reviews in Visual Studio Code including automatic file and line references'
 published: true
-author: 'Danny Koppenhagen'
-mail: mail@d-koppenhagen.de
+author:
+  name: Danny Koppenhagen
+  mail: mail@d-koppenhagen.de
 updated: 2020-05-22T00:00:00.000Z
 keywords:
   - code review
   - vscode
   - Visual Studio Code
 language: en
-thumbnail: assets/images/projects/code-review.jpg
-thumbnailSmall: assets/images/projects/code-review-small.jpg
+thumbnail:
+  header: assets/images/projects/code-review.jpg
+  card: assets/images/projects/code-review-small.jpg
 ---
 
 # vscode-code-review

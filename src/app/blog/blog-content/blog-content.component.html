@@ -3,9 +3,12 @@
     <div class="inner">
       <ng-container *ngIf="post$ | async as post">
         <section class="blog-header">
-          <span *ngIf="post.thumbnail" class="image fit">
+          <span
+            *ngIf="post.thumbnail && post.thumbnail.header"
+            class="image fit"
+          >
             <img
-              [src]="post.thumbnail"
+              [src]="post.thumbnail.header"
               [attr.alt]="'headerImage' | transloco"
             />
           </span>
@@ -32,30 +35,34 @@
             </span>
           </div>
           <div
-            *ngIf="post.publishedAt && post.publishedAtUrl"
+            *ngIf="
+              post.publishedAt && post.publishedAt.name && post.publishedAt.url
+            "
             class="published-at"
           >
             <div>
-              <a [href]="post.publishedAtUrl" class="published-at-link">
+              <a [href]="post.publishedAt.url" class="published-at-link">
                 <img
-                  *ngIf="post.publishedAtLogo"
+                  *ngIf="post.publishedAt.logo"
                   class="published-at-logo"
-                  [src]="post.publishedAtLogo"
+                  [src]="post.publishedAt.logo"
                   [attr.alt]="'publisherLogo' | transloco"
                 />
               </a>
             </div>
             <div>
               {{ t('originallyPublishedAtLong') }}:
-              <a [href]="post.publishedAtUrl">{{ post.publishedAt }}</a
+              <a [href]="post.publishedAt.url">{{ post.publishedAt.name }}</a
               >.
             </div>
           </div>
         </section>
-        <section class="external-links">
-          <a *ngIf="post.devTo" [href]="post.devTo">Dev.to</a>
-          <span *ngIf="post.devTo && post.medium"> | </span>
-          <a *ngIf="post.medium" [href]="post.medium">Medium.com</a>
+        <section *ngIf="post.linked" class="external-links">
+          <a *ngIf="post.linked.devTo" [href]="post.linked.devTo">Dev.to</a>
+          <span *ngIf="post.linked.devTo && post.linked.medium"> | </span>
+          <a *ngIf="post.linked.medium" [href]="post.linked.medium"
+            >Medium.com</a
+          >
         </section>
       </ng-container>
       <section class="blog-content">

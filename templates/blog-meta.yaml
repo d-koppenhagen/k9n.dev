@@ -1,16 +1,20 @@
 title: Title (should be replace by scully)
 description: Add some description for the blog overview page here
 published: false
-author: Danny Koppenhagen
-mail: mail@d-koppenhagen.de
+author:
+  name: Danny Koppenhagen
+  mail: mail@d-koppenhagen.de
 updated: 2020-01-01
-publishedAt: Publisher Name
-publishedAtUrl: https://example.com
-publishedAtLogo: https://example.com/img/brand.svg
-devTo: https://dev.to/foo
-medium: https://medium.com/foo
+publishedAt:
+  name: Publisher Name
+  url: https://example.com
+  logo: https://example.com/img/brand.svg
+linked:
+  devTo: https://dev.to/foo
+  medium: https://medium.com/foo
 keywords:
   - Angular
 language: en
-thumbnail: assets/images/bg3.jpg
-thumbnailSmall: assets/images/bg3.jpg
+thumbnail:
+  header: assets/images/bg3.jpg
+  card: assets/images/bg3.jpg

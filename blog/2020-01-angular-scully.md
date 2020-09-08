@@ -2,8 +2,9 @@
 title: Create powerful fast pre-rendered Angular Apps using Scully static site generator
 description: 'You probably heard of the JAMStack. It is a new way of building websites and apps via static site generators that deliver better performance and higher security. With this blog post, I will show you how you can easily create a blogging app by using the power of Angular and the help of Scully static site generator. It will automatically detect all app routes and create static pages out of them that are ready to ship for production.'
 published: true
-author: Danny Koppenhagen
-mail: mail@d-koppenhagen.de
+author:
+  name: Danny Koppenhagen
+  mail: mail@d-koppenhagen.de
 updated: 2020-07-18
 keywords:
   - Angular
@@ -14,11 +15,13 @@ keywords:
   - SSG
   - Pre-rendering
   - JAM Stack
-devTo: https://dev.to/dkoppenhagen/create-powerfull-fast-pre-rendered-angular-apps-using-scully-static-site-generator-31fb
-medium: https://medium.com/@danny.koppenhagen/create-powerful-fast-pre-rendered-angular-apps-using-scully-static-site-generator-79832a549787
+linked:
+  devTo: https://dev.to/dkoppenhagen/create-powerfull-fast-pre-rendered-angular-apps-using-scully-static-site-generator-31fb
+  medium: https://medium.com/@danny.koppenhagen/create-powerful-fast-pre-rendered-angular-apps-using-scully-static-site-generator-79832a549787
 language: en
-thumbnail: assets/images/blog/scully/scully-header.jpg
-thumbnailSmall: assets/images/blog/scully/scully-header-small.jpg
+thumbnail:
+  header: assets/images/blog/scully/scully-header.jpg
+  card: assets/images/blog/scully/scully-header-small.jpg
 ---
 
 # Create powerful fast pre-rendered Angular Apps using _Scully_ static site generator

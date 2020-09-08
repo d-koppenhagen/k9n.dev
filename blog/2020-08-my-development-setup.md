@@ -2,8 +2,9 @@
 title: 'My Development Setup'
 description: 'In this article I will present you what tools I am using during my day-to-day development. Also I will show you a list of extensions and their purpose that help me (and probably you too!) to be more productive.'
 published: true
-author: 'Danny Koppenhagen'
-mail: mail@d-koppenhagen.de
+author:
+  name: Danny Koppenhagen
+  mail: mail@d-koppenhagen.de
 updated: 2020-08-30T00:00:00.000Z
 keywords:
     - Angular
@@ -17,9 +18,11 @@ keywords:
     - Extension
     - macOS
 language: en
-thumbnail: assets/images/blog/dev-setup/dev-setup-header.jpg
-thumbnailSmall: assets/images/blog/dev-setup/dev-setup-header-small.jpg
-devTo: https://dev.to/dkoppenhagen/my-development-setup-1ne2
+thumbnail:
+  header: assets/images/blog/dev-setup/dev-setup-header.jpg
+  card: assets/images/blog/dev-setup/dev-setup-header-small.jpg
+linked:
+  devTo: https://dev.to/dkoppenhagen/my-development-setup-1ne2
 ---
 
 # My Development Setup
