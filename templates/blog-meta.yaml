@@ -8,7 +8,7 @@ publishedAt: Publisher Name
 publishedAtUrl: https://example.com
 publishedAtLogo: https://example.com/img/brand.svg
 devTo: https://dev.to/foo
-medium: : https://medium.com/foo
+medium: https://medium.com/foo
 keywords:
   - Angular
 language: en
