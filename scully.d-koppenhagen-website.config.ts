@@ -60,6 +60,7 @@ const tocOptions: TocConfig = {
   insertSelector: '#toc',
   level: ['h2', 'h3'],
   trailingSlash: true,
+  scrollIntoViewOnClick: true,
 };
 const TocPlugin = getTocPlugin();
 setPluginConfig(TocPlugin, tocOptions);

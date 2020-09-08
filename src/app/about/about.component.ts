@@ -30,7 +30,6 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    console.log();
     this.youtubePlayerWidth = this.videoBox.nativeElement.clientWidth;
   }
 }

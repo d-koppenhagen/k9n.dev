@@ -81,7 +81,9 @@ export class BlogContentComponent
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    console.log(this.shareBtnBox.nativeElement.clientWidth);
+    if (!this.shareBtnBox || !this.shareBtnBox.nativeElement) {
+      return;
+    }
     if (this.shareBtnBox.nativeElement.clientWidth < 410) {
       this.shareBtnCnt = 3;
     } else if (this.shareBtnBox.nativeElement.clientWidth < 480) {

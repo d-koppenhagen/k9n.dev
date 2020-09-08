@@ -167,7 +167,7 @@
     "published": true,
     "author": "Danny Koppenhagen",
     "mail": "mail@d-koppenhagen.de",
-    "updated": "2020-08-27T00:00:00.000Z",
+    "updated": "2020-08-30T00:00:00.000Z",
     "keywords": [
       "Angular",
       "Vue.js",
@@ -279,7 +279,7 @@
   {
     "route": "/projects/2020-05-22-vscode-code-review",
     "title": "vscode-code-review - Create exportable code reviews in vscode",
-    "description": "Create exportable code reviews in Visual Studio Code inlcuding automatic file and line references",
+    "description": "Create exportable code reviews in Visual Studio Code including automatic file and line references",
     "published": true,
     "author": "Danny Koppenhagen",
     "mail": "mail@d-koppenhagen.de",
