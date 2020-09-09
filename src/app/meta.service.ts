@@ -30,7 +30,7 @@ export class MetaService {
     this.removeAllKnownTags();
     this.setTitle(post.title);
     this.setDescription(post.description);
-    this.createCanonicalURL(post.publishedAt.url);
+    this.createCanonicalURL(post.publishedAt?.url);
     this.createTwitterCardForBlogPost(post);
     this.createOpenGraphProfileForBlogPost(post);
   }
