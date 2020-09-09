@@ -32,7 +32,6 @@ jobs:
           find: 'DEVTO_API_KEY'
           replace: ${{ secrets.DEVTO_API_KEY }}
           include: 'scripts/devto-update.js' # Replace with real API Key
-      - name: update on dev.to
       - run: cd scripts
       - run: npm ci
       - run: npm run update
