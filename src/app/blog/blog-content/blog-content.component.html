@@ -64,6 +64,14 @@
             >Medium.com</a
           >
         </section>
+        <section *ngIf="post.related" class="article-series">
+          <h2 class="sub-heading">{{ t('series') }}</h2>
+          <ol class="alt">
+            <li *ngFor="let related of post.related">
+              <a [routerLink]="related.route">{{ related.title }}</a>
+            </li>
+          </ol>
+        </section>
       </ng-container>
       <section class="blog-content">
         <scully-content></scully-content>

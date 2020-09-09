@@ -14,6 +14,30 @@ ol {
   li {
     padding-left: 0.25em;
   }
+
+  &.alt {
+    padding-left: 0;
+
+    li {
+      border-top: solid 1px _palette(border);
+      margin-left: 1em;
+      padding: 0.5em;
+
+      &:hover {
+        background-color: lighten($c01, 5%);
+        border-radius: 3px;
+      }
+
+      > a {
+        padding: 5px;
+        border: none;
+      }
+
+      &:first-child {
+        border-top: 0;
+      }
+    }
+  }
 }
 
 ul {

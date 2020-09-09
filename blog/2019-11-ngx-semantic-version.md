@@ -7,6 +7,7 @@ published: true
 author:
   name: Danny Koppenhagen
   mail: mail@d-koppenhagen.de
+created: 2019-11-06
 updated: 2019-11-06
 publishedAt:
   name: angular.schule.com

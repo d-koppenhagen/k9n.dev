@@ -5,7 +5,8 @@ published: true
 author:
   name: Danny Koppenhagen
   mail: mail@d-koppenhagen.de
-updated: 2020-08-30T00:00:00.000Z
+created: 2020-08-27
+updated: 2020-08-30
 keywords:
     - Angular
     - Vue.js

@@ -51,11 +51,38 @@ export class BlogContentComponent
   ngOnInit() {
     this.post$ = this.srs.available$.pipe(
       map((routeList) => {
-        return routeList.filter(
-          (route: ScullyRoute) =>
+        return routeList.filter((route: ScullyRoute) => {
+          if (
             route.route.startsWith(`/blog/`) &&
-            route.route.includes(this.route.snapshot.params.slug),
-        );
+            route.route.includes(this.route.snapshot.params.slug)
+          ) {
+            const seriesName = route.series;
+            if (route.series) {
+              route.related = routeList
+                .filter((r: ScullyRoute) => r.series === seriesName)
+                .map((r: ScullyRoute) => ({
+                  title: r.title,
+                  route: r.route,
+                  created: r.created,
+                }))
+                .sort(
+                  (
+                    a: { title: string; route: string; created: string },
+                    b: { title: string; route: string; created: string },
+                  ) => {
+                    // Turn your strings into dates, and then subtract them
+                    // to get a value that is either negative, positive, or zero.
+                    return (
+                      new Date(b.created).getTime() -
+                      new Date(a.created).getTime()
+                    );
+                  },
+                );
+              console.log(route);
+            }
+            return route;
+          }
+        });
       }),
       map((currentPostData: ScullyRoute[]) => {
         return currentPostData[0];

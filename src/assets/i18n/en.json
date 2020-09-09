@@ -45,6 +45,7 @@
   "originallyPublishedAtLong": "This blog post has been published originally at",
   "lastUpdate": "Last update",
   "keywords": "Keywords",
+  "series": "Series",
   "keywordAriaLabel": "Filter for keyword: {{value}}",
   "keywordRemove": "Remove Filter '{{value}}'",
   "share": {

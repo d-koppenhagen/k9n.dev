@@ -5,6 +5,7 @@ published: true
 author:
   name: Danny Koppenhagen
   mail: mail@d-koppenhagen.de
+created: 2020-01-01
 updated: 2020-07-18
 keywords:
   - Angular
@@ -22,6 +23,7 @@ language: en
 thumbnail:
   header: assets/images/blog/scully/scully-header.jpg
   card: assets/images/blog/scully/scully-header-small.jpg
+series: scully
 ---
 
 # Create powerful fast pre-rendered Angular Apps using _Scully_ static site generator

@@ -7,6 +7,7 @@ published: true
 author:
   name: Danny Koppenhagen
   mail: mail@d-koppenhagen.de
+created: 2020-03-02
 updated: 2020-07-18
 keywords:
   - Angular
@@ -26,6 +27,7 @@ language: en
 thumbnail:
   header: assets/images/blog/scully/scully-header2.jpg
   card: assets/images/blog/scully/scully-header2-small.jpg
+series: scully
 ---
 
 # Dig deeper into static site generation with _Scully_ and use the most out of it

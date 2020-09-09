@@ -7,6 +7,7 @@ published: true
 author:
   name: Danny Koppenhagen
   mail: mail@d-koppenhagen.de
+created: 2019-07-24
 updated: 2019-07-24
 publishedAt:
   name: angular-buch.com
