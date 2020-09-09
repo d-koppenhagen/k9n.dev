@@ -10,7 +10,6 @@ const articleMap = new Map([
   [229947, { name: '2020-01-angular-scully', preUpdate: () => {} }],
   [272387, { name: '2020-03-dig-deeper-into-scully-ssg', preUpdate: () => {} }],
   [439481, { name: '2020-08-my-development-setup', preUpdate: () => {} }],
-  [450761, { name: 'test-update-devto', preUpdate: () => {} }],
 ]);
 
 function sleep(ms) {
