@@ -1,0 +1,17 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "some helpers",
+  "main": "devto-update.js",
+  "scripts": {
+    "update": "node devto-update.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dev-to-js": "^0.1.1",
+    "markdown-to-json": "^0.5.4",
+    "marked": "^1.1.1"
+  }
+}

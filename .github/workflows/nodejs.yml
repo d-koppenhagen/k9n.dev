@@ -22,3 +22,17 @@ jobs:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
           build-args: '--prod'
+  sync-devto:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: 'DEVTO_API_KEY'
+          replace: ${{ secrets.DEVTO_API_KEY }}
+          include: 'scripts/devto-update.js' # Replace with real API Key
+      - name: update on dev.to
+      - run: cd scripts
+      - run: npm ci
+      - run: npm run update
