@@ -31,7 +31,6 @@ export class BlogOverviewComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log(this.searchInput);
     fromEvent(this.searchInput.nativeElement, 'keyup')
       .pipe(filter(Boolean), debounceTime(300), distinctUntilChanged())
       .subscribe(() => {
