@@ -71,6 +71,7 @@
             <li
               *ngFor="let related of post.related"
               [routerLink]="related.route"
+              [class.current]="post.route === related.route"
             >
               <a [routerLink]="related.route">{{ related.title }}</a>
             </li>

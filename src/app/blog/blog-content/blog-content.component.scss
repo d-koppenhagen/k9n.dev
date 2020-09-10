@@ -20,6 +20,9 @@ h2.sub-heading {
 }
 
 .article-series {
+  .current {
+    background-color: lighten($c01, 3%);
+  }
 }
 
 .published-at,

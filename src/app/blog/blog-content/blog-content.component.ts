@@ -9,9 +9,9 @@ import {
   HostListener,
 } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map, tap, filter } from 'rxjs/operators';
 
 import { HighlightService } from '../../shared/highlight.service';
 import { MetaService } from '../../meta.service';
@@ -35,6 +35,7 @@ export class BlogContentComponent
   @ViewChild('shareBtnBox') shareBtnBox: ElementRef;
 
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private srs: ScullyRoutesService,
     private highlightService: HighlightService,
@@ -49,6 +50,18 @@ export class BlogContentComponent
   }
 
   ngOnInit() {
+    this.refreshPost();
+    this.router.events
+      .pipe(
+        filter((e: any) => e instanceof NavigationEnd),
+        filter((e: NavigationEnd) => e.url.startsWith('/blog')),
+      )
+      .subscribe(() => {
+        this.refreshPost();
+      });
+  }
+
+  refreshPost() {
     this.post$ = this.srs.available$.pipe(
       map((routeList) => {
         return routeList.filter((route: ScullyRoute) => {
