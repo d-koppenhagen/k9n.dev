@@ -49,6 +49,10 @@ export class BlogContentComponent
     this.highlightService.highlightAll();
   }
 
+  ngAfterViewInit() {
+    this.onResize();
+  }
+
   ngOnInit() {
     this.refreshPost();
     this.router.events
@@ -111,17 +115,13 @@ export class BlogContentComponent
     );
   }
 
-  ngAfterViewInit() {
-    this.onResize();
-  }
-
   editOnGithubLink() {
     return `https://github.com/d-koppenhagen/d-koppenhagen.de/edit/master${location.pathname}.md`;
   }
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    if (!this.shareBtnBox || !this.shareBtnBox.nativeElement) {
+    if (!this.shareBtnBox?.nativeElement?.clientWidth) {
       return;
     }
     if (this.shareBtnBox.nativeElement.clientWidth < 410) {

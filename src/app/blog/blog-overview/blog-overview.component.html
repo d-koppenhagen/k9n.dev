@@ -3,12 +3,12 @@
     <div class="inner">
       <h2 class="major">{{ t('myBlogPosts') }}</h2>
       <input
-        type="text"
+        #searchInput
+        type="search"
         [attr.placeholder]="'search' | transloco"
         name="demo-name"
         aria-required="false"
         [attr.aria-label]="'searchAriaLabel' | transloco"
-        #input
       />
 
       <div *ngIf="keyword$ | async as keyword" class="active-keyword-filter">

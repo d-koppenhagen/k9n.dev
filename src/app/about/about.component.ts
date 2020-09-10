@@ -13,7 +13,7 @@ import {
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit, AfterViewInit {
-  youtubePlayerWidth: number;
+  youtubePlayerWidth = 300;
   @ViewChild('videoBox') videoBox: ElementRef;
 
   constructor() {}
@@ -30,6 +30,8 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    this.youtubePlayerWidth = this.videoBox.nativeElement.clientWidth;
+    if (this.videoBox?.nativeElement?.clientWidth) {
+      this.youtubePlayerWidth = this.videoBox.nativeElement.clientWidth;
+    }
   }
 }

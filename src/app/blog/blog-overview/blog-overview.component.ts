@@ -22,7 +22,7 @@ import {
 export class BlogOverviewComponent implements OnInit, AfterViewInit {
   keyword$: Observable<string>;
   searchString: string;
-  @ViewChild('input') input: ElementRef;
+  @ViewChild('searchInput') searchInput: ElementRef;
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
@@ -31,10 +31,11 @@ export class BlogOverviewComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    fromEvent(this.input.nativeElement, 'keyup')
+    console.log(this.searchInput);
+    fromEvent(this.searchInput.nativeElement, 'keyup')
       .pipe(filter(Boolean), debounceTime(300), distinctUntilChanged())
-      .subscribe((text: string) => {
-        this.searchString = this.input.nativeElement.value;
+      .subscribe(() => {
+        this.searchString = this.searchInput.nativeElement.value;
       });
   }
 
