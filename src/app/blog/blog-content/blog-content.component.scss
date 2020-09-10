@@ -14,8 +14,12 @@ h2.sub-heading {
 
 .extra-info {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: space-between;
+  align-content: baseline;
+}
+
+.article-series {
 }
 
 .published-at,
@@ -97,6 +101,12 @@ span.image > img.thumbnail {
 
   table > tbody td > img {
     max-width: 70px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .extra-info {
+    display: block;
   }
 }
 

@@ -15,10 +15,11 @@
         </section>
         <section class="extra-section" *ngIf="post.keywords">
           <div class="extra-info">
+            <span *ngIf="post.updated">
+              {{ t('lastUpdate') }}:
+              <time datetime="2001-05-15 19:00">{{ post.updated | date }}</time>
+            </span>
             <h2 class="sub-heading">{{ t('keywords') }}</h2>
-            <h2 *ngIf="post.updated" class="sub-heading">
-              {{ t('lastUpdate') }}: {{ post.updated | date }}
-            </h2>
           </div>
           <div class="actions">
             <span *ngFor="let keyword of post.keywords">
@@ -67,7 +68,10 @@
         <section *ngIf="post.related" class="article-series">
           <h2 class="sub-heading">{{ t('series') }}</h2>
           <ol class="alt">
-            <li *ngFor="let related of post.related">
+            <li
+              *ngFor="let related of post.related"
+              [routerLink]="related.route"
+            >
               <a [routerLink]="related.route">{{ related.title }}</a>
             </li>
           </ol>
