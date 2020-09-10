@@ -77,8 +77,8 @@ export class BlogContentComponent
                       new Date(a.created).getTime()
                     );
                   },
-                );
-              console.log(route);
+                )
+                .reverse();
             }
             return route;
           }
