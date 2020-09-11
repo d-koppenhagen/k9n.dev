@@ -3,11 +3,24 @@ import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { GoogleAnalytics } from '@scullyio/scully-plugin-google-analytics';
 import { MinifyHtml } from 'scully-plugin-minify-html';
 import { getTocPlugin, TocConfig, TocPluginName } from 'scully-plugin-toc';
+import MermaidAPI from 'mermaid/mermaidAPI';
+import { getMermaidPlugin, MermaidPluginName } from 'scully-plugin-mermaid';
 
 /**
  * configuration for the markdown plugin
  */
 setPluginConfig('md', { enableSyntaxHighlighting: true });
+
+/**
+ * configuration for the mermaid plugin
+ * All params as defined here are valid:
+ * https://mermaid-js.github.io/mermaid/getting-started/Setup.html#mermaidapi-configuration-defaults
+ */
+const mermaidOptions: MermaidAPI.Config = {
+  theme: 'dark',
+};
+const MermaidPlugin = getMermaidPlugin();
+setPluginConfig(MermaidPlugin, mermaidOptions);
 
 /**
  * configuration for the sitemap plugin
@@ -93,11 +106,15 @@ export const config: ScullyConfig = {
       slug: {
         folder: './projects',
       },
-      postRenderers: [...defaultPostRenderers],
+      postRenderers: [MermaidPluginName, ...defaultPostRenderers],
     },
     '/blog/:slug': {
       type: 'contentFolder',
-      postRenderers: [TocPluginName, ...defaultPostRenderers],
+      postRenderers: [
+        TocPluginName,
+        MermaidPluginName,
+        ...defaultPostRenderers,
+      ],
       slug: {
         folder: './blog',
       },

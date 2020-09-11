@@ -8,6 +8,7 @@
     "description": "Immer häufiger stößt man im Webumfeld auf den Begriff der Progessive Web App – kurz: PWA. Doch was genau steckt dahinter und welche Vorteile hat eine PWA gegenüber einer herkömmlichen Webanwendung oder einer App? Als Progressive Web App bezeichnen wir eine Webanwendung, die beim Aufruf einer Website als App auf einem lokalen Gerät installiert werden kann – zum Beispiel auf dem Telefon oder Tablet. Die PWA lässt sich wie jede andere App nutzen, inklusive Push-Benachrichtigungen!",
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
+    "created": "2019-07-24T00:00:00.000Z",
     "updated": "2019-07-24T00:00:00.000Z",
     "publishedAt": {
       "name": "angular-buch.com",
@@ -36,6 +37,7 @@
     "description": "In this article I will introduce the new tool ngx-semantic-version. This new Angular Schematic allows you to set up all necessary tooling for consistent git commit messages and publishing new versions. It will help you to keep your CHANGELOG.md file up to date and to release new tagged versions. All this is done by leveraging great existing tools like commitizen, commitlint and standard-version.",
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
+    "created": "2019-11-06T00:00:00.000Z",
     "updated": "2019-11-06T00:00:00.000Z",
     "publishedAt": {
       "name": "angular.schule.com",
@@ -70,6 +72,7 @@
     "description": "You probably heard of the JAMStack. It is a new way of building websites and apps via static site generators that deliver better performance and higher security. With this blog post, I will show you how you can easily create a blogging app by using the power of Angular and the help of Scully static site generator. It will automatically detect all app routes and create static pages out of them that are ready to ship for production.",
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
+    "created": "2020-01-01T00:00:00.000Z",
     "updated": "2020-07-18T00:00:00.000Z",
     "keywords": [
       "Angular",
@@ -90,6 +93,7 @@
       "header": "assets/images/blog/scully/scully-header.jpg",
       "card": "assets/images/blog/scully/scully-header-small.jpg"
     },
+    "series": "scully",
     "sourceFile": "2020-01-angular-scully.md"
   },
   {
@@ -98,6 +102,7 @@
     "description": "Am 6. Februar 2020 wurde bei Google in Kalifornien der \"rote Knopf\" gedrückt: Das lang erwartete neue Release ist da – die neue Major-Version Angular 9.0! Wir werden Ihnen in diesem Artikel die wichtigsten Neuerungen vorstellen.",
     "published": true,
     "author": { "name": "Angular Buch Team", "mail": "team@angular-buch.com" },
+    "created": "2020-02-10T00:00:00.000Z",
     "updated": "2020-02-10T00:00:00.000Z",
     "publishedAt": {
       "name": "angular-buch.com",
@@ -118,6 +123,7 @@
       "header": "assets/images/blog/ng9/angular9.jpg",
       "card": "assets/images/blog/ng9/angular9-small.jpg"
     },
+    "series": "angular-update",
     "sourceFile": "2020-02-angular9.md"
   },
   {
@@ -126,6 +132,7 @@
     "description": "In this article about Scully, I will introduce some more advanced features. You will learn how you can setup a custom Markdown module and how you can use AsciiDoc with Scully. I will guide you through the process of how to handle protected routes using a custom route plugin.",
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
+    "created": "2020-03-02T00:00:00.000Z",
     "updated": "2020-07-18T00:00:00.000Z",
     "keywords": [
       "Angular",
@@ -148,6 +155,7 @@
       "header": "assets/images/blog/scully/scully-header2.jpg",
       "card": "assets/images/blog/scully/scully-header2-small.jpg"
     },
+    "series": "scully",
     "sourceFile": "2020-03-dig-deeper-into-scully-ssg.md"
   },
   {
@@ -156,6 +164,7 @@
     "description": "Nach nur vier Monaten Entwicklungszeit wurde am 24. Juni 2020 die neue Major-Version Angular 10.0 veröffentlicht! Wir werden Ihnen in diesem Artikel die wichtigsten Neuerungen vorstellen.",
     "published": true,
     "author": { "name": "Angular Buch Team", "mail": "team@angular-buch.com" },
+    "created": "2020-06-29T00:00:00.000Z",
     "updated": "2020-06-29T00:00:00.000Z",
     "publishedAt": {
       "name": "angular-buch.com",
@@ -176,6 +185,7 @@
       "header": "assets/images/blog/ng10/angular10.jpg",
       "card": "assets/images/blog/ng10/angular10-small.jpg"
     },
+    "series": "angular-update",
     "sourceFile": "2020-06-angular10.md"
   },
   {
@@ -184,6 +194,7 @@
     "description": "In this article I will present you what tools I am using during my day-to-day development. Also I will show you a list of extensions and their purpose that help me (and probably you too!) to be more productive.",
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
+    "created": "2020-08-27T00:00:00.000Z",
     "updated": "2020-08-30T00:00:00.000Z",
     "keywords": [
       "Angular",
@@ -315,5 +326,20 @@
       "card": "assets/images/projects/code-review-small.jpg"
     },
     "sourceFile": "2020-05-22-vscode-code-review.md"
+  },
+  {
+    "route": "/projects/2020-09-12-scully-plugin-mermaid",
+    "title": "scully-plugin-mermaid",
+    "description": "Add a Scully.io PostRenderer plugin for Mermaid.js graphs, charts and diagrams embedded in Markdown files.",
+    "published": true,
+    "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
+    "updated": "2020-09-12T00:00:00.000Z",
+    "keywords": ["Angular", "Scully", "SSR", "SSG", "JAM Stack", "Mermaid"],
+    "language": "en",
+    "thumbnail": {
+      "header": "assets/images/projects/mermaid.jpg",
+      "card": "assets/images/projects/mermaid-small.jpg"
+    },
+    "sourceFile": "2020-09-12-scully-plugin-mermaid.md"
   }
 ]
