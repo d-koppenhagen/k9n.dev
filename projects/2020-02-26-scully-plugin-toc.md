@@ -17,9 +17,6 @@ language: en
 thumbnail:
     header: assets/images/projects/toc.jpg
     card: assets/images/projects/toc-small.jpg
-slugs:
-    - ___UNPUBLISHED___kezaocuv_cjuRhWPHN5HNYPmSv5l7DIJfNo03Ft6X
-
 ---
 # scully-plugin-toc
 
