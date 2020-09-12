@@ -1,5 +1,5 @@
 ---
-title: 'vscode-code-review - Create exportable code reviews in vscode'
+title: 'vscode-code-review — Create exportable code reviews in vscode'
 description: 'Create exportable code reviews in Visual Studio Code including automatic file and line references'
 published: true
 author:

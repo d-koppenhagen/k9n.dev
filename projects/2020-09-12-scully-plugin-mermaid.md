@@ -1,5 +1,5 @@
 ---
-title: 'scully-plugin-mermaid - A PostRenderer Plugin for Mermaid'
+title: 'scully-plugin-mermaid — A PostRenderer Plugin for Mermaid'
 description: 'Add a Scully.io PostRenderer plugin for Mermaid.js graphs, charts and diagrams embedded in Markdown files.'
 published: true
 author:

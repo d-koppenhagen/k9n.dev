@@ -1,5 +1,5 @@
 ---
-title: 'scully-plugin-toc - A Plugin for generating table of contents'
+title: 'scully-plugin-toc — A Plugin for generating table of contents'
 description: 'This plugin for Scully will insert a table of contents (TOC) for your Markdown content automatically'
 published: true
 author:
