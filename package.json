@@ -89,7 +89,7 @@
     "prettier": "^2.1.1",
     "pretty-quick": "^3.0.0",
     "protractor": "~7.0.0",
-    "scully-plugin-mermaid": "0.0.2",
+    "scully-plugin-mermaid": "^0.0.3",
     "scully-plugin-minify-html": "^3.2.0",
     "scully-plugin-toc": "^1.4.1",
     "standard-version": "^9.0.0",
