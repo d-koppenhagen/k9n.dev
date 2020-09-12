@@ -1,6 +1,6 @@
 ---
-title: 'Author Angular Schematics by using common helpers'
-description: 'Authoring an Angular CLI Schematic offers us a way to add, scaffold and update app related modules and files. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal.'
+title: 'Create Angular Schematics with common helpers'
+description: 'Angular CLI Schematics offer us a way to add, scaffold and update app-related files and modules. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal.'
 published: false
 author:
   name: Danny Koppenhagen
@@ -19,13 +19,14 @@ slugs:
   - ___UNPUBLISHED___kepw8ihb_clayHamVsY3FJOTrgMAekr0QFSRFKSiS
 ---
 
-Authoring an Angular CLI Schematic offers us a way to add, scaffold and update app related modules and files. However, there are some common things such as updating your `package.json` file, adding or removing an Angular module or updating component imports we will probably integrate in our schematics.
+Angular CLI Schematics offer us a way to add, scaffold and update app-related files and modules. However, there are some common things we will probably want integrate in our schematics: updating your `package.json` file, adding or removing an Angular module or updating component imports.
 
-Currently, the way of authoring an Angular Schematic is documented at [angular.io](https://angular.io/guide/schematics-authoring).
-But there is one big thing missing in the documentation: The way of integrating typical tasks.
-The Angular CLI itself uses the schematics for e.g. generating modules and components, adding imports or modifying the `package.json`.
-Under the hood each of the schematics uses some very common utils that are not documented by now but still available for all developers.
-As I've seen some Angular CLI schematic projects where people trying to implement almost the same common util methods by their own as already implemented in the Angular CLI, I want to show you in this blog post some very typical helpers that you can use for you Angular CLI Schematic project to prevent any pitfalls.
+Currently, the way of authoring an Angular Schematic is documented in the [documentation](https://angular.io/guide/schematics-authoring).
+However, there is one big thing missing there: the way of integrating typical and repeating tasks.
+The Angular CLI itself uses schematics for e.g. generating modules and components, adding imports or modifying the `package.json`.
+Under the hood each of the schematics uses some very common utils which are not yet documented by now but are available for all developers anyway.
+In the past, I've seen some Angular CLI schematics projects where people were trying to implement almost the same common util methods on their own.
+However, since some of these are already implemented in the Angular CLI, I want to show you some of those typical helpers that you can use for you Angular CLI Schematic project to prevent any pitfalls.
 
 <hr>
 
@@ -35,28 +36,28 @@ As I've seen some Angular CLI schematic projects where people trying to implemen
 
 ## Attention: not officially supported
 
-As the following helper functions I present you in this article are not documented and officially supported, they may change in the future.
-[Alan Agius](https://twitter.com/AlanAgius4), member of the Angular/Angular CLI core team replyed in a [realted issue (#15335)](https://github.com/angular/angular-cli/issues/15335#issuecomment-660609283) for creating a public schematics API reference:
+The helper functions I present you in this article are neither documented nor officially supported, and they may change in the future.
+[Alan Agius](https://twitter.com/AlanAgius4), member of the Angular CLI core team replied in a [related issue (#15335)](https://github.com/angular/angular-cli/issues/15335#issuecomment-660609283) for creating a public schematics API reference:
 
 > [...] those utils are not considered as part of the public API and might break without warning in any release.
 
-So, there are plans to provide some utilities via public API but this is still in planning stages.
-However, until this point of time, it's my intention, to keep this article as up-to-date as possible.
+So, there are plans to provide some utilities via a public API but this is still in the planning stage.
+While things evolve, it's my intention to keep this article as up-to-date as possible.
 
-> The following Angular CLI schematics util functions I will present are based on the Angular CLI version `10.1.1`.
+> The following Angular CLI schematics util functions are based on the Angular CLI version `10.1.1`.
 
-If you are using this functions, and they will break in the future, you can check out the [source code changes](https://github.com/angular/angular-cli/tree/master/packages/schematics/angular/utility) for the utility functions and adjust your code.
+If you use these functions and they will break in the future, you can check out the [source code changes](https://github.com/angular/angular-cli/tree/master/packages/schematics/angular/utility) for the utility functions and adjust your code.
 
 ## Create an Angular Schematics example project
 
-First things first: We need some project where we try out things.
+First things first: We need a project where we can try things out.
 You can either use an existing schematics project or simply create a new blank one:
 
 ```bash
 npx @angular-devkit/schematics-cli blank --name=playground
 ```
 
-> If you are not familar with the basics of authoring schematics, I would recommend you to read the [Angular Docs](https://angular.io/guide/schematics-authoring) and the [blog post _"Total Guide To Custom Angular Schematics"_ from Tomas Trajan](https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4) first.
+> If you are not familar with the basics of authoring schematics, I recommend you to read the [Angular Docs](https://angular.io/guide/schematics-authoring) and the [blog post _"Total Guide To Custom Angular Schematics"_ by Tomas Trajan](https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4) first.
 
 After setting up the new blank project we should have this file available: `src/playground/index.ts`.
 
@@ -71,64 +72,67 @@ export function playground(_options: any): Rule {
 }
 ```
 
-This will be our base for the following examples and explanations.
-You should be sure you can execute the blank schematic by calling it on the console:
+This is the base for the following examples and explanations.
+Please make sure that you can execute the blank schematic by calling it on the console:
 
 ```bash
 npx @angular-devkit/schematics-cli .:playground
 ```
 
-or if you installed the schematics globally via `npm i @angular-devkit/schematics-cli`:
+or if you installed the schematics CLI globally via `npm i @angular-devkit/schematics-cli`:
 
 ```bash
 schematics .:playground
 ```
 
+The `.` refers to the current directory where our schematics project lives.
+
+
 ### Basic types
 
-In case you are not familiar with the schematics, I will just explain some very basic things in short:
+In case you are not familiar with the structure of schematics, I will just explain some very basic things shortly:
 
-- A **`Tree`** is the structured virtual representation of every file in the workspace.
-- A **`Rule`** is called with a `Tree` and a `SchematicContext`. The Rule is supposed to make changes on the `Tree` and returns the adjusted `Tree`.
-- The **`SchematicContext`** contains information necessary for Schematics to execute some rules.
+- A **`Tree`** is the structured virtual representation of every file in the workspace which we apply the schematic to.
+- A **`Rule`** is called with a `Tree` and a `SchematicContext`. The `Rule` is supposed to make changes on the `Tree` and returns the adjusted `Tree`.
+- The **`SchematicContext`** contains information necessary for the schematics to execute some rules.
 
 ### Install the helpers from `@schematics/angular`
 
-A second thing we need to do is to install the package `@schematics/angular` which contains all the utils we need for the further steps.
-This package contains all the schematics the Angular CLI uses by itself when running command like `ng generate` or `ng new` etc.
+A second thing we need to do is to install the package `@schematics/angular` which contains all the utils we need for the next steps.
+This package contains all the schematics the Angular CLI uses by itself when running commands like `ng generate` or `ng new` etc.
 
 ```bash
 npm i --save @schematics/angular
 ```
 
-## Get, Add and Remove (dev-, peer-) dependencies of/in the `package.json` file
+## Changing the `package.json`: Get, Add and Remove (dev-, peer-) dependencies
 
 A very common thing when authoring a schematic is adding a dependency to the `package.json` file.
 Of course, we can implement a function that parses and writes to/from our JSON file.
 But why should we solve a problem that's already solved?
 
-We can simply use the functions from `@schematics/angular/utility/dependencies` to handle such dependency operations.
+For this, we can use the functions provided by `@schematics/angular/utility/dependencies` to handle dependency operations.
 The function `addPackageJsonDependency()` allows us to add a dependency object of type `NodeDependency` to the `package.json` file.
 The property `type` must contain a value of the `NodeDependencyType` enum.
-Behind it's values we will find the different section names a `package.json` file can contain:
+Its values represent the different sections of a `package.json` file:
 
 - `dependencies`,
 - `devDependencies`,
 - `peerDependencies` and
 - `optionalDependencies`.
 
-As first parameter it needs the `Tree` with all it's files.
-This util function will not just append the dependency to the appropriate section, it will insert the dependency also at the right place, so that the dependencies list is ordered ascending by their keys.
+The first parameter to this util function is the `Tree` with all its files.
+The function will not just append the dependency to the appropriate section, it will also insert the dependency at the right position, so that the dependencies list is ordered ascending by its keys.
 
 We can use the `getPackageJsonDependency()` function to request the dependency configuration as a `NodeDependency` object.
-The good thing here: We don't need to know if we will request d dependency form the `dependencies`, `devDependencies`, `peerDependencies` or `optionalDependencies` section of the `package.json` file.
+The good thing here is: We don't need to know in which of the sections a dependency is located. It will look up the dependency in sections of the `package.json` file: `dependencies`, `devDependencies`, `peerDependencies` and `optionalDependencies`.
 
-The third function I want to show you is `removePackageJsonDependency()`.
-Like `getPackageJsonDependency()`, it needs also just the `Tree` and the package name and it will remove this dependency from the correct section in the `package.json` file.
+The third function I want to show is `removePackageJsonDependency()`.
+Just like `getPackageJsonDependency()`, it can be called with a `Tree` and the package name and it will remove this dependency from the `package.json` file.
 
-By default, all this functions will use the `package.json` file in the root of the tree, but we can pass a third parameter containing a specific path to the `package.json` file.
+By default, all these functions will use the `package.json` file in the root of the tree, but we can pass a third parameter containing a specific path to another `package.json` file.
 
-Last but not least we don't want our users later to run manually a `npm install` on the console.
+Last but not least we don't want our users to manually run `npm install` on the console after adding dependencies.
 Therefore, we can add a new `NodePackageInstallTask` via the `addTask` method on our `context`.
 
 ```ts
@@ -166,28 +170,32 @@ export function playground(_options: any): Rule {
 }
 ```
 
-To really check that the `NodePackageInstallTask` is executed, you need to disable the schematics debug mode that's enabled by default during development and local execution:
+To really check that the `NodePackageInstallTask` is properly executed, you need to disable the schematics debug mode that's enabled by default during development and local execution:
 
 ```bash
 schematics .:playground --debug=false
 ```
 
 
-> [Checkout the implementation dependency operations in detail](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/dependencies.ts)
+> [Check out the implementation of the dependency operations in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/dependencies.ts)
 
-## Add a content to a specific position
+## Add content on a specific position
 
 Sometimes we need to change some contents of a file.
-Independently of the type of a file, we can use the `InsertChange` class that'll return a change object containing the content to be added and the position where the change is inserted.
+Independently of the type of a file, we can use the `InsertChange` class.
+This class returns a change object which contains the content to be added and the position where the change is being inserted.
+
 In the following example we will create a new file called `my-file.extension` with the content '`const a = 'foo';`' inside the virtual tree.
-Now we will instantiate a new `InsertChange` with the file path, the position where we want to add the change and finally the content we want to add.
-The next step for us is to start the update process for the file using the `beginUpdate` method on our tree.
-This method returns an `UpdateRecorder`.
-We use the `insertLeft()` method, and we will hand over the position and the content (`toAdd`) from the `InsertChange`.
-The change is now marked but not proceeded.
-To really update the files content, we need to call the `commitUpdate()` method on our tree with the `exportRecorder`.
-When we will now call `tree.get(filePath)`, we can log the files content and see that the change has been proceeded.
+First, we will instantiate a new `InsertChange` with the file path, the position where we want to add the change and finally the content we want to add.
+The next step for us is to start the update process for the file using the `beginUpdate()` method on our tree.
+This method returns an object of type `UpdateRecorder`.
+We can now use the `insertLeft()` method and hand over the position and the content (`toAdd`) from the `InsertChange`.
+The change is now marked but not proceeded yet.
+To really update the file's content we need to call the `commitUpdate()` method on our tree with the `exportRecorder`.
+When we now call `tree.get(filePath)` we can log the file's content and see that the change has been proceeded.
 To delete a file inside the virtual tree, we can use the `delete()` method with the file path on the tree.
+
+Let's have a look at an implementation example:
 
 ```ts
 import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics/';
@@ -195,7 +203,7 @@ import { InsertChange } from '@schematics/angular/utility/change';
 
 export function playground(_options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
-    const filePath = 'my-file.fileextension';
+    const filePath = 'my-file.extension';
     tree.create(filePath, `const a = 'foo';`);
 
     // insert a new change
@@ -213,12 +221,12 @@ export function playground(_options: any): Rule {
 }
 ```
 
-> [Checkout the implementation for `InsertChange` in detail](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/change.ts)
+> [Check out the implementation for `InsertChange` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/change.ts)
 
-## Determine relative path to project root
+## Determine relative path to the project root
 
 You might want to determine the relative path to your project root e.g. for using it in a template you want to apply in some location of your application.
-To determine the correct relative import path string for the target, you can use the helper function `relativePathToWorkspaceRoot`.
+To determine the correct relative import path string for the target, you can use the helper function `relativePathToWorkspaceRoot()`.
 
 ```ts
 import {
@@ -255,7 +263,7 @@ export function playground(_options: any): Rule {
 }
 ```
 
-If you have for example a JSON file template in the directory `files` and you want to insert the path, you can use the helper function in the template as follows:
+If you have e.g. a JSON file template in the directory `files` and you want to insert the path, you can use the helper function in the template as follows:
 
 ```json
 {
@@ -263,19 +271,19 @@ If you have for example a JSON file template in the directory `files` and you wa
 }
 ```
 
-For more details about how to use and apply templates in your own schematics, check out the [blog post from Tomas Trajan: _'Total Guide To Custom Angular Schematics'_](https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4)
+For more details about how to use and apply templates in your own schematics, check out the [blog post by Tomas Trajan: _'Total Guide To Custom Angular Schematics'_](https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4).
 
-> [Checkout the implementations for `relativePathToWorkspaceRoot` in detail](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/paths.ts)
+> [Check out the implementation for `relativePathToWorkspaceRoot()` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/paths.ts)
 
 
 ## Add TypeScript imports
 
-In the last section we learned how to add content to some file.
-However, this way for changing a file isn't the best and only works good when we do know the exact position where to add some content.
-Image a user changes the format of the file before: This would lead into problems with finding the correct file position.
+In the previous section we learned how to add content to some file.
+However, this way for changing a file isn't the best and only works well when we know the exact position where to add some content.
+Now imagine a user changes the format of the file before: This would lead to problems with finding the correct file position.
 
 In many cases we want to modify TypeScript files and insert code into them.
-And indeed there are also lot's of utils that will help us to manage such operations.
+And indeed there are also lots of utils that will help us to manage such operations.
 
 Imagine you want the schematic to import the class `Bar` in a specific file from the file `bar.ts`;
 You could simply add the whole import line but there are edge cases:
@@ -284,7 +292,7 @@ In that case we would have multiple import lines for `bar.ts` which causes probl
 
 Luckily there is another great helper that takes care of adding imports or updating existing ones.
 The function `insertImport()` needs the source file to update and the path to the file followed by the import name and the file path for the import to be added.
-The last parameter is optional — if set to `true`, the import will be added as a default import.
+The last parameter is optional – if set to `true`, the import will be added as a default import.
 
 ```ts
 import * as ts from 'typescript';
@@ -318,31 +326,31 @@ const bar = 'bar;
 ```
 
 The example above will add the content `import Bar from './bar';` right before the constant.
-As we marked it as default import, the import it not added between the curly braces (`{ }`).
+As we marked it as default import, the import name is not put in curly braces (`{ }`).
 
-> [Checkout the implementation for `insertImport` in detail](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/change.ts)
+> [Check out the implementation for `insertImport()` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/change.ts)
 
 ## Update `NgModule`
 
 Now we know how we can modify TypeScript imports using the util functions.
-But importing something isn't enough in most cases.
-There are common things like import a component and add it to the `NgModule` in the `declaration` array or inserting a module in the `exports` section.
-For such operations we can use the helpers too.
-These helpers are also based on the `insertImport` function, so that they will handle already existing file imports and just updating the import lists.
+However, just importing something isn't enough in most cases.
+There are common things like importing a component and adding it to the `NgModule` in the `declarations` array or inserting a module in the `imports` section.
+Luckily, there are some helpers provided for these operations.
+These function also based on the `insertImport()` function, so that they will handle existing file imports and just update the import lists accordingly.
 
 ### Add a declaration to a module
 
-The first thing I want to show you is how you can add a component to a `NgModule`'s `declarations`.
-Imagine you will create a schematic that adds a `DashboardComponent` to your project.
-You don't need to add the import manually and then find the right place where to insert the component to the `declarations` of the `NgModule`.
-You can simply use the `addDeclarationToModule` function exported from `@schematics/angular/utility/ast-utils`.
+The first thing I want to show you is how you can add a component to the `declarations` of an `NgModule`.
+For this, let's assume you create a schematic that adds a new `DashboardComponent` to your project.
+You don't need to add the import manually and then determine the right place to insert the component to the `declarations` of the `NgModule`.
+Instead, you can use the `addDeclarationToModule()` function exported from `@schematics/angular/utility/ast-utils`.
 
 In the following example we will create an `AppModule` from the `moduleContent` using `ts.createSourceFile()` first.
 Then we will register the `updateRecorder` as learned in the examples before.
 Now we call the `addDeclarationToModule()` function with the source file and the module path followed by the name of the component we want to import and the relative path to the module where we can find the component.
-As a result it returns us an array of `Change`s that contains the positions and the contents for the change.
-Now we can handle this changes one-by-one by iterating over the array.
-For all changes of type `InsertChange` we can now call our `updateRecorder`s function `insertLeft` with the position of the change and the content to be added.
+As a result it returns us an array of `Change` objects that contain the positions and the contents for the change.
+Finally, we can handle these changes one-by-one by iterating over the array.
+For all changes of type `InsertChange` we can now call the method `updateRecorder.insertleft()` with the position of the change and the content to be added.
 
 ```ts
 import * as ts from 'typescript';
@@ -383,7 +391,7 @@ export class AppModule { }
       modulePath,
       'DashboardComponent',
       './dashboard.component'
-    ) as  InsertChange[];
+    ) as InsertChange[];
     for (const change of changes) {
       if (change instanceof InsertChange) {
         updateRecorder.insertLeft(change.pos, change.toAdd);
@@ -397,15 +405,19 @@ export class AppModule { }
 }
 ```
 
-When we execute the schematic now, we can see in the log, that the line `import { DashboardComponent } from './dashboard.component';` has been added to the file.
+When we execute this schematic now, we can see in the log that the following import line has been added to the file:
 
-> [Checkout the implementations for ast-utils in detail](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/ast-utils.ts)
+```ts
+import { DashboardComponent } from './dashboard.component';
+```
 
-### Add imports, exports, providers, `bootstrap` and `entryComponents`
+> [Check out the implementation for ast-utils in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/ast-utils.ts)
 
-Similar to the previous example we can re-export something we imported by using the `addExportToModule` function and adding an import to the `NgModule` by using the `addImportToModule`.
-We can also modify the providers and the `bootstrap` and `entryComponents` arrays by using the helpers `addProviderToModule()`, `addBootstrapToModule()` and `addEntryComponentToModule()`.
-Again it will take care of all things we need to take care of such as already existing imports, if the properties `exports` / `imports` in the `NgModule` decorator are already present and need just to be updated or if it should be added and so on.
+### `NgModule`: add `imports`, `exports`, `providers`, `bootstrap` and `entryComponents`
+
+Similar to the previous example we can re-export something we imported by using the `addExportToModule()` function and adding an import to the `NgModule` by using `addImportToModule()`.
+We can also modify the `providers`, `bootstrap` and `entryComponents` arrays by using  `addProviderToModule()`, `addBootstrapToModule()` and `addEntryComponentToModule()`.
+Again, it will take care of all the things necessary such as extending and creating imports, checking for existing entries in the `NgModule` metadata and much more.
 
 ```ts
 /* ... */
@@ -426,19 +438,19 @@ export function playground(_options: any): Rule {
       modulePath,
       'FooModule',
       './foo.module'
-    ) as  InsertChange[];
+    ) as InsertChange[];
     const importChanges = addImportToModule(
       source,
       modulePath,
       'BarModule',
       './bar.module'
-    ) as  InsertChange[];
+    ) as InsertChange[];
     const providerChange = addProviderToModule(
       source,
       modulePath,
       'MyProvider',
       './my-provider.ts'
-    ) as  InsertChange[];
+    ) as InsertChange[];
     const bootstrapChange = addBootstrapToModule(
       source,
       modulePath,
@@ -486,12 +498,12 @@ import { BazComponent } from './baz.component.ts';
 export class AppModule { }
 ```
 
-> [Checkout the implementations for ast-utils in detail](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/ast-utils.ts)
+> [Check out the implementation for ast-utils in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/ast-utils.ts)
 
 ### Add route declarations
 
-Let's have a look at another common scenario: We want that our schematic inserts a route definition to module that calls `RouterModule.forRoot()` or `.forChild()` with a route definition array.
-Therefore, we can simply use the helper function `addRouteDeclarationToModule()` that returns us a `Change` object which we need to handle as an `InsertChange`.
+Let's have a look at another common scenario: We want our schematic to insert a route definition to a module that calls `RouterModule.forRoot()` or `.forChild()` with a route definition array.
+For this, we can use the helper function `addRouteDeclarationToModule()` which returns a `Change` object which we need to handle as an `InsertChange`.
 
 ```ts
 import * as ts from 'typescript';
@@ -540,12 +552,12 @@ export function playground(_options: any): Rule {
 
 The example above will insert the route definition object `{ path: 'bar', component: BarComponent }` into the `myRoutes` array by finding the variable associated in `forRoot()` or `forChild()`.
 
-> [Checkout the implementations for ast-utils in detail](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/ast-utils.ts)
+> [Check out the implementation for ast-utils in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/ast-utils.ts)
 
 ## Retrieve the Angular workspace configuration
 
-Each Angular app lives in an Angular workspace containing the `angular.json` configuration file.
-If we want to get either the path to the workspace configuration file or the configuration from the file itself, we can use the `getWorkspacePath()` and `getWorkspace()` functions by passing the current `Tree` object over.
+Each Angular app lives in an Angular workspace containing an `angular.json` configuration file.
+If we want to get either the path to the workspace configuration file or the configuration from the file itself, we can use the `getWorkspacePath()` and `getWorkspace()` functions by passing in the current `Tree` object.
 
 ```ts
 import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
@@ -563,23 +575,24 @@ export function playground(_options: any): Rule {
 }
 ```
 
-To try out things locally, we need to execute the schematics from an angular app root path on our system.
-So simply navigate into an existing Angular app on your system or just create a new one fur testing purposes and execute the schematic from there by using the relative path to the `src/collection.json` file and adding the schematic name after the colon (`:`).
+To try out things locally, we need to execute the schematics from an Angular app root path on our system.
+To do so, navigate into an existing Angular app or create a new one for testing purposes.
+Then, execute the schematic from there by using the relative path to the `src/collection.json` file and adding the schematic name after the colon (`:`).
 
 ```bash
-ng new some-test-project  # create a new test project
+ng new some-test-project --routing  # create a new test project
 cd some-test-project      # be sure to be in the root of the angular project
 # assume the schematics project itself is located relatively to the angular project in '../playground'
 schematics ../playground/src/collection.json:playground # execute the 'playground' schematic
 ```
 
-> [Checkout the implementations in detail](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/config.ts)
+> [Check out the implementation in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/config.ts)
 
 ## Get default path for an app inside the workspace
 
 An Angular workspace can contain multiple applications or libraries.
 To find their appropriate main paths, you can use the helper function `createDefaultPath()`.
-We need to pass over the `Tree` object and the string of the app or library we want to get the path for.
+We need to pass in the `Tree` object and the name of the app or library we want to get the path for.
 
 ```ts
 import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
@@ -596,21 +609,22 @@ export function playground(_options: any): Rule {
 Let's create a new library inside our testing Angular app called `my-lib`, to try it out:
 
 ```bash
-ng g lib my-lib  # create a new library inside the angular workspace
+ng g lib my-lib  # create a new library inside the Angular workspace
 # assume the schematics project itself is located relatively to the angular project in '../playground'
 schematics ../playground/src/collection.json:playground # execute the 'playground' schematic
 ```
 
-> [Checkout the implementation for `createDefaultPath` in detail](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/workspace.ts)
+> [Check out the implementation for `createDefaultPath()` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/workspace.ts)
 
 
-## schematics calling schematics
+## Call schematics from schematics
 
 If you run a schematic, you may come to the point where one schematic should execute another one.
-For example: Imagine you will create schematics for generating a specific component on the one hand and on the other a `ng add` schematic that set up things for you and that creates an example component by default.
-In such case you may want to combine multiple schematics.
+For example: You create schematics for generating a specific component.
+You also develop an `ng add` schematic to set up things for you and create an example component by default.
+In such cases you may want to combine multiple schematics.
 
-Let's say we have collection file like the following:
+Let's say we have a collection file like the following:
 
 ```json
 {
@@ -628,7 +642,7 @@ Let's say we have collection file like the following:
 }
 ```
 
-And our factory for `ng add` is located in `src/ng-add/index.ts`.
+The factory for `ng add` is located in `src/ng-add/index.ts`.
 Then inside this schematic we can call a new `RunSchematicTask` with the name of the schematic we want to execute and the project name from the Angular workspace.
 To really execute the operation we need to pass the task to the `context`.
 
@@ -646,7 +660,7 @@ export function ngAdd(_options: any): Rule {
 }
 ```
 
-To check if it works we can simply fill our playground (`src/playground/index.ts`) schematic as follows and log the call:
+To check if it works we can fill our playground (`src/playground/index.ts`) schematic as follows and log the call:
 
 ```ts
 import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
@@ -659,14 +673,14 @@ export function playground(_options: any): Rule {
 }
 ```
 
-If we now run `schematics ../playground/src/collection.json:ng-add --debug=false` from our example Angular project, we can see that the `ng add` schematic called the `playground` schematic.
+If we now run `schematics ../playground/src/collection.json:ng-add --debug=false` from our example Angular project, we can see that the `ng add` schematic has called the `playground` schematic.
 
-With this knowledge you can now define small schematics that can be executed standalone or from another schematic that combines probably multiple standalone schematics and calls them with specific values.
+With this knowledge you can define small atomic schematics that can be executed "standalone" or from another schematic that combines multiple standalone schematics and calls them with specific parameters.
 
 ## Conclusion
 
-The presented util functions are great and easy helpers you can use to create your own Angular CLI schematic.
-But as they aren't official until now, you should keep track of any changes by watching the [documentation issue (#15335)](https://github.com/angular/angular-cli/issues/15335) and [changes on the related code](https://github.com/angular/angular-cli/tree/master/packages/schematics/angular/utility).
+The presented util functions are great and comfortable helpers you can use to create your own Angular CLI schematics.
+However, as they aren't officially published until now, you should keep track of any changes by keeping an eye on the [documentation issue (#15335)](https://github.com/angular/angular-cli/issues/15335) and [changes on the related code](https://github.com/angular/angular-cli/tree/master/packages/schematics/angular/utility).
 
 **Thank you**
 
