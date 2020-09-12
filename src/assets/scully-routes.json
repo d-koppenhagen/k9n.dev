@@ -260,6 +260,38 @@
     "sourceFile": "2020-02-02-vscode-file-tree-to-text-generator.md"
   },
   {
+    "route": "/projects/2020-02-26-scully-plugin-toc",
+    "title": "scully-plugin-toc - A Plugin for generating table of contents",
+    "description": "This plugin for Scully will insert a table of contents (TOC) for your Markdown content automatically",
+    "published": true,
+    "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
+    "updated": "2020-02-26T00:00:00.000Z",
+    "keywords": ["Angular", "Scully", "SSR", "SSG", "JAM Stack", "TOC"],
+    "language": "en",
+    "thumbnail": {
+      "header": "assets/images/projects/toc.jpg",
+      "card": "assets/images/projects/toc-small.jpg"
+    },
+    "slugs": ["___UNPUBLISHED___kezaocuv_cjuRhWPHN5HNYPmSv5l7DIJfNo03Ft6X"],
+    "sourceFile": "2020-02-26-scully-plugin-toc.md"
+  },
+  {
+    "route": "/projects/___UNPUBLISHED___kezaocuv_cjuRhWPHN5HNYPmSv5l7DIJfNo03Ft6X",
+    "title": "scully-plugin-toc - A Plugin for generating table of contents",
+    "description": "This plugin for Scully will insert a table of contents (TOC) for your Markdown content automatically",
+    "published": true,
+    "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
+    "updated": "2020-02-26T00:00:00.000Z",
+    "keywords": ["Angular", "Scully", "SSR", "SSG", "JAM Stack", "TOC"],
+    "language": "en",
+    "thumbnail": {
+      "header": "assets/images/projects/toc.jpg",
+      "card": "assets/images/projects/toc-small.jpg"
+    },
+    "slugs": ["___UNPUBLISHED___kezaocuv_cjuRhWPHN5HNYPmSv5l7DIJfNo03Ft6X"],
+    "sourceFile": "2020-02-26-scully-plugin-toc.md"
+  },
+  {
     "route": "/projects/2020-03-12-dotfiles",
     "title": ".dotfiles — My default configuration files for macOS",
     "description": "I collected all my .bash, .zsh, .vscode, .vim, macOS, homebrew and iterm configuration files in one repository for easily setup a new macOS system with a great developer experience.",
@@ -329,7 +361,7 @@
   },
   {
     "route": "/projects/2020-09-12-scully-plugin-mermaid",
-    "title": "scully-plugin-mermaid",
+    "title": "scully-plugin-mermaid - A PostRenderer Plugin for Mermaid",
     "description": "Add a Scully.io PostRenderer plugin for Mermaid.js graphs, charts and diagrams embedded in Markdown files.",
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
