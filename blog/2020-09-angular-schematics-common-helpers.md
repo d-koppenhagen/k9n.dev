@@ -684,6 +684,31 @@ With this knowledge you can define small atomic Schematics that can be executed 
 The presented util functions are great and comfortable helpers you can use to create your own Angular CLI Schematics.
 However, as they aren't officially published until now, you should keep track of any changes by keeping an eye on the [documentation issue (#15335)](https://github.com/angular/angular-cli/issues/15335) and [changes on the related code](https://github.com/angular/angular-cli/tree/master/packages/schematics/angular/utility).
 
+## Summary
+
+| Function                        | Description                                                                                                     |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `getPackageJsonDependency()`    | Get a package configuration from the `package.json` (dev-, peer-, optional-) dependencies config.               |
+| `addPackageJsonDependency()`    | Add a NPM package to the `package.json` as (dev-, peer-, optional-) dependency.                                 |
+| `removePackageJsonDependency()` | Remove a NPM package from the `package.json` (dev-, peer-, optional-) dependencies.                             |
+| `relativePathToWorkspaceRoot()` | Get the relative import path to the root of the workspace for a given file inside the workspace.                |
+| `insertImport()`                | Insert an import statement for a file to an existing TypeScript file.                                           |
+| `addDeclarationToModule()`      | Import a declaration (e.g. Component or Directive) and add it to the `declarations` array of an Angular module. |
+| `addImportToModule()`           | Import an Angular Module and add it to the `imports` array of another Angular module.                           |
+| `addExportToModule()`           | Import an Angular Module and add it to the `exports` array of another Angular module.                           |
+| `addProviderToModule()`         | Import a service / provider and add it to the `providers` array of an Angular module.                           |
+| `addBootstrapToModule()`        | Import a Component and add it to the `bootstrap` array of an Angular module.                                    |
+| `addRouteDeclarationToModule()` | Add a route definition to the router configuration in an Angular routing module.                                |
+| `getWorkspacePath()`            | Retrieve the path to the Angular workspace configuration file (`angular.json`).                                 |
+| `getWorkspace()`                | Get the configuration object from the Angular workspace configuration file (`angular.json`)                     |
+| `createDefaultPath()`           | Get the default application / library path for a project inside an Angular workspace.                           |
+
+| Class                    | Description                                                                                                        |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `InsertChange`           | This class returns a change object with the content to be added and the position where a change is being inserted. |
+| `NodePackageInstallTask` | A task instance that will perform a `npm install` once instantiated and added to the `context` via `addTask()`.    |
+| `RunSchematicTask`       | A task that runs another schematic after instantiation and adding it to the `context` via `addTask()`.             |
+
 **Thank you**
 
 Special thanks goes to [Minko Gechev](https://twitter.com/mgechev), [Tomas Trajan](https://twitter.com/tomastrajan) and [Ferdinand Malcher](https://twitter.com/fmalcher01) for the feedback and revising this article.
