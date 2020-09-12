@@ -218,6 +218,24 @@
     },
     "sourceFile": "2020-08-my-development-setup.md"
   },
+  {
+    "route": "/blog/___UNPUBLISHED___kepw8ihb_clayHamVsY3FJOTrgMAekr0QFSRFKSiS",
+    "title": "Create Angular Schematics with common helpers",
+    "description": "Angular CLI Schematics offer us a way to add, scaffold and update app-related files and modules. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal.",
+    "published": false,
+    "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
+    "created": "2020-09-11T00:00:00.000Z",
+    "updated": "2020-09-11T00:00:00.000Z",
+    "keywords": ["Angular", "Angular CLI", "Schematics"],
+    "language": "en",
+    "thumbnail": {
+      "header": "assets/images/blog/schematics-helpers/schematics-helpers.jpg",
+      "card": "assets/images/blog/schematics-helpers/schematics-helpers-small.jpg"
+    },
+    "slugs": ["___UNPUBLISHED___kepw8ihb_clayHamVsY3FJOTrgMAekr0QFSRFKSiS"],
+    "slug": "___UNPUBLISHED___kepw8ihb_clayHamVsY3FJOTrgMAekr0QFSRFKSiS",
+    "sourceFile": "2020-09-angular-schematics-common-helpers.md"
+  },
   { "route": "/projects" },
   {
     "route": "/projects/2019-11-20-angular-tag-cloud-module",
@@ -258,21 +276,6 @@
       "card": "assets/images/projects/file-tree-header-image-small.jpg"
     },
     "sourceFile": "2020-02-02-vscode-file-tree-to-text-generator.md"
-  },
-  {
-    "route": "/projects/2020-02-26-scully-plugin-toc",
-    "title": "scully-plugin-toc — A Plugin for generating table of contents",
-    "description": "This plugin for Scully will insert a table of contents (TOC) for your Markdown content automatically",
-    "published": true,
-    "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
-    "updated": "2020-02-26T00:00:00.000Z",
-    "keywords": ["Angular", "Scully", "SSR", "SSG", "JAM Stack", "TOC"],
-    "language": "en",
-    "thumbnail": {
-      "header": "assets/images/projects/toc.jpg",
-      "card": "assets/images/projects/toc-small.jpg"
-    },
-    "sourceFile": "2020-02-26-scully-plugin-toc.md"
   },
   {
     "route": "/projects/2020-03-12-dotfiles",
@@ -329,7 +332,7 @@
   },
   {
     "route": "/projects/2020-05-22-vscode-code-review",
-    "title": "vscode-code-review — Create exportable code reviews in vscode",
+    "title": "vscode-code-review - Create exportable code reviews in vscode",
     "description": "Create exportable code reviews in Visual Studio Code including automatic file and line references",
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
@@ -344,7 +347,7 @@
   },
   {
     "route": "/projects/2020-09-12-scully-plugin-mermaid",
-    "title": "scully-plugin-mermaid — A PostRenderer Plugin for Mermaid",
+    "title": "scully-plugin-mermaid - A PostRenderer Plugin for Mermaid",
     "description": "Add a Scully.io PostRenderer plugin for Mermaid.js graphs, charts and diagrams embedded in Markdown files.",
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
