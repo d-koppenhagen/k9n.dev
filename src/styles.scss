@@ -16,6 +16,9 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 /* style code with prismjs */
 @import '~prismjs/plugins/toolbar/prism-toolbar.css';
 @import '~prismjs/themes/prism-tomorrow';
+pre.language-mermaid {
+  background: none;
+}
 
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:800&display=swap');
