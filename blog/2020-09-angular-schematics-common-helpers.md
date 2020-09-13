@@ -16,7 +16,7 @@ thumbnail:
   header: assets/images/blog/schematics-helpers/schematics-helpers.jpg
   card: assets/images/blog/schematics-helpers/schematics-helpers-small.jpg
 slugs:
-  - ___UNPUBLISHED___kepw8ihb_clayHamVsY3FJOTrgMAekr0QFSRFKSiS
+  - 2020-09-angular-schematics-common-helpers
 ---
 
 Angular CLI Schematics offer us a way to add, scaffold and update app-related files and modules. However, there are some common things we will probably want integrate in our Schematics: updating your `package.json` file, adding or removing an Angular module or updating component imports.
