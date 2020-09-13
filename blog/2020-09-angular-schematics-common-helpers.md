@@ -34,7 +34,7 @@ However, since some of these are already implemented in the Angular CLI, I want 
 
 <hr>
 
-## Attention: not officially supported
+## ⚠️ Attention: not officially supported
 
 The helper functions I present you in this article are neither documented nor officially supported, and they may change in the future.
 [Alan Agius](https://twitter.com/AlanAgius4), member of the Angular CLI core team replied in a [related issue (#15335)](https://github.com/angular/angular-cli/issues/15335#issuecomment-660609283) for creating a public Schematics API reference:
@@ -47,6 +47,11 @@ While things evolve, it's my intention to keep this article as up-to-date as pos
 > The following Angular CLI Schematics util functions are based on the Angular CLI version `10.1.1`.
 
 If you use these functions and they will break in the future, you can check out the [source code changes](https://github.com/angular/angular-cli/tree/master/packages/schematics/angular/utility) for the utility functions and adjust your code.
+
+## 🕹 Examples and playground on GitHub
+
+To follow and try out the examples I present you in this article, I [prepared a playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground).
+Clone this repo and check out the `README.md` inside to get started with the playground. 🚀
 
 ## Create an Angular Schematics example project
 
@@ -86,7 +91,6 @@ schematics .:playground
 ```
 
 The `.` refers to the current directory where our Schematics project lives.
-
 
 ### Basic types
 
@@ -235,7 +239,7 @@ import {
   Tree,
   url,
   apply,
-  applyTemplates,
+  template,
   mergeWith
 } from '@angular-devkit/schematics/';
 import { relativePathToWorkspaceRoot } from '@schematics/angular/utility/paths';
@@ -253,7 +257,7 @@ export function playground(_options: any): Rule {
     return mergeWith(
       apply(
         sourceTemplates, [
-          applyTemplates({
+          template({
             relativePathToWorkspaceRoot: relativePathToWorkspaceRoot(nonRootPathDefinition),
           }),
         ]
@@ -267,7 +271,7 @@ If you have e.g. a JSON file template in the directory `files` and you want to i
 
 ```json
 {
-  "foo": "<%= relativePathToWorkspaceRoot %>/my-file-ref.json",
+  "foo": "<%= relativePathToWorkspaceRoot %>/my-file-ref.json"
 }
 ```
 
@@ -454,13 +458,13 @@ export function playground(_options: any): Rule {
       'BarModule',
       './bar.module'
     ) as InsertChange[];
-    const providerChange = addProviderToModule(
+    const providerChanges = addProviderToModule(
       source,
       modulePath,
       'MyProvider',
       './my-provider.ts'
     ) as InsertChange[];
-    const bootstrapChange = addBootstrapToModule(
+    const bootstrapChanges = addBootstrapToModule(
       source,
       modulePath,
       'MyComponent',
@@ -572,7 +576,7 @@ export function playground(_options: any): Rule {
     console.log(getWorkspacePath(tree));
 
     // returns the whole configuration object from the 'angular.json' file
-    console.log(getWorkspace(tree));
+    console.log(JSON.stringify(getWorkspace(tree), null, 2));
   };
 }
 ```
@@ -623,7 +627,7 @@ schematics ../playground/src/collection.json:playground # execute the 'playgroun
 
 If you run a schematic, you may come to the point where one schematic should execute another one.
 For example: You create Schematics for generating a specific component.
-You also develop an `ng add` schematic to set up things for you and create an example component by default.
+You also develop a `ng add` schematic to set up things for you and create an example component by default.
 In such cases you may want to combine multiple Schematics.
 
 Let's say we have a collection file like the following:
@@ -655,7 +659,7 @@ import { RunSchematicTask } from '@angular-devkit/schematics/tasks';
 export function ngAdd(_options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
     context.addTask(
-      new RunSchematicTask('playground', { project: 'schematics-test-project' })
+      new RunSchematicTask('playground', { project: 'test-workspace' })
     );
     return tree;
   };
