@@ -42,6 +42,7 @@ const articleMap = new Map([
   ],
   [272387, { name: '2020-03-dig-deeper-into-scully-ssg' }],
   [439481, { name: '2020-08-my-development-setup' }],
+  [454808, { name: '2020-09-angular-schematics-common-helpers' }],
 ]);
 
 /**
