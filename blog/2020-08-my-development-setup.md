@@ -8,16 +8,16 @@ author:
 created: 2020-08-27
 updated: 2020-08-30
 keywords:
-    - Angular
-    - Vue.js
-    - Console
-    - Development
-    - Setup
-    - VSCode
-    - 'Visual Studio Code'
-    - 'Google Chrome'
-    - Extension
-    - macOS
+  - Angular
+  - Vue.js
+  - Console
+  - Development
+  - Setup
+  - VSCode
+  - 'Visual Studio Code'
+  - 'Google Chrome'
+  - Extension
+  - macOS
 language: en
 thumbnail:
   header: assets/images/blog/dev-setup/dev-setup-header.jpg
