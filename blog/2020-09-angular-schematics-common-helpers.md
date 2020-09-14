@@ -1,12 +1,12 @@
 ---
-title: 'Create Angular Schematics with common helpers'
+title: 'Speed up your Angular Schematics development with useful helper functions'
 description: 'Angular CLI Schematics offer us a way to add, scaffold and update app-related files and modules. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal.'
-published: false
+published: true
 author:
-  name: Danny Koppenhagen
+  name: 'Danny Koppenhagen'
   mail: mail@d-koppenhagen.de
-created: 2020-09-11
-updated: 2020-09-11
+created: 2020-09-11T00:00:00.000Z
+updated: 2020-09-11T00:00:00.000Z
 keywords:
   - Angular
   - 'Angular CLI'
@@ -15,10 +15,7 @@ language: en
 thumbnail:
   header: assets/images/blog/schematics-helpers/schematics-helpers.jpg
   card: assets/images/blog/schematics-helpers/schematics-helpers-small.jpg
-slugs:
-  - 2020-09-angular-schematics-common-helpers
 ---
-
 Angular CLI Schematics offer us a way to add, scaffold and update app-related files and modules. However, there are some common things we will probably want integrate in our Schematics: updating your `package.json` file, adding or removing an Angular module or updating component imports.
 
 Currently, the way of authoring an Angular Schematic is documented [on angular.io](https://angular.io/guide/schematics-authoring).

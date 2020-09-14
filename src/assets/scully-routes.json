@@ -219,10 +219,10 @@
     "sourceFile": "2020-08-my-development-setup.md"
   },
   {
-    "route": "/blog/___UNPUBLISHED___kepw8ihb_clayHamVsY3FJOTrgMAekr0QFSRFKSiS",
-    "title": "Create Angular Schematics with common helpers",
+    "route": "/blog/2020-09-angular-schematics-common-helpers",
+    "title": "Speed up your Angular Schematics development with useful helper functions",
     "description": "Angular CLI Schematics offer us a way to add, scaffold and update app-related files and modules. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal.",
-    "published": false,
+    "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
     "created": "2020-09-11T00:00:00.000Z",
     "updated": "2020-09-11T00:00:00.000Z",
@@ -232,8 +232,6 @@
       "header": "assets/images/blog/schematics-helpers/schematics-helpers.jpg",
       "card": "assets/images/blog/schematics-helpers/schematics-helpers-small.jpg"
     },
-    "slugs": ["___UNPUBLISHED___kepw8ihb_clayHamVsY3FJOTrgMAekr0QFSRFKSiS"],
-    "slug": "___UNPUBLISHED___kepw8ihb_clayHamVsY3FJOTrgMAekr0QFSRFKSiS",
     "sourceFile": "2020-09-angular-schematics-common-helpers.md"
   },
   { "route": "/projects" },
