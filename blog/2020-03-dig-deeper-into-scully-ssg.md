@@ -43,8 +43,6 @@ I will guide you through the process of how to handle protected routes using a c
 
 <div id="toc"><h2>Table of contents</h2></div>
 
-<hr>
-
 > This blog post is based on versions:
 > ```
 > @scullyio/ng-lib: 1.0.0-beta.0

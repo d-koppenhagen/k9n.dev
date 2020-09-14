@@ -23,8 +23,9 @@ const TIME_BETWEEN_UPDATES = 2000;
 const preUpdateAll = (articleData) => {
   const newData = { ...articleData };
   newData.content = articleData.content
-    .replace(/\]\(\//g, `](${BASE_URL}/`)
-    .replace(/src="\//g, `src="${BASE_URL}/`);
+    .replace(/\]\(\//g, `](${BASE_URL}/`) // replace src URLs in MD images
+    .replace(/src="\//g, `src="${BASE_URL}/`) // replace <img> tag src URL
+    .replace(/<div id="toc".*<\/div>/g, ''); // remove TOC placeholder
   return newData;
 };
 

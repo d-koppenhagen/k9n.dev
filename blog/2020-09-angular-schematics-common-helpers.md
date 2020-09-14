@@ -29,8 +29,6 @@ However, since some of these are already implemented in the Angular CLI, I want 
 
 <div id="toc"><strong>Table of contents</strong></div>
 
-<hr>
-
 ## ⚠️ Attention: not officially supported
 
 The helper functions I present you in this article are neither documented nor officially supported, and they may change in the future.

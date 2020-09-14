@@ -34,8 +34,6 @@ In the following article I will present you what tools I am using during my day-
 
 <div id="toc"><h2>Table of contents</h2></div>
 
-<hr>
-
 ## Introduction
 
 As a developer I always give my best to be productive, to write good and well documented source code and to share my knowledge.

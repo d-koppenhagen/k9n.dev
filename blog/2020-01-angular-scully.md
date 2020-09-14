@@ -34,8 +34,6 @@ series: scully
 
 <div id="toc"><h2>Table of contents</h2></div>
 
-<hr>
-
 > On _Dec 16, 2019_ the static site generator _Scully_ for Angular [was presented](https://www.youtube.com/watch?v=Sh37rIUL-d4).
 > _Scully_ automatically detects all app routes and creates static sites out of it that are ready to ship for production. _Scully_ is currently just available within an early version.
 > This blog post is based on versions:
