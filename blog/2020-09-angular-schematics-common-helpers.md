@@ -15,6 +15,8 @@ language: en
 thumbnail:
   header: assets/images/blog/schematics-helpers/schematics-helpers.jpg
   card: assets/images/blog/schematics-helpers/schematics-helpers-small.jpg
+linked:
+  devTo: https://dev.to/dkoppenhagen/speed-up-your-angular-schematics-development-with-useful-helper-functions-1kb2
 ---
 
 # Speed up your Angular Schematics development with useful helper functions
