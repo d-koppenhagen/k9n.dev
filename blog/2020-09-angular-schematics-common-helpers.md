@@ -36,7 +36,7 @@ However, since some of these are already implemented in the Angular CLI, I want 
 The helper functions I present you in this article are neither documented nor officially supported, and they may change in the future.
 [Alan Agius](https://twitter.com/AlanAgius4), member of the Angular CLI core team replied in a [related issue (#15335)](https://github.com/angular/angular-cli/issues/15335#issuecomment-660609283) for creating a public Schematics API reference:
 
-> [...] those utils are not considered as part of the public API and might break without warning in any release.
+> \[...\] those utils are not considered as part of the public API and might break without warning in any release.
 
 So, there are plans to provide some utilities via a public API but this is still in the planning stage.
 While things evolve, it's my intention to keep this article as up-to-date as possible.
@@ -88,6 +88,8 @@ schematics .:playground
 ```
 
 The `.` refers to the current directory where our Schematics project lives.
+
+[Check out the basic example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/playground)
 
 ### Basic types
 
@@ -178,7 +180,8 @@ schematics .:playground --debug=false
 ```
 
 
-> [Check out the implementation of the dependency operations in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/dependencies.ts)
+- [Check out the implementation of the dependency operations in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/dependencies.ts)
+- [Check out the examples in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/dependencies)
 
 ## Add content on a specific position
 
@@ -222,7 +225,8 @@ export function playground(_options: any): Rule {
 }
 ```
 
-> [Check out the implementation for `InsertChange` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/change.ts)
+- [Check out the implementation for `InsertChange` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/change.ts)
+- [Check out the example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/insert)
 
 ## Determine relative path to the project root
 
@@ -274,8 +278,8 @@ If you have e.g. a JSON file template in the directory `files` and you want to i
 
 For more details about how to use and apply templates in your own Schematics, check out the [blog post by Tomas Trajan: _'Total Guide To Custom Angular Schematics'_](https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4).
 
-> [Check out the implementation for `relativePathToWorkspaceRoot()` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/paths.ts)
-
+- [Check out the implementation for `relativePathToWorkspaceRoot()` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/paths.ts)
+- [Check out the example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/relative-path)
 
 ## Add TypeScript imports
 
@@ -329,7 +333,8 @@ const bar = 'bar;
 The example above will add the content `import Bar from './bar';` right before the constant.
 As we marked it as default import, the import name is not put in curly braces (`{ }`).
 
-> [Check out the implementation for `insertImport()` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/change.ts)
+- [Check out the implementation for `insertImport()` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/change.ts)
+- [Check out the example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/import)
 
 ## Update `NgModule`
 
@@ -422,8 +427,6 @@ import { DashboardComponent } from './dashboard.component';
 export class AppModule { }
 ```
 
-> [Check out the implementation for ast-utils in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/ast-utils.ts)
-
 ### `NgModule`: add `imports`, `exports`, `providers`, and `bootstrap`
 
 Similar to the previous example we can re-export something we imported by using the `addExportToModule()` function and adding an import to the `NgModule` by using `addImportToModule()`.
@@ -501,8 +504,6 @@ import { BazComponent } from './baz.component.ts';
 export class AppModule { }
 ```
 
-> [Check out the implementation for ast-utils in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/ast-utils.ts)
-
 ### Add route declarations
 
 Let's have a look at another common scenario: We want our schematic to insert a route definition to a module that calls `RouterModule.forRoot()` or `.forChild()` with a route definition array.
@@ -555,7 +556,8 @@ export function playground(_options: any): Rule {
 
 The example above will insert the route definition object `{ path: 'bar', component: BarComponent }` into the `myRoutes` array by finding the variable associated in `forRoot()` or `forChild()`.
 
-> [Check out the implementation for ast-utils in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/ast-utils.ts)
+- [Check out the implementation for ast-utils in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/ast-utils.ts)
+- [Check out the examples for module operations in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/module)
 
 ## Retrieve the Angular workspace configuration
 
@@ -589,7 +591,8 @@ cd some-test-project      # be sure to be in the root of the angular project
 schematics ../playground/src/collection.json:playground # execute the 'playground' schematic
 ```
 
-> [Check out the implementation in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/config.ts)
+- [Check out the implementation in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/config.ts)
+- [Check out the example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/config)
 
 ## Get default path for an app inside the workspace
 
@@ -617,8 +620,8 @@ ng g lib my-lib  # create a new library inside the Angular workspace
 schematics ../playground/src/collection.json:playground # execute the 'playground' schematic
 ```
 
-> [Check out the implementation for `createDefaultPath()` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/workspace.ts)
-
+- [Check out the implementation for `createDefaultPath()` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/workspace.ts)
+- [Check out the example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/worksapce)
 
 ## Call Schematics from Schematics
 
@@ -679,6 +682,8 @@ export function playground(_options: any): Rule {
 If we now run `schematics ../playground/src/collection.json:ng-add --debug=false` from our example Angular project, we can see that the `ng add` schematic has called the `playground` schematic.
 
 With this knowledge you can define small atomic Schematics that can be executed "standalone" or from another schematic that combines multiple standalone Schematics and calls them with specific parameters.
+
+- [Check out the example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/schematic-task)
 
 ## Conclusion
 

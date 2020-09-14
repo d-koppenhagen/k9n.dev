@@ -224,8 +224,8 @@
     "description": "Angular CLI Schematics offer us a way to add, scaffold and update app-related files and modules. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal.",
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
-    "created": "2020-09-11T00:00:00.000Z",
-    "updated": "2020-09-11T00:00:00.000Z",
+    "created": "2020-09-14T00:00:00.000Z",
+    "updated": "2020-09-14T00:00:00.000Z",
     "keywords": ["Angular", "Angular CLI", "Schematics"],
     "language": "en",
     "thumbnail": {
