@@ -37,6 +37,7 @@ h2.sub-heading {
 
 table > tbody td {
   vertical-align: top;
+  min-width: 120px;
 
   > img {
     max-width: 100px;
@@ -47,11 +48,12 @@ table > tbody td {
     border-radius: 5px;
     padding: 5px;
     background: #2d2d2d;
+  }
 
-    > code {
-      background: none;
-      white-space: pre-wrap;
-    }
+  code {
+    background: none;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
   }
 }
 

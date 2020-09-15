@@ -19,6 +19,12 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 pre.language-mermaid {
   background: none;
 }
+@media screen and (max-width: 460px) {
+  .code-toolbar {
+    left: -2em;
+    width: 100vw;
+  }
+}
 
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:800&display=swap');

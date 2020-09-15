@@ -124,7 +124,9 @@ export class BlogContentComponent
     if (!this.shareBtnBox?.nativeElement?.clientWidth) {
       return;
     }
-    if (this.shareBtnBox.nativeElement.clientWidth < 410) {
+    if (this.shareBtnBox.nativeElement.clientWidth < 320) {
+      this.shareBtnCnt = 2;
+    } else if (this.shareBtnBox.nativeElement.clientWidth < 410) {
       this.shareBtnCnt = 3;
     } else if (this.shareBtnBox.nativeElement.clientWidth < 480) {
       this.shareBtnCnt = 4;
