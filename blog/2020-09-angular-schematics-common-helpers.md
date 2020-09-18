@@ -1,6 +1,6 @@
 ---
-title: 'Speed up your Angular Schematics development with useful helper functions'
-description: 'Angular CLI Schematics offer us a way to add, scaffold and update app-related files and modules. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal.'
+title: 'Speed up your Angular schematics development with useful helper functions'
+description: 'Angular CLI schematics offer us a way to add, scaffold and update app-related files and modules. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal.'
 published: true
 author:
   name: 'Danny Koppenhagen'
@@ -19,14 +19,14 @@ linked:
   devTo: https://dev.to/dkoppenhagen/speed-up-your-angular-schematics-development-with-useful-helper-functions-1kb2
 ---
 
-# Speed up your Angular Schematics development with useful helper functions
+# Speed up your Angular schematics development with useful helper functions
 
-Angular CLI Schematics offer us a way to add, scaffold and update app-related files and modules. However, there are some common things we will probably want integrate in our Schematics: updating your `package.json` file, adding or removing an Angular module or updating component imports.
+Angular CLI schematics offer us a way to add, scaffold and update app-related files and modules. However, there are some common things we will probably want integrate in our schematics: updating your `package.json` file, adding or removing an Angular module or updating component imports.
 
 Currently, the way of authoring an Angular Schematic is documented [on angular.io](https://angular.io/guide/schematics-authoring).
 However, there is one big thing missing there: the way of integrating typical and repeating tasks.
-The Angular CLI itself uses Schematics for e.g. generating modules and components, adding imports or modifying the `package.json` file.
-Under the hood each of the Schematics uses some very common utils which are not yet documented but available for all developers anyway.
+The Angular CLI itself uses schematics for e.g. generating modules and components, adding imports or modifying the `package.json` file.
+Under the hood each of the schematics uses some very common utils which are not yet documented but available for all developers anyway.
 In the past, I've seen some Angular CLI Schematic projects where people were trying to implement almost the same common util methods on their own.
 However, since some of these are already implemented in the Angular CLI, I want to show you some of those typical helpers that you can use for you Angular CLI Schematic project to prevent any pitfalls.
 
@@ -37,14 +37,14 @@ However, since some of these are already implemented in the Angular CLI, I want 
 ## ⚠️ Attention: not officially supported
 
 The helper functions I present you in this article are neither documented nor officially supported, and they may change in the future.
-[Alan Agius](https://twitter.com/AlanAgius4), member of the Angular CLI core team replied in a [related issue (#15335)](https://github.com/angular/angular-cli/issues/15335#issuecomment-660609283) for creating a public Schematics API reference:
+[Alan Agius](https://twitter.com/AlanAgius4), member of the Angular CLI core team replied in a [related issue (#15335)](https://github.com/angular/angular-cli/issues/15335#issuecomment-660609283) for creating a public schematics API reference:
 
 > \[...\] those utils are not considered as part of the public API and might break without warning in any release.
 
 So, there are plans to provide some utilities via a public API but this is still in the planning stage.
 While things evolve, it's my intention to keep this article as up-to-date as possible.
 
-> The following Angular CLI Schematics util functions are based on the Angular CLI version `10.1.1`.
+> The following Angular CLI schematics util functions are based on the Angular CLI version `10.1.1`.
 
 If you use these functions and they will break in the future, you can check out the [source code changes](https://github.com/angular/angular-cli/tree/master/packages/schematics/angular/utility) for the utility functions and adjust your code.
 
@@ -53,16 +53,16 @@ If you use these functions and they will break in the future, you can check out 
 To follow and try out the examples I present you in this article, I [prepared a playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground).
 Clone this repo and check out the `README.md` inside to get started with the playground. 🚀
 
-## Create an Angular Schematics example project
+## Create an Angular schematics example project
 
 First things first: We need a project where we can try things out.
-You can either use an existing Schematics project or simply create a new blank one:
+You can either use an existing schematics project or simply create a new blank one:
 
 ```bash
 npx @angular-devkit/schematics-cli blank --name=playground
 ```
 
-> If you are not familar with the basics of authoring Schematics, I recommend you to read the [Angular Docs](https://angular.io/guide/schematics-authoring) and the [blog post _"Total Guide To Custom Angular Schematics"_ by Tomas Trajan](https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4) first.
+> If you are not familar with the basics of authoring schematics, I recommend you to read the [Angular Docs](https://angular.io/guide/schematics-authoring) and the [blog post _"Total Guide To Custom Angular schematics"_ by Tomas Trajan](https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4) first.
 
 After setting up the new blank project we should have this file available: `src/playground/index.ts`.
 
@@ -84,28 +84,28 @@ Please make sure that you can execute the blank schematic by calling it on the c
 npx @angular-devkit/schematics-cli .:playground
 ```
 
-or if you installed the Schematics CLI globally via `npm i @angular-devkit/schematics-cli`:
+or if you installed the schematics CLI globally via `npm i @angular-devkit/schematics-cli`:
 
 ```bash
 schematics .:playground
 ```
 
-The `.` refers to the current directory where our Schematics project lives.
+The `.` refers to the current directory where our schematics project lives.
 
 [Check out the basic example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/playground)
 
 ### Basic types
 
-In case you are not familiar with the structure of Schematics, I will just explain some very basic things shortly:
+In case you are not familiar with the structure of schematics, I will just explain some very basic things shortly:
 
 - A **`Tree`** is the structured virtual representation of every file in the workspace which we apply the schematic to.
 - A **`Rule`** is called with a `Tree` and a `SchematicContext`. The `Rule` is supposed to make changes on the `Tree` and returns the adjusted `Tree`.
-- The **`SchematicContext`** contains information necessary for the Schematics to execute some rules.
+- The **`SchematicContext`** contains information necessary for the schematics to execute some rules.
 
 ### Install the helpers from `@schematics/angular`
 
 A second thing we need to do is to install the package `@schematics/angular` which contains all the utils we need for the next steps.
-This package contains all the Schematics the Angular CLI uses by itself when running commands like `ng generate` or `ng new` etc.
+This package contains all the schematics the Angular CLI uses by itself when running commands like `ng generate` or `ng new` etc.
 
 ```bash
 npm i --save @schematics/angular
@@ -176,7 +176,7 @@ export function playground(_options: any): Rule {
 }
 ```
 
-To really check that the `NodePackageInstallTask` is properly executed, you need to disable the Schematics debug mode that's enabled by default during development and local execution:
+To really check that the `NodePackageInstallTask` is properly executed, you need to disable the schematics debug mode that's enabled by default during development and local execution:
 
 ```bash
 schematics .:playground --debug=false
@@ -279,7 +279,7 @@ If you have e.g. a JSON file template in the directory `files` and you want to i
 }
 ```
 
-For more details about how to use and apply templates in your own Schematics, check out the [blog post by Tomas Trajan: _'Total Guide To Custom Angular Schematics'_](https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4).
+For more details about how to use and apply templates in your own schematics, check out the [blog post by Tomas Trajan: _'Total Guide To Custom Angular schematics'_](https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4).
 
 - [Check out the implementation for `relativePathToWorkspaceRoot()` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/paths.ts)
 - [Check out the example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/relative-path)
@@ -583,14 +583,14 @@ export function playground(_options: any): Rule {
 }
 ```
 
-To try out things locally, we need to execute the Schematics from an Angular app root path on our system.
+To try out things locally, we need to execute the schematics from an Angular app root path on our system.
 To do so, navigate into an existing Angular app or create a new one for testing purposes.
 Then, execute the schematic from there by using the relative path to the `src/collection.json` file and adding the schematic name after the colon (`:`).
 
 ```bash
 ng new some-test-project --routing  # create a new test project
 cd some-test-project      # be sure to be in the root of the angular project
-# assume the Schematics project itself is located relatively to the angular project in '../playground'
+# assume the schematics project itself is located relatively to the angular project in '../playground'
 schematics ../playground/src/collection.json:playground # execute the 'playground' schematic
 ```
 
@@ -619,20 +619,23 @@ Let's create a new library inside our testing Angular app called `my-lib`, to tr
 
 ```bash
 ng g lib my-lib  # create a new library inside the Angular workspace
-# assume the Schematics project itself is located relatively to the angular project in '../playground'
+# assume the schematics project itself is located relatively to the angular project in '../playground'
 schematics ../playground/src/collection.json:playground # execute the 'playground' schematic
 ```
 
 - [Check out the implementation for `createDefaultPath()` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/workspace.ts)
 - [Check out the example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/worksapce)
 
-## Call Schematics from Schematics
+## Call schematics from schematics
 
 If you run a schematic, you may come to the point where one schematic should execute another one.
-For example: You create Schematics for generating a specific component.
-You also develop a `ng add` schematic to set up things for you and create an example component by default.
-In such cases you may want to combine multiple Schematics.
+For example: You create schematics for generating a specific component.
+You also develop a `ng add` or `ng new` schematic to set up things for you and create an example component by default.
+In such cases you may want to combine multiple schematics.
 
+### Run local schematics using the `RunSchematicTask`
+
+First we want to use the `RunSchematicTask` class to achieve our goal.
 Let's say we have a collection file like the following:
 
 ```json
@@ -651,7 +654,7 @@ Let's say we have a collection file like the following:
 }
 ```
 
-The factory for `ng add` is located in `src/ng-add/index.ts`.
+The factory for `ng-add` is located in `src/ng-add/index.ts`.
 Then inside this schematic we can call a new `RunSchematicTask` with the name of the schematic we want to execute and the project name from the Angular workspace.
 To really execute the operation we need to pass the task to the `context`.
 
@@ -682,15 +685,183 @@ export function playground(_options: any): Rule {
 }
 ```
 
-If we now run `schematics ../playground/src/collection.json:ng-add --debug=false` from our example Angular project, we can see that the `ng add` schematic has called the `playground` schematic.
+If we now run `schematics ../playground/src/collection.json:ng-add --debug=false` from our example Angular project, we can see that the `ng-add` schematic has called the `playground` schematic.
 
-With this knowledge you can define small atomic Schematics that can be executed "standalone" or from another schematic that combines multiple standalone Schematics and calls them with specific parameters.
+With this knowledge you can define small atomic schematics that can be executed "standalone" or from another Schematic that combines multiple standalone schematics and calls them with specific parameters.
 
-- [Check out the example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/schematic-task)
+- [Check out the example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/ng-add)
+
+### Run schematics by using the `schematic()` and `externalSchematic()` function
+
+Perfect, we can now execute and combine our schematics.
+But what if we want to combine external schematics developed by others and integrate them in our own schematics?
+Users are lazy, so we don't want to leave it up to them to manually execute some other things before running our schematics.
+
+Imagine you are working in a big company with multiple different Angular projects.
+This company already has its own standardized UI library, but all the applications are very different and ran by different teams (so not really a use case for a Monorepo).
+However, there are also things they all have in common like a Single Sign-On.
+Also, the basic design always looks similar – at least the header and the footer of all the apps.
+
+I've often seen companies building a reference implementation for such apps that's then cloned / copied and adjusted by all developers.
+However, there are some problems with this kind of workflow:
+
+- You always have to keep the reference project up-to-date.
+- You have to clean up your copy of the project from stuff you don't need.
+- You need to tell all teams to copy this reference to keep track of changes and to adjust their copies frequently.
+
+Thus, a better solution in my opinion is to use schematics for the whole integration and upgrade workflow.
+You can create an `ng new` schematic that will scaffold the whole project code for you.
+But you don't want to start from scratch, so you probably want to combine things like these:
+
+- `ng add`: Add your schematics to an existing project
+  - Corporate UI library (always)
+  - Single Sign-On (optional)
+  - Header Component (optional)
+  - Footer Component (optional)
+- `ng new`: Create a new project with your company defaults
+  - Create the basic application generated by the Angular CLI (**`externalSchematic`**)
+  - Run the `ng add` Schematic
+
+Alright, we already know how we can achieve most of these things.
+However, there's one thing we haven't learned yet: How to run other (external) schematics?
+We can use the `externalSchematic` function for this.
+
+But first things first, let's check if our collection file is ready to start:
+
+```json
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-add": {
+      "description": "Call other schematics from the same or other packages",
+      "factory": "./ng-add/index#playground"
+    },
+    "ng-new": {
+      "description": "Execute `ng new` with predefined options and run other stuff",
+      "factory": "./ng-new/index#playground"
+    }
+  }
+}
+```
+
+> Using the special Schematic names `ng-add` and `ng-new` let's you later use the schematic by just executing `ng add`/`ng new` (instead of other schematics called with `ng generate`).
+> There is also a special Schematic named `ng-update` which will be called in the end with the `ng update` Angular CLI command.
+
+After we defined the schema, we can now start to implement our schematics.
+To execute an external Schematic, it must be available in the scope of the project..
+However, since we want to create a completely new project with the `ng new` Schematic, we don't have any `node_modules` installed in the target directory where we want to initialize the Angular workspace.
+To run an external command we can use the [`spawn` method from `child_process`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options) (available globally for Node.js).
+This creates a new process that executes a command (in our case: `npm install @schematics/angular`).
+To make things look synchronous we wrap the method call into a Promise and `await` for the Promise to be resolved.
+Now we listen to the `close` event from `spawn` and check that there was no error during install (code equals `0`).
+If everything worked fine, we will resolve the Promise, otherwise we can throw an error.
+The last step is to `chain` all of our `Rule`s:
+We first use the `externalSchematic()` function to run the `ng new` Schematic from Angular itself and set up the basic app.
+We will hand over some default options here such a using `SCSS`, support legacy browsers, strict mode, etc.
+Angulars `ng new` schematic requires also, that we define the specific version for their schematic to be used.
+In our case we want to use the `ng new` schematic from the Angular CLI version `10.1.0`.
+The second call is our `ng add` Schematic that adds our company specific components, UI libs and so on to the project.
+
+> We've already learned how to run a local Schematic by using the `RunSchematicTask` class that we need to add to our `context` object.
+> In this example we are using the `schematic()` function to achieve the same goal.
+> Why are there two ways? To be honest: I actually don't know.
+> I found both implementations in the source code of Angular CLI.
+
+```ts
+import {
+  Rule,
+  SchematicContext,
+  Tree,
+  externalSchematic,
+  schematic,
+  chain
+} from '@angular-devkit/schematics';
+import {
+  Schema as AngularNgNewSchema,
+  PackageManager,
+  Style
+} from '@schematics/angular/ng-new/schema';
+import { spawn } from 'child_process';
+
+export function playground(options: AngularNgNewSchema): Rule {
+  return async (_tree: Tree, _context: SchematicContext) => {
+    const angularSchematicsPackage = '@schematics/angular';
+    const ngNewOptions: AngularNgNewSchema = {
+      version: '10.1.0',
+      name: options.name,
+      routing: true,
+      strict: true,
+      legacyBrowsers: true,
+      style: Style.Scss,
+      packageManager: PackageManager.Npm
+    }
+    await new Promise<boolean>((resolve) => {
+      console.log('📦 Installing packages...');
+      spawn('npm', ['install', angularSchematicsPackage])
+        .on('close', (code: number) => {
+          if (code === 0) {
+            console.log('📦 Packages installed successfully ✅');
+            resolve(true);
+          } else {
+            throw new Error(
+              `❌ install Angular schematics from '${angularSchematicsPackage}' failed`
+            );
+          }
+        });
+    });
+    return chain([
+      externalSchematic(angularSchematicsPackage, 'ng-new', ngNewOptions),
+      schematic('ng-add', {})
+    ]);
+  };
+}
+```
+
+When we now run the `ng new` Schematic from somewhere outside an Angular workspace, we can see that first of all the Angular `ng new` Schematic is executed with our predefined settings.
+After this, the `ng add` schematics is called.
+
+```bash
+schematics ./playground/src/collection.json:ng-new --debug=false
+📦 Installing packages...
+📦 Packages installed successfully ✅
+? What name would you like to use for the new workspace and initial project? my-project
+CREATE my-project/README.md (1027 bytes)
+CREATE my-project/.editorconfig (274 bytes)
+CREATE my-project/.gitignore (631 bytes)
+CREATE my-project/angular.json (3812 bytes)
+...
+CREATE my-project/src/app/app.component.scss (0 bytes)
+CREATE my-project/src/app/app.component.html (25757 bytes)
+CREATE my-project/src/app/app.component.spec.ts (1069 bytes)
+CREATE my-project/src/app/app.component.ts (215 bytes)
+CREATE my-project/src/app/package.json (816 bytes)
+CREATE my-project/e2e/protractor.conf.js (869 bytes)
+CREATE my-project/e2e/tsconfig.json (294 bytes)
+CREATE my-project/e2e/src/app.e2e-spec.ts (643 bytes)
+CREATE my-project/e2e/src/app.po.ts (301 bytes)
+⠏ Installing packages...
+✔ Packages installed successfully.
+schematic works
+```
+
+After you have deployed the Schematic, you can now execute it by running:
+
+```bash
+npm i -g my-schematic-package-name # install the Schematic so it's available globally
+ng new my-app --collection=my-schematic-package-name # Run the Angular CLI's `ng new` Schematic with the defined collection
+```
+
+Similar to this example you can call the `ng add` Schematic from the collection if you are in an existing Angular workspace:
+
+```bash
+ng add my-schematic-package-name
+```
+
+- [Check out the example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/ng-new)
 
 ## Conclusion
 
-The presented util functions are great and comfortable helpers you can use to create your own Angular CLI Schematics.
+The presented util functions are great and comfortable helpers you can use to create your own Angular CLI schematics.
 However, as they aren't officially published until now, you should keep track of any changes by keeping an eye on the [documentation issue (#15335)](https://github.com/angular/angular-cli/issues/15335) and [changes on the related code](https://github.com/angular/angular-cli/tree/master/packages/schematics/angular/utility).
 
 ## Summary
