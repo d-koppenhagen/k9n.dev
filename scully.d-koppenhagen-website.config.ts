@@ -3,8 +3,11 @@ import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { GoogleAnalytics } from '@scullyio/scully-plugin-google-analytics';
 import { MinifyHtml } from 'scully-plugin-minify-html';
 import { getTocPlugin, TocConfig, TocPluginName } from 'scully-plugin-toc';
-import MermaidAPI from 'mermaid/mermaidAPI';
-import { getMermaidPlugin, MermaidPluginName } from 'scully-plugin-mermaid';
+import {
+  getMermaidPlugin,
+  MermaidPluginConfig,
+  MermaidPluginName,
+} from 'scully-plugin-mermaid';
 
 /**
  * configuration for the markdown plugin
@@ -16,8 +19,8 @@ setPluginConfig('md', { enableSyntaxHighlighting: true });
  * All params as defined here are valid:
  * https://mermaid-js.github.io/mermaid/getting-started/Setup.html#mermaidapi-configuration-defaults
  */
-const mermaidOptions: MermaidAPI.Config = {
-  theme: 'dark',
+const mermaidOptions: MermaidPluginConfig = {
+  config: { theme: 'dark' },
 };
 const MermaidPlugin = getMermaidPlugin();
 setPluginConfig(MermaidPlugin, mermaidOptions);
