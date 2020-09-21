@@ -882,6 +882,8 @@ However, as they aren't officially published until now, you should keep track of
 | `getWorkspacePath()`            | Retrieve the path to the Angular workspace configuration file (`angular.json`).                                 |
 | `getWorkspace()`                | Get the configuration object from the Angular workspace configuration file (`angular.json`)                     |
 | `createDefaultPath()`           | Get the default application / library path for a project inside an Angular workspace.                           |
+| `schematic()`                   | Run another schematic from a collection.                                                                        |
+| `externalSchematic()`           | Run an external schematic from some other package.                                                              |
 
 | Class                    | Description                                                                                                        |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------ |
