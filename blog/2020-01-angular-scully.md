@@ -6,7 +6,7 @@ author:
   name: Danny Koppenhagen
   mail: mail@d-koppenhagen.de
 created: 2020-01-01
-updated: 2020-07-18
+updated: 2020-10-06
 keywords:
   - Angular
   - Angular CLI
@@ -35,15 +35,14 @@ series: scully
 <div id="toc"><h2>Table of contents</h2></div>
 
 > On _Dec 16, 2019_ the static site generator _Scully_ for Angular [was presented](https://www.youtube.com/watch?v=Sh37rIUL-d4).
-> _Scully_ automatically detects all app routes and creates static sites out of it that are ready to ship for production. _Scully_ is currently just available within an early version.
+> _Scully_ automatically detects all app routes and creates static sites out of it that are ready to ship for production.
 > This blog post is based on versions:
+>
 > ```
-> @scullyio/ng-lib: 1.0.0-beta.0
-> @scullyio/init: 1.0.0-beta.0
-> @scullyio/scully: 1.0.0-beta.0
+> @scullyio/ng-lib: 1.0.0
+> @scullyio/init: 1.0.0
+> @scullyio/scully: 1.0.0
 > ```
-> However some of the commands or API calls used here may change in the future.
-> It’s my goal to keep this blog post as up-to-date as possible.
 
 <hr>
 

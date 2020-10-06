@@ -8,7 +8,7 @@ author:
   name: Danny Koppenhagen
   mail: mail@d-koppenhagen.de
 created: 2020-03-02
-updated: 2020-07-18
+updated: 2020-10-06
 keywords:
   - Angular
   - Angular CLI
@@ -44,13 +44,12 @@ I will guide you through the process of how to handle protected routes using a c
 <div id="toc"><h2>Table of contents</h2></div>
 
 > This blog post is based on versions:
+>
 > ```
-> @scullyio/ng-lib: 1.0.0-beta.0
-> @scullyio/init: 1.0.0-beta.0
-> @scullyio/scully: 1.0.0-beta.0
+> @scullyio/ng-lib: 1.0.0
+> @scullyio/init: 1.0.0
+> @scullyio/scully: 1.0.0
 > ```
-> However some of the commands or API calls used here may change in the future.
-> It’s my goal to keep this blog post as up-to-date as possible.
 
 <hr>
 
