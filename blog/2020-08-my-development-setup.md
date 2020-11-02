@@ -6,7 +6,7 @@ author:
   name: Danny Koppenhagen
   mail: mail@d-koppenhagen.de
 created: 2020-08-27
-updated: 2020-09-19
+updated: 2020-09-20
 keywords:
   - Angular
   - Vue.js
@@ -232,11 +232,12 @@ The next part is all about the VSCode extensions I am using so let's walk quickl
 
 ### Angular
 
-|                                                                                                                                                 |                                                                                                                                                                                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](https://obenjiro.gallerycdn.vsassets.io/extensions/obenjiro/arrr/0.1.0/1598284087751/Microsoft.VisualStudio.Services.Icons.Default)         | **[Arrr](https://marketplace.visualstudio.com/items?itemName=obenjiro.arrr)**<br/>Arrr is a great extension for the Angular Framework. It lets you easily refactor code and for example mark some lines in the template and move it into a child component.                           |
-| ![](https://angular.gallerycdn.vsassets.io/extensions/angular/ng-template/0.1000.7/1596155297383/Microsoft.VisualStudio.Services.Icons.Default) | **[Angular Language Service](https://marketplace.visualstudio.com/items?itemName=obenjiro.arrr)**<br/>When you are developing an [Angular](https://angular.io) app, this extension is essential: It gives you quick info, autocompletion and diagnostic information.                  |
-| ![](https://github.com/SanderLedegen/vscode-angular-follow-selector/raw/master/images/logo.png)                                                 | **[Angular Follow Selector](https://marketplace.visualstudio.com/items?itemName=sanderledegen.angular-follow-selector)**<br/>This extensions allows you to click on [Angular](https://angular.io) selectors in the template  and get redirected to their definition in the component. |
+|                                                                                                                                                     |                                                                                                                                                                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](https://obenjiro.gallerycdn.vsassets.io/extensions/obenjiro/arrr/0.1.0/1598284087751/Microsoft.VisualStudio.Services.Icons.Default)             | **[Arrr](https://marketplace.visualstudio.com/items?itemName=obenjiro.arrr)**<br/>Arrr is a great extension for the Angular Framework. It lets you easily refactor code and for example mark some lines in the template and move it into a child component.                           |
+| ![](https://angular.gallerycdn.vsassets.io/extensions/angular/ng-template/0.1000.7/1596155297383/Microsoft.VisualStudio.Services.Icons.Default)     | **[Angular Language Service](https://marketplace.visualstudio.com/items?itemName=obenjiro.arrr)**<br/>When you are developing an [Angular](https://angular.io) app, this extension is essential: It gives you quick info, autocompletion and diagnostic information.                  |
+| ![](https://github.com/SanderLedegen/vscode-angular-follow-selector/raw/master/images/logo.png)                                                     | **[Angular Follow Selector](https://marketplace.visualstudio.com/items?itemName=sanderledegen.angular-follow-selector)**<br/>This extensions allows you to click on [Angular](https://angular.io) selectors in the template  and get redirected to their definition in the component. |
+| ![](https://bilelmsekni.gallerycdn.vsassets.io/extensions/bilelmsekni/componizer/0.0.4/1604296104774/Microsoft.VisualStudio.Services.Icons.Default) | **[Componizer](https://marketplace.visualstudio.com/items?itemName=bilelmsekni.componizer)**<br/>Componizer let's you easily refactor [Angular](https://angular.io) components into separate child components.                                                                        |
 <!--
 |![]()|**[]()**<br/>|
 -->
