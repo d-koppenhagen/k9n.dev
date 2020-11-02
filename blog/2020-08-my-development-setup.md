@@ -90,7 +90,7 @@ However, there are some things where I prefer to use a GUI for assistance:
 - interactive rebase
 - managing multiple remote repositories
 
-**Fork** is a very nice, clean and powerful open source Git GUI that helps you to control Git in an easy and interactive way.
+**Fork** is a very nice, clean and powerful Git GUI that helps you to control Git in an easy and interactive way.
 
 ![Screenshot: Fork](/assets/images/blog/dev-setup/fork.png)
 
