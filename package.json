@@ -29,7 +29,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "@angular/animations": "~11.0.0",
-    "@angular/cdk": "^10.0.1",
+    "@angular/cdk": "^11.0.0",
     "@angular/common": "~11.0.0",
     "@angular/compiler": "~11.0.0",
     "@angular/core": "~11.0.0",
@@ -38,7 +38,7 @@
     "@angular/platform-browser-dynamic": "~11.0.0",
     "@angular/router": "~11.0.0",
     "@angular/service-worker": "~11.0.0",
-    "@angular/youtube-player": "^10.0.0",
+    "@angular/youtube-player": "^11.0.0",
     "@fortawesome/angular-fontawesome": "^0.7.0",
     "@fortawesome/fontawesome-free": "^5.14.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
