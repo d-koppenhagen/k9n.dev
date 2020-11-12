@@ -6,7 +6,7 @@ author:
   name: 'Danny Koppenhagen'
   mail: mail@d-koppenhagen.de
 created: 2020-09-14
-updated: 2020-09-30
+updated: 2020-11-12
 publishedAt:
   name: inDepth.dev
   url: https://indepth.dev/speed-up-your-angular-schematics-development-with-useful-helper-functions
@@ -48,7 +48,7 @@ The helper functions I present you in this article are neither documented nor of
 So, there are plans to provide some utilities via a public API but this is still in the planning stage.
 While things evolve, it's my intention to keep this article as up-to-date as possible.
 
-> The following Angular CLI schematics util functions are based on the Angular CLI version `10.1.1`.
+> The following Angular CLI schematics util functions are based on the Angular CLI version `11.0.0`.
 
 If you use these functions and they will break in the future, you can check out the [source code changes](https://github.com/angular/angular-cli/tree/master/packages/schematics/angular/utility) for the utility functions and adjust your code.
 
@@ -763,7 +763,7 @@ The last step is to `chain` all of our `Rule`s:
 We first use the `externalSchematic()` function to run the `ng new` Schematic from Angular itself and set up the basic app.
 We will hand over some default options here such a using `SCSS`, support legacy browsers, strict mode, etc.
 Angulars `ng new` schematic requires also, that we define the specific version for their schematic to be used.
-In our case we want to use the `ng new` schematic from the Angular CLI version `10.1.0`.
+In our case we want to use the `ng new` schematic from the Angular CLI version `11.0.0`.
 The second call is our `ng add` Schematic that adds our company specific components, UI libs and so on to the project.
 
 > We've already learned how to run a local Schematic by using the `RunSchematicTask` class that we need to add to our `context` object.
@@ -791,7 +791,7 @@ export function playground(options: AngularNgNewSchema): Rule {
   return async (_tree: Tree, _context: SchematicContext) => {
     const angularSchematicsPackage = '@schematics/angular';
     const ngNewOptions: AngularNgNewSchema = {
-      version: '10.1.0',
+      version: '11.0.0',
       name: options.name,
       routing: true,
       strict: true,
