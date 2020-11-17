@@ -25,6 +25,7 @@ language: de
 thumbnail:
   header: assets/images/blog/pwaheader.jpg
   card: assets/images/blog/pwaheader-small.jpg
+series: angular-pwa
 ---
 
 # Mach aus deiner Angular-App eine PWA
