@@ -1,25 +1,27 @@
 ---
-title: Schematics for enterprises
-description: In this article I will guide you through the process of developing schematics for enterprises and how you can combine the to adress new as well as existing projects and power them up
+title: 'Schematics for enterprises'
+description: 'In this article I will guide you through the process of developing schematics for enterprises and how you can combine the to adress new as well as existing projects and power them up'
 published: false
 author:
-  name: Danny Koppenhagen
-  mail: mail@d-koppenhagen.de
+    name: 'Danny Koppenhagen'
+    mail: mail@d-koppenhagen.de
 created: 2020-01-01T00:00:00.000Z
 updated: 2020-01-01T00:00:00.000Z
 publishedAt:
-  name: Publisher Name
-  url: 'https://example.com'
-  logo: 'https://example.com/img/brand.svg'
+    name: 'Publisher Name'
+    url: 'https://example.com'
+    logo: 'https://example.com/img/brand.svg'
 linked:
-  devTo: 'https://dev.to/foo'
-  medium: 'https://medium.com/foo'
+    devTo: 'https://dev.to/foo'
+    medium: 'https://medium.com/foo'
 keywords:
-  - Angular
+    - Angular
 language: en
 thumbnail:
-  header: assets/images/bg3.jpg
-  card: assets/images/bg3.jpg
+    header: assets/images/bg3.jpg
+    card: assets/images/bg3.jpg
+slugs:
+    - ___UNPUBLISHED___khed3tyx_ZTQcClh9cXZEEV1MmWppZBciQxqdxU9g
 ---
 
 # Schematics for enterprises
