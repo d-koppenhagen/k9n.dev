@@ -13,10 +13,17 @@ import {
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit, AfterViewInit {
-  youtubePlayerWidth = 300;
   @ViewChild('videoBox') videoBox: ElementRef;
+  youtubePlayerWidth = 300;
 
   constructor() {}
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    if (this.videoBox?.nativeElement?.clientWidth) {
+      this.youtubePlayerWidth = this.videoBox.nativeElement.clientWidth;
+    }
+  }
 
   ngOnInit() {
     const tag = document.createElement('script');
@@ -26,12 +33,5 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.onResize();
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    if (this.videoBox?.nativeElement?.clientWidth) {
-      this.youtubePlayerWidth = this.videoBox.nativeElement.clientWidth;
-    }
   }
 }

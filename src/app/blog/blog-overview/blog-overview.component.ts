@@ -20,9 +20,9 @@ import {
   styleUrls: ['./blog-overview.component.scss'],
 })
 export class BlogOverviewComponent implements OnInit, AfterViewInit {
+  @ViewChild('searchInput') searchInput: ElementRef;
   keyword$: Observable<string>;
   searchString: string;
-  @ViewChild('searchInput') searchInput: ElementRef;
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 

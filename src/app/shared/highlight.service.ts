@@ -18,11 +18,12 @@ import 'prismjs/components/prism-sass';
 import 'prismjs/components/prism-scss';
 import 'prismjs/components/prism-yaml';
 
+// eslint-disable-next-line no-var, @typescript-eslint/naming-convention
 declare var Prism: any;
 
 @Injectable()
 export class HighlightService {
-  constructor(@Inject(PLATFORM_ID) private platformId: object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: string) {}
 
   highlightAll() {
     if (isPlatformBrowser(this.platformId)) {

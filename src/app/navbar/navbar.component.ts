@@ -24,9 +24,11 @@ export class NavbarComponent implements OnInit {
   }
 
   switchLanguage() {
-    this.languageSwitched
-      ? this.translocoService.setActiveLang(this.availableLanguages[0])
-      : this.translocoService.setActiveLang(this.availableLanguages[1]);
+    if (this.languageSwitched) {
+      this.translocoService.setActiveLang(this.availableLanguages[0]);
+    } else {
+      this.translocoService.setActiveLang(this.availableLanguages[1]);
+    }
     this.languageSwitched = !this.languageSwitched;
     this.activeLanguage = this.translocoService.getActiveLang();
   }

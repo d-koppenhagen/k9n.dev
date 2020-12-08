@@ -28,14 +28,14 @@ export class PreviewComponent implements OnInit, OnChanges {
 
   private loadPosts() {
     this.postData$ = this.srs.available$.pipe(
-      map((routeList) => {
-        return routeList
+      map((routeList) =>
+        routeList
           .filter((route: ScullyRoute) =>
             route.route.startsWith(`/${this.content}/`),
           )
           .filter((route: ScullyRoute) => route.published !== false)
-          .reverse();
-      }),
+          .reverse(),
+      ),
       tap((routeList) => (this.cntAll = routeList.length)),
       map((routeList) => {
         if (!this.keyword) {

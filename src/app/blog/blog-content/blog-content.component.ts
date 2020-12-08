@@ -25,6 +25,7 @@ import { MetaService } from '../../meta.service';
 })
 export class BlogContentComponent
   implements OnInit, AfterViewInit, AfterViewChecked {
+  @ViewChild('shareBtnBox') shareBtnBox: ElementRef;
   post$: Observable<ScullyRoute>;
   location: null;
   shareData: { url: string; description: string } = {
@@ -32,7 +33,6 @@ export class BlogContentComponent
     description: '',
   };
   shareBtnCnt = 5;
-  @ViewChild('shareBtnBox') shareBtnBox: ElementRef;
 
   constructor(
     private router: Router,
@@ -41,6 +41,22 @@ export class BlogContentComponent
     private highlightService: HighlightService,
     private metaService: MetaService,
   ) {}
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    if (!this.shareBtnBox?.nativeElement?.clientWidth) {
+      return;
+    }
+    if (this.shareBtnBox.nativeElement.clientWidth < 320) {
+      this.shareBtnCnt = 2;
+    } else if (this.shareBtnBox.nativeElement.clientWidth < 410) {
+      this.shareBtnCnt = 3;
+    } else if (this.shareBtnBox.nativeElement.clientWidth < 480) {
+      this.shareBtnCnt = 4;
+    } else {
+      this.shareBtnCnt = 5;
+    }
+  }
 
   /**
    * Highlight blog post when it's ready
@@ -67,8 +83,8 @@ export class BlogContentComponent
 
   refreshPost() {
     this.post$ = this.srs.available$.pipe(
-      map((routeList) => {
-        return routeList.filter((route: ScullyRoute) => {
+      map((routeList) =>
+        routeList.filter((route: ScullyRoute) => {
           if (
             route.route.startsWith(`/blog/`) &&
             route.route.includes(this.route.snapshot.params.slug)
@@ -86,24 +102,17 @@ export class BlogContentComponent
                   (
                     a: { title: string; route: string; created: string },
                     b: { title: string; route: string; created: string },
-                  ) => {
-                    // Turn your strings into dates, and then subtract them
-                    // to get a value that is either negative, positive, or zero.
-                    return (
-                      new Date(b.created).getTime() -
-                      new Date(a.created).getTime()
-                    );
-                  },
+                  ) =>
+                    new Date(b.created).getTime() -
+                    new Date(a.created).getTime(),
                 )
                 .reverse();
             }
             return route;
           }
-        });
-      }),
-      map((currentPostData: ScullyRoute[]) => {
-        return currentPostData[0];
-      }),
+        }),
+      ),
+      map((currentPostData: ScullyRoute[]) => currentPostData[0]),
       tap((post?: ScullyRoute) => {
         if (!post) {
           return;
@@ -117,21 +126,5 @@ export class BlogContentComponent
 
   editOnGithubLink() {
     return `https://github.com/d-koppenhagen/d-koppenhagen.de/edit/master${location.pathname}.md`;
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    if (!this.shareBtnBox?.nativeElement?.clientWidth) {
-      return;
-    }
-    if (this.shareBtnBox.nativeElement.clientWidth < 320) {
-      this.shareBtnCnt = 2;
-    } else if (this.shareBtnBox.nativeElement.clientWidth < 410) {
-      this.shareBtnCnt = 3;
-    } else if (this.shareBtnBox.nativeElement.clientWidth < 480) {
-      this.shareBtnCnt = 4;
-    } else {
-      this.shareBtnCnt = 5;
-    }
   }
 }

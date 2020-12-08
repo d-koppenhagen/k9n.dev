@@ -41,16 +41,14 @@ export class ProjectContentComponent implements OnInit, AfterViewChecked {
 
   ngOnInit() {
     this.post$ = this.srs.available$.pipe(
-      map((routeList) => {
-        return routeList.filter(
+      map((routeList) =>
+        routeList.filter(
           (route: ScullyRoute) =>
             route.route.startsWith(`/projects/`) &&
             route.route.includes(this.route.snapshot.params.slug),
-        );
-      }),
-      map((currentPostData: ScullyRoute[]) => {
-        return currentPostData[0];
-      }),
+        ),
+      ),
+      map((currentPostData: ScullyRoute[]) => currentPostData[0]),
       tap((post?: ScullyRoute) => {
         if (!post) {
           return;
