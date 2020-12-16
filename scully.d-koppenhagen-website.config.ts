@@ -1,6 +1,5 @@
 import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
-import { GoogleAnalytics } from '@scullyio/scully-plugin-google-analytics';
 import { MinifyHtml } from 'scully-plugin-minify-html';
 import { getTocPlugin, TocConfig, TocPluginName } from 'scully-plugin-toc';
 import {
@@ -82,18 +81,9 @@ const TocPlugin = getTocPlugin();
 setPluginConfig(TocPlugin, tocOptions);
 
 /**
- * Gtag plugin config
+ * configure default postRenderers
  */
-setPluginConfig(GoogleAnalytics, { globalSiteTag: 'UA-XXXXXXXXX-X' });
-
-/**
- * configure defualt postRenderers
- */
-const defaultPostRenderers = [GoogleAnalytics, MinifyHtml];
-
-/**
- * configuration for HTML minification plugin
- */
+const defaultPostRenderers = [MinifyHtml];
 
 /**
  * the actual scully configuration
@@ -102,7 +92,7 @@ export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'd-koppenhagen-website',
   outDir: './dist/static',
-  defaultPostRenderers,
+  defaultPostRenderers: [MinifyHtml],
   routes: {
     '/projects/:slug': {
       type: 'contentFolder',

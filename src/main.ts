@@ -8,6 +8,11 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic()
+platformBrowserDynamic([
+  {
+    provide: 'GTAG_CODE',
+    useValue: environment.gtagCode,
+  },
+])
   .bootstrapModule(AppModule)
   .catch((err) => console.error(err));

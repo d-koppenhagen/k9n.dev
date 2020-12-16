@@ -5,6 +5,8 @@ import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs/operators';
 import { style, animate, transition, trigger } from '@angular/animations';
 
+declare var gtag;
+
 @Component({
   selector: 'dk-root',
   templateUrl: './app.component.html',
@@ -30,8 +32,10 @@ export class AppComponent {
     readonly router: Router,
     readonly viewportScroller: ViewportScroller,
     @Inject(DOCUMENT) private doc,
+    @Inject('GTAG_CODE') private gtagCode: string,
   ) {
     this.setupScrollBehaviourForAnker();
+    this.setupGtag();
     this.cookiesAccepted = Boolean(localStorage.getItem('cookiesAccepted'));
   }
 
@@ -48,5 +52,19 @@ export class AppComponent {
           this.viewportScroller.scrollToPosition([0, 0]);
         }
       });
+  }
+
+  private setupGtag() {
+    const navEndEvent$ = this.router.events.pipe(
+      filter((e) => e instanceof NavigationEnd),
+    );
+    navEndEvent$.subscribe((e: NavigationEnd) => {
+      gtag('config', this.gtagCode, { page_path: e.urlAfterRedirects });
+    });
+
+    const script = this.doc.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + this.gtagCode;
+    this.doc.head.prepend(script);
   }
 }

@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  gtagCode: 'UA-XXXXXXXXX-X',
 };
 
 /*
