@@ -7,6 +7,10 @@ import {
   MermaidPluginConfig,
   MermaidPluginName,
 } from 'scully-plugin-mermaid';
+import {
+  criticalCSS,
+  CriticalCSSSettings,
+} from '@scullyio/scully-plugin-critical-css';
 
 /**
  * configuration for the markdown plugin
@@ -21,14 +25,14 @@ setPluginConfig('md', { enableSyntaxHighlighting: true });
 const mermaidOptions: MermaidPluginConfig = {
   config: { theme: 'dark' },
 };
-const MermaidPlugin = getMermaidPlugin();
-setPluginConfig(MermaidPlugin, mermaidOptions);
+const mermaidPlugin = getMermaidPlugin();
+setPluginConfig(mermaidPlugin, mermaidOptions);
 
 /**
  * configuration for the sitemap plugin
  */
-const SitemapPlugin = getSitemapPlugin();
-setPluginConfig(SitemapPlugin, {
+const sitemapPlugin = getSitemapPlugin();
+setPluginConfig(sitemapPlugin, {
   urlPrefix: 'https://d-koppenhagen.de',
   sitemapFilename: 'sitemap.xml',
   changeFreq: 'monthly',
@@ -77,13 +81,21 @@ const tocOptions: TocConfig = {
   trailingSlash: true,
   scrollIntoViewOnClick: true,
 };
-const TocPlugin = getTocPlugin();
-setPluginConfig(TocPlugin, tocOptions);
+const tocPlugin = getTocPlugin();
+setPluginConfig(tocPlugin, tocOptions);
+
+/**
+ * configuration for the critical css plugin
+ */
+const criticalCssOptions: CriticalCSSSettings = {
+  inlineImages: true,
+};
+setPluginConfig(criticalCSS, criticalCssOptions);
 
 /**
  * configure default postRenderers
  */
-const defaultPostRenderers = [MinifyHtml];
+const defaultPostRenderers = ['seoHrefOptimise', criticalCSS, MinifyHtml];
 
 /**
  * the actual scully configuration

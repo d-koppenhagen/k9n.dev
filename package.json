@@ -46,6 +46,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@ngneat/transloco": "^2.19.1",
     "@scullyio/ng-lib": "^1.0.0",
+    "@scullyio/scully-plugin-critical-css": "0.0.2",
     "animate.css": "^4.1.1",
     "ng-navigator-share": "^1.0.4",
     "ng2-animate-on-scroll": "^2.0.1",

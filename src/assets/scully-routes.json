@@ -29,6 +29,7 @@
       "header": "assets/images/blog/pwaheader.jpg",
       "card": "assets/images/blog/pwaheader-small.jpg"
     },
+    "series": "angular-pwa",
     "sourceFile": "2019-07-progressive-web-app.md"
   },
   {
@@ -73,7 +74,7 @@
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
     "created": "2020-01-01T00:00:00.000Z",
-    "updated": "2020-07-18T00:00:00.000Z",
+    "updated": "2020-10-06T00:00:00.000Z",
     "keywords": [
       "Angular",
       "Angular CLI",
@@ -133,7 +134,7 @@
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
     "created": "2020-03-02T00:00:00.000Z",
-    "updated": "2020-07-18T00:00:00.000Z",
+    "updated": "2020-10-06T00:00:00.000Z",
     "keywords": [
       "Angular",
       "Angular CLI",
@@ -195,7 +196,7 @@
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
     "created": "2020-08-27T00:00:00.000Z",
-    "updated": "2020-09-19T00:00:00.000Z",
+    "updated": "2020-09-20T00:00:00.000Z",
     "keywords": [
       "Angular",
       "Vue.js",
@@ -225,7 +226,7 @@
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
     "created": "2020-09-14T00:00:00.000Z",
-    "updated": "2020-09-30T00:00:00.000Z",
+    "updated": "2020-11-12T00:00:00.000Z",
     "publishedAt": {
       "name": "inDepth.dev",
       "url": "https://indepth.dev/speed-up-your-angular-schematics-development-with-useful-helper-functions",
@@ -241,6 +242,92 @@
       "devTo": "https://dev.to/dkoppenhagen/speed-up-your-angular-schematics-development-with-useful-helper-functions-1kb2"
     },
     "sourceFile": "2020-09-angular-schematics-common-helpers.md"
+  },
+  {
+    "route": "/blog/2020-11-angular11",
+    "title": "Angular 11 ist da! Die wichtigsten Neuerungen im Überblick",
+    "description": "Es hätte kein schöneres Datum sein können: am 11.11.2020 wurde die neue Major-Version Angular 11.0 veröffentlicht. Wir werden Ihnen in diesem Artikel die wichtigsten Neuerungen vorstellen.",
+    "published": true,
+    "author": { "name": "Angular Buch Team", "mail": "team@angular-buch.com" },
+    "created": "2020-11-11T00:00:00.000Z",
+    "updated": "2020-11-11T00:00:00.000Z",
+    "publishedAt": {
+      "name": "angular-buch.com",
+      "url": "https://angular-buch.com/blog/2020-11-angular11",
+      "logo": "https://angular-buch.com/assets/img/brand.svg"
+    },
+    "keywords": [
+      "Angular",
+      "Angular 11",
+      "TypeScript",
+      "TSLint",
+      "ESLint",
+      "Hot Module Reloading"
+    ],
+    "language": "de",
+    "thumbnail": {
+      "header": "assets/images/blog/ng11/angular11.jpg",
+      "card": "assets/images/blog/ng11/angular11-small.jpg"
+    },
+    "series": "angular-update",
+    "sourceFile": "2020-11-angular11.md"
+  },
+  {
+    "route": "/blog/___UNPUBLISHED___khed3tyx_ZTQcClh9cXZEEV1MmWppZBciQxqdxU9g",
+    "title": "Schematics for enterprises",
+    "description": "In this article I will guide you through the process of developing schematics for enterprises and how you can combine the to adress new as well as existing projects and power them up",
+    "published": false,
+    "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
+    "created": "2020-01-01T00:00:00.000Z",
+    "updated": "2020-01-01T00:00:00.000Z",
+    "publishedAt": {
+      "name": "Publisher Name",
+      "url": "https://example.com",
+      "logo": "https://example.com/img/brand.svg"
+    },
+    "linked": {
+      "devTo": "https://dev.to/foo",
+      "medium": "https://medium.com/foo"
+    },
+    "keywords": ["Angular"],
+    "language": "en",
+    "thumbnail": {
+      "header": "assets/images/bg3.jpg",
+      "card": "assets/images/bg3.jpg"
+    },
+    "slugs": ["___UNPUBLISHED___khed3tyx_ZTQcClh9cXZEEV1MmWppZBciQxqdxU9g"],
+    "slug": "___UNPUBLISHED___khed3tyx_ZTQcClh9cXZEEV1MmWppZBciQxqdxU9g",
+    "sourceFile": "2020-11-schematics-for-enterprises.md"
+  },
+  {
+    "route": "/blog/2020-11-twa",
+    "title": "Trusted Web Activitys (TWA) mit Angular",
+    "description": "Progressive Web Apps sind in den letzten Jahren immer populärer geworden. In diesem Blogpost werde ich Ihnen zeigen, wie Sie Ihre PWA auf einfachem Weg in den Google Play Store für Android bringen können, ohne eine echte Android-App mit Webview zu entwickeln, die lediglich eine Website aufruft.",
+    "published": true,
+    "author": { "name": "Danny Koppenhagen", "mail": "mail@d-koppenhagen.de" },
+    "created": "2020-11-17T00:00:00.000Z",
+    "updated": "2020-11-17T00:00:00.000Z",
+    "publishedAt": {
+      "name": "angular-buch.com",
+      "url": "https://angular-buch.com/blog/2020-11-twa",
+      "logo": "https://angular-buch.com/assets/img/brand.svg"
+    },
+    "keywords": [
+      "TWA",
+      "Trusted Web Activity",
+      "PWA",
+      "Progressive Web App",
+      "Angular",
+      "Android",
+      "Android Store"
+    ],
+    "language": "de",
+    "thumbnail": {
+      "header": "assets/images/blog/twa/header-twa.jpg",
+      "card": "assets/images/blog/twa/header-twa-small.jpg"
+    },
+    "series": "angular-pwa",
+    "sourceFile": "2020-11-twa.md"
   },
   { "route": "/projects" },
   {
