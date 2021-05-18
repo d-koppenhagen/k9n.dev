@@ -22,7 +22,7 @@ keywords:
   - JAM Stack
 linked:
   devTo: https://dev.to/dkoppenhagen/dig-deeper-into-static-site-generation-with-scully-and-use-the-most-out-of-it-4cn5
-  medium: https://medium.com/@danny.koppenhagen/dig-deeper-into-static-site-generation-with-scully-and-use-the-most-out-of-it-ac86f216a6a7
+  medium: https://danny-koppenhagen.medium.com/dig-deeper-into-static-site-generation-with-scully-and-use-the-most-out-of-it-ac86f216a6a7
 language: en
 thumbnail:
   header: assets/images/blog/scully/scully-header2.jpg
