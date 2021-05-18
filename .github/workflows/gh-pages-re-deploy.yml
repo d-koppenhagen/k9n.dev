@@ -3,8 +3,8 @@
 name: GH Pages Re-Deploy
 
 # Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
-on: 
+# events but only for the main branch
+on:
   workflow_dispatch:
     branches:
       - gh-pages

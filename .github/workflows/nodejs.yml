@@ -3,7 +3,7 @@ name: Scully Publish
 on:
   push:
     branches:
-      - master
+      - main
       - 'blog/**'
       - schematics-helpers
 
