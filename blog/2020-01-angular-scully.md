@@ -6,7 +6,7 @@ author:
   name: Danny Koppenhagen
   mail: mail@d-koppenhagen.de
 created: 2020-01-01
-updated: 2020-10-06
+updated: 2021-05-18
 keywords:
   - Angular
   - Angular CLI
@@ -39,9 +39,9 @@ series: scully
 > This blog post is based on versions:
 >
 > ```
-> @scullyio/ng-lib: 1.0.0
-> @scullyio/init: 1.0.0
-> @scullyio/scully: 1.0.0
+> @scullyio/ng-lib: 1.1.1
+> @scullyio/init: 1.1.4
+> @scullyio/scully: 1.1.1
 > ```
 
 <hr>
@@ -185,7 +185,7 @@ blog/
 ```
 
 This feels strange doesn't it? But Checking the content of the file `index.html` inside will tell us it contains actually the content of the just created blog post.
-This is by intention: Ths _Scully_ schematic created the markdown file with a meta flag called `publsihed` that is by default set to `false`.
+This is by intention: Ths _Scully_ schematic created the markdown file with a meta flag called `published` that is by default set to `false`.
 The internally used renderer plugin from _Scully_ will handle this flag and it creates an unguessable name for the route.
 This allows us to create blog post drafts that we can already publish and share by using the link for example to let someone else review the article.
 You can also use this route if you dont't care about the route name.
