@@ -22,6 +22,8 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
+          build-args: '--prod'
+
   sync-devto:
     runs-on: ubuntu-latest
     steps:
