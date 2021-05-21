@@ -110,7 +110,7 @@ DevToClient.getMyArticles().then(async (data) => {
       title: revisedLocalArticleData.title,
       published: Boolean(revisedLocalArticleData.published),
       main_image: `${BASE_URL}/${revisedLocalArticleData.thumbnail.header}`,
-      canonical_url: `${BASE_URL}/blog/${revisedLocalArticleData.name}`,
+      canonical_url: `${BASE_URL}/blog/${localArticleMatch.name}`,
       description: revisedLocalArticleData.description,
       // series?: string,
       // tags?: string[],
