@@ -14,7 +14,7 @@ const BASE_URL = 'https://d-koppenhagen.de';
 /**
  * This param defines the time between updateing each post
  */
-const TIME_BETWEEN_UPDATES = 2000;
+const TIME_BETWEEN_UPDATES = 5000;
 
 /**
  * This function hook is executed before posting the data to dev.to for each article
@@ -74,6 +74,7 @@ DevToClient.getMyArticles().then(async (data) => {
     // find corresponding articles that should be updated
     const localArticleMatch = articleMap.get(article.id);
     if (!localArticleMatch) {
+      console.warn(`found article without any match (ID: ${article.id})`);
       return;
     }
 
@@ -90,9 +91,8 @@ DevToClient.getMyArticles().then(async (data) => {
     );
 
     // parse JSON string and store the data
-    const localArticleData = JSON.parse(localArticleDataRaw)[
-      localArticleMatch.name
-    ];
+    const localArticleData =
+      JSON.parse(localArticleDataRaw)[localArticleMatch.name];
 
     // execute 'preUpdateAll()' function for each post
     let revisedLocalArticleData = preUpdateAll(localArticleData);
@@ -117,6 +117,18 @@ DevToClient.getMyArticles().then(async (data) => {
       // organization_id?: number
     };
 
+    console.log('⚙️ processing article...');
+    console.log(
+      JSON.stringify(
+        {
+          ...options,
+          body_markdown: options.body_markdown.substring(0, 20) + '...',
+        },
+        null,
+        2,
+      ),
+    );
+
     // finally update the article
     DevToClient.updateArticle(article.id, options).then(
       () => {
@@ -133,6 +145,6 @@ DevToClient.getMyArticles().then(async (data) => {
   }
 
   errors
-    ? console.log('😓 finished with errors')
+    ? console.warn('😓 finished with errors')
     : console.log('🎉 finished without errors');
 });
