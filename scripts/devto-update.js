@@ -65,7 +65,7 @@ const DevToClient = new DevToJS({ apiKey: API_KEY });
  * fetch all articles for the user
  */
 DevToClient.getMyArticles().then(async (data) => {
-  errors = false;
+  let errors = false;
   /**
    * iterate through the articles
    * for-of-loop is needed instead of forEach, so run the loop synchronously
@@ -144,7 +144,10 @@ DevToClient.getMyArticles().then(async (data) => {
     );
   }
 
-  errors
-    ? console.warn('😓 finished with errors')
-    : console.log('🎉 finished without errors');
+  if (errors) {
+    console.error('😓 finished with errors');
+    process.exit(1);
+  } else {
+    console.log('🎉 finished without errors');
+  }
 });
