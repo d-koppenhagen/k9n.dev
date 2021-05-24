@@ -17,7 +17,8 @@
     "scully:serve": "scully serve",
     "scully:all": "npm run build && npm run scully -- --scanRoutes && npm run scully:serve",
     "post": "ng g @scullyio/init:post --metaDataFile='templates/blog-meta.yaml' --target='blog'",
-    "project": "ng g @scullyio/init:post --metaDataFile='templates/project-meta.yaml' --target='projects'"
+    "project": "ng g @scullyio/init:post --metaDataFile='templates/project-meta.yaml' --target='projects'",
+    "prepare": "husky install"
   },
   "private": true,
   "author": "Danny Koppenhagen <mail@d-koppenhagen.de> (https://d-koppenhagen.de)",
@@ -86,7 +87,7 @@
     "eslint-plugin-jsdoc": "34.7.0",
     "eslint-plugin-prefer-arrow": "1.2.3",
     "fast-xml-parser": "^3.19.0",
-    "husky": "^4.3.0",
+    "husky": "^6.0.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "jsdom": "^16.5.3",
