@@ -5,7 +5,6 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { A11yModule } from '@angular/cdk/a11y';
 import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
-import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import { YouTubePlayerModule } from '@angular/youtube-player';
@@ -51,7 +50,6 @@ import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
     SharedModule,
     TranslocoRootModule,
     ScullyLibModule,
-    AnimateOnScrollModule.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),

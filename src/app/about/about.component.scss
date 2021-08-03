@@ -34,18 +34,6 @@ p {
   margin-left: -3px;
 }
 
-/* timeline animation*/
-.animated {
-  visibility: visible !important;
-}
-.hide-on-init,
-.hidden {
-  visibility: hidden;
-}
-.list-item {
-  z-index: 1;
-}
-
 /* Timeline Heading Style */
 h2.timeline-heading {
   font-size: 1.76em;
