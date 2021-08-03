@@ -6,7 +6,7 @@ It will help you to keep your CHANGELOG.md file up to date and to release new ta
 published: true
 author:
   name: Danny Koppenhagen
-  mail: mail@d-koppenhagen.de
+  mail: mail@k9n.dev
 created: 2019-11-06
 updated: 2019-11-06
 publishedAt:

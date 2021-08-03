@@ -4,7 +4,7 @@ description: My module angular-tag-cloud-module lets you generate word clouds / 
 published: true
 author:
   name: Danny Koppenhagen
-  mail: mail@d-koppenhagen.de
+  mail: mail@k9n.dev
 updated: 2020-04-09
 keywords:
   - Angular

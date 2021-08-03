@@ -4,7 +4,7 @@ description: 'In this article I will present you what tools I am using during my
 published: true
 author:
   name: Danny Koppenhagen
-  mail: mail@d-koppenhagen.de
+  mail: mail@k9n.dev
 created: 2020-08-27
 updated: 2021-05-23
 keywords:
@@ -369,7 +369,7 @@ The actual cronjob config is the following:
 ## Feedback
 
 Now as you know my dev setup, it's your turn! Is there any great tool or plugin you can recommend?
-Then just contact me via [E-Mail](mailto:mail@d-koppenhagen.de) or [Twitter](https://twitter.com/d_koppenhagen) and let me know!
+Then just contact me via [E-Mail](mailto:mail@k9n.dev) or [Twitter](https://twitter.com/d_koppenhagen) and let me know!
 
 **Thank you**
 

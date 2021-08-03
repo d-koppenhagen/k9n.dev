@@ -4,7 +4,7 @@ description: 'You probably heard of the JAMStack. It is a new way of building we
 published: true
 author:
   name: Danny Koppenhagen
-  mail: mail@d-koppenhagen.de
+  mail: mail@k9n.dev
 created: 2020-01-01
 updated: 2021-05-18
 keywords:
@@ -423,7 +423,7 @@ With the shown examples, it's possible create a full-fledged website with Scully
 
 > Did you know that **this blogpost** and the overall website your are right now reading has also been created using _Scully_?
 > Feel free to check out the sources at:
-> [github.com/d-koppenhagen/d-koppenhagen.de](https://github.com/d-koppenhagen/d-koppenhagen.de)
+> [github.com/d-koppenhagen/k9n.dev](https://github.com/d-koppenhagen/k9n.dev)
 
 If you you want to follow all the development steps in detail, check out my provided github repository
 [scully-blog-example](https://github.com/d-koppenhagen/scully-blog-example).

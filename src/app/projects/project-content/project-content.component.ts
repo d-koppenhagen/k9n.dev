@@ -71,6 +71,6 @@ export class ProjectContentComponent implements OnInit, AfterViewChecked {
   }
 
   editOnGithubLink() {
-    return `https://github.com/d-koppenhagen/d-koppenhagen.de/edit/master${location.pathname}.md`;
+    return `https://github.com/d-koppenhagen/k9n.dev/edit/master${location.pathname}.md`;
   }
 }

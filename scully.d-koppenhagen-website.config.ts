@@ -33,7 +33,7 @@ setPluginConfig(mermaidPlugin, mermaidOptions);
  */
 const sitemapPlugin = getSitemapPlugin();
 setPluginConfig(sitemapPlugin, {
-  urlPrefix: 'https://d-koppenhagen.de',
+  urlPrefix: 'https://k9n.dev',
   sitemapFilename: 'sitemap.xml',
   changeFreq: 'monthly',
   priority: [

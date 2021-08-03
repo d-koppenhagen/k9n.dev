@@ -22,6 +22,6 @@ jobs:
       - name: Re-Deploy GH Pages by empty commit
         run: |
           git config --global user.name 'Danny Koppenhagen'
-          git config --global user.email 'mail@d-koppenhagen.de'
+          git config --global user.email 'mail@k9n.dev'
           git commit --allow-empty -m "Empty commit (re-deploy)"
           git push

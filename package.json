@@ -1,7 +1,7 @@
 {
   "name": "d-koppenhagen-website",
   "version": "0.0.0",
-  "description": "d-koppenhagen.de website",
+  "description": "k9n.dev website",
   "scripts": {
     "dev": "npm-run-all --parallel build:watch scully:watch",
     "release": "standard-version",
@@ -21,11 +21,11 @@
     "prepare": "husky install"
   },
   "private": true,
-  "author": "Danny Koppenhagen <mail@d-koppenhagen.de> (https://d-koppenhagen.de)",
+  "author": "Danny Koppenhagen <mail@k9n.dev> (https://k9n.dev)",
   "homepage": "https://github.com/d-koppenhagen/d-koppenhagen-website",
   "bugs": {
     "url": "https://github.com/d-koppenhagen/d-koppenhagen-website/issues",
-    "email": "mail@d-koppenhagen.de"
+    "email": "mail@k9n.dev"
   },
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {

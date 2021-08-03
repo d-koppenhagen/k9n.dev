@@ -6,7 +6,7 @@ Die PWA lässt sich wie jede andere App nutzen, inklusive Push-Benachrichtigunge
 published: true
 author:
   name: Danny Koppenhagen
-  mail: mail@d-koppenhagen.de
+  mail: mail@k9n.dev
 created: 2019-07-24
 updated: 2019-07-24
 publishedAt:

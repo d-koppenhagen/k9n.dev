@@ -1,8 +1,8 @@
-# d-koppenhagen.de website
+# k9n.dev website
 
-![Scully Publish](https://github.com/d-koppenhagen/d-koppenhagen.de/workflows/Scully%20Publish/badge.svg)
+![Scully Publish](https://github.com/d-koppenhagen/k9n.dev/workflows/Scully%20Publish/badge.svg)
 
-This project contains the source code for my personal website [d-koppenhagen.de](https://d-koppenhagen.de).
+This project contains the source code for my personal website [k9n.dev](https://k9n.dev).
 
 ## Development
 

@@ -36,7 +36,7 @@ export class MetaService {
   }
 
   private setTitle(title: string) {
-    this.title.setTitle(`D-Koppenhagen.de | ${title}`);
+    this.title.setTitle(`k9n.dev | ${title}`);
   }
 
   private setDescription(description: string) {
@@ -66,7 +66,7 @@ export class MetaService {
     });
     this.meta.updateTag({
       name: 'twitter:image',
-      content: `https://d-koppenhagen.de/${post.thumbnail.header}`,
+      content: `https://k9n.dev/${post.thumbnail.header}`,
     });
   }
 
@@ -78,11 +78,11 @@ export class MetaService {
     });
     this.meta.updateTag({
       name: 'og:image',
-      content: `https://d-koppenhagen.de/${post.thumbnail.header}`,
+      content: `https://k9n.dev/${post.thumbnail.header}`,
     });
     this.meta.updateTag({
       name: 'og:url',
-      content: `https://d-koppenhagen.de${post.route}`,
+      content: `https://k9n.dev${post.route}`,
     });
   }
 

@@ -24,7 +24,8 @@ import { MetaService } from '../../meta.service';
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class BlogContentComponent
-  implements OnInit, AfterViewInit, AfterViewChecked {
+  implements OnInit, AfterViewInit, AfterViewChecked
+{
   @ViewChild('shareBtnBox') shareBtnBox: ElementRef;
   post$: Observable<ScullyRoute>;
   location: null;
@@ -125,6 +126,6 @@ export class BlogContentComponent
   }
 
   editOnGithubLink() {
-    return `https://github.com/d-koppenhagen/d-koppenhagen.de/edit/master${location.pathname}.md`;
+    return `https://github.com/d-koppenhagen/k9n.dev/edit/master${location.pathname}.md`;
   }
 }

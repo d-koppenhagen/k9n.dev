@@ -4,7 +4,7 @@ description: 'Create exportable code reviews in Visual Studio Code including aut
 published: true
 author:
   name: Danny Koppenhagen
-  mail: mail@d-koppenhagen.de
+  mail: mail@k9n.dev
 updated: 2020-05-22T00:00:00.000Z
 keywords:
   - code review

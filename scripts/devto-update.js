@@ -9,7 +9,7 @@ const API_KEY = 'DEVTO_API_KEY';
 /**
  * This URL is used before deploying on dev.to to point to the absolute paths
  */
-const BASE_URL = 'https://d-koppenhagen.de';
+const BASE_URL = 'https://k9n.dev';
 
 /**
  * This param defines the time between updateing each post

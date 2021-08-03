@@ -4,7 +4,7 @@ description: Generate file trees from your VS Code Explorer for different Markdo
 published: true
 author:
   name: Danny Koppenhagen
-  mail: mail@d-koppenhagen.de
+  mail: mail@k9n.dev
 updated: 2020-02-02
 keywords:
   - Markdown

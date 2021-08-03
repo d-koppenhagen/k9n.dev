@@ -4,7 +4,7 @@ description: 'This plugin for Scully will insert a table of contents (TOC) for y
 published: true
 author:
     name: 'Danny Koppenhagen'
-    mail: mail@d-koppenhagen.de
+    mail: mail@k9n.dev
 updated: 2020-02-26T00:00:00.000Z
 keywords:
     - Angular

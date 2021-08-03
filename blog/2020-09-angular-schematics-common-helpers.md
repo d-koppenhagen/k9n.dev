@@ -4,7 +4,7 @@ description: 'Angular CLI schematics offer us a way to add, scaffold and update 
 published: true
 author:
   name: 'Danny Koppenhagen'
-  mail: mail@d-koppenhagen.de
+  mail: mail@k9n.dev
 created: 2020-09-14
 updated: 2021-05-19
 publishedAt:

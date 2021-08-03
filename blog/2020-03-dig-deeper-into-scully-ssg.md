@@ -6,7 +6,7 @@ I will guide you through the process of how to handle protected routes using a c
 published: true
 author:
   name: Danny Koppenhagen
-  mail: mail@d-koppenhagen.de
+  mail: mail@k9n.dev
 created: 2020-03-02
 updated: 2021-05-18
 keywords:
@@ -67,7 +67,7 @@ description: <fill in a short description for the overview page>
 published: false
 author:
   name: Danny Koppenhagen
-  mail: mail@d-koppenhagen.de
+  mail: mail@k9n.dev
 updated: dd.mm.yyyy
 keywords:
   - Angular

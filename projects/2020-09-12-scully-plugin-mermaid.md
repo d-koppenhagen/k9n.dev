@@ -4,7 +4,7 @@ description: 'Add a Scully.io PostRenderer plugin for Mermaid.js graphs, charts 
 published: true
 author:
   name: 'Danny Koppenhagen'
-  mail: mail@d-koppenhagen.de
+  mail: mail@k9n.dev
 updated: 2020-09-12
 keywords:
   - Angular

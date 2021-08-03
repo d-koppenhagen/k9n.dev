@@ -4,7 +4,7 @@ description: 'In this article I will guide you through the process of developing
 published: false
 author:
     name: 'Danny Koppenhagen'
-    mail: mail@d-koppenhagen.de
+    mail: mail@k9n.dev
 created: 2020-01-01T00:00:00.000Z
 updated: 2020-01-01T00:00:00.000Z
 publishedAt:
