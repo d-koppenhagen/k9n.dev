@@ -138,3 +138,74 @@ span.image > img.thumbnail {
   font-size: 1.4em;
   width: fit-content;
 }
+
+.adaptive-glass {
+  --glass-lightness: 100%;
+  background: hsl(0 0% var(--glass-lightness) / 50%);
+  backdrop-filter: blur(40px);
+
+  @media (prefers-color-scheme: dark) {
+    --glass-lightness: 0%;
+  }
+
+  @supports not (backdrop-filter: blur(1px)) {
+    background: hsl(0 0% var(--glass-lightness) / 90%);
+  }
+}
+
+figure {
+  --on-glass-primary: hsl(220 50% 20%);
+  --on-glass-secondary: hsl(220 40% 30%);
+
+  border-radius: 0.5ch;
+  overflow: hidden;
+
+  /*  https://shadows.brumm.af/  */
+  box-shadow: 0 3px 2px hsl(0 0% 0% / 2%), 0 7px 5px hsl(0 0% 0% / 3%),
+    0 13px 10px hsl(0 0% 0% / 4%), 0 22px 18px hsl(0 0% 0% / 5%),
+    0 42px 33px hsl(0 0% 0% / 6%), 0 100px 80px hsl(0 0% 0% / 7%);
+
+  @media (prefers-color-scheme: dark) {
+    --on-glass-primary: hsl(220 50% 90%);
+    --on-glass-secondary: hsl(220 30% 75%);
+  }
+
+  & img {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    object-fit: cover;
+  }
+}
+
+figcaption {
+  display: grid;
+  grid: [stack] 1fr / [stack] 1fr;
+  position: relative;
+
+  & > * {
+    grid-area: stack;
+  }
+
+  & > img {
+    position: absolute;
+  }
+
+  & > section {
+    z-index: 1;
+    padding-inline: 2ch;
+    padding-block: 2ch 2.5ch;
+    color: var(--on-glass-primary);
+    display: grid;
+    gap: 1ch;
+
+    @media (prefers-color-scheme: dark) {
+      text-shadow: 0 1px 0 hsl(0 0% 0% / 20%);
+    }
+  }
+
+  & h3 {
+    color: unset;
+    font-size: clamp(1.25rem, calc(1rem + 2vw), 2.5rem);
+  }
+}

@@ -3,20 +3,24 @@
     <div class="inner">
       <ng-container *ngIf="post$ | async as post">
         <section class="blog-header">
-          <span
-            *ngIf="post.thumbnail && post.thumbnail.header"
-            class="image fit"
-          >
-            <img
-              [src]="post.thumbnail.header"
-              [attr.alt]="'headerImage' | transloco"
-            />
-          </span>
+          <figure *ngIf="post.thumbnail && post.thumbnail.header">
+            <picture>
+              <img
+                [src]="post.thumbnail.header"
+                [attr.alt]="'headerImage' | transloco"
+              />
+            </picture>
+            <figcaption>
+              <img [src]="post.thumbnail.header" aria-hidden="true" alt="" />
+              <section class="adaptive-glass">
+                <h3>{{ post.title }}</h3>
+              </section>
+            </figcaption>
+          </figure>
         </section>
         <section class="extra-section" *ngIf="post.keywords">
           <div class="extra-info">
             <span *ngIf="post.updated">
-              {{ t('lastUpdate') }}:
               <time datetime="2001-05-15 19:00">{{ post.updated | date }}</time>
             </span>
             <h2 class="sub-heading">{{ t('keywords') }}</h2>
