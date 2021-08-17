@@ -1,0 +1,46 @@
+<article *transloco="let t">
+  <div class="card-header">
+    <a
+      [routerLink]="post.route"
+      *ngIf="post.thumbnail && (post.thumbnail.header || post.thumbnail.card)"
+      class="image card-image"
+    >
+      <img
+        [src]="post.thumbnail.card || post.thumbnail.header"
+        [attr.alt]="'thumbnail' | transloco"
+      />
+    </a>
+    <h3 class="major">{{ post.title }}</h3>
+  </div>
+  <summary class="card-content">
+    <p>
+      {{ post.description }}
+    </p>
+  </summary>
+  <div class="card-footer">
+    <a [routerLink]="post.route" class="special read-on"
+      >{{ t('readOn') }}...</a
+    >
+
+    <a
+      *ngIf="post.publishedAt && post.publishedAt.name && post.publishedAt.url"
+      [href]="post.publishedAt.url"
+      class="published-at-link"
+      [title]="
+        'originallyPublishedAt' | transloco: { value: post.publishedAt.url }
+      "
+    >
+      <img
+        *ngIf="post.publishedAt.logo; else showPublisherName"
+        class="published-at-logo"
+        [src]="post.publishedAt.logo"
+        alt="Logo of the published page"
+      />
+      <ng-template #showPublisherName>{{
+        t('originallyPublishedAt', {
+          value: post.publishedAt.url
+        })
+      }}</ng-template>
+    </a>
+  </div>
+</article>

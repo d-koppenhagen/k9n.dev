@@ -77,9 +77,8 @@
   "editOnGithub": "Found an error? Edit this page on Github",
   "aboutPage": {
     "about": "About me",
-    "intro": "My name is Danny Koppenhagen and  I am a passionate software developer and IT consultant. My profession is the development of web applications – especially of single page applications (SPA). My technology stack includes mainly Angular, RxJS, NgRx but also Vue.js and NativeScript. Furthermore I develop Node.js backends based on JavaScript and TypeScript. I am an IT consultant for web-architectures and -frameworks. During the development I am very focussed on the user experience (UX).",
-    "meetup": " I regularly visit the Angular Berlin Meetup and help with the organization of it. Interesting topics around Angular, RxJS, NgRx and other tools from the Angular eco-system are always presented at the Meetup.",
-    "meetupCta": "To the Angular Berlin Meetup",
+    "aboutBlog": "Why k9n.dev? This is a numeronym where the number between the two letters stands for the number of letters left out in my lastname (cf.: a11y, i18n, l10n, ...).",
+    "intro": "My name is Danny Koppenhagen and I am a passionate software developer and IT consultant. My profession is the development of web applications – especially of single page applications (SPA). My technology stack includes mainly Angular, RxJS, NgRx but also Vue.js with VueX. Furthermore I develop Node.js backends based on JavaScript and TypeScript. I am an IT consultant for web-architectures and -frameworks. During the development I am very focussed on the user experience (UX).",
     "career": "My Career Path",
     "interviews": "Interviews",
     "interviewDescriptions": {
@@ -124,7 +123,7 @@
         "info": "Implementation of client- server architectures in the TETRA-BOS infrastructure. Administration, configuration, integration and test of IT systems."
       },
       "4": {
-        "location": " ",
+        "location": "",
         "when": "2017",
         "what": "📕 Angular (1st edition)",
         "where": "dpunkt.verlag",
@@ -138,14 +137,14 @@
         "info": "Development of UX centered enterprise web applications. Consulting and implementation of web applications and -architectures and UX consulting."
       },
       "6": {
-        "location": " ",
+        "location": "",
         "when": "2019",
         "what": "📕 Angular (2nd edition)",
         "where": "dpunkt.verlag",
         "info": "'Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx'"
       },
       "7": {
-        "location": " ",
+        "location": "",
         "when": "2020",
         "what": "📕 Angular (3rd edition)",
         "where": "dpunkt.verlag",

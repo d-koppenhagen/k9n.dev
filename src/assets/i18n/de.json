@@ -77,9 +77,8 @@
   "editOnGithub": "Fehler gefunden? Bearbeiten Sie diese Seite auf Github.",
   "aboutPage": {
     "about": "Über mich",
-    "intro": "Mein Name ist Danny Koppenhagen und ich arbeite leidenschaftlich als Softwareentwickler und IT-Berater. Mein Metier ist die Konzeption und Entwicklung von Web-Anwendungen – insbesondere von Single-Page-Applications (SPA). Zum Einsatz kommen hier vor allem Angular, RxJS, NgRx aber auch Vue.js und NativeScript. Des Weiteren entwickle ich Backend-Anwendungen auf Basis von JavaScript und TypeScript und bin als IT-Berater für Webarchitekturen und -Frameworks tätig. Bei der Umsetzung meiner täglichen Arbeit steht stets der Nutzer im Fokus.",
-    "meetup": "Ich besuche regelmäßig das Angular Berlin Meetup und helfe bei der Organisation. Bei dem Meetup werden immer wieder interessante Themen rund um Angular, RxJS, NgRx und andere Tools rund um das Angular-Ökosystem vorgestellt.",
-    "meetupCta": "Zum Angular Berlin Meetup",
+    "aboutBlog": "Warum k9n.dev? Hierbei handelt es sich um ein Numeronym, bei dem die Zahl zwischen den beiden Buchstaben für die Anzahl der ausgelassenen Buchstaben in meinem Nachnamen steht (Vgl.: a11y, i18n, l10n, ...).",
+    "intro": "Mein Name ist Danny Koppenhagen und ich arbeite leidenschaftlich als Softwareentwickler und IT-Berater. Mein Metier ist die Konzeption und Entwicklung von Web-Anwendungen – insbesondere von Single-Page-Applications (SPA). Zum Einsatz kommen hier vor allem Angular, RxJS, NgRx aber auch Vue.js mit VueX. Des Weiteren entwickle ich Backend-Anwendungen auf Basis von JavaScript und TypeScript und bin als IT-Berater für Webarchitekturen und -Frameworks tätig. Bei der Umsetzung meiner täglichen Arbeit steht stets der Nutzer im Fokus.",
     "career": "Mein Werdegang",
     "interviews": "Interviews",
     "interviewDescriptions": {
@@ -123,7 +122,7 @@
         "info": "Umsetzung von Client- und Serversystemen im Bereich des TETRA-BOS. Administration, Konfiguration, Integration und Test von IT-Systemen."
       },
       "4": {
-        "location": " ",
+        "location": "",
         "when": "2017",
         "what": "📕 Angular (1. Auflage)",
         "where": "dpunkt.verlag",
@@ -137,14 +136,14 @@
         "info": "Entwicklung nutzerzentrierter Webanwendungen im Enterprise-Umfeld. Beratung zur Umsetzung von Web-Anwendungen und -Architekturen sowie User Experience (UX) Consulting."
       },
       "6": {
-        "location": " ",
+        "location": "",
         "when": "2019",
         "what": "📕 Angular (2. Auflage)",
         "where": "dpunkt.verlag",
         "info": "Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx"
       },
       "7": {
-        "location": " ",
+        "location": "",
         "when": "2020",
         "what": "📕 Angular (3. Auflage)",
         "where": "dpunkt.verlag",

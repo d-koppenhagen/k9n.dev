@@ -1,75 +1,23 @@
 @import '../../../sass/libs/vars';
 
 .features {
-  article {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  a.card-image > img {
-    height: 180px;
-    object-fit: cover;
-  }
-  .card-header {
-    .major {
-      min-height: 100px;
-    }
-  }
-  .card-content {
-    align-self: flex-start;
-  }
-  .card-footer {
-    margin-bottom: 0px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-
-    .read-on {
-      white-space: nowrap;
-      margin-right: 10px;
-    }
-
-    .published-at-link {
-      text-decoration: none;
-      border: none;
-      float: right;
-      width: 150px;
-
-      > img.published-at-logo {
-        float: right;
-        max-height: 50px;
-        margin-bottom: 10px;
-      }
-    }
-  }
-}
-/* media queries */
-@media screen and (max-width: 980px) {
-  a.card-image > img {
-    height: 150px;
-  }
-
-  .read-on {
-    font-size: 0.7em !important;
-  }
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 30px 1.75em;
+  grid-auto-flow: row;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  margin-right: 1.7em;
 }
 
 @media screen and (max-width: 800px) {
-  .read-on {
-    font-size: 0.6em !important;
+  .features {
+    grid-template-columns: 100%;
   }
 }
 
-@media screen and (max-width: 736px) {
-  a.card-image > img {
-    height: 120px;
-  }
-
-  .read-on {
-    visibility: hidden;
-    &::before {
-      visibility: visible;
-    }
+@media screen and (max-width: 480px) {
+  .features {
+    margin-right: 0;
   }
 }
