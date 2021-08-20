@@ -16,7 +16,6 @@
   "recentBlogPosts": "Aktuelle Blog Posts",
   "recentProjects": "Meine Projekte",
   "thumbnail": "Vorschaubild",
-  "title": "k9n.dev",
   "subHeader": "Entwickler, IT-Berater, Buchautor",
   "contactMeHeading": "Kontaktieren Sie mich",
   "contactParagraph": "Haben Sie Fragen oder Anregungen? Nehmen Sie gern Kontakt mit mir auf!",
@@ -122,7 +121,7 @@
         "info": "Umsetzung von Client- und Serversystemen im Bereich des TETRA-BOS. Administration, Konfiguration, Integration und Test von IT-Systemen."
       },
       "4": {
-        "location": "",
+        "location": " ",
         "when": "2017",
         "what": "📕 Angular (1. Auflage)",
         "where": "dpunkt.verlag",
@@ -136,14 +135,14 @@
         "info": "Entwicklung nutzerzentrierter Webanwendungen im Enterprise-Umfeld. Beratung zur Umsetzung von Web-Anwendungen und -Architekturen sowie User Experience (UX) Consulting."
       },
       "6": {
-        "location": "",
+        "location": " ",
         "when": "2019",
         "what": "📕 Angular (2. Auflage)",
         "where": "dpunkt.verlag",
         "info": "Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx"
       },
       "7": {
-        "location": "",
+        "location": " ",
         "when": "2020",
         "what": "📕 Angular (3. Auflage)",
         "where": "dpunkt.verlag",

@@ -16,7 +16,6 @@
   "recentBlogPosts": "Recent Blog Posts",
   "recentProjects": "My Projects",
   "thumbnail": "Thumbnail",
-  "title": "Hello",
   "subHeader": "Developer, IT Consultant, Author",
   "contactMeHeading": "Contact me",
   "contactParagraph": "Any questions or suggestions? Get in contact with me!",
@@ -123,7 +122,7 @@
         "info": "Implementation of client- server architectures in the TETRA-BOS infrastructure. Administration, configuration, integration and test of IT systems."
       },
       "4": {
-        "location": "",
+        "location": " ",
         "when": "2017",
         "what": "📕 Angular (1st edition)",
         "where": "dpunkt.verlag",
@@ -137,14 +136,14 @@
         "info": "Development of UX centered enterprise web applications. Consulting and implementation of web applications and -architectures and UX consulting."
       },
       "6": {
-        "location": "",
+        "location": " ",
         "when": "2019",
         "what": "📕 Angular (2nd edition)",
         "where": "dpunkt.verlag",
         "info": "'Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx'"
       },
       "7": {
-        "location": "",
+        "location": " ",
         "when": "2020",
         "what": "📕 Angular (3rd edition)",
         "where": "dpunkt.verlag",
