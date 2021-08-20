@@ -25,6 +25,8 @@ import { TranslocoRootModule } from './transloco-root.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
+import { TextSlotComponent } from './text-slot/text-slot.component';
+import { TextSlotMachineComponent } from './text-slot-machine/text-slot-machine.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
     ImprintComponent,
     TwitterTimelineComponent,
     CookieBannerComponent,
+    TextSlotComponent,
+    TextSlotMachineComponent,
   ],
   imports: [
     BrowserModule,

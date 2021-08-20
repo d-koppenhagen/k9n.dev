@@ -1,0 +1,9 @@
+.text-slot-machine {
+  position: relative;
+  display: inline-block;
+  text-overflow: clip;
+  overflow: hidden;
+  max-height: 100px;
+  display: block;
+  overflow: hidden;
+}

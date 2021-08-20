@@ -8,7 +8,19 @@
         [attr.alt]="'logo' | transloco"
         id="logo"
       />
-      <h1 class="header-title">{{ t('title') }}</h1>
+      <h1
+        class="header-title"
+        (mouseenter)="expanded = true"
+        (mouseleave)="expanded = false"
+      >
+        k<span class="headline-expanded" *ngIf="!expanded">9</span>
+        <dk-text-slot-machine
+          class="headline-expanded"
+          *ngIf="expanded"
+          result="oppenhagen"
+        ></dk-text-slot-machine
+        ><span *ngIf="!expanded">n.dev</span>
+      </h1>
       <p class="sub-header-title">Danny Koppenhagen</p>
       <p class="sub-header">{{ t('subHeader') }}</p>
     </div>
