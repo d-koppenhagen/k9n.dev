@@ -5,18 +5,21 @@ import {
   ElementRef,
   HostListener,
   AfterViewInit,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
 } from '@angular/core';
 
 @Component({
   selector: 'dk-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent implements OnInit, AfterViewInit {
   @ViewChild('videoBox') videoBox: ElementRef;
   youtubePlayerWidth = 300;
 
-  constructor() {}
+  constructor(private cdref: ChangeDetectorRef) {}
 
   @HostListener('window:resize', ['$event'])
   onResize() {
@@ -33,5 +36,6 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.onResize();
+    this.cdref.detectChanges();
   }
 }
