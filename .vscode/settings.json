@@ -21,7 +21,10 @@
     "statusBar.foreground": "#e7e7e7",
     "panel.border": "#759570",
     "sideBar.border": "#759570",
-    "editorGroup.border": "#759570"
+    "editorGroup.border": "#759570",
+    "sash.hoverBorder": "#759570",
+    "statusBarItem.remoteBackground": "#5e7959",
+    "statusBarItem.remoteForeground": "#e7e7e7"
   },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
