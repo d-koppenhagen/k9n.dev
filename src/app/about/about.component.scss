@@ -63,35 +63,24 @@ p {
 }
 
 /* Timeline Heading Style */
-h2.timeline-heading {
-  font-size: 1.76em;
-  text-transform: uppercase;
-  margin-bottom: 0.3em;
+.timeline-heading-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
-
-/* Timeline Heading Style */
-h3 {
-  font-size: 1em;
-  text-transform: uppercase;
-  white-space: pre-wrap;
-}
-h4 {
+.timeline-heading-info {
   font-size: 0.9em;
   text-transform: none;
-  margin-bottom: 0.1em;
+  font-weight: bold;
+  line-height: 1.1;
 }
-
-span.location {
-  position: absolute;
-  right: 45px;
-  top: 15px;
-  display: flex;
-  align-items: center;
-
-  > i {
-    margin-left: 15px;
-    color: $c02;
-  }
+.timeline-heading-info.time {
+  font-size: 1.3em;
+}
+.timeline-heading {
+  font-size: 1.1em;
+  text-transform: none;
+  padding-top: 0.7em;
 }
 
 /* Container around content */
@@ -156,7 +145,7 @@ span.location {
 
 /* The actual content */
 .content {
-  padding: 0px 30px;
+  padding: 0.8em 1em;
   position: relative;
   border-radius: 6px;
 }

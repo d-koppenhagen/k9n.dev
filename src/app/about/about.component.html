@@ -43,19 +43,25 @@
       <section class="features">
         <div class="timeline">
           <div
-            *ngFor="let i of [0, 1, 2, 3, 4, 5, 6, 7].reverse(); let odd = odd"
+            *ngFor="let i of [7, 6, 5, 4, 3, 2, 1, 0]; let odd = odd"
             class="container hidden list-item"
             [ngClass]="odd ? 'right' : 'left'"
           >
             <div class="content">
-              <span class="location">{{
-                t('careerSteps.' + i + '.location')
+              <div class="timeline-heading-header">
+                <span class="timeline-heading-info time">
+                  {{ t('careerSteps.' + i + '.when') }}
+                </span>
+                <span class="timeline-heading-info location">{{
+                  t('careerSteps.' + i + '.location')
+                }}</span>
+              </div>
+              <h4 class="timeline-heading">
+                {{ t('careerSteps.' + i + '.what') }}
+              </h4>
+              <span class="timeline-heading-info">{{
+                t('careerSteps.' + i + '.where')
               }}</span>
-              <h2 class="timeline-heading">
-                {{ t('careerSteps.' + i + '.when') }}
-              </h2>
-              <h3>{{ t('careerSteps.' + i + '.what') }}</h3>
-              <h4>{{ t('careerSteps.' + i + '.where') }}</h4>
               <p>{{ t('careerSteps.' + i + '.info') }}</p>
             </div>
           </div>
