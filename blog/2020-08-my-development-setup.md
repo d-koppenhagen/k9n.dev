@@ -6,7 +6,7 @@ author:
   name: Danny Koppenhagen
   mail: mail@k9n.dev
 created: 2020-08-27
-updated: 2021-09-29
+updated: 2021-11-17
 keywords:
   - Angular
   - Vue.js
@@ -53,23 +53,23 @@ But most of the tools and software listed here is available for Windows, macOS a
 
 Let's get started with some basic software that I use.
 
-### [Terminus](https://eugeny.github.io/terminus) / [iTerm2](https://iterm2.com)
+### [Tabby](https://tabby.sh) / [iTerm2](https://iterm2.com)
 
-The default Terminal app for macOS fulfills its purpose but for being more productive I can recommend the alternative terminal applications **[Terminus](https://eugeny.github.io/terminus)** and **[iTerm2](https://iterm2.com)**.
+The default Terminal app for macOS fulfills its purpose but for being more productive I can recommend the alternative terminal applications **[Tabby](https://tabby.sh)** and **[iTerm2](https://iterm2.com)**.
 
 I used iTerm2 for a long time and it's a great tool with lots of configuration options.
 You can create tabs, use profiles and customize styles and layouts.
 
 ![Screenshot: iTerm2](/assets/images/blog/dev-setup/iterm2.png)
 
-However, a few weeks ago I switched from iTerm2 to Terminus.
-Terminus is a quite new terminal app and it's Open Source!
+However, a few weeks ago I switched from iTerm2 to Tabby (formerly Terminus).
+Tabby is a quite new terminal app and it's Open Source!
 Behind the scenes it's an [Electron App](https://www.electronjs.org/) using [Angular](https://angular.io).
 You can also customize it a lot.
 A feature I like particularly is that you can define SSH and Serial Port profiles.
 You can then later activate those profiles so that you can access an SSH remote host or a serial port without entering anything manually in the terminal.
 
-![Screenshot: Terminus](/assets/images/blog/dev-setup/terminus.png)
+![Screenshot: Tabby](/assets/images/blog/dev-setup/terminus.png)
 
 ### [Cakebrew](https://www.cakebrew.com) – macOS only
 
