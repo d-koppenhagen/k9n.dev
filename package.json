@@ -49,6 +49,7 @@
     "@scullyio/ng-lib": "^2.0.2",
     "@scullyio/scully-plugin-critical-css": "1.0.1",
     "animate.css": "^4.1.1",
+    "clipboard": "^2.0.8",
     "ng-navigator-share": "^1.0.4",
     "ng2-animate-on-scroll": "^2.2.1",
     "ngx-sharebuttons": "^8.0.5",
