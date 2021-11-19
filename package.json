@@ -27,7 +27,7 @@
     "url": "https://github.com/d-koppenhagen/d-koppenhagen-website/issues",
     "email": "mail@k9n.dev"
   },
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "dependencies": {
     "@angular/animations": "~13.0.2",
     "@angular/cdk": "^13.0.2",
