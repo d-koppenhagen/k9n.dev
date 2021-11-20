@@ -72,7 +72,7 @@
     "@commitlint/config-angular-type-enum": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@gammastream/scully-plugin-sitemap": "1.0.7",
-    "@scullyio/init": "^1.1.4",
+    "@scullyio/init": "^2.0.0",
     "@scullyio/scully": "^1.1.1",
     "@types/jasmine": "~3.5.11",
     "@types/jasminewd2": "~2.0.8",
