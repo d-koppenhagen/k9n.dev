@@ -30,7 +30,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "@angular/animations": "~12.0.0",
-    "@angular/cdk": "^12.0.0",
+    "@angular/cdk": "^13.0.0",
     "@angular/common": "~12.0.0",
     "@angular/compiler": "~12.0.0",
     "@angular/core": "~12.0.0",
