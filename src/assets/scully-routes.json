@@ -74,7 +74,7 @@
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@k9n.dev" },
     "created": "2020-01-01T00:00:00.000Z",
-    "updated": "2020-10-06T00:00:00.000Z",
+    "updated": "2021-05-18T00:00:00.000Z",
     "keywords": [
       "Angular",
       "Angular CLI",
@@ -134,7 +134,7 @@
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@k9n.dev" },
     "created": "2020-03-02T00:00:00.000Z",
-    "updated": "2020-10-06T00:00:00.000Z",
+    "updated": "2021-05-18T00:00:00.000Z",
     "keywords": [
       "Angular",
       "Angular CLI",
@@ -196,7 +196,7 @@
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@k9n.dev" },
     "created": "2020-08-27T00:00:00.000Z",
-    "updated": "2020-09-20T00:00:00.000Z",
+    "updated": "2021-11-17T00:00:00.000Z",
     "keywords": [
       "Angular",
       "Vue.js",
@@ -226,7 +226,7 @@
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@k9n.dev" },
     "created": "2020-09-14T00:00:00.000Z",
-    "updated": "2020-11-12T00:00:00.000Z",
+    "updated": "2021-05-19T00:00:00.000Z",
     "publishedAt": {
       "name": "inDepth.dev",
       "url": "https://indepth.dev/speed-up-your-angular-schematics-development-with-useful-helper-functions",
@@ -328,6 +328,64 @@
     },
     "series": "angular-pwa",
     "sourceFile": "2020-11-twa.md"
+  },
+  {
+    "route": "/blog/2021-06-angular12",
+    "title": "Angular 12 ist da! Die wichtigsten Neuerungen im Überblick",
+    "description": "Am 12.05.2021 wurde die neue Major-Version Angular 12.0 veröffentlicht – ein halbes Jahr nach dem Release von Angular 11. In diesem Artikel stellen wir wieder die wichtigsten Neuerungen vor.",
+    "published": true,
+    "author": { "name": "Angular Buch Team", "mail": "team@angular-buch.com" },
+    "created": "2021-06-07T00:00:00.000Z",
+    "updated": "2021-07-03T00:00:00.000Z",
+    "publishedAt": {
+      "name": "angular-buch.com",
+      "url": "https://angular-buch.com/blog/2021-06-angular12",
+      "logo": "https://angular-buch.com/assets/img/brand.svg"
+    },
+    "keywords": [
+      "Angular",
+      "Angular 12",
+      "Angular DevTools",
+      "TypeScript",
+      "Protractor",
+      "E2E",
+      "Strict Mode"
+    ],
+    "language": "de",
+    "thumbnail": {
+      "header": "https://website-articles.angular-buch.com/blog/2021-06-angular12/angular12.jpg"
+    },
+    "series": "angular-update",
+    "sourceFile": "2021-06-angular12.md"
+  },
+  {
+    "route": "/blog/2021-11-angular13",
+    "title": "Angular 13 ist da! Die wichtigsten Neuerungen im Überblick",
+    "description": "Anfang November 2021 erschien die neue Major-Version 13 von Angular. In diesem Artikel stellen wir wie immer die wichtigsten Neuigkeiten vor.",
+    "published": true,
+    "author": { "name": "Angular Buch Team", "mail": "team@angular-buch.com" },
+    "created": "2021-11-03T00:00:00.000Z",
+    "updated": "2021-11-03T00:00:00.000Z",
+    "publishedAt": {
+      "name": "angular-buch.com",
+      "url": "https://angular-buch.com/blog/2021-11-angular13",
+      "logo": "https://angular-buch.com/assets/img/brand.svg"
+    },
+    "keywords": [
+      "Angular",
+      "Angular 13",
+      "RxJS 7",
+      "TypeScript",
+      "Dynamic Components",
+      "Persistent Cache",
+      "Ivy"
+    ],
+    "language": "de",
+    "thumbnail": {
+      "header": "https://website-articles.angular-buch.com/blog/2021-11-angular13/angular13.jpg"
+    },
+    "series": "angular-update",
+    "sourceFile": "2021-11-angular13.md"
   },
   { "route": "/projects" },
   {
@@ -467,5 +525,27 @@
       "card": "assets/images/projects/mermaid-small.jpg"
     },
     "sourceFile": "2020-09-12-scully-plugin-mermaid.md"
+  },
+  {
+    "route": "/projects/2021-09-14-ngx-lipsum",
+    "title": "ngx-lipsum",
+    "description": "Easily use lorem ipsum dummy texts in your angular app",
+    "published": true,
+    "author": { "name": "Danny Koppenhagen", "mail": "mail@k9n.dev" },
+    "updated": "2021-09-14T00:00:00.000Z",
+    "keywords": [
+      "Angular",
+      "lorem-ipsum",
+      "ngx-lipsum",
+      "directive",
+      "service",
+      "component"
+    ],
+    "language": "en",
+    "thumbnail": {
+      "header": "assets/images/projects/ngx-lipsum.svg",
+      "card": "assets/images/projects/ngx-lipsum.svg"
+    },
+    "sourceFile": "2021-09-14-ngx-lipsum.md"
   }
 ]
