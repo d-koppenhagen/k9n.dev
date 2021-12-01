@@ -6,7 +6,7 @@ author:
   name: Danny Koppenhagen
   mail: mail@k9n.dev
 created: 2020-01-01
-updated: 2021-05-18
+updated: 2021-11-01
 keywords:
   - Angular
   - Angular CLI
@@ -36,12 +36,15 @@ series: scully
 
 > On _Dec 16, 2019_ the static site generator _Scully_ for Angular [was presented](https://www.youtube.com/watch?v=Sh37rIUL-d4).
 > _Scully_ automatically detects all app routes and creates static sites out of it that are ready to ship for production.
-> This blog post is based on versions:
+> This blog post is based on versions of Angular and Scully:
 >
 > ```
-> @scullyio/ng-lib: 1.1.1
-> @scullyio/init: 1.1.4
-> @scullyio/scully: 1.1.1
+> "@angular/core": "~13.0.0",
+> "@angular/cli": "~13.0.3",
+> "@scullyio/init": "^2.0.5",
+> "@scullyio/ng-lib": "^2.0.0",
+> "@scullyio/scully": "^2.0.0",
+> "@scullyio/scully-plugin-puppeteer": "^2.0.0",
 > ```
 
 <hr>
@@ -68,20 +71,20 @@ The power of pre-rendering and very fast access to sites and the power of a full
 
 ## Get started
 
-The first thing we have to do is to setup our Angular app.
+The first thing we have to do is to set up our Angular app.
 As _Scully_ detects the content from the routes, we need to configure the Angular router as well.
 Therefore, we add the appropriate flag `--routing` (we can also choose this option when the CLI prompts us).
 
 ```bash
-npx -p @angular/cli ng new scully-blog --routing
+npx -p @angular/cli ng new scully-blog --routing # create an angular workspace
 cd scully-blog  # navigate into the project
 ```
 
-The next step is to setup our static site generator _Scully_.
+The next step is to set up our static site generator _Scully_.
 Therefore, we are using the provided Angular schematic:
 
 ```bash
-ng add @scullyio/init  # add _Scully_ to the project
+ng add @scullyio/init  # add Scully to the project
 ```
 
 Et voilà here it is: We now have a very minimalistic Angular app that uses the power of _Scully_ to automatically find all app routes, visit them and generate static pages out of them.
@@ -89,12 +92,12 @@ It's ready for us to preview.
 Let's try it out by building our site and running _Scully_.
 
 ```bash
-npm run build   # build our Angular app
-npm run scully  # let Scully run over our app and build it
-npm run scully serve # serve the scully results
+npm run build     # build our Angular app
+npx scully        # let Scully run over our app and build it
+npx scully serve  # serve the scully results
 ```
 
-> _Scully_ will run only once by default. To let _Scully_ run and watch for file changes, just add the `--watch` option (`npm run scully -- --watch`).
+> _Scully_ will run only once by default. To let _Scully_ run and watch for file changes, just add the `--watch` option (`npx scully --watch`).
 
 After _Scully_ has checked our app, it will add the generated static assets to our `dist/static` directory by default.
 Let's quickly compare the result generated from _Scully_ with the result from the initial Angular build (`dist/scully-blog`):
@@ -102,22 +105,21 @@ Let's quickly compare the result generated from _Scully_ with the result from th
 ```
 dist/
 ┣ scully-blog/
-┃ ┣ favicon.ico
+┃ ┣ assets/
 ┃ ┣ ...
-┃ ┗ vendor-es5.js.map
+┃ ┗ styles.ef46db3751d8e999.css
 ┗ static/
   ┣ assets/
   ┃ ┗ scully-routes.json
-  ┣ favicon.ico
   ┣ ...
-  ┗ vendor-es5.js.map
+  ┗ styles.ef46db3751d8e999.css
 ```
 
-If we take a look at it, except of the file `scully-routes.json`, that contains just an empty array, we don't see any differences between the two builds.
-This is because currently we only have the root route configured and no more further content was created.
+If we take a look at it, except of the file `scully-routes.json`, that contains the configured routes used by _Scully_, we don't see any differences between the two builds.
+This is because currently we only have the root route configured, and no further content was created.
 
-Nonetheless we can checkout the result by visiting the following URL: `localhost:1668`.
-This server serves the static generated pages from the `dist/static` directory like a normal webserver (e.g. _nginx_ or _apache_).
+Nonetheless, when running `npx scully serve` or `npx scully --watch` we can check out the result by visiting the following URL: `localhost:1668`.
+This server serves the static generated pages from the `dist/static` directory like a normal web server (e.g. _nginx_ or _apache_).
 
 ## The `ScullyLibModule`
 
@@ -138,12 +140,13 @@ export class AppModule { }
 ```
 
 This module is used by _Scully_ to hook into the angular router and to determine once the page _Scully_ tries to enter is fully loaded and ready to be rendered by using the `IdleMonitorService` from _Scully_ internally.
-If we will remove the import of the module, _Scully_ will still work but it takes much longer to render your site as it will use a timeout for accessing the pages. So in that case even if the a page has been fully loaded, _Scully_ would wait until the timer is expired.
+If we remove the import of the module, _Scully_ will still work, but it takes much longer to render your site as it will use a timeout for accessing the pages.
+So in that case even if a page has been fully loaded, _Scully_ would wait until the timer is expired.
 
 ## Turn it into a blog
 
-Let’s go a bit further and turn our site into a simple blog that will render our blog posts from separate markdown documents.
-Scully brings this feature out of the box and it’s very easy to set it up:
+Let’s go a bit further and turn our site into a simple blog that will render our blog posts from separate Markdown documents.
+_Scully_ brings this feature out of the box, and it’s very easy to set it up:
 
 ```bash
 ng g @scullyio/init:blog                      # setup up the `BlogModule` and related sources
@@ -158,24 +161,23 @@ We now have two files there: The initially created example file from _Scully_ an
 
 Now that we've got Scully installed and working, let's modify our Angular app to look more like an actual blog, and not just like the default Angular app.
 Therefore, we want to get rid of the Angular auto generated content in the `AppComponent` first.
-We can simply delete all the content of `app.component.html` except of the `RouterOutlet`.
-So in the end the content of our file `app.component.html` should look like this:
+We can simply delete all the content of `app.component.html` except of the `router-outlet`:
 
 ```html
 <router-outlet></router-outlet>
 ```
 
 Let’s run the build again and have a look at the results.
-Scully assumes by default the route configuration hasn't changed meanwhile and it can happen that it's not detecting the new bog entry we just created.
-To be sure it will re-scan the routes, we will pass through the parameter `--scanRoutes`:
+Scully assumes by default the route configuration hasn't changed meanwhile, and it can happen that it's not detecting the new bog entry we just created.
+To be sure it will re-scan the routes, we will pass through the parameter `--scan`:
 
 ```bash
-npm run build                   # Angular build
-npm run scully -- --scanRoutes  # generate static build and force checking new routes
-npm run scully serve            # serve the scully results
+npm run build       # Angular build
+npx scully --scan   # generate static build and force checking new routes
+npx scully serve    # serve the scully results
 ```
 
-When checking out our `dist/static` directory we can see that there are new sub-directories for the routes of our static blogging sites.
+When checking out our `dist/static` directory we can see that there are new subdirectories for the routes of our static blogging sites.
 But what's that: When we will check the directory `dist/static/blog/`, we see somewhat like this:
 
 ```
@@ -184,12 +186,13 @@ blog/
   ┗ index.html
 ```
 
-This feels strange doesn't it? But Checking the content of the file `index.html` inside will tell us it contains actually the content of the just created blog post.
-This is by intention: Ths _Scully_ schematic created the markdown file with a meta flag called `published` that is by default set to `false`.
-The internally used renderer plugin from _Scully_ will handle this flag and it creates an unguessable name for the route.
+This feels strange, doesn't it?
+But Checking the content of the file `index.html` inside will tell us it contains actually the content of the just created blog post.
+This is by intention: This _Scully_ schematic created the markdown file with a meta flag called `published` that is by default set to `false`.
+The internally used renderer plugin from _Scully_ will handle this flag, and it creates an unguessable name for the route.
 This allows us to create blog post drafts that we can already publish and share by using the link for example to let someone else review the article.
-You can also use this route if you dont't care about the route name.
-But normally you would just like to change the meta data in the Markdown file to:
+You can also use this route if you don't care about the route name.
+But normally you would just like to change the metadata in the Markdown file to:
 
 ```yaml
 published: true
@@ -200,9 +203,9 @@ When we are visiting the route path `/blog/first-post` we can see the content of
 
 If you want to prove that the page is actually really pre-rendered, just disable JavaScript by using your Chrome Developer Tools.
 You can reload the page and see that the content is still displayed.
-Awesome isn't it?
+Awesome, isn't it?
 
-![a simple blog created with scully](/assets/images/blog/scully/scully-pre-rendered-js-disabled.png)
+![a simple blog created with Scully](/assets/images/blog/scully/scully-pre-rendered-js-disabled.png)
 
 > When JavaScript is enabled, _Scully_ configures your static sites in that way, that you will see initially the static content.
 > In the background it will bootstrap your Angular app, and refresh the content with it.
@@ -210,10 +213,10 @@ Awesome isn't it?
 
 Hold on a minute! 😳
 
-You may have realized: We haven’t written one line of code manually yet and we have already a fully functional blogging site that’s server site rendered. Isn’t that cool?
+You may have realized: We haven’t written one line of code manually yet, and we have already a fully functional blogging site that’s server site rendered. Isn’t that cool?
 Setting up an Angular based blog has never been easier.
 
-> **Good to know:** _Scully_ also detects new routes we are adding manually to our app and it will create static sites for all those pages.
+> **Good to know:** _Scully_ also detects new routes we are adding manually to our app, and it will create static sites for all those pages.
 
 ## Use the `ScullyRoutesService`
 
@@ -224,8 +227,8 @@ It will return us a list of all routes _Scully_ found with the parsed informatio
 We can easily inject the service and display the information as a list in our `AppComponent`.
 
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
+import { Component } from '@angular/core';
+import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -233,35 +236,22 @@ import { Observable } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  posts$: Observable<ScullyRoute[]>;
+export class AppComponent {
+  links$: Observable<ScullyRoute[]> = this.scully.available$;
 
-  constructor(private srs: ScullyRoutesService) {}
-
-  ngOnInit() {
-    this.posts$ = this.srs.available$;
-  }
-}
-```
-
-If you like, you can write this even a little shorter:
-
-```ts
-export class AppComponent implements OnInit {
-  posts$ = this.srs.available$;
-  constructor(private srs: ScullyRoutesService) {}
+  constructor(private scully: ScullyRoutesService) {}
 }
 ```
 
 To display the results, we can simply use `ngFor` with the `async` pipe and list the results.
-A `ScullyRoute` will give us the routing path inside the `route` key and all other markdown meta data inside their appropriate key names.
+A `ScullyRoute` will give us the routing path inside the `route` key and all other markdown metadata inside their appropriate key names.
 So we can extend for example our markdown metadata block with more keys (e.g. `thumbnail: assets/thumb.jpg`) and we can access them via those (`blog.thumbnail` in our case).
 We can extend `app.component.html` like this:
 
 ```html
 <ul>
-  <li *ngFor="let post of posts$ | async">
-    <a [routerLink]="post.route">{{ post.title }}</a>
+  <li *ngFor="let link of links$ | async">
+    <a [routerLink]="link.route">{{ link.title }}</a>
   </li>
 </ul>
 
@@ -274,34 +264,34 @@ This will give us a fully routed blog page:
 
 ![a simple blog created with scully](/assets/images/blog/scully/scully-blog.gif)
 
-The `ScullyRoutesService` contains all of the available routes in your app.
+The `ScullyRoutesService` contains all the available routes in your app.
 In fact, any route that we add to our Angular app will be detected by _Scully_ and made available via the `ScullyRoutesService.available$` observable.
 To list only blog posts from the `blog` route and directory we can just filter the result:
 
 ```ts
 /* ... */
-import { map } from 'rxjs/operators';
+import { map, Observable } from 'rxjs';
 /* ... */
-export class AppComponent implements OnInit {
-  /* ... */
-  ngOnInit() {
-    this.posts$ = this.srs.available$.pipe(
-      map(routeList => {
-        return routeList.filter((route: ScullyRoute) =>
-          route.route.startsWith(`/blog/`),
-        );
-      })
-    );
-  }
+export class AppComponent {
+  links$: Observable<ScullyRoute[]> = this.scully.available$.pipe(
+    map(routeList => {
+      return routeList.filter((route: ScullyRoute) =>
+        route.route.startsWith(`/blog/`),
+      );
+    })
+  );
+
+  constructor(private scully: ScullyRoutesService) {}
 }
 ```
 
-Wow! That was easy, wasn’t it? Now you just need to add a bit of styling and content and your blog is ready for getting visited.
+Wow! That was easy, wasn’t it?
+Now you just need to add a bit of styling and content and your blog is ready for getting visited.
 
 ## Fetch dynamic information from an API
 
 As you may have realized: _Scully_ needs a data source to fetch all dynamic routes in an app.
-In case of our blog example _Scully_ uses the `:slug` router param as a placeholder.
+In case of our blog example _Scully_ uses the `:slug` router parameter as a placeholder.
 Scully will fill this placeholder with appropriate content to visit and pre-render the site.
 The content for the placeholder comes in our blog example from the files in the `/blog` directory.
 This has been configured from the schematics we ran before in the file `scully.scully-blog.config.ts`:
@@ -309,11 +299,13 @@ This has been configured from the schematics we ran before in the file `scully.s
 ```ts
 import { ScullyConfig } from '@scullyio/scully';
 
+/** this loads the default render plugin, remove when switching to something else. */
+import '@scullyio/scully-plugin-puppeteer';
+
 export const config: ScullyConfig = {
-  projectRoot: "./src/app",
+  projectRoot: "./src",
   projectName: "scully-blog",
   outDir: './dist/static',
-  defaultPostRenderers: [],
   routes: {
     '/blog/:slug': {
       type: 'contentFolder',
@@ -335,15 +327,12 @@ We can configure [_Router Plugin_](https://scully.io/docs/plugins#router-plugin)
 In the following example we will use the public service [BookMonkey API](https://api3.angular-buch.com) (we provide this service for the readers of our [German Angular book](https://angular-buch.com/)) as an API to fetch a list of books:
 
 ```js
-import { ScullyConfig } from '@scullyio/scully';
+/* ... */
 
 export const config: ScullyConfig = {
-  projectRoot: "./src/app",
-  projectName: "scully-blog",
-  outDir: './dist/static',
-  defaultPostRenderers: [],
+  /* ... */
   routes: {
-    ...
+    /* ... */
     '/books/:isbn': {
       'type': 'json',
       'isbn': {
@@ -363,20 +352,20 @@ The result from the API will have this shape:
     "title": "Angular",
     "subtitle": "Grundlagen, fortgeschrittene Themen und Best Practices – mit NativeScript und NgRx",
     "isbn": "9783864906466",
-    ...
+    // ...
   },
   {
     "title": "Angular",
     "subtitle": "Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript - ab Angular 4, inklusive NativeScript und Redux",
     "isbn": "9783864903571",
-    ...
+    // ...
   },
-  ...
+  // ...
 ]
 ```
 
 After _Scully_ plucks the ISBN, it will just iterate over the final array: `['9783864906466', '9783864903571']`.
-In fact, when running _Scully_ using `npm run scully`, it will visit the following routes, **after we have configured the route `/books/:isbn` in the Angular router** (otherwise non used routes will be skipped).
+In fact, when running _Scully_ using `npx scully`, it will visit the following routes, **after we have configured the route `/books/:isbn` in the Angular router** (otherwise non-used routes will be skipped).
 
 ```
 /books/9783864906466
@@ -419,25 +408,25 @@ Generating took 3.3 seconds for 7 pages:
 
 This is great. We have efficiently pre-rendered normal dynamic content!
 And that was it for today.
-With the shown examples, it's possible create a full-fledged website with Scully.
+With the shown examples, it's possible to create a full-fledged website with Scully.
 
-> Did you know that **this blogpost** and the overall website your are right now reading has also been created using _Scully_?
+> Did you know that **this blogpost** and the overall website you are right now reading has also been created using _Scully_?
 > Feel free to check out the sources at:
 > [github.com/d-koppenhagen/k9n.dev](https://github.com/d-koppenhagen/k9n.dev)
 
-If you you want to follow all the development steps in detail, check out my provided github repository
+If you want to follow all the development steps in detail, check out my provided Github repository
 [scully-blog-example](https://github.com/d-koppenhagen/scully-blog-example).
 
 ## Conclusion
 
 Scully is an awesome tool if you need a pre-rendered Angular SPA where all routes can be accessed immediately without loading the whole app at once.
-This is a great benefit for users as they don’t need to wait until the whole bunch of JavaScript has been downloaded to their devices.
-Visitors and **search engines** have instantly access to the sites information.
-Furthermore, _Scully_ offers a way to create very easily a blog and renders all posts written in markdown.
+This is a great benefit for users as they don’t need to wait until the bunch of JavaScript has been downloaded to their devices.
+Visitors and **search engines** have instantly access to the sites' information.
+Furthermore, _Scully_ offers a way to create very easily a blog and renders all posts written in Markdown.
 It will handle and pre-render dynamic routes by fetching API data from placeholders and visiting every route filled by this placeholder.
 
-Compared to "classic" pre-rending by using [Angular Universal](https://angular.io/guide/universal), _Scully_ is much easier to use and it doesn't require you to write a specific flavor of Angular.
-Also _Scully_ can easily pre-render hybrid Angular apps or Angular apps with plugins like jQuery in comparison to Angular Universal.
+Compared to "classic" pre-rending by using [Angular Universal](https://angular.io/guide/universal), _Scully_ is much easier to use, and it doesn't require you to write a specific flavor of Angular.
+Also, _Scully_ can easily pre-render hybrid Angular apps or Angular apps with plugins like jQuery in comparison to Angular Universal.
 If you want to compare _Scully_ with Angular Universal in detail, check out the blog post from Sam Vloeberghs: [Scully or Angular Universal, what is the difference?](https://samvloeberghs.be/posts/scully-or-angular-universal-what-is-the-difference)
 
 If you want to dig a bit deeper into the features _Scully_ offers, check out my [second article](/blog/2020-03-dig-deeper-into-scully-ssg).
