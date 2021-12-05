@@ -11,6 +11,7 @@ import {
   criticalCSS,
   CriticalCSSSettings,
 } from '@scullyio/scully-plugin-critical-css';
+import '@scullyio/scully-plugin-puppeteer';
 
 /**
  * configuration for the markdown plugin
@@ -101,7 +102,7 @@ const defaultPostRenderers = ['seoHrefOptimise', criticalCSS, MinifyHtml];
  * the actual scully configuration
  */
 export const config: ScullyConfig = {
-  projectRoot: './src',
+  projectRoot: './src/app',
   projectName: 'd-koppenhagen-website',
   outDir: './dist/static',
   defaultPostRenderers: [MinifyHtml],

@@ -6,13 +6,14 @@ import {
   AfterViewInit,
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, fromEvent } from 'rxjs';
 import {
+  Observable,
+  fromEvent,
   pluck,
   debounceTime,
   distinctUntilChanged,
   filter,
-} from 'rxjs/operators';
+} from 'rxjs';
 
 @Component({
   selector: 'dk-blog-overview',

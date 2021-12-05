@@ -1,2 +1,11 @@
-identifier: k8e4d213pese2cp0
-allowErrorCollect: true
+identifier: k8w5t8o199278es5
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: d-koppenhagen-website
+homeFolder: /Users/dannykoppenhagen/dev/d-koppenhagen/k9n.dev
+distFolder: dist/d-koppenhagen-website
+outDir: /Users/dannykoppenhagen/dev/d-koppenhagen/k9n.dev/dist/static
+handle404: ''
+allowErrorCollect: false

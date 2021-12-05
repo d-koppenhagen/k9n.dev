@@ -2,7 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
-import { filter } from 'rxjs/operators';
+import { filter } from 'rxjs';
 import { style, animate, transition, trigger } from '@angular/animations';
 
 declare var gtag;

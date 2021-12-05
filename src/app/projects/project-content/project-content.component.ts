@@ -1,13 +1,7 @@
-import {
-  Component,
-  OnInit,
-  ViewEncapsulation,
-  AfterViewChecked,
-} from '@angular/core';
+import { Component, ViewEncapsulation, AfterViewChecked } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { Observable, map, tap } from 'rxjs';
 import { NgNavigatorShareService } from 'ng-navigator-share';
 
 import { HighlightService } from '../../shared/highlight.service';
@@ -20,8 +14,23 @@ import { MetaService } from '../../meta.service';
   preserveWhitespaces: true,
   encapsulation: ViewEncapsulation.Emulated,
 })
-export class ProjectContentComponent implements OnInit, AfterViewChecked {
-  post$: Observable<ScullyRoute>;
+export class ProjectContentComponent implements AfterViewChecked {
+  post$: Observable<ScullyRoute> = this.srs.available$.pipe(
+    map((routeList) =>
+      routeList.filter(
+        (route: ScullyRoute) =>
+          route.route.startsWith(`/projects/`) &&
+          route.route.includes(this.route.snapshot.params.slug),
+      ),
+    ),
+    map((currentPostData: ScullyRoute[]) => currentPostData[0]),
+    tap((post?: ScullyRoute) => {
+      if (!post) {
+        return;
+      }
+      this.metaService.createMetaDataForPost(post);
+    }),
+  );
   location: null;
 
   constructor(
@@ -37,25 +46,6 @@ export class ProjectContentComponent implements OnInit, AfterViewChecked {
    */
   ngAfterViewChecked() {
     this.highlightService.highlightAll();
-  }
-
-  ngOnInit() {
-    this.post$ = this.srs.available$.pipe(
-      map((routeList) =>
-        routeList.filter(
-          (route: ScullyRoute) =>
-            route.route.startsWith(`/projects/`) &&
-            route.route.includes(this.route.snapshot.params.slug),
-        ),
-      ),
-      map((currentPostData: ScullyRoute[]) => currentPostData[0]),
-      tap((post?: ScullyRoute) => {
-        if (!post) {
-          return;
-        }
-        this.metaService.createMetaDataForPost(post);
-      }),
-    );
   }
 
   async shareApi(title: string, description: string) {

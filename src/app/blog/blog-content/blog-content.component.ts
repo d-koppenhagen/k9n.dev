@@ -10,8 +10,7 @@ import {
 } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
-import { Observable } from 'rxjs';
-import { map, tap, filter } from 'rxjs/operators';
+import { Observable, map, tap, filter } from 'rxjs';
 
 import { HighlightService } from '../../shared/highlight.service';
 import { MetaService } from '../../meta.service';
@@ -38,7 +37,7 @@ export class BlogContentComponent
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private srs: ScullyRoutesService,
+    private scully: ScullyRoutesService,
     private highlightService: HighlightService,
     private metaService: MetaService,
   ) {}
@@ -83,7 +82,7 @@ export class BlogContentComponent
   }
 
   refreshPost() {
-    this.post$ = this.srs.available$.pipe(
+    this.post$ = this.scully.available$.pipe(
       map((routeList) =>
         routeList.filter((route: ScullyRoute) => {
           if (
