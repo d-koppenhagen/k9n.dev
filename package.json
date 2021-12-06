@@ -55,7 +55,7 @@
     "clipboard": "^2.0.8",
     "ng-navigator-share": "^1.0.4",
     "ng2-animate-on-scroll": "^2.2.1",
-    "ngx-sharebuttons": "^8.0.5",
+    "ngx-sharebuttons": "^9.0.0",
     "ngx-twitter-timeline": "^0.1.5",
     "prismjs": "^1.25.0",
     "rxjs": "~7.4.0",
