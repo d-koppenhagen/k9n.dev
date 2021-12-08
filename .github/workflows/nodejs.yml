@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '16.13'
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
@@ -25,6 +25,7 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
+          build-args: --noPrompt
 
   sync-devto:
     runs-on: ubuntu-latest

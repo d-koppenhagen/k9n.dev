@@ -74,7 +74,7 @@
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@k9n.dev" },
     "created": "2020-01-01T00:00:00.000Z",
-    "updated": "2021-05-18T00:00:00.000Z",
+    "updated": "2021-11-01T00:00:00.000Z",
     "keywords": [
       "Angular",
       "Angular CLI",
@@ -196,7 +196,7 @@
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@k9n.dev" },
     "created": "2020-08-27T00:00:00.000Z",
-    "updated": "2021-09-29T00:00:00.000Z",
+    "updated": "2021-11-17T00:00:00.000Z",
     "keywords": [
       "Angular",
       "Vue.js",
@@ -342,10 +342,6 @@
       "url": "https://angular-buch.com/blog/2021-06-angular12",
       "logo": "https://angular-buch.com/assets/img/brand.svg"
     },
-    "linked": {
-      "devTo": "https://dev.to/foo",
-      "medium": "https://medium.com/foo"
-    },
     "keywords": [
       "Angular",
       "Angular 12",
@@ -361,6 +357,35 @@
     },
     "series": "angular-update",
     "sourceFile": "2021-06-angular12.md"
+  },
+  {
+    "route": "/blog/2021-11-angular13",
+    "title": "Angular 13 ist da! Die wichtigsten Neuerungen im Überblick",
+    "description": "Anfang November 2021 erschien die neue Major-Version 13 von Angular. In diesem Artikel stellen wir wie immer die wichtigsten Neuigkeiten vor.",
+    "published": true,
+    "author": { "name": "Angular Buch Team", "mail": "team@angular-buch.com" },
+    "created": "2021-11-03T00:00:00.000Z",
+    "updated": "2021-11-03T00:00:00.000Z",
+    "publishedAt": {
+      "name": "angular-buch.com",
+      "url": "https://angular-buch.com/blog/2021-11-angular13",
+      "logo": "https://angular-buch.com/assets/img/brand.svg"
+    },
+    "keywords": [
+      "Angular",
+      "Angular 13",
+      "RxJS 7",
+      "TypeScript",
+      "Dynamic Components",
+      "Persistent Cache",
+      "Ivy"
+    ],
+    "language": "de",
+    "thumbnail": {
+      "header": "https://website-articles.angular-buch.com/blog/2021-11-angular13/angular13.jpg"
+    },
+    "series": "angular-update",
+    "sourceFile": "2021-11-angular13.md"
   },
   { "route": "/projects" },
   {
