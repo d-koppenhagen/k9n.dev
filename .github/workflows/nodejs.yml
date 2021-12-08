@@ -25,7 +25,7 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
-          build-args: --noPrompt
+          scully-args: --noPrompt
 
   sync-devto:
     runs-on: ubuntu-latest
