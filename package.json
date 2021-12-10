@@ -103,7 +103,7 @@
     "prettier": "^2.4.1",
     "pretty-quick": "^3.1.2",
     "protractor": "~7.0.0",
-    "scully-plugin-mermaid": "^4.0.0-alpha.0",
+    "scully-plugin-mermaid": "^3.0.0",
     "scully-plugin-minify-html": "^6.0.0",
     "scully-plugin-toc": "^4.0.0-alpha.0",
     "ts-node": "~8.10.2",
