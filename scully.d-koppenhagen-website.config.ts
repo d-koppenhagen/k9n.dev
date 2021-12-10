@@ -1,12 +1,10 @@
 import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { MinifyHtml } from 'scully-plugin-minify-html';
-import { getTocPlugin, TocConfig, TocPluginName } from 'scully-plugin-toc';
-import {
-  getMermaidPlugin,
-  MermaidPluginConfig,
-  MermaidPluginName,
-} from 'scully-plugin-mermaid';
+import 'scully-plugin-toc';
+import { TocConfig, TocPluginName } from 'scully-plugin-toc';
+import 'scully-plugin-mermaid';
+import { MermaidPluginConfig, MermaidPluginName } from 'scully-plugin-mermaid';
 import {
   criticalCSS,
   CriticalCSSSettings,
@@ -26,8 +24,7 @@ setPluginConfig('md', { enableSyntaxHighlighting: true });
 const mermaidOptions: MermaidPluginConfig = {
   config: { theme: 'dark' },
 };
-const mermaidPlugin = getMermaidPlugin();
-setPluginConfig(mermaidPlugin, mermaidOptions);
+setPluginConfig(MermaidPluginName, mermaidOptions);
 
 /**
  * configuration for the sitemap plugin
@@ -82,8 +79,7 @@ const tocOptions: TocConfig = {
   trailingSlash: true,
   scrollIntoViewOnClick: true,
 };
-const tocPlugin = getTocPlugin();
-setPluginConfig(tocPlugin, tocOptions);
+setPluginConfig(TocPluginName, tocOptions);
 
 /**
  * configuration for the critical css plugin
