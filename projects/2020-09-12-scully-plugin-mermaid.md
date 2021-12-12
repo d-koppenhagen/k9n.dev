@@ -51,6 +51,6 @@ sequenceDiagram
     Alice->John: Yes... John, how are you?
 ```
 
-Check out how to set it up by reading the docs in the [Github repository](https://github.com/d-koppenhagen/scully-plugin-mermaid).
+Check out how to set it up by reading the docs in the [Github repository](https://github.com/d-koppenhagen/scully-plugins/tree/main/scully/plugins/scully-plugin-mermaid).
 
 > You haven't heard about _Scully_ yet? [Check out my article series about the static site generator _Scully_](/blog/2020-01-angular-scully).

@@ -25,6 +25,6 @@ My [Scully.io](https://scully.io) plugin [`scully-plugin-toc`](https://www.npmjs
 You need just to define a placeholder at the place where the TOC should appear.
 The plugin will generate a TOC for all the headings it will find (you can also specify the level) and then insert the generated TOC at the place where you put the placeholder for it.
 
-Check out how to set it up by reading the docs in the [Github repository](https://github.com/d-koppenhagen/scully-plugin-toc).
+Check out how to set it up by reading the docs in the [Github repository](https://github.com/d-koppenhagen/scully-plugins/tree/main/scully/plugins/scully-plugin-toc).
 
 > You haven't heard about _Scully_ yet? [Check out my article series about the static site generator _Scully_](/blog/2020-01-angular-scully).
