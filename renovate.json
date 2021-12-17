@@ -26,13 +26,7 @@
         "^eslint.*"
       ],
       "groupSlug": "angular eslint",
-      "groupName": "angular eslint dependencies",
-      "postUpgradeTasks": {
-        "commands": [
-          "ng update @angular-eslint/schematics --from={{{fromVersion}}} --to={{{toVersion}}} --migrate-only --allow-dirty --force"
-        ],
-        "fileFilters": ["**/**"]
-      }
+      "groupName": "angular eslint dependencies"
     },
     {
       "matchPackagePatterns": ["^@commitlint/.*"],
@@ -49,5 +43,40 @@
       "groupSlug": "transloco",
       "groupName": "transloco dependencies"
     }
+  ],
+  "ignoreDeps": [
+    "@angular/animations",
+    "@angular/cdk",
+    "@angular/common",
+    "@angular/compiler",
+    "@angular/core",
+    "@angular/forms",
+    "@angular/platform-browser",
+    "@angular/platform-browser-dynamic",
+    "@angular/router",
+    "@angular/service-worker",
+    "@angular/youtube-player",
+    "rxjs",
+    "tslib",
+    "zone.js",
+    "@angular-devkit/build-angular",
+    "@angular/cli",
+    "@angular/compiler-cli",
+    "@angular/language-service",
+    "@types/jasmine",
+    "@types/jasminewd2",
+    "@types/node",
+    "codelyzer",
+    "jasmine-core",
+    "jasmine-spec-reporter",
+    "karma",
+    "karma-chrome-launcher",
+    "karma-coverage",
+    "karma-jasmine",
+    "karma-jasmine-html-reporter",
+    "protractor",
+    "ts-node",
+    "tslint",
+    "typescript"
   ]
 }
