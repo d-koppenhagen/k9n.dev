@@ -434,7 +434,7 @@
     "description": "This plugin for Scully will insert a table of contents (TOC) for your Markdown content automatically",
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@k9n.dev" },
-    "updated": "2020-02-26T00:00:00.000Z",
+    "updated": "2021-12-20T00:00:00.000Z",
     "keywords": ["Angular", "Scully", "SSR", "SSG", "JAM Stack", "TOC"],
     "language": "en",
     "thumbnail": {
@@ -517,7 +517,7 @@
     "description": "Add a Scully.io PostRenderer plugin for Mermaid.js graphs, charts and diagrams embedded in Markdown files.",
     "published": true,
     "author": { "name": "Danny Koppenhagen", "mail": "mail@k9n.dev" },
-    "updated": "2020-09-12T00:00:00.000Z",
+    "updated": "2021-12-20T00:00:00.000Z",
     "keywords": ["Angular", "Scully", "SSR", "SSG", "JAM Stack", "Mermaid"],
     "language": "en",
     "thumbnail": {

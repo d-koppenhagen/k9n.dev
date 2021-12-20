@@ -23,6 +23,6 @@ My project **angular-tag-cloud-module** gives you an Angular module for setting 
 It will take an array of words or links and put them randomly into a container.
 You can specify some styling options for the whole word cloud or for each tag cloud item.
 
-You can try out the module and it's configuration at the [Github Pages Demo Site](https://d-koppenhagen.github.io/angular-tag-cloud-module).
+You can try out the module, and it's configuration at the [Github Pages Demo Site](https://d-koppenhagen.github.io/angular-tag-cloud-module).
 
 The official documentation for _angular-tag-cloud-module_ can be found on [Github](https://github.com/d-koppenhagen/angular-tag-cloud-module) or [NPM](https://www.npmjs.com/package/angular-tag-cloud-module).

@@ -5,7 +5,7 @@ published: true
 author:
   name: 'Danny Koppenhagen'
   mail: mail@k9n.dev
-updated: 2020-09-12
+updated: 2021-12-20
 keywords:
   - Angular
   - Scully
@@ -20,7 +20,7 @@ thumbnail:
 ---
 # scully-plugin-mermaid
 
-My [Scully.io](https://scully.io) plugin [`scully-plugin-mermaid`](https://www.npmjs.com/package/scully-plugin-mermaid) will provide a PostRenderer for [Mermaid.js](https://mermaid-js.github.io/) graphs, charts and diagrams embedded in Markdown files.
+My [Scully.io](https://scully.io) plugin [`scully-plugin-mermaid`](https://www.npmjs.com/package/@k9n/scully-plugin-mermaid) will provide a PostRenderer for [Mermaid.js](https://mermaid-js.github.io/) graphs, charts and diagrams embedded in Markdown files.
 
 With this PostRenderer you can write Mermaid.js syntax inside code snippets in your Markdown files that will be rendered by Scully and post-rendered by Mermaid.js.
 So in fact descriptions like the following in your Markdown files will be converted into SVG graphics:
@@ -51,6 +51,6 @@ sequenceDiagram
     Alice->John: Yes... John, how are you?
 ```
 
-Check out how to set it up by reading the docs in the [Github repository](https://github.com/d-koppenhagen/scully-plugins/tree/main/scully/plugins/scully-plugin-mermaid).
+Check out how to set it up by reading the docs in the [Github repository](https://github.com/k9n-dev/scully-plugins/tree/main/scully/plugins/scully-plugin-mermaid).
 
 > You haven't heard about _Scully_ yet? [Check out my article series about the static site generator _Scully_](/blog/2020-01-angular-scully).

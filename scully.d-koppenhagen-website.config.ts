@@ -1,10 +1,13 @@
 import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { MinifyHtml } from 'scully-plugin-minify-html';
-import 'scully-plugin-toc';
-import { TocConfig, TocPluginName } from 'scully-plugin-toc';
-import 'scully-plugin-mermaid';
-import { MermaidPluginConfig, MermaidPluginName } from 'scully-plugin-mermaid';
+import '@k9n/scully-plugin-toc';
+import { TocConfig, TocPluginName } from '@k9n/scully-plugin-toc';
+import '@k9n/scully-plugin-mermaid';
+import {
+  MermaidPluginConfig,
+  MermaidPluginName,
+} from '@k9n/scully-plugin-mermaid';
 import {
   criticalCSS,
   CriticalCSSSettings,
