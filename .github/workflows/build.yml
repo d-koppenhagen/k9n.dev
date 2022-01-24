@@ -3,7 +3,13 @@ name: Build
 on:
   push:
     branches:
-      - !main
+      - '*' # matches every branch that doesn't contain a '/'
+      - '*/*' # matches every branch containing a single '/'
+      - '**' # matches every branch
+      - '!master' # excludes master
+      - '!main' # excludes main
+      - '!release' # excludes release
+      - '!release/*' # excludes release
 
 jobs:
   build:
