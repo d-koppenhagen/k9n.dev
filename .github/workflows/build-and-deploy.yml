@@ -1,11 +1,9 @@
-name: Scully Publish
+name: Build And Deploy
 
 on:
   push:
     branches:
       - main
-      - 'blog/**'
-      - schematics-helpers
 
 jobs:
   build:
