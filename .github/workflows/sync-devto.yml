@@ -1,4 +1,4 @@
-name: Scully Publish
+name: Sync-to-devto
 
 on:
   workflow_dispatch:
