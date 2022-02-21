@@ -11,7 +11,7 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~animate.css/animate.css';
 
 /* sharebuttons */
-@import '~ngx-sharebuttons/themes/circles';
+@import 'node_modules/ngx-sharebuttons/themes/circles.scss';
 
 /* style code with prismjs */
 @import '~prismjs/plugins/toolbar/prism-toolbar.css';
