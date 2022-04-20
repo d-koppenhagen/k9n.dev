@@ -88,7 +88,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.2.0",
     "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-jsdoc": "38.1.6",
+    "eslint-plugin-jsdoc": "39.2.5",
     "eslint-plugin-prefer-arrow": "1.2.3",
     "fast-xml-parser": "^3.19.0",
     "husky": "^7.0.4",
