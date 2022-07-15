@@ -44,14 +44,14 @@ export class TextSlotComponent implements OnInit {
   chars = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789'];
   slots = this.chars.map((char) => ({ value: char, state: 'out' }));
 
-  get matchValue() {
-    return this.result.toUpperCase();
-  }
-
   constructor(
     private changeDetector: ChangeDetectorRef,
     private ngZone: NgZone,
   ) {}
+
+  get matchValue() {
+    return this.result.toUpperCase();
+  }
 
   ngOnInit() {
     this.animateSpin();

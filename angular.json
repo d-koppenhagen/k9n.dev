@@ -129,8 +129,8 @@
       }
     }
   },
-  "defaultProject": "d-koppenhagen-website",
   "cli": {
     "analytics": "ab3214a7-63c2-4906-9853-13c09c732b43"
-  }
+  },
+  "defaultProject": "d-koppenhagen-website"
 }
