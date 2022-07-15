@@ -5,7 +5,7 @@ import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
 import { style, animate, transition, trigger } from '@angular/animations';
 
-declare var gtag;
+declare let gtag;
 
 @Component({
   selector: 'dk-root',
@@ -59,6 +59,7 @@ export class AppComponent {
       filter((e) => e instanceof NavigationEnd),
     );
     navEndEvent$.subscribe((e: NavigationEnd) => {
+      // eslint-disable-next-line @typescript-eslint/naming-convention
       gtag('config', this.gtagCode, { page_path: e.urlAfterRedirects });
     });
 
