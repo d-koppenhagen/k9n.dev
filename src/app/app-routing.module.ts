@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import { RecruitmentComponent } from './recruitment/recruitment.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'imprint',
     component: ImprintComponent,
+  },
+  {
+    path: 'recruitment',
+    component: RecruitmentComponent,
   },
   {
     path: 'blog',
