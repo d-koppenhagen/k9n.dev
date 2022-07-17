@@ -1,6 +1,7 @@
 [
   { "route": "/" },
   { "route": "/imprint" },
+  { "route": "/recruitment" },
   { "route": "/blog" },
   {
     "route": "/blog/2019-07-progressive-web-app",
