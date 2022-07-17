@@ -7,6 +7,9 @@ article {
   height: 100%;
   margin: 0;
 }
+a:hover {
+  cursor: pointer;
+}
 a.card-image > img {
   height: 180px;
   object-fit: cover;

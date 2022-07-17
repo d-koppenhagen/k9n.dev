@@ -109,7 +109,8 @@
     "publishedAt": {
       "name": "angular-buch.com",
       "url": "https://angular-buch.com/blog/2020-02-angular9",
-      "logo": "https://angular-buch.com/assets/img/brand.svg"
+      "logo": "https://angular-buch.com/assets/img/brand.svg",
+      "linkExternal": true
     },
     "keywords": [
       "Angular",
@@ -171,7 +172,8 @@
     "publishedAt": {
       "name": "angular-buch.com",
       "url": "https://angular-buch.com/blog/2020-06-angular10",
-      "logo": "https://angular-buch.com/assets/img/brand.svg"
+      "logo": "https://angular-buch.com/assets/img/brand.svg",
+      "linkExternal": true
     },
     "keywords": [
       "Angular",
@@ -255,7 +257,8 @@
     "publishedAt": {
       "name": "angular-buch.com",
       "url": "https://angular-buch.com/blog/2020-11-angular11",
-      "logo": "https://angular-buch.com/assets/img/brand.svg"
+      "logo": "https://angular-buch.com/assets/img/brand.svg",
+      "linkExternal": true
     },
     "keywords": [
       "Angular",
@@ -341,7 +344,8 @@
     "publishedAt": {
       "name": "angular-buch.com",
       "url": "https://angular-buch.com/blog/2021-06-angular12",
-      "logo": "https://angular-buch.com/assets/img/brand.svg"
+      "logo": "https://angular-buch.com/assets/img/brand.svg",
+      "linkExternal": true
     },
     "keywords": [
       "Angular",
@@ -370,7 +374,8 @@
     "publishedAt": {
       "name": "angular-buch.com",
       "url": "https://angular-buch.com/blog/2021-11-angular13",
-      "logo": "https://angular-buch.com/assets/img/brand.svg"
+      "logo": "https://angular-buch.com/assets/img/brand.svg",
+      "linkExternal": true
     },
     "keywords": [
       "Angular",
@@ -387,6 +392,36 @@
     },
     "series": "angular-update",
     "sourceFile": "2021-11-angular13.md"
+  },
+  {
+    "route": "/blog/2022-06-angular14",
+    "title": "Angular 14 ist da! Die wichtigsten Neuerungen im Überblick",
+    "description": "Am 2. Juni 2022 erschien die neue Major-Version Angular 14! Während die letzten Hauptreleases vor allem interne Verbesserungen für das Tooling mitbrachten, hat Angular 14 einige spannende neue Features mit an Bord. In diesem Artikel stellen wir wie immer die wichtigsten Neuigkeiten vor.",
+    "published": true,
+    "author": { "name": "Angular Buch Team", "mail": "team@angular-buch.com" },
+    "created": "2022-06-02T00:00:00.000Z",
+    "updated": "2022-06-02T00:00:00.000Z",
+    "publishedAt": {
+      "name": "angular-buch.com",
+      "url": "https://angular-buch.com/blog/2022-06-angular14",
+      "logo": "https://angular-buch.com/assets/img/brand.svg",
+      "linkExternal": true
+    },
+    "keywords": [
+      "Angular",
+      "Angular 14",
+      "Standalone Components",
+      "Strict Typed Forms",
+      "Router Title",
+      "ng completion",
+      "inject"
+    ],
+    "language": "de",
+    "thumbnail": {
+      "header": "https://website-articles.angular-buch.com/blog/2022-06-angular14/angular14.jpg"
+    },
+    "series": "angular-update",
+    "sourceFile": "2022-06-angular14.md"
   },
   { "route": "/projects" },
   {

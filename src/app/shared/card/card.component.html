@@ -1,7 +1,7 @@
 <article *transloco="let t">
   <div class="card-header">
     <a
-      [routerLink]="post.route"
+      (click)="handleClick(post)"
       *ngIf="post.thumbnail && (post.thumbnail.header || post.thumbnail.card)"
       class="image card-image"
     >
@@ -18,7 +18,7 @@
     </p>
   </summary>
   <div class="card-footer">
-    <a [routerLink]="post.route" class="special read-on"
+    <a class="special read-on" (click)="handleClick(post)"
       >{{ t('readOn') }}...</a
     >
 

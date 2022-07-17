@@ -117,6 +117,9 @@ export class BlogContentComponent
         if (!post) {
           return;
         }
+        if (post.publishedAt?.linkExternal) {
+          location.href = post.publishedAt.url;
+        }
         this.metaService.createMetaDataForPost(post);
         this.shareData.url = `${location.href}${post.route}`;
         this.shareData.description = `${post.title} | ${post.author.name}\n`;
