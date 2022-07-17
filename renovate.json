@@ -42,6 +42,11 @@
       "matchPackagePatterns": ["^@ngneat/transloco*"],
       "groupSlug": "transloco",
       "groupName": "transloco dependencies"
+    },
+    {
+      "matchPackagePatterns": ["^@scullyio/.*"],
+      "groupSlug": "scully",
+      "groupName": "scully dependencies"
     }
   ],
   "ignoreDeps": [
