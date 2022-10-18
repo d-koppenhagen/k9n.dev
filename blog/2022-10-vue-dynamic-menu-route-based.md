@@ -202,7 +202,7 @@ But two things I want to describe in advance as they may be relevant for you:
 
 ### Make the navigation extensible
 
-Let's assume we have an extensible app where we will outsource some whole pages and it's child route configurations and make them incluable in our app.
+Let's assume we have an extensible app where we will outsource some pages and it's child route configurations and make them includable in our app.
 This could be for example relevent when adding complete menus and pages just for specific users with approriate permissions.
 
 Therefore we want to make our route configuration extensible, so that we can pass additional routes and child routes linked with their components to our router.
