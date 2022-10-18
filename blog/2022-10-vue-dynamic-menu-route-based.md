@@ -69,7 +69,7 @@ The component should simply display it's name for demonstartion purpose:
 The next thing we want to do is to setup the route for this component.
 Therefore we are creating the `router.ts` file within the `src` directory.
 We are importing the `MainPage` component and using it for the route `main`.
-Furthermore we are adding an redirect to "`/main`" when the root-route "`/`" is opened.
+Furthermore we are adding a redirect to "`/main`" when the root-route "`/`" is opened.
 To be able to get the displayble menu label later, we add the `meta` object to the route configuration containing the `label`.
 
 ```ts
