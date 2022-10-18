@@ -317,7 +317,7 @@ a.router-link-exact-active {
 
 ## Conclusion
 
-Passing meta information like `label` to the vue router configuration let's us easily building dynamic generated menus.
+Passing meta information like `label` to the vue router configuration lets us easily build dynamic generated menus.
 We no longer have to manually adjust our main navigation when adding new sites to our page as the menu is automatically extended by accessing the routes `meta` information.
 This approach can reduce some template boilerplate.
 
