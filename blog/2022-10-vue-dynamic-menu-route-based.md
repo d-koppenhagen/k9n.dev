@@ -93,7 +93,7 @@ export const routes: RouteRecordRaw[] = [
 
 export const router = createRouter({
   history: createWebHistory(),
-  routes: [...routes, ...pluginRoutes.flat()],
+  routes,
 });
 ```
 
