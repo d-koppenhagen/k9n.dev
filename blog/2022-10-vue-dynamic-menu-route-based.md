@@ -170,7 +170,7 @@ import AppNav from './components/AppNav.vue';
 ```
 
 Next, we are creating the `NavItem` component.
-We are defineing a single prop it get's passed by the parent component called `routeConfig` that contains a whole route configuration record.
+We are defineing a single prop which gets passed by the parent component called `routeConfig` that contains a whole route configuration record.
 Now we can focus on the template.
 We are adding a `<router-link>` and we will pass the route target by using the unique `name`.
 As the label of the link we can now us the `label` from our `meta` information object we provided in the router configuration.
