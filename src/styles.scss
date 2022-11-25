@@ -1,21 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 /* Font Awesome */
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/brands';
-@import '~@fortawesome/fontawesome-free/scss/regular';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/v4-shims';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/v4-shims';
 
 /* animate.css */
-@import '~animate.css/animate.css';
+@import 'animate.css/animate.css';
 
 /* sharebuttons */
 @import 'node_modules/ngx-sharebuttons/themes/circles.scss';
 
 /* style code with prismjs */
-@import '~prismjs/plugins/toolbar/prism-toolbar.css';
-@import '~prismjs/themes/prism-tomorrow';
+@import 'prismjs/plugins/toolbar/prism-toolbar.css';
+@import 'prismjs/themes/prism-tomorrow';
 pre.language-mermaid {
   background: none;
 }
