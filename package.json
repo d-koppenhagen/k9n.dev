@@ -30,7 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "@angular/animations": "^15.0.1",
-    "@angular/cdk": "^14.0.5",
+    "@angular/cdk": "^15.0.0",
     "@angular/common": "^15.0.1",
     "@angular/compiler": "^15.0.1",
     "@angular/core": "^15.0.1",
