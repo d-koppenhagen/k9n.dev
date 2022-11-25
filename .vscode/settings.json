@@ -21,12 +21,16 @@
     "statusBar.foreground": "#e7e7e7",
     "sash.hoverBorder": "#759570",
     "statusBarItem.remoteBackground": "#5e7959",
-    "statusBarItem.remoteForeground": "#e7e7e7"
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799"
   },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "cSpell.words": ["Termins"],
   "ltex.disabledRules": {
     "en-US": ["WHITESPACE_RULE"]
-  }
+  },
+  "i18n-ally.localesPaths": [
+    "src/assets/i18n"
+  ]
 }
