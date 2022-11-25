@@ -394,36 +394,6 @@
     "sourceFile": "2021-11-angular13.md"
   },
   {
-    "route": "/blog/2022-06-angular14_copy",
-    "title": "Angular 14 ist da! Die wichtigsten Neuerungen im Überblick",
-    "description": "Am 2. Juni 2022 erschien die neue Major-Version Angular 14! Während die letzten Hauptreleases vor allem interne Verbesserungen für das Tooling mitbrachten, hat Angular 14 einige spannende neue Features mit an Bord. In diesem Artikel stellen wir wie immer die wichtigsten Neuigkeiten vor.",
-    "published": true,
-    "author": { "name": "Angular Buch Team", "mail": "team@angular-buch.com" },
-    "created": "2022-06-02T00:00:00.000Z",
-    "updated": "2022-06-02T00:00:00.000Z",
-    "publishedAt": {
-      "name": "angular-buch.com",
-      "url": "https://angular-buch.com/blog/2022-06-angular14",
-      "logo": "https://angular-buch.com/assets/img/brand.svg",
-      "linkExternal": true
-    },
-    "keywords": [
-      "Angular",
-      "Angular 14",
-      "Standalone Components",
-      "Strict Typed Forms",
-      "Router Title",
-      "ng completion",
-      "inject"
-    ],
-    "language": "de",
-    "thumbnail": {
-      "header": "https://website-articles.angular-buch.com/blog/2022-06-angular14/angular14.jpg"
-    },
-    "series": "angular-update",
-    "sourceFile": "2022-06-angular14 copy.md"
-  },
-  {
     "route": "/blog/2022-06-angular14",
     "title": "Angular 14 ist da! Die wichtigsten Neuerungen im Überblick",
     "description": "Am 2. Juni 2022 erschien die neue Major-Version Angular 14! Während die letzten Hauptreleases vor allem interne Verbesserungen für das Tooling mitbrachten, hat Angular 14 einige spannende neue Features mit an Bord. In diesem Artikel stellen wir wie immer die wichtigsten Neuigkeiten vor.",
@@ -452,6 +422,37 @@
     },
     "series": "angular-update",
     "sourceFile": "2022-06-angular14.md"
+  },
+  {
+    "route": "/blog/2022-11-angular15",
+    "title": "Angular 15 ist da! Die wichtigsten Neuerungen im Überblick",
+    "description": "Am 16. November 2022 erschien die neue Major-Version Angular 15! Im Fokus des neuen Releases standen vor allem diese Themen: Stabilisierung der Standalone Components, funktionale Guards, Resolver und Interceptors sowie die Vereinfachung der initial generierten Projektdateien.",
+    "published": true,
+    "author": { "name": "Angular Buch Team", "mail": "team@angular-buch.com" },
+    "created": "2022-11-25T00:00:00.000Z",
+    "updated": "2022-11-25T00:00:00.000Z",
+    "publishedAt": {
+      "name": "angular-buch.com",
+      "url": "https://angular-buch.com/blog/2022-11-angular15",
+      "logo": "https://angular-buch.com/assets/img/brand.svg",
+      "linkExternal": true
+    },
+    "keywords": [
+      "Angular",
+      "Angular 15",
+      "Standalone Components",
+      "Guards",
+      "Resolver",
+      "Interceptoren",
+      "Directive Composition",
+      "Image Directive"
+    ],
+    "language": "de",
+    "thumbnail": {
+      "header": "https://website-articles.angular-buch.com/blog/2022-11-angular15/angular15.jpg"
+    },
+    "series": "angular-update",
+    "sourceFile": "2022-11-angular15.md"
   },
   { "route": "/projects" },
   {
