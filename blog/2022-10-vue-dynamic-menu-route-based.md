@@ -22,14 +22,14 @@ linked:
 
 # Build a dynamic navigation based on route configuration using Vue3 and Vue Router
 
-Recently I asked myself while working on a [Vue](https://vuejs.org/) app: Isn’t the main navigation menu somewhat related to the configuration of the routes and it’s routing tree? Can't it build dynamically from the router configuration?
+Recently while working on [Vue](https://vuejs.org/) app, I asked myself: Isn’t the main navigation menu somehow related to the configuration of the routes and routing tree? Can't it be built dynamically from the router configuration?
 
-This question in my mind I started to work on a very simple but representative example of how to achieve this goal by enriching the route configuration using the `meta` option.
+With this question in my mind, I started to work on a very simple but representative example of how to achieve this by enriching the route configuration using the `meta` option.
 
-The following example allows you to easily wrap big parts of your app into a module that is self contained and only exposes a bit of route configuration that can be imported and included in the main router configuration.
+The following example allows you to easily wrap big parts of your app into a module that is self contained and only exposes a bit of route configuration which can be imported and included in the main router configuration.
 
 The app has a simple navigation component that extracts all available routes provided by the [Vue Router](https://router.vuejs.org/).
-This routes have all the information needed by a navigation item to build a menu point and define the routing target.
+These routes have all the information needed by a navigation item to build a menu point and define the routing target.
 
 The following picture shows an high level overview of the architecture.
 
@@ -56,7 +56,7 @@ First we need the basic route configuration which represents the routing tree an
 
 We want to focus on the basic menu configuration and the initial page we are loading.
 Therefore we will create the `MainPage` component which we can place in the `src/components` directory.
-The component should simply display it's name for demonstartion purpose:
+The component should simply display its name for demonstartion purpose:
 
 ```html
 <script setup lang="ts"></script>
@@ -125,9 +125,9 @@ Now we have to add the `<router-view />` to our `App.vue` file to be able to ren
 
 ## Build the menu items based on route `meta`
 
-So far so good: we’ve configured our first route so that in the end we expect to be able to build a single menu item by using the route configuration.
+So far so good: we’ve configured our first route so that we can later build a single menu item using the route configuration.
 
-The next step is to create the navigation component (`AppNav`) that extracts the `meta` information from the route for the menu item and render it. Therefore we have to filter for the occurrence of our provided meta data as we only want to display menu items that have a `label` configured in the `meta` information.
+The next step is to create the navigation component (`AppNav`) that extracts the `meta` information from the route for the menu item and renders it. Therefore we have to filter for the occurrence of our provided meta data as we only want to display menu items that have a `label` configured in the `meta` information.
 
 The result is an array of all relevant routes.
 We iterate over the items with `v-for` and pass each element to a new component `NavItem` that takes a route configuration object for rendering a single navigation menu item.
@@ -155,7 +155,7 @@ const filteredRoutes = router.options.routes.filter((r) => r.meta?.label);
 </template>
 ```
 
-Before we will forget it, we add the `AppNav` component to our `App` component above the `<router-view />`:
+Before we forget, let's add the `AppNav` component to our `App` component above the `<router-view />`:
 
 ```html
 <script setup lang="ts">
@@ -169,11 +169,11 @@ import AppNav from './components/AppNav.vue';
 </template>
 ```
 
-Next, we are creating the `NavItem` component.
-We are defineing a single prop which gets passed by the parent component called `routeConfig` that contains a whole route configuration record.
+Next, we are create the `NavItem` component.
+We are defining a single prop which gets passed by the parent component called `routeConfig` which contains a whole route configuration record.
 Now we can focus on the template.
-We are adding a `<router-link>` and we will pass the route target by using the unique `name`.
-As the label of the link we can now use the `label` from our `meta` information object we provided in the router configuration.
+Next add a `<router-link>` and pass the route target using the unique `name`.
+For the label of the link we can use the `label` from our `meta` information object which we defined in the router configuration.
 
 ```html
 <script setup lang="ts">
@@ -194,20 +194,20 @@ const props = defineProps<{
 </template>
 ```
 
-Great! The hardest part is finished now (wasn't that tricky right?) and probably this solution already fit's for a majority.
-But two things I want to describe in advance as they may be relevant for you:
+Great! The hardest part is now done (wasn't that tricky right?) and probably this solution already fit's for the majority.
+However there are two things I would like to describe in advance, as they may be relevant for you:
 
 1. How to make the navigation easily extensible
 2. How to implement child menu items
 
 ### Make the navigation extensible
 
-Let's assume we have an extensible app where we will outsource some pages and it's child route configurations and make them includable in our app.
-This could be for example relevent when adding complete menus and pages just for specific users with approriate permissions.
+Let's assume we have an extensible app where we outsource some pages and its child route configurations and make them includable in our app.
+This could for example be relevent when adding complete menus and pages for specific users with appropriate permissions.
 
-Therefore we want to make our route configuration extensible, so that we can pass additional routes and child routes linked with their components to our router.
+Therefore we want to make our route configuration extensible, so we can pass additional routes and child routes linked with their components to our router.
 
-To do so, we simply wrap the exported route into a function that accepts a list of route configurations as a Rest parameter.
+To do this, we simply wrap the exported route into a function that accepts a list of route configurations as a Rest parameter.
 
 ```ts
 /* ... */
@@ -220,7 +220,7 @@ export function getConfiguredRouter(...pluginRoutes: RouteRecordRaw[][]) {
 ```
 
 Next we need to adjust our `main.ts` file.
-We pass the result receive from `getConfiguredRouter()` which takes the additional routes we are configuring right after.
+We pass the result received from `getConfiguredRouter()` containing the additional routes we want to add.
 
 ```ts
 /* ... */
@@ -231,11 +231,11 @@ app.use(getConfiguredRouter(routes));
 /* ... */
 ```
 
-Let's create a new folder `app-section-1` simulating kind of an app plugin or modules containing the extensible part for our app.
+Let's create a new folder `app-section-1` simulating this kind of app plugin or modules containing the extensible part for our app.
 Here we create another `routes.ts` file that holds the route configuration for this app part.
 
-The configuration defines a base route that represents the main navigation item and redirects to it's first child route `page-1`.
-We are configuring two child routes linked to their corresponding components we are creating in the next step.
+The configuration defines a base route that represents the main navigation item and redirects to its first child route `page-1`.
+Here, we configure two child routes linked to their corresponding components which are created in the next step.
 
 ```ts
 import type { RouteRecordRaw } from 'vue-router';
@@ -269,13 +269,13 @@ export const routes: RouteRecordRaw[] = [
 
 We are creating the components `Page1` and `Page2` wihtin the `/src/app-section-1/components` directory.
 
-Their implementation follows the one of the `MainPage` component: They simly displaying their component names in the template for demo purpose.
+Their implementation follows the one of the `MainPage` component: They simply display their component names in the template for demo purposes.
 
 ## Render child menu items
 
-With the current state, we will already see both main navigation menu entries.
-But as we configured child elements with `label`s too, we want to display them in the menu as well.
-Therefore we simply add the appropriate template in the `NavItem` component, as we already have all the rest we need by receiving the route configuration of the parent which contains all the information to render the childs.
+With the current version, we will already see both main navigation menu entries.
+But as we configured child elements with `label`s, we also want to display them in the menu too.
+Therefore we simply add the appropriate template in the `NavItem` component, as we already have everything we need by receiving the route configuration of the parent which contains all the information to render the child items.
 
 ```html
 <!-- ... -->
@@ -304,7 +304,7 @@ Therefore we simply add the appropriate template in the `NavItem` component, as 
 To highlight the active menu items, we can now use the two automatically create CSS classes `router-link-active` and `router-link-exact-active`.
 
 - `router-link-active`: Matches when a part of the URL matches the target route path of the `<router-link>`
-- `router-link-exact-active`: Matches when the whole route in the URL matches exactly the target route path of the `<router-link>`
+- `router-link-exact-active`: Matches when the whole route in the URL matches the exact target route path of the `<router-link>`
 
 ```css
 a.router-link-active {
