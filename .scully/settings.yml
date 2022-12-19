@@ -3,9 +3,9 @@ appPort: 1864
 staticPort: 1668
 reloadPort: 2667
 hostName: localhost
-projectName: k9n-dev
+projectName: d-koppenhagen-website
 homeFolder: /Users/dannykoppenhagen/dev/k9n.dev
-distFolder: dist/k9n-dev
-outDir: /Users/dannykoppenhagen/dev/k9n.dev/dist/static/
+distFolder: dist/d-koppenhagen-website
+outDir: /Users/dannykoppenhagen/dev/k9n.dev/dist/static
 handle404: ''
 allowErrorCollect: false

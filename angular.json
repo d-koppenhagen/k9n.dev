@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "k9n-dev": {
+    "d-koppenhagen-website": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/k9n-dev",
+            "outputPath": "dist/d-koppenhagen-website",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,10 +75,10 @@
           "options": {},
           "configurations": {
             "production": {
-              "browserTarget": "k9n-dev:build:production"
+              "browserTarget": "d-koppenhagen-website:build:production"
             },
             "development": {
-              "browserTarget": "k9n-dev:build:development"
+              "browserTarget": "d-koppenhagen-website:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "k9n-dev:build"
+            "browserTarget": "d-koppenhagen-website:build"
           }
         },
         "test": {
@@ -118,10 +118,10 @@
           },
           "configurations": {
             "production": {
-              "devServerTarget": "k9n-dev:serve:production"
+              "devServerTarget": "d-koppenhagen-website:serve:production"
             },
             "development": {
-              "devServerTarget": "k9n-dev:serve:development"
+              "devServerTarget": "d-koppenhagen-website:serve:development"
             }
           },
           "defaultConfiguration": "development"
@@ -132,7 +132,7 @@
   "cli": {
     "analytics": "ab3214a7-63c2-4906-9853-13c09c732b43"
   },
-  "defaultProject": "k9n-dev",
+  "defaultProject": "d-koppenhagen-website",
   "schematics": {
     "@angular-eslint/schematics:application": {
       "setParserOptionsProject": true
