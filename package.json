@@ -1,5 +1,5 @@
 {
-  "name": "d-koppenhagen-website",
+  "name": "k9n-dev",
   "version": "0.0.0",
   "description": "k9n.dev website",
   "scripts": {
@@ -22,9 +22,9 @@
   },
   "private": true,
   "author": "Danny Koppenhagen <mail@k9n.dev> (https://k9n.dev)",
-  "homepage": "https://github.com/d-koppenhagen/d-koppenhagen-website",
+  "homepage": "https://github.com/d-koppenhagen/k9n-dev",
   "bugs": {
-    "url": "https://github.com/d-koppenhagen/d-koppenhagen-website/issues",
+    "url": "https://github.com/d-koppenhagen/k9n-dev/issues",
     "email": "mail@k9n.dev"
   },
   "license": "MIT",

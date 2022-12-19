@@ -102,7 +102,7 @@ const defaultPostRenderers = ['seoHrefOptimise', criticalCSS, MinifyHtml];
  */
 export const config: ScullyConfig = {
   projectRoot: './src/app',
-  projectName: 'd-koppenhagen-website',
+  projectName: 'k9n-dev',
   outDir: './dist/static',
   defaultPostRenderers: [MinifyHtml],
   routes: {
