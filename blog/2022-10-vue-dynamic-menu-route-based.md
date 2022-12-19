@@ -207,7 +207,7 @@ This could for example be relevent when adding complete menus and pages for spec
 
 Therefore we want to make our route configuration extensible, so we can pass additional routes and child routes linked with their components to our router.
 
-To do this, we simply wrap the exported route into a function that accepts a list of route configurations as a Rest parameter.
+To do this, we simply move the exported route into a function that accepts a list of route configurations as a Rest parameter.
 
 ```ts
 /* ... */
