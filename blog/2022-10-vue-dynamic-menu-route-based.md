@@ -301,7 +301,7 @@ Therefore we simply add the appropriate template in the `NavItem` component, as 
 
 ## Styling active links 
 
-To highlight the active menu items, we can now use the two automatically create CSS classes `router-link-active` and `router-link-exact-active`.
+To highlight the active menu items, we can now use the two automatically created CSS classes `router-link-active` and `router-link-exact-active`.
 
 - `router-link-active`: Matches when a part of the URL matches the target route path of the `<router-link>`
 - `router-link-exact-active`: Matches when the whole route in the URL matches the exact target route path of the `<router-link>`
