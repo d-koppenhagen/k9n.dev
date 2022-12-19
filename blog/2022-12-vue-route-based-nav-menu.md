@@ -5,8 +5,8 @@ published: true
 author:
   name: 'Danny Koppenhagen'
   mail: mail@k9n.dev
-created: 2022-10-15
-updated: 2022-10-15
+created: 2022-12-19
+updated: 2022-12-19
 keywords:
   - Vue
   - Vue 3
@@ -16,9 +16,8 @@ thumbnail:
   header: assets/images/blog/vue-route-menu.jpg
   card: assets/images/blog/vue-route-menu-small.jpg
 linked:
-  devTo: ''
+  devTo: 'https://dev.to/dkoppenhagen/route-based-navigation-menus-in-vue-od2'
 ---
-
 
 # Build a dynamic navigation based on route configuration using Vue3 and Vue Router
 
@@ -299,7 +298,7 @@ Therefore we simply add the appropriate template in the `NavItem` component, as 
 </template>
 ```
 
-## Styling active links 
+## Styling active links
 
 To highlight the active menu items, we can now use the two automatically created CSS classes `router-link-active` and `router-link-exact-active`.
 
@@ -327,4 +326,4 @@ The whole working example can be seen in the following Stackblitz project:
 
 https://stackblitz.com/edit/vue3-dynamic-menu
 
-> Thanks for ??? for reviewing this article.
+> Thanks for [Darren Cooper](https://github.com/dc7590/) and [Joachim Schirrmacher](https://github.com/jschirrmacher/) for reviewing this article.
