@@ -454,6 +454,25 @@
     "series": "angular-update",
     "sourceFile": "2022-11-angular15.md"
   },
+  {
+    "route": "/blog/2022-12-vue-route-based-nav-menu",
+    "title": "Route based navigation menus in Vue",
+    "description": "Learn how to build a dynamic navigation menu based on the route configuration using Vue3 and Vue Router.",
+    "published": true,
+    "author": { "name": "Danny Koppenhagen", "mail": "mail@k9n.dev" },
+    "created": "2022-12-19T00:00:00.000Z",
+    "updated": "2022-12-19T00:00:00.000Z",
+    "keywords": ["Vue", "Vue 3", "Vue Router"],
+    "language": "en",
+    "thumbnail": {
+      "header": "assets/images/blog/vue-route-menu/vue-route-menu.jpg",
+      "card": "assets/images/blog/vue-route-menu/vue-route-menu-small.jpg"
+    },
+    "linked": {
+      "devTo": "https://dev.to/dkoppenhagen/route-based-navigation-menus-in-vue-od2"
+    },
+    "sourceFile": "2022-12-vue-route-based-nav-menu.md"
+  },
   { "route": "/projects" },
   {
     "route": "/projects/2019-11-20-angular-tag-cloud-module",
