@@ -26,7 +26,7 @@ Recently while working on a [Vue](https://vuejs.org/) app, I asked myself: Isnâ€
 
 With this question in my mind, I started to work on a very simple but representative example of how to achieve this by enriching the route configuration using the `meta` option.
 
-The following example allows you to easily wrap big parts of your app into a module that is self contained and only exposes a bit of route configuration which can be imported and included in the main router configuration.
+The following example allows you to easily place big parts of your app into a module that is self contained and only exposes a bit of route configuration which can be imported and included in the main router configuration.
 
 The app has a simple navigation component that extracts all available routes provided by the [Vue Router](https://router.vuejs.org/).
 These routes have all the information needed by a navigation item to build a menu point and define the routing target.
