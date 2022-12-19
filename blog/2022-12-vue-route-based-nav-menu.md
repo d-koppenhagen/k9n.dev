@@ -1,6 +1,6 @@
 ---
 title: 'Route based navigation menus in Vue'
-description: 'Learn how to build a dynamic navigation menu based on the route configuration using Vue3 and Vue Router'
+description: 'Learn how to build a dynamic navigation menu based on the route configuration using Vue3 and Vue Router.'
 published: true
 author:
   name: 'Danny Koppenhagen'
@@ -13,8 +13,8 @@ keywords:
   - Vue Router
 language: en
 thumbnail:
-  header: assets/images/blog/vue-route-menu.jpg
-  card: assets/images/blog/vue-route-menu-small.jpg
+  header: assets/images/blog/vue-route-menu/vue-route-menu.jpg
+  card: assets/images/blog/vue-route-menu/vue-route-menu-small.jpg
 linked:
   devTo: 'https://dev.to/dkoppenhagen/route-based-navigation-menus-in-vue-od2'
 ---
