@@ -85,7 +85,7 @@
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.28.0",
-    "eslint-plugin-import": "2.27.4",
+    "eslint-plugin-import": "2.29.0",
     "eslint-plugin-jsdoc": "37.9.7",
     "eslint-plugin-prefer-arrow": "1.2.3",
     "fast-xml-parser": "^3.19.0",
