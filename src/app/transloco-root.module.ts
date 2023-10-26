@@ -1,14 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import {
-  TRANSLOCO_LOADER,
   Translation,
   TranslocoLoader,
-  TRANSLOCO_CONFIG,
-  translocoConfig,
   TranslocoModule,
+  provideTransloco,
 } from '@ngneat/transloco';
-import { Injectable, NgModule } from '@angular/core';
-import { environment } from '../environments/environment';
+import { Injectable, NgModule, isDevMode } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class TranslocoHttpLoader implements TranslocoLoader {
@@ -22,20 +19,17 @@ export class TranslocoHttpLoader implements TranslocoLoader {
 @NgModule({
   exports: [TranslocoModule],
   providers: [
-    {
-      provide: TRANSLOCO_CONFIG,
-      useValue: translocoConfig({
+    provideTransloco({
+      config: {
         availableLangs: ['de', 'en'],
         defaultLang: navigator.language.substring(0, 2) || 'de',
         reRenderOnLangChange: true,
-        prodMode: environment.production,
+        prodMode: !isDevMode(),
         fallbackLang: 'de',
-        missingHandler: {
-          useFallbackTranslation: true,
-        },
-      }),
-    },
-    { provide: TRANSLOCO_LOADER, useClass: TranslocoHttpLoader },
+        missingHandler: {  useFallbackTranslation: true },
+      },
+      loader: TranslocoHttpLoader
+    }),
   ],
 })
 export class TranslocoRootModule {}

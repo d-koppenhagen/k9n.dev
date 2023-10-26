@@ -40,7 +40,7 @@ import {
 export class TextSlotComponent implements OnInit {
   @Input() result: string;
   currentIndex = 0;
-  intervalInstance: any;
+  intervalInstance: ReturnType<typeof setTimeout>;
   chars = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789'];
   slots = this.chars.map((char) => ({ value: char, state: 'out' }));
 

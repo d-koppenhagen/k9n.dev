@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { A11yModule } from '@angular/cdk/a11y';
-import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
+import { AngularTwitterTimelineModule } from 'angular-twitter-timeline';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import { YouTubePlayerModule } from '@angular/youtube-player';
@@ -50,7 +50,7 @@ import { TextSlotMachineComponent } from './text-slot-machine/text-slot-machine.
     HttpClientModule,
     BrowserAnimationsModule,
     A11yModule,
-    NgxTwitterTimelineModule,
+    AngularTwitterTimelineModule,
     SharedModule,
     TranslocoRootModule,
     ScullyLibModule,

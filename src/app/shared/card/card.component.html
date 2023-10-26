@@ -2,6 +2,7 @@
   <div class="card-header">
     <a
       (click)="handleClick(post)"
+      (keyup)="handleClick(post)"
       *ngIf="post.thumbnail && (post.thumbnail.header || post.thumbnail.card)"
       class="image card-image"
     >

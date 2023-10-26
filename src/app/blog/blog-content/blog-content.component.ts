@@ -73,7 +73,7 @@ export class BlogContentComponent
     this.refreshPost();
     this.router.events
       .pipe(
-        filter((e: any) => e instanceof NavigationEnd),
+        filter((e: unknown) => e instanceof NavigationEnd),
         filter((e: NavigationEnd) => e.url.startsWith('/blog')),
       )
       .subscribe(() => {

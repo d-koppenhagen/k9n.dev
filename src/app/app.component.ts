@@ -48,7 +48,7 @@ export class AppComponent {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
-        if (!/\#.*/.test(event.url)) {
+        if (!/#.*/.test(event.url)) {
           this.viewportScroller.scrollToPosition([0, 0]);
         }
       });

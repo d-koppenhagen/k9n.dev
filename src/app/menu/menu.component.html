@@ -3,24 +3,24 @@
   <nav id="menu" class="is-menu-visible" cdkTrapFocus>
     <div class="inner" role="navigation">
       <h2>{{ t('menu') }}</h2>
-      <ul class="links" (click)="menuClicked()">
+      <ul class="links">
         <li>
-          <a routerLink="/">{{ t('home') }}</a>
+          <a routerLink="/" (click)="menuClicked()">{{ t('home') }}</a>
         </li>
         <li>
-          <a href="#about">{{ t('about') }}</a>
+          <a href="#about" (click)="menuClicked()">{{ t('about') }}</a>
         </li>
         <li>
-          <a routerLink="/blog">{{ t('blog') }}</a>
+          <a routerLink="/blog" (click)="menuClicked()">{{ t('blog') }}</a>
         </li>
         <li>
-          <a routerLink="/projects">{{ t('projects') }}</a>
+          <a routerLink="/projects" (click)="menuClicked()">{{ t('projects') }}</a>
         </li>
         <li>
-          <a href="#contact">{{ t('contact') }}</a>
+          <a href="#contact" (click)="menuClicked()">{{ t('contact') }}</a>
         </li>
         <li>
-          <a routerLink="/imprint">{{ t('imprint') }}</a>
+          <a routerLink="/imprint" (click)="menuClicked()">{{ t('imprint') }}</a>
         </li>
       </ul>
       <a href="#" class="close" (click)="menuClicked()">{{ t('close') }}</a>

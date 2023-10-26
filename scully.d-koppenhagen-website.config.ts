@@ -1,4 +1,3 @@
-import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { MinifyHtml } from 'scully-plugin-minify-html';
 import '@k9n/scully-plugin-toc';
@@ -28,49 +27,6 @@ const mermaidOptions: MermaidPluginConfig = {
   config: { theme: 'dark' },
 };
 setPluginConfig(MermaidPluginName, mermaidOptions);
-
-/**
- * configuration for the sitemap plugin
- */
-const sitemapPlugin = getSitemapPlugin();
-setPluginConfig(sitemapPlugin, {
-  urlPrefix: 'https://k9n.dev',
-  sitemapFilename: 'sitemap.xml',
-  changeFreq: 'monthly',
-  priority: [
-    '1.0',
-    '0.9',
-    '0.8',
-    '0.7',
-    '0.6',
-    '0.5',
-    '0.4',
-    '0.3',
-    '0.2',
-    '0.1',
-    '0.0',
-  ],
-  ignoredRoutes: [
-    /*'/404'*/
-  ],
-  routes: {
-    '/': {
-      changeFreq: 'weekly',
-      priority: '1.0',
-      sitemapFilename: 'sitemap.xml',
-    },
-    '/blog/:slug': {
-      changeFreq: 'weekly',
-      priority: '0.9',
-      sitemapFilename: 'sitemap-blog.xml',
-    },
-    '/projects/:slug': {
-      changeFreq: 'weekly',
-      priority: '0.8',
-      sitemapFilename: 'sitemap-blog.xml',
-    },
-  },
-});
 
 /**
  * configuration for the TOC plugin

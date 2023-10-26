@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'dk-twitter-timeline',
   templateUrl: './twitter-timeline.component.html',
   styleUrls: ['./twitter-timeline.component.scss'],
 })
-export class TwitterTimelineComponent implements OnInit {
+export class TwitterTimelineComponent {
   readonly twitterTimelineData = {
     sourceType: 'profile',
     url: 'd_koppenhagen',
@@ -15,8 +15,4 @@ export class TwitterTimelineComponent implements OnInit {
     theme: 'dark',
     chrome: ['noheader', 'nofooter', 'noborders', 'transparent', 'noscrollbar'],
   };
-
-  constructor() {}
-
-  ngOnInit() {}
 }
