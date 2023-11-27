@@ -19,6 +19,7 @@ jobs:
           find: 'UA-XXXXXXXXX-X'
           replace: ${{ secrets.G_TAG_CODE }}
           include: 'src/environments/environment*' # Replace google Tag
+      - run: npm config set legacy-peer-deps true
       - uses: cmgriffing/scully-gh-pages-action@v10
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
