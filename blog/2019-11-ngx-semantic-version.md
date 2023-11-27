@@ -12,7 +12,7 @@ updated: 2019-11-06
 publishedAt:
   name: angular.schule.com
   url: https://angular.schule/blog/2019-11-ngx-semantic-version
-  logo: https://angular-schule.com/assets/img/brand.svg
+  logo: https://angular.schule/assets/img/logo-angular-schule-gradient-600.png
 keywords:
   - Angular
   - Angular CLI

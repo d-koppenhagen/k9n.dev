@@ -12,7 +12,7 @@ updated: 2019-07-24
 publishedAt:
   name: angular-buch.com
   url: https://angular-buch.com/blog/2019-07-progressive-web-app
-  logo: https://angular-buch.com/assets/img/brand.svg
+  logo: https://angular-buch.com/assets/img/brand-400.png
 keywords:
   - PWA
   - Progressive Web App
@@ -178,7 +178,7 @@ Als Letztes haben wir noch die Möglichkeit, die Statusbar der App hinsichtlich 
 Wir können als Wert für `content` zwischen den folgenden Einstellungen wählen:
 
 |                     | Text- und Iconfarbe | Hintergrundfarbe                          |
-| ------------------- | ------------------- | ----------------------------------------- |
+|---------------------|---------------------|-------------------------------------------|
 | `default`           | Schwarz             | Weiß                                      |
 | `white`             | Schwarz             | Weiß                                      |
 | `black`             | Weiß                | Schwarz                                   |
@@ -463,7 +463,7 @@ Lehnen wir hingegen ab, Benachrichtigungen zu erhalten, so färbt sich der Butto
 Unter iOS wird die Funktionalität nicht unterstützt, daher bleibt der Button ausgegraut:
 
 |                                                          Screenshot Android                                                          |                                                             Screenshot iOS                                                              |
-| :----------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: |
+|:------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------:|
 | ![Screenshot Android](/assets/images/blog/pwa-notification-enabled-android.png) <small>Benachrichtigungen werden unterstützt</small> | ![Screenshot iOS](/assets/images/blog/pwa-notification-not-enabled-ios.png)  <small>Benachrichtigungen werden nicht unterstützt</small> |
 
 
