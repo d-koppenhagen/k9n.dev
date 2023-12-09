@@ -45,7 +45,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@ngneat/transloco": "6.0.0",
+    "@ngneat/transloco": "6.0.4",
     "@scullyio/init": "2.1.41",
     "@scullyio/ng-lib": "2.1.41",
     "@scullyio/scully": "2.1.41",
