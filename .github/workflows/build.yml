@@ -19,6 +19,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20.x'
+      - run: npm config set legacy-peer-deps true
       - run: |
           npm ci
           npm run build
