@@ -147,6 +147,13 @@
         "what": "📕 Angular (3. Auflage)",
         "where": "dpunkt.verlag",
         "info": "Grundlagen, fortgeschrittene Themen und Best Practices – inklusive RxJS, NgRx und PWA"
+      },
+      "8": {
+        "location": " ",
+        "when": "2023",
+        "what": "📕 Angular (4. Auflage)",
+        "where": "dpunkt.verlag",
+        "info": "Das große Praxisbuch – Grundlagen, fortgeschrittene Themen und Best Practices. Inklusive RxJS, NgRx und a11y."
       }
     }
   }
