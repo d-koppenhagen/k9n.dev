@@ -129,7 +129,7 @@
       },
       "5": {
         "location": "Berlin",
-        "when": "seit 2019",
+        "when": "2019",
         "what": "💎 Spezialist\nEntwickler Und IT-Berater",
         "where": "DB Systel GmbH",
         "info": "Entwicklung nutzerzentrierter Webanwendungen im Enterprise-Umfeld. Beratung zur Umsetzung von Web-Anwendungen und -Architekturen sowie User Experience (UX) Consulting."
@@ -149,6 +149,13 @@
         "info": "Grundlagen, fortgeschrittene Themen und Best Practices – inklusive RxJS, NgRx und PWA"
       },
       "8": {
+        "location": "Berlin",
+        "when": "seit 2022",
+        "what": "💎 Seniorberater & Frontend Architect",
+        "where": "DB Systel GmbH",
+        "info": "Entwicklung von Enterprise-Webanwendungen"
+      },
+      "9": {
         "location": " ",
         "when": "2023",
         "what": "📕 Angular (4. Auflage)",

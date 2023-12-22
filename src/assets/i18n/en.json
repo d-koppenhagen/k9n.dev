@@ -130,7 +130,7 @@
       },
       "5": {
         "location": "Berlin",
-        "when": "since 2019",
+        "when": "2019",
         "what": "💎 Specialist\nDeveloper and IT Consultant",
         "where": "DB Systel GmbH",
         "info": "Development of UX centered enterprise web applications. Consulting and implementation of web applications and -architectures and UX consulting."
@@ -148,6 +148,20 @@
         "what": "📕 Angular (3rd edition)",
         "where": "dpunkt.verlag",
         "info": "'Grundlagen, fortgeschrittene Themen und Best Practices – inklusive RxJS, NgRx und PWA'"
+      },
+      "8": {
+        "location": "Berlin",
+        "when": "since 2022",
+        "what": "💎 Senior Consultant & Frontend Architect",
+        "where": "DB Systel GmbH",
+        "info": "Development of enterprise web applications"
+      },
+      "9": {
+        "location": " ",
+        "when": "2023",
+        "what": "📕 Angular (4th edition)",
+        "where": "dpunkt.verlag",
+        "info": "'Das große Praxisbuch – Grundlagen, fortgeschrittene Themen und Best Practices. Inklusive RxJS, NgRx und a11y.'"
       }
     }
   }
