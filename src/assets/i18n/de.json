@@ -12,7 +12,7 @@
   "switchLang": "Sprache wechseln",
   "cookieBannerText": "Diese Website nutzt Cookies um eine bestmögliche Nutzererfahrung zu gewährleisten.",
   "cookieBannerButtonText": "Okay!",
-  "twitterTimeline": "Twitter Timeline",
+  "twitterTimeline": "X (Twitter) Timeline",
   "recentBlogPosts": "Aktuelle Blog Posts",
   "recentProjects": "Meine Projekte",
   "thumbnail": "Vorschaubild",
@@ -28,6 +28,11 @@
     "title": "Angular: Das große Praxisbuch – Grundlagen, fortgeschrittene Themen und Best Practices – ab Angular 15",
     "description": "Lernen Sie Angular mit diesem umfassenden Praxisbuch! Dieses Buch stellt Ihnen die Bausteine von Angular, viele Best Practices und die notwendigen Werkzeuge vor. Beginnen Sie Ihren Einstieg mit einer praxisnahen Einführung.",
     "readOn": "angular-buch.com"
+  },
+  "meetupsPage": {
+    "title": "Angular Berlin Meetup",
+    "description": "Ich bin Co-Organisator des Angular Meetup in Berlin. Dieses findet ca. alle 4-6 Wochen an wechselnden Standorten statt. Neben zwei Talks am Abend steht der Austausch und die Vernetzung mit anderen Entwickler:innen im Vordergrund.",
+    "readOn": "Meetup.com: Angular Berlin"
   },
   "myProjects": "Meine Projekte",
   "originallyPublishedAt": "Original veröffentlicht auf",
@@ -57,8 +62,8 @@
       "aria": "E-Mail Icon"
     },
     "twitter": {
-      "alt": "Diese Seite auf Twitter teilen",
-      "aria": "Twitter Icon"
+      "alt": "Diese Seite auf X (Twitter) teilen",
+      "aria": "X (Twitter) Icon"
     },
     "facebook": {
       "alt": "Diese Seite auf Facebook teilen",
@@ -77,7 +82,7 @@
   "aboutPage": {
     "about": "Über mich",
     "aboutBlog": "Warum k9n.dev? Hierbei handelt es sich um ein Numeronym, bei dem die Zahl zwischen den beiden Buchstaben für die Anzahl der ausgelassenen Buchstaben in meinem Nachnamen steht (Vgl.: a11y, i18n, l10n, ...).",
-    "intro": "Mein Name ist Danny Koppenhagen und ich arbeite leidenschaftlich als Softwareentwickler und IT-Berater. Mein Metier ist die Konzeption und Entwicklung von Web-Anwendungen – insbesondere von Single-Page-Applications (SPA). Zum Einsatz kommen hier vor allem Angular, RxJS, NgRx aber auch Vue.js mit VueX. Des Weiteren entwickle ich Backend-Anwendungen auf Basis von JavaScript und TypeScript und bin als IT-Berater für Webarchitekturen und -Frameworks tätig. Bei der Umsetzung meiner täglichen Arbeit steht stets der Nutzer im Fokus.",
+    "intro": "Ich bin Danny Koppenhagen: Frontend Entwickler und -Architekt. Ich entwickle seit vielen Jahren nutzerzentrierte Enterprise Webanwendung und bevorzuge die Arbeit im DevOps-Produktionsmodell. Als technologische Basis setze ich auf moderne SPA-Frameworks wie Angular und Vue mit TypeScript. Weiterhin bin ich als Berater im Bereich der Webentwicklung tätig und Maintainer einiger Open Source Projekte.",
     "career": "Mein Werdegang",
     "interviews": "Interviews",
     "interviewDescriptions": {

@@ -12,7 +12,7 @@
   "switchLang": "Switch Language",
   "cookieBannerText": "This website uses cookies to ensure you get the best experience on the site.",
   "cookieBannerButtonText": "Got it!",
-  "twitterTimeline": "Twitter Timeline",
+  "twitterTimeline": "X (Twitter) Timeline",
   "recentBlogPosts": "Recent Blog Posts",
   "recentProjects": "My Projects",
   "thumbnail": "Thumbnail",
@@ -28,6 +28,11 @@
     "title": "Angular: 'Das große Praxisbuch – Grundlagen, fortgeschrittene Themen und Best Practices – ab Angular 15'",
     "description": "This German Angular book will teach you how to develop modern apps for web and mobile. You will learn about the basic concepts of Angular, the best practices and related tools.",
     "readOn": "angular-buch.com"
+  },
+  "meetupsPage": {
+    "title": "Angular Berlin Meetup",
+    "description": "I am co-organizer of the Angular Meetup in Berlin. This takes place approximately every 4-6 weeks at changing locations. In addition to two talks in the evening, the focus is on exchanging ideas and networking with other developers.",
+    "readOn": "Meetup.com: Angular Berlin"
   },
   "myProjects": "My Projects",
   "originallyPublishedAt": "Originally published at",
@@ -57,8 +62,8 @@
       "aria": "E-Mail Icon"
     },
     "twitter": {
-      "alt": "Share this page via Twitter",
-      "aria": "Twitter Icon"
+      "alt": "Share this page via X (Twitter)",
+      "aria": "X (Twitter) Icon"
     },
     "facebook": {
       "alt": "Share this page via Facebook",
@@ -77,7 +82,7 @@
   "aboutPage": {
     "about": "About me",
     "aboutBlog": "Why k9n.dev? This is a numeronym where the number between the two letters stands for the number of letters left out in my lastname (cf.: a11y, i18n, l10n, ...).",
-    "intro": "My name is Danny Koppenhagen and I am a passionate software developer and IT consultant. My profession is the development of web applications – especially of single page applications (SPA). My technology stack includes mainly Angular, RxJS, NgRx but also Vue.js with VueX. Furthermore I develop Node.js backends based on JavaScript and TypeScript. I am an IT consultant for web-architectures and -frameworks. During the development I am very focussed on the user experience (UX).",
+    "intro": "I am Danny Koppenhagen: front-end developer and architect. I have been developing user-centered enterprise web applications for many years and prefer working in the DevOps production model. As a technological basis, I rely on modern SPA frameworks such as Angular and Vue with TypeScript. I am also Consultant in the field of web development and maintainer of some open source projects.",
     "career": "My Career Path",
     "interviews": "Interviews",
     "interviewDescriptions": {

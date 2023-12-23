@@ -19,6 +19,7 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PublicationsComponent } from './publications/publications.component';
+import { MeetupsComponent } from './meetups/meetups.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.component';
 import { TranslocoRootModule } from './transloco-root.module';
@@ -38,6 +39,7 @@ import { TextSlotMachineComponent } from './text-slot-machine/text-slot-machine.
     MenuComponent,
     NavbarComponent,
     PublicationsComponent,
+    MeetupsComponent,
     ImprintComponent,
     TwitterTimelineComponent,
     CookieBannerComponent,
