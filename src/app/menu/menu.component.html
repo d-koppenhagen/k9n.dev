@@ -1,6 +1,12 @@
 <!-- Menu -->
 <ng-container *transloco="let t">
-  <nav id="menu" class="is-menu-visible" cdkTrapFocus>
+  <div
+    role="navigation"
+    id="menu"
+    class="is-menu-visible"
+    aria-label="Main menu"
+    cdkTrapFocus
+  >
     <div class="inner" role="navigation">
       <h2>{{ t('menu') }}</h2>
       <ul class="links">
@@ -14,16 +20,20 @@
           <a routerLink="/blog" (click)="menuClicked()">{{ t('blog') }}</a>
         </li>
         <li>
-          <a routerLink="/projects" (click)="menuClicked()">{{ t('projects') }}</a>
+          <a routerLink="/projects" (click)="menuClicked()">{{
+            t('projects')
+          }}</a>
         </li>
         <li>
           <a href="#contact" (click)="menuClicked()">{{ t('contact') }}</a>
         </li>
         <li>
-          <a routerLink="/imprint" (click)="menuClicked()">{{ t('imprint') }}</a>
+          <a routerLink="/imprint" (click)="menuClicked()">{{
+            t('imprint')
+          }}</a>
         </li>
       </ul>
       <a href="#" class="close" (click)="menuClicked()">{{ t('close') }}</a>
     </div>
-  </nav>
+  </div>
 </ng-container>
