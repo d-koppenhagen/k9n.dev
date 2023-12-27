@@ -33,7 +33,6 @@ jobs:
           include: 'vite.config.ts' # Replace google Tag
       - name: Install
         run: |
-          cat vite.config.ts
           npm config set legacy-peer-deps true
           npm ci
       - name: Build
@@ -47,10 +46,7 @@ jobs:
           GITHUB_EMAIL: mail@k9n.dev
         run: |
           echo "DRY_RUN=$DRY_RUN"
-          echo "TARGET_DIR=${{env.TARGET_DIR}}"
-          ls -lha ${{env.TARGET_DIR}}
           npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir="${{env.TARGET_DIR}}" --repo="$GITHUB_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL" $DRY_RUN
-          ls -lha ${{env.TARGET_DIR}}
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
