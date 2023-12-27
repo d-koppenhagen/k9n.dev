@@ -1,9 +1,9 @@
-name: Build And Deploy
+name: Build and eventually deploy
 
 on:
   push:
     branches:
-      - main
+      - '*'
 
 jobs:
   build:
@@ -13,6 +13,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20.x'
+      - name: Set environment variable based on branch
+        run: |
+          if [[ $GITHUB_REF == refs/heads/main || $GITHUB_REF == refs/heads/master ]]; then
+            echo "Branch is main or master. Setting DRY_RUN to empty."
+            echo "DRY_RUN=" >> $GITHUB_ENV
+          else
+            echo "Branch is not main or master. Setting DRY_RUN to --dry-run."
+            echo "DRY_RUN=--dry-run" >> $GITHUB_ENV
+          fi
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
@@ -27,4 +36,5 @@ jobs:
           GITHUB_NAME: Danny Koppenhagen
           GITHUB_EMAIL: mail@k9n.dev
         run: |
-          npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir=dist/analog/public --repo="$GITHUB_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL"
+          echo "DRY_RUN=$DRY_RUN"
+          npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir=dist/analog/public --repo="$GITHUB_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL" --dry-run
