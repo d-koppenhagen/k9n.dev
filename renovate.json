@@ -29,24 +29,9 @@
       "groupName": "angular eslint dependencies"
     },
     {
-      "matchPackagePatterns": ["^@commitlint/.*"],
-      "groupSlug": "commitlint",
-      "groupName": "commitlint dependencies"
-    },
-    {
       "matchPackagePatterns": ["^@fortawesome/.*"],
       "groupSlug": "fortawesome",
       "groupName": "fortawesome dependencies"
-    },
-    {
-      "matchPackagePatterns": ["^@ngneat/transloco*"],
-      "groupSlug": "transloco",
-      "groupName": "transloco dependencies"
-    },
-    {
-      "matchPackagePatterns": ["^@scullyio/.*"],
-      "groupSlug": "scully",
-      "groupName": "scully dependencies"
     }
   ],
   "ignoreDeps": [

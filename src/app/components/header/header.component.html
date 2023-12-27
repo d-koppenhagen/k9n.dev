@@ -1,0 +1,24 @@
+<!-- Banner -->
+<header id="banner" routerLink="/">
+  <div class="inner">
+    <img routerLink="/" src="images/logo_header.png" alt="Logo" id="logo" />
+    <h1
+      class="header-title"
+      (mouseenter)="expanded = true"
+      (mouseleave)="expanded = false"
+    >
+      <span>k</span>
+      @if (!expanded) {
+        <span class="headline-expanded">9</span>
+      }
+      @if (expanded) {
+        <dk-text-slot-machine class="headline-expanded" result="oppenhagen" />
+      }
+      @if (!expanded) {
+        <span>n.dev</span>
+      }
+    </h1>
+    <p class="sub-header-title">Danny Koppenhagen</p>
+    <p class="sub-header">Entwickler, IT-Berater, Buchautor</p>
+  </div>
+</header>

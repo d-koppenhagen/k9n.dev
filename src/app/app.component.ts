@@ -1,71 +1,64 @@
-import { Component, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { Router, NavigationEnd } from '@angular/router';
-import { ViewportScroller } from '@angular/common';
-import { filter } from 'rxjs';
-import { style, animate, transition, trigger } from '@angular/animations';
+import { isPlatformBrowser, ViewportScroller } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-declare let gtag;
+import { ContactComponent } from './components/contact/contact.component';
+import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
   selector: 'dk-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  animations: [
-    trigger('fadeInOut', [
-      transition(':enter', [
-        // :enter is alias to 'void => *'
-        style({ opacity: 0 }),
-        animate(500, style({ opacity: 1 })),
-      ]),
-      transition(':leave', [
-        // :leave is alias to '* => void'
-        animate(500, style({ opacity: 0 })),
-      ]),
-    ]),
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    NavbarComponent,
+    HeaderComponent,
+    ContactComponent,
+    CookieBannerComponent,
+    FontAwesomeModule,
   ],
+  template: `
+    <dk-navbar></dk-navbar>
+    <dk-header></dk-header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <dk-contact></dk-contact>
+    @if (!cookiesAccepted) {
+      <dk-cookie-banner (accepted)="toggleCookiesAccepted()"></dk-cookie-banner>
+    }
+  `,
 })
 export class AppComponent {
   cookiesAccepted = false;
+  isBrowser = false;
 
   constructor(
     readonly router: Router,
     readonly viewportScroller: ViewportScroller,
-    @Inject(DOCUMENT) private doc,
-    @Inject('GTAG_CODE') private gtagCode: string,
+    @Inject(PLATFORM_ID) private platformId: string,
   ) {
     this.setupScrollBehaviourForAnker();
-    this.setupGtag();
-    this.cookiesAccepted = Boolean(localStorage.getItem('cookiesAccepted'));
+    this.isBrowser = isPlatformBrowser(platformId);
+    this.cookiesAccepted = this.isBrowser
+      ? Boolean(localStorage.getItem('cookiesAccepted'))
+      : true;
   }
 
   toggleCookiesAccepted() {
     this.cookiesAccepted = true;
-    localStorage.setItem('cookiesAccepted', 'true');
+    if (this.isBrowser) {
+      localStorage.setItem('cookiesAccepted', 'true');
+    }
   }
 
   private setupScrollBehaviourForAnker() {
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe((event: NavigationEnd) => {
-        if (!/#.*/.test(event.url)) {
-          this.viewportScroller.scrollToPosition([0, 0]);
-        }
-      });
-  }
-
-  private setupGtag() {
-    const navEndEvent$ = this.router.events.pipe(
-      filter((e) => e instanceof NavigationEnd),
-    );
-    navEndEvent$.subscribe((e: NavigationEnd) => {
-      // eslint-disable-next-line @typescript-eslint/naming-convention
-      gtag('config', this.gtagCode, { page_path: e.urlAfterRedirects });
+    this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd && !/#.*/.test(e.url)) {
+        this.viewportScroller.scrollToPosition([0, 0]);
+      }
     });
-
-    const script = this.doc.createElement('script');
-    script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + this.gtagCode;
-    this.doc.head.prepend(script);
   }
 }

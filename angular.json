@@ -3,107 +3,53 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "d-koppenhagen-website": {
+    "blog": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "dk",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@analogjs/platform:vite",
           "options": {
-            "outputPath": "dist/d-koppenhagen-website",
-            "index": "src/index.html",
+            "configFile": "vite.config.ts",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/assets",
-              "src/robots.txt",
-              "src/sitemap.xml",
-              "src/manifest.webmanifest"
-            ],
-            "styles": ["src/styles.scss"],
-            "vendorChunk": true,
-            "extractLicenses": false,
-            "buildOptimizer": false,
-            "sourceMap": true,
-            "optimization": false,
-            "namedChunks": true
+            "outputPath": "dist/client",
+            "tsConfig": "tsconfig.app.json"
           },
+          "defaultConfiguration": "production",
           "configurations": {
+            "development": {
+              "mode": "development"
+            },
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
+              "sourcemap": false,
+              "mode": "production",
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ],
               "serviceWorker": true,
               "ngswConfigPath": "ngsw-config.json"
-            },
-            "development": {}
-          },
-          "defaultConfiguration": "production"
+            }
+          }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {},
-          "configurations": {
-            "production": {
-              "browserTarget": "d-koppenhagen-website:build:production"
-            },
-            "development": {
-              "browserTarget": "d-koppenhagen-website:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "builder": "@analogjs/platform:vite-dev-server",
+          "defaultConfiguration": "development",
           "options": {
-            "browserTarget": "d-koppenhagen-website:build"
+            "buildTarget": "blog:build",
+            "port": 5173
+          },
+          "configurations": {
+            "development": {
+              "buildTarget": "blog:build:development",
+              "hmr": true
+            },
+            "production": {
+              "buildTarget": "blog:build:production"
+            }
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/manifest.webmanifest"
-            ],
-            "styles": ["src/styles.scss"],
-            "scripts": []
-          }
+          "builder": "@analogjs/platform:vitest"
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
@@ -115,15 +61,7 @@
     }
   },
   "cli": {
-    "analytics": "ab3214a7-63c2-4906-9853-13c09c732b43"
-  },
-  "defaultProject": "d-koppenhagen-website",
-  "schematics": {
-    "@angular-eslint/schematics:application": {
-      "setParserOptionsProject": true
-    },
-    "@angular-eslint/schematics:library": {
-      "setParserOptionsProject": true
-    }
+    "analytics": "ab3214a7-63c2-4906-9853-13c09c732b43",
+    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }

@@ -1,0 +1,14 @@
+<nav class="menu-dark" id="navigation" role="navigation" tabindex="0">
+  <button
+    class="burger-menu"
+    role="button"
+    (click)="toggleMenu()"
+    aria-label="Menü öffnen"
+    aria-expanded="false"
+  >
+    <span class="hidden-small">Menü</span>
+  </button>
+</nav>
+@if (menuOpen) {
+  <dk-menu (closeMenu)="toggleMenu()"></dk-menu>
+}

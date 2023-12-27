@@ -1,0 +1,215 @@
+@import '../../../sass/libs/vars';
+
+.wrapper {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.4em;
+}
+
+h2.sub-heading {
+  font-size: 0.9em;
+}
+
+.extra-info {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.article-series {
+  .current {
+    background-color: lighten($c01, 3%);
+  }
+}
+
+.published-at,
+.external-links,
+.edit-on-github {
+  margin: 30px 0;
+}
+
+.published-at {
+  height: 50px;
+}
+
+table > tbody td {
+  vertical-align: top;
+  min-width: 120px;
+
+  > img {
+    max-width: 100px;
+  }
+
+  > pre {
+    margin: 1em 0;
+    border-radius: 5px;
+    padding: 5px;
+    background: #2d2d2d;
+  }
+
+  code {
+    background: none;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+}
+
+.published-at {
+  display: flex;
+  align-items: center;
+  line-height: 1.2em;
+
+  .published-at-link {
+    text-decoration: none;
+    border: none;
+    min-width: 120px;
+
+    .published-at-logo {
+      padding-right: 20px;
+      max-height: 60px;
+    }
+  }
+}
+
+.extra-section .actions {
+  padding-bottom: 10px;
+}
+
+span.image > img.thumbnail {
+  max-width: 80px;
+}
+
+@media screen and (max-width: 560px) {
+  .blog-footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: $c01;
+    opacity: 0.9;
+    z-index: 1;
+    padding: 0 35px;
+
+    > h2,
+    h3 {
+      display: none;
+    }
+
+    > ul {
+      margin: 10px 0px;
+      display: flex;
+      justify-content: space-between;
+
+      > li {
+        padding-left: 0px;
+      }
+    }
+  }
+
+  table > tbody td > img {
+    max-width: 70px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .extra-info {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .blog-footer {
+    padding: 0 24px;
+  }
+
+  table > tbody td > img {
+    max-width: 40px;
+  }
+}
+
+::slotted(h1) {
+  color: rgb(51, 6, 37);
+  background-color: rgb(248, 211, 236);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1.4em;
+  width: fit-content;
+}
+
+.adaptive-glass {
+  --glass-lightness: 100%;
+  background: hsl(0 0% var(--glass-lightness) / 50%);
+  backdrop-filter: blur(40px);
+
+  @media (prefers-color-scheme: dark) {
+    --glass-lightness: 0%;
+  }
+
+  @supports not (backdrop-filter: blur(1px)) {
+    background: hsl(0 0% var(--glass-lightness) / 90%);
+  }
+}
+
+figure {
+  --on-glass-primary: hsl(220 50% 20%);
+  --on-glass-secondary: hsl(220 40% 30%);
+
+  border-radius: 0.5ch;
+  overflow: hidden;
+
+  /*  https://shadows.brumm.af/  */
+  box-shadow:
+    0 3px 2px hsl(0 0% 0% / 2%),
+    0 7px 5px hsl(0 0% 0% / 3%),
+    0 13px 10px hsl(0 0% 0% / 4%),
+    0 22px 18px hsl(0 0% 0% / 5%),
+    0 42px 33px hsl(0 0% 0% / 6%),
+    0 100px 80px hsl(0 0% 0% / 7%);
+
+  @media (prefers-color-scheme: dark) {
+    --on-glass-primary: hsl(220 50% 90%);
+    --on-glass-secondary: hsl(220 30% 75%);
+  }
+
+  & img {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    object-fit: cover;
+  }
+}
+
+figcaption {
+  display: grid;
+  grid: [stack] 1fr / [stack] 1fr;
+  position: relative;
+
+  & > * {
+    grid-area: stack;
+  }
+
+  & > img {
+    position: absolute;
+  }
+
+  & > section {
+    z-index: 1;
+    padding-inline: 2ch;
+    padding-block: 2ch 2.5ch;
+    color: var(--on-glass-primary);
+    display: grid;
+    gap: 1ch;
+
+    @media (prefers-color-scheme: dark) {
+      text-shadow: 0 1px 0 hsl(0 0% 0% / 20%);
+    }
+  }
+
+  & h3 {
+    color: unset;
+    font-size: clamp(1.25rem, calc(1rem + 2vw), 2.5rem);
+  }
+}

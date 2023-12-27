@@ -1,0 +1,30 @@
+@import '../../../sass/libs/vars';
+
+.menu-dark {
+  filter: alpha(opacity=90);
+
+  > button {
+    color: $white;
+    background-color: $c01;
+    opacity: 0.9;
+    margin: 0px 1px;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($c01, 10%);
+      box-shadow: inset 0 0 0 2px $c02;
+    }
+  }
+
+  &:focus {
+    > button {
+      box-shadow: inset 0 0 0 2px $c04;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hidden-small {
+    visibility: hidden;
+  }
+}

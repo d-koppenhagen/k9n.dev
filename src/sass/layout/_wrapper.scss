@@ -17,11 +17,15 @@
   }
 
   &:before {
-    box-shadow: inset 0 -2px 0 0 $color, 0 1px 0 0 $color;
+    box-shadow:
+      inset 0 -2px 0 0 $color,
+      0 1px 0 0 $color;
   }
 
   &:after {
-    box-shadow: inset 0 -2px 0 0 $color, 0 1px 0 0 $color;
+    box-shadow:
+      inset 0 -2px 0 0 $color,
+      0 1px 0 0 $color;
   }
 }
 
@@ -66,11 +70,13 @@
           transparentize(_palette(bg), 0.2),
           transparentize(_palette(bg), 0.2)
         ),
-        url('/assets/images/bg.jpg');
+        url('/images/bg.jpg');
 
       background-size: auto, cover;
 
-      background-position: center, 0% 30%;
+      background-position:
+        center,
+        0% 30%;
 
       margin-bottom: (_size(wrapper-edges, large) * -1);
     }
@@ -86,7 +92,9 @@
 
       background-size: auto, cover;
 
-      background-position: center, 0% 0%;
+      background-position:
+        center,
+        0% 0%;
 
       margin-bottom: (_size(wrapper-edges, medium) * -1);
 

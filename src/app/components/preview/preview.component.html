@@ -1,0 +1,18 @@
+<section class="features">
+  @if (reducedPostList.length) {
+    @for (post of reducedPostList; track post.slug) {
+      <dk-card [post]="post"></dk-card>
+    }
+  } @else {
+    Es wurden keine passenden Einträge gefunden.
+  }
+</section>
+@if ((max && max < postsFiltered.length) || keyword || search) {
+  <ul class="actions">
+    <li>
+      <a [routerLink]="['/', content]" class="button"
+        >Alle anzeigen ({{ postsFiltered.length }})</a
+      >
+    </li>
+  </ul>
+}
