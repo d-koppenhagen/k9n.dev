@@ -5,6 +5,9 @@ on:
     branches:
       - '*'
 
+env:
+  TARGET_DIR: dist/analog/public
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,18 +38,14 @@ jobs:
       - name: Build
         run: |
           npm run build
-          ls -lha
       - name: Deploy Website to angular-buch-website-build.git (gh-pages branch)
         env:
           GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           GITHUB_REPO: https://github.com/d-koppenhagen/k9n.dev.git
           GITHUB_NAME: Danny Koppenhagen
           GITHUB_EMAIL: mail@k9n.dev
-          TARGET_DIR: dist/analog/public
         run: |
           echo "DRY_RUN=$DRY_RUN"
-          ls -lha
-          ls -lha "$TARGET_DIR"
           npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir="$TARGET_DIR" --repo="$GITHUB_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL" $DRY_RUN
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
