@@ -19,7 +19,7 @@ jobs:
             echo "Branch is main or master. Setting DRY_RUN to empty."
             echo "DRY_RUN=" >> $GITHUB_ENV
           else
-            echo "Branch is not main or master. Setting DRY_RUN to --dry-run."
+            echo "Branch is not main or master. Setting DRY_RUN to '--dry-run'."
             echo "DRY_RUN=--dry-run" >> $GITHUB_ENV
           fi
       - name: Find and Replace
@@ -37,4 +37,4 @@ jobs:
           GITHUB_EMAIL: mail@k9n.dev
         run: |
           echo "DRY_RUN=$DRY_RUN"
-          npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir=dist/analog/public --repo="$GITHUB_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL" --dry-run
+          npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir=dist/analog/public --repo="$GITHUB_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL" $DRY_RUN
