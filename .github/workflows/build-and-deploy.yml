@@ -33,6 +33,7 @@ jobs:
           include: 'vite.config.ts' # Replace google Tag
       - name: Install
         run: |
+          cat vite.config.ts
           npm config set legacy-peer-deps true
           npm ci
       - name: Build
