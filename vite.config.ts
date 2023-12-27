@@ -2,8 +2,10 @@
 
 import { defineConfig } from 'vite';
 import analog from '@analogjs/platform';
-import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'url';
+import * as fs from 'fs';
+
+const contentRoutesRaw = fs.readFileSync('./content-routes.json', 'utf-8');
+const contentRoutes: string[] = JSON.parse(contentRoutesRaw);
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -16,14 +18,14 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
-      static: true,
       prerender: {
         routes: async () => [
+          '/',
           '/blog',
-          // ...resolve(
-          //   dirname(fileURLToPath(import.meta.url)),
-          //   'content-routes.json',
-          // ),
+          '/contact',
+          '/imprint',
+          '/projects',
+          ...contentRoutes,
         ],
         postRenderingHooks: [
           async (route) => {
@@ -35,9 +37,7 @@ export default defineConfig(({ mode }) => ({
               ga('create', 'UA-XXXXXXXXX-1', 'auto');
               ga('send', 'pageview');
             </script>`;
-            if (route.route === '/aboutus') {
-              route.contents = route.contents?.concat(gTag);
-            }
+            route.contents = route.contents?.concat(gTag);
           },
         ],
         sitemap: {
