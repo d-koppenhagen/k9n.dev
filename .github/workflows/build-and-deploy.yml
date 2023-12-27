@@ -47,7 +47,10 @@ jobs:
           GITHUB_EMAIL: mail@k9n.dev
         run: |
           echo "DRY_RUN=$DRY_RUN"
+          echo "TARGET_DIR=$TARGET_DIR"
+          ls -lha $TARGET_DIR
           npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir="$TARGET_DIR" --repo="$GITHUB_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL" $DRY_RUN
+          ls -lha $TARGET_DIR
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
