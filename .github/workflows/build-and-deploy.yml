@@ -39,7 +39,7 @@ jobs:
       - name: Build
         run: |
           npm run build
-      - name: Deploy Website to angular-buch-website-build.git (gh-pages branch)
+      - name: Deploy Website (gh-pages branch)
         env:
           GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           GITHUB_REPO: https://github.com/d-koppenhagen/k9n.dev.git
@@ -55,4 +55,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: public dir
-          path: $TARGET_DIR
+          path: ${TARGET_DIR}
