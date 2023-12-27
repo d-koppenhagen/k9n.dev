@@ -28,7 +28,13 @@ jobs:
           find: 'UA-XXXXXXXXX-1'
           replace: ${{ secrets.G_TAG_CODE }}
           include: 'vite.config.ts' # Replace google Tag
-      - run: npm config set legacy-peer-deps true
+      - name: Install dependencies
+        run: |
+          npm config set legacy-peer-deps true
+          npm ci
+      - name: Build
+        run: |
+          npm run build
       - name: Deploy Website to angular-buch-website-build.git (gh-pages branch)
         env:
           GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
