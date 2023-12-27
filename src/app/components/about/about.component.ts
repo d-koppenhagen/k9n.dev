@@ -1,14 +1,5 @@
-import { NgClass } from '@angular/common';
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  ElementRef,
-  HostListener,
-  AfterViewInit,
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-} from '@angular/core';
+import { isPlatformBrowser, NgClass } from '@angular/common';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, HostListener, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @Component({
@@ -22,6 +13,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 export class AboutComponent implements OnInit, AfterViewInit {
   @ViewChild('videoBox') videoBox!: ElementRef;
   youtubePlayerWidth = 300;
+  isBrowser = false;
 
   steps = [
     {
@@ -97,7 +89,12 @@ export class AboutComponent implements OnInit, AfterViewInit {
     },
   ].reverse();
 
-  constructor(private cdref: ChangeDetectorRef) {}
+  constructor(
+    private cdref: ChangeDetectorRef,
+    @Inject(PLATFORM_ID) private platformId: string,
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize() {
@@ -107,9 +104,11 @@ export class AboutComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    document.body.appendChild(tag);
+    if (this.isBrowser) {
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.body.appendChild(tag);
+    }
   }
 
   ngAfterViewInit() {

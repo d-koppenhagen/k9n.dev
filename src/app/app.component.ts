@@ -8,6 +8,9 @@ import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+import 'prismjs/components/prism-yaml';
+import 'prismjs/components/prism-asciidoc';
+
 @Component({
   selector: 'dk-root',
   standalone: true,
@@ -41,7 +44,7 @@ export class AppComponent {
     @Inject(PLATFORM_ID) private platformId: string,
   ) {
     this.setupScrollBehaviourForAnker();
-    this.isBrowser = isPlatformBrowser(platformId);
+    this.isBrowser = isPlatformBrowser(this.platformId);
     this.cookiesAccepted = this.isBrowser
       ? Boolean(localStorage.getItem('cookiesAccepted'))
       : true;

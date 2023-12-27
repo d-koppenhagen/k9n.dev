@@ -1,6 +1,6 @@
 import { ContentFile } from '@analogjs/content';
-import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable } from '@angular/core';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 import { PostAttributes } from './types';
@@ -9,24 +9,31 @@ import { PostAttributes } from './types';
   providedIn: 'root',
 })
 export class MetaService {
+  isBrowser = false;
+
   constructor(
     @Inject(DOCUMENT) private dom: Document,
     public meta: Meta,
     private title: Title,
-  ) {}
+    @Inject(PLATFORM_ID) private platformId: string,
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
 
   createCanonicalURL(url?: string) {
-    const canURL = url === undefined ? this.dom.URL : url;
-    let link: HTMLLinkElement | null = document.querySelector(
-      'link[rel="canonical"]',
-    );
-    if (link) {
-      link.setAttribute('href', canURL);
-    } else {
-      link = this.dom.createElement('link');
-      link!.setAttribute('rel', 'canonical');
-      this.dom.head.appendChild(link);
-      link!.setAttribute('href', canURL);
+    if (this.isBrowser) {
+      const canURL = url === undefined ? this.dom.URL : url;
+      let link: HTMLLinkElement | null = document.querySelector(
+        'link[rel="canonical"]',
+      );
+      if (link) {
+        link.setAttribute('href', canURL);
+      } else {
+        link = this.dom.createElement('link');
+        link!.setAttribute('rel', 'canonical');
+        this.dom.head.appendChild(link);
+        link!.setAttribute('href', canURL);
+      }
     }
   }
 

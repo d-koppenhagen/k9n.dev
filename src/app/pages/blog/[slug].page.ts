@@ -3,21 +3,14 @@ import {
   injectContent,
   MarkdownComponent,
 } from '@analogjs/content';
-import { AsyncPipe, DatePipe } from '@angular/common';
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  HostListener,
-  ViewChild,
-} from '@angular/core';
+import { AsyncPipe, DatePipe, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
-import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { tap } from 'rxjs';
 import { MetaService } from '../../meta.service';
 
 import { PostAttributes } from '../../types';
+import { SharePostComponent } from '../../components/share-post/share-post.component';
 
 @Component({
   standalone: true,
@@ -26,8 +19,7 @@ import { PostAttributes } from '../../types';
     AsyncPipe,
     DatePipe,
     RouterLink,
-    ShareButtonsModule,
-    ShareIconsModule,
+    SharePostComponent,
   ],
   template: `
     <article class="wrapper alt">
@@ -134,7 +126,7 @@ import { PostAttributes } from '../../types';
             <analog-markdown [content]="post.content"></analog-markdown>
             <div class="edit-on-github">
               <a
-                [href]="editOnGithubLink()"
+                [href]="editOnGithubLink(post.filename)"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -144,28 +136,9 @@ import { PostAttributes } from '../../types';
           </section>
           <section class="blog-footer">
             <h2 class="sub-heading">Teilen</h2>
-            <div #shareBtnBox>
-              <share-buttons
-                [theme]="'circles-dark'"
-                [include]="[
-                  'copy',
-                  'twitter',
-                  'email',
-                  'whatsapp',
-                  'facebook',
-                  'telegram',
-                  'messenger',
-                  'linkedin',
-                  'xing',
-                  'sms',
-                  'print'
-                ]"
-                [show]="shareBtnCnt"
-                [url]="shareData.url"
-                [description]="shareData.description"
-                [autoSetMeta]="false"
-              ></share-buttons>
-            </div>
+            @defer (when isBrowser) {
+              <dk-share-post [description]="post.attributes.description" />
+            }
           </section>
         }
       </div>
@@ -173,14 +146,7 @@ import { PostAttributes } from '../../types';
   `,
   styleUrl: './slug.page.style.scss',
 })
-export default class BlogContentComponent implements AfterViewInit {
-  @ViewChild('shareBtnBox') shareBtnBox!: ElementRef;
-  location!: null;
-  shareData: { url: string; description: string } = {
-    url: '',
-    description: '',
-  };
-  shareBtnCnt = 5;
+export default class BlogContentComponent {
   readonly post$ = injectContent<PostAttributes>({
     param: 'slug',
     subdirectory: 'blog',
@@ -192,30 +158,16 @@ export default class BlogContentComponent implements AfterViewInit {
       ),
     ),
   );
+  isBrowser = false;
 
-  constructor(private metaService: MetaService) {}
-
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    if (!this.shareBtnBox?.nativeElement?.clientWidth) {
-      return;
-    }
-    if (this.shareBtnBox.nativeElement.clientWidth < 320) {
-      this.shareBtnCnt = 2;
-    } else if (this.shareBtnBox.nativeElement.clientWidth < 410) {
-      this.shareBtnCnt = 3;
-    } else if (this.shareBtnBox.nativeElement.clientWidth < 480) {
-      this.shareBtnCnt = 4;
-    } else {
-      this.shareBtnCnt = 5;
-    }
+  constructor(
+    private metaService: MetaService,
+    @Inject(PLATFORM_ID) private platformId: string,
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
-  ngAfterViewInit() {
-    this.onResize();
-  }
-
-  editOnGithubLink() {
-    return `https://github.com/d-koppenhagen/k9n.dev/edit/master${location.pathname}.md`;
+  editOnGithubLink(filename: string) {
+    return `https://github.com/d-koppenhagen/k9n.dev/edit/main/src/content/blog/${filename}.md`;
   }
 }

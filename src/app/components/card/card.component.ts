@@ -1,7 +1,8 @@
-import { ActivatedRoute, Router } from '@angular/router';
-import { Component, Input } from '@angular/core';
-import { PostAttributes } from '../../types';
 import { ContentFile } from '@analogjs/content';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { PostAttributes } from '../../types';
 
 @Component({
   selector: 'dk-card',
@@ -11,10 +12,7 @@ import { ContentFile } from '@analogjs/content';
 })
 export class CardComponent {
   @Input({ required: true }) post!: ContentFile<PostAttributes>;
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute,
-  ) {}
+  constructor(private router: Router) {}
 
   handleClick(post: ContentFile<PostAttributes>) {
     if (post.attributes.publishedAt?.linkExternal) {

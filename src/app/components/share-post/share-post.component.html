@@ -1,0 +1,22 @@
+<div #shareBtnBox>
+  <share-buttons
+    [theme]="'circles-dark'"
+    [include]="[
+      'copy',
+      'twitter',
+      'email',
+      'whatsapp',
+      'facebook',
+      'telegram',
+      'messenger',
+      'linkedin',
+      'xing',
+      'sms',
+      'print'
+    ]"
+    [show]="shareBtnCnt"
+    [url]="url"
+    [description]="description"
+    [autoSetMeta]="false"
+  ></share-buttons>
+</div>

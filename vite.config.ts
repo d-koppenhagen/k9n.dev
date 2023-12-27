@@ -1,8 +1,8 @@
+import analog from '@analogjs/platform';
+import * as fs from 'fs';
 /// <reference types="vitest" />
 
 import { defineConfig } from 'vite';
-import analog from '@analogjs/platform';
-import * as fs from 'fs';
 
 const contentRoutesRaw = fs.readFileSync('./content-routes.json', 'utf-8');
 const contentRoutes: string[] = JSON.parse(contentRoutesRaw);

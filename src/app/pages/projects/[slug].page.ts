@@ -4,13 +4,7 @@ import {
   MarkdownComponent,
 } from '@analogjs/content';
 import { AsyncPipe, DatePipe } from '@angular/common';
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  HostListener,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
@@ -45,7 +39,7 @@ import { PostAttributes } from '../../types';
             <analog-markdown [content]="post.content"></analog-markdown>
             <div class="edit-on-github">
               <a
-                [href]="editOnGithubLink()"
+                [href]="editOnGithubLink(post.filename)"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -59,14 +53,8 @@ import { PostAttributes } from '../../types';
   `,
   styleUrl: './slug.page.style.scss',
 })
-export default class ProjectContentComponent implements AfterViewInit {
+export default class ProjectContentComponent {
   @ViewChild('shareBtnBox') shareBtnBox!: ElementRef;
-  location!: null;
-  shareData: { url: string; description: string } = {
-    url: '',
-    description: '',
-  };
-  shareBtnCnt = 5;
   readonly post$ = injectContent<PostAttributes>({
     param: 'slug',
     subdirectory: 'projects',
@@ -81,27 +69,7 @@ export default class ProjectContentComponent implements AfterViewInit {
 
   constructor(private metaService: MetaService) {}
 
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    if (!this.shareBtnBox?.nativeElement?.clientWidth) {
-      return;
-    }
-    if (this.shareBtnBox.nativeElement.clientWidth < 320) {
-      this.shareBtnCnt = 2;
-    } else if (this.shareBtnBox.nativeElement.clientWidth < 410) {
-      this.shareBtnCnt = 3;
-    } else if (this.shareBtnBox.nativeElement.clientWidth < 480) {
-      this.shareBtnCnt = 4;
-    } else {
-      this.shareBtnCnt = 5;
-    }
-  }
-
-  ngAfterViewInit() {
-    this.onResize();
-  }
-
-  editOnGithubLink() {
-    return `https://github.com/d-koppenhagen/k9n.dev/edit/master${location.pathname}.md`;
+  editOnGithubLink(filename: string) {
+    return `https://github.com/d-koppenhagen/k9n.dev/edit/main/src/content/projects/${filename}.md`;
   }
 }

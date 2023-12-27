@@ -48,12 +48,14 @@
             ein.
           </p>
         </div>
-        <div class="grid-details-1 video-box" #videoBox>
-          <youtube-player
-            videoId="O3bYfZ8tcLc"
-            [width]="youtubePlayerWidth"
-          ></youtube-player>
-        </div>
+        @if (isBrowser) {
+          <div class="grid-details-1 video-box" #videoBox>
+            <youtube-player
+              videoId="O3bYfZ8tcLc"
+              [width]="youtubePlayerWidth"
+            ></youtube-player>
+          </div>
+        }
         <div class="grid-details-2">
           <img
             src="https://www.agiledrop.com/sites/default/files/styles/blog_big_teaser/public/2020-07/Untitled%20design%20%289%29.png?itok=b7pnZ4kD"
