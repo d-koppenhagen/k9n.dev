@@ -35,6 +35,12 @@ jobs:
           GITHUB_REPO: https://github.com/d-koppenhagen/k9n.dev.git
           GITHUB_NAME: Danny Koppenhagen
           GITHUB_EMAIL: mail@k9n.dev
+          TARGET_DIR: dist/analog/public
         run: |
           echo "DRY_RUN=$DRY_RUN"
-          npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir=dist/analog/public --repo="$GITHUB_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL" $DRY_RUN
+          npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir="$TARGET_DIR" --repo="$GITHUB_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL" $DRY_RUN
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: public dir
+          path: $TARGET_DIR
