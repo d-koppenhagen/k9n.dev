@@ -28,7 +28,15 @@ jobs:
           find: 'UA-XXXXXXXXX-1'
           replace: ${{ secrets.G_TAG_CODE }}
           include: 'vite.config.ts' # Replace google Tag
-      - name: Install, Build, Deploy
+      - name: Install
+        run: |
+          npm config set legacy-peer-deps true
+          npm ci
+      - name: Build
+        run: |
+          npm run build
+          ls -lha
+      - name: Deploy Website to angular-buch-website-build.git (gh-pages branch)
         env:
           GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           GITHUB_REPO: https://github.com/d-koppenhagen/k9n.dev.git
@@ -37,9 +45,8 @@ jobs:
           TARGET_DIR: dist/analog/public
         run: |
           echo "DRY_RUN=$DRY_RUN"
-          npm config set legacy-peer-deps true
-          npm ci
-          npm run build
+          ls -lha
+          ls -lha "$TARGET_DIR"
           npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir="$TARGET_DIR" --repo="$GITHUB_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL" $DRY_RUN
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
