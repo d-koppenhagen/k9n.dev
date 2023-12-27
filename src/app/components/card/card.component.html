@@ -4,18 +4,25 @@
       post.attributes.thumbnail &&
       (post.attributes.thumbnail.header || post.attributes.thumbnail.card)
     ) {
-      <a
-        (click)="handleClick(post)"
-        (keyup)="handleClick(post)"
-        class="image card-image"
-      >
-        <img
-          [src]="
-            post.attributes.thumbnail.card || post.attributes.thumbnail.header
-          "
-          alt=""
-        />
-      </a>
+      @if (externalUrl) {
+        <a [href]="externalUrl" target="_blank" class="image card-image">
+          <img
+            [src]="
+              post.attributes.thumbnail.card || post.attributes.thumbnail.header
+            "
+            alt=""
+          />
+        </a>
+      } @else {
+        <a [routerLink]="routeToPost" class="image card-image">
+          <img
+            [src]="
+              post.attributes.thumbnail.card || post.attributes.thumbnail.header
+            "
+            alt=""
+          />
+        </a>
+      }
     }
     <h3 class="major">{{ post.attributes.title }}</h3>
   </div>
@@ -25,8 +32,13 @@
     </p>
   </summary>
   <div class="card-footer">
-    <a class="special read-on" (click)="handleClick(post)">Weiterlesen...</a>
-
+    @if (externalUrl) {
+      <a class="special read-on" [href]="externalUrl" target="_blank"
+        >Weiterlesen...</a
+      >
+    } @else {
+      <a class="special read-on" [routerLink]="routeToPost">Weiterlesen...</a>
+    }
     @if (
       post.attributes.publishedAt &&
       post.attributes.publishedAt.name &&

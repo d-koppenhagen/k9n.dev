@@ -1,6 +1,6 @@
 import { ContentFile } from '@analogjs/content';
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 import { PostAttributes } from '../../types';
 
@@ -8,31 +8,33 @@ import { PostAttributes } from '../../types';
   selector: 'dk-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
+  imports: [RouterLink],
   standalone: true,
 })
 export class CardComponent {
   @Input({ required: true }) post!: ContentFile<PostAttributes>;
-  constructor(private router: Router) {}
+  constructor() {}
 
-  handleClick(post: ContentFile<PostAttributes>) {
-    if (post.attributes.publishedAt?.linkExternal) {
-      window.open(post.attributes.publishedAt.url, '_blank');
-    } else {
-      // Extracting the last part between slashes and excluding the file extension
-      const matchResult = post.filename.match(/\/([^/]+)\/([^/.]+)\.md$/);
+  get routeToPost() {
+    // Extracting the last part between slashes and excluding the file extension
+    const matchResult = this.post.filename.match(/\/([^/]+)\/([^/.]+)\.md$/);
+    let resultArray: string[] = [];
 
-      // Checking if the match was successful
-      if (matchResult && matchResult.length === 3) {
-        // Extracted values are in matchResult[1] and matchResult[2]
-        const [, blogPart, pathBehind] = matchResult;
+    // Checking if the match was successful
+    if (matchResult && matchResult.length === 3) {
+      // Extracted values are in matchResult[1] and matchResult[2]
+      const [, blogPart, pathBehind] = matchResult;
 
-        // Creating the array
-        const resultArray = [blogPart, pathBehind];
-
-        this.router.navigate(resultArray);
-      } else {
-        console.log('URL path does not match the expected format');
-      }
+      // Creating the array
+      resultArray = [blogPart, pathBehind];
     }
+    return resultArray;
+  }
+
+  get externalUrl() {
+    const publishedAt = this.post.attributes.publishedAt;
+    return publishedAt && publishedAt.linkExternal && publishedAt.url
+      ? publishedAt.url
+      : undefined;
   }
 }
