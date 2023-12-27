@@ -16,12 +16,15 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
-          find: 'UA-XXXXXXXXX-X'
+          find: 'UA-XXXXXXXXX-1'
           replace: ${{ secrets.G_TAG_CODE }}
-          include: 'src/environments/environment*' # Replace google Tag
+          include: 'vite.config.ts' # Replace google Tag
       - run: npm config set legacy-peer-deps true
-      - uses: cmgriffing/scully-gh-pages-action@c3b5b4bc440ffbdacc7e6430534ace82bd42899d
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          deploy-branch: gh-pages
-          scully-args: --noPrompt
+      - name: Deploy Website to angular-buch-website-build.git (gh-pages branch)
+        env:
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GITHUB_REPO: https://github.com/d-koppenhagen/k9n.dev.git
+          GITHUB_NAME: Danny Koppenhagen
+          GITHUB_EMAIL: mail@k9n.dev
+        run: |
+          npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir=dist/analog/public --repo="$GITHUB_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL"

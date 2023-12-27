@@ -1,18 +1,26 @@
 # k9n.dev website
 
-![Scully Publish](https://github.com/d-koppenhagen/k9n.dev/workflows/Scully%20Publish/badge.svg)
+This project was generated with [Analog](https://analogjs.org), the fullstack meta-framework for Angular.
 
-This project contains the source code for my personal website [k9n.dev](https://k9n.dev).
+## Setup
+
+Run `npm install` to install the application dependencies.
 
 ## Development
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-To see the static site content for the blog posts, you have to render them first using [_Scully_](https://github.com/scullyio/scully):
+Run `npm start` for a dev server. Navigate to `http://localhost:5173/`. The application automatically reloads if you change any of the source files.
 
-```bash
-npm run build
-npm run scully
-npm start
-```
+## Build
 
-Or you can use `npm run scully:all` to see the completely rendered page.
+Run `npm run build` to build the client/server project. The client build artifacts are located in the `dist/analog/public` directory. The server for the API build artifacts are located in the `dist/analog/server` directory.
+
+## Test
+
+Run `npm run test` to run unit tests with [Vitest](https://vitest.dev).
+
+## Community
+
+- Visit and Star the [GitHub Repo](https://github.com/analogjs/analog)
+- Join the [Discord](https://chat.analogjs.org)
+- Follow us on [Twitter](https://twitter.com/analogjs)
+- Become a [Sponsor](https://github.com/sponsors/brandonroberts)

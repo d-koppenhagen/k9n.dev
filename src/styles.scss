@@ -1,6 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+/* Angular Material */
+@use '@angular/material' as mat;
+@include mat.core();
+
+$analog-primary: mat.define-palette(mat.$indigo-palette);
+$analog-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$analog-warn: mat.define-palette(mat.$red-palette);
+$analog-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $analog-primary,
+      accent: $analog-accent,
+      warn: $analog-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($analog-theme);
+
 /* Font Awesome */
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 @import '@fortawesome/fontawesome-free/scss/brands';
 @import '@fortawesome/fontawesome-free/scss/regular';
@@ -9,13 +28,10 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
 /* animate.css */
 @import 'animate.css/animate.css';
-
-/* sharebuttons */
-@import 'node_modules/ngx-sharebuttons/themes/circles.scss';
-
 /* style code with prismjs */
 @import 'prismjs/plugins/toolbar/prism-toolbar.css';
 @import 'prismjs/themes/prism-tomorrow';
+
 pre.language-mermaid {
   background: none;
 }

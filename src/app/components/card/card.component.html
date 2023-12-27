@@ -1,0 +1,54 @@
+<article>
+  <div class="card-header">
+    @if (
+      post.attributes.thumbnail &&
+      (post.attributes.thumbnail.header || post.attributes.thumbnail.card)
+    ) {
+      <a
+        (click)="handleClick(post)"
+        (keyup)="handleClick(post)"
+        class="image card-image"
+      >
+        <img
+          [src]="
+            post.attributes.thumbnail.card || post.attributes.thumbnail.header
+          "
+          alt=""
+        />
+      </a>
+    }
+    <h3 class="major">{{ post.attributes.title }}</h3>
+  </div>
+  <summary class="card-content">
+    <p>
+      {{ post.attributes.description }}
+    </p>
+  </summary>
+  <div class="card-footer">
+    <a class="special read-on" (click)="handleClick(post)">Weiterlesen...</a>
+
+    @if (
+      post.attributes.publishedAt &&
+      post.attributes.publishedAt.name &&
+      post.attributes.publishedAt.url
+    ) {
+      <a
+        [href]="post.attributes.publishedAt.url"
+        class="published-at-link"
+        [title]="
+          'Original veröffentlicht auf ' + post.attributes.publishedAt.name
+        "
+      >
+        @if (post.attributes.publishedAt.logo) {
+          <img
+            class="published-at-logo"
+            [src]="post.attributes.publishedAt.logo"
+            alt="Logo of the published page"
+          />
+        } @else {
+          Original veröffentlicht auf {{ post.attributes.publishedAt.name }}
+        }
+      </a>
+    }
+  </div>
+</article>

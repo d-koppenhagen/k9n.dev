@@ -1,0 +1,98 @@
+<section id="about" class="wrapper style1">
+  <div class="inner">
+    <section class="about">
+      <h3 class="major">k9n.dev?</h3>
+      <p>
+        Warum k9n.dev? Hierbei handelt es sich um ein Numeronym, bei dem die
+        Zahl zwischen den beiden Buchstaben für die Anzahl der ausgelassenen
+        Buchstaben in meinem Nachnamen steht (Vgl.: a11y, i18n, l10n, ...).
+      </p>
+    </section>
+    <section class="about">
+      <h3 class="major">Über mich</h3>
+      <p>
+        Ich bin Danny Koppenhagen: Frontend Entwickler und -Architekt. Ich
+        entwickle seit vielen Jahren nutzerzentrierte Enterprise Webanwendung
+        und bevorzuge die Arbeit im DevOps-Produktionsmodell. Als technologische
+        Basis setze ich auf moderne SPA-Frameworks wie Angular und Vue mit
+        TypeScript. Weiterhin bin ich als Berater im Bereich der Webentwicklung
+        tätig und Maintainer einiger Open Source Projekte.
+      </p>
+    </section>
+    <h3 class="major">Interviews</h3>
+    <section class="interviews">
+      <div class="grid-container">
+        <div class="grid-description-1">
+          <h4>#000000 c0ffee Tech-Talk der DB Systel</h4>
+          <p>
+            Im Mai war ich zu Gast beim #000000 c0ffee Tech-Talk der DB Systel,
+            der Auf Grund der weltweiten Corona Pandemie remote stattfand.\r\n
+            Im Interview spreche ich über meine Erfahrungen mit Vue.js und
+            Angular und gehe darauf ein, welches Framework sich für welche
+            Anwendungszwecke eignet. Außerdem erläutere ich, wie der aktuelle
+            Stand der Technik für Progressive Webapps (PWA) ist. Im letzten Teil
+            sprechen wir über die Anbindung von APIs und über das
+            Architekturmuster \"Backend For Frontends\" (BFF).
+          </p>
+        </div>
+        <div class="grid-description-2">
+          <h4>Interview mit Agiledrop</h4>
+          <p>
+            Im Interview mit Agiledrop spreche ich über meinen Weg zur
+            Webentwicklung und wie ich dazu kam Co-Autor des deutschsprachigen
+            Angular Buchs zu sein. Weiterhin berichte ich von meinen praktischen
+            Erfahrungen mit Angular und Vue.js und in welchem Fall ich auf
+            Angular oder Vue.js setzen würde. Zum Abschluss gehe ich auf den
+            Static-Site-Generator \"Scully\" und Webcomponents sowie auf meine
+            Erwartungen an die zukünftige Entwicklung im Bereich Webtechnologien
+            ein.
+          </p>
+        </div>
+        <div class="grid-details-1 video-box" #videoBox>
+          <youtube-player
+            videoId="O3bYfZ8tcLc"
+            [width]="youtubePlayerWidth"
+          ></youtube-player>
+        </div>
+        <div class="grid-details-2">
+          <img
+            src="https://www.agiledrop.com/sites/default/files/styles/blog_big_teaser/public/2020-07/Untitled%20design%20%289%29.png?itok=b7pnZ4kD"
+            alt=""
+          />
+          <a
+            class="button small"
+            href="https://www.agiledrop.com/blog/interview-danny-koppenhagen-vuejs-angular-buch-scully-and-web-components"
+            >Zum kompletten Interview</a
+          >
+        </div>
+      </div>
+    </section>
+    <h3 class="major">Mein Werdegang</h3>
+    <section class="features">
+      <div class="timeline">
+        @for (step of steps; track step; let odd = $odd) {
+          <div
+            class="container hidden list-item"
+            [ngClass]="odd ? 'right' : 'left'"
+          >
+            <div class="content">
+              <div class="timeline-heading-header">
+                <span class="timeline-heading-info time">
+                  {{ step.when }}
+                </span>
+                <span class="timeline-heading-info location">{{
+                  step.location
+                }}</span>
+              </div>
+              <h4 class="timeline-heading">
+                {{ step.what }}
+              </h4>
+              <span class="timeline-heading-info">{{ step.where }}</span>
+              <p>{{ step.info }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+  </div>
+</section>

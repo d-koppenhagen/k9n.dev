@@ -1,0 +1,33 @@
+<!-- Menu -->
+<div
+  role="navigation"
+  id="menu"
+  class="is-menu-visible"
+  aria-label="Main menu"
+  cdkTrapFocus
+>
+  <div class="inner" role="navigation">
+    <h2>Menü</h2>
+    <ul class="links" (click)="menuClicked()">
+      <li>
+        <a routerLink="/">Startseite</a>
+      </li>
+      <li>
+        <a href="#about">Über mich</a>
+      </li>
+      <li>
+        <a routerLink="/blog">Blog</a>
+      </li>
+      <li>
+        <a routerLink="/projects">Projekte</a>
+      </li>
+      <li>
+        <a routerLink="/contact">Kontakt</a>
+      </li>
+      <li>
+        <a routerLink="/imprint">Impressum</a>
+      </li>
+    </ul>
+    <a href="#" class="close" (click)="menuClicked()">Schließen</a>
+  </div>
+</div>

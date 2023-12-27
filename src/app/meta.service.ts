@@ -1,38 +1,45 @@
-import { Injectable, Inject } from '@angular/core';
+import { ContentFile } from '@analogjs/content';
 import { DOCUMENT } from '@angular/common';
+import { Inject, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { ScullyRoute } from '@scullyio/ng-lib';
+
+import { PostAttributes } from './types';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MetaService {
   constructor(
-    @Inject(DOCUMENT) private dom,
+    @Inject(DOCUMENT) private dom: Document,
     public meta: Meta,
     private title: Title,
   ) {}
 
   createCanonicalURL(url?: string) {
     const canURL = url === undefined ? this.dom.URL : url;
-    let link: HTMLLinkElement = document.querySelector('link[rel="canonical"]');
+    let link: HTMLLinkElement | null = document.querySelector(
+      'link[rel="canonical"]',
+    );
     if (link) {
       link.setAttribute('href', canURL);
     } else {
       link = this.dom.createElement('link');
-      link.setAttribute('rel', 'canonical');
+      link!.setAttribute('rel', 'canonical');
       this.dom.head.appendChild(link);
-      link.setAttribute('href', canURL);
+      link!.setAttribute('href', canURL);
     }
   }
 
-  createMetaDataForPost(post: ScullyRoute) {
+  createMetaDataForPost(
+    dir: 'blog' | 'projects',
+    post: ContentFile<PostAttributes>,
+  ) {
     this.removeAllKnownTags();
-    this.setTitle(post.title);
-    this.setDescription(post.description);
-    this.createCanonicalURL(post.publishedAt?.url);
+    this.setTitle(post.attributes.title);
+    this.setDescription(post.attributes.description);
+    this.createCanonicalURL(post.attributes.publishedAt?.url);
     this.createTwitterCardForBlogPost(post);
-    this.createOpenGraphProfileForBlogPost(post);
+    this.createOpenGraphProfileForBlogPost(dir, post);
   }
 
   private setTitle(title: string) {
@@ -43,7 +50,7 @@ export class MetaService {
     this.meta.updateTag({ name: 'description', content: description });
   }
 
-  private createTwitterCardForBlogPost(post: ScullyRoute) {
+  private createTwitterCardForBlogPost(post: ContentFile<PostAttributes>) {
     this.meta.updateTag({
       name: 'twitter:card',
       content: 'summary',
@@ -58,31 +65,37 @@ export class MetaService {
     });
     this.meta.updateTag({
       name: 'twitter:title',
-      content: post.title,
+      content: post.attributes.title,
     });
     this.meta.updateTag({
       name: 'twitter:description',
-      content: post.description,
+      content: post.attributes.description,
     });
     this.meta.updateTag({
       name: 'twitter:image',
-      content: `https://k9n.dev/${post.thumbnail.header}`,
+      content: `https://k9n.dev/${post.attributes.thumbnail.header}`,
     });
   }
 
-  private createOpenGraphProfileForBlogPost(post: ScullyRoute) {
-    this.meta.updateTag({ property: 'og:title', content: post.title });
+  private createOpenGraphProfileForBlogPost(
+    dir: 'blog' | 'projects',
+    post: ContentFile<PostAttributes>,
+  ) {
+    this.meta.updateTag({
+      property: 'og:title',
+      content: post.attributes.title,
+    });
     this.meta.updateTag({
       property: 'og:description',
-      content: post.description,
+      content: post.attributes.description,
     });
     this.meta.updateTag({
       name: 'og:image',
-      content: `https://k9n.dev/${post.thumbnail.header}`,
+      content: `https://k9n.dev/${post.attributes.thumbnail.header}`,
     });
     this.meta.updateTag({
       name: 'og:url',
-      content: `https://k9n.dev${post.route}`,
+      content: `https://k9n.dev/${dir}/${post.slug}`,
     });
   }
 
