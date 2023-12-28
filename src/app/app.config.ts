@@ -5,6 +5,11 @@ import { ApplicationConfig } from '@angular/core';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
+import 'prismjs/components/prism-yaml';
+import 'prismjs/components/prism-asciidoc';
+import 'prismjs/components/prism-diff';
+import 'prismjs/plugins/diff-highlight/prism-diff-highlight';
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideAnimations(),

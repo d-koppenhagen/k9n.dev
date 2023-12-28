@@ -8,9 +8,6 @@ import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
-// import 'prismjs/components/prism-yaml';
-// import 'prismjs/components/prism-asciidoc';
-
 @Component({
   selector: 'dk-root',
   standalone: true,

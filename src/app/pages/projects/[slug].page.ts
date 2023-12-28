@@ -6,8 +6,6 @@ import {
 import { AsyncPipe, DatePipe } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
-import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { tap } from 'rxjs';
 import { MetaService } from '../../meta.service';
 
@@ -15,14 +13,7 @@ import { PostAttributes } from '../../types';
 
 @Component({
   standalone: true,
-  imports: [
-    MarkdownComponent,
-    AsyncPipe,
-    DatePipe,
-    RouterLink,
-    ShareButtonsModule,
-    ShareIconsModule,
-  ],
+  imports: [MarkdownComponent, AsyncPipe, DatePipe, RouterLink],
   template: `
     <article class="wrapper alt">
       <div class="inner">

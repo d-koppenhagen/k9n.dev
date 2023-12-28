@@ -31,6 +31,7 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 /* style code with prismjs */
 @import 'prismjs/plugins/toolbar/prism-toolbar.css';
 @import 'prismjs/themes/prism-tomorrow';
+@import 'prismjs/plugins/diff-highlight/prism-diff-highlight.css';
 
 pre.language-mermaid {
   background: none;

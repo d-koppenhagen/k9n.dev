@@ -12,7 +12,7 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 @Component({
   selector: 'dk-share-post',
   standalone: true,
-  imports: [ShareButtonsModule, ShareIconsModule],
+  //imports: [ShareButtonsModule, ShareIconsModule],
   templateUrl: './share-post.component.html',
   styleUrl: './share-post.component.css',
 })

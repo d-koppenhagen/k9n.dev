@@ -26,7 +26,7 @@ export class CardComponent {
       const [, blogPart, pathBehind] = matchResult;
 
       // Creating the array
-      resultArray = [blogPart, pathBehind];
+      resultArray = ['/', blogPart, pathBehind];
     }
     return resultArray;
   }
