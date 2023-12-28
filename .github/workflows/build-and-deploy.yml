@@ -41,13 +41,9 @@ jobs:
       - name: Deploy Website (gh-pages branch)
         env:
           GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          GITHUB_REPO: https://github.com/d-koppenhagen/k9n.dev.git
-          GITHUB_NAME: Danny Koppenhagen
-          GITHUB_EMAIL: mail@k9n.dev
         run: |
           echo "DRY_RUN=$DRY_RUN"
-          npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir="${{env.TARGET_DIR}}" --repo="$GITHUB_REPO" --name="$GITHUB_NAME" --email="$GITHUB_EMAIL" $DRY_RUN
-          find ${{env.TARGET_DIR}} -type f -exec echo {} \;
+          npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir="${{env.TARGET_DIR}}" $DRY_RUN
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
