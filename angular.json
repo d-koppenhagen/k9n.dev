@@ -12,7 +12,7 @@
         "build": {
           "builder": "@analogjs/platform:vite",
           "options": {
-            "configFile": "vite.config.ts",
+            "configFile": "vite.config.mts",
             "main": "src/main.ts",
             "outputPath": "dist/client",
             "tsConfig": "tsconfig.app.json"

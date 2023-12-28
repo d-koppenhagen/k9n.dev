@@ -30,7 +30,7 @@ jobs:
         with:
           find: 'UA-XXXXXXXXX-1'
           replace: ${{ secrets.G_TAG_CODE }}
-          include: 'vite.config.ts' # Replace google Tag
+          include: 'vite.config.mts' # Replace google Tag
       - name: Install
         run: |
           npm config set legacy-peer-deps true
