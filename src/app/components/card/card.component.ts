@@ -28,7 +28,6 @@ export class CardComponent {
       // Creating the array
       resultArray = ['/', blogPart, pathBehind];
     }
-    console.log('resultArray', resultArray);
     return resultArray;
   }
 
