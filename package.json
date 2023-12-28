@@ -24,8 +24,8 @@
     "extract-content-routes": "find src/content -type f -name '*.md' -exec sh -c 'echo \"/$(dirname {} | cut -d/ -f3)/$(basename -s .md {})\"' \\; | jq -R -s -c 'split(\"\n\")[:-1]' > content-routes.json && npx prettier -w content-routes.json"
   },
   "dependencies": {
-    "@analogjs/content": "^0.2.0",
-    "@analogjs/router": "^0.2.0",
+    "@analogjs/content": "^1.0.0-beta.1",
+    "@analogjs/router": "^1.0.0-beta.1",
     "@angular/animations": "^17.0.0",
     "@angular/cdk": "^17.0.0",
     "@angular/common": "^17.0.0",
@@ -61,7 +61,7 @@
     "zone.js": "~0.14.0"
   },
   "devDependencies": {
-    "@analogjs/platform": "^0.2.0",
+    "@analogjs/platform": "^1.0.0-beta.1",
     "@angular-devkit/build-angular": "^17.0.0",
     "@angular-eslint/builder": "17.1.1",
     "@angular-eslint/eslint-plugin": "17.1.1",
