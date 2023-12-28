@@ -134,12 +134,12 @@ import { SharePostComponent } from '../../components/share-post/share-post.compo
               </a>
             </div>
           </section>
-          <section class="blog-footer">
+          <!-- <section class="blog-footer">
             <h2 class="sub-heading">Teilen</h2>
             @defer (when isBrowser) {
               <dk-share-post [description]="post.attributes.description" />
             }
-          </section>
+          </section> -->
         }
       </div>
     </article>
