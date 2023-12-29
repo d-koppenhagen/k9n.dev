@@ -31,7 +31,7 @@ jobs:
           find: 'UA-XXXXXXXXX-1'
           replace: ${{ secrets.G_TAG_CODE }}
           include: 'vite.config.mts' # Replace google Tag
-      - uses: d-koppenhagen/analog-publish-gh-pages@v0.1.0
+      - uses: d-koppenhagen/analog-publish-gh-pages@v0.2.0
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
           package-manager: 'npm'
