@@ -43,7 +43,11 @@ import { isPlatformBrowser } from '@angular/common';
     <dk-about></dk-about>
     <dk-meetups></dk-meetups>
     @if (isBrowser) {
-      <dk-twitter-timeline></dk-twitter-timeline>
+      @defer (on viewport; prefetch on idle) {
+        <dk-twitter-timeline></dk-twitter-timeline>
+      } @placeholder {
+        <div></div>
+      }
     }
   `,
 })
