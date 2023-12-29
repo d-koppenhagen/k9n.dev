@@ -34,11 +34,7 @@ jobs:
       - uses: k9n-dev/analog-publish-gh-pages@main
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
-          package-manager: 'npm'
           install-args: '--legacy-peer-deps'
-          build-args: ''
-          deploy-dir: 'dist/analog/public'
-          deploy-args: '--no-silent ${DRY_RUN}'
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
