@@ -31,19 +31,14 @@ jobs:
           find: 'UA-XXXXXXXXX-1'
           replace: ${{ secrets.G_TAG_CODE }}
           include: 'vite.config.mts' # Replace google Tag
-      - name: Install
-        run: |
-          npm config set legacy-peer-deps true
-          npm ci
-      - name: Build
-        run: |
-          npm run build
-      - name: Deploy Website (gh-pages branch)
-        env:
-          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        run: |
-          echo "DRY_RUN=$DRY_RUN"
-          npx angular-cli-ghpages --cname=k9n.dev --no-silent --dir="${{env.TARGET_DIR}}" $DRY_RUN
+      - uses: analog-publish-gh-pages@0.1.0
+        with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          package-manager: 'npm'
+          install-args: '--legacy-peer-deps'
+          build-args: ''
+          deploy-dir: 'dist/analog/public'
+          deploy-args: '--no-silent ${DRY_RUN}'
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
