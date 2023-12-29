@@ -31,9 +31,9 @@ jobs:
           find: 'UA-XXXXXXXXX-1'
           replace: ${{ secrets.G_TAG_CODE }}
           include: 'vite.config.mts' # Replace google Tag
-      - uses: analog-publish-gh-pages@0.1.0
+      - uses: analog-publish-gh-pages@v0.1.0
         with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
+          access-token: ${{ secrets.GITHUB_TOKEN }}
           package-manager: 'npm'
           install-args: '--legacy-peer-deps'
           build-args: ''
