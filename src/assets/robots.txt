@@ -1,2 +1,4 @@
-Sitemap: https://k9n.dev/sitemap.xml
-Disallow: /recruitment/
+user-agent: *
+allow: *
+disallow: /recruitment/
+sitemap: https://k9n.dev/sitemap.xml
