@@ -1,12 +1,13 @@
+import { injectContentFiles } from '@analogjs/content';
+import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
+
+import { AboutComponent } from '../components/about/about.component';
+import { MeetupsComponent } from '../components/meetups/meetups.component';
 import { PreviewComponent } from '../components/preview/preview.component';
 import { PublicationsComponent } from '../components/publications/publications.component';
-import { AboutComponent } from '../components/about/about.component';
 import { TwitterTimelineComponent } from '../components/twitter-timeline/twitter-timeline.component';
-import { MeetupsComponent } from '../components/meetups/meetups.component';
-import { injectContentFiles } from '@analogjs/content';
 import { PostAttributes } from '../types';
-import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   standalone: true,
@@ -26,27 +27,23 @@ import { isPlatformBrowser } from '@angular/common';
     <section class="wrapper alt style1">
       <div class="inner">
         <h2 class="major">Aktuelle Blog Posts</h2>
-        <dk-preview content="blog" [posts]="blogPosts" [max]="4"></dk-preview>
+        <dk-preview content="blog" [posts]="blogPosts" [max]="4" />
       </div>
     </section>
-    <dk-publications></dk-publications>
+    <dk-publications />
     <section class="wrapper alt style3">
       <div class="inner">
         <h2 class="major">Meine Projekte</h2>
-        <dk-preview
-          content="projects"
-          [posts]="projectPosts"
-          [max]="4"
-        ></dk-preview>
+        <dk-preview content="projects" [posts]="projectPosts" [max]="4" />
       </div>
     </section>
-    <dk-about></dk-about>
-    <dk-meetups></dk-meetups>
+    <dk-about />
+    <dk-meetups />
     @if (isBrowser) {
       @defer (on viewport; prefetch on idle) {
-        <dk-twitter-timeline></dk-twitter-timeline>
+        <dk-twitter-timeline />
       } @placeholder {
-        <div></div>
+        <div>Posts werden geladen...</div>
       }
     }
   `,

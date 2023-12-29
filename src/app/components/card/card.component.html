@@ -5,7 +5,13 @@
       (post.attributes.thumbnail.header || post.attributes.thumbnail.card)
     ) {
       @if (externalUrl) {
-        <a [href]="externalUrl" target="_blank" class="image card-image">
+        <a
+          [href]="externalUrl"
+          target="_blank"
+          class="image card-image"
+          [title]="post.attributes.title"
+          [attr.aria-label]="post.attributes.title"
+        >
           <img
             [src]="
               post.attributes.thumbnail.card || post.attributes.thumbnail.header
@@ -14,7 +20,12 @@
           />
         </a>
       } @else {
-        <a [routerLink]="routeToPost" class="image card-image">
+        <a
+          [routerLink]="routeToPost"
+          class="image card-image"
+          [title]="post.attributes.title"
+          [attr.aria-label]="post.attributes.title"
+        >
           <img
             [src]="
               post.attributes.thumbnail.card || post.attributes.thumbnail.header
