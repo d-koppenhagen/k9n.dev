@@ -33,7 +33,7 @@ jobs:
           include: 'vite.config.mts' # Replace google Tag
       - uses: k9n-dev/analog-publish-gh-pages@main
         with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
+          access-token: ${{ secrets.ACCESS_TOKEN }}
           install-args: '--legacy-peer-deps'
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
