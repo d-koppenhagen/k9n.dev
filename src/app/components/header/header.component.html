@@ -4,15 +4,15 @@
     <img routerLink="/" src="images/logo_header.png" alt="Logo" id="logo" />
     <h1
       class="header-title"
-      (mouseenter)="expanded = true"
-      (mouseleave)="expanded = false"
+      (mouseenter)="onMouseEnter()"
+      (mouseleave)="onMouseLeave()"
     >
       <span>k</span>
       @if (!expanded) {
         <span class="headline-expanded">9</span>
       }
       @if (expanded) {
-        <dk-text-slot-machine class="headline-expanded" result="oppenhagen" />
+        <dk-text-slot-machine class="headline-expanded" result="oppenhage" />n
       }
       @if (!expanded) {
         <span>n.dev</span>

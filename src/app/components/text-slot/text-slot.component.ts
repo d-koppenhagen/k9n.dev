@@ -25,10 +25,6 @@ import {
         'out',
         style({ opacity: 0, display: 'none', transform: 'translateY(-100%)' }),
       ),
-      transition('* => out', [
-        style({ transform: 'translateY(0)', opacity: 1 }),
-        animate('0.2s', style({ transform: 'translateY(-100%)', opacity: 0 })),
-      ]),
       transition('* => in', [
         style({ transform: 'translateY(100%)', opacity: 0 }),
         animate('0.1s', style({ transform: 'translateY(0)', opacity: 1 })),
@@ -39,11 +35,13 @@ import {
   standalone: true,
 })
 export class TextSlotComponent implements OnInit {
-  @Input() result!: string;
+  @Input({ required: true }) result!: string;
   currentIndex = 0;
   intervalInstance: any;
-  chars = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789'];
-  slots = this.chars.map((char) => ({ value: char, state: 'out' }));
+  slots = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789#?!=+&%$§'].map((char) => ({
+    value: char,
+    state: 'out',
+  }));
 
   constructor(
     private changeDetector: ChangeDetectorRef,
