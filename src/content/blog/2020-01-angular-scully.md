@@ -414,7 +414,7 @@ With the shown examples, it's possible to create a full-fledged website with Scu
 > Feel free to check out the sources at:
 > [github.com/d-koppenhagen/k9n.dev](https://github.com/d-koppenhagen/k9n.dev)
 
-If you want to follow all the development steps in detail, check out my provided Github repository
+If you want to follow all the development steps in detail, check out my provided GitHub repository
 [scully-blog-example](https://github.com/d-koppenhagen/scully-blog-example).
 
 ## Conclusion

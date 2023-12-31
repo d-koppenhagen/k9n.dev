@@ -27,4 +27,4 @@ Since then I shifted the whole project to be based on TypeScript, streamlined th
 
 - **[vue3-openlayers Website](https://vue3openlayers.netlify.app/)**
 - **[vue3-openlayers NPM Package](https://www.npmjs.com/package/vue3-openlayers)**
-- **[vue3-openlayers Github Repository](https://github.com/MelihAltintas/vue3-openlayers)**
+- **[vue3-openlayers GitHub Repository](https://github.com/MelihAltintas/vue3-openlayers)**

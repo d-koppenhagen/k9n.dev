@@ -130,7 +130,7 @@ import { SharePostComponent } from '../../components/share-post/share-post.compo
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Auf Github bearbeiten
+                Auf GitHub bearbeiten
               </a>
             </div>
           </section>

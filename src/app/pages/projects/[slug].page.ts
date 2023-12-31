@@ -34,7 +34,7 @@ import { PostAttributes } from '../../types';
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Auf Github bearbeiten
+                Auf GitHub bearbeiten
               </a>
             </div>
           </section>
