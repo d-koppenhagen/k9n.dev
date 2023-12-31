@@ -1,11 +1,18 @@
 <!-- Banner -->
-<header id="banner" routerLink="/">
+<header id="banner">
   <div class="inner">
-    <img routerLink="/" src="images/logo_header.png" alt="Logo" id="logo" />
+    <a routerLink="/" aria-label="Zur Startseite" title="Startseite" id="logo">
+      <img src="images/logo_header.png" alt="Logo" />
+    </a>
     <h1
       class="header-title"
+      tabindex="0"
+      aria-label="Textanimation: k9n.dev verändert sich zu 'Koppenhagen' zur Visualisierung des Numeronyms"
+      aria-describedby="about-k9n"
       (mouseenter)="onMouseEnter()"
       (mouseleave)="onMouseLeave()"
+      (focus)="onMouseEnter()"
+      (blur)="onMouseLeave()"
     >
       <span>k</span>
       @if (!expanded) {

@@ -1,13 +1,5 @@
 @import '../../../sass/libs/vars';
 
-#banner {
-  // position: sticky;
-  // top: 0;
-}
-
-.headline-collapsed,
-.headline-expanded {
-}
 .header-title {
   background-image: url('/images/bg-triangles.jpg');
   background-size: cover;
@@ -39,7 +31,6 @@
   background-size: contain;
   background-color: $white;
   padding: 9em 0 12em 0;
-  cursor: pointer;
   animation: headerFadeIn 3s;
 }
 
@@ -54,12 +45,21 @@
 
 #logo {
   position: absolute;
-  top: 0px;
-  width: 70px;
-  animation:
-    move-to-top 1s ease,
-    rotate 4s ease 1;
-  cursor: pointer;
+  top: 5px;
+
+  img {
+    width: 70px;
+    animation:
+      move-to-top 1s ease,
+      rotate 4s ease 1;
+  }
+}
+
+#logo,
+h1 {
+  &:focus {
+    outline: 1px solid #b9a7a766;
+  }
 }
 
 @keyframes rotate {
