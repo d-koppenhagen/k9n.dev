@@ -1,0 +1,15 @@
+<section class="article-series">
+  <h2 class="sub-heading">Artikelserie</h2>
+  <ol class="alt">
+    @for (related of relatedPosts; track related.slug) {
+      <li>
+        <a
+          [routerLink]="['..', related.slug]"
+          routerLinkActive="current"
+          ariaCurrentWhenActive="page"
+          >{{ related.attributes.title }}</a
+        >
+      </li>
+    }
+  </ol>
+</section>

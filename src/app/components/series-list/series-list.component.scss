@@ -1,0 +1,7 @@
+@import '../../../sass/libs/vars';
+
+.article-series {
+  li:has(.current:not(:hover)) {
+    background-color: lighten($c12, 3%);
+  }
+}

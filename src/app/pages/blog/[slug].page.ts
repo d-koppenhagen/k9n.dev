@@ -11,6 +11,7 @@ import { MetaService } from '../../meta.service';
 
 import { PostAttributes } from '../../types';
 import { SharePostComponent } from '../../components/share-post/share-post.component';
+import { SeriesListComponent } from '../../components/series-list/series-list.component';
 
 @Component({
   standalone: true,
@@ -20,6 +21,7 @@ import { SharePostComponent } from '../../components/share-post/share-post.compo
     DatePipe,
     RouterLink,
     SharePostComponent,
+    SeriesListComponent,
   ],
   template: `
     <article class="wrapper alt">
@@ -109,22 +111,8 @@ import { SharePostComponent } from '../../components/share-post/share-post.compo
               }
             </section>
           }
-          @if (post.attributes.related) {
-            <section class="article-series">
-              <h2 class="sub-heading">Artikelserie</h2>
-              <ol class="alt">
-                @for (related of post.attributes.related; track related.slug) {
-                  <li
-                    [routerLink]="related.slug"
-                    [class.current]="post.slug === related.slug"
-                  >
-                    <a [routerLink]="['..', related.slug]">{{
-                      related.title
-                    }}</a>
-                  </li>
-                }
-              </ol>
-            </section>
+          @if (post.attributes.series) {
+            <dk-series-list [series]="post.attributes.series"></dk-series-list>
           }
 
           <section class="blog-content">
