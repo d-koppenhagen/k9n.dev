@@ -129,15 +129,30 @@ import { SharePostComponent } from '../../components/share-post/share-post.compo
 
           <section class="blog-content">
             <analog-markdown [content]="post.content"></analog-markdown>
-            <div class="edit-on-github">
+            @if (
+              !post.content &&
+              post.attributes.publishedAt &&
+              post.attributes.publishedAt.name &&
+              post.attributes.publishedAt.url
+            ) {
               <a
-                [href]="editOnGithubLink(post.filename)"
+                class="external-article"
+                [href]="post.attributes.publishedAt.url"
                 target="_blank"
-                rel="noopener noreferrer"
+                >Zum externen Artikel auf
+                {{ post.attributes.publishedAt.name }}</a
               >
-                Auf GitHub bearbeiten
-              </a>
-            </div>
+            } @else {
+              <div class="edit-on-github">
+                <a
+                  [href]="editOnGithubLink(post.filename)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Auf GitHub bearbeiten
+                </a>
+              </div>
+            }
           </section>
           <!-- <section class="blog-footer">
             <h2 class="sub-heading">Teilen</h2>
