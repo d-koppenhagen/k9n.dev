@@ -17,8 +17,6 @@ thumbnail:
   card: images/projects/angular-tag-cloud-module-small.png
 ---
 
-# angular-tag-cloud-module
-
 My project **angular-tag-cloud-module** gives you an Angular module for setting up a tag cloud / word cloud easily.
 It will take an array of words or links and put them randomly into a container.
 You can specify some styling options for the whole word cloud or for each tag cloud item.

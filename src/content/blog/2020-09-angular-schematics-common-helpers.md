@@ -23,8 +23,6 @@ linked:
   devTo: https://dev.to/dkoppenhagen/speed-up-your-angular-schematics-development-with-useful-helper-functions-1kb2
 ---
 
-# Speed up your Angular schematics development with useful helper functions
-
 Angular CLI schematics offer us a way to add, scaffold and update app-related files and modules. However, there are some common things we will probably want integrate in our schematics: updating your `package.json` file, adding or removing an Angular module or updating component imports.
 
 Currently, the way of authoring an Angular Schematic is documented [on angular.io](https://angular.io/guide/schematics-authoring).
@@ -33,10 +31,6 @@ The Angular CLI itself uses schematics for e.g. generating modules and component
 Under the hood each of the schematics uses some very common utils which are not yet documented but available for all developers anyway.
 In the past, I've seen some Angular CLI Schematic projects where people were trying to implement almost the same common util methods on their own.
 However, since some of these are already implemented in the Angular CLI, I want to show you some of those typical helpers that you can use for you Angular CLI Schematic project to prevent any pitfalls.
-
-<hr>
-
-<div id="toc"><strong>Table of contents</strong></div>
 
 ## ⚠️ Attention: not officially supported
 
@@ -871,7 +865,7 @@ However, as they aren't officially published until now, you should keep track of
 ## Summary
 
 | Function                        | Description                                                                                                     |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+|---------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | `getPackageJsonDependency()`    | Get a package configuration from the `package.json` (dev-, peer-, optional-) dependencies config.               |
 | `addPackageJsonDependency()`    | Add a NPM package to the `package.json` as (dev-, peer-, optional-) dependency.                                 |
 | `removePackageJsonDependency()` | Remove a NPM package from the `package.json` (dev-, peer-, optional-) dependencies.                             |
@@ -888,7 +882,7 @@ However, as they aren't officially published until now, you should keep track of
 | `createDefaultPath()`           | Get the default application / library path for a project inside an Angular workspace.                           |
 
 | Class                    | Description                                                                                                        |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+|--------------------------|--------------------------------------------------------------------------------------------------------------------|
 | `InsertChange`           | This class returns a change object with the content to be added and the position where a change is being inserted. |
 | `NodePackageInstallTask` | A task instance that will perform a `npm install` once instantiated and added to the `context` via `addTask()`.    |
 | `RunSchematicTask`       | A task that runs another schematic after instantiation and adding it to the `context` via `addTask()`.             |

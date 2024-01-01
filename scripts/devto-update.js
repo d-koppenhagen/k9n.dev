@@ -24,8 +24,7 @@ const preUpdateAll = (articleData) => {
   const newData = { ...articleData };
   newData.content = articleData.content
     .replace(/\]\(\//g, `](${BASE_URL}/`) // replace src URLs in MD images
-    .replace(/src="\//g, `src="${BASE_URL}/`) // replace <img> tag src URL
-    .replace(/<div id="toc".*<\/div>/g, ''); // remove TOC placeholder
+    .replace(/src="\//g, `src="${BASE_URL}/`); // replace <img> tag src URL
   return newData;
 };
 

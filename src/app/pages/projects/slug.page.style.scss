@@ -12,6 +12,12 @@ h2.sub-heading {
   font-size: 0.9em;
 }
 
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
 .edit-on-github {
   margin: 30px 0;
 }
@@ -23,4 +29,21 @@ h2.sub-heading {
   border-radius: 5px;
   font-size: 1.4em;
   width: fit-content;
+}
+
+.project-header img {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+  border-radius: 1ch;
+  overflow: hidden;
+  box-shadow:
+    0 3px 2px hsl(0 0% 0% / 2%),
+    0 7px 5px hsl(0 0% 0% / 3%),
+    0 13px 10px hsl(0 0% 0% / 4%),
+    0 22px 18px hsl(0 0% 0% / 5%),
+    0 42px 33px hsl(0 0% 0% / 6%),
+    0 100px 80px hsl(0 0% 0% / 7%);
+  margin-bottom: 1rem;
 }

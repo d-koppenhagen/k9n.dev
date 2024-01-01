@@ -18,8 +18,6 @@ thumbnail:
   card: images/projects/analog-publish-gh-pages-small.png
 ---
 
-# Analog Publish GitHub Pages
-
 When I migrated my personal website/blog (this site) to use [AnalogJS](https://analogjs.org/) in December 2023, I created a GitHub Action which simplifies the deployment at GitHub Pages.
 
 Analog is a meta-framework on top of [Angular](https://angular.dev) which includes a static site generator, file based routing and other opinionated features.

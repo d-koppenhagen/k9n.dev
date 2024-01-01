@@ -30,10 +30,6 @@ series: scully
 
 **You probably heard of the JAMStack. It's a new way of building websites and apps via static site generators that deliver better performance and higher security. There have been tools for many platforms, but surprisingly not yet for Angular. These times are finally over. With this blog post, I want to show you how you can easily create an Angular blogging app by to pre-render your complete app.**
 
-<hr>
-
-<div id="toc"><h2>Table of contents</h2></div>
-
 > On _Dec 16, 2019_ the static site generator _Scully_ for Angular [was presented](https://www.youtube.com/watch?v=Sh37rIUL-d4).
 > _Scully_ automatically detects all app routes and creates static sites out of it that are ready to ship for production.
 > This blog post is based on versions of Angular and Scully:

@@ -18,6 +18,7 @@ import { PostAttributes } from '../../types';
     <article class="wrapper alt">
       <div class="inner">
         @if (post$ | async; as post) {
+          <h1>{{ post.attributes.title }}</h1>
           <section class="project-header">
             @if (
               post.attributes.thumbnail && post.attributes.thumbnail.header

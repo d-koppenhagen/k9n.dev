@@ -16,8 +16,6 @@ thumbnail:
   card: images/projects/code-review-small.jpg
 ---
 
-# vscode-code-review
-
 It my job it happens from time to time that customers asking me about doing an expert review by checking their source code.
 Sometimes I will get access to their git repository but mostly with very limited permissions (read access).
 But it can happen also that I will just receive a `*.zip` file containing all the source code.

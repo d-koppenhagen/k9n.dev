@@ -16,8 +16,6 @@ thumbnail:
   card: images/projects/vue3-openlayers-small.png
 ---
 
-# Maintainer: vue3-openlayers
-
 Since April 2023, I am actively maintaining and evolving the [vue3-openlayers library](https://vue3openlayers.netlify.app/) — An OpenLayers Wrapper for Vue3.
 My original intention was just to fix some bugs and add some features I needed this time in my current project.
 But after a while using this project I really loved it and was motivated enough to get more involved into the project.

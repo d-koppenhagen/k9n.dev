@@ -19,7 +19,7 @@ linked:
   devTo: 'https://dev.to/dkoppenhagen/route-based-navigation-menus-in-vue-od2'
 ---
 
-# Build a dynamic navigation based on route configuration using Vue3 and Vue Router
+## Build a dynamic navigation based on route configuration using Vue3 and Vue Router
 
 Recently while working on a [Vue](https://vuejs.org/) app, I asked myself: Isn’t the main navigation menu somehow related to the configuration of the routes and routing tree? And can't it be built dynamically from the router configuration?
 

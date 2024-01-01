@@ -19,8 +19,6 @@ thumbnail:
   card: images/projects/ngx-lipsum.svg
 ---
 
-# ngx-lipsum
-
 My Angular package [**ngx-lipsum**](https://www.npmjs.com/package/ngx-lipsum) let's you easily fill your angular app with dummy texts for demo or prototyping purpose.
 The name _lipsum_ is a mix of the words [_**l**orem **ipsum**_ which is a common phrase used for placeholder texts](https://en.wikipedia.org/wiki/Lorem_ipsum).
 

@@ -25,6 +25,13 @@ import { PostAttributes } from '../../types';
     .wrapper {
       margin-top: 0;
     }
+    .active-keyword-filter {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: baseline;
+      flex-wrap: wrap;
+    },
   `,
   template: `
     <section class="wrapper alt">

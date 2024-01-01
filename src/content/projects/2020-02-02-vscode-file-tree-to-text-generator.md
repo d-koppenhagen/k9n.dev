@@ -22,8 +22,6 @@ thumbnail:
   card: images/projects/file-tree-header-image-small.jpg
 ---
 
-# vscode-file-tree-to-text-generator
-
 My project **vscode-file-tree-to-text-generator** will give you tha ability to generate file / directory trees for different targets directly from you Visual Studio Code explorer.
 It supports the following formats out-of-the-box:
 

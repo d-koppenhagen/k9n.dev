@@ -25,11 +25,16 @@ import { SharePostComponent } from '../../components/share-post/share-post.compo
     <article class="wrapper alt">
       <div class="inner">
         @if (post$ | async; as post) {
+          <h1>{{ post.attributes.title }}</h1>
           <section class="blog-header">
             @if (
               post.attributes.thumbnail && post.attributes.thumbnail.header
             ) {
-              <img [src]="post.attributes.thumbnail.header" alt="" />
+              <img
+                class="adaptive-glass"
+                [src]="post.attributes.thumbnail.header"
+                alt=""
+              />
             }
           </section>
           @if (post.attributes.keywords) {

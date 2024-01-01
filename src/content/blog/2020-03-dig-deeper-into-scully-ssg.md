@@ -39,10 +39,6 @@ In the following article I will introduce some more advanced things you can do w
 You will learn how you can setup a custom Markdown module or even use Asciidoc instead of Markdown.
 I will guide you through the process of how to handle protected routes using a custom route plugin.
 
-<hr>
-
-<div id="toc"><h2>Table of contents</h2></div>
-
 > This blog post is based on versions:
 >
 > ```

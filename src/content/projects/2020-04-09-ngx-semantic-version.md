@@ -26,8 +26,6 @@ thumbnail:
   card: images/projects/semver-header-small.jpg
 ---
 
-# ngx-semantic-version
-
 My project **ngx-semantic-version** is an Angular Schematic that will add and configure [commitlint](https://commitlint.js.org), [commitizen](https://www.npmjs.com/package/commitizen), [husky](https://www.npmjs.com/package/husky) and [standard-version](https://www.npmjs.com/package/standard-version) to enforce commit messages in the _conventional commit_ format and to automate your release and Changelog generation by respecting _semver_.
 All you have to do for the setup is to execute this command in your Angular CLI project:
 

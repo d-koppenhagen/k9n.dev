@@ -26,14 +26,8 @@ linked:
   devTo: https://dev.to/dkoppenhagen/my-development-setup-1ne2
 ---
 
-# My Development Setup
-
 In the following article I will present you what tools I am using during my day-to-day development workflow.
 Also, I will show you a list of extensions and their purpose that will help me and probably you too being more productive.
-
-<hr>
-
-<div id="toc"><h2>Table of contents</h2></div>
 
 ## Introduction
 

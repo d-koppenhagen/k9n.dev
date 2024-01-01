@@ -18,7 +18,6 @@ thumbnail:
   header: images/projects/mermaid.jpg
   card: images/projects/mermaid-small.jpg
 ---
-# scully-plugin-mermaid
 
 My [Scully.io](https://scully.io) plugin [`scully-plugin-mermaid`](https://www.npmjs.com/package/@k9n/scully-plugin-mermaid) will provide a PostRenderer for [Mermaid.js](https://mermaid-js.github.io/) graphs, charts and diagrams embedded in Markdown files.
 

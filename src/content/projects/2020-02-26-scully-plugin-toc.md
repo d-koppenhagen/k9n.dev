@@ -18,7 +18,6 @@ thumbnail:
     header: images/projects/toc.jpg
     card: images/projects/toc-small.jpg
 ---
-# scully-plugin-toc
 
 My [Scully.io](https://scully.io) plugin [`scully-plugin-toc`](https://www.npmjs.com/package/@k9n/scully-plugin-toc) will insert a table of contents (TOC) for your Markdown content automatically.
 
