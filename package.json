@@ -21,7 +21,8 @@
     "watch": "npm run extract-content-routes && ng build --watch",
     "test": "ng test",
     "lint": "ng lint",
-    "extract-content-routes": "find src/content -type f -name '*.md' -exec sh -c 'echo \"/$(dirname {} | cut -d/ -f3)/$(basename -s .md {})\"' \\; | jq -R -s -c 'split(\"\n\")[:-1]' > content-routes.json && npx prettier -w content-routes.json"
+    "extract-content-routes": "find src/content -type f -name '*.md' -exec sh -c 'echo \"/$(dirname {} | cut -d/ -f3)/$(basename -s .md {})\"' \\; | jq -R -s -c 'split(\"\n\")[:-1]' > content-routes.json && npx prettier -w content-routes.json",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@analogjs/content": "^1.0.0-beta.1",
@@ -82,6 +83,7 @@
     "sass": "^1.69.5",
     "typescript": "~5.2.0",
     "vite": "^4.4.8",
-    "vitest": "^0.34.4"
+    "vitest": "^0.34.4",
+    "husky": "^8.0.0"
   }
 }
