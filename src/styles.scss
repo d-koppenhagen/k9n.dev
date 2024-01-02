@@ -144,3 +144,7 @@ img {
 @import 'sass/layout/banner';
 @import 'sass/layout/wrapper';
 @import 'sass/layout/footer';
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,4 +1,5 @@
-import { isPlatformBrowser, ViewportScroller } from '@angular/common';
+import { ScrollService } from './scroll.service';
+import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -37,7 +38,7 @@ export class AppComponent {
 
   constructor(
     readonly router: Router,
-    readonly viewportScroller: ViewportScroller,
+    readonly scrollService: ScrollService,
     @Inject(PLATFORM_ID) private platformId: string,
   ) {
     this.setupScrollBehaviourForAnker();
@@ -56,8 +57,13 @@ export class AppComponent {
 
   private setupScrollBehaviourForAnker() {
     this.router.events.subscribe((e) => {
-      if (e instanceof NavigationEnd && !/#.*/.test(e.url)) {
-        this.viewportScroller.scrollToPosition([0, 0]);
+      if (e instanceof NavigationEnd) {
+        if (/#.*/.test(e.url)) {
+          const fragment = e.url.split('#')[1];
+          this.scrollService.scrollToElement(fragment);
+        } else {
+          this.scrollService.scrollToTop();
+        }
       }
     });
   }
