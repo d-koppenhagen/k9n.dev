@@ -1,0 +1,11 @@
+<div class="sticky-navigation">
+  <ul>
+    @for (headline of headlines; track headline.id) {
+      <li>
+        <a [routerLink]="['.']" [fragment]="headline.id">
+          {{ getNavTextFromHeadline(headline.text) }}
+        </a>
+      </li>
+    }
+  </ul>
+</div>

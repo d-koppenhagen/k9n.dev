@@ -1,0 +1,15 @@
+@import '../../../sass/libs/vars';
+
+.sticky-navigation {
+  position: sticky;
+  right: 0;
+  top: 0;
+
+  ul {
+    text-align: right;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
