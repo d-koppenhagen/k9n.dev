@@ -116,7 +116,10 @@ import { SeriesListComponent } from '../../components/series-list/series-list.co
           }
 
           <section class="blog-content">
-            <analog-markdown [content]="post.content"></analog-markdown>
+            <analog-markdown
+              [content]="post.content"
+              classes="markdown-content"
+            ></analog-markdown>
             @if (
               !post.content &&
               post.attributes.publishedAt &&

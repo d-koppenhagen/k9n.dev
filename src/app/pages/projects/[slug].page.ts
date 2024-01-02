@@ -28,7 +28,10 @@ import { PostAttributes } from '../../types';
           </section>
 
           <section class="project-content">
-            <analog-markdown [content]="post.content"></analog-markdown>
+            <analog-markdown
+              [content]="post.content"
+              classes="markdown-content"
+            ></analog-markdown>
             <div class="edit-on-github">
               <a
                 [href]="editOnGithubLink(post.filename)"

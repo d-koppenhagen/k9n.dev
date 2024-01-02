@@ -1,0 +1,35 @@
+.markdown-content {
+  table > tbody td {
+    vertical-align: top;
+    min-width: 120px;
+
+    img {
+      max-width: 100px;
+    }
+
+    > pre {
+      margin: 1em 0;
+      border-radius: 5px;
+      padding: 5px;
+      background: #2d2d2d;
+    }
+
+    code {
+      background: none;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    table > tbody td > img {
+      max-width: 70px;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    table > tbody td > img {
+      max-width: 40px;
+    }
+  }
+}
