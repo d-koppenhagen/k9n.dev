@@ -62,12 +62,15 @@
         [title]="
           'Original veröffentlicht auf ' + post.attributes.publishedAt.name
         "
+        [attr.aria-label]="
+          'Original veröffentlicht auf ' + post.attributes.publishedAt.name
+        "
       >
         @if (post.attributes.publishedAt.logo) {
           <img
             class="published-at-logo"
             [src]="post.attributes.publishedAt.logo"
-            alt="Logo of the published page"
+            alt=""
           />
         } @else {
           Original veröffentlicht auf {{ post.attributes.publishedAt.name }}

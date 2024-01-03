@@ -36,22 +36,6 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 pre.language-mermaid {
   background: none;
 }
-.code-toolbar .toolbar {
-  top: -0.7em;
-  right: -0.7em;
-  .toolbar-item button {
-    border-radius: 0;
-    height: 2em;
-    margin: 0.4em;
-    font-size: 0.7em;
-  }
-}
-@media screen and (max-width: 460px) {
-  .code-toolbar {
-    left: -2em;
-    width: 100vw;
-  }
-}
 
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:800&display=swap');
@@ -147,6 +131,7 @@ img {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
 }
 
 @import 'markdown-content';

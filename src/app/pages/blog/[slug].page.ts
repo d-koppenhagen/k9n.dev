@@ -78,6 +78,10 @@ import { StickyNavigationComponent } from '../../components/sticky-navigation/st
                     <a
                       [href]="post.attributes.publishedAt.url"
                       class="published-at-link"
+                      [attr.aria-label]="
+                        'Original veröffentlicht auf ' +
+                        post.attributes.publishedAt.name
+                      "
                     >
                       @if (post.attributes.publishedAt.logo) {
                         <img
@@ -89,7 +93,7 @@ import { StickyNavigationComponent } from '../../components/sticky-navigation/st
                     </a>
                   </div>
                   <div>
-                    Original veröffentlicht auf:
+                    Original veröffentlicht auf
                     <a [href]="post.attributes.publishedAt.url">{{
                       post.attributes.publishedAt.name
                     }}</a

@@ -19,8 +19,6 @@ linked:
   devTo: 'https://dev.to/dkoppenhagen/route-based-navigation-menus-in-vue-od2'
 ---
 
-## Build a dynamic navigation based on route configuration using Vue3 and Vue Router
-
 Recently while working on a [Vue](https://vuejs.org/) app, I asked myself: Isn’t the main navigation menu somehow related to the configuration of the routes and routing tree? And can't it be built dynamically from the router configuration?
 
 With this question in my mind, I started to work on a very simple but representative example of how to achieve this by enriching the route configuration using the `meta` option.
@@ -199,7 +197,7 @@ However there are two things I would like to describe in advance, as they may be
 1. How to make the navigation easily extensible
 2. How to implement child menu items
 
-### Make the navigation extensible
+## Make the navigation extensible
 
 Let's assume we have an extensible app where we outsource some pages and its child route configurations and make them includable in our app.
 This could for example be relevent when adding complete menus and pages for specific users with appropriate permissions.
