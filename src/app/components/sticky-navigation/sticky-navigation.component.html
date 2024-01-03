@@ -1,0 +1,36 @@
+<div
+  role="navigation"
+  class="menu-dark"
+  class="sticky-navigation"
+  role="navigation"
+  aria-label="Navigation: Auf dieser Seite"
+  tabindex="0"
+>
+  <div class="right-menu">
+    <button
+      role="button"
+      (click)="toggleMenu()"
+      [attr.aria-label]="
+        menuOpen ? 'Seitennavigation schließen' : 'Seitennavigation öffnen'
+      "
+      class="fa"
+      [attr.aria-expanded]="menuOpen"
+      [ngClass]="menuOpen ? 'opened fa-chevron-right' : 'closed fa-list-ol'"
+    ></button>
+    @if (menuOpen && dataSource) {
+      <h2>Auf dieser Seite</h2>
+      <cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
+        <cdk-nested-tree-node cdkTreeNodePadding *cdkTreeNodeDef="let node">
+          <a [routerLink]="['.']" [fragment]="node.id" (click)="toggleMenu()">
+            {{ getNavTextFromHeadline(node.text) }}
+          </a>
+          @if (hasChild(node)) {
+            <div role="group">
+              <ng-container cdkTreeNodeOutlet></ng-container>
+            </div>
+          }
+        </cdk-nested-tree-node>
+      </cdk-tree>
+    }
+  </div>
+</div>

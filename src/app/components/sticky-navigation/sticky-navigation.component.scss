@@ -1,0 +1,69 @@
+@import '../../../sass/libs/vars';
+
+.sticky-navigation {
+  position: sticky;
+  right: 0;
+  top: 4rem;
+  font-size: 0.8em;
+
+  .right-menu {
+    max-width: 300px;
+    position: absolute;
+    right: 0.7rem;
+    top: 0.5rem;
+    color: $white;
+    background-color: $c01;
+    opacity: 0.95;
+    margin: 0px 1px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
+
+    h2 {
+      margin: 0.8rem 1.4rem;
+      text-transform: none;
+    }
+
+    .cdk-tree {
+      list-style: none;
+      padding: 0.8rem;
+      padding-top: 0;
+      display: list-item;
+      font-weight: bold;
+
+      .cdk-tree-node {
+        margin-left: 0.5rem;
+        display: list-item;
+
+        [aria-level='1'] {
+          font-weight: bold;
+          margin-top: 0.5rem;
+        }
+
+        &[aria-level='2'] {
+          font-weight: normal;
+          margin-left: 1rem;
+          list-style: circle;
+        }
+      }
+    }
+
+    button {
+      min-width: 2rem;
+
+      &.opened {
+        border: none;
+        box-shadow: none;
+        float: right;
+      }
+
+      &.closed {
+        &:hover,
+        &:focus {
+          background-color: lighten($c01, 10%);
+          box-shadow: inset 0 0 0 2px $c02;
+        }
+      }
+    }
+  }
+}

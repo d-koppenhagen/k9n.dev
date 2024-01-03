@@ -12,6 +12,7 @@ import { MetaService } from '../../meta.service';
 import { PostAttributes } from '../../types';
 import { SharePostComponent } from '../../components/share-post/share-post.component';
 import { SeriesListComponent } from '../../components/series-list/series-list.component';
+import { StickyNavigationComponent } from '../../components/sticky-navigation/sticky-navigation.component';
 
 @Component({
   standalone: true,
@@ -22,11 +23,13 @@ import { SeriesListComponent } from '../../components/series-list/series-list.co
     RouterLink,
     SharePostComponent,
     SeriesListComponent,
+    StickyNavigationComponent,
   ],
   template: `
-    <article class="wrapper alt">
-      <div class="inner">
-        @if (post$ | async; as post) {
+    @if (post$ | async; as post) {
+      <article class="wrapper alt">
+        <dk-sticky-navigation [content]="post.content"></dk-sticky-navigation>
+        <div class="inner">
           <h1>{{ post.attributes.title }}</h1>
           <section class="blog-header">
             @if (
@@ -75,6 +78,10 @@ import { SeriesListComponent } from '../../components/series-list/series-list.co
                     <a
                       [href]="post.attributes.publishedAt.url"
                       class="published-at-link"
+                      [attr.aria-label]="
+                        'Original veröffentlicht auf ' +
+                        post.attributes.publishedAt.name
+                      "
                     >
                       @if (post.attributes.publishedAt.logo) {
                         <img
@@ -86,7 +93,7 @@ import { SeriesListComponent } from '../../components/series-list/series-list.co
                     </a>
                   </div>
                   <div>
-                    Original veröffentlicht auf:
+                    Original veröffentlicht auf
                     <a [href]="post.attributes.publishedAt.url">{{
                       post.attributes.publishedAt.name
                     }}</a
@@ -151,9 +158,9 @@ import { SeriesListComponent } from '../../components/series-list/series-list.co
               <dk-share-post [description]="post.attributes.description" />
             }
           </section> -->
-        }
-      </div>
-    </article>
+        </div>
+      </article>
+    }
   `,
   styleUrl: './slug.page.style.scss',
 })
