@@ -14,17 +14,11 @@
   </div>
   <div class="card-footer">
     @if (externalUrl) {
-      <a
-        class="special read-on"
-        tabindex="0"
-        [href]="externalUrl"
-        target="_blank"
+      <a class="special read-on" [href]="externalUrl" target="_blank"
         >Weiterlesen...</a
       >
     } @else {
-      <a class="special read-on" tabindex="0" [routerLink]="routeToPost"
-        >Weiterlesen...</a
-      >
+      <a class="special read-on" [routerLink]="routeToPost">Weiterlesen...</a>
     }
     @if (
       post.attributes.publishedAt &&
