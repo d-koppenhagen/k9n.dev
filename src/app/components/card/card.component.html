@@ -1,54 +1,30 @@
 <article>
+  <img
+    class="card-image"
+    [src]="post.attributes.thumbnail.card || post.attributes.thumbnail.header"
+    alt=""
+  />
   <div class="card-header">
-    @if (
-      post.attributes.thumbnail &&
-      (post.attributes.thumbnail.header || post.attributes.thumbnail.card)
-    ) {
-      @if (externalUrl) {
-        <a
-          [href]="externalUrl"
-          target="_blank"
-          class="image card-image"
-          [title]="post.attributes.title"
-          [attr.aria-label]="post.attributes.title"
-        >
-          <img
-            [src]="
-              post.attributes.thumbnail.card || post.attributes.thumbnail.header
-            "
-            alt=""
-          />
-        </a>
-      } @else {
-        <a
-          [routerLink]="routeToPost"
-          class="image card-image"
-          [title]="post.attributes.title"
-          [attr.aria-label]="post.attributes.title"
-        >
-          <img
-            [src]="
-              post.attributes.thumbnail.card || post.attributes.thumbnail.header
-            "
-            alt=""
-          />
-        </a>
-      }
-    }
     <h3 class="major">{{ post.attributes.title }}</h3>
   </div>
-  <summary class="card-content">
+  <div class="card-content">
     <p>
       {{ post.attributes.description }}
     </p>
-  </summary>
+  </div>
   <div class="card-footer">
     @if (externalUrl) {
-      <a class="special read-on" [href]="externalUrl" target="_blank"
+      <a
+        class="special read-on"
+        tabindex="0"
+        [href]="externalUrl"
+        target="_blank"
         >Weiterlesen...</a
       >
     } @else {
-      <a class="special read-on" [routerLink]="routeToPost">Weiterlesen...</a>
+      <a class="special read-on" tabindex="0" [routerLink]="routeToPost"
+        >Weiterlesen...</a
+      >
     }
     @if (
       post.attributes.publishedAt &&
