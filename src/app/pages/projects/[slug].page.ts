@@ -7,8 +7,8 @@ import { AsyncPipe, DatePipe } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { tap } from 'rxjs';
-import { MetaService } from '../../meta.service';
 
+import { MetaService } from '../../meta.service';
 import { PostAttributes } from '../../types';
 
 @Component({
@@ -65,6 +65,6 @@ export default class ProjectContentComponent {
   constructor(private metaService: MetaService) {}
 
   editOnGithubLink(filename: string) {
-    return `https://github.com/d-koppenhagen/k9n.dev/edit/main/src/content/projects/${filename}.md`;
+    return `https://github.com/d-koppenhagen/k9n.dev/edit/main/src/content/projects/${filename}`;
   }
 }
