@@ -1,4 +1,8 @@
-import { ContentFile, injectContent, MarkdownComponent } from '@analogjs/content';
+import {
+  ContentFile,
+  injectContent,
+  MarkdownComponent,
+} from '@analogjs/content';
 import { AsyncPipe, DatePipe, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterLink } from '@angular/router';
@@ -182,6 +186,6 @@ export default class BlogContentComponent {
   }
 
   editOnGithubLink(filename: string) {
-    return `https://github.com/d-koppenhagen/k9n.dev/edit/main/src/content/blog/${filename}`;
+    return `https://github.com/d-koppenhagen/k9n.dev/edit/main${filename}`;
   }
 }
