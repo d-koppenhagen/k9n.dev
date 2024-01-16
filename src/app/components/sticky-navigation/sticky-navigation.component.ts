@@ -22,6 +22,7 @@ interface TreeNode {
 })
 export class StickyNavigationComponent implements AfterViewChecked {
   @Input() content?: string;
+  @Input() contentLang?: string;
 
   headlines: TreeNode[] = [];
   menuOpen = false;

@@ -19,7 +19,11 @@
     ></button>
     @if (menuOpen && dataSource) {
       <h2>Auf dieser Seite</h2>
-      <cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
+      <cdk-tree
+        [dataSource]="dataSource"
+        [treeControl]="treeControl"
+        [lang]="contentLang || 'de'"
+      >
         <cdk-nested-tree-node cdkTreeNodePadding *cdkTreeNodeDef="let node">
           <a [routerLink]="['.']" [fragment]="node.id" (click)="toggleMenu()">
             {{ getNavTextFromHeadline(node.text) }}

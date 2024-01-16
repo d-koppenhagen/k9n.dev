@@ -82,6 +82,7 @@ import { PostAttributes } from '../../types';
                         'Original veröffentlicht auf ' +
                         post.attributes.publishedAt.name
                       "
+                      [lang]="post.attributes.language || 'de'"
                     >
                       @if (post.attributes.publishedAt.logo) {
                         <img
@@ -94,9 +95,10 @@ import { PostAttributes } from '../../types';
                   </div>
                   <div>
                     Original veröffentlicht auf
-                    <a [href]="post.attributes.publishedAt.url">{{
-                      post.attributes.publishedAt.name
-                    }}</a
+                    <a
+                      [href]="post.attributes.publishedAt.url"
+                      [lang]="post.attributes.language || 'de'"
+                      >{{ post.attributes.publishedAt.name }}</a
                     >.
                   </div>
                 </div>
@@ -106,7 +108,11 @@ import { PostAttributes } from '../../types';
           @if (post.attributes.linked) {
             <section class="external-links">
               @if (post.attributes.linked.devTo) {
-                <a [href]="post.attributes.linked.devTo">Dev.to</a>
+                <a
+                  [href]="post.attributes.linked.devTo"
+                  [lang]="post.attributes.language || 'de'"
+                  >Dev.to</a
+                >
               }
               @if (
                 post.attributes.linked.devTo && post.attributes.linked.medium
@@ -114,7 +120,11 @@ import { PostAttributes } from '../../types';
                 |
               }
               @if (post.attributes.linked.medium) {
-                <a [href]="post.attributes.linked.medium">Medium.com</a>
+                <a
+                  [href]="post.attributes.linked.medium"
+                  [lang]="post.attributes.language || 'de'"
+                  >Medium.com</a
+                >
               }
             </section>
           }
@@ -124,6 +134,7 @@ import { PostAttributes } from '../../types';
 
           <section class="blog-content">
             <analog-markdown
+              [lang]="post.attributes.language || 'de'"
               [content]="post.content"
               classes="markdown-content"
             ></analog-markdown>
@@ -136,6 +147,7 @@ import { PostAttributes } from '../../types';
               <a
                 class="external-article"
                 [href]="post.attributes.publishedAt.url"
+                [lang]="post.attributes.language || 'de'"
                 target="_blank"
                 >Zum externen Artikel auf
                 {{ post.attributes.publishedAt.name }}</a

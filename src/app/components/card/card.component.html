@@ -7,18 +7,27 @@
   <div class="card-header">
     <h3 class="major">{{ post.attributes.title }}</h3>
   </div>
-  <div class="card-content">
+  <div class="card-content" [lang]="post.attributes.language || 'de'">
     <p>
       {{ post.attributes.description }}
     </p>
   </div>
   <div class="card-footer">
     @if (externalUrl) {
-      <a class="special read-on" [href]="externalUrl" target="_blank"
+      <a
+        class="special read-on"
+        [href]="externalUrl"
+        [lang]="post.attributes.language || 'de'"
+        target="_blank"
         >Weiterlesen...</a
       >
     } @else {
-      <a class="special read-on" [routerLink]="routeToPost">Weiterlesen...</a>
+      <a
+        class="special read-on"
+        [lang]="post.attributes.language || 'de'"
+        [routerLink]="routeToPost"
+        >Weiterlesen...</a
+      >
     }
     @if (
       post.attributes.publishedAt &&
@@ -27,6 +36,7 @@
     ) {
       <a
         [href]="post.attributes.publishedAt.url"
+        [lang]="post.attributes.language || 'de'"
         target="_blank"
         class="published-at-link"
         [title]="

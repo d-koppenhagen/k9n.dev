@@ -29,6 +29,7 @@ import { PostAttributes } from '../../types';
 
           <section class="project-content">
             <analog-markdown
+              [lang]="post.attributes.language || 'de'"
               [content]="post.content"
               classes="markdown-content"
             ></analog-markdown>
