@@ -34,7 +34,6 @@ export class StickyNavigationComponent implements AfterViewChecked {
   ngAfterViewChecked() {
     const list = getHeadingList();
     const tree = this.convertToTree(list);
-    console.log('tree', tree);
     this.dataSource = new ArrayDataSource(tree);
   }
 
