@@ -20,6 +20,7 @@ export default defineConfig(({ mode }) => ({
     analog({
       prerender: {
         routes: async () => [
+          '/api/rss.xml',
           '/',
           '/blog',
           '/contact',
