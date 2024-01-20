@@ -7,6 +7,22 @@ p {
 .about,
 .interviews {
   padding-bottom: 30px;
+
+  .button-group {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.text-img {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+  img {
+    max-width: 300px;
+    height: fit-content;
+  }
 }
 
 /* grid */
@@ -181,5 +197,11 @@ p {
   /* Make all right containers behave like the left ones */
   .right {
     left: 0%;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .text-img {
+    flex-wrap: wrap;
   }
 }
