@@ -1,22 +1,11 @@
-import analog, { PrerenderContentFile } from '@analogjs/platform';
-import { PostAttributes } from 'src/app/types';
+import analog from '@analogjs/platform';
+import * as fs from 'fs';
 /// <reference types="vitest" />
 
 import { defineConfig } from 'vite';
 
-function transFormContentDirRoute(file: PrerenderContentFile, base: string) {
-  console.log('transFormContentDirRoute', base, file)
-  const attributes = file.attributes as PostAttributes
-  console.log('transFormContentDirRoute attributes', attributes)
-  // do not include files marked as draft in frontmatter
-  if (attributes.draft) {
-    return false;
-  }
-  // use the slug from frontmatter if defined, otherwise use the files basename
-  const slug = attributes.slug || file.name;
-  console.log('transFormContentDirRoute slug', slug)
-  return `/${base}/${slug}`;
-}
+const contentRoutesRaw = fs.readFileSync('./content-routes.json', 'utf-8');
+const contentRoutes: string[] = JSON.parse(contentRoutesRaw);
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -37,14 +26,7 @@ export default defineConfig(({ mode }) => ({
           '/contact',
           '/imprint',
           '/projects',
-          {
-            contentDir: './src/content/blog',
-            transform: (file: PrerenderContentFile) => transFormContentDirRoute(file, 'blog'),
-          },
-          {
-            contentDir: './src/content/projects',
-            transform: (file: PrerenderContentFile) => transFormContentDirRoute(file, 'projects'),
-          },
+          ...contentRoutes,
         ],
         postRenderingHooks: [
           async (route) => {
