@@ -4,3 +4,6 @@
 *.md
 *.min.*
 dist/**/*
+.husky
+.prettierignore
+./*.*

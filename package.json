@@ -21,7 +21,8 @@
     "watch": "ng build --watch",
     "test": "ng test",
     "lint": "ng lint",
-    "prepare": "husky install"
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
   },
   "dependencies": {
     "@analogjs/content": "^0.2.30",
@@ -77,13 +78,21 @@
     "@typescript-eslint/parser": "6.19.1",
     "eslint": "^8.56.0",
     "eslint-plugin-prettier": "^5.1.3",
-    "husky": "^8.0.3",
+    "husky": "^9.0.6",
     "jsdom": "^24.0.0",
+    "lint-staged": "^15.2.0",
     "nx": "^17.2.8",
     "prettier": "^3.2.4",
     "sass": "^1.70.0",
     "typescript": "~5.3.3",
     "vite": "^4.5.2",
     "vitest": "^1.2.2"
+  },
+  "lint-staged": {
+    "*": "prettier --write",
+    "*.ts": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   }
 }
