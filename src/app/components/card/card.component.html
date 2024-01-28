@@ -1,15 +1,15 @@
 <article>
   <img
     class="card-image"
-    [src]="post.attributes.thumbnail.card || post.attributes.thumbnail.header"
+    [src]="post().attributes.thumbnail.card || post().attributes.thumbnail.header"
     alt=""
   />
   <div class="card-header">
-    <h3 class="major">{{ post.attributes.title }}</h3>
+    <h3 class="major">{{ post().attributes.title }}</h3>
   </div>
-  <div class="card-content" [lang]="post.attributes.language || 'de'">
+  <div class="card-content" [lang]="post().attributes.language || 'de'">
     <p>
-      {{ post.attributes.description }}
+      {{ post().attributes.description }}
     </p>
   </div>
   <div class="card-footer">
@@ -17,43 +17,39 @@
       <a
         class="special read-on"
         [href]="externalUrl"
-        [lang]="post.attributes.language || 'de'"
+        [lang]="post().attributes.language || 'de'"
         target="_blank"
         >Weiterlesen...</a
       >
     } @else {
       <a
         class="special read-on"
-        [lang]="post.attributes.language || 'de'"
+        [lang]="post().attributes.language || 'de'"
         [routerLink]="routeToPost"
         >Weiterlesen...</a
       >
     }
-    @if (
-      post.attributes.publishedAt &&
-      post.attributes.publishedAt.name &&
-      post.attributes.publishedAt.url
-    ) {
+    @if (publishedAt()) {
       <a
-        [href]="post.attributes.publishedAt.url"
-        [lang]="post.attributes.language || 'de'"
+        [href]="publishedAt().url"
+        [lang]="post().attributes.language || 'de'"
         target="_blank"
         class="published-at-link"
         [title]="
-          'Original veröffentlicht auf ' + post.attributes.publishedAt.name
+          'Original veröffentlicht auf ' + publishedAt().name
         "
         [attr.aria-label]="
-          'Original veröffentlicht auf ' + post.attributes.publishedAt.name
+          'Original veröffentlicht auf ' + publishedAt().name
         "
       >
-        @if (post.attributes.publishedAt.logo) {
+        @if (publishedAt().logo) {
           <img
             class="published-at-logo"
-            [src]="post.attributes.publishedAt.logo"
+            [src]="publishedAt().logo"
             alt=""
           />
         } @else {
-          Original veröffentlicht auf {{ post.attributes.publishedAt.name }}
+          Original veröffentlicht auf {{ publishedAt().name }}
         }
       </a>
     }
