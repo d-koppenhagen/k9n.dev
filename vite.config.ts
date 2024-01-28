@@ -73,6 +73,7 @@ export default defineConfig(({ mode }) => ({
     environment: 'jsdom',
     setupFiles: ['src/test.ts'],
     include: ['**/*.spec.ts'],
+    reporters: ['default'],
   },
   define: {
     'import.meta.vitest': mode !== 'production',
