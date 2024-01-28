@@ -1,6 +1,7 @@
 export type PostAttributes = {
   title: string;
-  slug: string;
+  slug?: string;
+  draft?: boolean;
   description: string;
   published?: boolean;
   author: Author;
