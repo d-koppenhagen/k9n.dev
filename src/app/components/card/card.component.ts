@@ -1,8 +1,8 @@
 import { ContentFile } from '@analogjs/content';
-import { Component, Input, computed, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { PostAttributes, PublishedAt } from '../../types';
+import { PostAttributes } from '../../types';
 
 @Component({
   selector: 'dk-card',
@@ -12,15 +12,12 @@ import { PostAttributes, PublishedAt } from '../../types';
   standalone: true,
 })
 export class CardComponent {
-  post = input.required<ContentFile<PostAttributes>>()
-  publishedAt = computed(() => {
-    return this.post().attributes.publishedAt || {} as PublishedAt
-  })
+  @Input({ required: true }) post!: ContentFile<PostAttributes>;
   constructor() {}
 
   get routeToPost() {
     // Extracting the last part between slashes and excluding the file extension
-    const matchResult = this.post().filename.match(/\/([^/]+)\/([^/.]+)\.md$/);
+    const matchResult = this.post.filename.match(/\/([^/]+)\/([^/.]+)\.md$/);
     let resultArray: string[] = [];
 
     // Checking if the match was successful
@@ -35,7 +32,7 @@ export class CardComponent {
   }
 
   get externalUrl() {
-    const publishedAt = this.post().attributes.publishedAt;
+    const publishedAt = this.post.attributes.publishedAt;
     return publishedAt && publishedAt.linkExternal && publishedAt.url
       ? publishedAt.url
       : undefined;
