@@ -5,7 +5,7 @@ import { PostAttributes } from 'src/app/types';
 import { defineConfig } from 'vite';
 
 function transFormContentDirRoute(file: PrerenderContentFile, base: string) {
-  const attributes = file.attributes as PostAttributes
+  const attributes = file.attributes as PostAttributes;
   // do not include files marked as draft in frontmatter
   if (attributes.draft) {
     return false;
@@ -36,11 +36,18 @@ export default defineConfig(({ mode }) => ({
           '/projects',
           {
             contentDir: '/src/content/blog',
-            transform: (file: PrerenderContentFile) => transFormContentDirRoute(file, 'blog'),
+            transform: (file: PrerenderContentFile) =>
+              transFormContentDirRoute(file, 'blog'),
           },
           {
             contentDir: '/src/content/projects',
-            transform: (file: PrerenderContentFile) => transFormContentDirRoute(file, 'projects'),
+            transform: (file: PrerenderContentFile) =>
+              transFormContentDirRoute(file, 'projects'),
+          },
+          {
+            contentDir: '/src/content/talks',
+            transform: (file: PrerenderContentFile) =>
+              transFormContentDirRoute(file, 'talks'),
           },
         ],
         postRenderingHooks: [

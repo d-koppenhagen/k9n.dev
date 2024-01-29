@@ -27,9 +27,12 @@
             "style": "kebab-case"
           }
         ],
-        "@angular-eslint/component-class-suffix": {
-          "suffixes": ["Component", "Page"]
-        },
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Component", "Page"]
+          }
+        ],
         "@typescript-eslint/explicit-member-accessibility": [
           "off",
           {

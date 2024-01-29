@@ -6,8 +6,6 @@ import {
   Input,
   ViewChild,
 } from '@angular/core';
-import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
-import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 @Component({
   selector: 'dk-share-post',

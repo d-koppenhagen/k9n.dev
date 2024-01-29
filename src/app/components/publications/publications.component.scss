@@ -3,3 +3,7 @@
 .wrapper.spotlight .image {
   border-radius: 0%;
 }
+
+.wrapper.spotlight:before {
+  background-color: #3d4051;
+}

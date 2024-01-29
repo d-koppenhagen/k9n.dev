@@ -19,19 +19,25 @@ import { PostAttributes } from '../types';
     MeetupsComponent,
   ],
   styles: `
-    .style1 {
+    .m0 {
       margin: 0;
     }
   `,
   template: `
-    <section class="wrapper alt style1">
+    <section class="wrapper alt style1 m0">
       <div class="inner">
         <h2 class="major">Aktuelle Blog Posts</h2>
         <dk-preview content="blog" [posts]="blogPosts" [max]="4" />
       </div>
     </section>
+    <section class="wrapper style3">
+      <div class="inner">
+        <h2 class="major">Meine Talks & Slides</h2>
+        <dk-preview content="talks" [posts]="talkPosts" [max]="4" />
+      </div>
+    </section>
     <dk-publications />
-    <section class="wrapper alt style3">
+    <section class="wrapper alt style1">
       <div class="inner">
         <h2 class="major">Meine Projekte</h2>
         <dk-preview content="projects" [posts]="projectPosts" [max]="4" />
@@ -57,6 +63,10 @@ export default class HomePage {
 
   readonly projectPosts = injectContentFiles<PostAttributes>((contentFile) => {
     return contentFile.filename.includes('/src/content/projects/');
+  });
+
+  readonly talkPosts = injectContentFiles<PostAttributes>((contentFile) => {
+    return contentFile.filename.includes('/src/content/talks/');
   });
 
   constructor(@Inject(PLATFORM_ID) private platformId: string) {

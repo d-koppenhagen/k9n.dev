@@ -38,7 +38,7 @@ export class MetaService {
   }
 
   createMetaDataForPost(
-    dir: 'blog' | 'projects',
+    dir: 'blog' | 'projects' | 'talks',
     post: ContentFile<PostAttributes>,
   ) {
     this.removeAllKnownTags();
@@ -85,7 +85,7 @@ export class MetaService {
   }
 
   private createOpenGraphProfileForBlogPost(
-    dir: 'blog' | 'projects',
+    dir: 'blog' | 'projects' | 'talks',
     post: ContentFile<PostAttributes>,
   ) {
     this.meta.updateTag({

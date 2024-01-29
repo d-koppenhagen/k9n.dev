@@ -37,7 +37,7 @@ import {
 export class TextSlotComponent implements OnInit {
   @Input({ required: true }) result!: string;
   currentIndex = 0;
-  intervalInstance: any;
+  intervalInstance?: ReturnType<typeof setInterval>;
   slots = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789#?!=+&%$§'].map((char) => ({
     value: char,
     state: 'out',
