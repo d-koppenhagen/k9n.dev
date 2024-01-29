@@ -2,13 +2,10 @@
   <button
     class="burger-menu"
     role="button"
-    (click)="toggleMenu()"
+    (click)="openDialog()"
     aria-label="Menü öffnen"
     aria-expanded="false"
   >
     <span class="hidden-small">Menü</span>
   </button>
 </nav>
-@if (menuOpen) {
-  <dk-menu (closeMenu)="toggleMenu()"></dk-menu>
-}

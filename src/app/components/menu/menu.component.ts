@@ -1,5 +1,5 @@
-import { Component, Output } from '@angular/core';
-import { EventEmitter } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { DialogRef } from '@angular/cdk/dialog';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -10,9 +10,15 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
 })
 export class MenuComponent {
-  @Output() closeMenu: EventEmitter<boolean> = new EventEmitter();
+  constructor(public dialogRef: DialogRef) {
+    dialogRef.backdropClick.subscribe(this.closeDialog);
+  }
 
-  menuClicked() {
-    this.closeMenu.emit(true);
+  @HostListener('window:keyup.esc') onKeyUp() {
+    this.closeDialog();
+  }
+
+  closeDialog() {
+    this.dialogRef.close();
   }
 }

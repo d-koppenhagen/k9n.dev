@@ -1,11 +1,5 @@
 <!-- Menu -->
-<div
-  role="navigation"
-  id="menu"
-  class="is-menu-visible"
-  aria-label="Hauptmenü"
-  cdkTrapFocus
->
+<div role="navigation" id="menu" class="is-menu-visible" aria-label="Hauptmenü">
   <div class="inner" role="navigation">
     <h2>Menü</h2>
     <ul class="links">
@@ -28,6 +22,6 @@
         <a routerLink="/imprint">Impressum</a>
       </li>
     </ul>
-    <a href="#" class="close" (click)="menuClicked()">Schließen</a>
+    <a href="#" class="close" (click)="closeDialog()">Schließen</a>
   </div>
 </div>

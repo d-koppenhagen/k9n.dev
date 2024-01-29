@@ -1,19 +1,24 @@
 import { Component } from '@angular/core';
 import { MenuComponent } from '../menu/menu.component';
+import { Dialog, DialogModule } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'dk-navbar',
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
-  imports: [MenuComponent],
+  imports: [MenuComponent, DialogModule],
   standalone: true,
 })
 export class NavbarComponent {
-  menuOpen = false;
+  constructor(public dialog: Dialog) {}
 
-  constructor() {}
-
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
+  openDialog(): void {
+    this.dialog.open<string>(MenuComponent, {
+      ariaModal: true,
+      hasBackdrop: true,
+      closeOnNavigation: true,
+      closeOnDestroy: true,
+      disableClose: false,
+    });
   }
 }
