@@ -89,7 +89,6 @@
     "vitest": "^1.2.2"
   },
   "lint-staged": {
-    "*": "prettier --write",
     "*.ts": [
       "prettier --write",
       "eslint --fix"
