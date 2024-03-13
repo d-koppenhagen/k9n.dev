@@ -10,6 +10,7 @@
   },
   "license": "MIT",
   "private": true,
+  "type": "module",
   "engines": {
     "node": ">=20"
   },
