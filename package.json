@@ -25,8 +25,8 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@analogjs/content": "^0.2.30",
-    "@analogjs/router": "^0.2.30",
+    "@analogjs/content": "^1.0.0",
+    "@analogjs/router": "^1.0.0",
     "@angular/animations": "^17.2.4",
     "@angular/cdk": "^17.2.2",
     "@angular/common": "^17.2.4",
