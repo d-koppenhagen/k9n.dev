@@ -26,6 +26,9 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
+      vite: {
+        inlineStylesExtension: 'scss',
+      },
       prerender: {
         routes: [
           '/api/rss.xml',

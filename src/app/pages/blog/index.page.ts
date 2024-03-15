@@ -31,7 +31,7 @@ import { PostAttributes } from '../../types';
       gap: 0.5rem;
       align-items: baseline;
       flex-wrap: wrap;
-    },
+    }
   `,
   template: `
     <section class="wrapper alt">
