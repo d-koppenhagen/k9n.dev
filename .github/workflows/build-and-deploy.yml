@@ -30,7 +30,7 @@ jobs:
         with:
           find: 'UA-XXXXXXXXX-1'
           replace: ${{ secrets.G_TAG_CODE }}
-          include: 'vite.config.mts' # Replace google Tag
+          include: 'vite.config.ts' # Replace google Tag
       - uses: k9n-dev/analog-publish-gh-pages@v1.0.0
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
