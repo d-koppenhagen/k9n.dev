@@ -1,11 +1,22 @@
 import { isPlatformBrowser, NgClass } from '@angular/common';
-import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, HostListener, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  HostListener,
+  Inject,
+  OnInit,
+  PLATFORM_ID,
+  ViewChild,
+} from '@angular/core';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @Component({
   selector: 'dk-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss'],
+  styleUrl: './about.component.scss',
   imports: [NgClass, YouTubePlayerModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,

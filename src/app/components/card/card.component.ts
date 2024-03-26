@@ -7,7 +7,7 @@ import { PostAttributes } from '../../types';
 @Component({
   selector: 'dk-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss'],
+  styleUrl: './card.component.scss',
   imports: [RouterLink],
   standalone: true,
 })

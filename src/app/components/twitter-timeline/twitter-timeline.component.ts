@@ -4,7 +4,7 @@ import { AngularTwitterTimelineModule } from 'angular-twitter-timeline';
 @Component({
   selector: 'dk-twitter-timeline',
   templateUrl: './twitter-timeline.component.html',
-  styleUrls: ['./twitter-timeline.component.scss'],
+  styleUrl: './twitter-timeline.component.scss',
   imports: [AngularTwitterTimelineModule],
   standalone: true,
 })
