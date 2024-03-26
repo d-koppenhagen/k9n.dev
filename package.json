@@ -1,6 +1,7 @@
 {
   "name": "d-koppenhagen-website",
   "version": "0.0.0",
+  "type": "module",
   "description": "k9n.dev website",
   "author": "Danny Koppenhagen <mail@k9n.dev> (https://k9n.dev)",
   "homepage": "https://github.com/d-koppenhagen/d-koppenhagen-website",
@@ -63,7 +64,7 @@
     "zone.js": "~0.14.4"
   },
   "devDependencies": {
-    "@analogjs/platform": "0.2.44",
+    "@analogjs/platform": "^1.0.2",
     "@analogjs/vite-plugin-angular": "^1.0.2",
     "@angular-devkit/build-angular": "^17.3.0",
     "@angular-eslint/builder": "17.2.1",
@@ -73,7 +74,6 @@
     "@angular-eslint/template-parser": "17.2.1",
     "@angular/cli": "^17.3.0",
     "@angular/compiler-cli": "^17.3.0",
-    "@nx/devkit": "^18.0.8",
     "@nx/vite": "^18.0.8",
     "@typescript-eslint/eslint-plugin": "7.2.0",
     "@typescript-eslint/parser": "7.2.0",
@@ -86,7 +86,7 @@
     "prettier": "^3.2.5",
     "sass": "^1.72.0",
     "typescript": "~5.3.3",
-    "vite": "^4.5.2",
+    "vite": "^5.2.6",
     "vitest": "^1.4.0"
   },
   "lint-staged": {

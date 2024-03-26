@@ -1,4 +1,5 @@
 import analog, { PrerenderContentFile } from '@analogjs/platform';
+import angular from '@analogjs/vite-plugin-angular';
 import { PostAttributes } from 'src/app/types';
 /// <reference types="vitest" />
 
@@ -25,10 +26,10 @@ export default defineConfig(({ mode }) => ({
     mainFields: ['module'],
   },
   plugins: [
+    angular({
+      inlineStylesExtension: 'scss',
+    }),
     analog({
-      vite: {
-        inlineStylesExtension: 'scss',
-      },
       prerender: {
         routes: [
           '/api/rss.xml',
