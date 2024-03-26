@@ -12,7 +12,6 @@ import { Component } from '@angular/core';
     <section class="wrapper alt">
       <div class="inner">
         <h2 class="major">Dear Recruiter, Talent Scout, Others,</h2>
-
         <p>
           Thanks for reaching out. I'm always interested in hearing about what
           new and exciting opportunities are out there. As a software engineer
@@ -37,23 +36,24 @@ import { Component } from '@angular/core';
         <ul>
           <li>
             The position is really related to <b>JavaScript/TypeScript</b> and
-            <b>frontend development/-architecture</b>
+            <b>frontend or fullstack development/-architecture</b>
           </li>
           <li><b>Flexible Working Hours</b> are obviously</li>
-          <li>At least <b>38 days</b> of annual <b>vacation</b></li>
+          <li>At least <b>30 days</b> of annual <b>vacation</b></li>
           <li>
             <b>100% remote job</b> or a position based in <b>Berlin</b> with
             flexibility to work for at least 2 days a week from home
           </li>
           <li>An annual salary of <b>EUR 95.000</b> or more</li>
           <li>
-            At least <b>EUR 1.500 annual training budget</b> (visiting
+            At least <b>EUR 2000 annual training budget</b> (visiting
             conferences, joining Events, on-site/remote trainings)
           </li>
           <li>
             low hierarchies in a <b>healthy and balanced</b> working atmosphere
           </li>
           <li>No connection to the defense industry</li>
+          <li>A permanent employment contract</li>
         </ul>
 
         <p>

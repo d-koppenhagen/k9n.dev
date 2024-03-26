@@ -37,6 +37,7 @@ export default defineConfig(({ mode }) => ({
           '/contact',
           '/imprint',
           '/projects',
+          '/recruitment',
           {
             contentDir: '/src/content/blog',
             transform: (file: PrerenderContentFile) =>
