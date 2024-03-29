@@ -133,30 +133,7 @@
     </section>
     <h3 class="major">Mein Werdegang</h3>
     <section class="features">
-      <div class="timeline">
-        @for (step of steps; track step; let odd = $odd) {
-          <div
-            class="container hidden list-item"
-            [ngClass]="odd ? 'right' : 'left'"
-          >
-            <div class="content">
-              <div class="timeline-heading-header">
-                <span class="timeline-heading-info time">
-                  {{ step.when }}
-                </span>
-                <span class="timeline-heading-info location">{{
-                  step.location
-                }}</span>
-              </div>
-              <h4 class="timeline-heading">
-                {{ step.what }}
-              </h4>
-              <span class="timeline-heading-info">{{ step.where }}</span>
-              <p>{{ step.info }}</p>
-            </div>
-          </div>
-        }
-      </div>
+      <dk-personal-timeline />
     </section>
   </div>
 </section>
