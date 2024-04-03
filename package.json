@@ -91,7 +91,7 @@
   },
   "overrides": {
     "@analogjs/platform": {
-      "nitropack": "2.9.4"
+      "nitropack": "2.9.6"
     }
   },
   "lint-staged": {
