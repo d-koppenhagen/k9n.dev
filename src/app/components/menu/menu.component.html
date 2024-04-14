@@ -4,24 +4,24 @@
     <h2>Menü</h2>
     <ul class="links">
       <li>
-        <a routerLink="/">Startseite</a>
+        <a routerLink="/" (click)="closeDialog()">Startseite</a>
       </li>
       <li>
-        <a href="#about">Über mich</a>
+        <a href="#about" (click)="closeDialog()">Über mich</a>
       </li>
       <li>
-        <a routerLink="/blog">Blog</a>
+        <a routerLink="/blog" (click)="closeDialog()">Blog</a>
       </li>
       <li>
-        <a routerLink="/projects">Projekte</a>
+        <a routerLink="/projects" (click)="closeDialog()">Projekte</a>
       </li>
       <li>
-        <a routerLink="/contact">Kontakt</a>
+        <a routerLink="/contact" (click)="closeDialog()">Kontakt</a>
       </li>
       <li>
-        <a routerLink="/imprint">Impressum</a>
+        <a routerLink="/imprint" (click)="closeDialog()">Impressum</a>
       </li>
     </ul>
-    <a href="#" class="close" (click)="closeDialog()">Schließen</a>
+    <button class="close" (click)="closeDialog()">Schließen</button>
   </div>
 </div>
