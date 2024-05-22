@@ -37,7 +37,7 @@
     "@angular/material": "^17.3.0",
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
-    "@angular/platform-server": "^17.3.0",
+    "@angular/platform-server": "^18.0.0",
     "@angular/router": "^17.3.0",
     "@angular/service-worker": "^17.3.0",
     "@angular/youtube-player": "^17.3.0",
