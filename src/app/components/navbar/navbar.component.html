@@ -1,10 +1,13 @@
-<nav class="menu-dark" id="navigation" role="navigation" tabindex="0">
+<nav class="menu-dark" id="navigation" role="navigation" tabindex="0"  (keydown)="onKeydown($event)"
+  >
   <button
     class="burger-menu"
     role="button"
     (click)="openDialog()"
     aria-label="Menü öffnen"
-    aria-expanded="false"
+    aria-controls="menu"
+    [attr.aria-expanded]="!!dialogRef()"
+
   >
     <span class="hidden-small">Menü</span>
   </button>
