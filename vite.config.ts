@@ -15,6 +15,30 @@ function transFormContentDirRoute(file: PrerenderContentFile, base: string) {
   return `/${base}/${slug}`;
 }
 
+function injectGtagScript(html: string) {
+  // Define the position to inject the script
+  const headEndTag = '</head>';
+  const insertPosition = html.indexOf(headEndTag);
+
+  // If </head> tag is found, insert the script right after it
+  if (insertPosition !== -1) {
+    return (
+      html.slice(0, insertPosition + headEndTag.length) +
+      `<script async src="https://www.googletagmanager.com/gtag/js?id=G-HY3CPEEH1Z"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXXXXXX-1');
+      </script>` +
+      html.slice(insertPosition + headEndTag.length)
+    );
+  } else {
+    // If </head> tag is not found, return the original HTML
+    return html;
+  }
+}
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   publicDir: 'src/assets',
@@ -59,15 +83,9 @@ export default defineConfig(({ mode }) => ({
             if (route.route.endsWith('.xml')) {
               return;
             }
-            const gTag = `<!-- Google tag (gtag.js) -->
-              <script async src="https://www.googletagmanager.com/gtag/js?id=G-HY3CPEEH1Z"></script>
-              <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'UA-XXXXXXXXX-1');
-              </script>`;
-            route.contents = route.contents?.concat(gTag);
+            if (route.contents) {
+              route.contents = injectGtagScript(route.contents);
+            }
           },
         ],
         sitemap: {
