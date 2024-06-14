@@ -1,0 +1,377 @@
+<!DOCTYPE html><html lang="de"><head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Apple PWA Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-512x512.png">
+    <link href="icons/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Basic Site Information -->
+    <title>k9n.dev | Angular 18 ist da: Signals, Signals, Signals!</title>
+    
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Danny Koppenhagen">
+
+    <!-- Twitter Card -->
+    
+    
+    
+    
+    
+
+    <!-- Open Graph Profile -->
+    
+    
+    
+    
+    <meta property="profile:first_name" content="Danny">
+    <meta property="profile:last_name" content="Koppenhagen">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#e7e7e7">
+    <script type="module" crossorigin="" src="/assets/index-4p3sWu3W.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-WP9uauOz.css">
+  <style ng-app-id="ng">.menu-dark[_ngcontent-ng-c1817153599] {
+  filter: alpha(opacity=90);
+}
+.menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599] {
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.9;
+  margin: 0px 1px;
+}
+.menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599]:hover, .menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599]:focus {
+  background-color: #43485f;
+  box-shadow: inset 0 0 0 2px #5e7959;
+}
+.menu-dark[_ngcontent-ng-c1817153599]:focus    > button[_ngcontent-ng-c1817153599] {
+  box-shadow: inset 0 0 0 2px #ada789;
+}
+@media screen and (max-width: 480px) {
+  .hidden-small[_ngcontent-ng-c1817153599] {
+    visibility: hidden;
+  }
+}</style><style ng-app-id="ng">.header-title[_ngcontent-ng-c2595095079] {
+  background-image: url("/images/bg-triangles.jpg");
+  background-size: cover;
+  font-size: 5em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.2901960784);
+}
+
+.sub-header-title[_ngcontent-ng-c2595095079] {
+  color: #2e3141;
+  font-size: 1.6em !important;
+  margin-bottom: 0.5em;
+  line-height: 1.3 !important;
+}
+
+.sub-header[_ngcontent-ng-c2595095079] {
+  color: #2e3141;
+  font-size: 1.2em;
+}
+
+#banner[_ngcontent-ng-c2595095079] {
+  background-image: url("/images/dk-header.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-color: #fdfdfd;
+  padding: 9em 0 12em 0;
+  animation: _ngcontent-ng-c2595095079_headerFadeIn 3s;
+}
+
+@keyframes _ngcontent-ng-c2595095079_headerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#logo[_ngcontent-ng-c2595095079] {
+  position: absolute;
+  top: 5px;
+}
+
+#logo[_ngcontent-ng-c2595095079]   img[_ngcontent-ng-c2595095079] {
+  width: 70px;
+  animation: _ngcontent-ng-c2595095079_move-to-top 1s ease, _ngcontent-ng-c2595095079_rotate 4s ease 1;
+}
+
+#logo[_ngcontent-ng-c2595095079]:focus, 
+h1[_ngcontent-ng-c2595095079]:focus {
+  outline: 1px solid rgba(185, 167, 167, 0.4);
+}
+
+@keyframes _ngcontent-ng-c2595095079_rotate {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+
+@keyframes _ngcontent-ng-c2595095079_move-to-top {
+  0% {
+    top: 100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #banner[_ngcontent-ng-c2595095079] {
+    background-position: right -200px top;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #banner[_ngcontent-ng-c2595095079] {
+    background-size: contain;
+    padding: 6em 0 10em 0;
+    background-position: right -200px top;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .sub-header[_ngcontent-ng-c2595095079] {
+    font-size: 1em !important;
+    padding-right: 110px;
+  }
+  #banner[_ngcontent-ng-c2595095079] {
+    padding: 6em 0 5em 0;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 3.5em;
+    padding-right: 40vw;
+  }
+  #banner[_ngcontent-ng-c2595095079] {
+    background-size: cover;
+    background-position: right -180px top;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 3em;
+    padding-right: 50vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    opacity: 0.7;
+    font-size: 2.5em;
+    padding-right: 50vw;
+  }
+}</style><style ng-app-id="ng">@media screen and (min-width: 736px) {
+  ul.contact[_ngcontent-ng-c2698026132] {
+    columns: 2;
+    width: 100% !important;
+  }
+}</style><style ng-app-id="ng">.wrapper[_ngcontent-ng-c1123664158] {
+  margin-top: 0;
+}
+
+h1[_ngcontent-ng-c1123664158] {
+  font-size: 1.4em;
+}
+
+.extra-info[_ngcontent-ng-c1123664158] {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.actions[_ngcontent-ng-c1123664158] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.published-at[_ngcontent-ng-c1123664158], 
+.external-links[_ngcontent-ng-c1123664158], 
+.edit-on-github[_ngcontent-ng-c1123664158] {
+  margin: 30px 0;
+}
+
+.published-at[_ngcontent-ng-c1123664158] {
+  height: 50px;
+}
+
+.published-at[_ngcontent-ng-c1123664158] {
+  display: flex;
+  align-items: center;
+  line-height: 1.2em;
+}
+
+.published-at[_ngcontent-ng-c1123664158]   .published-at-link[_ngcontent-ng-c1123664158] {
+  text-decoration: none;
+  border: none;
+  min-width: 120px;
+}
+
+.published-at[_ngcontent-ng-c1123664158]   .published-at-link[_ngcontent-ng-c1123664158]   .published-at-logo[_ngcontent-ng-c1123664158] {
+  padding-right: 20px;
+  max-height: 60px;
+}
+
+.external-article[_ngcontent-ng-c1123664158] {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.extra-section[_ngcontent-ng-c1123664158]   .actions[_ngcontent-ng-c1123664158] {
+  padding-bottom: 10px;
+}
+
+span.image[_ngcontent-ng-c1123664158]    > img.thumbnail[_ngcontent-ng-c1123664158] {
+  max-width: 80px;
+}
+
+@media screen and (max-width: 560px) {
+  .blog-footer[_ngcontent-ng-c1123664158] {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: #2e3141;
+    opacity: 0.9;
+    z-index: 1;
+    padding: 0 35px;
+  }
+  .blog-footer[_ngcontent-ng-c1123664158]    > h2[_ngcontent-ng-c1123664158], 
+   .blog-footer[_ngcontent-ng-c1123664158]   h3[_ngcontent-ng-c1123664158] {
+    display: none;
+  }
+  .blog-footer[_ngcontent-ng-c1123664158]    > ul[_ngcontent-ng-c1123664158] {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .blog-footer[_ngcontent-ng-c1123664158]    > ul[_ngcontent-ng-c1123664158]    > li[_ngcontent-ng-c1123664158] {
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .extra-info[_ngcontent-ng-c1123664158] {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .blog-footer[_ngcontent-ng-c1123664158] {
+    padding: 0 24px;
+  }
+}
+
+.blog-header[_ngcontent-ng-c1123664158]   img[_ngcontent-ng-c1123664158] {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+  border-radius: 1ch;
+  overflow: hidden;
+  box-shadow: 0 3px 2px hsla(0, 0%, 0%, 0.02), 0 7px 5px hsla(0, 0%, 0%, 0.03), 0 13px 10px hsla(0, 0%, 0%, 0.04), 0 22px 18px hsla(0, 0%, 0%, 0.05), 0 42px 33px hsla(0, 0%, 0%, 0.06), 0 100px 80px hsla(0, 0%, 0%, 0.07);
+  margin-bottom: 1rem;
+}</style><meta name="description" content="Und schon wieder ist ein halbes Jahr vergangen: Angular Version 18 ist jetzt verfügbar! In den letzten Versionen wurden viele neue Funktionen und Verbesserungen eingeführt. Diesmal lag der Fokus darauf, die bereits ausgelieferten APIs zu stabilisieren, diverse Feature Requests zu bearbeiten und eines der am meisten nachgefragten Projekte auf der Roadmap experimentell zu veröffentlichen: die Zoneless Change Detection."><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@d_koppenhagen"><meta name="twitter:creator" content="@d_koppenhagen"><meta name="twitter:title" content="Angular 18 ist da: Signals, Signals, Signals!"><meta name="twitter:description" content="Und schon wieder ist ein halbes Jahr vergangen: Angular Version 18 ist jetzt verfügbar! In den letzten Versionen wurden viele neue Funktionen und Verbesserungen eingeführt. Diesmal lag der Fokus darauf, die bereits ausgelieferten APIs zu stabilisieren, diverse Feature Requests zu bearbeiten und eines der am meisten nachgefragten Projekte auf der Roadmap experimentell zu veröffentlichen: die Zoneless Change Detection."><meta name="twitter:image" content="https://k9n.dev/https://website-articles.angular-buch.com/blog/2024-06-angular18/angular18.jpg"><meta property="og:title" content="Angular 18 ist da: Signals, Signals, Signals!"><meta property="og:description" content="Und schon wieder ist ein halbes Jahr vergangen: Angular Version 18 ist jetzt verfügbar! In den letzten Versionen wurden viele neue Funktionen und Verbesserungen eingeführt. Diesmal lag der Fokus darauf, die bereits ausgelieferten APIs zu stabilisieren, diverse Feature Requests zu bearbeiten und eines der am meisten nachgefragten Projekte auf der Roadmap experimentell zu veröffentlichen: die Zoneless Change Detection."><meta name="og:image" content="https://k9n.dev/https://website-articles.angular-buch.com/blog/2024-06-angular18/angular18.jpg"><meta name="og:url" content="https://k9n.dev/blog/2024-06-angular18"><style ng-app-id="ng">.sticky-navigation[_ngcontent-ng-c1362634168] {
+  position: sticky;
+  right: 0;
+  top: 4rem;
+  font-size: 0.8em;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168] {
+  max-width: 300px;
+  position: absolute;
+  right: 0.7rem;
+  top: 0.5rem;
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.95;
+  margin: 0px 1px;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
+  z-index: 1;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   h2[_ngcontent-ng-c1362634168] {
+  margin: 0.8rem 1.4rem;
+  text-transform: none;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   .cdk-tree[_ngcontent-ng-c1362634168] {
+  list-style: none;
+  padding: 0.8rem;
+  padding-top: 0;
+  display: list-item;
+  font-weight: bold;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   .cdk-tree[_ngcontent-ng-c1362634168]   .cdk-tree-node[_ngcontent-ng-c1362634168] {
+  margin-left: 0.5rem;
+  display: list-item;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   .cdk-tree[_ngcontent-ng-c1362634168]   .cdk-tree-node[_ngcontent-ng-c1362634168]   [aria-level="1"][_ngcontent-ng-c1362634168] {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   .cdk-tree[_ngcontent-ng-c1362634168]   .cdk-tree-node[aria-level="2"][_ngcontent-ng-c1362634168] {
+  font-weight: normal;
+  margin-left: 1rem;
+  list-style: circle;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   button[_ngcontent-ng-c1362634168] {
+  min-width: 2rem;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   button.opened[_ngcontent-ng-c1362634168] {
+  border: none;
+  box-shadow: none;
+  float: right;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   button.closed[_ngcontent-ng-c1362634168]:hover, .sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   button.closed[_ngcontent-ng-c1362634168]:focus {
+  background-color: #43485f;
+  box-shadow: inset 0 0 0 2px #5e7959;
+}</style><style ng-app-id="ng">.article-series[_ngcontent-ng-c73396087]   li[_ngcontent-ng-c73396087]:has(.current:not(:hover)) {
+  background-color: #273e4b;
+}</style></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-HY3CPEEH1Z"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HY3CPEEH1Z');
+      </script>
+  <body id="page-wrapper" class="mat-typography"><!--nghm-->
+    <!-- Angular -->
+    <dk-root ng-version="18.0.0" ngh="6" ng-server-context="ssr-analog"><dk-navbar _nghost-ng-c1817153599="" ngh="0"><nav _ngcontent-ng-c1817153599="" id="navigation" role="navigation" tabindex="0" class="menu-dark"><button _ngcontent-ng-c1817153599="" role="button" aria-label="Menü öffnen" aria-controls="menu" class="burger-menu" aria-expanded="false"><span _ngcontent-ng-c1817153599="" class="hidden-small">Menü</span></button></nav></dk-navbar><dk-header _nghost-ng-c2595095079="" ngh="1"><header _ngcontent-ng-c2595095079="" id="banner"><div _ngcontent-ng-c2595095079="" class="inner"><a _ngcontent-ng-c2595095079="" routerlink="/" aria-label="Zur Startseite" title="Startseite" id="logo" href="/"><img _ngcontent-ng-c2595095079="" src="images/logo_header.png" alt="Logo"></a><h1 _ngcontent-ng-c2595095079="" tabindex="0" aria-label="Textanimation: k9n.dev verändert sich zu 'Koppenhagen' zur Visualisierung des Numeronyms" aria-describedby="about-k9n" class="header-title"><span _ngcontent-ng-c2595095079="">k</span><span _ngcontent-ng-c2595095079="" class="headline-expanded">9</span><!----><!----><span _ngcontent-ng-c2595095079="">n.dev</span><!----></h1><p _ngcontent-ng-c2595095079="" class="sub-header-title">Danny Koppenhagen</p><p _ngcontent-ng-c2595095079="" class="sub-header">Entwickler, IT-Berater, Buchautor</p></div></header></dk-header><main><router-outlet></router-outlet><ng-component _nghost-ng-c1123664158="" ngh="5"><article _ngcontent-ng-c1123664158="" class="wrapper alt"><dk-sticky-navigation _ngcontent-ng-c1123664158="" _nghost-ng-c1362634168="" ngh="2"><div _ngcontent-ng-c1362634168="" role="navigation" aria-label="Navigation: Auf dieser Seite" tabindex="0" class="sticky-navigation"><div _ngcontent-ng-c1362634168="" class="right-menu"><button _ngcontent-ng-c1362634168="" role="button" class="fa closed fa-list-ol" aria-label="Seitennavigation öffnen" aria-expanded="false"></button><!----></div></div></dk-sticky-navigation><div _ngcontent-ng-c1123664158="" class="inner"><h1 _ngcontent-ng-c1123664158="">Angular 18 ist da: Signals, Signals, Signals!</h1><section _ngcontent-ng-c1123664158="" class="blog-header"><img _ngcontent-ng-c1123664158="" alt="" class="adaptive-glass" src="https://website-articles.angular-buch.com/blog/2024-06-angular18/angular18.jpg"><!----></section><section _ngcontent-ng-c1123664158="" class="extra-section"><div _ngcontent-ng-c1123664158="" class="extra-info"><span _ngcontent-ng-c1123664158=""><time _ngcontent-ng-c1123664158="" datetime="2001-05-15 19:00">Jun 14, 2024</time></span><!----><h2 _ngcontent-ng-c1123664158="" class="sub-heading">Stichwörter</h2></div><div _ngcontent-ng-c1123664158="" class="actions"><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular"> Angular </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular 18"> Angular 18 </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Zoneless"> Zoneless </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Zoneless Change Detection"> Zoneless Change Detection </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Signals"> Signals </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Material 3"> Material 3 </button></span><!----></div><div _ngcontent-ng-c1123664158="" class="published-at"><div _ngcontent-ng-c1123664158=""><a _ngcontent-ng-c1123664158="" class="published-at-link" href="https://angular-buch.com/blog/2024-06-angular18" lang="de" aria-label="Original veröffentlicht auf angular-buch.com"><img _ngcontent-ng-c1123664158="" alt="" class="published-at-logo" src="https://angular-buch.com/assets/img/brand-400.png"><!----></a></div><div _ngcontent-ng-c1123664158=""> Original veröffentlicht auf <a _ngcontent-ng-c1123664158="" href="https://angular-buch.com/blog/2024-06-angular18" lang="de">angular-buch.com</a>. </div></div><!----></section><!----><!----><dk-series-list _ngcontent-ng-c1123664158="" _nghost-ng-c73396087="" ngh="3"><section _ngcontent-ng-c73396087="" class="article-series"><h2 _ngcontent-ng-c73396087="" class="sub-heading">Artikelserie</h2><ol _ngcontent-ng-c73396087="" class="alt"><li _ngcontent-ng-c73396087=""><a _ngcontent-ng-c73396087="" routerlinkactive="current" ariacurrentwhenactive="page" lang="de" href="/blog/2020-02-angular9" class="">Angular 9 ist da! Die wichtigsten Neuerungen im Überblick</a></li><li _ngcontent-ng-c73396087=""><a _ngcontent-ng-c73396087="" routerlinkactive="current" ariacurrentwhenactive="page" lang="de" href="/blog/2020-06-angular10" class="">Angular 10 ist da! Die wichtigsten Neuerungen im Überblick</a></li><li _ngcontent-ng-c73396087=""><a _ngcontent-ng-c73396087="" routerlinkactive="current" ariacurrentwhenactive="page" lang="de" href="/blog/2020-11-angular11" class="">Angular 11 ist da! Die wichtigsten Neuerungen im Überblick</a></li><li _ngcontent-ng-c73396087=""><a _ngcontent-ng-c73396087="" routerlinkactive="current" ariacurrentwhenactive="page" lang="de" href="/blog/2021-06-angular12" class="">Angular 12 ist da! Die wichtigsten Neuerungen im Überblick</a></li><li _ngcontent-ng-c73396087=""><a _ngcontent-ng-c73396087="" routerlinkactive="current" ariacurrentwhenactive="page" lang="de" href="/blog/2021-11-angular13" class="">Angular 13 ist da! Die wichtigsten Neuerungen im Überblick</a></li><li _ngcontent-ng-c73396087=""><a _ngcontent-ng-c73396087="" routerlinkactive="current" ariacurrentwhenactive="page" lang="de" href="/blog/2022-06-angular14" class="">Angular 14 ist da! Die wichtigsten Neuerungen im Überblick</a></li><li _ngcontent-ng-c73396087=""><a _ngcontent-ng-c73396087="" routerlinkactive="current" ariacurrentwhenactive="page" lang="de" href="/blog/2022-11-angular15" class="">Angular 15 ist da! Die wichtigsten Neuerungen im Überblick</a></li><li _ngcontent-ng-c73396087=""><a _ngcontent-ng-c73396087="" routerlinkactive="current" ariacurrentwhenactive="page" lang="de" href="/blog/2023-05-angular16" class="">Angular 16 ist da! Die wichtigsten Neuerungen im Überblick</a></li><li _ngcontent-ng-c73396087=""><a _ngcontent-ng-c73396087="" routerlinkactive="current" ariacurrentwhenactive="page" lang="de" href="/blog/2023-11-angular17" class="">Angular 17 ist da! Die wichtigsten Neuerungen im Überblick</a></li><li _ngcontent-ng-c73396087=""><a _ngcontent-ng-c73396087="" routerlinkactive="current" ariacurrentwhenactive="page" lang="de" href="/blog/2024-06-angular18" class="current" aria-current="page">Angular 18 ist da: Signals, Signals, Signals!</a></li><!----></ol></section></dk-series-list><!----><section _ngcontent-ng-c1123664158="" class="blog-content"><analog-markdown _ngcontent-ng-c1123664158="" classes="markdown-content" lang="de" ngh="4"><div class="markdown-content"></div><!----></analog-markdown><a _ngcontent-ng-c1123664158="" target="_blank" class="external-article" href="https://angular-buch.com/blog/2024-06-angular18" lang="de">Zum externen Artikel auf angular-buch.com</a><!----><!----></section></div></article><!----></ng-component><!----></main><dk-contact _nghost-ng-c2698026132="" ngh="0"><footer _ngcontent-ng-c2698026132="" id="footer"><div _ngcontent-ng-c2698026132="" id="contact" class="inner"><h2 _ngcontent-ng-c2698026132="" class="major">Kontaktieren Sie mich</h2><p _ngcontent-ng-c2698026132=""> Haben Sie Fragen oder Anregungen? Nehmen Sie gern Kontakt mit mir auf! </p><ul _ngcontent-ng-c2698026132="" class="contact"><li _ngcontent-ng-c2698026132="" class="icon solid fa-envelope"><a _ngcontent-ng-c2698026132="" href="mailto:mail@k9n.dev">mail@k9n.dev</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-github"><a _ngcontent-ng-c2698026132="" href="https://github.com/d-koppenhagen">github.com/d-koppenhagen</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-twitter"><a _ngcontent-ng-c2698026132="" href="https://twitter.com/d_koppenhagen">twitter.com/d_koppenhagen</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-linkedin"><a _ngcontent-ng-c2698026132="" href="https://www.linkedin.com/in/d-koppenhagen/">linkedin.com/in/d-koppenhagen</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-xing"><a _ngcontent-ng-c2698026132="" href="https://www.xing.com/profile/Danny_Koppenhagen">xing.com/profile/Danny_Koppenhagen</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-mastodon"><a _ngcontent-ng-c2698026132="" rel="me" href="https://techhub.social/@k9n">https://techhub.social/@k9n</a></li></ul><ul _ngcontent-ng-c2698026132="" class="copyright"><li _ngcontent-ng-c2698026132="">© 2023 by Danny Koppenhagen</li><li _ngcontent-ng-c2698026132="">Design: <a _ngcontent-ng-c2698026132="" href="https://html5up.net">HTML5 UP</a></li><li _ngcontent-ng-c2698026132=""> Vorschläge? Feedback? Bugs? <a _ngcontent-ng-c2698026132="" href="https://github.com/d-koppenhagen/k9n.dev/issues"> Stell ein Issue ein</a>, <a _ngcontent-ng-c2698026132="" href="https://github.com/d-koppenhagen/k9n.dev/pulls">sende mir einen PR</a> oder <a _ngcontent-ng-c2698026132="" routerlink="/contact" href="/contact">kontaktiere mich</a></li></ul></div></footer></dk-contact><!----></dk-root>
+  
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"7":"t0","8":"t1","9":"t2"},"c":{"7":[{"i":"t0","r":1}],"8":[],"9":[{"i":"t2","r":1}]}},{"t":{"3":"t21"},"c":{"3":[]}},{"t":{"5":"t30"},"c":{"5":[{"i":"t30","r":1,"x":10}]}},{"c":{"0":[]}},{"t":{"0":"t20"},"c":{"0":[{"i":"t20","r":1,"t":{"6":"t22","7":"t23","8":"t28","9":"t29","12":"t31","13":"t32"},"c":{"6":[{"i":"t22","r":1}],"7":[{"i":"t23","r":1,"t":{"2":"t24","7":"t25","8":"t26"},"c":{"2":[{"i":"t24","r":1}],"7":[{"i":"t25","r":1,"x":6}],"8":[{"i":"t26","r":1,"t":{"3":"t27"},"c":{"3":[{"i":"t27","r":1}]}}]}}],"8":[],"9":[{"i":"t29","r":1}],"12":[{"i":"t31","r":1}],"13":[]}}]}},{"c":{"3":[{"i":"c1123664158","r":1}],"5":[]},"t":{"5":"t18"}}]}</script></body></html>
