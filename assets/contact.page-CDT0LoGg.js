@@ -1,0 +1,1 @@
+import{a as o,d as c}from"./index-Df54Jxc7.js";let d=(()=>{var e;class t{}return e=t,e.ɵfac=function(n){return new(n||e)},e.ɵcmp=o({type:e,selectors:[["ng-component"]],standalone:!0,features:[c],decls:0,vars:0,template:function(n,r){},encapsulation:2}),t})();export{d as default};

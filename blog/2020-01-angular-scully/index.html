@@ -1,0 +1,661 @@
+<!DOCTYPE html><html lang="de"><head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Apple PWA Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-512x512.png">
+    <link href="icons/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Basic Site Information -->
+    <title>k9n.dev | Create powerful fast pre-rendered Angular Apps using Scully static site generator</title>
+    
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Danny Koppenhagen">
+
+    <!-- Twitter Card -->
+    
+    
+    
+    
+    
+
+    <!-- Open Graph Profile -->
+    
+    
+    
+    
+    <meta property="profile:first_name" content="Danny">
+    <meta property="profile:last_name" content="Koppenhagen">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#e7e7e7">
+    <script type="module" crossorigin="" src="/assets/index-Df54Jxc7.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-WP9uauOz.css">
+  <style ng-app-id="ng">.menu-dark[_ngcontent-ng-c1817153599] {
+  filter: alpha(opacity=90);
+}
+.menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599] {
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.9;
+  margin: 0px 1px;
+}
+.menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599]:hover, .menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599]:focus {
+  background-color: #43485f;
+  box-shadow: inset 0 0 0 2px #5e7959;
+}
+.menu-dark[_ngcontent-ng-c1817153599]:focus    > button[_ngcontent-ng-c1817153599] {
+  box-shadow: inset 0 0 0 2px #ada789;
+}
+@media screen and (max-width: 480px) {
+  .hidden-small[_ngcontent-ng-c1817153599] {
+    visibility: hidden;
+  }
+}</style><style ng-app-id="ng">.header-title[_ngcontent-ng-c2595095079] {
+  background-image: url("/images/bg-triangles.jpg");
+  background-size: cover;
+  font-size: 5em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.2901960784);
+}
+
+.sub-header-title[_ngcontent-ng-c2595095079] {
+  color: #2e3141;
+  font-size: 1.6em !important;
+  margin-bottom: 0.5em;
+  line-height: 1.3 !important;
+}
+
+.sub-header[_ngcontent-ng-c2595095079] {
+  color: #2e3141;
+  font-size: 1.2em;
+}
+
+#banner[_ngcontent-ng-c2595095079] {
+  background-image: url("/images/dk-header.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-color: #fdfdfd;
+  padding: 9em 0 12em 0;
+  animation: _ngcontent-ng-c2595095079_headerFadeIn 3s;
+}
+
+@keyframes _ngcontent-ng-c2595095079_headerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#logo[_ngcontent-ng-c2595095079] {
+  position: absolute;
+  top: 5px;
+}
+
+#logo[_ngcontent-ng-c2595095079]   img[_ngcontent-ng-c2595095079] {
+  width: 70px;
+  animation: _ngcontent-ng-c2595095079_move-to-top 1s ease, _ngcontent-ng-c2595095079_rotate 4s ease 1;
+}
+
+#logo[_ngcontent-ng-c2595095079]:focus, 
+h1[_ngcontent-ng-c2595095079]:focus {
+  outline: 1px solid rgba(185, 167, 167, 0.4);
+}
+
+@keyframes _ngcontent-ng-c2595095079_rotate {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+
+@keyframes _ngcontent-ng-c2595095079_move-to-top {
+  0% {
+    top: 100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #banner[_ngcontent-ng-c2595095079] {
+    background-position: right -200px top;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #banner[_ngcontent-ng-c2595095079] {
+    background-size: contain;
+    padding: 6em 0 10em 0;
+    background-position: right -200px top;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .sub-header[_ngcontent-ng-c2595095079] {
+    font-size: 1em !important;
+    padding-right: 110px;
+  }
+  #banner[_ngcontent-ng-c2595095079] {
+    padding: 6em 0 5em 0;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 3.5em;
+    padding-right: 40vw;
+  }
+  #banner[_ngcontent-ng-c2595095079] {
+    background-size: cover;
+    background-position: right -180px top;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 3em;
+    padding-right: 50vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    opacity: 0.7;
+    font-size: 2.5em;
+    padding-right: 50vw;
+  }
+}</style><style ng-app-id="ng">@media screen and (min-width: 736px) {
+  ul.contact[_ngcontent-ng-c2698026132] {
+    columns: 2;
+    width: 100% !important;
+  }
+}</style><style ng-app-id="ng">.wrapper[_ngcontent-ng-c1123664158] {
+  margin-top: 0;
+}
+
+h1[_ngcontent-ng-c1123664158] {
+  font-size: 1.4em;
+}
+
+.extra-info[_ngcontent-ng-c1123664158] {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.actions[_ngcontent-ng-c1123664158] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.published-at[_ngcontent-ng-c1123664158], 
+.external-links[_ngcontent-ng-c1123664158], 
+.edit-on-github[_ngcontent-ng-c1123664158] {
+  margin: 30px 0;
+}
+
+.published-at[_ngcontent-ng-c1123664158] {
+  height: 50px;
+}
+
+.published-at[_ngcontent-ng-c1123664158] {
+  display: flex;
+  align-items: center;
+  line-height: 1.2em;
+}
+
+.published-at[_ngcontent-ng-c1123664158]   .published-at-link[_ngcontent-ng-c1123664158] {
+  text-decoration: none;
+  border: none;
+  min-width: 120px;
+}
+
+.published-at[_ngcontent-ng-c1123664158]   .published-at-link[_ngcontent-ng-c1123664158]   .published-at-logo[_ngcontent-ng-c1123664158] {
+  padding-right: 20px;
+  max-height: 60px;
+}
+
+.external-article[_ngcontent-ng-c1123664158] {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.extra-section[_ngcontent-ng-c1123664158]   .actions[_ngcontent-ng-c1123664158] {
+  padding-bottom: 10px;
+}
+
+span.image[_ngcontent-ng-c1123664158]    > img.thumbnail[_ngcontent-ng-c1123664158] {
+  max-width: 80px;
+}
+
+@media screen and (max-width: 560px) {
+  .blog-footer[_ngcontent-ng-c1123664158] {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: #2e3141;
+    opacity: 0.9;
+    z-index: 1;
+    padding: 0 35px;
+  }
+  .blog-footer[_ngcontent-ng-c1123664158]    > h2[_ngcontent-ng-c1123664158], 
+   .blog-footer[_ngcontent-ng-c1123664158]   h3[_ngcontent-ng-c1123664158] {
+    display: none;
+  }
+  .blog-footer[_ngcontent-ng-c1123664158]    > ul[_ngcontent-ng-c1123664158] {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .blog-footer[_ngcontent-ng-c1123664158]    > ul[_ngcontent-ng-c1123664158]    > li[_ngcontent-ng-c1123664158] {
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .extra-info[_ngcontent-ng-c1123664158] {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .blog-footer[_ngcontent-ng-c1123664158] {
+    padding: 0 24px;
+  }
+}
+
+.blog-header[_ngcontent-ng-c1123664158]   img[_ngcontent-ng-c1123664158] {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+  border-radius: 1ch;
+  overflow: hidden;
+  box-shadow: 0 3px 2px hsla(0, 0%, 0%, 0.02), 0 7px 5px hsla(0, 0%, 0%, 0.03), 0 13px 10px hsla(0, 0%, 0%, 0.04), 0 22px 18px hsla(0, 0%, 0%, 0.05), 0 42px 33px hsla(0, 0%, 0%, 0.06), 0 100px 80px hsla(0, 0%, 0%, 0.07);
+  margin-bottom: 1rem;
+}</style><meta name="description" content="You probably heard of the JAMStack. It is a new way of building websites and apps via static site generators that deliver better performance and higher security. With this blog post, I will show you how you can easily create a blogging app by using the power of Angular and the help of Scully static site generator. It will automatically detect all app routes and create static pages out of them that are ready to ship for production."><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@d_koppenhagen"><meta name="twitter:creator" content="@d_koppenhagen"><meta name="twitter:title" content="Create powerful fast pre-rendered Angular Apps using Scully static site generator"><meta name="twitter:description" content="You probably heard of the JAMStack. It is a new way of building websites and apps via static site generators that deliver better performance and higher security. With this blog post, I will show you how you can easily create a blogging app by using the power of Angular and the help of Scully static site generator. It will automatically detect all app routes and create static pages out of them that are ready to ship for production."><meta name="twitter:image" content="https://k9n.dev/images/blog/scully/scully-header.jpg"><meta property="og:title" content="Create powerful fast pre-rendered Angular Apps using Scully static site generator"><meta property="og:description" content="You probably heard of the JAMStack. It is a new way of building websites and apps via static site generators that deliver better performance and higher security. With this blog post, I will show you how you can easily create a blogging app by using the power of Angular and the help of Scully static site generator. It will automatically detect all app routes and create static pages out of them that are ready to ship for production."><meta name="og:image" content="https://k9n.dev/images/blog/scully/scully-header.jpg"><meta name="og:url" content="https://k9n.dev/blog/2020-01-angular-scully"><style ng-app-id="ng">.sticky-navigation[_ngcontent-ng-c1362634168] {
+  position: sticky;
+  right: 0;
+  top: 4rem;
+  font-size: 0.8em;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168] {
+  max-width: 300px;
+  position: absolute;
+  right: 0.7rem;
+  top: 0.5rem;
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.95;
+  margin: 0px 1px;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
+  z-index: 1;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   h2[_ngcontent-ng-c1362634168] {
+  margin: 0.8rem 1.4rem;
+  text-transform: none;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   .cdk-tree[_ngcontent-ng-c1362634168] {
+  list-style: none;
+  padding: 0.8rem;
+  padding-top: 0;
+  display: list-item;
+  font-weight: bold;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   .cdk-tree[_ngcontent-ng-c1362634168]   .cdk-tree-node[_ngcontent-ng-c1362634168] {
+  margin-left: 0.5rem;
+  display: list-item;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   .cdk-tree[_ngcontent-ng-c1362634168]   .cdk-tree-node[_ngcontent-ng-c1362634168]   [aria-level="1"][_ngcontent-ng-c1362634168] {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   .cdk-tree[_ngcontent-ng-c1362634168]   .cdk-tree-node[aria-level="2"][_ngcontent-ng-c1362634168] {
+  font-weight: normal;
+  margin-left: 1rem;
+  list-style: circle;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   button[_ngcontent-ng-c1362634168] {
+  min-width: 2rem;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   button.opened[_ngcontent-ng-c1362634168] {
+  border: none;
+  box-shadow: none;
+  float: right;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   button.closed[_ngcontent-ng-c1362634168]:hover, .sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   button.closed[_ngcontent-ng-c1362634168]:focus {
+  background-color: #43485f;
+  box-shadow: inset 0 0 0 2px #5e7959;
+}</style><style ng-app-id="ng">.article-series[_ngcontent-ng-c73396087]   li[_ngcontent-ng-c73396087]:has(.current:not(:hover)) {
+  background-color: #273e4b;
+}</style></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-HY3CPEEH1Z"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HY3CPEEH1Z');
+      </script>
+  <body id="page-wrapper" class="mat-typography"><!--nghm-->
+    <!-- Angular -->
+    <dk-root ng-version="18.0.0" ngh="6" ng-server-context="ssr-analog"><dk-navbar _nghost-ng-c1817153599="" ngh="0"><nav _ngcontent-ng-c1817153599="" id="navigation" role="navigation" tabindex="0" class="menu-dark"><button _ngcontent-ng-c1817153599="" role="button" aria-label="Menü öffnen" aria-controls="menu" class="burger-menu" aria-expanded="false"><span _ngcontent-ng-c1817153599="" class="hidden-small">Menü</span></button></nav></dk-navbar><dk-header _nghost-ng-c2595095079="" ngh="1"><header _ngcontent-ng-c2595095079="" id="banner"><div _ngcontent-ng-c2595095079="" class="inner"><a _ngcontent-ng-c2595095079="" routerlink="/" aria-label="Zur Startseite" title="Startseite" id="logo" href="/"><img _ngcontent-ng-c2595095079="" src="images/logo_header.png" alt="Logo"></a><h1 _ngcontent-ng-c2595095079="" tabindex="0" aria-label="Textanimation: k9n.dev verändert sich zu 'Koppenhagen' zur Visualisierung des Numeronyms" aria-describedby="about-k9n" class="header-title"><span _ngcontent-ng-c2595095079="">k</span><span _ngcontent-ng-c2595095079="" class="headline-expanded">9</span><!----><!----><span _ngcontent-ng-c2595095079="">n.dev</span><!----></h1><p _ngcontent-ng-c2595095079="" class="sub-header-title">Danny Koppenhagen</p><p _ngcontent-ng-c2595095079="" class="sub-header">Entwickler, IT-Berater, Buchautor</p></div></header></dk-header><main><router-outlet></router-outlet><ng-component _nghost-ng-c1123664158="" ngh="5"><article _ngcontent-ng-c1123664158="" class="wrapper alt"><dk-sticky-navigation _ngcontent-ng-c1123664158="" _nghost-ng-c1362634168="" ngh="2"><div _ngcontent-ng-c1362634168="" role="navigation" aria-label="Navigation: Auf dieser Seite" tabindex="0" class="sticky-navigation"><div _ngcontent-ng-c1362634168="" class="right-menu"><button _ngcontent-ng-c1362634168="" role="button" class="fa closed fa-list-ol" aria-label="Seitennavigation öffnen" aria-expanded="false"></button><!----></div></div></dk-sticky-navigation><div _ngcontent-ng-c1123664158="" class="inner"><h1 _ngcontent-ng-c1123664158="">Create powerful fast pre-rendered Angular Apps using Scully static site generator</h1><section _ngcontent-ng-c1123664158="" class="blog-header"><img _ngcontent-ng-c1123664158="" alt="" class="adaptive-glass" src="images/blog/scully/scully-header.jpg"><!----></section><section _ngcontent-ng-c1123664158="" class="extra-section"><div _ngcontent-ng-c1123664158="" class="extra-info"><span _ngcontent-ng-c1123664158=""><time _ngcontent-ng-c1123664158="" datetime="2001-05-15 19:00">Nov 1, 2021</time></span><!----><h2 _ngcontent-ng-c1123664158="" class="sub-heading">Stichwörter</h2></div><div _ngcontent-ng-c1123664158="" class="actions"><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular"> Angular </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular CLI"> Angular CLI </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular Schematics"> Angular Schematics </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Scully"> Scully </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: SSR"> SSR </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: SSG"> SSG </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Pre-rendering"> Pre-rendering </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: JAM Stack"> JAM Stack </button></span><!----></div><!----></section><!----><section _ngcontent-ng-c1123664158="" class="external-links"><a _ngcontent-ng-c1123664158="" href="https://dev.to/dkoppenhagen/create-powerfull-fast-pre-rendered-angular-apps-using-scully-static-site-generator-31fb" lang="en">Dev.to</a><!----> | <!----><a _ngcontent-ng-c1123664158="" href="https://danny-koppenhagen.medium.com/create-powerful-fast-pre-rendered-angular-apps-using-scully-static-site-generator-79832a549787" lang="en">Medium.com</a><!----></section><!----><dk-series-list _ngcontent-ng-c1123664158="" _nghost-ng-c73396087="" ngh="3"><section _ngcontent-ng-c73396087="" class="article-series"><h2 _ngcontent-ng-c73396087="" class="sub-heading">Artikelserie</h2><ol _ngcontent-ng-c73396087="" class="alt"><li _ngcontent-ng-c73396087=""><a _ngcontent-ng-c73396087="" routerlinkactive="current" ariacurrentwhenactive="page" lang="en" href="/blog/2020-01-angular-scully" class="current" aria-current="page">Create powerful fast pre-rendered Angular Apps using Scully static site generator</a></li><li _ngcontent-ng-c73396087=""><a _ngcontent-ng-c73396087="" routerlinkactive="current" ariacurrentwhenactive="page" lang="en" href="/blog/2020-03-dig-deeper-into-scully-ssg" class="">Dig deeper into static site generation with Scully and use the most out of it</a></li><!----></ol></section></dk-series-list><!----><section _ngcontent-ng-c1123664158="" class="blog-content"><analog-markdown _ngcontent-ng-c1123664158="" classes="markdown-content" lang="en" ngh="4"><div class="markdown-content"><h1 id="create-powerful-fast-pre-rendered-angular-apps-using-scully-static-site-generator">Create powerful fast pre-rendered Angular Apps using <em>Scully</em> static site generator</h1>
+<p><strong>You probably heard of the JAMStack. It's a new way of building websites and apps via static site generators that deliver better performance and higher security. There have been tools for many platforms, but surprisingly not yet for Angular. These times are finally over. With this blog post, I want to show you how you can easily create an Angular blogging app by to pre-render your complete app.</strong></p>
+<blockquote>
+<p>On <em>Dec 16, 2019</em> the static site generator <em>Scully</em> for Angular <a href="https://www.youtube.com/watch?v=Sh37rIUL-d4">was presented</a>.
+<em>Scully</em> automatically detects all app routes and creates static sites out of it that are ready to ship for production.
+This blog post is based on versions of Angular and Scully:</p>
+<pre><code><span class="token string-property property">"@angular/core"</span><span class="token operator">:</span> <span class="token string">"~13.0.0"</span><span class="token punctuation">,</span>
+<span class="token string-property property">"@angular/cli"</span><span class="token operator">:</span> <span class="token string">"~13.0.3"</span><span class="token punctuation">,</span>
+<span class="token string-property property">"@scullyio/init"</span><span class="token operator">:</span> <span class="token string">"^2.0.5"</span><span class="token punctuation">,</span>
+<span class="token string-property property">"@scullyio/ng-lib"</span><span class="token operator">:</span> <span class="token string">"^2.0.0"</span><span class="token punctuation">,</span>
+<span class="token string-property property">"@scullyio/scully"</span><span class="token operator">:</span> <span class="token string">"^2.0.0"</span><span class="token punctuation">,</span>
+<span class="token string-property property">"@scullyio/scully-plugin-puppeteer"</span><span class="token operator">:</span> <span class="token string">"^2.0.0"</span><span class="token punctuation">,</span></code></pre></blockquote>
+<hr>
+
+<h2 id="about-scully">About Scully</h2>
+<p>Scully is a static site generator (SSG) for Angular apps.
+It analyses a compiled Angular app and detects all the routes of the app.
+It will then call every route it found, visit the page in the browser, renders the page and finally put the static rendered page to the file system.
+This process is also known as <strong>pre-rendering</strong> – but with a new approach.
+The result compiled and pre-rendered app ready for shipping to your web server.</p>
+<blockquote>
+<p><strong>Good to know:</strong> <em>Scully</em> does not use <a href="https://angular.io/guide/universal">Angular Universal</a> for the pre-rendering.
+It uses a Chromium browser to visit and check all routes it found.</p>
+</blockquote>
+<p>All pre-rendered pages contain just plain HTML and CSS.
+In fact, when deploying it, a user will be able to instantly access all routes and see the content with almost no delay.
+The resulting sites are very small static sites (just a few KBs) so that even the access from a mobile device with a very low bandwidth is pretty fast.
+It's significantly faster compared to the hundreds of KBs that you are downloading when calling a “normal” Angular app on initial load.</p>
+<p>But that’s not all: Once the pre-rendered page is shipped to the user, <em>Scully</em> loads and bootstraps the “real” Angular app  in the background on top of the existing view.
+In fact <em>Scully</em> will unite two great things:
+The power of pre-rendering and very fast access to sites and the power of a fully functional Single Page Application (SPA) written in Angular.</p>
+<h2 id="get-started">Get started</h2>
+<p>The first thing we have to do is to set up our Angular app.
+As <em>Scully</em> detects the content from the routes, we need to configure the Angular router as well.
+Therefore, we add the appropriate flag <code>--routing</code> (we can also choose this option when the CLI prompts us).</p>
+<pre class="language-bash"><code class="language-bash">npx <span class="token parameter variable">-p</span> @angular/cli ng new scully-blog <span class="token parameter variable">--routing</span> <span class="token comment"># create an angular workspace</span>
+<span class="token builtin class-name">cd</span> scully-blog  <span class="token comment"># navigate into the project</span></code></pre><p>The next step is to set up our static site generator <em>Scully</em>.
+Therefore, we are using the provided Angular schematic:</p>
+<pre class="language-bash"><code class="language-bash">ng <span class="token function">add</span> @scullyio/init  <span class="token comment"># add Scully to the project</span></code></pre><p>Et voilà here it is: We now have a very minimalistic Angular app that uses the power of <em>Scully</em> to automatically find all app routes, visit them and generate static pages out of them.
+It's ready for us to preview.
+Let's try it out by building our site and running <em>Scully</em>.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> run build     <span class="token comment"># build our Angular app</span>
+npx scully        <span class="token comment"># let Scully run over our app and build it</span>
+npx scully serve  <span class="token comment"># serve the scully results</span></code></pre><blockquote>
+<p><em>Scully</em> will run only once by default. To let <em>Scully</em> run and watch for file changes, just add the <code>--watch</code> option (<code>npx scully --watch</code>).</p>
+</blockquote>
+<p>After <em>Scully</em> has checked our app, it will add the generated static assets to our <code>dist/static</code> directory by default.
+Let's quickly compare the result generated from <em>Scully</em> with the result from the initial Angular build (<code>dist/scully-blog</code>):</p>
+<pre><code>dist<span class="token operator">/</span>
+┣ scully<span class="token operator">-</span>blog<span class="token operator">/</span>
+┃ ┣ assets<span class="token operator">/</span>
+┃ ┣ <span class="token operator">...</span>
+┃ ┗ styles<span class="token punctuation">.</span>ef46db3751d8e999<span class="token punctuation">.</span>css
+┗ <span class="token keyword">static</span><span class="token operator">/</span>
+  ┣ assets<span class="token operator">/</span>
+  ┃ ┗ scully<span class="token operator">-</span>routes<span class="token punctuation">.</span>json
+  ┣ <span class="token operator">...</span>
+  ┗ styles<span class="token punctuation">.</span>ef46db3751d8e999<span class="token punctuation">.</span>css</code></pre><p>If we take a look at it, except of the file <code>scully-routes.json</code>, that contains the configured routes used by <em>Scully</em>, we don't see any differences between the two builds.
+This is because currently we only have the root route configured, and no further content was created.</p>
+<p>Nonetheless, when running <code>npx scully serve</code> or <code>npx scully --watch</code> we can check out the result by visiting the following URL: <code>localhost:1668</code>.
+This server serves the static generated pages from the <code>dist/static</code> directory like a normal web server (e.g. <em>nginx</em> or <em>apache</em>).</p>
+<h2 id="the-scullylibmodule">The <code>ScullyLibModule</code></h2>
+<p>You may have realized, that after running the <em>Scully</em> schematic, the <code>ScullyLibModule</code> has been added to your <code>AppComponent</code>:</p>
+<pre class="language-ts"><code class="language-ts"><span class="token comment">// ...</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ScullyLibModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@scullyio/ng-lib'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">NgModule</span></span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+  imports<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// ...</span>
+    ScullyLibModule
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span></code></pre><p>This module is used by <em>Scully</em> to hook into the angular router and to determine once the page <em>Scully</em> tries to enter is fully loaded and ready to be rendered by using the <code>IdleMonitorService</code> from <em>Scully</em> internally.
+If we remove the import of the module, <em>Scully</em> will still work, but it takes much longer to render your site as it will use a timeout for accessing the pages.
+So in that case even if a page has been fully loaded, <em>Scully</em> would wait until the timer is expired.</p>
+<h2 id="turn-it-into-a-blog">Turn it into a blog</h2>
+<p>Let’s go a bit further and turn our site into a simple blog that will render our blog posts from separate Markdown documents.
+<em>Scully</em> brings this feature out of the box, and it’s very easy to set it up:</p>
+<pre class="language-bash"><code class="language-bash">ng g @scullyio/init:blog                      <span class="token comment"># setup up the `BlogModule` and related sources</span>
+ng g @scullyio/init:post <span class="token parameter variable">--name</span><span class="token operator">=</span><span class="token string">"First post"</span>  <span class="token comment"># create a new blog post</span></code></pre><p>After these two steps we can see that <em>Scully</em> has now added the <code>blog</code> directory to our project root.
+Here we can find the markdown files for creating the blog posts — one file for each post.
+We now have two files there: The initially created example file from <em>Scully</em> and this one we created with <code>ng g @scullyio/init:post</code>.</p>
+<h2 id="lets-go-further">Let's go further</h2>
+<p>Now that we've got Scully installed and working, let's modify our Angular app to look more like an actual blog, and not just like the default Angular app.
+Therefore, we want to get rid of the Angular auto generated content in the <code>AppComponent</code> first.
+We can simply delete all the content of <code>app.component.html</code> except of the <code>router-outlet</code>:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-outlet</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-outlet</span><span class="token punctuation">&gt;</span></span></code></pre><p>Let’s run the build again and have a look at the results.
+Scully assumes by default the route configuration hasn't changed meanwhile, and it can happen that it's not detecting the new bog entry we just created.
+To be sure it will re-scan the routes, we will pass through the parameter <code>--scan</code>:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> run build       <span class="token comment"># Angular build</span>
+npx scully <span class="token parameter variable">--scan</span>   <span class="token comment"># generate static build and force checking new routes</span>
+npx scully serve    <span class="token comment"># serve the scully results</span></code></pre><p>When checking out our <code>dist/static</code> directory we can see that there are new subdirectories for the routes of our static blogging sites.
+But what's that: When we will check the directory <code>dist/static/blog/</code>, we see somewhat like this:</p>
+<pre><code>blog<span class="token operator">/</span>
+┣ ___UNPUBLISHED___k9pg4tmo_2DDScsUiieFlld4R2FwvnJHEBJXcgulw
+  ┗ index<span class="token punctuation">.</span>html</code></pre><p>This feels strange, doesn't it?
+But Checking the content of the file <code>index.html</code> inside will tell us it contains actually the content of the just created blog post.
+This is by intention: This <em>Scully</em> schematic created the markdown file with a meta flag called <code>published</code> that is by default set to <code>false</code>.
+The internally used renderer plugin from <em>Scully</em> will handle this flag, and it creates an unguessable name for the route.
+This allows us to create blog post drafts that we can already publish and share by using the link for example to let someone else review the article.
+You can also use this route if you don't care about the route name.
+But normally you would just like to change the metadata in the Markdown file to:</p>
+<pre class="language-yaml"><code class="language-yaml"><span class="token key atrule">published</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre><p>After this, run the build process again and the files <code>index.html</code> in <code>dist/static/blog/&lt;post-name&gt;/</code> contain now our static pages ready to be served.
+When we are visiting the route path <code>/blog/first-post</code> we can see the content of our markdown source file <code>blog/first-post.md</code> is rendered as HTML.</p>
+<p>If you want to prove that the page is actually really pre-rendered, just disable JavaScript by using your Chrome Developer Tools.
+You can reload the page and see that the content is still displayed.
+Awesome, isn't it?</p>
+<p><img src="images/blog/scully/scully-pre-rendered-js-disabled.png" alt="a simple blog created with Scully"></p>
+<blockquote>
+<p>When JavaScript is enabled, <em>Scully</em> configures your static sites in that way, that you will see initially the static content.
+In the background it will bootstrap your Angular app, and refresh the content with it.
+You won't see anything flickering.</p>
+</blockquote>
+<p>Hold on a minute! 😳</p>
+<p>You may have realized: We haven’t written one line of code manually yet, and we have already a fully functional blogging site that’s server site rendered. Isn’t that cool?
+Setting up an Angular based blog has never been easier.</p>
+<blockquote>
+<p><strong>Good to know:</strong> <em>Scully</em> also detects new routes we are adding manually to our app, and it will create static sites for all those pages.</p>
+</blockquote>
+<h2 id="use-the-scullyroutesservice">Use the <code>ScullyRoutesService</code></h2>
+<p>We want to take the next step.
+Now we want to list an overview of all existing blog posts we have and link to their sites in our <code>AppComponent</code>.
+Therefore, we can easily inject the <code>ScullyRoutesService</code>.
+It will return us a list of all routes <em>Scully</em> found with the parsed information as a <code>ScullyRoute</code> array within the <code>available$</code> observable.
+We can easily inject the service and display the information as a list in our <code>AppComponent</code>.</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ScullyRoutesService<span class="token punctuation">,</span> ScullyRoute <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@scullyio/ng-lib'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Observable <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'rxjs'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  selector<span class="token operator">:</span> <span class="token string">'app-root'</span><span class="token punctuation">,</span>
+  templateUrl<span class="token operator">:</span> <span class="token string">'./app.component.html'</span><span class="token punctuation">,</span>
+  styleUrls<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'./app.component.css'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">{</span>
+  links$<span class="token operator">:</span> Observable<span class="token operator">&lt;</span>ScullyRoute<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>scully<span class="token punctuation">.</span>available$<span class="token punctuation">;</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> scully<span class="token operator">:</span> ScullyRoutesService<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><p>To display the results, we can simply use <code>ngFor</code> with the <code>async</code> pipe and list the results.
+A <code>ScullyRoute</code> will give us the routing path inside the <code>route</code> key and all other markdown metadata inside their appropriate key names.
+So we can extend for example our markdown metadata block with more keys (e.g. <code>thumbnail: assets/thumb.jpg</code>) and we can access them via those (<code>blog.thumbnail</code> in our case).
+We can extend <code>app.component.html</code> like this:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">*ngFor</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>let link of links$ | async<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">[routerLink]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>link.route<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{ link.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span> <span class="token punctuation">/&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-outlet</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-outlet</span><span class="token punctuation">&gt;</span></span></code></pre><p>This will give us a fully routed blog page:</p>
+<p><img src="images/blog/scully/scully-blog.gif" alt="a simple blog created with scully"></p>
+<p>The <code>ScullyRoutesService</code> contains all the available routes in your app.
+In fact, any route that we add to our Angular app will be detected by <em>Scully</em> and made available via the <code>ScullyRoutesService.available$</code> observable.
+To list only blog posts from the <code>blog</code> route and directory we can just filter the result:</p>
+<pre class="language-ts"><code class="language-ts"><span class="token comment">/* ... */</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> map<span class="token punctuation">,</span> Observable <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'rxjs'</span><span class="token punctuation">;</span>
+<span class="token comment">/* ... */</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">{</span>
+  links$<span class="token operator">:</span> Observable<span class="token operator">&lt;</span>ScullyRoute<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>scully<span class="token punctuation">.</span>available$<span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>
+    <span class="token function">map</span><span class="token punctuation">(</span>routeList <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> routeList<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>route<span class="token operator">:</span> ScullyRoute<span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+        route<span class="token punctuation">.</span>route<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/blog/</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token keyword">private</span> scully<span class="token operator">:</span> ScullyRoutesService<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><p>Wow! That was easy, wasn’t it?
+Now you just need to add a bit of styling and content and your blog is ready for getting visited.</p>
+<h2 id="fetch-dynamic-information-from-an-api">Fetch dynamic information from an API</h2>
+<p>As you may have realized: <em>Scully</em> needs a data source to fetch all dynamic routes in an app.
+In case of our blog example <em>Scully</em> uses the <code>:slug</code> router parameter as a placeholder.
+Scully will fill this placeholder with appropriate content to visit and pre-render the site.
+The content for the placeholder comes in our blog example from the files in the <code>/blog</code> directory.
+This has been configured from the schematics we ran before in the file <code>scully.scully-blog.config.ts</code>:</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> ScullyConfig <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@scullyio/scully'</span><span class="token punctuation">;</span>
+
+<span class="token comment">/** this loads the default render plugin, remove when switching to something else. */</span>
+<span class="token keyword">import</span> <span class="token string">'@scullyio/scully-plugin-puppeteer'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> config<span class="token operator">:</span> ScullyConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  projectRoot<span class="token operator">:</span> <span class="token string">"./src"</span><span class="token punctuation">,</span>
+  projectName<span class="token operator">:</span> <span class="token string">"scully-blog"</span><span class="token punctuation">,</span>
+  outDir<span class="token operator">:</span> <span class="token string">'./dist/static'</span><span class="token punctuation">,</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">'/blog/:slug'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">'contentFolder'</span><span class="token punctuation">,</span>
+      slug<span class="token operator">:</span> <span class="token punctuation">{</span>
+        folder<span class="token operator">:</span> <span class="token string">"./blog"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre><p>I would like to show a second example.
+Imagine we want to display information about books from an external API.
+So our app needs another route called <code>/books/:isbn</code>.
+To visit this route and pre-render it, we need a way to fill the <code>isbn</code> parameter.
+Luckily <em>Scully</em> helps us with this too.
+We can configure <a href="https://scully.io/docs/plugins#router-plugin"><em>Router Plugin</em></a> that will call an API, fetch the data from it and pluck the <code>isbn</code> from the array of results to fill it in the router parameter.</p>
+<p>In the following example we will use the public service <a href="https://api3.angular-buch.com">BookMonkey API</a> (we provide this service for the readers of our <a href="https://angular-buch.com/">German Angular book</a>) as an API to fetch a list of books:</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">/* ... */</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token literal-property property">config</span><span class="token operator">:</span> ScullyConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">/* ... */</span>
+  <span class="token literal-property property">routes</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* ... */</span>
+    <span class="token string-property property">'/books/:isbn'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">'type'</span><span class="token operator">:</span> <span class="token string">'json'</span><span class="token punctuation">,</span>
+      <span class="token string-property property">'isbn'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string-property property">'url'</span><span class="token operator">:</span> <span class="token string">'https://api3.angular-buch.com/books'</span><span class="token punctuation">,</span>
+        <span class="token string-property property">'property'</span><span class="token operator">:</span> <span class="token string">'isbn'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre><p>The result from the API will have this shape:</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"Angular"</span><span class="token punctuation">,</span>
+    <span class="token property">"subtitle"</span><span class="token operator">:</span> <span class="token string">"Grundlagen, fortgeschrittene Themen und Best Practices – mit NativeScript und NgRx"</span><span class="token punctuation">,</span>
+    <span class="token property">"isbn"</span><span class="token operator">:</span> <span class="token string">"9783864906466"</span><span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"Angular"</span><span class="token punctuation">,</span>
+    <span class="token property">"subtitle"</span><span class="token operator">:</span> <span class="token string">"Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript - ab Angular 4, inklusive NativeScript und Redux"</span><span class="token punctuation">,</span>
+    <span class="token property">"isbn"</span><span class="token operator">:</span> <span class="token string">"9783864903571"</span><span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">]</span></code></pre><p>After <em>Scully</em> plucks the ISBN, it will just iterate over the final array: <code>['9783864906466', '9783864903571']</code>.
+In fact, when running <em>Scully</em> using <code>npx scully</code>, it will visit the following routes, <strong>after we have configured the route <code>/books/:isbn</code> in the Angular router</strong> (otherwise non-used routes will be skipped).</p>
+<pre><code><span class="token operator">/</span>books<span class="token operator">/</span><span class="token number">9783864906466</span>
+<span class="token operator">/</span>books<span class="token operator">/</span><span class="token number">9783864903571</span></code></pre><p>We can see the result in the log:</p>
+<pre><code>enable reload on port <span class="token number">2667</span>
+ ☺   <span class="token keyword">new</span> <span class="token class-name">Angular</span> build imported
+ ☺   Started servers <span class="token keyword">in</span> background
+<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
+Watching blog <span class="token keyword">for</span> change<span class="token punctuation">.</span>
+<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
+ ☺   <span class="token keyword">new</span> <span class="token class-name">Angular</span> build imported
+Finding all routes <span class="token keyword">in</span> application<span class="token punctuation">.</span>
+Using stored unhandled routes
+Pull <span class="token keyword">in</span> data to create additional routes<span class="token punctuation">.</span>
+Finding files <span class="token keyword">in</span> folder <span class="token string">"/&lt;path&gt;/blog"</span>
+Route list created <span class="token keyword">in</span> files<span class="token operator">:</span>
+  <span class="token string">"/&lt;path&gt;/src/assets/scully-routes.json"</span><span class="token punctuation">,</span>
+  <span class="token string">"/&lt;path&gt;/dist/static/assets/scully-routes.json"</span><span class="token punctuation">,</span>
+  <span class="token string">"/&lt;path&gt;/dist/scully-blog/assets/scully-routes.json"</span>
+
+Route <span class="token string">"/books/9783864903571"</span> rendered into file<span class="token operator">:</span> <span class="token string">"/&lt;path&gt;/dist/static/books/9783864903571/index.html"</span>
+Route <span class="token string">"/books/9783864906466"</span> rendered into file<span class="token operator">:</span> <span class="token string">"/&lt;path&gt;/dist/static/books/9783864906466/index.html"</span>
+Route <span class="token string">"/blog/12-27-2019-blog"</span> rendered into file<span class="token operator">:</span> <span class="token string">"/&lt;path&gt;/dist/static/blog/12-27-2019-blog/index.html"</span>
+Route <span class="token string">"/blog/first-post"</span> rendered into file<span class="token operator">:</span> <span class="token string">"/&lt;path&gt;/dist/static/blog/first-post/index.html"</span>
+Route <span class="token string">"/"</span> rendered into file<span class="token operator">:</span> <span class="token string">"/&lt;path&gt;/dist/static/index.html"</span>
+
+Generating took <span class="token number">3.3</span> seconds <span class="token keyword">for</span> <span class="token number">7</span> pages<span class="token operator">:</span>
+  That <span class="token keyword">is</span> <span class="token number">2.12</span> pages per second<span class="token punctuation">,</span>
+  or <span class="token number">473</span> milliseconds <span class="token keyword">for</span> each page<span class="token punctuation">.</span>
+
+  Finding routes <span class="token keyword">in</span> the angular app took <span class="token number">0</span> milliseconds
+  Pulling <span class="token keyword">in</span> route<span class="token operator">-</span>data took <span class="token number">26</span> milliseconds
+  Rendering the pages took <span class="token number">2.58</span> seconds</code></pre><p>This is great. We have efficiently pre-rendered normal dynamic content!
+And that was it for today.
+With the shown examples, it's possible to create a full-fledged website with Scully.</p>
+<blockquote>
+<p>Did you know that <strong>this blogpost</strong> and the overall website you are right now reading has also been created using <em>Scully</em>?
+Feel free to check out the sources at:
+<a href="https://github.com/d-koppenhagen/k9n.dev">github.com/d-koppenhagen/k9n.dev</a></p>
+</blockquote>
+<p>If you want to follow all the development steps in detail, check out my provided GitHub repository
+<a href="https://github.com/d-koppenhagen/scully-blog-example">scully-blog-example</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Scully is an awesome tool if you need a pre-rendered Angular SPA where all routes can be accessed immediately without loading the whole app at once.
+This is a great benefit for users as they don’t need to wait until the bunch of JavaScript has been downloaded to their devices.
+Visitors and <strong>search engines</strong> have instantly access to the sites' information.
+Furthermore, <em>Scully</em> offers a way to create very easily a blog and renders all posts written in Markdown.
+It will handle and pre-render dynamic routes by fetching API data from placeholders and visiting every route filled by this placeholder.</p>
+<p>Compared to "classic" pre-rending by using <a href="https://angular.io/guide/universal">Angular Universal</a>, <em>Scully</em> is much easier to use, and it doesn't require you to write a specific flavor of Angular.
+Also, <em>Scully</em> can easily pre-render hybrid Angular apps or Angular apps with plugins like jQuery in comparison to Angular Universal.
+If you want to compare <em>Scully</em> with Angular Universal in detail, check out the blog post from Sam Vloeberghs: <a href="https://samvloeberghs.be/posts/scully-or-angular-universal-what-is-the-difference">Scully or Angular Universal, what is the difference?</a></p>
+<p>If you want to dig a bit deeper into the features <em>Scully</em> offers, check out my <a href="/blog/2020-03-dig-deeper-into-scully-ssg">second article</a>.</p>
+<p><strong>Thank you</strong></p>
+<p>Special thanks go to <a href="https://twitter.com/aaronfrost">Aaron Frost (Frosty ⛄️)</a> from the <em>Scully</em> core team, <a href="https://twitter.com/fmalcher01">Ferdinand Malcher</a> and <a href="https://twitter.com/JohannesHoppe">Johannes Hoppe</a> for revising this article.</p>
+</div><!----></analog-markdown><!----><div _ngcontent-ng-c1123664158="" class="edit-on-github"><a _ngcontent-ng-c1123664158="" target="_blank" rel="noopener noreferrer" href="https://github.com/d-koppenhagen/k9n.dev/edit/main/src/content/blog/2020-01-angular-scully"> Auf GitHub bearbeiten </a></div><!----></section></div></article><!----></ng-component><!----></main><dk-contact _nghost-ng-c2698026132="" ngh="0"><footer _ngcontent-ng-c2698026132="" id="footer"><div _ngcontent-ng-c2698026132="" id="contact" class="inner"><h2 _ngcontent-ng-c2698026132="" class="major">Kontaktieren Sie mich</h2><p _ngcontent-ng-c2698026132=""> Haben Sie Fragen oder Anregungen? Nehmen Sie gern Kontakt mit mir auf! </p><ul _ngcontent-ng-c2698026132="" class="contact"><li _ngcontent-ng-c2698026132="" class="icon solid fa-envelope"><a _ngcontent-ng-c2698026132="" href="mailto:mail@k9n.dev">mail@k9n.dev</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-github"><a _ngcontent-ng-c2698026132="" href="https://github.com/d-koppenhagen">github.com/d-koppenhagen</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-twitter"><a _ngcontent-ng-c2698026132="" href="https://twitter.com/d_koppenhagen">twitter.com/d_koppenhagen</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-linkedin"><a _ngcontent-ng-c2698026132="" href="https://www.linkedin.com/in/d-koppenhagen/">linkedin.com/in/d-koppenhagen</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-xing"><a _ngcontent-ng-c2698026132="" href="https://www.xing.com/profile/Danny_Koppenhagen">xing.com/profile/Danny_Koppenhagen</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-mastodon"><a _ngcontent-ng-c2698026132="" rel="me" href="https://techhub.social/@k9n">https://techhub.social/@k9n</a></li></ul><ul _ngcontent-ng-c2698026132="" class="copyright"><li _ngcontent-ng-c2698026132="">© 2023 by Danny Koppenhagen</li><li _ngcontent-ng-c2698026132="">Design: <a _ngcontent-ng-c2698026132="" href="https://html5up.net">HTML5 UP</a></li><li _ngcontent-ng-c2698026132=""> Vorschläge? Feedback? Bugs? <a _ngcontent-ng-c2698026132="" href="https://github.com/d-koppenhagen/k9n.dev/issues"> Stell ein Issue ein</a>, <a _ngcontent-ng-c2698026132="" href="https://github.com/d-koppenhagen/k9n.dev/pulls">sende mir einen PR</a> oder <a _ngcontent-ng-c2698026132="" routerlink="/contact" href="/contact">kontaktiere mich</a></li></ul></div></footer></dk-contact><!----></dk-root>
+  
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"7":"t0","8":"t1","9":"t2"},"c":{"7":[{"i":"t0","r":1}],"8":[],"9":[{"i":"t2","r":1}]}},{"t":{"3":"t21"},"c":{"3":[]}},{"t":{"5":"t30"},"c":{"5":[{"i":"t30","r":1,"x":2}]}},{"c":{"0":[]}},{"t":{"0":"t20"},"c":{"0":[{"i":"t20","r":1,"t":{"6":"t22","7":"t23","8":"t28","9":"t29","12":"t31","13":"t32"},"c":{"6":[{"i":"t22","r":1}],"7":[{"i":"t23","r":1,"t":{"2":"t24","7":"t25","8":"t26"},"c":{"2":[{"i":"t24","r":1}],"7":[{"i":"t25","r":1,"x":8}],"8":[]}}],"8":[{"i":"t28","r":1,"t":{"1":"t33","2":"t34","3":"t35"},"c":{"1":[{"i":"t33","r":1}],"2":[{"i":"t34","r":1}],"3":[{"i":"t35","r":1}]}}],"9":[{"i":"t29","r":1}],"12":[],"13":[{"i":"t32","r":1}]}}]}},{"c":{"3":[{"i":"c1123664158","r":1}],"5":[]},"t":{"5":"t18"}}]}</script></body></html>

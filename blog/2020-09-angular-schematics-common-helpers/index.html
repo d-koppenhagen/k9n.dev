@@ -1,0 +1,1130 @@
+<!DOCTYPE html><html lang="de"><head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Apple PWA Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-512x512.png">
+    <link href="icons/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Basic Site Information -->
+    <title>k9n.dev | Speed up your Angular schematics development with useful helper functions</title>
+    
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Danny Koppenhagen">
+
+    <!-- Twitter Card -->
+    
+    
+    
+    
+    
+
+    <!-- Open Graph Profile -->
+    
+    
+    
+    
+    <meta property="profile:first_name" content="Danny">
+    <meta property="profile:last_name" content="Koppenhagen">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#e7e7e7">
+    <script type="module" crossorigin="" src="/assets/index-Df54Jxc7.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-WP9uauOz.css">
+  <style ng-app-id="ng">.menu-dark[_ngcontent-ng-c1817153599] {
+  filter: alpha(opacity=90);
+}
+.menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599] {
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.9;
+  margin: 0px 1px;
+}
+.menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599]:hover, .menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599]:focus {
+  background-color: #43485f;
+  box-shadow: inset 0 0 0 2px #5e7959;
+}
+.menu-dark[_ngcontent-ng-c1817153599]:focus    > button[_ngcontent-ng-c1817153599] {
+  box-shadow: inset 0 0 0 2px #ada789;
+}
+@media screen and (max-width: 480px) {
+  .hidden-small[_ngcontent-ng-c1817153599] {
+    visibility: hidden;
+  }
+}</style><style ng-app-id="ng">.header-title[_ngcontent-ng-c2595095079] {
+  background-image: url("/images/bg-triangles.jpg");
+  background-size: cover;
+  font-size: 5em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.2901960784);
+}
+
+.sub-header-title[_ngcontent-ng-c2595095079] {
+  color: #2e3141;
+  font-size: 1.6em !important;
+  margin-bottom: 0.5em;
+  line-height: 1.3 !important;
+}
+
+.sub-header[_ngcontent-ng-c2595095079] {
+  color: #2e3141;
+  font-size: 1.2em;
+}
+
+#banner[_ngcontent-ng-c2595095079] {
+  background-image: url("/images/dk-header.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-color: #fdfdfd;
+  padding: 9em 0 12em 0;
+  animation: _ngcontent-ng-c2595095079_headerFadeIn 3s;
+}
+
+@keyframes _ngcontent-ng-c2595095079_headerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#logo[_ngcontent-ng-c2595095079] {
+  position: absolute;
+  top: 5px;
+}
+
+#logo[_ngcontent-ng-c2595095079]   img[_ngcontent-ng-c2595095079] {
+  width: 70px;
+  animation: _ngcontent-ng-c2595095079_move-to-top 1s ease, _ngcontent-ng-c2595095079_rotate 4s ease 1;
+}
+
+#logo[_ngcontent-ng-c2595095079]:focus, 
+h1[_ngcontent-ng-c2595095079]:focus {
+  outline: 1px solid rgba(185, 167, 167, 0.4);
+}
+
+@keyframes _ngcontent-ng-c2595095079_rotate {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+
+@keyframes _ngcontent-ng-c2595095079_move-to-top {
+  0% {
+    top: 100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #banner[_ngcontent-ng-c2595095079] {
+    background-position: right -200px top;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #banner[_ngcontent-ng-c2595095079] {
+    background-size: contain;
+    padding: 6em 0 10em 0;
+    background-position: right -200px top;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .sub-header[_ngcontent-ng-c2595095079] {
+    font-size: 1em !important;
+    padding-right: 110px;
+  }
+  #banner[_ngcontent-ng-c2595095079] {
+    padding: 6em 0 5em 0;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 3.5em;
+    padding-right: 40vw;
+  }
+  #banner[_ngcontent-ng-c2595095079] {
+    background-size: cover;
+    background-position: right -180px top;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 3em;
+    padding-right: 50vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    opacity: 0.7;
+    font-size: 2.5em;
+    padding-right: 50vw;
+  }
+}</style><style ng-app-id="ng">@media screen and (min-width: 736px) {
+  ul.contact[_ngcontent-ng-c2698026132] {
+    columns: 2;
+    width: 100% !important;
+  }
+}</style><style ng-app-id="ng">.wrapper[_ngcontent-ng-c1123664158] {
+  margin-top: 0;
+}
+
+h1[_ngcontent-ng-c1123664158] {
+  font-size: 1.4em;
+}
+
+.extra-info[_ngcontent-ng-c1123664158] {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.actions[_ngcontent-ng-c1123664158] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.published-at[_ngcontent-ng-c1123664158], 
+.external-links[_ngcontent-ng-c1123664158], 
+.edit-on-github[_ngcontent-ng-c1123664158] {
+  margin: 30px 0;
+}
+
+.published-at[_ngcontent-ng-c1123664158] {
+  height: 50px;
+}
+
+.published-at[_ngcontent-ng-c1123664158] {
+  display: flex;
+  align-items: center;
+  line-height: 1.2em;
+}
+
+.published-at[_ngcontent-ng-c1123664158]   .published-at-link[_ngcontent-ng-c1123664158] {
+  text-decoration: none;
+  border: none;
+  min-width: 120px;
+}
+
+.published-at[_ngcontent-ng-c1123664158]   .published-at-link[_ngcontent-ng-c1123664158]   .published-at-logo[_ngcontent-ng-c1123664158] {
+  padding-right: 20px;
+  max-height: 60px;
+}
+
+.external-article[_ngcontent-ng-c1123664158] {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.extra-section[_ngcontent-ng-c1123664158]   .actions[_ngcontent-ng-c1123664158] {
+  padding-bottom: 10px;
+}
+
+span.image[_ngcontent-ng-c1123664158]    > img.thumbnail[_ngcontent-ng-c1123664158] {
+  max-width: 80px;
+}
+
+@media screen and (max-width: 560px) {
+  .blog-footer[_ngcontent-ng-c1123664158] {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: #2e3141;
+    opacity: 0.9;
+    z-index: 1;
+    padding: 0 35px;
+  }
+  .blog-footer[_ngcontent-ng-c1123664158]    > h2[_ngcontent-ng-c1123664158], 
+   .blog-footer[_ngcontent-ng-c1123664158]   h3[_ngcontent-ng-c1123664158] {
+    display: none;
+  }
+  .blog-footer[_ngcontent-ng-c1123664158]    > ul[_ngcontent-ng-c1123664158] {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .blog-footer[_ngcontent-ng-c1123664158]    > ul[_ngcontent-ng-c1123664158]    > li[_ngcontent-ng-c1123664158] {
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .extra-info[_ngcontent-ng-c1123664158] {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .blog-footer[_ngcontent-ng-c1123664158] {
+    padding: 0 24px;
+  }
+}
+
+.blog-header[_ngcontent-ng-c1123664158]   img[_ngcontent-ng-c1123664158] {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+  border-radius: 1ch;
+  overflow: hidden;
+  box-shadow: 0 3px 2px hsla(0, 0%, 0%, 0.02), 0 7px 5px hsla(0, 0%, 0%, 0.03), 0 13px 10px hsla(0, 0%, 0%, 0.04), 0 22px 18px hsla(0, 0%, 0%, 0.05), 0 42px 33px hsla(0, 0%, 0%, 0.06), 0 100px 80px hsla(0, 0%, 0%, 0.07);
+  margin-bottom: 1rem;
+}</style><meta name="description" content="Angular CLI schematics offer us a way to add, scaffold and update app-related files and modules. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal."><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@d_koppenhagen"><meta name="twitter:creator" content="@d_koppenhagen"><meta name="twitter:title" content="Speed up your Angular schematics development with useful helper functions"><meta name="twitter:description" content="Angular CLI schematics offer us a way to add, scaffold and update app-related files and modules. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal."><meta name="twitter:image" content="https://k9n.dev/images/blog/schematics-helpers/schematics-helpers.jpg"><meta property="og:title" content="Speed up your Angular schematics development with useful helper functions"><meta property="og:description" content="Angular CLI schematics offer us a way to add, scaffold and update app-related files and modules. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal."><meta name="og:image" content="https://k9n.dev/images/blog/schematics-helpers/schematics-helpers.jpg"><meta name="og:url" content="https://k9n.dev/blog/2020-09-angular-schematics-common-helpers"><style ng-app-id="ng">.sticky-navigation[_ngcontent-ng-c1362634168] {
+  position: sticky;
+  right: 0;
+  top: 4rem;
+  font-size: 0.8em;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168] {
+  max-width: 300px;
+  position: absolute;
+  right: 0.7rem;
+  top: 0.5rem;
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.95;
+  margin: 0px 1px;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
+  z-index: 1;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   h2[_ngcontent-ng-c1362634168] {
+  margin: 0.8rem 1.4rem;
+  text-transform: none;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   .cdk-tree[_ngcontent-ng-c1362634168] {
+  list-style: none;
+  padding: 0.8rem;
+  padding-top: 0;
+  display: list-item;
+  font-weight: bold;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   .cdk-tree[_ngcontent-ng-c1362634168]   .cdk-tree-node[_ngcontent-ng-c1362634168] {
+  margin-left: 0.5rem;
+  display: list-item;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   .cdk-tree[_ngcontent-ng-c1362634168]   .cdk-tree-node[_ngcontent-ng-c1362634168]   [aria-level="1"][_ngcontent-ng-c1362634168] {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   .cdk-tree[_ngcontent-ng-c1362634168]   .cdk-tree-node[aria-level="2"][_ngcontent-ng-c1362634168] {
+  font-weight: normal;
+  margin-left: 1rem;
+  list-style: circle;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   button[_ngcontent-ng-c1362634168] {
+  min-width: 2rem;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   button.opened[_ngcontent-ng-c1362634168] {
+  border: none;
+  box-shadow: none;
+  float: right;
+}
+.sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   button.closed[_ngcontent-ng-c1362634168]:hover, .sticky-navigation[_ngcontent-ng-c1362634168]   .right-menu[_ngcontent-ng-c1362634168]   button.closed[_ngcontent-ng-c1362634168]:focus {
+  background-color: #43485f;
+  box-shadow: inset 0 0 0 2px #5e7959;
+}</style></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-HY3CPEEH1Z"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HY3CPEEH1Z');
+      </script>
+  <body id="page-wrapper" class="mat-typography"><!--nghm-->
+    <!-- Angular -->
+    <dk-root ng-version="18.0.0" ngh="5" ng-server-context="ssr-analog"><dk-navbar _nghost-ng-c1817153599="" ngh="0"><nav _ngcontent-ng-c1817153599="" id="navigation" role="navigation" tabindex="0" class="menu-dark"><button _ngcontent-ng-c1817153599="" role="button" aria-label="Menü öffnen" aria-controls="menu" class="burger-menu" aria-expanded="false"><span _ngcontent-ng-c1817153599="" class="hidden-small">Menü</span></button></nav></dk-navbar><dk-header _nghost-ng-c2595095079="" ngh="1"><header _ngcontent-ng-c2595095079="" id="banner"><div _ngcontent-ng-c2595095079="" class="inner"><a _ngcontent-ng-c2595095079="" routerlink="/" aria-label="Zur Startseite" title="Startseite" id="logo" href="/"><img _ngcontent-ng-c2595095079="" src="images/logo_header.png" alt="Logo"></a><h1 _ngcontent-ng-c2595095079="" tabindex="0" aria-label="Textanimation: k9n.dev verändert sich zu 'Koppenhagen' zur Visualisierung des Numeronyms" aria-describedby="about-k9n" class="header-title"><span _ngcontent-ng-c2595095079="">k</span><span _ngcontent-ng-c2595095079="" class="headline-expanded">9</span><!----><!----><span _ngcontent-ng-c2595095079="">n.dev</span><!----></h1><p _ngcontent-ng-c2595095079="" class="sub-header-title">Danny Koppenhagen</p><p _ngcontent-ng-c2595095079="" class="sub-header">Entwickler, IT-Berater, Buchautor</p></div></header></dk-header><main><router-outlet></router-outlet><ng-component _nghost-ng-c1123664158="" ngh="4"><article _ngcontent-ng-c1123664158="" class="wrapper alt"><dk-sticky-navigation _ngcontent-ng-c1123664158="" _nghost-ng-c1362634168="" ngh="2"><div _ngcontent-ng-c1362634168="" role="navigation" aria-label="Navigation: Auf dieser Seite" tabindex="0" class="sticky-navigation"><div _ngcontent-ng-c1362634168="" class="right-menu"><button _ngcontent-ng-c1362634168="" role="button" class="fa closed fa-list-ol" aria-label="Seitennavigation öffnen" aria-expanded="false"></button><!----></div></div></dk-sticky-navigation><div _ngcontent-ng-c1123664158="" class="inner"><h1 _ngcontent-ng-c1123664158="">Speed up your Angular schematics development with useful helper functions</h1><section _ngcontent-ng-c1123664158="" class="blog-header"><img _ngcontent-ng-c1123664158="" alt="" class="adaptive-glass" src="images/blog/schematics-helpers/schematics-helpers.jpg"><!----></section><section _ngcontent-ng-c1123664158="" class="extra-section"><div _ngcontent-ng-c1123664158="" class="extra-info"><span _ngcontent-ng-c1123664158=""><time _ngcontent-ng-c1123664158="" datetime="2001-05-15 19:00">May 19, 2021</time></span><!----><h2 _ngcontent-ng-c1123664158="" class="sub-heading">Stichwörter</h2></div><div _ngcontent-ng-c1123664158="" class="actions"><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular"> Angular </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular CLI"> Angular CLI </button></span><span _ngcontent-ng-c1123664158=""><button _ngcontent-ng-c1123664158="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Schematics"> Schematics </button></span><!----></div><div _ngcontent-ng-c1123664158="" class="published-at"><div _ngcontent-ng-c1123664158=""><a _ngcontent-ng-c1123664158="" class="published-at-link" href="https://indepth.dev/speed-up-your-angular-schematics-development-with-useful-helper-functions" lang="en" aria-label="Original veröffentlicht auf inDepth.dev"><img _ngcontent-ng-c1123664158="" alt="" class="published-at-logo" src="images/InDepthdev-white.svg"><!----></a></div><div _ngcontent-ng-c1123664158=""> Original veröffentlicht auf <a _ngcontent-ng-c1123664158="" href="https://indepth.dev/speed-up-your-angular-schematics-development-with-useful-helper-functions" lang="en">inDepth.dev</a>. </div></div><!----></section><!----><section _ngcontent-ng-c1123664158="" class="external-links"><a _ngcontent-ng-c1123664158="" href="https://dev.to/dkoppenhagen/speed-up-your-angular-schematics-development-with-useful-helper-functions-1kb2" lang="en">Dev.to</a><!----><!----><!----></section><!----><!----><section _ngcontent-ng-c1123664158="" class="blog-content"><analog-markdown _ngcontent-ng-c1123664158="" classes="markdown-content" lang="en" ngh="3"><div class="markdown-content"><p>Angular CLI schematics offer us a way to add, scaffold and update app-related files and modules. However, there are some common things we will probably want integrate in our schematics: updating your <code>package.json</code> file, adding or removing an Angular module or updating component imports.</p>
+<p>Currently, the way of authoring an Angular Schematic is documented <a href="https://angular.io/guide/schematics-authoring">on angular.io</a>.
+However, there is one big thing missing there: the way of integrating typical and repeating tasks.
+The Angular CLI itself uses schematics for e.g. generating modules and components, adding imports or modifying the <code>package.json</code> file.
+Under the hood each of the schematics uses some very common utils which are not yet documented but available for all developers anyway.
+In the past, I've seen some Angular CLI Schematic projects where people were trying to implement almost the same common util methods on their own.
+However, since some of these are already implemented in the Angular CLI, I want to show you some of those typical helpers that you can use for you Angular CLI Schematic project to prevent any pitfalls.</p>
+<h2 id="️-attention-not-officially-supported">⚠️ Attention: not officially supported</h2>
+<p>The helper functions I present you in this article are neither documented nor officially supported, and they may change in the future.
+<a href="https://twitter.com/AlanAgius4">Alan Agius</a>, member of the Angular CLI core team replied in a <a href="https://github.com/angular/angular-cli/issues/15335#issuecomment-660609283">related issue (#15335)</a> for creating a public schematics API reference:</p>
+<blockquote>
+<p>[...] those utils are not considered as part of the public API and might break without warning in any release.</p>
+</blockquote>
+<p>So, there are plans to provide some utilities via a public API but this is still in the planning stage.
+While things evolve, it's my intention to keep this article as up-to-date as possible.</p>
+<blockquote>
+<p>The following Angular CLI schematics util functions are based on the Angular CLI version <code>12.0.0</code>.</p>
+</blockquote>
+<p>If you use these functions and they will break in the future, you can check out the <a href="https://github.com/angular/angular-cli/tree/master/packages/schematics/angular/utility">source code changes</a> for the utility functions and adjust your code.</p>
+<h2 id="-examples-and-playground-on-github">🕹 Examples and playground on GitHub</h2>
+<p>To follow and try out the examples I present you in this article, I <a href="https://github.com/d-koppenhagen/schematics-helpers-playground">prepared a playground repository on GitHub</a>.
+Clone this repo and check out the <code>README.md</code> inside to get started with the playground. 🚀</p>
+<h2 id="create-an-angular-schematics-example-project">Create an Angular schematics example project</h2>
+<p>First things first: We need a project where we can try things out.
+You can either use an existing schematics project or simply create a new blank one:</p>
+<pre class="language-bash"><code class="language-bash">npx @angular-devkit/schematics-cli blank <span class="token parameter variable">--name</span><span class="token operator">=</span>playground</code></pre><blockquote>
+<p>If you are not familar with the basics of authoring schematics, I recommend you to read the <a href="https://angular.io/guide/schematics-authoring">Angular Docs</a> and the <a href="https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4">blog post <em>"Total Guide To Custom Angular schematics"</em> by Tomas Trajan</a> first as well as the <a href="https://indepth.dev/angular-schematics-from-0-to-publishing-your-own-library-i">article series "Angular Schematics from 0 to publishing your own library" by Natalia Venditto</a> first.</p>
+</blockquote>
+<p>After setting up the new blank project we should have this file available: <code>src/playground/index.ts</code>.</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> Rule<span class="token punctuation">,</span> SchematicContext<span class="token punctuation">,</span> Tree <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">playground</span><span class="token punctuation">(</span>_options<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> Rule <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>tree<span class="token operator">:</span> Tree<span class="token punctuation">,</span> _context<span class="token operator">:</span> SchematicContext<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'schematic works'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> tree<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>This is the base for the following examples and explanations.
+Please make sure that you can execute the blank schematic by calling it on the console:</p>
+<pre class="language-bash"><code class="language-bash">npx @angular-devkit/schematics-cli .:playground</code></pre><p>or if you installed the schematics CLI globally via <code>npm i @angular-devkit/schematics-cli</code>:</p>
+<pre class="language-bash"><code class="language-bash">schematics .:playground</code></pre><p>The <code>.</code> refers to the current directory where our schematics project lives.</p>
+<p><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/playground">Check out the basic example in the playground repository on GitHub</a></p>
+<h3 id="basic-types">Basic types</h3>
+<p>In case you are not familiar with the structure of schematics, I will just explain some very basic things shortly:</p>
+<ul>
+<li>A <strong><code>Tree</code></strong> is the structured virtual representation of every file in the workspace which we apply the schematic to.</li>
+<li>A <strong><code>Rule</code></strong> is called with a <code>Tree</code> and a <code>SchematicContext</code>. The <code>Rule</code> is supposed to make changes on the <code>Tree</code> and returns the adjusted <code>Tree</code>.</li>
+<li>The <strong><code>SchematicContext</code></strong> contains information necessary for the schematics to execute some rules.</li>
+</ul>
+<h3 id="install-the-helpers-from-schematicsangular">Install the helpers from <code>@schematics/angular</code></h3>
+<p>A second thing we need to do is to install the package <code>@schematics/angular</code> which contains all the utils we need for the next steps.
+This package contains all the schematics the Angular CLI uses by itself when running commands like <code>ng generate</code> or <code>ng new</code> etc.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> i <span class="token parameter variable">--save</span> @schematics/angular</code></pre><h2 id="changing-the-packagejson-get-add-and-remove-dev--peer--dependencies">Changing the <code>package.json</code>: Get, Add and Remove (dev-, peer-) dependencies</h2>
+<p>A very common thing when authoring a schematic is adding a dependency to the <code>package.json</code> file.
+Of course, we can implement a function that parses and writes to/from our JSON file.
+But why should we solve a problem that's already solved?</p>
+<p>For this, we can use the functions provided by <code>@schematics/angular/utility/dependencies</code> to handle dependency operations.
+The function <code>addPackageJsonDependency()</code> allows us to add a dependency object of type <code>NodeDependency</code> to the <code>package.json</code> file.
+The property <code>type</code> must contain a value of the <code>NodeDependencyType</code> enum.
+Its values represent the different sections of a <code>package.json</code> file:</p>
+<ul>
+<li><code>dependencies</code>,</li>
+<li><code>devDependencies</code>,</li>
+<li><code>peerDependencies</code> and</li>
+<li><code>optionalDependencies</code>.</li>
+</ul>
+<p>The first parameter to this util function is the <code>Tree</code> with all its files.
+The function will not just append the dependency to the appropriate section, it will also insert the dependency at the right position, so that the dependencies list is ordered ascending by its keys.</p>
+<p>We can use the <code>getPackageJsonDependency()</code> function to request the dependency configuration as a <code>NodeDependency</code> object.
+The good thing here is: We don't need to know in which of the sections a dependency is located. It will look up the dependency in sections of the <code>package.json</code> file: <code>dependencies</code>, <code>devDependencies</code>, <code>peerDependencies</code> and <code>optionalDependencies</code>.</p>
+<p>The third function I want to show is <code>removePackageJsonDependency()</code>.
+Just like <code>getPackageJsonDependency()</code>, it can be called with a <code>Tree</code> and the package name and it will remove this dependency from the <code>package.json</code> file.</p>
+<p>By default, all these functions will use the <code>package.json</code> file in the root of the tree, but we can pass a third parameter containing a specific path to another <code>package.json</code> file.</p>
+<p>Last but not least we don't want our users to manually run <code>npm install</code> on the console after adding dependencies.
+Therefore, we can add a new <code>NodePackageInstallTask</code> via the <code>addTask</code> method on our <code>context</code>.</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> Rule<span class="token punctuation">,</span> SchematicContext<span class="token punctuation">,</span> Tree <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NodePackageInstallTask <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics/tasks'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  NodeDependency<span class="token punctuation">,</span>
+  NodeDependencyType<span class="token punctuation">,</span>
+  getPackageJsonDependency<span class="token punctuation">,</span>
+  addPackageJsonDependency<span class="token punctuation">,</span>
+  removePackageJsonDependency<span class="token punctuation">,</span>
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@schematics/angular/utility/dependencies'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">playground</span><span class="token punctuation">(</span>_options<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> Rule <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>tree<span class="token operator">:</span> Tree<span class="token punctuation">,</span> context<span class="token operator">:</span> SchematicContext<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> dep<span class="token operator">:</span> NodeDependency <span class="token operator">=</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> NodeDependencyType<span class="token punctuation">.</span>Dev<span class="token punctuation">,</span>
+      name<span class="token operator">:</span> <span class="token string">'moment'</span><span class="token punctuation">,</span>
+      version<span class="token operator">:</span> <span class="token string">'~2.27.0'</span><span class="token punctuation">,</span>
+      overwrite<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token function">addPackageJsonDependency</span><span class="token punctuation">(</span>tree<span class="token punctuation">,</span> dep<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">getPackageJsonDependency</span><span class="token punctuation">(</span>tree<span class="token punctuation">,</span> <span class="token string">'moment'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment">// { type: 'devDependencies', name: 'moment', version: '~2.27.0' }</span>
+
+    <span class="token function">removePackageJsonDependency</span><span class="token punctuation">(</span>tree<span class="token punctuation">,</span> <span class="token string">'protractor'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">getPackageJsonDependency</span><span class="token punctuation">(</span>tree<span class="token punctuation">,</span> <span class="token string">'protractor'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment">// null</span>
+
+    context<span class="token punctuation">.</span><span class="token function">addTask</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">NodePackageInstallTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> tree<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>To really check that the <code>NodePackageInstallTask</code> is properly executed, you need to disable the schematics debug mode that's enabled by default during development and local execution:</p>
+<pre class="language-bash"><code class="language-bash">schematics .:playground <span class="token parameter variable">--debug</span><span class="token operator">=</span>false</code></pre><ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/dependencies.ts">Check out the implementation of the dependency operations in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/dependencies">Check out the examples in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="add-content-on-a-specific-position">Add content on a specific position</h2>
+<p>Sometimes we need to change some contents of a file.
+Independently of the type of a file, we can use the <code>InsertChange</code> class.
+This class returns a change object which contains the content to be added and the position where the change is being inserted.</p>
+<p>In the following example we will create a new file called <code>my-file.extension</code> with the content <code>const a = 'foo';</code> inside the virtual tree.
+First, we will instantiate a new <code>InsertChange</code> with the file path, the position where we want to add the change and finally the content we want to add.
+The next step for us is to start the update process for the file using the <code>beginUpdate()</code> method on our tree.
+This method returns an object of type <code>UpdateRecorder</code>.
+We can now use the <code>insertLeft()</code> method and hand over the position and the content (<code>toAdd</code>) from the <code>InsertChange</code>.
+The change is now marked but not proceeded yet.
+To really update the file's content we need to call the <code>commitUpdate()</code> method on our tree with the <code>exportRecorder</code>.
+When we now call <code>tree.get(filePath)</code> we can log the file's content and see that the change has been proceeded.
+To delete a file inside the virtual tree, we can use the <code>delete()</code> method with the file path on the tree.</p>
+<p>Let's have a look at an implementation example:</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> Rule<span class="token punctuation">,</span> SchematicContext<span class="token punctuation">,</span> Tree <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics/'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> InsertChange <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@schematics/angular/utility/change'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">playground</span><span class="token punctuation">(</span>_options<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> Rule <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>tree<span class="token operator">:</span> Tree<span class="token punctuation">,</span> _context<span class="token operator">:</span> SchematicContext<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> filePath <span class="token operator">=</span> <span class="token string">'my-file.extension'</span><span class="token punctuation">;</span>
+    tree<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">const a = 'foo';</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// insert a new change</span>
+    <span class="token keyword">const</span> insertChange <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">InsertChange</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token string">'\nconst b = \'bar\';'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> exportRecorder <span class="token operator">=</span> tree<span class="token punctuation">.</span><span class="token function">beginUpdate</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    exportRecorder<span class="token punctuation">.</span><span class="token function">insertLeft</span><span class="token punctuation">(</span>insertChange<span class="token punctuation">.</span>pos<span class="token punctuation">,</span> insertChange<span class="token punctuation">.</span>toAdd<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    tree<span class="token punctuation">.</span><span class="token function">commitUpdate</span><span class="token punctuation">(</span>exportRecorder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>tree<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token operator">?.</span>content<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment">// const a = 'foo';</span>
+    <span class="token comment">// const b = 'bar';</span>
+
+    tree<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// cleanup (if not running schematic in debug mode)</span>
+    <span class="token keyword">return</span> tree<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/change.ts">Check out the implementation for <code>InsertChange</code> in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/insert">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="determine-relative-path-to-the-project-root">Determine relative path to the project root</h2>
+<p>You might want to determine the relative path to your project root e.g. for using it in a template you want to apply in some location of your application.
+To determine the correct relative import path string for the target, you can use the helper function <code>relativePathToWorkspaceRoot()</code>.</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span>
+  Rule<span class="token punctuation">,</span>
+  SchematicContext<span class="token punctuation">,</span>
+  Tree<span class="token punctuation">,</span>
+  url<span class="token punctuation">,</span>
+  apply<span class="token punctuation">,</span>
+  template<span class="token punctuation">,</span>
+  mergeWith
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics/'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> relativePathToWorkspaceRoot <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@schematics/angular/utility/paths'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">playground</span><span class="token punctuation">(</span>_options<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> Rule <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>_tree<span class="token operator">:</span> Tree<span class="token punctuation">,</span> _context<span class="token operator">:</span> SchematicContext<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> nonRootPathDefinition <span class="token operator">=</span> <span class="token string">'foo/bar/'</span><span class="token punctuation">;</span> <span class="token comment">// "./foo/bar" | "foo/bar/" work also</span>
+    <span class="token keyword">const</span> rootPathDefinition <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span> <span class="token comment">// "." | "./" work also</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">relativePathToWorkspaceRoot</span><span class="token punctuation">(</span>nonRootPathDefinition<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// "../.."</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">relativePathToWorkspaceRoot</span><span class="token punctuation">(</span>rootPathDefinition<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// "."</span>
+
+    <span class="token keyword">const</span> sourceTemplates <span class="token operator">=</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'./files'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">mergeWith</span><span class="token punctuation">(</span>
+      <span class="token function">apply</span><span class="token punctuation">(</span>
+        sourceTemplates<span class="token punctuation">,</span> <span class="token punctuation">[</span>
+          <span class="token function">template</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            relativePathToWorkspaceRoot<span class="token operator">:</span> <span class="token function">relativePathToWorkspaceRoot</span><span class="token punctuation">(</span>nonRootPathDefinition<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>If you have e.g. a JSON file template in the directory <code>files</code> and you want to insert the path, you can use the helper function in the template as follows:</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"foo"</span><span class="token operator">:</span> <span class="token string">"&lt;%= relativePathToWorkspaceRoot %&gt;/my-file-ref.json"</span>
+<span class="token punctuation">}</span></code></pre><p>For more details about how to use and apply templates in your own schematics, check out the <a href="https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4">blog post by Tomas Trajan: <em>"Total Guide To Custom Angular schematics"</em></a> and the <a href="https://indepth.dev/angular-schematics-from-0-to-publishing-your-own-library-i">article series <em>"Angular Schematics from 0 to publishing your own library"</em> by Natalia Venditto</a>.</p>
+<ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/paths.ts">Check out the implementation for <code>relativePathToWorkspaceRoot()</code> in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/relative-path">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="add-typescript-imports">Add TypeScript imports</h2>
+<p>In the previous section we learned how to add content to some file.
+However, this way for changing a file isn't the best and only works well when we know the exact position where to add some content.
+Now imagine a user changes the format of the file before: This would lead to problems with finding the correct file position.</p>
+<p>In many cases we want to modify TypeScript files and insert code into them.
+And indeed there are also lots of utils that will help us to manage such operations.</p>
+<p>Imagine you want the schematic to import the class <code>Bar</code> in a specific file from the file <code>bar.ts</code>;
+You could simply add the whole import line but there are edge cases:
+What if the target file already contains an import or even a default import from <code>bar.ts</code>.
+In that case we would have multiple import lines for <code>bar.ts</code> which causes problems.</p>
+<p>Luckily there is another great helper that takes care of adding imports or updating existing ones.
+The function <code>insertImport()</code> needs the source file to update and the path to the file followed by the import name and the file path for the import to be added.
+The last parameter is optional – if set to <code>true</code>, the import will be added as a default import.</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> ts <span class="token keyword">from</span> <span class="token string">'typescript'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Rule<span class="token punctuation">,</span> SchematicContext<span class="token punctuation">,</span> Tree <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics/'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> insertImport <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@schematics/angular/utility/ast-utils'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> InsertChange <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@schematics/angular/utility/change'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">playground</span><span class="token punctuation">(</span>_options<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> Rule <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>tree<span class="token operator">:</span> Tree<span class="token punctuation">,</span> _context<span class="token operator">:</span> SchematicContext<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> filePath <span class="token operator">=</span> <span class="token string">'some-file.ts'</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> fileContent <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">import { Foo } from 'foo';
+const bar = 'bar;
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    tree<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span> fileContent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> source <span class="token operator">=</span> ts<span class="token punctuation">.</span><span class="token function">createSourceFile</span><span class="token punctuation">(</span>
+      filePath<span class="token punctuation">,</span>
+      fileContent<span class="token punctuation">,</span>
+      ts<span class="token punctuation">.</span>ScriptTarget<span class="token punctuation">.</span>Latest<span class="token punctuation">,</span>
+      <span class="token boolean">true</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> updateRecorder <span class="token operator">=</span> tree<span class="token punctuation">.</span><span class="token function">beginUpdate</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> change <span class="token operator">=</span> <span class="token function">insertImport</span><span class="token punctuation">(</span>source<span class="token punctuation">,</span> filePath<span class="token punctuation">,</span> <span class="token string">'Bar'</span><span class="token punctuation">,</span> <span class="token string">'./bar'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>change <span class="token keyword">instanceof</span> <span class="token class-name">InsertChange</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      updateRecorder<span class="token punctuation">.</span><span class="token function">insertRight</span><span class="token punctuation">(</span>change<span class="token punctuation">.</span>pos<span class="token punctuation">,</span> change<span class="token punctuation">.</span>toAdd<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    tree<span class="token punctuation">.</span><span class="token function">commitUpdate</span><span class="token punctuation">(</span>updateRecorder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>tree<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token operator">?.</span>content<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> tree<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>The example above will add the content <code>import Bar from './bar';</code> right before the constant.
+As we marked it as default import, the import name is not put in curly braces (<code>{ }</code>).</p>
+<ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/change.ts">Check out the implementation for <code>insertImport()</code> in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/import">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="update-ngmodule">Update <code>NgModule</code></h2>
+<p>Now we know how we can modify TypeScript imports using the util functions.
+However, just importing something isn't enough in most cases.
+There are common things like importing a component and adding it to the <code>NgModule</code> in the <code>declarations</code> array or inserting a module in the <code>imports</code> section.
+Luckily, there are some helpers provided for these operations.
+These function also based on the <code>insertImport()</code> function, so that they will handle existing file imports and just update the import lists accordingly.</p>
+<h3 id="add-a-declaration-to-a-module">Add a declaration to a module</h3>
+<p>The first thing I want to show you is how you can add a component to the <code>declarations</code> of an <code>NgModule</code>.
+For this, let's assume you create a schematic that adds a new <code>DashboardComponent</code> to your project.
+You don't need to add the import manually and then determine the right place to insert the component to the <code>declarations</code> of the <code>NgModule</code>.
+Instead, you can use the <code>addDeclarationToModule()</code> function exported from <code>@schematics/angular/utility/ast-utils</code>.</p>
+<p>In the following example we will create an <code>AppModule</code> from the <code>moduleContent</code> using <code>ts.createSourceFile()</code> first.
+Then we will register the <code>updateRecorder</code> as learned in the examples before.
+Now we call the <code>addDeclarationToModule()</code> function with the source file and the module path followed by the name of the component we want to import and the relative path to the module where we can find the component.
+As a result it returns us an array of <code>Change</code> objects that contain the positions and the contents for the change.
+Finally, we can handle these changes one-by-one by iterating over the array.
+For all changes of type <code>InsertChange</code> we can now call the method <code>updateRecorder.insertleft()</code> with the position of the change and the content to be added.</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> ts <span class="token keyword">from</span> <span class="token string">'typescript'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Rule<span class="token punctuation">,</span> SchematicContext<span class="token punctuation">,</span> Tree <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics/'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> addDeclarationToModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@schematics/angular/utility/ast-utils'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> InsertChange <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@schematics/angular/utility/change'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">playground</span><span class="token punctuation">(</span>_options<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> Rule <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>tree<span class="token operator">:</span> Tree<span class="token punctuation">,</span> _context<span class="token operator">:</span> SchematicContext<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> modulePath <span class="token operator">=</span> <span class="token string">'app.module.ts'</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> moduleContent <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    tree<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>modulePath<span class="token punctuation">,</span> moduleContent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> source <span class="token operator">=</span> ts<span class="token punctuation">.</span><span class="token function">createSourceFile</span><span class="token punctuation">(</span>
+      modulePath<span class="token punctuation">,</span>
+      moduleContent<span class="token punctuation">,</span>
+      ts<span class="token punctuation">.</span>ScriptTarget<span class="token punctuation">.</span>Latest<span class="token punctuation">,</span>
+      <span class="token boolean">true</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> updateRecorder <span class="token operator">=</span> tree<span class="token punctuation">.</span><span class="token function">beginUpdate</span><span class="token punctuation">(</span>modulePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> changes <span class="token operator">=</span> <span class="token function">addDeclarationToModule</span><span class="token punctuation">(</span>
+      source<span class="token punctuation">,</span>
+      modulePath<span class="token punctuation">,</span>
+      <span class="token string">'DashboardComponent'</span><span class="token punctuation">,</span>
+      <span class="token string">'./dashboard.component'</span>
+    <span class="token punctuation">)</span> <span class="token keyword">as</span> InsertChange<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> change <span class="token keyword">of</span> changes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>change <span class="token keyword">instanceof</span> <span class="token class-name">InsertChange</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        updateRecorder<span class="token punctuation">.</span><span class="token function">insertLeft</span><span class="token punctuation">(</span>change<span class="token punctuation">.</span>pos<span class="token punctuation">,</span> change<span class="token punctuation">.</span>toAdd<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    tree<span class="token punctuation">.</span><span class="token function">commitUpdate</span><span class="token punctuation">(</span>updateRecorder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>tree<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>modulePath<span class="token punctuation">)</span><span class="token operator">?.</span>content<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> tree<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>When we execute this schematic now, we can see in the log that the following import line has been added to the file:</p>
+<pre class="language-ts"><code class="language-ts"><span class="token comment">/* ... */</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> DashboardComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./dashboard.component'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">NgModule</span></span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  declarations<span class="token operator">:</span> <span class="token punctuation">[</span>
+    AppComponent<span class="token punctuation">,</span>
+    DashboardComponent
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token comment">/* ... */</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span></code></pre><h3 id="ngmodule-add-imports-exports-providers-and-bootstrap"><code>NgModule</code>: add <code>imports</code>, <code>exports</code>, <code>providers</code>, and <code>bootstrap</code></h3>
+<p>Similar to the previous example we can re-export something we imported by using the <code>addExportToModule()</code> function and adding an import to the <code>NgModule</code> by using <code>addImportToModule()</code>.
+We can also modify the <code>providers</code>, and <code>bootstrap</code> arrays by using  <code>addProviderToModule()</code> and  <code>addBootstrapToModule()</code>.
+Again, it will take care of all the things necessary such as extending and creating imports, checking for existing entries in the <code>NgModule</code> metadata and much more.</p>
+<pre class="language-ts"><code class="language-ts"><span class="token comment">/* ... */</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  addImportToModule<span class="token punctuation">,</span>
+  addExportToModule<span class="token punctuation">,</span>
+  addProviderToModule<span class="token punctuation">,</span>
+  addBootstrapToModule
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@schematics/angular/utility/ast-utils'</span><span class="token punctuation">;</span>
+<span class="token comment">/* ... */</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">playground</span><span class="token punctuation">(</span>_options<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> Rule <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>tree<span class="token operator">:</span> Tree<span class="token punctuation">,</span> _context<span class="token operator">:</span> SchematicContext<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* ... */</span>
+    <span class="token keyword">const</span> exportChanges <span class="token operator">=</span> <span class="token function">addExportToModule</span><span class="token punctuation">(</span>
+      source<span class="token punctuation">,</span>
+      modulePath<span class="token punctuation">,</span>
+      <span class="token string">'FooModule'</span><span class="token punctuation">,</span>
+      <span class="token string">'./foo.module'</span>
+    <span class="token punctuation">)</span> <span class="token keyword">as</span> InsertChange<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> importChanges <span class="token operator">=</span> <span class="token function">addImportToModule</span><span class="token punctuation">(</span>
+      source<span class="token punctuation">,</span>
+      modulePath<span class="token punctuation">,</span>
+      <span class="token string">'BarModule'</span><span class="token punctuation">,</span>
+      <span class="token string">'./bar.module'</span>
+    <span class="token punctuation">)</span> <span class="token keyword">as</span> InsertChange<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> providerChanges <span class="token operator">=</span> <span class="token function">addProviderToModule</span><span class="token punctuation">(</span>
+      source<span class="token punctuation">,</span>
+      modulePath<span class="token punctuation">,</span>
+      <span class="token string">'MyProvider'</span><span class="token punctuation">,</span>
+      <span class="token string">'./my-provider.ts'</span>
+    <span class="token punctuation">)</span> <span class="token keyword">as</span> InsertChange<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> bootstrapChanges <span class="token operator">=</span> <span class="token function">addBootstrapToModule</span><span class="token punctuation">(</span>
+      source<span class="token punctuation">,</span>
+      modulePath<span class="token punctuation">,</span>
+      <span class="token string">'MyComponent'</span><span class="token punctuation">,</span>
+      <span class="token string">'./my.component.ts'</span>
+    <span class="token punctuation">)</span> <span class="token keyword">as</span>  InsertChange<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">/* ... */</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>tree<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>modulePath<span class="token punctuation">)</span><span class="token operator">?.</span>content<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> tree<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>Our result will now look like this:</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> AppComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./app.component'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> FooModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./foo.module'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> BarModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./bar.module'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> MyProvider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./my-provider.ts'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> MyComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./my.component.ts'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> BazComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./baz.component.ts'</span><span class="token punctuation">;</span>
+
+<span class="token decorator"><span class="token at operator">@</span><span class="token function">NgModule</span></span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  declarations<span class="token operator">:</span> <span class="token punctuation">[</span>
+    AppComponent
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  imports<span class="token operator">:</span> <span class="token punctuation">[</span>
+    BrowserModule<span class="token punctuation">,</span>
+    BarModule
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span>MyProvider<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  bootstrap<span class="token operator">:</span> <span class="token punctuation">[</span>MyComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  exports<span class="token operator">:</span> <span class="token punctuation">[</span>FooModule<span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span></code></pre><h3 id="add-route-declarations">Add route declarations</h3>
+<p>Let's have a look at another common scenario: We want our schematic to insert a route definition to a module that calls <code>RouterModule.forRoot()</code> or <code>.forChild()</code> with a route definition array.
+For this, we can use the helper function <code>addRouteDeclarationToModule()</code> which returns a <code>Change</code> object which we need to handle as an <code>InsertChange</code>.</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> ts <span class="token keyword">from</span> <span class="token string">'typescript'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Rule<span class="token punctuation">,</span> SchematicContext<span class="token punctuation">,</span> Tree <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics/'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> addRouteDeclarationToModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@schematics/angular/utility/ast-utils'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> InsertChange <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@schematics/angular/utility/change'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">playground</span><span class="token punctuation">(</span>_options<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> Rule <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>tree<span class="token operator">:</span> Tree<span class="token punctuation">,</span> _context<span class="token operator">:</span> SchematicContext<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> modulePath <span class="token operator">=</span> <span class="token string">'my-routing.module.ts'</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> moduleContent <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">import { NgModule } from '@angular/core';
+
+    const myRoutes = [
+      { path: 'foo', component: FooComponent }
+    ];
+
+    @NgModule({
+      imports: [
+        RouterModule.forChild(myRoutes)
+      ],
+    })
+    export class MyRoutingModule { }
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    tree<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>modulePath<span class="token punctuation">,</span> moduleContent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> source <span class="token operator">=</span> ts<span class="token punctuation">.</span><span class="token function">createSourceFile</span><span class="token punctuation">(</span>
+      modulePath<span class="token punctuation">,</span>
+      moduleContent<span class="token punctuation">,</span>
+      ts<span class="token punctuation">.</span>ScriptTarget<span class="token punctuation">.</span>Latest<span class="token punctuation">,</span>
+      <span class="token boolean">true</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> updateRecorder <span class="token operator">=</span> tree<span class="token punctuation">.</span><span class="token function">beginUpdate</span><span class="token punctuation">(</span>modulePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> change <span class="token operator">=</span> <span class="token function">addRouteDeclarationToModule</span><span class="token punctuation">(</span>
+      source<span class="token punctuation">,</span>
+      <span class="token string">'./src/app'</span><span class="token punctuation">,</span>
+      <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">{ path: 'bar', component: BarComponent }</span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">)</span> <span class="token keyword">as</span> InsertChange<span class="token punctuation">;</span>
+    updateRecorder<span class="token punctuation">.</span><span class="token function">insertLeft</span><span class="token punctuation">(</span>change<span class="token punctuation">.</span>pos<span class="token punctuation">,</span> change<span class="token punctuation">.</span>toAdd<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    tree<span class="token punctuation">.</span><span class="token function">commitUpdate</span><span class="token punctuation">(</span>updateRecorder<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>tree<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>modulePath<span class="token punctuation">)</span><span class="token operator">?.</span>content<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> tree<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>The example above will insert the route definition object <code>{ path: 'bar', component: BarComponent }</code> into the <code>myRoutes</code> array by finding the variable associated in <code>forRoot()</code> or <code>forChild()</code>.</p>
+<ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/ast-utils.ts">Check out the implementation for ast-utils in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/module">Check out the examples for module operations in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="retrieve-the-angular-workspace-configuration">Retrieve the Angular workspace configuration</h2>
+<p>Each Angular app lives in an Angular workspace containing an <code>angular.json</code> configuration file.
+If we want to get either the path to the workspace configuration file or the configuration from the file itself, we can use the <code>getWorkspacePath()</code> and <code>getWorkspace()</code> functions by passing in the current <code>Tree</code> object.</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> Rule<span class="token punctuation">,</span> SchematicContext<span class="token punctuation">,</span> Tree <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getWorkspacePath<span class="token punctuation">,</span> getWorkspace <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@schematics/angular/utility/config'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">playground</span><span class="token punctuation">(</span>_options<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> Rule <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>tree<span class="token operator">:</span> Tree<span class="token punctuation">,</span> _context<span class="token operator">:</span> SchematicContext<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// returns the path to the Angular configuration file</span>
+    <span class="token comment">// ('/angular.json' or probably `.angular.json` for older Angular projects)</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">getWorkspacePath</span><span class="token punctuation">(</span>tree<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// returns the whole configuration object from the 'angular.json' file</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token function">getWorkspace</span><span class="token punctuation">(</span>tree<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>To try out things locally, we need to execute the schematics from an Angular app root path on our system.
+To do so, navigate into an existing Angular app or create a new one for testing purposes.
+Then, execute the schematic from there by using the relative path to the <code>src/collection.json</code> file and adding the schematic name after the colon (<code>:</code>).</p>
+<pre class="language-bash"><code class="language-bash">ng new some-test-project <span class="token parameter variable">--routing</span>  <span class="token comment"># create a new test project</span>
+<span class="token builtin class-name">cd</span> some-test-project      <span class="token comment"># be sure to be in the root of the angular project</span>
+<span class="token comment"># assume the schematics project itself is located relatively to the angular project in '../playground'</span>
+schematics <span class="token punctuation">..</span>/playground/src/collection.json:playground <span class="token comment"># execute the 'playground' schematic</span></code></pre><ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/config.ts">Check out the implementation in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/config">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="get-default-path-for-an-app-inside-the-workspace">Get default path for an app inside the workspace</h2>
+<p>An Angular workspace can contain multiple applications or libraries.
+To find their appropriate main paths, you can use the helper function <code>createDefaultPath()</code>.
+We need to pass in the <code>Tree</code> object and the name of the app or library we want to get the path for.</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> Rule<span class="token punctuation">,</span> SchematicContext<span class="token punctuation">,</span> Tree <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createDefaultPath <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@schematics/angular/utility/workspace'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">playground</span><span class="token punctuation">(</span>_options<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> Rule <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">async</span> <span class="token punctuation">(</span>tree<span class="token operator">:</span> Tree<span class="token punctuation">,</span> _context<span class="token operator">:</span> SchematicContext<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> defaultPath <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">createDefaultPath</span><span class="token punctuation">(</span>tree<span class="token punctuation">,</span> <span class="token string">'my-lib'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>defaultPath<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// '/projects/my-lib/src/lib'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>Let's create a new library inside our testing Angular app called <code>my-lib</code>, to try it out:</p>
+<pre class="language-bash"><code class="language-bash">ng g lib my-lib  <span class="token comment"># create a new library inside the Angular workspace</span>
+<span class="token comment"># assume the schematics project itself is located relatively to the angular project in '../playground'</span>
+schematics <span class="token punctuation">..</span>/playground/src/collection.json:playground <span class="token comment"># execute the 'playground' schematic</span></code></pre><ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/workspace.ts">Check out the implementation for <code>createDefaultPath()</code> in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/worksapce">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="call-schematics-from-schematics">Call schematics from schematics</h2>
+<p>If you run a schematic, you may come to the point where one schematic should execute another one.
+For example: You create schematics for generating a specific component.
+You also develop a <code>ng add</code> or <code>ng new</code> schematic to set up things for you and create an example component by default.
+In such cases you may want to combine multiple schematics.</p>
+<h3 id="run-local-schematics-using-the-runschematictask">Run local schematics using the <code>RunSchematicTask</code></h3>
+<p>First we want to use the <code>RunSchematicTask</code> class to achieve our goal.
+Let's say we have a collection file like the following:</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"$schema"</span><span class="token operator">:</span> <span class="token string">"../node_modules/@angular-devkit/schematics/collection-schema.json"</span><span class="token punctuation">,</span>
+  <span class="token property">"schematics"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"ng-add"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Demo that calls the 'playground' schematic inside"</span><span class="token punctuation">,</span>
+      <span class="token property">"factory"</span><span class="token operator">:</span> <span class="token string">"./ng-add/index#ngAdd"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"playground"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"An example schematic."</span><span class="token punctuation">,</span>
+      <span class="token property">"factory"</span><span class="token operator">:</span> <span class="token string">"./playground/index#playground"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><p>The factory for <code>ng-add</code> is located in <code>src/ng-add/index.ts</code>.
+Then inside this schematic we can call a new <code>RunSchematicTask</code> with the name of the schematic we want to execute and the project name from the Angular workspace.
+To really execute the operation we need to pass the task to the <code>context</code>.</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> Rule<span class="token punctuation">,</span> SchematicContext<span class="token punctuation">,</span> Tree <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> RunSchematicTask <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics/tasks'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">ngAdd</span><span class="token punctuation">(</span>_options<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> Rule <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>tree<span class="token operator">:</span> Tree<span class="token punctuation">,</span> _context<span class="token operator">:</span> SchematicContext<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    context<span class="token punctuation">.</span><span class="token function">addTask</span><span class="token punctuation">(</span>
+      <span class="token keyword">new</span> <span class="token class-name">RunSchematicTask</span><span class="token punctuation">(</span><span class="token string">'playground'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> project<span class="token operator">:</span> <span class="token string">'test-workspace'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> tree<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>To check if it works we can fill our playground (<code>src/playground/index.ts</code>) schematic as follows and log the call:</p>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> Rule<span class="token punctuation">,</span> SchematicContext<span class="token punctuation">,</span> Tree <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">playground</span><span class="token punctuation">(</span>_options<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span><span class="token operator">:</span> Rule <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>tree<span class="token operator">:</span> Tree<span class="token punctuation">,</span> _context<span class="token operator">:</span> SchematicContext<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'schematic \'playground\' called'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> tree<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>If we now run <code>schematics ../playground/src/collection.json:ng-add --debug=false</code> from our example Angular project, we can see that the <code>ng-add</code> schematic has called the <code>playground</code> schematic.</p>
+<p>With this knowledge you can define small atomic schematics that can be executed "standalone" or from another Schematic that combines multiple standalone schematics and calls them with specific parameters.</p>
+<ul>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/ng-add">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h3 id="run-schematics-by-using-the-schematic-and-externalschematic-function">Run schematics by using the <code>schematic()</code> and <code>externalSchematic()</code> function</h3>
+<p>Perfect, we can now execute and combine our schematics.
+But what if we want to combine external schematics developed by others and integrate them in our own schematics?
+Users are lazy, so we don't want to leave it up to them to manually execute some other things before running our schematics.</p>
+<p>Imagine you are working in a big company with multiple different Angular projects.
+This company already has its own standardized UI library, but all the applications are very different and ran by different teams (so not really a use case for a Monorepo).
+However, there are also things they all have in common like a Single Sign-On.
+Also, the basic design always looks similar – at least the header and the footer of all the apps.</p>
+<p>I've often seen companies building a reference implementation for such apps that's then cloned / copied and adjusted by all developers.
+However, there are some problems with this kind of workflow:</p>
+<ul>
+<li>You always have to keep the reference project up-to-date.</li>
+<li>You have to clean up your copy of the project from stuff you don't need.</li>
+<li>You need to tell all teams to copy this reference to keep track of changes and to adjust their copies frequently.</li>
+</ul>
+<p>Thus, a better solution in my opinion is to use schematics for the whole integration and upgrade workflow.
+You can create an <code>ng new</code> schematic that will scaffold the whole project code for you.
+But you don't want to start from scratch, so you probably want to combine things like these:</p>
+<ul>
+<li><code>ng add</code>: Add your schematics to an existing project<ul>
+<li>Corporate UI library (always)</li>
+<li>Single Sign-On (optional)</li>
+<li>Header Component (optional)</li>
+<li>Footer Component (optional)</li>
+</ul>
+</li>
+<li><code>ng new</code>: Create a new project with your company defaults<ul>
+<li>Create the basic application generated by the Angular CLI (<strong><code>externalSchematic</code></strong>)</li>
+<li>Run the <code>ng add</code> Schematic</li>
+</ul>
+</li>
+</ul>
+<p>Alright, we already know how we can achieve most of these things.
+However, there's one thing we haven't learned yet: How to run other (external) schematics?
+We can use the <code>externalSchematic</code> function for this.</p>
+<p>But first things first, let's check if our collection file is ready to start:</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"$schema"</span><span class="token operator">:</span> <span class="token string">"../node_modules/@angular-devkit/schematics/collection-schema.json"</span><span class="token punctuation">,</span>
+  <span class="token property">"schematics"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"ng-add"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Call other schematics from the same or other packages"</span><span class="token punctuation">,</span>
+      <span class="token property">"factory"</span><span class="token operator">:</span> <span class="token string">"./ng-add/index#playground"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"ng-new"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Execute `ng new` with predefined options and run other stuff"</span><span class="token punctuation">,</span>
+      <span class="token property">"factory"</span><span class="token operator">:</span> <span class="token string">"./ng-new/index#playground"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><blockquote>
+<p>Using the special Schematic names <code>ng-add</code> and <code>ng-new</code> let's you later use the schematic by just executing <code>ng add</code>/<code>ng new</code> (instead of other schematics called with <code>ng generate</code>).
+There is also a special Schematic named <code>ng-update</code> which will be called in the end with the <code>ng update</code> Angular CLI command.</p>
+</blockquote>
+<p>After we defined the schema, we can now start to implement our schematics.
+To execute an external Schematic, it must be available in the scope of the project..
+However, since we want to create a completely new project with the <code>ng new</code> Schematic, we don't have any <code>node_modules</code> installed in the target directory where we want to initialize the Angular workspace.
+To run an external command we can use the <a href="https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options"><code>spawn</code> method from <code>child_process</code></a> (available globally for Node.js).
+This creates a new process that executes a command (in our case: <code>npm install @schematics/angular</code>).
+To make things look synchronous we wrap the method call into a Promise and <code>await</code> for the Promise to be resolved.
+Now we listen to the <code>close</code> event from <code>spawn</code> and check that there was no error during install (code equals <code>0</code>).
+If everything worked fine, we will resolve the Promise, otherwise we can throw an error.
+The last step is to <code>chain</code> all of our <code>Rule</code>s:
+We first use the <code>externalSchematic()</code> function to run the <code>ng new</code> Schematic from Angular itself and set up the basic app.
+We will hand over some default options here such a using <code>SCSS</code>, support legacy browsers, strict mode, etc.
+Angulars <code>ng new</code> schematic requires also, that we define the specific version for their schematic to be used.
+In our case we want to use the <code>ng new</code> schematic from the Angular CLI version <code>12.0.0</code>.
+The second call is our <code>ng add</code> Schematic that adds our company specific components, UI libs and so on to the project.</p>
+<blockquote>
+<p>We've already learned how to run a local Schematic by using the <code>RunSchematicTask</code> class that we need to add to our <code>context</code> object.
+In this example we are using the <code>schematic()</code> function to achieve the same goal.
+Why are there two ways? To be honest: I actually don't know.
+I found both implementations in the source code of Angular CLI.</p>
+</blockquote>
+<pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span>
+  Rule<span class="token punctuation">,</span>
+  SchematicContext<span class="token punctuation">,</span>
+  Tree<span class="token punctuation">,</span>
+  externalSchematic<span class="token punctuation">,</span>
+  schematic<span class="token punctuation">,</span>
+  chain
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular-devkit/schematics'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  Schema <span class="token keyword">as</span> AngularNgNewSchema<span class="token punctuation">,</span>
+  PackageManager<span class="token punctuation">,</span>
+  Style
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@schematics/angular/ng-new/schema'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> spawn <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'child_process'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">playground</span><span class="token punctuation">(</span>options<span class="token operator">:</span> AngularNgNewSchema<span class="token punctuation">)</span><span class="token operator">:</span> Rule <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">async</span> <span class="token punctuation">(</span>_tree<span class="token operator">:</span> Tree<span class="token punctuation">,</span> _context<span class="token operator">:</span> SchematicContext<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> angularSchematicsPackage <span class="token operator">=</span> <span class="token string">'@schematics/angular'</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> ngNewOptions<span class="token operator">:</span> AngularNgNewSchema <span class="token operator">=</span> <span class="token punctuation">{</span>
+      version<span class="token operator">:</span> <span class="token string">'12.0.0'</span><span class="token punctuation">,</span>
+      name<span class="token operator">:</span> options<span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+      routing<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      strict<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      legacyBrowsers<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      style<span class="token operator">:</span> Style<span class="token punctuation">.</span>Scss<span class="token punctuation">,</span>
+      packageManager<span class="token operator">:</span> PackageManager<span class="token punctuation">.</span>Npm
+    <span class="token punctuation">}</span>
+    <span class="token keyword">await</span> <span class="token keyword">new</span> <span class="token class-name"><span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'📦 Installing packages...'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">spawn</span><span class="token punctuation">(</span><span class="token string">'npm'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'install'</span><span class="token punctuation">,</span> angularSchematicsPackage<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'close'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>code<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>code <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'📦 Packages installed successfully ✅'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>
+              <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">❌ install Angular schematics from '</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>angularSchematicsPackage<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">' failed</span><span class="token template-punctuation string">`</span></span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">chain</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token function">externalSchematic</span><span class="token punctuation">(</span>angularSchematicsPackage<span class="token punctuation">,</span> <span class="token string">'ng-new'</span><span class="token punctuation">,</span> ngNewOptions<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token function">schematic</span><span class="token punctuation">(</span><span class="token string">'ng-add'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre><p>When we now run the <code>ng new</code> Schematic from somewhere outside an Angular workspace, we can see that first of all the Angular <code>ng new</code> Schematic is executed with our predefined settings.
+After this, the <code>ng add</code> schematics is called.</p>
+<pre class="language-bash"><code class="language-bash">schematics ./playground/src/collection.json:ng-new <span class="token parameter variable">--debug</span><span class="token operator">=</span>false
+📦 Installing packages<span class="token punctuation">..</span>.
+📦 Packages installed successfully ✅
+? What name would you like to use <span class="token keyword">for</span> the new workspace and initial project? my-project
+CREATE my-project/README.md <span class="token punctuation">(</span><span class="token number">1027</span> bytes<span class="token punctuation">)</span>
+CREATE my-project/.editorconfig <span class="token punctuation">(</span><span class="token number">274</span> bytes<span class="token punctuation">)</span>
+CREATE my-project/.gitignore <span class="token punctuation">(</span><span class="token number">631</span> bytes<span class="token punctuation">)</span>
+CREATE my-project/angular.json <span class="token punctuation">(</span><span class="token number">3812</span> bytes<span class="token punctuation">)</span>
+<span class="token punctuation">..</span>.
+CREATE my-project/src/app/app.component.scss <span class="token punctuation">(</span><span class="token number">0</span> bytes<span class="token punctuation">)</span>
+CREATE my-project/src/app/app.component.html <span class="token punctuation">(</span><span class="token number">25757</span> bytes<span class="token punctuation">)</span>
+CREATE my-project/src/app/app.component.spec.ts <span class="token punctuation">(</span><span class="token number">1069</span> bytes<span class="token punctuation">)</span>
+CREATE my-project/src/app/app.component.ts <span class="token punctuation">(</span><span class="token number">215</span> bytes<span class="token punctuation">)</span>
+CREATE my-project/src/app/package.json <span class="token punctuation">(</span><span class="token number">816</span> bytes<span class="token punctuation">)</span>
+CREATE my-project/e2e/protractor.conf.js <span class="token punctuation">(</span><span class="token number">869</span> bytes<span class="token punctuation">)</span>
+CREATE my-project/e2e/tsconfig.json <span class="token punctuation">(</span><span class="token number">294</span> bytes<span class="token punctuation">)</span>
+CREATE my-project/e2e/src/app.e2e-spec.ts <span class="token punctuation">(</span><span class="token number">643</span> bytes<span class="token punctuation">)</span>
+CREATE my-project/e2e/src/app.po.ts <span class="token punctuation">(</span><span class="token number">301</span> bytes<span class="token punctuation">)</span>
+⠏ Installing packages<span class="token punctuation">..</span>.
+✔ Packages installed successfully.
+schematic works</code></pre><p>After you have deployed the Schematic, you can now execute it by running:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> i <span class="token parameter variable">-g</span> my-schematic-package-name <span class="token comment"># install the Schematic so it's available globally</span>
+ng new my-app <span class="token parameter variable">--collection</span><span class="token operator">=</span>my-schematic-package-name <span class="token comment"># Run the Angular CLI's `ng new` Schematic with the defined collection</span></code></pre><p>Similar to this example you can call the <code>ng add</code> Schematic from the collection if you are in an existing Angular workspace:</p>
+<pre class="language-bash"><code class="language-bash">ng <span class="token function">add</span> my-schematic-package-name</code></pre><ul>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/ng-new">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>The presented util functions are great and comfortable helpers you can use to create your own Angular CLI schematics.
+However, as they aren't officially published until now, you should keep track of any changes by keeping an eye on the <a href="https://github.com/angular/angular-cli/issues/15335">documentation issue (#15335)</a> and <a href="https://github.com/angular/angular-cli/tree/master/packages/schematics/angular/utility">changes on the related code</a>.</p>
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>getPackageJsonDependency()</code></td>
+<td>Get a package configuration from the <code>package.json</code> (dev-, peer-, optional-) dependencies config.</td>
+</tr>
+<tr>
+<td><code>addPackageJsonDependency()</code></td>
+<td>Add a NPM package to the <code>package.json</code> as (dev-, peer-, optional-) dependency.</td>
+</tr>
+<tr>
+<td><code>removePackageJsonDependency()</code></td>
+<td>Remove a NPM package from the <code>package.json</code> (dev-, peer-, optional-) dependencies.</td>
+</tr>
+<tr>
+<td><code>relativePathToWorkspaceRoot()</code></td>
+<td>Get the relative import path to the root of the workspace for a given file inside the workspace.</td>
+</tr>
+<tr>
+<td><code>insertImport()</code></td>
+<td>Insert an import statement for a file to an existing TypeScript file.</td>
+</tr>
+<tr>
+<td><code>addDeclarationToModule()</code></td>
+<td>Import a declaration (e.g. Component or Directive) and add it to the <code>declarations</code> array of an Angular module.</td>
+</tr>
+<tr>
+<td><code>addImportToModule()</code></td>
+<td>Import an Angular Module and add it to the <code>imports</code> array of another Angular module.</td>
+</tr>
+<tr>
+<td><code>addExportToModule()</code></td>
+<td>Import an Angular Module and add it to the <code>exports</code> array of another Angular module.</td>
+</tr>
+<tr>
+<td><code>addProviderToModule()</code></td>
+<td>Import a service / provider and add it to the <code>providers</code> array of an Angular module.</td>
+</tr>
+<tr>
+<td><code>addBootstrapToModule()</code></td>
+<td>Import a Component and add it to the <code>bootstrap</code> array of an Angular module.</td>
+</tr>
+<tr>
+<td><code>addRouteDeclarationToModule()</code></td>
+<td>Add a route definition to the router configuration in an Angular routing module.</td>
+</tr>
+<tr>
+<td><code>getWorkspacePath()</code></td>
+<td>Retrieve the path to the Angular workspace configuration file (<code>angular.json</code>).</td>
+</tr>
+<tr>
+<td><code>getWorkspace()</code></td>
+<td>Get the configuration object from the Angular workspace configuration file (<code>angular.json</code>)</td>
+</tr>
+<tr>
+<td><code>createDefaultPath()</code></td>
+<td>Get the default application / library path for a project inside an Angular workspace.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>InsertChange</code></td>
+<td>This class returns a change object with the content to be added and the position where a change is being inserted.</td>
+</tr>
+<tr>
+<td><code>NodePackageInstallTask</code></td>
+<td>A task instance that will perform a <code>npm install</code> once instantiated and added to the <code>context</code> via <code>addTask()</code>.</td>
+</tr>
+<tr>
+<td><code>RunSchematicTask</code></td>
+<td>A task that runs another schematic after instantiation and adding it to the <code>context</code> via <code>addTask()</code>.</td>
+</tr>
+</tbody></table>
+<p><strong>Thank you</strong></p>
+<p>Special thanks goes to <a href="https://twitter.com/mgechev">Minko Gechev</a>, <a href="https://twitter.com/tomastrajan">Tomas Trajan</a> and <a href="https://twitter.com/fmalcher01">Ferdinand Malcher</a> for the feedback and revising this article.</p>
+<hr>
+</div><!----></analog-markdown><!----><div _ngcontent-ng-c1123664158="" class="edit-on-github"><a _ngcontent-ng-c1123664158="" target="_blank" rel="noopener noreferrer" href="https://github.com/d-koppenhagen/k9n.dev/edit/main/src/content/blog/2020-09-angular-schematics-common-helpers"> Auf GitHub bearbeiten </a></div><!----></section></div></article><!----></ng-component><!----></main><dk-contact _nghost-ng-c2698026132="" ngh="0"><footer _ngcontent-ng-c2698026132="" id="footer"><div _ngcontent-ng-c2698026132="" id="contact" class="inner"><h2 _ngcontent-ng-c2698026132="" class="major">Kontaktieren Sie mich</h2><p _ngcontent-ng-c2698026132=""> Haben Sie Fragen oder Anregungen? Nehmen Sie gern Kontakt mit mir auf! </p><ul _ngcontent-ng-c2698026132="" class="contact"><li _ngcontent-ng-c2698026132="" class="icon solid fa-envelope"><a _ngcontent-ng-c2698026132="" href="mailto:mail@k9n.dev">mail@k9n.dev</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-github"><a _ngcontent-ng-c2698026132="" href="https://github.com/d-koppenhagen">github.com/d-koppenhagen</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-twitter"><a _ngcontent-ng-c2698026132="" href="https://twitter.com/d_koppenhagen">twitter.com/d_koppenhagen</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-linkedin"><a _ngcontent-ng-c2698026132="" href="https://www.linkedin.com/in/d-koppenhagen/">linkedin.com/in/d-koppenhagen</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-xing"><a _ngcontent-ng-c2698026132="" href="https://www.xing.com/profile/Danny_Koppenhagen">xing.com/profile/Danny_Koppenhagen</a></li><li _ngcontent-ng-c2698026132="" class="icon brands fa-mastodon"><a _ngcontent-ng-c2698026132="" rel="me" href="https://techhub.social/@k9n">https://techhub.social/@k9n</a></li></ul><ul _ngcontent-ng-c2698026132="" class="copyright"><li _ngcontent-ng-c2698026132="">© 2023 by Danny Koppenhagen</li><li _ngcontent-ng-c2698026132="">Design: <a _ngcontent-ng-c2698026132="" href="https://html5up.net">HTML5 UP</a></li><li _ngcontent-ng-c2698026132=""> Vorschläge? Feedback? Bugs? <a _ngcontent-ng-c2698026132="" href="https://github.com/d-koppenhagen/k9n.dev/issues"> Stell ein Issue ein</a>, <a _ngcontent-ng-c2698026132="" href="https://github.com/d-koppenhagen/k9n.dev/pulls">sende mir einen PR</a> oder <a _ngcontent-ng-c2698026132="" routerlink="/contact" href="/contact">kontaktiere mich</a></li></ul></div></footer></dk-contact><!----></dk-root>
+  
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"7":"t0","8":"t1","9":"t2"},"c":{"7":[{"i":"t0","r":1}],"8":[],"9":[{"i":"t2","r":1}]}},{"t":{"3":"t21"},"c":{"3":[]}},{"c":{"0":[]}},{"t":{"0":"t20"},"c":{"0":[{"i":"t20","r":1,"t":{"6":"t22","7":"t23","8":"t28","9":"t29","12":"t31","13":"t32"},"c":{"6":[{"i":"t22","r":1}],"7":[{"i":"t23","r":1,"t":{"2":"t24","7":"t25","8":"t26"},"c":{"2":[{"i":"t24","r":1}],"7":[{"i":"t25","r":1,"x":3}],"8":[{"i":"t26","r":1,"t":{"3":"t27"},"c":{"3":[{"i":"t27","r":1}]}}]}}],"8":[{"i":"t28","r":1,"t":{"1":"t33","2":"t34","3":"t35"},"c":{"1":[{"i":"t33","r":1}],"2":[],"3":[]}}],"9":[],"12":[],"13":[{"i":"t32","r":1}]}}]}},{"c":{"3":[{"i":"c1123664158","r":1}],"5":[]},"t":{"5":"t18"}}]}</script></body></html>
