@@ -9,7 +9,7 @@ created: 2023-11-20
 updated: 2023-11-20
 publishedAt:
   name: DB Systel Tech Stories
-  url: https://techstories.dbsystel.de//blog/2023/2023-11-20-einfuehrung-barrierefreiheit-web.html
+  url: https://techstories.dbsystel.de/blog/2023/2023-11-20-einfuehrung-barrierefreiheit-web.html
   logo: https://dbsystel.github.io/tech-stories/images/home.png
   linkExternal: true
 keywords:

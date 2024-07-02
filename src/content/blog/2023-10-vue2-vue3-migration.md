@@ -9,7 +9,7 @@ created: 2023-10-26
 updated: 2023-10-26
 publishedAt:
   name: DB Systel Tech Stories
-  url: https://dbsystel.github.io/tech-stories//blog/2023/2023-08-21-vue2-vue3-migration.html
+  url: https://dbsystel.github.io/tech-stories/blog/2023/2023-08-21-vue2-vue3-migration.html
   logo: https://dbsystel.github.io/tech-stories/images/home.png
   linkExternal: true
 keywords:
