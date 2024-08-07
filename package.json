@@ -86,7 +86,7 @@
     "prettier": "^3.2.5",
     "sass": "^1.72.0",
     "typescript": "~5.4.5",
-    "vite": "~5.2.8",
+    "vite": "~5.4.0",
     "vitest": "^1.4.0"
   },
   "lint-staged": {
