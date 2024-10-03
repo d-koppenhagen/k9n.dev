@@ -6,7 +6,6 @@ import { AboutComponent } from '../components/about/about.component';
 import { MeetupsComponent } from '../components/meetups/meetups.component';
 import { PreviewComponent } from '../components/preview/preview.component';
 import { PublicationsComponent } from '../components/publications/publications.component';
-import { TwitterTimelineComponent } from '../components/twitter-timeline/twitter-timeline.component';
 import { PostAttributes } from '../types';
 
 @Component({
@@ -15,7 +14,6 @@ import { PostAttributes } from '../types';
     PreviewComponent,
     PublicationsComponent,
     AboutComponent,
-    TwitterTimelineComponent,
     MeetupsComponent,
   ],
   styles: `
@@ -45,13 +43,6 @@ import { PostAttributes } from '../types';
     </section>
     <dk-about />
     <dk-meetups />
-    @if (isBrowser) {
-      @defer (on viewport; prefetch on idle) {
-        <dk-twitter-timeline />
-      } @placeholder {
-        <div>Posts werden geladen...</div>
-      }
-    }
   `,
 })
 export default class HomePage {
