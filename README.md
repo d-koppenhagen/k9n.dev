@@ -17,10 +17,3 @@ Run `npm run build` to build the client/server project. The client build artifac
 ## Test
 
 Run `npm run test` to run unit tests with [Vitest](https://vitest.dev).
-
-## Community
-
-- Visit and Star the [GitHub Repo](https://github.com/analogjs/analog)
-- Join the [Discord](https://chat.analogjs.org)
-- Follow us on [Twitter](https://twitter.com/analogjs)
-- Become a [Sponsor](https://github.com/sponsors/brandonroberts)
