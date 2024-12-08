@@ -30,5 +30,5 @@ keywords:
   - BookMonkey
 language: de
 thumbnail:
-  header: https://website-articles.angular-buch.com/blog/2024-05-modern-angular-bm/header-modernangular.jpg
+  header: https://website-articles.angular-buch.com/2024-05-modern-angular-bm/header-modernangular.jpg
 ---
