@@ -41,7 +41,7 @@
     "@angular/router": "^19.0.3",
     "@angular/service-worker": "^19.0.3",
     "@angular/youtube-player": "^19.0.2",
-    "@fortawesome/angular-fontawesome": "^0.14.1",
+    "@fortawesome/angular-fontawesome": "^1.0.0",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@fortawesome/fontawesome-svg-core": "~1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
