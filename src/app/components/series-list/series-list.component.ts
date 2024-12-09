@@ -1,5 +1,5 @@
 import { injectContentFiles } from '@analogjs/content';
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { PostAttributes } from '../../types';
 
@@ -10,13 +10,13 @@ import { PostAttributes } from '../../types';
   styleUrl: './series-list.component.scss',
 })
 export class SeriesListComponent {
-  @Input({ required: true }) series!: string;
+  readonly series = input.required<string>();
 
   readonly allPosts = injectContentFiles<PostAttributes>();
 
   get relatedPosts() {
     return this.allPosts.filter(
-      (p) => p.attributes.series && p.attributes.series === this.series,
+      (p) => p.attributes.series && p.attributes.series === this.series(),
     );
   }
 }

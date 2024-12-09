@@ -3,8 +3,8 @@ import {
   Component,
   ElementRef,
   HostListener,
-  Input,
-  ViewChild,
+  input,
+  viewChild,
 } from '@angular/core';
 
 @Component({
@@ -15,20 +15,21 @@ import {
   styleUrl: './share-post.component.css',
 })
 export class SharePostComponent implements AfterViewInit {
-  @Input({ required: true }) description = '';
-  @ViewChild('shareBtnBox') shareBtnBox!: ElementRef;
+  readonly description = input.required<string>();
+  readonly shareBtnBox = viewChild.required<ElementRef>('shareBtnBox');
   shareBtnCnt = 5;
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    if (!this.shareBtnBox?.nativeElement?.clientWidth) {
+    const shareBtnBox = this.shareBtnBox();
+    if (!shareBtnBox?.nativeElement?.clientWidth) {
       return;
     }
-    if (this.shareBtnBox.nativeElement.clientWidth < 320) {
+    if (shareBtnBox.nativeElement.clientWidth < 320) {
       this.shareBtnCnt = 2;
-    } else if (this.shareBtnBox.nativeElement.clientWidth < 410) {
+    } else if (shareBtnBox.nativeElement.clientWidth < 410) {
       this.shareBtnCnt = 3;
-    } else if (this.shareBtnBox.nativeElement.clientWidth < 480) {
+    } else if (shareBtnBox.nativeElement.clientWidth < 480) {
       this.shareBtnCnt = 4;
     } else {
       this.shareBtnCnt = 5;

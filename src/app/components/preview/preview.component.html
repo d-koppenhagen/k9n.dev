@@ -7,10 +7,10 @@
     Es wurden keine passenden Einträge gefunden.
   }
 </section>
-@if ((max && max < postsFiltered.length) || keyword || search) {
+@if ((max() && max() < postsFiltered.length) || keyword() || search()) {
   <ul class="actions">
     <li>
-      <a [routerLink]="['/', content]" class="button"
+      <a [routerLink]="['/', content()]" class="button"
         >Alle anzeigen ({{ postsFiltered.length }})</a
       >
     </li>

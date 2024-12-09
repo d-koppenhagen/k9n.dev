@@ -1,6 +1,6 @@
 import { injectContentFiles } from '@analogjs/content';
 import { AsyncPipe } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, viewChild } from '@angular/core';
 import {
   ActivatedRoute,
   Router,
@@ -73,7 +73,7 @@ export default class BlogPage implements AfterViewInit {
     return contentFile.filename.includes('/src/content/blog/');
   });
 
-  @ViewChild('searchInput') searchInput!: ElementRef;
+  readonly searchInput = viewChild.required<ElementRef>('searchInput');
   keyword$ = this.route.queryParams.pipe(map((p) => p['keyword']));
   searchString = '';
 
@@ -83,10 +83,10 @@ export default class BlogPage implements AfterViewInit {
   ) {}
 
   ngAfterViewInit() {
-    fromEvent(this.searchInput.nativeElement, 'keyup')
+    fromEvent(this.searchInput().nativeElement, 'keyup')
       .pipe(filter(Boolean), debounceTime(300), distinctUntilChanged())
       .subscribe(() => {
-        this.searchString = this.searchInput.nativeElement.value;
+        this.searchString = this.searchInput().nativeElement.value;
       });
   }
 

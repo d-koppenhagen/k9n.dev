@@ -9,7 +9,7 @@ import {
   Inject,
   OnInit,
   PLATFORM_ID,
-  ViewChild,
+  viewChild,
 } from '@angular/core';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 
@@ -23,7 +23,7 @@ import { PersonalTimelineComponent } from '../personal-timeline/personal-timelin
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent implements OnInit, AfterViewInit {
-  @ViewChild('videoBox') videoBox!: ElementRef;
+  readonly videoBox = viewChild.required<ElementRef>('videoBox');
   youtubePlayerWidth = 300;
   isBrowser = false;
 
@@ -36,8 +36,9 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    if (this.videoBox?.nativeElement?.clientWidth) {
-      this.youtubePlayerWidth = this.videoBox.nativeElement.clientWidth;
+    const videoBox = this.videoBox();
+    if (videoBox?.nativeElement?.clientWidth) {
+      this.youtubePlayerWidth = videoBox.nativeElement.clientWidth;
     }
   }
 

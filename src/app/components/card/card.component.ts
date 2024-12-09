@@ -1,5 +1,5 @@
 import { ContentFile } from '@analogjs/content';
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { PostAttributes } from '../../types';
@@ -11,12 +11,12 @@ import { PostAttributes } from '../../types';
   imports: [RouterLink],
 })
 export class CardComponent {
-  @Input({ required: true }) post!: ContentFile<PostAttributes>;
+  readonly post = input.required<ContentFile<PostAttributes>>();
   constructor() {}
 
   get routeToPost() {
     // Extracting the last part between slashes and excluding the file extension
-    const matchResult = this.post.filename.match(/\/([^/]+)\/([^/.]+)\.md$/);
+    const matchResult = this.post().filename.match(/\/([^/]+)\/([^/.]+)\.md$/);
     let resultArray: string[] = [];
 
     // Checking if the match was successful
@@ -31,7 +31,7 @@ export class CardComponent {
   }
 
   get externalUrl() {
-    const publishedAt = this.post.attributes.publishedAt;
+    const publishedAt = this.post().attributes.publishedAt;
     return publishedAt && publishedAt.linkExternal && publishedAt.url
       ? publishedAt.url
       : undefined;

@@ -4,7 +4,7 @@ import {
   MarkdownComponent,
 } from '@analogjs/content';
 import { AsyncPipe, DatePipe } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, viewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { tap } from 'rxjs';
 
@@ -49,7 +49,7 @@ import { PostAttributes } from '../../types';
   styleUrl: './slug.page.style.scss',
 })
 export default class ProjectContentComponent {
-  @ViewChild('shareBtnBox') shareBtnBox!: ElementRef;
+  readonly shareBtnBox = viewChild.required<ElementRef>('shareBtnBox');
   readonly post$ = injectContent<PostAttributes>({
     param: 'slug',
     subdirectory: 'projects',

@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'dk-cookie-banner',
@@ -7,7 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   standalone: true,
 })
 export class CookieBannerComponent {
-  @Output() accepted: EventEmitter<boolean> = new EventEmitter();
+  readonly accepted = output();
 
   acceptCookies() {
     this.accepted.emit(true);

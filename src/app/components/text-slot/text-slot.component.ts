@@ -2,9 +2,9 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  Input,
   NgZone,
   OnInit,
+  input,
 } from '@angular/core';
 import {
   trigger,
@@ -35,7 +35,7 @@ import {
   standalone: true,
 })
 export class TextSlotComponent implements OnInit {
-  @Input({ required: true }) result!: string;
+  readonly result = input.required<string>();
   currentIndex = 0;
   intervalInstance?: ReturnType<typeof setInterval>;
   slots = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789#?!=+&%$§'].map((char) => ({
@@ -49,7 +49,7 @@ export class TextSlotComponent implements OnInit {
   ) {}
 
   get matchValue() {
-    return this.result.toUpperCase();
+    return this.result().toUpperCase();
   }
 
   ngOnInit() {

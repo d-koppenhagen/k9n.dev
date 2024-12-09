@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { TextSlotComponent } from '../text-slot/text-slot.component';
 
 @Component({
@@ -9,9 +9,9 @@ import { TextSlotComponent } from '../text-slot/text-slot.component';
   imports: [TextSlotComponent],
 })
 export class TextSlotMachineComponent {
-  @Input() result!: string;
+  readonly result = input.required<string>();
 
   get letters() {
-    return [...this.result];
+    return [...this.result()];
   }
 }

@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { AfterViewChecked, Component, Input } from '@angular/core';
+import { AfterViewChecked, Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { HeadingData, getHeadingList } from 'marked-gfm-heading-id';
 import { A11yModule } from '@angular/cdk/a11y';
@@ -20,8 +20,8 @@ interface TreeNode {
   styleUrl: './sticky-navigation.component.scss',
 })
 export class StickyNavigationComponent implements AfterViewChecked {
-  @Input() content?: string;
-  @Input() contentLang?: string;
+  readonly content = input<string>();
+  readonly contentLang = input<string>();
 
   headlines: TreeNode[] = [];
   menuOpen = false;
