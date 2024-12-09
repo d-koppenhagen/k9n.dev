@@ -6,6 +6,5 @@ import { RouterLink } from '@angular/router';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
   imports: [RouterLink],
-  standalone: true,
 })
 export class ContactComponent {}

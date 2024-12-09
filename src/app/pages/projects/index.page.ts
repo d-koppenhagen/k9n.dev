@@ -7,7 +7,6 @@ import { PreviewComponent } from '../../components/preview/preview.component';
 import { PostAttributes } from '../../types';
 
 @Component({
-  standalone: true,
   imports: [RouterOutlet, RouterLink, AsyncPipe, PreviewComponent],
   styles: `
     .wrapper {

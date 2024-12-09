@@ -9,7 +9,6 @@ import { PostAttributes } from '../../types';
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
   imports: [RouterLink],
-  standalone: true,
 })
 export class CardComponent {
   @Input({ required: true }) post!: ContentFile<PostAttributes>;

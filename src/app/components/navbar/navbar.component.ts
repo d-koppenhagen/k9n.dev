@@ -7,7 +7,6 @@ import { Dialog, DialogModule, DialogRef } from '@angular/cdk/dialog';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   imports: [MenuComponent, DialogModule],
-  standalone: true,
 })
 export class NavbarComponent {
   private readonly dialog = inject(Dialog);

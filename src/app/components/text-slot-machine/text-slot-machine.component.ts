@@ -6,7 +6,6 @@ import { TextSlotComponent } from '../text-slot/text-slot.component';
   templateUrl: './text-slot-machine.component.html',
   styleUrl: './text-slot-machine.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [TextSlotComponent],
 })
 export class TextSlotMachineComponent {

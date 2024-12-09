@@ -11,7 +11,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
   selector: 'dk-root',
-  standalone: true,
   imports: [
     RouterOutlet,
     NavbarComponent,

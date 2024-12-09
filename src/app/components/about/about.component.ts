@@ -21,7 +21,6 @@ import { PersonalTimelineComponent } from '../personal-timeline/personal-timelin
   styleUrl: './about.component.scss',
   imports: [YouTubePlayerModule, PersonalTimelineComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
 })
 export class AboutComponent implements OnInit, AfterViewInit {
   @ViewChild('videoBox') videoBox!: ElementRef;

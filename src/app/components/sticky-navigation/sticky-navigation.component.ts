@@ -15,7 +15,6 @@ interface TreeNode {
 
 @Component({
   selector: 'dk-sticky-navigation',
-  standalone: true,
   imports: [RouterLink, NgClass, A11yModule, CdkTreeModule],
   templateUrl: './sticky-navigation.component.html',
   styleUrl: './sticky-navigation.component.scss',

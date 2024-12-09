@@ -5,7 +5,6 @@ import { PostAttributes } from '../../types';
 
 @Component({
   selector: 'dk-series-list',
-  standalone: true,
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './series-list.component.html',
   styleUrl: './series-list.component.scss',

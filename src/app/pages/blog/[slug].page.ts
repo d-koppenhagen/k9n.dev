@@ -15,7 +15,6 @@ import { MetaService } from '../../meta.service';
 import { PostAttributes } from '../../types';
 
 @Component({
-  standalone: true,
   imports: [
     MarkdownComponent,
     AsyncPipe,

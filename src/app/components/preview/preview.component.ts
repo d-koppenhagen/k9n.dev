@@ -9,7 +9,6 @@ import { CardComponent } from '../card/card.component';
   templateUrl: './preview.component.html',
   styleUrl: './preview.component.scss',
   imports: [RouterLink, CardComponent],
-  standalone: true,
 })
 export class PreviewComponent implements OnInit, OnChanges {
   @Input({ required: true }) content!: string;

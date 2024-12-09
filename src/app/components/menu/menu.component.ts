@@ -6,7 +6,6 @@ import { RouterLink } from '@angular/router';
   selector: 'dk-menu',
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss',
-  standalone: true,
   imports: [RouterLink],
 })
 export class MenuComponent {

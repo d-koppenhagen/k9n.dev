@@ -6,7 +6,6 @@ import { TextSlotMachineComponent } from '../text-slot-machine/text-slot-machine
   selector: 'dk-header',
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
-  standalone: true,
   imports: [RouterLink, TextSlotMachineComponent],
 })
 export class HeaderComponent {

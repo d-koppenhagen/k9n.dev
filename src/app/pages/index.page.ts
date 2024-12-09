@@ -9,7 +9,6 @@ import { PublicationsComponent } from '../components/publications/publications.c
 import { PostAttributes } from '../types';
 
 @Component({
-  standalone: true,
   imports: [
     PreviewComponent,
     PublicationsComponent,
