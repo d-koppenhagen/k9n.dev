@@ -53,6 +53,32 @@ export default defineConfig(({ mode }) => ({
       inlineStylesExtension: 'scss',
     }),
     analog({
+      content: {
+        highlighter: 'shiki',
+        shikiOptions: {
+          highlight: {
+            theme: 'github-dark',
+          },
+          highlighter: {
+            langs: [
+              'json',
+              'ts',
+              'tsx',
+              'js',
+              'jsx',
+              'html',
+              'css',
+              'angular-html',
+              'angular-ts',
+              'bash',
+              'yaml',
+              'asciidoc',
+              'mermaid',
+            ],
+            themes: ['github-dark', 'github-light'],
+          },
+        },
+      },
       prerender: {
         routes: [
           '/api/rss.xml',
@@ -97,7 +123,7 @@ export default defineConfig(({ mode }) => ({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['src/test.ts'],
+    setupFiles: ['src/test-setup.ts'],
     include: ['**/*.spec.ts'],
     reporters: ['default'],
   },

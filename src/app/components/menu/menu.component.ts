@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { DialogRef } from '@angular/cdk/dialog';
 import { RouterLink } from '@angular/router';
 
@@ -9,7 +9,11 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
 })
 export class MenuComponent {
-  constructor(public dialogRef: DialogRef) {
+  dialogRef = inject(DialogRef);
+
+  constructor() {
+    const dialogRef = this.dialogRef;
+
     dialogRef.backdropClick.subscribe(this.closeDialog);
   }
 

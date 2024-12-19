@@ -5,6 +5,7 @@ import {
   NgZone,
   OnInit,
   input,
+  inject,
 } from '@angular/core';
 import {
   trigger,
@@ -35,6 +36,9 @@ import {
   standalone: true,
 })
 export class TextSlotComponent implements OnInit {
+  private changeDetector = inject(ChangeDetectorRef);
+  private ngZone = inject(NgZone);
+
   readonly result = input.required<string>();
   currentIndex = 0;
   intervalInstance?: ReturnType<typeof setInterval>;
@@ -42,11 +46,6 @@ export class TextSlotComponent implements OnInit {
     value: char,
     state: 'out',
   }));
-
-  constructor(
-    private changeDetector: ChangeDetectorRef,
-    private ngZone: NgZone,
-  ) {}
 
   get matchValue() {
     return this.result().toUpperCase();

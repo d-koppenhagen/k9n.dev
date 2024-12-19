@@ -1,15 +1,11 @@
-import { DOCUMENT, ViewportScroller } from '@angular/common';
-import { Inject, Injectable } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Injectable, inject } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ScrollService {
-  constructor(
-    @Inject(DOCUMENT) private dom: Document,
-    readonly viewportScroller: ViewportScroller,
-  ) {}
-
+  readonly viewportScroller = inject(ViewportScroller);
   scrollToElement(elementId: string): void {
     setTimeout(() => {
       this.viewportScroller.scrollToAnchor(elementId);

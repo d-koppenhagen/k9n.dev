@@ -5,7 +5,7 @@
   "projects": {
     "blog": {
       "projectType": "application",
-      "root": ".",
+      "root": "",
       "sourceRoot": "src",
       "prefix": "dk",
       "architect": {
@@ -49,7 +49,7 @@
           }
         },
         "test": {
-          "builder": "@analogjs/platform:vitest"
+          "builder": "@analogjs/vitest-angular:test"
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
@@ -59,9 +59,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "ab3214a7-63c2-4906-9853-13c09c732b43",
-    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }

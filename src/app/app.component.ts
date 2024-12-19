@@ -1,6 +1,6 @@
 import { ScrollService } from './scroll.service';
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, PLATFORM_ID, inject } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -32,14 +32,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   `,
 })
 export class AppComponent {
+  readonly router = inject(Router);
+  readonly scrollService = inject(ScrollService);
+  private platformId = inject(PLATFORM_ID);
+
   cookiesAccepted = false;
   isBrowser = false;
 
-  constructor(
-    readonly router: Router,
-    readonly scrollService: ScrollService,
-    @Inject(PLATFORM_ID) private platformId: string,
-  ) {
+  constructor() {
     this.setupScrollBehaviourForAnker();
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.cookiesAccepted = this.isBrowser

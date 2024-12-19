@@ -1,6 +1,6 @@
 import { injectContentFiles } from '@analogjs/content';
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, PLATFORM_ID, inject } from '@angular/core';
 
 import { AboutComponent } from '../components/about/about.component';
 import { MeetupsComponent } from '../components/meetups/meetups.component';
@@ -45,6 +45,8 @@ import { PostAttributes } from '../types';
   `,
 })
 export default class HomePage {
+  private platformId = inject(PLATFORM_ID);
+
   isBrowser = false;
 
   readonly blogPosts = injectContentFiles<PostAttributes>((contentFile) => {
@@ -59,7 +61,7 @@ export default class HomePage {
     return contentFile.filename.includes('/src/content/talks/');
   });
 
-  constructor(@Inject(PLATFORM_ID) private platformId: string) {
+  constructor() {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 }

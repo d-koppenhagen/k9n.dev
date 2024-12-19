@@ -12,16 +12,16 @@ import { CardComponent } from '../card/card.component';
 })
 export class PreviewComponent implements OnInit, OnChanges {
   readonly content = input.required<string>();
-  readonly max = input.required<number>();
+  readonly posts = input.required<ContentFile<PostAttributes>[]>();
   readonly keyword = input<string>('');
   readonly search = input<string>('');
-  readonly posts = input.required<ContentFile<PostAttributes>[]>();
+  readonly max = input<number>();
 
   postsFiltered: ContentFile<PostAttributes>[] = [];
   reducedPostList: ContentFile<PostAttributes>[] = [];
 
   updatePosts() {
-    this.postsFiltered = this.posts()
+    this.postsFiltered = (this.posts() || [])
       .filter((post) => {
         const content = this.content();
         return content ? post.filename.includes(`/${content}/`) : true;

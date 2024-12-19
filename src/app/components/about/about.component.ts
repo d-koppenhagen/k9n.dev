@@ -1,15 +1,15 @@
 import { isPlatformBrowser } from '@angular/common';
 import {
-  AfterViewInit,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
   ElementRef,
   HostListener,
-  Inject,
   OnInit,
   PLATFORM_ID,
   viewChild,
+  inject,
+  AfterViewChecked,
 } from '@angular/core';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 
@@ -22,15 +22,15 @@ import { PersonalTimelineComponent } from '../personal-timeline/personal-timelin
   imports: [YouTubePlayerModule, PersonalTimelineComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AboutComponent implements OnInit, AfterViewInit {
-  readonly videoBox = viewChild.required<ElementRef>('videoBox');
+export class AboutComponent implements OnInit, AfterViewChecked {
+  private cdref = inject(ChangeDetectorRef);
+  private platformId = inject(PLATFORM_ID);
+
+  readonly videoBox = viewChild<ElementRef>('videoBox');
   youtubePlayerWidth = 300;
   isBrowser = false;
 
-  constructor(
-    private cdref: ChangeDetectorRef,
-    @Inject(PLATFORM_ID) private platformId: string,
-  ) {
+  constructor() {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
@@ -50,7 +50,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
     }
   }
 
-  ngAfterViewInit() {
+  ngAfterViewChecked() {
     this.onResize();
     this.cdref.detectChanges();
   }

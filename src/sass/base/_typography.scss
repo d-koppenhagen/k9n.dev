@@ -227,13 +227,16 @@ pre {
   -webkit-overflow-scrolling: touch;
   font-family: _font(family-fixed);
   font-size: 0.9em;
-  margin: 0 0 _size(element-margin) 0;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
 
   code {
     display: block;
     line-height: 1.75em;
     padding: 0; // 1em 1.5em;
     overflow-x: auto;
+    margin: 0;
+    padding: 0.5rem;
   }
 }
 

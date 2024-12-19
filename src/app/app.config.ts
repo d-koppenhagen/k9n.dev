@@ -4,11 +4,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { ApplicationConfig } from '@angular/core';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
-
-import 'prismjs/components/prism-yaml';
-import 'prismjs/components/prism-asciidoc';
-import 'prismjs/components/prism-diff';
-import 'prismjs/plugins/diff-highlight/prism-diff-highlight';
+import { withShikiHighlighter } from '@analogjs/content/shiki-highlighter';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,6 +16,7 @@ export const appConfig: ApplicationConfig = {
       withMarkdownRenderer({
         loadMermaid: () => import('mermaid'),
       }),
+      withShikiHighlighter(),
     ),
   ],
 };

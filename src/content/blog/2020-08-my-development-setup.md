@@ -357,7 +357,7 @@ The actual cronjob config is the following:
 ## Feedback
 
 Now as you know my dev setup, it's your turn! Is there any great tool or plugin you can recommend?
-Then just contact me via [E-Mail](mailto:mail@k9n.dev) or [Bluesky](https://bsky.app/profile/k9n.bsky.social) and let me know!
+Then just contact me via [E-Mail](mailto:mail@k9n.dev) or [Bluesky](https://bsky.app/profile/k9n.dev) and let me know!
 
 **Thank you**
 

@@ -7,7 +7,7 @@ import { Component, output } from '@angular/core';
   standalone: true,
 })
 export class CookieBannerComponent {
-  readonly accepted = output();
+  readonly accepted = output<boolean>();
 
   acceptCookies() {
     this.accepted.emit(true);

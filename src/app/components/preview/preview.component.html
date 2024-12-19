@@ -7,7 +7,8 @@
     Es wurden keine passenden Einträge gefunden.
   }
 </section>
-@if ((max() && max() < postsFiltered.length) || keyword() || search()) {
+@let m = max();
+@if ((m && m < postsFiltered.length) || keyword() || search()) {
   <ul class="actions">
     <li>
       <a [routerLink]="['/', content()]" class="button"

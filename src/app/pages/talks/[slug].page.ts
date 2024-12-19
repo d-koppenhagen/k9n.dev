@@ -4,12 +4,11 @@ import {
   MarkdownComponent,
 } from '@analogjs/content';
 import { AsyncPipe, DatePipe, isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, PLATFORM_ID, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { tap } from 'rxjs';
 
 import { SeriesListComponent } from '../../components/series-list/series-list.component';
-import { SharePostComponent } from '../../components/share-post/share-post.component';
 import { StickyNavigationComponent } from '../../components/sticky-navigation/sticky-navigation.component';
 import { MetaService } from '../../meta.service';
 import { PostAttributes } from '../../types';
@@ -20,7 +19,6 @@ import { PostAttributes } from '../../types';
     AsyncPipe,
     DatePipe,
     RouterLink,
-    SharePostComponent,
     SeriesListComponent,
     StickyNavigationComponent,
   ],
@@ -169,6 +167,9 @@ import { PostAttributes } from '../../types';
   styleUrl: './slug.page.style.scss',
 })
 export default class TalksContentPage {
+  private metaService = inject(MetaService);
+  private platformId = inject(PLATFORM_ID);
+
   readonly post$ = injectContent<PostAttributes>({
     param: 'slug',
     subdirectory: 'talks',
@@ -182,14 +183,11 @@ export default class TalksContentPage {
   );
   isBrowser = false;
 
-  constructor(
-    private metaService: MetaService,
-    @Inject(PLATFORM_ID) private platformId: string,
-  ) {
+  constructor() {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
   editOnGithubLink(filename: string) {
-    return `https://github.com/d-koppenhagen/k9n.dev/edit/main${filename}`;
+    return `https://github.com/d-koppenhagen/k9n.dev/edit/main${filename}.md`;
   }
 }

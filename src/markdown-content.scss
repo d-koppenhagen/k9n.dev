@@ -6,19 +6,6 @@
     img {
       max-width: 100px;
     }
-
-    > pre {
-      margin: 1em 0;
-      border-radius: 5px;
-      padding: 5px;
-      background: #2d2d2d;
-    }
-
-    code {
-      background: none;
-      white-space: pre-wrap;
-      overflow-wrap: anywhere;
-    }
   }
 
   @media screen and (max-width: 560px) {

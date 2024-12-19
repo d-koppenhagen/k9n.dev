@@ -1,6 +1,6 @@
 import { ContentFile } from '@analogjs/content';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { Injectable, PLATFORM_ID, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 import { PostAttributes } from './types';
@@ -9,14 +9,14 @@ import { PostAttributes } from './types';
   providedIn: 'root',
 })
 export class MetaService {
+  private dom = inject<Document>(DOCUMENT);
+  meta = inject(Meta);
+  private title = inject(Title);
+  private platformId = inject(PLATFORM_ID);
+
   isBrowser = false;
 
-  constructor(
-    @Inject(DOCUMENT) private dom: Document,
-    public meta: Meta,
-    private title: Title,
-    @Inject(PLATFORM_ID) private platformId: string,
-  ) {
+  constructor() {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 

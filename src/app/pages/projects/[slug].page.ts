@@ -4,7 +4,7 @@ import {
   MarkdownComponent,
 } from '@analogjs/content';
 import { AsyncPipe, DatePipe } from '@angular/common';
-import { Component, ElementRef, viewChild } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { tap } from 'rxjs';
 
@@ -49,7 +49,8 @@ import { PostAttributes } from '../../types';
   styleUrl: './slug.page.style.scss',
 })
 export default class ProjectContentComponent {
-  readonly shareBtnBox = viewChild.required<ElementRef>('shareBtnBox');
+  private metaService = inject(MetaService);
+
   readonly post$ = injectContent<PostAttributes>({
     param: 'slug',
     subdirectory: 'projects',
@@ -62,9 +63,7 @@ export default class ProjectContentComponent {
     ),
   );
 
-  constructor(private metaService: MetaService) {}
-
   editOnGithubLink(filename: string) {
-    return `https://github.com/d-koppenhagen/k9n.dev/edit/main${filename}`;
+    return `https://github.com/d-koppenhagen/k9n.dev/edit/main${filename}.md`;
   }
 }

@@ -20,15 +20,13 @@ interface TreeNode {
   styleUrl: './sticky-navigation.component.scss',
 })
 export class StickyNavigationComponent implements AfterViewChecked {
-  readonly content = input<string>();
+  readonly content = input<string | object>();
   readonly contentLang = input<string>();
 
   headlines: TreeNode[] = [];
   menuOpen = false;
   treeControl = new NestedTreeControl<TreeNode>((node) => node.children);
   dataSource?: ArrayDataSource<TreeNode>;
-
-  constructor() {}
 
   ngAfterViewChecked() {
     const list = getHeadingList();

@@ -1,6 +1,12 @@
 import { injectContentFiles } from '@analogjs/content';
 import { AsyncPipe } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, viewChild } from '@angular/core';
+import {
+  AfterViewChecked,
+  Component,
+  ElementRef,
+  inject,
+  viewChild,
+} from '@angular/core';
 import {
   ActivatedRoute,
   Router,
@@ -68,26 +74,27 @@ import { PostAttributes } from '../../types';
     </section>
   `,
 })
-export default class BlogPage implements AfterViewInit {
+export default class BlogPage implements AfterViewChecked {
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
+
   readonly posts = injectContentFiles<PostAttributes>((contentFile) => {
     return contentFile.filename.includes('/src/content/blog/');
   });
 
-  readonly searchInput = viewChild.required<ElementRef>('searchInput');
-  keyword$ = this.route.queryParams.pipe(map((p) => p['keyword']));
+  readonly searchInput = viewChild<ElementRef>('searchInput');
+  keyword$ = this.route?.queryParams.pipe(map((p) => p['keyword']));
   searchString = '';
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-  ) {}
-
-  ngAfterViewInit() {
-    fromEvent(this.searchInput().nativeElement, 'keyup')
-      .pipe(filter(Boolean), debounceTime(300), distinctUntilChanged())
-      .subscribe(() => {
-        this.searchString = this.searchInput().nativeElement.value;
-      });
+  ngAfterViewChecked() {
+    const sInput = this.searchInput();
+    if (sInput) {
+      fromEvent(sInput.nativeElement, 'keyup')
+        .pipe(filter(Boolean), debounceTime(300), distinctUntilChanged())
+        .subscribe(() => {
+          this.searchString = sInput.nativeElement.value;
+        });
+    }
   }
 
   removeKeywordFilter() {
