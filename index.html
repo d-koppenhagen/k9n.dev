@@ -1,0 +1,545 @@
+<!DOCTYPE html><html lang="de"><head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Apple PWA Support -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-512x512.png">
+    <link href="icons/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Basic Site Information -->
+    <title>k9n.dev</title>
+    <meta name="description" content="Danny Koppenhagen: Entwickler, IT-Berater, Buchautor">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Danny Koppenhagen">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@d-koppenhagen">
+    <meta name="twitter:title" content="Danny Koppenhagen: Entwickler, IT-Berater, Buchautor">
+    <meta name="twitter:image" content="https://k9n.dev/images/k9n.png">
+    <meta name="twitter:description" content="📦#nodejs 🅰️#Angular,💡#TypeScript,⚡️#RxJS, ♻️#NgRx, 🔰 #Vue.js 👨🏻‍💻 Developer @dbsystel📕Author @angular_buch https://angular-buch.com, writer @indepth_dev">
+
+    <!-- Open Graph Profile -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="k9n.dev">
+    <meta property="og:url" content="https://k9n.dev">
+    <meta property="og:image" content="https://k9n.dev/images/k9n.png">
+    <meta property="profile:first_name" content="Danny">
+    <meta property="profile:last_name" content="Koppenhagen">
+    <meta property="profile:gender" content="male">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#e7e7e7">
+    <script type="module" crossorigin="" src="/assets/index-Be9IN4QR.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-CZLSIS4C.css">
+  <style ng-app-id="ng">.menu-dark[_ngcontent-ng-c1817153599] {
+  filter: alpha(opacity=90);
+}
+.menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599] {
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.9;
+  margin: 0px 1px;
+}
+.menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599]:hover, .menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599]:focus {
+  background-color: rgb(67.1351351351, 71.5135135135, 94.8648648649);
+  box-shadow: inset 0 0 0 2px #5e7959;
+}
+.menu-dark[_ngcontent-ng-c1817153599]:focus    > button[_ngcontent-ng-c1817153599] {
+  box-shadow: inset 0 0 0 2px #ada789;
+}
+@media screen and (max-width: 480px) {
+  .hidden-small[_ngcontent-ng-c1817153599] {
+    visibility: hidden;
+  }
+}</style><style ng-app-id="ng">.header-title[_ngcontent-ng-c2595095079] {
+  background-image: url("/images/bg-triangles.jpg");
+  background-size: cover;
+  font-size: 5em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.2901960784);
+}
+
+.sub-header-title[_ngcontent-ng-c2595095079] {
+  color: #2e3141;
+  font-size: 1.6em !important;
+  margin-bottom: 0.5em;
+  line-height: 1.3 !important;
+}
+
+.sub-header[_ngcontent-ng-c2595095079] {
+  color: #2e3141;
+  font-size: 1.2em;
+}
+
+#banner[_ngcontent-ng-c2595095079] {
+  background-image: url("/images/dk-header.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-color: #fdfdfd;
+  padding: 9em 0 12em 0;
+  animation: _ngcontent-ng-c2595095079_headerFadeIn 3s;
+}
+
+@keyframes _ngcontent-ng-c2595095079_headerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#logo[_ngcontent-ng-c2595095079] {
+  position: absolute;
+  top: 5px;
+}
+
+#logo[_ngcontent-ng-c2595095079]   img[_ngcontent-ng-c2595095079] {
+  width: 70px;
+  animation: _ngcontent-ng-c2595095079_move-to-top 1s ease, _ngcontent-ng-c2595095079_rotate 4s ease 1;
+}
+
+#logo[_ngcontent-ng-c2595095079]:focus, 
+h1[_ngcontent-ng-c2595095079]:focus {
+  outline: 1px solid rgba(185, 167, 167, 0.4);
+}
+
+@keyframes _ngcontent-ng-c2595095079_rotate {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+
+@keyframes _ngcontent-ng-c2595095079_move-to-top {
+  0% {
+    top: 100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #banner[_ngcontent-ng-c2595095079] {
+    background-position: right -200px top;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #banner[_ngcontent-ng-c2595095079] {
+    background-size: contain;
+    padding: 6em 0 10em 0;
+    background-position: right -200px top;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .sub-header[_ngcontent-ng-c2595095079] {
+    font-size: 1em !important;
+    padding-right: 110px;
+  }
+  #banner[_ngcontent-ng-c2595095079] {
+    padding: 6em 0 5em 0;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 3.5em;
+    padding-right: 40vw;
+  }
+  #banner[_ngcontent-ng-c2595095079] {
+    background-size: cover;
+    background-position: right -180px top;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 3em;
+    padding-right: 50vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    opacity: 0.7;
+    font-size: 2.5em;
+    padding-right: 50vw;
+  }
+}</style><style ng-app-id="ng">@media screen and (min-width: 736px) {
+  ul.contact[_ngcontent-ng-c4016635780] {
+    columns: 2;
+    width: 100% !important;
+  }
+}</style><style ng-app-id="ng">.m0[_ngcontent-ng-c2373437213] {
+      margin: 0;
+    }</style><style ng-app-id="ng">.features[_ngcontent-ng-c1705474446] {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 30px 1.75em;
+  grid-auto-flow: row;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  margin-right: 1.7em;
+}
+
+@media screen and (max-width: 800px) {
+  .features[_ngcontent-ng-c1705474446] {
+    grid-template-columns: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .features[_ngcontent-ng-c1705474446] {
+    margin-right: 0;
+  }
+}</style><style ng-app-id="ng">.image[_ngcontent-ng-c2390164813], 
+.image[_ngcontent-ng-c2390164813]    > img[_ngcontent-ng-c2390164813], 
+.wrapper.spotlight[_ngcontent-ng-c2390164813]   .image[_ngcontent-ng-c2390164813] {
+  border-radius: 0%;
+}
+
+.wrapper.spotlight[_ngcontent-ng-c2390164813]:before {
+  background-color: #3d4051;
+}</style><style ng-app-id="ng">p[_ngcontent-ng-c2696826405] {
+  white-space: pre-wrap;
+}
+
+.about[_ngcontent-ng-c2696826405], 
+.interviews[_ngcontent-ng-c2696826405] {
+  padding-bottom: 30px;
+}
+
+.about[_ngcontent-ng-c2696826405]   .button-group[_ngcontent-ng-c2696826405], 
+.interviews[_ngcontent-ng-c2696826405]   .button-group[_ngcontent-ng-c2696826405] {
+  display: flex;
+  gap: 1rem;
+}
+
+.text-img[_ngcontent-ng-c2696826405] {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.text-img[_ngcontent-ng-c2696826405]   img[_ngcontent-ng-c2696826405] {
+  max-width: 300px;
+  height: fit-content;
+}
+
+
+
+
+.grid-container[_ngcontent-ng-c2696826405] {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 30px 1.75em;
+  grid-auto-flow: row;
+  grid-template-areas: "grid-description-1 grid-description-2" "grid-details-1 grid-details-2";
+  margin-bottom: 1.2em;
+}
+
+.grid-description-1[_ngcontent-ng-c2696826405] {
+  grid-area: grid-description-1;
+}
+
+.grid-details-1[_ngcontent-ng-c2696826405] {
+  grid-area: grid-details-1;
+}
+
+.grid-description-2[_ngcontent-ng-c2696826405] {
+  grid-area: grid-description-2;
+}
+
+.grid-details-2[_ngcontent-ng-c2696826405] {
+  grid-area: grid-details-2;
+}
+
+@media screen and (max-width: 800px) {
+  .grid-container[_ngcontent-ng-c2696826405] {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "grid-description-1" "grid-details-1" "grid-description-2" "grid-details-2";
+  }
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+  .button.small[_ngcontent-ng-c2696826405] {
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .text-img[_ngcontent-ng-c2696826405] {
+    flex-wrap: wrap;
+  }
+}</style><style ng-app-id="ng">.image[_ngcontent-ng-c293280889], 
+.image[_ngcontent-ng-c293280889]    > img[_ngcontent-ng-c293280889], 
+.wrapper.spotlight[_ngcontent-ng-c293280889]   .image[_ngcontent-ng-c293280889] {
+  border-radius: 0%;
+  max-width: 200px;
+}
+
+.wrapper.spotlight[_ngcontent-ng-c293280889]:nth-child(2n-1)   .inner[_ngcontent-ng-c293280889] {
+  text-align: left;
+}</style><style ng-app-id="ng">
+
+.timeline[_ngcontent-ng-c1589502226] {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+.timeline[_ngcontent-ng-c1589502226]::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: rgb(156.2926829268, 155.4268292683, 140.7073170732);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+
+.timeline-heading-header[_ngcontent-ng-c1589502226] {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.timeline-heading-info[_ngcontent-ng-c1589502226] {
+  font-size: 0.9em;
+  text-transform: none;
+  font-weight: bold;
+  line-height: 1.1;
+}
+.timeline-heading-info.time[_ngcontent-ng-c1589502226] {
+  font-size: 1.3em;
+}
+.timeline-heading[_ngcontent-ng-c1589502226] {
+  font-size: 1.1em;
+  text-transform: none;
+  padding-top: 0.7em;
+}
+
+
+.container[_ngcontent-ng-c1589502226] {
+  padding: 10px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  max-height: 200px;
+  list-style: none;
+}
+
+
+.container[_ngcontent-ng-c1589502226]::after {
+  content: "";
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  right: -14px;
+  background-color: white;
+  border: 4px solid #848372;
+  top: 25px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+.left[_ngcontent-ng-c1589502226] {
+  left: 0;
+}
+
+
+.right[_ngcontent-ng-c1589502226] {
+  left: 50%;
+}
+
+
+.left[_ngcontent-ng-c1589502226]::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+}
+
+
+.right[_ngcontent-ng-c1589502226]::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+}
+
+
+.right[_ngcontent-ng-c1589502226]::after {
+  left: -14px;
+}
+
+
+.content[_ngcontent-ng-c1589502226] {
+  padding: 0.8em 1em;
+  position: relative;
+  border-radius: 6px;
+}
+
+
+@media screen and (max-width: 800px) {
+  
+
+  .timeline[_ngcontent-ng-c1589502226]::after {
+    left: 20px;
+  }
+  .content[_ngcontent-ng-c1589502226] {
+    padding-right: 0px;
+  }
+  
+
+  .container[_ngcontent-ng-c1589502226] {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 0px;
+    max-height: unset;
+  }
+  
+
+  .left[_ngcontent-ng-c1589502226]::after, 
+   .right[_ngcontent-ng-c1589502226]::after {
+    left: 6px;
+  }
+  
+
+  .right[_ngcontent-ng-c1589502226] {
+    left: 0%;
+  }
+}</style><style ng-app-id="ng">article[_ngcontent-ng-c1913349638] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+article[_ngcontent-ng-c1913349638]:focus-within {
+  outline: 2px solid #5e7959;
+  outline-offset: 1px;
+}
+img.card-image[_ngcontent-ng-c1913349638] {
+  height: 180px;
+  object-fit: cover;
+}
+.card-header[_ngcontent-ng-c1913349638] {
+  margin: 1.5rem 1.5rem 0;
+}
+.card-header[_ngcontent-ng-c1913349638]   .major[_ngcontent-ng-c1913349638] {
+  min-height: 100px;
+}
+.card-content[_ngcontent-ng-c1913349638] {
+  align-self: flex-start;
+  margin: 0 1.5rem;
+}
+.card-footer[_ngcontent-ng-c1913349638] {
+  margin: 1.5rem 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.card-footer[_ngcontent-ng-c1913349638]   .read-on[_ngcontent-ng-c1913349638] {
+  white-space: nowrap;
+  margin-right: 10px;
+}
+.card-footer[_ngcontent-ng-c1913349638]   .published-at-link[_ngcontent-ng-c1913349638] {
+  text-decoration: none;
+  border: none;
+  float: right;
+  width: 150px;
+}
+.card-footer[_ngcontent-ng-c1913349638]   .published-at-link[_ngcontent-ng-c1913349638]    > img.published-at-logo[_ngcontent-ng-c1913349638] {
+  float: right;
+  max-height: 50px;
+}
+
+
+@media screen and (max-width: 980px) {
+  img.card-image[_ngcontent-ng-c1913349638] {
+    height: 150px;
+  }
+  .read-on[_ngcontent-ng-c1913349638] {
+    font-size: 0.7em !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .read-on[_ngcontent-ng-c1913349638] {
+    font-size: 0.6em !important;
+  }
+}
+@media screen and (max-width: 736px) {
+  img.card-image[_ngcontent-ng-c1913349638] {
+    height: 120px;
+  }
+  .read-on[_ngcontent-ng-c1913349638] {
+    visibility: hidden;
+  }
+  .read-on[_ngcontent-ng-c1913349638]::before {
+    visibility: visible;
+  }
+}</style></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-HY3CPEEH1Z"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HY3CPEEH1Z');
+      </script>
+  <body id="page-wrapper" class="mat-typography"><!--nghm-->
+    <!-- Angular -->
+    <dk-root ng-version="19.0.5" ngh="8" ng-server-context="ssr-analog"><dk-navbar _nghost-ng-c1817153599="" ngh="0"><nav _ngcontent-ng-c1817153599="" id="navigation" role="navigation" tabindex="0" class="menu-dark"><button _ngcontent-ng-c1817153599="" role="button" aria-label="Menü öffnen" aria-controls="menu" class="burger-menu" aria-expanded="false"><span _ngcontent-ng-c1817153599="" class="hidden-small">Menü</span></button></nav></dk-navbar><dk-header _nghost-ng-c2595095079="" ngh="1"><header _ngcontent-ng-c2595095079="" id="banner"><div _ngcontent-ng-c2595095079="" class="inner"><a _ngcontent-ng-c2595095079="" routerlink="/" aria-label="Zur Startseite" title="Startseite" id="logo" href="/"><img _ngcontent-ng-c2595095079="" src="images/logo_header.png" alt="Logo"></a><h1 _ngcontent-ng-c2595095079="" tabindex="0" aria-label="Textanimation: k9n.dev verändert sich zu 'Koppenhagen' zur Visualisierung des Numeronyms" aria-describedby="about-k9n" class="header-title"><span _ngcontent-ng-c2595095079="">k</span><span _ngcontent-ng-c2595095079="" class="headline-expanded">9</span><!----><!----><span _ngcontent-ng-c2595095079="">n.dev</span><!----></h1><p _ngcontent-ng-c2595095079="" class="sub-header-title">Danny Koppenhagen</p><p _ngcontent-ng-c2595095079="" class="sub-header">Entwickler, IT-Berater, Buchautor</p></div></header></dk-header><main><router-outlet></router-outlet><ng-component _nghost-ng-c2373437213="" ngh="0"><section _ngcontent-ng-c2373437213="" class="wrapper alt style1 m0"><div _ngcontent-ng-c2373437213="" class="inner"><h2 _ngcontent-ng-c2373437213="" class="major">Aktuelle Blog Posts</h2><dk-preview _ngcontent-ng-c2373437213="" content="blog" _nghost-ng-c1705474446="" ngh="3"><section _ngcontent-ng-c1705474446="" class="features"><dk-card _ngcontent-ng-c1705474446="" _nghost-ng-c1913349638="" ngh="2"><article _ngcontent-ng-c1913349638=""><img _ngcontent-ng-c1913349638="" alt="" class="card-image" src="https://website-articles.angular-buch.com/2024-11-angular19/angular19.jpg"><div _ngcontent-ng-c1913349638="" class="card-header"><h3 _ngcontent-ng-c1913349638="" class="major">Angular 19 ist da!</h3></div><div _ngcontent-ng-c1913349638="" class="card-content" lang="de"><p _ngcontent-ng-c1913349638=""> Neben grauen Herbsttagen hat der November in Sachen Angular einiges zu bieten: Am 19. November 2024 wurde die neue Major-Version Angular 19 releaset! Angular bringt mit der Resource API und dem Linked Signal einige neue Features mit. Standalone Components müssen außerdem nicht mehr explizit als solche markiert werden. Wir stellen in diesem Blogpost alle wichtigen Neuerungen vor! </p></div><div _ngcontent-ng-c1913349638="" class="card-footer"><a _ngcontent-ng-c1913349638="" target="_blank" class="special read-on" href="https://angular-buch.com/blog/2024-11-angular19" lang="de">Weiterlesen...</a><!----><!----><a _ngcontent-ng-c1913349638="" target="_blank" class="published-at-link" href="https://angular-buch.com/blog/2024-11-angular19" lang="de" title="Original veröffentlicht auf angular-buch.com" aria-label="Original veröffentlicht auf angular-buch.com"><img _ngcontent-ng-c1913349638="" alt="" class="published-at-logo" src="https://angular-buch.com/assets/img/brand-400.png"><!----><!----></a><!----></div></article><!----></dk-card><dk-card _ngcontent-ng-c1705474446="" _nghost-ng-c1913349638="" ngh="2"><article _ngcontent-ng-c1913349638=""><img _ngcontent-ng-c1913349638="" alt="" class="card-image" src="https://dbsystel.github.io/tech-stories/images/home.png"><div _ngcontent-ng-c1913349638="" class="card-header"><h3 _ngcontent-ng-c1913349638="" class="major">Supercharge Your Angular PWA with Push Notifications: From Setup to Debugging</h3></div><div _ngcontent-ng-c1913349638="" class="card-content" lang="en"><p _ngcontent-ng-c1913349638=""> In modern web applications, push notifications have become an essential feature for engaging users. Service workers are crucial in enabling this functionality by running scripts in the background, independent of a web page. This guide will walk you through setting up a service worker with push notifications in Angular, including testing, verifying, debugging, and avoiding common pitfalls. </p></div><div _ngcontent-ng-c1913349638="" class="card-footer"><a _ngcontent-ng-c1913349638="" target="_blank" class="special read-on" href="https://techstories.dbsystel.de/blog/2024/2024-07-02-Angular-Push-Notifications.html" lang="en">Weiterlesen...</a><!----><!----><a _ngcontent-ng-c1913349638="" target="_blank" class="published-at-link" href="https://techstories.dbsystel.de/blog/2024/2024-07-02-Angular-Push-Notifications.html" lang="en" title="Original veröffentlicht auf DB Systel Tech Stories" aria-label="Original veröffentlicht auf DB Systel Tech Stories"><img _ngcontent-ng-c1913349638="" alt="" class="published-at-logo" src="https://dbsystel.github.io/tech-stories/images/home.png"><!----><!----></a><!----></div></article><!----></dk-card><dk-card _ngcontent-ng-c1705474446="" _nghost-ng-c1913349638="" ngh="2"><article _ngcontent-ng-c1913349638=""><img _ngcontent-ng-c1913349638="" alt="" class="card-image" src="https://website-articles.angular-buch.com/2024-06-angular18/angular18.jpg"><div _ngcontent-ng-c1913349638="" class="card-header"><h3 _ngcontent-ng-c1913349638="" class="major">Angular 18 ist da: Signals, Signals, Signals!</h3></div><div _ngcontent-ng-c1913349638="" class="card-content" lang="de"><p _ngcontent-ng-c1913349638=""> Und schon wieder ist ein halbes Jahr vergangen: Angular Version 18 ist jetzt verfügbar! In den letzten Versionen wurden viele neue Funktionen und Verbesserungen eingeführt. Diesmal lag der Fokus darauf, die bereits ausgelieferten APIs zu stabilisieren, diverse Feature Requests zu bearbeiten und eines der am meisten nachgefragten Projekte auf der Roadmap experimentell zu veröffentlichen: die Zoneless Change Detection. </p></div><div _ngcontent-ng-c1913349638="" class="card-footer"><a _ngcontent-ng-c1913349638="" target="_blank" class="special read-on" href="https://angular-buch.com/blog/2024-06-angular18" lang="de">Weiterlesen...</a><!----><!----><a _ngcontent-ng-c1913349638="" target="_blank" class="published-at-link" href="https://angular-buch.com/blog/2024-06-angular18" lang="de" title="Original veröffentlicht auf angular-buch.com" aria-label="Original veröffentlicht auf angular-buch.com"><img _ngcontent-ng-c1913349638="" alt="" class="published-at-logo" src="https://angular-buch.com/assets/img/brand-400.png"><!----><!----></a><!----></div></article><!----></dk-card><dk-card _ngcontent-ng-c1705474446="" _nghost-ng-c1913349638="" ngh="2"><article _ngcontent-ng-c1913349638=""><img _ngcontent-ng-c1913349638="" alt="" class="card-image" src="https://website-articles.angular-buch.com/2024-05-modern-angular-bm/header-modernangular.jpg"><div _ngcontent-ng-c1913349638="" class="card-header"><h3 _ngcontent-ng-c1913349638="" class="major">Modern Angular: den BookMonkey migrieren</h3></div><div _ngcontent-ng-c1913349638="" class="card-content" lang="de"><p _ngcontent-ng-c1913349638=""> Angular erlebt einen Aufschwung:
+Mit den letzten Major-Versionen des Frameworks wurden einige wichtige neue Konzepte und Features eingeführt.
+Wir berichten darüber regelmäßig in unseren Blogposts zu den Angular-Releases.
+In diesem Artikel wollen wir das Beispielprojekt "BookMonkey" aus dem Angular-Buch aktualisieren und die neuesten Konzepte von Angular praktisch einsetzen.
+ </p></div><div _ngcontent-ng-c1913349638="" class="card-footer"><a _ngcontent-ng-c1913349638="" target="_blank" class="special read-on" href="https://angular-buch.com/blog/2024-05-modern-angular-bm" lang="de">Weiterlesen...</a><!----><!----><a _ngcontent-ng-c1913349638="" target="_blank" class="published-at-link" href="https://angular-buch.com/blog/2024-05-modern-angular-bm" lang="de" title="Original veröffentlicht auf angular-buch.com" aria-label="Original veröffentlicht auf angular-buch.com"><img _ngcontent-ng-c1913349638="" alt="" class="published-at-logo" src="https://angular-buch.com/assets/img/brand-400.png"><!----><!----></a><!----></div></article><!----></dk-card><!----><!----><!----></section><ul _ngcontent-ng-c1705474446="" class="actions"><li _ngcontent-ng-c1705474446=""><a _ngcontent-ng-c1705474446="" class="button" href="/blog">Alle anzeigen (22)</a></li></ul><!----></dk-preview></div></section><section _ngcontent-ng-c2373437213="" class="wrapper style3"><div _ngcontent-ng-c2373437213="" class="inner"><h2 _ngcontent-ng-c2373437213="" class="major">Meine Talks &amp; Slides</h2><dk-preview _ngcontent-ng-c2373437213="" content="talks" _nghost-ng-c1705474446="" ngh="4"><section _ngcontent-ng-c1705474446="" class="features"><dk-card _ngcontent-ng-c1705474446="" _nghost-ng-c1913349638="" ngh="2"><article _ngcontent-ng-c1913349638=""><img _ngcontent-ng-c1913349638="" alt="" class="card-image" src="https://techstories.dbsystel.de/images/20240116-a11y-Angular/a11y-angular.png"><div _ngcontent-ng-c1913349638="" class="card-header"><h3 _ngcontent-ng-c1913349638="" class="major">Accessibility in Angular – Angulars features for a better and more inclusive web</h3></div><div _ngcontent-ng-c1913349638="" class="card-content" lang="en"><p _ngcontent-ng-c1913349638=""> The Angular Framework brings us some built-in features to help in creating accessible components and applications by wrapping common best practices and techniques. In this talk at the Angular Berlin Meetup, I presented these concepts and features. </p></div><div _ngcontent-ng-c1913349638="" class="card-footer"><a _ngcontent-ng-c1913349638="" target="_blank" class="special read-on" href="https://techstories.dbsystel.de/blog/2024/2024-01-16-Accessibility-in-Angular.html" lang="en">Weiterlesen...</a><!----><!----><a _ngcontent-ng-c1913349638="" target="_blank" class="published-at-link" href="https://techstories.dbsystel.de/blog/2024/2024-01-16-Accessibility-in-Angular.html" lang="en" title="Original veröffentlicht auf DB Systel Tech Stories" aria-label="Original veröffentlicht auf DB Systel Tech Stories"><img _ngcontent-ng-c1913349638="" alt="" class="published-at-logo" src="https://dbsystel.github.io/tech-stories/images/home.png"><!----><!----></a><!----></div></article><!----></dk-card><dk-card _ngcontent-ng-c1705474446="" _nghost-ng-c1913349638="" ngh="2"><article _ngcontent-ng-c1913349638=""><img _ngcontent-ng-c1913349638="" alt="" class="card-image" src="https://dbsystel.github.io/tech-stories/images/home.png"><div _ngcontent-ng-c1913349638="" class="card-header"><h3 _ngcontent-ng-c1913349638="" class="major">A11y: EAA, BFSG, WCAG, WAI, ARIA, WTF? – it’s for the people stupid!</h3></div><div _ngcontent-ng-c1913349638="" class="card-content" lang="de"><p _ngcontent-ng-c1913349638=""> Accessibility betrifft uns täglich und immer, wenn wir Software verwenden. Es ist an uns, diese umzusetzen. In unserem Talk von der W-JAX am 07.11.2023 zeigen wir euch, wie ihr eure Webanwendungen von Beginn an mit einfachen Mitteln zu einem hohen Grad barrierefrei gestaltet und entwickelt. </p></div><div _ngcontent-ng-c1913349638="" class="card-footer"><a _ngcontent-ng-c1913349638="" target="_blank" class="special read-on" href="https://techstories.dbsystel.de/blog/2023/2023-11-20-einfuehrung-barrierefreiheit-web.html" lang="de">Weiterlesen...</a><!----><!----><a _ngcontent-ng-c1913349638="" target="_blank" class="published-at-link" href="https://techstories.dbsystel.de/blog/2023/2023-11-20-einfuehrung-barrierefreiheit-web.html" lang="de" title="Original veröffentlicht auf DB Systel Tech Stories" aria-label="Original veröffentlicht auf DB Systel Tech Stories"><img _ngcontent-ng-c1913349638="" alt="" class="published-at-logo" src="https://dbsystel.github.io/tech-stories/images/home.png"><!----><!----></a><!----></div></article><!----></dk-card><!----><!----><!----></section><!----></dk-preview></div></section><dk-publications _ngcontent-ng-c2373437213="" _nghost-ng-c2390164813="" ngh="0"><section _ngcontent-ng-c2390164813="" id="wrapper"><section _ngcontent-ng-c2390164813="" id="one" class="wrapper spotlight style1"><div _ngcontent-ng-c2390164813="" class="inner"><a _ngcontent-ng-c2390164813="" href="https://angular-buch.com" aria-label="Zur Buchwebsite (angular-buch.com)" class="image"><img _ngcontent-ng-c2390164813="" src="images/book-cover.png" alt="Buchcover: angular-buch.com"></a><div _ngcontent-ng-c2390164813="" class="content"><h2 _ngcontent-ng-c2390164813="" class="major"> Angular: Das große Praxisbuch – Grundlagen, fortgeschrittene Themen und Best Practices – ab Angular 15 </h2><p _ngcontent-ng-c2390164813=""> Lernen Sie Angular mit diesem umfassenden Praxisbuch! Dieses Buch stellt Ihnen die Bausteine von Angular, viele Best Practices und die notwendigen Werkzeuge vor. Beginnen Sie Ihren Einstieg mit einer praxisnahen Einführung. </p><a _ngcontent-ng-c2390164813="" href="https://angular-buch.com" class="special">angular-buch.com</a></div></div></section></section></dk-publications><section _ngcontent-ng-c2373437213="" class="wrapper alt style1"><div _ngcontent-ng-c2373437213="" class="inner"><h2 _ngcontent-ng-c2373437213="" class="major">Meine Projekte</h2><dk-preview _ngcontent-ng-c2373437213="" content="projects" _nghost-ng-c1705474446="" ngh="3"><section _ngcontent-ng-c1705474446="" class="features"><dk-card _ngcontent-ng-c1705474446="" _nghost-ng-c1913349638="" ngh="5"><article _ngcontent-ng-c1913349638=""><img _ngcontent-ng-c1913349638="" alt="" class="card-image" src="images/projects/analog-publish-gh-pages-small.png"><div _ngcontent-ng-c1913349638="" class="card-header"><h3 _ngcontent-ng-c1913349638="" class="major">Analog Publish GitHub Pages</h3></div><div _ngcontent-ng-c1913349638="" class="card-content" lang="en"><p _ngcontent-ng-c1913349638=""> When I migrated my personal website/blog to use AnalogJS, I created a GitHub Action which simplifies the deployment at GitHub Pages. </p></div><div _ngcontent-ng-c1913349638="" class="card-footer"><!----><a _ngcontent-ng-c1913349638="" class="special read-on" lang="en" href="/projects/2023-12-29-analog-publish-gh-pages">Weiterlesen...</a><!----><!----></div></article><!----></dk-card><dk-card _ngcontent-ng-c1705474446="" _nghost-ng-c1913349638="" ngh="5"><article _ngcontent-ng-c1913349638=""><img _ngcontent-ng-c1913349638="" alt="" class="card-image" src="images/projects/vue3-openlayers-small.png"><div _ngcontent-ng-c1913349638="" class="card-header"><h3 _ngcontent-ng-c1913349638="" class="major">Maintainer: vue3-openlayers</h3></div><div _ngcontent-ng-c1913349638="" class="card-content" lang="en"><p _ngcontent-ng-c1913349638=""> Since April 2023, I am actively maintaining and evolving the vue3-openlayers library — An OpenLayers Wrapper for Vue3. </p></div><div _ngcontent-ng-c1913349638="" class="card-footer"><!----><a _ngcontent-ng-c1913349638="" class="special read-on" lang="en" href="/projects/2023-04-05-vue3-openlayers">Weiterlesen...</a><!----><!----></div></article><!----></dk-card><dk-card _ngcontent-ng-c1705474446="" _nghost-ng-c1913349638="" ngh="5"><article _ngcontent-ng-c1913349638=""><img _ngcontent-ng-c1913349638="" alt="" class="card-image" src="images/projects/ngx-lipsum.svg"><div _ngcontent-ng-c1913349638="" class="card-header"><h3 _ngcontent-ng-c1913349638="" class="major">ngx-lipsum</h3></div><div _ngcontent-ng-c1913349638="" class="card-content" lang="en"><p _ngcontent-ng-c1913349638=""> Easily use lorem ipsum dummy texts in your angular app </p></div><div _ngcontent-ng-c1913349638="" class="card-footer"><!----><a _ngcontent-ng-c1913349638="" class="special read-on" lang="en" href="/projects/2021-09-14-ngx-lipsum">Weiterlesen...</a><!----><!----></div></article><!----></dk-card><dk-card _ngcontent-ng-c1705474446="" _nghost-ng-c1913349638="" ngh="5"><article _ngcontent-ng-c1913349638=""><img _ngcontent-ng-c1913349638="" alt="" class="card-image" src="images/projects/mermaid-small.jpg"><div _ngcontent-ng-c1913349638="" class="card-header"><h3 _ngcontent-ng-c1913349638="" class="major">scully-plugin-mermaid — A PostRenderer Plugin for Mermaid</h3></div><div _ngcontent-ng-c1913349638="" class="card-content" lang="en"><p _ngcontent-ng-c1913349638=""> Add a Scully.io PostRenderer plugin for Mermaid.js graphs, charts and diagrams embedded in Markdown files. </p></div><div _ngcontent-ng-c1913349638="" class="card-footer"><!----><a _ngcontent-ng-c1913349638="" class="special read-on" lang="en" href="/projects/2020-09-12-scully-plugin-mermaid">Weiterlesen...</a><!----><!----></div></article><!----></dk-card><!----><!----><!----></section><ul _ngcontent-ng-c1705474446="" class="actions"><li _ngcontent-ng-c1705474446=""><a _ngcontent-ng-c1705474446="" class="button" href="/projects">Alle anzeigen (10)</a></li></ul><!----></dk-preview></div></section><dk-about _ngcontent-ng-c2373437213="" _nghost-ng-c2696826405="" ngh="7"><section _ngcontent-ng-c2696826405="" id="about" class="wrapper style2"><div _ngcontent-ng-c2696826405="" class="inner"><h2 _ngcontent-ng-c2696826405="" class="major">Über mich</h2><p _ngcontent-ng-c2696826405=""> Ich bin Danny Koppenhagen: Frontend Entwickler und -Architekt. Ich entwickle seit vielen Jahren nutzerzentrierte Enterprise Webanwendung und bevorzuge die Arbeit im DevOps-Produktionsmodell. Als technologische Basis setze ich auf moderne SPA-Frameworks wie Angular und Vue mit TypeScript. Weiterhin bin ich als Berater im Bereich der Webentwicklung tätig und Maintainer einiger Open Source Projekte. </p><section _ngcontent-ng-c2696826405="" id="about-k9n" class="about"><h3 _ngcontent-ng-c2696826405="" class="major">k9n.dev?</h3><p _ngcontent-ng-c2696826405=""> Warum k9n.dev? Hierbei handelt es sich um ein Numeronym, bei dem die Zahl zwischen den beiden Buchstaben für die Anzahl der ausgelassenen Buchstaben in meinem Nachnamen steht (Vgl.: a11y, i18n, l10n, ...). </p></section><h3 _ngcontent-ng-c2696826405="" class="major">Interviews</h3><section _ngcontent-ng-c2696826405="" class="interviews"><article _ngcontent-ng-c2696826405="" class="text-img"><div _ngcontent-ng-c2696826405=""><h4 _ngcontent-ng-c2696826405=""> IT@DB Podcast Folge #73 vom 18.01.2024: Digitale Barrierefreiheit </h4><p _ngcontent-ng-c2696826405=""> Zusammen mit meinem Kollegen <a _ngcontent-ng-c2696826405="" href="https://techstories.dbsystel.de/blog/profiles/Maximilian-Franzke.html" target="_blank">Maximilian Franzke</a> von der DB Systel, war ich zu Gast beim IT@DB Podcast von <a _ngcontent-ng-c2696826405="" href="https://www.linkedin.com/in/jan-g%C3%B6tze-178516a6/" target="_blank">Jan Götze</a>. Hier haben wir darüber gesprochen, warum es in unserer zunehmend digitalisierten Welt von entscheidender Bedeutung ist, dass wir die Prinzipien der digitalen Barrierefreiheit fest in unserer Gestaltung und Entwicklung von digitalen Produkten verankern. Barrierefreiheit geht weit über bloße Compliance hinaus – es ist die Grundlage für eine inklusive und gerechte Online-Erfahrung! Digitale Barrierefreiheit ermöglicht es Menschen mit unterschiedlichen Fähigkeiten, unabhängig von physischen oder kognitiven Einschränkungen, die gleichen Chancen im digitalen Raum zu nutzen. </p><div _ngcontent-ng-c2696826405="" class="button-group"><a _ngcontent-ng-c2696826405="" href="https://open.spotify.com/episode/4n6qXpYtCZ9UQACbUPNMpG?si=fIldVBQhR_e8Vw4iStiBSw" class="button small"><i _ngcontent-ng-c2696826405="" class="icon brands fa-spotify"></i> Spotify </a><a _ngcontent-ng-c2696826405="" href="https://podcasts.apple.com/de/podcast/digitale-barrierefreiheit-danny-koppenhagen-und-maximilian/id1462447493?i=1000642092259" class="button small"><i _ngcontent-ng-c2696826405="" class="icon brands fa-apple"></i>Apple Podcasts </a><a _ngcontent-ng-c2696826405="" href="https://deezer.page.link/MZaQ2c5YqQ28vcdn6" class="button small"><i _ngcontent-ng-c2696826405="" class="icon brands fa-deezer"></i>Deezer </a></div></div><img _ngcontent-ng-c2696826405="" src="images/it_at_db_podcast_a11y.jpeg" width="300" height="300" alt="Ein lebendiger oranger Hintergrund bildet die Kulisse für kreative Würfel, die in geschickter Anordnung die Worte &quot;Accessible&quot; und &quot;Possible&quot; formen. Die Würfel sind tastbar, mit klaren Strukturen, um die Botschaft haptisch erfahrbar zu machen. Das Bild verweist auf Folge Nummer 73 der Podcastfolge von IT@DB zum Thema &quot;Digitale Barrierefreiheit&quot;"></article><div _ngcontent-ng-c2696826405="" class="grid-container"><article _ngcontent-ng-c2696826405="" class="grid-description-1"><h4 _ngcontent-ng-c2696826405="">#000000 c0ffee Tech-Talk der DB Systel</h4><p _ngcontent-ng-c2696826405=""> Im Mai war ich zu Gast beim #000000 c0ffee Tech-Talk der DB Systel, der Auf Grund der weltweiten Corona Pandemie remote stattfand.\r\n Im Interview spreche ich über meine Erfahrungen mit Vue.js und Angular und gehe darauf ein, welches Framework sich für welche Anwendungszwecke eignet. Außerdem erläutere ich, wie der aktuelle Stand der Technik für Progressive Webapps (PWA) ist. Im letzten Teil sprechen wir über die Anbindung von APIs und über das Architekturmuster \"Backend For Frontends\" (BFF). </p></article><article _ngcontent-ng-c2696826405="" class="grid-description-2"><h4 _ngcontent-ng-c2696826405="">Interview mit Agiledrop</h4><p _ngcontent-ng-c2696826405=""> Im Interview mit Agiledrop spreche ich über meinen Weg zur Webentwicklung und wie ich dazu kam Co-Autor des deutschsprachigen Angular Buchs zu sein. Weiterhin berichte ich von meinen praktischen Erfahrungen mit Angular und Vue.js und in welchem Fall ich auf Angular oder Vue.js setzen würde. Zum Abschluss gehe ich auf den Static-Site-Generator \"Scully\" und Webcomponents sowie auf meine Erwartungen an die zukünftige Entwicklung im Bereich Webtechnologien ein. </p></article><!----><div _ngcontent-ng-c2696826405="" class="grid-details-2"><!----><!----><div _ngcontent-ng-c2696826405=""></div><!----><a _ngcontent-ng-c2696826405="" href="https://www.agiledrop.com/blog/interview-danny-koppenhagen-vuejs-angular-buch-scully-and-web-components" class="button small">Zum kompletten Interview</a></div></div></section><h3 _ngcontent-ng-c2696826405="" class="major">Mein Werdegang</h3><section _ngcontent-ng-c2696826405="" class="features"><dk-personal-timeline _ngcontent-ng-c2696826405="" _nghost-ng-c1589502226="" ngh="6"><ol _ngcontent-ng-c1589502226="" class="timeline"><li _ngcontent-ng-c1589502226="" class="container hidden list-item left"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2023 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location"> </span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 📕 Angular (4. Auflage) </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">dpunkt.verlag</span><p _ngcontent-ng-c1589502226="">Das große Praxisbuch – Grundlagen, fortgeschrittene Themen und Best Practices. Inklusive RxJS, NgRx und a11y.</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item right"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> seit 2022 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location">Berlin</span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 💎 Seniorberater &amp; Frontend Architect </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">DB Systel GmbH</span><p _ngcontent-ng-c1589502226="">Entwicklung von Enterprise-Webanwendungen</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item left"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2020 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location"> </span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 📕 Angular (3. Auflage) </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">dpunkt.verlag</span><p _ngcontent-ng-c1589502226="">Grundlagen, fortgeschrittene Themen und Best Practices – inklusive RxJS, NgRx und PWA</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item right"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2019 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location"> </span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 📕 Angular (2. Auflage) </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">dpunkt.verlag</span><p _ngcontent-ng-c1589502226="">Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item left"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2019 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location">Berlin</span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 💎 Spezialist
+Entwickler Und IT-Berater </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">DB Systel GmbH</span><p _ngcontent-ng-c1589502226="">Entwicklung nutzerzentrierter Webanwendungen im Enterprise-Umfeld. Beratung zur Umsetzung von Web-Anwendungen und -Architekturen sowie User Experience (UX) Consulting.</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item right"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2017 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location"> </span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 📕 Angular (1. Auflage) </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">dpunkt.verlag</span><p _ngcontent-ng-c1589502226="">Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item left"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2015 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location">Berlin</span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 🚨 Entwickler TETRA Support Und Umsetzung </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">Deutsche Telekom Healthcare &amp; Security Solutions GmbH</span><p _ngcontent-ng-c1589502226="">Umsetzung von Client- und Serversystemen im Bereich des TETRA-BOS. Administration, Konfiguration, Integration und Test von IT-Systemen.</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item right"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2015 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location">Leipzig</span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 🎓 Bachelor Of Engineering
+Kommunikations- Und Medieninformatik </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">Deutsche Telekom Hochschule für Telekommunikation</span><p _ngcontent-ng-c1589502226="">Netzwerk- und Übertragungstechnik, Software Engineering, IT-Architektur, Protokollengineering sowie Web und Medien-Technologien.</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item left"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2012 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location">Cottbus</span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> ☎️ Sachbearbeiter Technische Kundenberatung </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">Deutsche Telekom Technischer Service GmbH (Customer Competence Center)</span><p _ngcontent-ng-c1589502226="">Second Level Support für VoIP und WLAN Produkte.</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item right"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2012 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location">Frankfurt (Oder)</span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 🧰 Facharbeiter
+IT-Systemelektroniker </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">Deutschen Telekom AG</span><p _ngcontent-ng-c1589502226="">Informatik, Telekommunikationstechnik sowie Elektrotechnik</p></div></li><!----></ol></dk-personal-timeline></section></div></section></dk-about><dk-meetups _ngcontent-ng-c2373437213="" _nghost-ng-c293280889="" ngh="0"><section _ngcontent-ng-c293280889="" class="wrapper alt spotlight"><div _ngcontent-ng-c293280889="" class="inner"><a _ngcontent-ng-c293280889="" href="https://www.meetup.com/de-DE/Angular-Meetup-Berlin" class="image"><img _ngcontent-ng-c293280889="" src="images/Angular-Berlin_Icon.png" alt="Angular Berlin Logo"></a><div _ngcontent-ng-c293280889="" class="content"><h2 _ngcontent-ng-c293280889="" class="major">Angular Berlin Meetup</h2><p _ngcontent-ng-c293280889=""> Ich bin Co-Organisator des Angular Meetup in Berlin. Dieses findet ca. alle 4-6 Wochen an wechselnden Standorten statt. Neben zwei Talks am Abend steht der Austausch und die Vernetzung mit anderen Entwickler:innen im Vordergrund. </p><a _ngcontent-ng-c293280889="" href="https://www.meetup.com/de-DE/Angular-Meetup-Berlin" class="special">Meetup.com: Angular Berlin</a></div></div></section></dk-meetups></ng-component><!----></main><dk-contact _nghost-ng-c4016635780="" ngh="0"><footer _ngcontent-ng-c4016635780="" id="footer"><div _ngcontent-ng-c4016635780="" id="contact" class="inner"><h2 _ngcontent-ng-c4016635780="" class="major">Kontaktieren Sie mich</h2><p _ngcontent-ng-c4016635780=""> Haben Sie Fragen oder Anregungen? Nehmen Sie gern Kontakt mit mir auf! </p><ul _ngcontent-ng-c4016635780="" class="contact"><li _ngcontent-ng-c4016635780="" class="icon solid fa-envelope"><a _ngcontent-ng-c4016635780="" href="mailto:mail@k9n.dev">mail@k9n.dev</a></li><li _ngcontent-ng-c4016635780="" class="icon brands fa-github"><a _ngcontent-ng-c4016635780="" href="https://github.com/d-koppenhagen">github.com/d-koppenhagen</a></li><li _ngcontent-ng-c4016635780=""><a _ngcontent-ng-c4016635780="" rel="me" href="https://bsky.app/profile/k9n.dev"> bsky.app/k9n.dev </a></li><li _ngcontent-ng-c4016635780="" class="icon brands fa-twitter"><a _ngcontent-ng-c4016635780="" href="https://twitter.com/d_koppenhagen">x.com/d_koppenhagen</a></li><li _ngcontent-ng-c4016635780="" class="icon brands fa-linkedin"><a _ngcontent-ng-c4016635780="" href="https://www.linkedin.com/in/d-koppenhagen/">linkedin.com/in/d-koppenhagen</a></li><li _ngcontent-ng-c4016635780="" class="icon brands fa-xing"><a _ngcontent-ng-c4016635780="" href="https://www.xing.com/profile/Danny_Koppenhagen">xing.com/profile/Danny_Koppenhagen</a></li></ul><ul _ngcontent-ng-c4016635780="" class="copyright"><li _ngcontent-ng-c4016635780="">© 2023 by Danny Koppenhagen</li><li _ngcontent-ng-c4016635780="">Design: <a _ngcontent-ng-c4016635780="" href="https://html5up.net">HTML5 UP</a></li><li _ngcontent-ng-c4016635780=""> Vorschläge? Feedback? Bugs? <a _ngcontent-ng-c4016635780="" href="https://github.com/d-koppenhagen/k9n.dev/issues"> Stell ein Issue ein</a>, <a _ngcontent-ng-c4016635780="" href="https://github.com/d-koppenhagen/k9n.dev/pulls">sende mir einen PR</a> oder <a _ngcontent-ng-c4016635780="" routerlink="/contact" href="/contact">kontaktiere mich</a></li></ul></div></footer></dk-contact><!----></dk-root>
+    
+  
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"7":"t0","8":"t1","9":"t2"},"c":{"7":[{"i":"t0","r":1}],"8":[],"9":[{"i":"t2","r":1}]}},{"t":{"0":"t5"},"c":{"0":[{"i":"t5","r":1,"t":{"9":"t6","10":"t7","11":"t8"},"c":{"9":[{"i":"t6","r":1}],"10":[],"11":[{"i":"t8","r":1,"t":{"1":"t9","2":"t10"},"c":{"1":[{"i":"t9","r":1}],"2":[]}}]}}]}},{"t":{"1":"t3","2":"t11","4":"t12"},"c":{"1":[{"i":"t3","r":5,"t":{"1":"t4"},"c":{"1":[{"i":"t4","r":1,"x":4}]}}],"2":[],"4":[{"i":"t12","r":1}]},"n":{"4":"hfn"}},{"t":{"1":"t3","2":"t11","4":"t12"},"c":{"1":[{"i":"t3","r":3,"t":{"1":"t4"},"c":{"1":[{"i":"t4","r":1,"x":2}]}}],"2":[],"4":[]},"n":{"4":"hfn"}},{"t":{"0":"t5"},"c":{"0":[{"i":"t5","r":1,"t":{"9":"t6","10":"t7","11":"t8"},"c":{"9":[],"10":[{"i":"t7","r":1}],"11":[]}}]}},{"t":{"2":"t17"},"c":{"2":[{"i":"t17","r":1,"x":10}]}},{"t":{"48":"t13","50":"t14","51":"t15","52":"t16"},"c":{"48":[],"50":[],"51":[],"52":[{"i":"t15","r":1,"s":0}]}},{"c":{"3":[{"i":"c2373437213","r":1}],"5":[]},"t":{"5":"t18"}}]}</script></body></html>

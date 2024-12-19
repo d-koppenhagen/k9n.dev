@@ -1,0 +1,10 @@
+import{j as p,aP as y,aQ as w,a2 as f,X as g,aw as v,aR as k,ak as b,aS as C,aF as P,ɵ as I,Y as F,Z as S,a as o,b as c,d as r,e as l,w as x,aa as u,y as i,x as q,ab as d,I as h,ad as A,A as B,D as V,F as j,G as E,H as Q,V as T}from"./index-Be9IN4QR.js";import{P as M}from"./preview.component-4NcaEiV0.js";const R=["searchInput"];function $(_,e){if(_&1){const t=B();o(0,"div",5)(1,"h3"),c(2,"Filter:"),r(),o(3,"button",7),V("click",function(){j(t);const s=E();return Q(s.removeKeywordFilter())}),c(4),l(5,"i",8),r()()}if(_&2){const t=e;i(3),h("title","Filter "+t+" entfernen"),i(),T(" ",t," ")}}const n=class n{constructor(){this.route=p(y),this.router=p(w),this.posts=f(e=>e.filename.includes("/src/content/blog/")),this.searchInput=g("searchInput"),this.keyword$=this.route?.queryParams.pipe(v(e=>e.keyword)),this.searchString=""}ngAfterViewChecked(){const e=this.searchInput();e&&k(e.nativeElement,"keyup").pipe(b(Boolean),C(300),P()).subscribe(()=>{this.searchString=e.nativeElement.value})}removeKeywordFilter(){this.router.navigate([],{queryParams:{keyword:null},queryParamsHandling:"merge"})}};n.ɵfac=function(t){return new(t||n)},n.ɵcmp=I({type:n,selectors:[["ng-component"]],viewQuery:function(t,a){t&1&&F(a.searchInput,R,5),t&2&&S()},decls:10,vars:8,consts:[["searchInput",""],[1,"wrapper","alt"],[1,"inner"],[1,"major"],["type","search","placeholder","Suche","name","demo-name","aria-required","false","aria-label","Suche"],[1,"active-keyword-filter"],["content","blog",3,"posts","keyword","search"],[1,"button","xs",3,"click","title"],[1,"fa","fa-close"]],template:function(t,a){if(t&1&&(o(0,"section",1)(1,"div",2)(2,"h2",3),c(3,"Meine Blog Posts"),r(),l(4,"input",4,0),x(6,$,6,2,"div",5),u(7,"async"),l(8,"dk-preview",6),u(9,"async"),r()()),t&2){let s;i(6),q((s=d(7,4,a.keyword$))?6:-1,s),i(2),h("posts",a.posts)("keyword",d(9,6,a.keyword$))("search",a.searchString)}},dependencies:[A,M],styles:[`.wrapper[_ngcontent-%COMP%] {
+      margin-top: 0;
+    }
+    .active-keyword-filter[_ngcontent-%COMP%] {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }`]});let m=n;export{m as default};

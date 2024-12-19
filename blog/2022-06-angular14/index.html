@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="de"><head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Apple PWA Support -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-512x512.png">
+    <link href="icons/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Basic Site Information -->
+    <title>k9n.dev | Angular 14 ist da! Die wichtigsten Neuerungen im Überblick</title>
+    
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Danny Koppenhagen">
+
+    <!-- Twitter Card -->
+    
+    
+    
+    
+    
+
+    <!-- Open Graph Profile -->
+    
+    
+    
+    
+    <meta property="profile:first_name" content="Danny">
+    <meta property="profile:last_name" content="Koppenhagen">
+    <meta property="profile:gender" content="male">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#e7e7e7">
+    <script type="module" crossorigin="" src="/assets/index-Be9IN4QR.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-CZLSIS4C.css">
+  <style ng-app-id="ng">.menu-dark[_ngcontent-ng-c1817153599] {
+  filter: alpha(opacity=90);
+}
+.menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599] {
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.9;
+  margin: 0px 1px;
+}
+.menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599]:hover, .menu-dark[_ngcontent-ng-c1817153599]    > button[_ngcontent-ng-c1817153599]:focus {
+  background-color: rgb(67.1351351351, 71.5135135135, 94.8648648649);
+  box-shadow: inset 0 0 0 2px #5e7959;
+}
+.menu-dark[_ngcontent-ng-c1817153599]:focus    > button[_ngcontent-ng-c1817153599] {
+  box-shadow: inset 0 0 0 2px #ada789;
+}
+@media screen and (max-width: 480px) {
+  .hidden-small[_ngcontent-ng-c1817153599] {
+    visibility: hidden;
+  }
+}</style><style ng-app-id="ng">.header-title[_ngcontent-ng-c2595095079] {
+  background-image: url("/images/bg-triangles.jpg");
+  background-size: cover;
+  font-size: 5em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.2901960784);
+}
+
+.sub-header-title[_ngcontent-ng-c2595095079] {
+  color: #2e3141;
+  font-size: 1.6em !important;
+  margin-bottom: 0.5em;
+  line-height: 1.3 !important;
+}
+
+.sub-header[_ngcontent-ng-c2595095079] {
+  color: #2e3141;
+  font-size: 1.2em;
+}
+
+#banner[_ngcontent-ng-c2595095079] {
+  background-image: url("/images/dk-header.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-color: #fdfdfd;
+  padding: 9em 0 12em 0;
+  animation: _ngcontent-ng-c2595095079_headerFadeIn 3s;
+}
+
+@keyframes _ngcontent-ng-c2595095079_headerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#logo[_ngcontent-ng-c2595095079] {
+  position: absolute;
+  top: 5px;
+}
+
+#logo[_ngcontent-ng-c2595095079]   img[_ngcontent-ng-c2595095079] {
+  width: 70px;
+  animation: _ngcontent-ng-c2595095079_move-to-top 1s ease, _ngcontent-ng-c2595095079_rotate 4s ease 1;
+}
+
+#logo[_ngcontent-ng-c2595095079]:focus, 
+h1[_ngcontent-ng-c2595095079]:focus {
+  outline: 1px solid rgba(185, 167, 167, 0.4);
+}
+
+@keyframes _ngcontent-ng-c2595095079_rotate {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+
+@keyframes _ngcontent-ng-c2595095079_move-to-top {
+  0% {
+    top: 100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #banner[_ngcontent-ng-c2595095079] {
+    background-position: right -200px top;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #banner[_ngcontent-ng-c2595095079] {
+    background-size: contain;
+    padding: 6em 0 10em 0;
+    background-position: right -200px top;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .sub-header[_ngcontent-ng-c2595095079] {
+    font-size: 1em !important;
+    padding-right: 110px;
+  }
+  #banner[_ngcontent-ng-c2595095079] {
+    padding: 6em 0 5em 0;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 3.5em;
+    padding-right: 40vw;
+  }
+  #banner[_ngcontent-ng-c2595095079] {
+    background-size: cover;
+    background-position: right -180px top;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    font-size: 3em;
+    padding-right: 50vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header-title[_ngcontent-ng-c2595095079] {
+    opacity: 0.7;
+    font-size: 2.5em;
+    padding-right: 50vw;
+  }
+}</style><style ng-app-id="ng">@media screen and (min-width: 736px) {
+  ul.contact[_ngcontent-ng-c4016635780] {
+    columns: 2;
+    width: 100% !important;
+  }
+}</style><style ng-app-id="ng">.wrapper[_ngcontent-ng-c1123664158] {
+  margin-top: 0;
+}
+
+h1[_ngcontent-ng-c1123664158] {
+  font-size: 1.4em;
+}
+
+.extra-info[_ngcontent-ng-c1123664158] {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.actions[_ngcontent-ng-c1123664158] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.published-at[_ngcontent-ng-c1123664158], 
+.external-links[_ngcontent-ng-c1123664158], 
+.edit-on-github[_ngcontent-ng-c1123664158] {
+  margin: 30px 0;
+}
+
+.published-at[_ngcontent-ng-c1123664158] {
+  height: 50px;
+}
+
+.published-at[_ngcontent-ng-c1123664158] {
+  display: flex;
+  align-items: center;
+  line-height: 1.2em;
+}
+
+.published-at[_ngcontent-ng-c1123664158]   .published-at-link[_ngcontent-ng-c1123664158] {
+  text-decoration: none;
+  border: none;
+  min-width: 120px;
+}
+
+.published-at[_ngcontent-ng-c1123664158]   .published-at-link[_ngcontent-ng-c1123664158]   .published-at-logo[_ngcontent-ng-c1123664158] {
+  padding-right: 20px;
+  max-height: 60px;
+}
+
+.external-article[_ngcontent-ng-c1123664158] {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.extra-section[_ngcontent-ng-c1123664158]   .actions[_ngcontent-ng-c1123664158] {
+  padding-bottom: 10px;
+}
+
+span.image[_ngcontent-ng-c1123664158]    > img.thumbnail[_ngcontent-ng-c1123664158] {
+  max-width: 80px;
+}
+
+@media screen and (max-width: 560px) {
+  .blog-footer[_ngcontent-ng-c1123664158] {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: #2e3141;
+    opacity: 0.9;
+    z-index: 1;
+    padding: 0 35px;
+  }
+  .blog-footer[_ngcontent-ng-c1123664158]    > h2[_ngcontent-ng-c1123664158], 
+   .blog-footer[_ngcontent-ng-c1123664158]   h3[_ngcontent-ng-c1123664158] {
+    display: none;
+  }
+  .blog-footer[_ngcontent-ng-c1123664158]    > ul[_ngcontent-ng-c1123664158] {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .blog-footer[_ngcontent-ng-c1123664158]    > ul[_ngcontent-ng-c1123664158]    > li[_ngcontent-ng-c1123664158] {
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .extra-info[_ngcontent-ng-c1123664158] {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .blog-footer[_ngcontent-ng-c1123664158] {
+    padding: 0 24px;
+  }
+}
+
+.blog-header[_ngcontent-ng-c1123664158]   img[_ngcontent-ng-c1123664158] {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+  border-radius: 1ch;
+  overflow: hidden;
+  box-shadow: 0 3px 2px hsla(0, 0%, 0%, 0.02), 0 7px 5px hsla(0, 0%, 0%, 0.03), 0 13px 10px hsla(0, 0%, 0%, 0.04), 0 22px 18px hsla(0, 0%, 0%, 0.05), 0 42px 33px hsla(0, 0%, 0%, 0.06), 0 100px 80px hsla(0, 0%, 0%, 0.07);
+  margin-bottom: 1rem;
+}</style><meta name="description" content="Am 2. Juni 2022 erschien die neue Major-Version Angular 14! Während die letzten Hauptreleases vor allem interne Verbesserungen für das Tooling mitbrachten, hat Angular 14 einige spannende neue Features mit an Bord. In diesem Artikel stellen wir wie immer die wichtigsten Neuigkeiten vor."><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@d_koppenhagen"><meta name="twitter:creator" content="@d_koppenhagen"><meta name="twitter:title" content="Angular 14 ist da! Die wichtigsten Neuerungen im Überblick"><meta name="twitter:description" content="Am 2. Juni 2022 erschien die neue Major-Version Angular 14! Während die letzten Hauptreleases vor allem interne Verbesserungen für das Tooling mitbrachten, hat Angular 14 einige spannende neue Features mit an Bord. In diesem Artikel stellen wir wie immer die wichtigsten Neuigkeiten vor."><meta name="twitter:image" content="https://k9n.dev/https://website-articles.angular-buch.com/2022-06-angular14/angular14.jpg"><meta property="og:title" content="Angular 14 ist da! Die wichtigsten Neuerungen im Überblick"><meta property="og:description" content="Am 2. Juni 2022 erschien die neue Major-Version Angular 14! Während die letzten Hauptreleases vor allem interne Verbesserungen für das Tooling mitbrachten, hat Angular 14 einige spannende neue Features mit an Bord. In diesem Artikel stellen wir wie immer die wichtigsten Neuigkeiten vor."><meta name="og:image" content="https://k9n.dev/https://website-articles.angular-buch.com/2022-06-angular14/angular14.jpg"><meta name="og:url" content="https://k9n.dev/blog/2022-06-angular14"></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-HY3CPEEH1Z"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HY3CPEEH1Z');
+      </script>
+  <body id="page-wrapper" class="mat-typography"><!--nghm-->
+    <!-- Angular -->
+    <dk-root ng-version="19.0.5" ngh="3" ng-server-context="ssr-analog"><dk-navbar _nghost-ng-c1817153599="" ngh="0"><nav _ngcontent-ng-c1817153599="" id="navigation" role="navigation" tabindex="0" class="menu-dark"><button _ngcontent-ng-c1817153599="" role="button" aria-label="Menü öffnen" aria-controls="menu" class="burger-menu" aria-expanded="false"><span _ngcontent-ng-c1817153599="" class="hidden-small">Menü</span></button></nav></dk-navbar><dk-header _nghost-ng-c2595095079="" ngh="1"><header _ngcontent-ng-c2595095079="" id="banner"><div _ngcontent-ng-c2595095079="" class="inner"><a _ngcontent-ng-c2595095079="" routerlink="/" aria-label="Zur Startseite" title="Startseite" id="logo" href="/"><img _ngcontent-ng-c2595095079="" src="images/logo_header.png" alt="Logo"></a><h1 _ngcontent-ng-c2595095079="" tabindex="0" aria-label="Textanimation: k9n.dev verändert sich zu 'Koppenhagen' zur Visualisierung des Numeronyms" aria-describedby="about-k9n" class="header-title"><span _ngcontent-ng-c2595095079="">k</span><span _ngcontent-ng-c2595095079="" class="headline-expanded">9</span><!----><!----><span _ngcontent-ng-c2595095079="">n.dev</span><!----></h1><p _ngcontent-ng-c2595095079="" class="sub-header-title">Danny Koppenhagen</p><p _ngcontent-ng-c2595095079="" class="sub-header">Entwickler, IT-Berater, Buchautor</p></div></header></dk-header><main><router-outlet></router-outlet><ng-component _nghost-ng-c1123664158="" ngh="2"><!----><!----></ng-component><!----></main><dk-contact _nghost-ng-c4016635780="" ngh="0"><footer _ngcontent-ng-c4016635780="" id="footer"><div _ngcontent-ng-c4016635780="" id="contact" class="inner"><h2 _ngcontent-ng-c4016635780="" class="major">Kontaktieren Sie mich</h2><p _ngcontent-ng-c4016635780=""> Haben Sie Fragen oder Anregungen? Nehmen Sie gern Kontakt mit mir auf! </p><ul _ngcontent-ng-c4016635780="" class="contact"><li _ngcontent-ng-c4016635780="" class="icon solid fa-envelope"><a _ngcontent-ng-c4016635780="" href="mailto:mail@k9n.dev">mail@k9n.dev</a></li><li _ngcontent-ng-c4016635780="" class="icon brands fa-github"><a _ngcontent-ng-c4016635780="" href="https://github.com/d-koppenhagen">github.com/d-koppenhagen</a></li><li _ngcontent-ng-c4016635780=""><a _ngcontent-ng-c4016635780="" rel="me" href="https://bsky.app/profile/k9n.dev"> bsky.app/k9n.dev </a></li><li _ngcontent-ng-c4016635780="" class="icon brands fa-twitter"><a _ngcontent-ng-c4016635780="" href="https://twitter.com/d_koppenhagen">x.com/d_koppenhagen</a></li><li _ngcontent-ng-c4016635780="" class="icon brands fa-linkedin"><a _ngcontent-ng-c4016635780="" href="https://www.linkedin.com/in/d-koppenhagen/">linkedin.com/in/d-koppenhagen</a></li><li _ngcontent-ng-c4016635780="" class="icon brands fa-xing"><a _ngcontent-ng-c4016635780="" href="https://www.xing.com/profile/Danny_Koppenhagen">xing.com/profile/Danny_Koppenhagen</a></li></ul><ul _ngcontent-ng-c4016635780="" class="copyright"><li _ngcontent-ng-c4016635780="">© 2023 by Danny Koppenhagen</li><li _ngcontent-ng-c4016635780="">Design: <a _ngcontent-ng-c4016635780="" href="https://html5up.net">HTML5 UP</a></li><li _ngcontent-ng-c4016635780=""> Vorschläge? Feedback? Bugs? <a _ngcontent-ng-c4016635780="" href="https://github.com/d-koppenhagen/k9n.dev/issues"> Stell ein Issue ein</a>, <a _ngcontent-ng-c4016635780="" href="https://github.com/d-koppenhagen/k9n.dev/pulls">sende mir einen PR</a> oder <a _ngcontent-ng-c4016635780="" routerlink="/contact" href="/contact">kontaktiere mich</a></li></ul></div></footer></dk-contact><!----></dk-root>
+    
+  
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"7":"t0","8":"t1","9":"t2"},"c":{"7":[{"i":"t0","r":1}],"8":[],"9":[{"i":"t2","r":1}]}},{"t":{"0":"t20"},"c":{"0":[{"i":"t20","r":1,"t":{"0":"t21"},"c":{"0":[]}}]}},{"c":{"3":[{"i":"c1123664158","r":1}],"5":[]},"t":{"5":"t18"}}]}</script></body></html>
