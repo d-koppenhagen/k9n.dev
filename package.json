@@ -50,7 +50,7 @@
     "clipboard": "^2.0.11",
     "feed": "^4.2.2",
     "front-matter": "^4.0.2",
-    "marked": "^13.0.0",
+    "marked": "^15.0.0",
     "marked-gfm-heading-id": "4.1.1",
     "marked-highlight": "^2.2.1",
     "marked-mangle": "^1.1.10",
