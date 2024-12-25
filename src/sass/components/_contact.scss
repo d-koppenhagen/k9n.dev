@@ -11,6 +11,9 @@ ul.contact {
   padding: 0;
 
   li {
+    display: flex;
+    gap: 0.5rem;
+
     @include icon;
     margin: (_size(element-margin) * 1.25) 0 0 0;
     padding: 0 0 0 3.25em;

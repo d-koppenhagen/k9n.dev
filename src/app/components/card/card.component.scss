@@ -37,6 +37,8 @@ img.card-image {
   .read-on {
     white-space: nowrap;
     margin-right: 10px;
+    display: flex;
+    gap: 0.75rem;
   }
 
   .published-at-link {
@@ -48,6 +50,7 @@ img.card-image {
     > img.published-at-logo {
       float: right;
       max-height: 50px;
+      padding-bottom: 0.75rem;
     }
   }
 }

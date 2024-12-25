@@ -1,6 +1,11 @@
 import { ContentFile } from '@analogjs/content';
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import {
+  FaIconLibrary,
+  FontAwesomeModule,
+} from '@fortawesome/angular-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 import { PostAttributes } from '../../types';
 
@@ -8,10 +13,15 @@ import { PostAttributes } from '../../types';
   selector: 'dk-card',
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
-  imports: [RouterLink],
+  imports: [RouterLink, FontAwesomeModule],
 })
 export class CardComponent {
   readonly post = input.required<ContentFile<PostAttributes>>();
+  private faLib = inject(FaIconLibrary);
+
+  constructor() {
+    this.faLib.addIcons(faChevronRight);
+  }
 
   get routeToPost() {
     // Extracting the last part between slashes and excluding the file extension

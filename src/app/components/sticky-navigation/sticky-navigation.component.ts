@@ -1,10 +1,15 @@
 import { NgClass } from '@angular/common';
-import { AfterViewChecked, Component, input } from '@angular/core';
+import { AfterViewChecked, Component, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { HeadingData, getHeadingList } from 'marked-gfm-heading-id';
 import { A11yModule } from '@angular/cdk/a11y';
 import { ArrayDataSource } from '@angular/cdk/collections';
 import { CdkTreeModule, NestedTreeControl } from '@angular/cdk/tree';
+import {
+  FaIconLibrary,
+  FontAwesomeModule,
+} from '@fortawesome/angular-fontawesome';
+import { faListOl, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 interface TreeNode {
   level: number;
@@ -15,18 +20,23 @@ interface TreeNode {
 
 @Component({
   selector: 'dk-sticky-navigation',
-  imports: [RouterLink, NgClass, A11yModule, CdkTreeModule],
+  imports: [RouterLink, NgClass, A11yModule, CdkTreeModule, FontAwesomeModule],
   templateUrl: './sticky-navigation.component.html',
   styleUrl: './sticky-navigation.component.scss',
 })
 export class StickyNavigationComponent implements AfterViewChecked {
   readonly content = input<string | object>();
   readonly contentLang = input<string>();
+  private faLib = inject(FaIconLibrary);
 
   headlines: TreeNode[] = [];
   menuOpen = false;
   treeControl = new NestedTreeControl<TreeNode>((node) => node.children);
   dataSource?: ArrayDataSource<TreeNode>;
+
+  constructor() {
+    this.faLib.addIcons(faListOl, faChevronRight);
+  }
 
   ngAfterViewChecked() {
     const list = getHeadingList();

@@ -20,15 +20,17 @@
           [href]="externalUrl"
           [lang]="post.attributes.language || 'de'"
           target="_blank"
-          >Weiterlesen...</a
         >
+          <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon> Weiterlesen...
+        </a>
       } @else {
         <a
           class="special read-on"
           [lang]="post.attributes.language || 'de'"
           [routerLink]="routeToPost"
-          >Weiterlesen...</a
         >
+          <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon> Weiterlesen...
+        </a>
       }
       @if (
         post.attributes.publishedAt &&

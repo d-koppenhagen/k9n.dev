@@ -20,18 +20,18 @@ import { Component } from '@angular/core';
         <h3>Angaben gemäß § 5 TMG</h3>
         <h4>Vertreten durch</h4>
         <ul class="contact small">
-          <li class="icon solid fa-user-tie">Danny Koppenhagen</li>
-          <li class="icon solid fa-home">
+          <li>Danny Koppenhagen</li>
+          <li>
             <address>
               Birkenwerderstraße 30A<br />
               13439 Berlin<br />
               Germany
             </address>
           </li>
-          <li class="icon solid fa-envelope">
+          <li>
             <a href="mailto:mail&#64;k9n.dev">mail&#64;k9n.dev</a>
           </li>
-          <li class="icon solid fa-phone">
+          <li>
             <a href="tel:+4915129134704">+49 (0)151 29134704</a>
           </li>
         </ul>

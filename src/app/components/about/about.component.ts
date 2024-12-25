@@ -12,6 +12,15 @@ import {
   AfterViewChecked,
 } from '@angular/core';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import {
+  FaIconLibrary,
+  FontAwesomeModule,
+} from '@fortawesome/angular-fontawesome';
+import {
+  faSpotify,
+  faDeezer,
+  faApple,
+} from '@fortawesome/free-brands-svg-icons';
 
 import { PersonalTimelineComponent } from '../personal-timeline/personal-timeline.component';
 
@@ -19,7 +28,7 @@ import { PersonalTimelineComponent } from '../personal-timeline/personal-timelin
   selector: 'dk-about',
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
-  imports: [YouTubePlayerModule, PersonalTimelineComponent],
+  imports: [YouTubePlayerModule, PersonalTimelineComponent, FontAwesomeModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent implements OnInit, AfterViewChecked {
@@ -29,9 +38,11 @@ export class AboutComponent implements OnInit, AfterViewChecked {
   readonly videoBox = viewChild<ElementRef>('videoBox');
   youtubePlayerWidth = 300;
   isBrowser = false;
+  faLib = inject(FaIconLibrary);
 
   constructor() {
     this.isBrowser = isPlatformBrowser(this.platformId);
+    this.faLib.addIcons(faSpotify, faDeezer, faApple);
   }
 
   @HostListener('window:resize', ['$event'])

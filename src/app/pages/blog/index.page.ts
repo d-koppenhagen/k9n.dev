@@ -7,12 +7,7 @@ import {
   inject,
   viewChild,
 } from '@angular/core';
-import {
-  ActivatedRoute,
-  Router,
-  RouterLink,
-  RouterOutlet,
-} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {
   debounceTime,
   distinctUntilChanged,
@@ -20,12 +15,17 @@ import {
   fromEvent,
   map,
 } from 'rxjs';
+import {
+  FaIconLibrary,
+  FontAwesomeModule,
+} from '@fortawesome/angular-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 import { PreviewComponent } from '../../components/preview/preview.component';
 import { PostAttributes } from '../../types';
 
 @Component({
-  imports: [RouterOutlet, RouterLink, AsyncPipe, PreviewComponent],
+  imports: [AsyncPipe, PreviewComponent, FontAwesomeModule],
   styles: `
     .wrapper {
       margin-top: 0;
@@ -60,7 +60,7 @@ import { PostAttributes } from '../../types';
               (click)="removeKeywordFilter()"
             >
               {{ keyword }}
-              <i class="fa fa-close"></i>
+              <fa-icon [icon]="['fas', 'xmark']"></fa-icon>
             </button>
           </div>
         }
@@ -77,6 +77,7 @@ import { PostAttributes } from '../../types';
 export default class BlogPage implements AfterViewChecked {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
+  private faLib = inject(FaIconLibrary);
 
   readonly posts = injectContentFiles<PostAttributes>((contentFile) => {
     return contentFile.filename.includes('/src/content/blog/');
@@ -85,6 +86,10 @@ export default class BlogPage implements AfterViewChecked {
   readonly searchInput = viewChild<ElementRef>('searchInput');
   keyword$ = this.route?.queryParams.pipe(map((p) => p['keyword']));
   searchString = '';
+
+  constructor() {
+    this.faLib.addIcons(faXmark);
+  }
 
   ngAfterViewChecked() {
     const sInput = this.searchInput();

@@ -180,7 +180,6 @@ export default class BlogContentComponent {
     subdirectory: 'blog',
   }).pipe(
     tap((post) => {
-      console.log('post', post);
       return this.metaService.createMetaDataForPost(
         'blog',
         post as ContentFile<PostAttributes>,

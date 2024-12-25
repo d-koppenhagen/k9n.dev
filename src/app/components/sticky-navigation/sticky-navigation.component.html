@@ -16,7 +16,11 @@
       class="fa"
       [attr.aria-expanded]="menuOpen"
       [ngClass]="menuOpen ? 'opened fa-chevron-right' : 'closed fa-list-ol'"
-    ></button>
+    >
+      <fa-icon
+        [icon]="['fas', menuOpen ? 'chevron-right' : 'list-ol']"
+      ></fa-icon>
+    </button>
     @if (menuOpen && dataSource) {
       <h2>Auf dieser Seite</h2>
       <cdk-tree
