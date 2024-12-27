@@ -52,54 +52,6 @@ nav {
   }
 }
 
-@include breakpoint('<=small') {
-  nav {
-    height: 2.75em;
-    line-height: 2.75em;
-
-    a,
-    button {
-      height: inherit;
-      line-height: inherit;
-
-      &.burger-menu {
-        box-shadow: none;
-        padding: 0 1em;
-
-        &:hover,
-        &:active {
-          background-color: inherit;
-        }
-      }
-    }
-  }
-}
-
-@include breakpoint('<=xsmall') {
-  nav {
-    a,
-    button {
-      &.burger-menu {
-        width: 4em;
-        white-space: nowrap;
-        text-indent: 4em;
-        position: relative;
-
-        &:before {
-          width: inherit;
-          position: absolute;
-          top: 0;
-          left: 0;
-          text-indent: 0;
-          text-align: right;
-          margin-left: 0;
-          padding-right: 1.25em;
-        }
-      }
-    }
-  }
-}
-
 #header {
   @include vendor(
     'transition',
