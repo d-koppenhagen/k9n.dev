@@ -15,8 +15,8 @@ ul.contact {
     gap: 0.5rem;
 
     @include icon;
-    margin: (_size(element-margin) * 1.25) 0 0 0;
-    padding: 0 0 0 3.25em;
+    margin: (_size(element-margin) * 0.75) 0;
+    padding: 0;
     position: relative;
 
     &:before {
@@ -40,7 +40,7 @@ ul.contact {
 
   @include breakpoint('<=small') {
     li {
-      margin: (_size(element-margin) * 0.75) 0 0 0;
+      margin: (_size(element-margin) * 0.25) 0 0 0;
     }
   }
 }
