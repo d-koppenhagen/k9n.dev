@@ -56,7 +56,7 @@
     "marked-mangle": "^1.1.10",
     "marked-shiki": "^1.1.1",
     "mermaid": "^10.9.3",
-    "ngx-sharebuttons": "^13.0.0",
+    "ngx-sharebuttons": "^16.0.0",
     "rxjs": "~7.8.1",
     "shiki": "^1.6.1",
     "tslib": "^2.6.2",
