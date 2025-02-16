@@ -1,65 +1,43 @@
 @if (post(); as post) {
   <article>
-    <img
-      class="card-image"
-      [src]="post.attributes.thumbnail.card || post.attributes.thumbnail.header"
-      alt=""
-    />
-    <div class="card-header">
-      <h3 class="major">{{ post.attributes.title }}</h3>
-    </div>
+    <h3 class="card-header">
+      @if (externalUrl) {
+        <a
+          [href]="externalUrl"
+          [lang]="post.attributes.language || 'de'"
+          target="_blank"
+        >
+          {{ post.attributes.title }}
+        </a>
+      } @else {
+        <a [lang]="post.attributes.language || 'de'" [routerLink]="routeToPost">
+          {{ post.attributes.title }}
+        </a>
+      }
+    </h3>
     <div class="card-content" [lang]="post.attributes.language || 'de'">
       <p>
         {{ post.attributes.description }}
       </p>
     </div>
-    <div class="card-footer">
-      @if (externalUrl) {
-        <a
-          class="special read-on"
-          [href]="externalUrl"
-          [lang]="post.attributes.language || 'de'"
-          target="_blank"
-        >
-          <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon> Weiterlesen...
-        </a>
-      } @else {
-        <a
-          class="special read-on"
-          [lang]="post.attributes.language || 'de'"
-          [routerLink]="routeToPost"
-        >
-          <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon> Weiterlesen...
-        </a>
-      }
-      @if (
-        post.attributes.publishedAt &&
-        post.attributes.publishedAt.name &&
-        post.attributes.publishedAt.url
-      ) {
-        <a
-          [href]="post.attributes.publishedAt.url"
-          [lang]="post.attributes.language || 'de'"
-          target="_blank"
-          class="published-at-link"
-          [title]="
-            'Original veröffentlicht auf ' + post.attributes.publishedAt.name
-          "
-          [attr.aria-label]="
-            'Original veröffentlicht auf ' + post.attributes.publishedAt.name
-          "
-        >
-          @if (post.attributes.publishedAt.logo) {
-            <img
-              class="published-at-logo"
-              [src]="post.attributes.publishedAt.logo"
-              alt=""
-            />
-          } @else {
-            Original veröffentlicht auf {{ post.attributes.publishedAt.name }}
-          }
-        </a>
-      }
-    </div>
+
+    @if (post.attributes.publishedAt) {
+      <footer>
+        @if (post.attributes.publishedAt.logo) {
+          <img
+            class="published-at-logo"
+            [src]="post.attributes.publishedAt.logo"
+            alt=""
+          />
+        } @else {
+          Original veröffentlicht auf {{ post.attributes.publishedAt.name }}
+        }
+      </footer>
+    }
+    <img
+      class="card-image"
+      [src]="post.attributes.thumbnail.card || post.attributes.thumbnail.header"
+      alt=""
+    />
   </article>
 }
