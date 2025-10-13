@@ -24,7 +24,7 @@ import { PostAttributes } from '../../types';
   ],
   template: `
     @if (post$ | async; as post) {
-      <article class="wrapper alt">
+      <article class="wrapper alt" [lang]="post.attributes.language">
         <dk-sticky-navigation [content]="post.content"></dk-sticky-navigation>
         <div class="inner">
           <h1>{{ post.attributes.title }}</h1>

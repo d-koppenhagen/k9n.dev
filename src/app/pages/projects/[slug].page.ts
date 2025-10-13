@@ -3,20 +3,19 @@ import {
   injectContent,
   MarkdownComponent,
 } from '@analogjs/content';
-import { AsyncPipe, DatePipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { tap } from 'rxjs';
 
 import { MetaService } from '../../meta.service';
 import { PostAttributes } from '../../types';
 
 @Component({
-  imports: [MarkdownComponent, AsyncPipe, DatePipe, RouterLink],
+  imports: [MarkdownComponent, AsyncPipe],
   template: `
-    <article class="wrapper alt">
-      <div class="inner">
-        @if (post$ | async; as post) {
+    @if (post$ | async; as post) {
+      <article class="wrapper alt" [lang]="post.attributes.language">
+        <div class="inner">
           <h1>{{ post.attributes.title }}</h1>
           <section class="project-header">
             @if (
@@ -42,9 +41,9 @@ import { PostAttributes } from '../../types';
               </a>
             </div>
           </section>
-        }
-      </div>
-    </article>
+        </div>
+      </article>
+    }
   `,
   styleUrl: './slug.page.style.scss',
 })

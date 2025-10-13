@@ -4,7 +4,7 @@ import {
   MarkdownComponent,
 } from '@analogjs/content';
 import { AsyncPipe, DatePipe, isPlatformBrowser } from '@angular/common';
-import { Component, PLATFORM_ID, inject } from '@angular/core';
+import { Component, inject, PLATFORM_ID } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { tap } from 'rxjs';
 
@@ -25,7 +25,7 @@ import { PostAttributes } from '../../types';
   template: `
     @if (post$ | async; as post) {
       @if (post.attributes && post.content) {
-        <article class="wrapper alt">
+        <article class="wrapper alt" [lang]="post.attributes.language">
           <dk-sticky-navigation [content]="post.content" />
           <div class="inner">
             <h1>{{ post.attributes.title }}</h1>
