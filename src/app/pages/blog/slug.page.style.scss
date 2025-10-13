@@ -50,7 +50,8 @@ h1 {
 
 .external-article {
   font-weight: bold;
-  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
 }
 
 .extra-section .actions {
@@ -105,6 +106,7 @@ span.image > img.thumbnail {
   display: block;
   inline-size: 100%;
   block-size: auto;
+  max-height: 400px;
   object-fit: cover;
   border-radius: 1ch;
   overflow: hidden;

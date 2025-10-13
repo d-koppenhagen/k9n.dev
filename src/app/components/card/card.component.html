@@ -1,19 +1,9 @@
 @if (post(); as post) {
   <article [lang]="post.attributes.language">
     <h3 class="card-header">
-      @if (externalUrl) {
-        <a
-          [href]="externalUrl"
-          [lang]="post.attributes.language || 'de'"
-          target="_blank"
-        >
-          {{ post.attributes.title }}
-        </a>
-      } @else {
-        <a [lang]="post.attributes.language || 'de'" [routerLink]="routeToPost">
-          {{ post.attributes.title }}
-        </a>
-      }
+      <a [lang]="post.attributes.language || 'de'" [routerLink]="routeToPost">
+        {{ post.attributes.title }}
+      </a>
     </h3>
     <div class="card-content" [lang]="post.attributes.language || 'de'">
       <p>
