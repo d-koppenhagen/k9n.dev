@@ -148,7 +148,6 @@ import { PostAttributes } from '../../types';
                 class="external-article"
                 [href]="post.attributes.publishedAt.url"
                 [lang]="post.attributes.language || 'de'"
-                target="_blank"
                 >&rarr;
                 @if (post.attributes.language === 'en') {
                   Read On:
@@ -161,7 +160,6 @@ import { PostAttributes } from '../../types';
               <div class="edit-on-github">
                 <a
                   [href]="editOnGithubLink(post.filename)"
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   Auf GitHub bearbeiten

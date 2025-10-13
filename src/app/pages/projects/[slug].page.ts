@@ -34,7 +34,6 @@ import { PostAttributes } from '../../types';
             <div class="edit-on-github">
               <a
                 [href]="editOnGithubLink(post.filename)"
-                target="_blank"
                 rel="noopener noreferrer"
               >
                 Auf GitHub bearbeiten

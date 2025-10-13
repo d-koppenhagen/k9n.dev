@@ -4,7 +4,7 @@ import {
   MarkdownComponent,
 } from '@analogjs/content';
 import { AsyncPipe, DatePipe, isPlatformBrowser } from '@angular/common';
-import { Component, PLATFORM_ID, inject } from '@angular/core';
+import { Component, inject, PLATFORM_ID } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { tap } from 'rxjs';
 
@@ -144,7 +144,6 @@ import { PostAttributes } from '../../types';
                 class="external-article"
                 [href]="post.attributes.publishedAt.url"
                 [lang]="post.attributes.language || 'de'"
-                target="_blank"
                 >Zum externen Artikel auf
                 {{ post.attributes.publishedAt.name }}</a
               >
@@ -152,7 +151,6 @@ import { PostAttributes } from '../../types';
               <div class="edit-on-github">
                 <a
                   [href]="editOnGithubLink(post.filename)"
-                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   Auf GitHub bearbeiten
