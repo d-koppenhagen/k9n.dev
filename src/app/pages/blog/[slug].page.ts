@@ -9,7 +9,6 @@ import { RouterLink } from '@angular/router';
 import { tap } from 'rxjs';
 
 import { SeriesListComponent } from '../../components/series-list/series-list.component';
-import { StickyNavigationComponent } from '../../components/sticky-navigation/sticky-navigation.component';
 import { MetaService } from '../../meta.service';
 import { PostAttributes } from '../../types';
 
@@ -20,12 +19,10 @@ import { PostAttributes } from '../../types';
     DatePipe,
     RouterLink,
     SeriesListComponent,
-    StickyNavigationComponent,
   ],
   template: `
     @if (post$ | async; as post) {
       <article class="wrapper alt" [lang]="post.attributes.language">
-        <dk-sticky-navigation [content]="post.content" />
         <div class="inner">
           <h1>{{ post.attributes.title }}</h1>
           <section class="blog-header">
@@ -49,7 +46,7 @@ import { PostAttributes } from '../../types';
                     }}</time>
                   </span>
                 }
-                <h2 class="sub-heading">Stichwörter</h2>
+                <p class="sub-heading">Stichwörter</p>
               </div>
               <div class="actions">
                 @for (keyword of post.attributes.keywords; track keyword) {
