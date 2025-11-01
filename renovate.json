@@ -48,7 +48,6 @@
     "@angular/youtube-player",
     "rxjs",
     "tslib",
-    "zone.js",
     "@angular-devkit/build-angular",
     "@angular/cli",
     "@angular/compiler-cli",
