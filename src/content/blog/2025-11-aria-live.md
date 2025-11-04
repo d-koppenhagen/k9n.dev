@@ -271,7 +271,7 @@ Think of it like a message bus for screen readers.
 To actually hide this live regions visually, you should use a [common CSS implementation](https://css-tricks.com/inclusively-hidden/) which makes it hidden but accessible and ensures screen readers will pick it up:
 
 ```css
-.sr-only:not(:focus):not(:active) {
+.sr-only:not(:focus):not(:active):not(:focus-within) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
