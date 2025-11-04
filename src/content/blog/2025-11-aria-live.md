@@ -271,7 +271,7 @@ Think of it like a message bus for screen readers.
 To actually hide this live regions visually, you should use a [common CSS implementation](https://css-tricks.com/inclusively-hidden/) which makes it hidden but accessible and ensures screen readers will pick it up:
 
 ```css
-.sr-only:not(:focus):not(:active):not(:focus-within) {
+.sr-only:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -441,4 +441,4 @@ By keeping live regions mounted and using established announcer services, you ca
 - **Test with real users**: Screen reader behavior varies — always validate with actual assistive technology
 - **The payoff**: Reliable announcements make your app more inclusive, responsive, and trustworthy
 
-<small>**Thanks** for [Ferdinand Malcher](https://github.com/fmalcher/) and [Milan Wanielik](https://github.com/milan-w) for reviewing this article.<br />**Cover image:** Picture from [Freepik](https://www.freepik.com/free-photo/paper-hand-holding-megaphone_19925176.htm), edited.</small>
+<small>**Thanks** for [Ferdinand Malcher](https://github.com/fmalcher/), [Milan Wanielik](https://github.com/milan-w) and [Maximilian Franzke](https://github.com/mfranzke) for reviewing this article.<br />**Cover image:** Picture from [Freepik](https://www.freepik.com/free-photo/paper-hand-holding-megaphone_19925176.htm), edited.</small>
