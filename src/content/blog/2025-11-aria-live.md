@@ -35,7 +35,7 @@ Silence.
 Your "live" region isn't so live after all.
 
 If that sounds familiar, you're not alone.
-Accessibility professionals and framework developers alike run into this issue across **Angular**, **Vue**, **React** and other frameworks.
+Accessibility professionals and framework developers alike run into this issue across Angular, Vue, React and other frameworks.
 The problem isn't your markup — it's how these frameworks manage the DOM.
 
 Modern SPA frameworks do amazing things behind the scenes: they mount, unmount, and patch elements as state changes.
