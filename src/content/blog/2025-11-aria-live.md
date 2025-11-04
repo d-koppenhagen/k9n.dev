@@ -5,8 +5,8 @@ published: true
 author:
   name: 'Danny Koppenhagen'
   mail: mail@k9n.dev
-created: 2025-11-05
-updated: 2025-11-05
+created: 2025-11-04
+updated: 2025-11-04
 keywords:
   - accessibility
   - aria-live
