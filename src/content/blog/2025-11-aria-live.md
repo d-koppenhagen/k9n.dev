@@ -16,6 +16,7 @@ keywords:
   - React
   - SPA
   - a11y
+  - CDK
 language: en
 thumbnail:
   header: images/blog/aria-live/aria-live.jpg
