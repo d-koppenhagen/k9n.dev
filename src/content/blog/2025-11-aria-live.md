@@ -187,6 +187,17 @@ Consider this example:
 
 For most status messages and notifications, `aria-atomic="true"` provides better context.
 
+For chat messages, you'd typically use `aria-live="polite"` with `aria-atomic="false"` so each new message is announced individually without interrupting the user:
+
+```html
+<!-- Chat messages example -->
+<div aria-live="polite" aria-atomic="false">
+  <div>Alice: Hello!</div>
+  <div>Bob: Hi there!</div>
+  <!-- Only "Bob: Hi there!" gets announced when added -->
+</div>
+```
+
 In short:
 - **`aria-live`** defines *when* to speak (or not at all with `off`)
 - **`aria-relevant`** defines *what* to speak
