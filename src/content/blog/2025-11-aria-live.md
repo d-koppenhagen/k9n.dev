@@ -251,7 +251,7 @@ Think of it like a message bus for screen readers.
 <div id="aria-live-assertive" aria-live="assertive" aria-atomic="true" class="sr-only"></div>
 ```
 
-To actually hide the element you should use a [common CSS implementation](https://css-tricks.com/inclusively-hidden/) which makes it hidden but accessible and ensures screen readers will pick it up:
+To actually hide this live regions visually, you should use a [common CSS implementation](https://css-tricks.com/inclusively-hidden/) which makes it hidden but accessible and ensures screen readers will pick it up:
 
 ```css
 .sr-only:not(:focus):not(:active) {
