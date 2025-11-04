@@ -402,7 +402,7 @@ function onSave() {
 
 ### React
 
-For React, I recommend using [@react-aria/live-announcer](https://github.com/adobe/react-spectrum/tree/main/packages/@react-aria):
+For React, I recommend using [@react-aria/live-announcer](https://react-spectrum.adobe.com/blog/building-a-combobox.html#voiceover):
 
 ```bash
 npm install @react-aria/live-announcer
