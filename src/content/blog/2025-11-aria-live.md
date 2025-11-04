@@ -386,7 +386,7 @@ function onSave() {
 
 ### React
 
-For React, I recommend using [@react-aria/live-announcer](https://react-spectrum.adobe.com/react-aria/useAnnouncer.html):
+For React, I recommend using [@react-aria/live-announcer](https://github.com/adobe/react-spectrum/tree/main/packages/@react-aria):
 
 ```bash
 npm install @react-aria/live-announcer
@@ -425,4 +425,4 @@ By keeping live regions mounted and using established announcer services, you ca
 - **Test with real users**: Screen reader behavior varies — always validate with actual assistive technology
 - **The payoff**: Reliable announcements make your app more inclusive, responsive, and trustworthy
 
-<small>**Thanks** for [Ferdinand Malcher](https://github.com/fmalcher/) for reviewing this article.<br />**Cover image:** Picture from [Freepik](https://www.freepik.com/free-photo/paper-hand-holding-megaphone_19925176.htm), edited.</small>
+<small>**Thanks** for [Ferdinand Malcher](https://github.com/fmalcher/) and [Milan Wanielik](https://github.com/milan-w) for reviewing this article.<br />**Cover image:** Picture from [Freepik](https://www.freepik.com/free-photo/paper-hand-holding-megaphone_19925176.htm), edited.</small>
