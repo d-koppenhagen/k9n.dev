@@ -45,7 +45,7 @@ In this post, we'll break down:
 
 - Why live regions may fail in your SPAs
 - The difference between **polite** and **assertive** announcements
-- What the `aria-relevant` attribute actually does
+- What the `aria-relevant` and `aria-atomic` attributes actually doing
 - Two reliable solutions: **local** vs. **global** live regions
 - Concrete implementations in **Angular**, **Vue**, and **React**
 
