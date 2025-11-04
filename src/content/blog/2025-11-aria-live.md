@@ -109,7 +109,7 @@ So, how can we fix it? To make `aria-live` work reliably, the element:
 1. Must **always exist in the DOM** (no conditional rendering), and
 2. Must have **its text content changed dynamically**, not replaced by a new node.
 
-That's why we'll look next at two approaches:
+That's why we'll look at two approaches next:
 
 - Local live regions that stay mounted
 - A global announcer that's always present
