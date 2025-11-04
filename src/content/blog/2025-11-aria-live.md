@@ -145,13 +145,18 @@ A good rule of thumb:
 The `aria-relevant` attribute refines what types of changes should be announced.
 It accepts values like `additions`, `removals`, `text`, or `all`.
 For most live regions, the default (`aria-relevant="additions text"`) is ideal — it announces when new content is added or existing text changes.
-However, in cases where your region replaces its text frequently (e.g., progress bars, timers, or captions), you might explicitly set:
+
+However, if you have a region where elements are frequently added and removed (like a list of active users or temporary notifications), you might want to control what triggers announcements:
 
 ```html
-<div aria-live="polite" aria-relevant="text">0% complete</div>
+<!-- Only announce when items are added, ignore removals -->
+<ul aria-live="polite" aria-relevant="additions">
+  <li>User Alice joined</li>
+  <li>User Bob joined</li>
+  <!-- Announces "User Bob joined" when added, silent when removed -->
+</ul>
 ```
 
-This prevents redundant announcements for removed nodes, focusing only on text changes.
 You can also combine values for fine control:
 
 ```html
