@@ -75,7 +75,7 @@ By the end, you'll know how to make sure your live regions stay *truly live* —
 
 ## Understanding Why Live Region Breaks in SPAs
 
-At its core, an `aria-live` region is simply explained:
+At its core, an `aria-live` region is easily explained:
 it tells assistive technologies like screen readers,
 
 > "Hey, whenever this content changes, read it out loud."
