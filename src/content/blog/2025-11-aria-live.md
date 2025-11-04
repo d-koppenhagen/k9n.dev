@@ -113,7 +113,7 @@ That's why we'll look next at two approaches:
 - Local live regions that stay mounted
 - A global announcer that's always present
 
-But before that, let's clarify two critical ARIA attributes that often confuse developers: `aria-live`'s **politeness levels**, and its lesser-known partner, `aria-relevant`.
+But before that, let's clarify three critical ARIA attributes that often confuse developers: `aria-live`'s **politeness levels**, and its lesser-known partners, `aria-relevant` and `aria-atomic`.
 
 ## Understanding ARIA Attributes for dynamic announcements
 
