@@ -23,6 +23,7 @@ thumbnail:
   card: images/blog/aria-live/aria-live-small.jpg
 linked:
   devTo: 'https://dev.to/dkoppenhagen/when-your-live-region-isnt-live-fixing-aria-live-in-angular-react-and-vue-1g0j'
+  medium: 'https://danny-koppenhagen.medium.com/when-your-live-region-isnt-live-d8d66218747d'
 ---
 
 You've built a modern single-page application with dynamic content alerts and live tickers - of course: with accessibility in mind.
