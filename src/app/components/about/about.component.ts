@@ -1,15 +1,15 @@
 import { isPlatformBrowser } from '@angular/common';
 import {
+  AfterViewChecked,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
   ElementRef,
   HostListener,
+  inject,
   OnInit,
   PLATFORM_ID,
   viewChild,
-  inject,
-  AfterViewChecked,
 } from '@angular/core';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import {
@@ -17,9 +17,9 @@ import {
   FontAwesomeModule,
 } from '@fortawesome/angular-fontawesome';
 import {
-  faSpotify,
-  faDeezer,
   faApple,
+  faDeezer,
+  faSpotify,
 } from '@fortawesome/free-brands-svg-icons';
 
 import { PersonalTimelineComponent } from '../personal-timeline/personal-timeline.component';
@@ -45,7 +45,7 @@ export class AboutComponent implements OnInit, AfterViewChecked {
     this.faLib.addIcons(faSpotify, faDeezer, faApple);
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   onResize() {
     const videoBox = this.videoBox();
     if (videoBox?.nativeElement?.clientWidth) {
