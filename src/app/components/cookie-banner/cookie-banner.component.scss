@@ -1,4 +1,4 @@
-@import '../../../sass/libs/vars';
+@use '../../../sass/libs/vars' as *;
 
 #cookie-banner {
   opacity: 0.9;

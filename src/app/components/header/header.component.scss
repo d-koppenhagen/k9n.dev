@@ -1,4 +1,4 @@
-@import '../../../sass/libs/vars';
+@use '../../../sass/libs/vars' as *;
 
 .header-title {
   background-image: url('/images/bg-triangles.jpg');

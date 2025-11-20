@@ -1,4 +1,5 @@
-@import '../../../sass/libs/vars';
+@use 'sass:color';
+@use '../../../sass/libs/vars' as *;
 
 .menu-dark {
   filter: alpha(opacity=90);
@@ -11,7 +12,7 @@
 
     &:hover,
     &:focus {
-      background-color: lighten($c01, 10%);
+      background-color: color.adjust($c01, $lightness: 10%);
       box-shadow: inset 0 0 0 2px $c02;
     }
   }

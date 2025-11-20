@@ -1,4 +1,4 @@
-@import '../../../sass/libs/vars';
+@use '../../../sass/libs/vars' as *;
 
 p {
   white-space: pre-wrap;
