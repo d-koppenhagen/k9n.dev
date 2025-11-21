@@ -1,3 +1,10 @@
+@use 'sass:color';
+@use '../libs/vars';
+@use '../libs/breakpoints';
+@use '../libs/functions';
+@use '../libs/mixins';
+@use '../libs/vendor';
+
 ///
 /// Solid State by HTML5 UP
 /// html5up.net | @ajlkn
@@ -8,7 +15,7 @@
 
 ol {
   list-style: decimal;
-  margin: 0 0 _size(element-margin) 0;
+  margin: 0 0 functions.size(element-margin) 0;
   padding-left: 1.25em;
 
   li {
@@ -19,12 +26,12 @@ ol {
     padding-left: 0;
 
     li {
-      border-top: solid 1px _palette(border);
+      border-top: solid 1px functions.palette(border);
       margin-left: 1em;
       padding: 0.5em;
 
       &:hover {
-        background-color: lighten($c01, 5%);
+        background-color: color.adjust(vars.$c01, $lightness: 5%);
         border-radius: 3px;
       }
 
@@ -43,7 +50,7 @@ ol {
 
 ul {
   list-style: disc;
-  margin: 0 0 _size(element-margin) 0;
+  margin: 0 0 functions.size(element-margin) 0;
   padding-left: 1em;
 
   ul {
@@ -59,7 +66,7 @@ ul {
     padding-left: 0;
 
     li {
-      border-top: solid 1px _palette(border);
+      border-top: solid 1px functions.palette(border);
       padding: 0.5em 0;
 
       &:first-child {
@@ -71,15 +78,15 @@ ul {
 }
 
 dl {
-  margin: 0 0 _size(element-margin) 0;
+  margin: 0 0 functions.size(element-margin) 0;
 
   dt {
     display: block;
-    font-weight: _font(weight-bold);
-    margin: 0 0 (_size(element-margin) * 0.5) 0;
+    font-weight: functions.font(weight-bold);
+    margin: 0 0 (functions.size(element-margin) * 0.5) 0;
   }
 
   dd {
-    margin-left: _size(element-margin);
+    margin-left: functions.size(element-margin);
   }
 }

@@ -1,3 +1,7 @@
+@use 'sass:map';
+@use 'sass:list';
+@use 'vars';
+
 /// Removes a specific item from a list.
 /// @author Hugo Giraudel
 /// @param {list} $list List.
@@ -32,12 +36,12 @@
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
 @function val($map, $keys...) {
-  @if nth($keys, 1) == null {
+  @if list.nth($keys, 1) == null {
     $keys: remove-nth($keys, 1);
   }
 
   @each $key in $keys {
-    $map: map-get($map, $key);
+    $map: map.get($map, $key);
   }
 
   @return $map;
@@ -46,34 +50,34 @@
 /// Gets a duration value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-@function _duration($keys...) {
-  @return val($duration, $keys...);
+@function duration($keys...) {
+  @return val(vars.$duration, $keys...);
 }
 
 /// Gets a font value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-@function _font($keys...) {
-  @return val($font, $keys...);
+@function font($keys...) {
+  @return val(vars.$font, $keys...);
 }
 
 /// Gets a misc value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-@function _misc($keys...) {
-  @return val($misc, $keys...);
+@function misc($keys...) {
+  @return val(vars.$misc, $keys...);
 }
 
 /// Gets a palette value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-@function _palette($keys...) {
-  @return val($palette, $keys...);
+@function palette($keys...) {
+  @return val(vars.$palette, $keys...);
 }
 
 /// Gets a size value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-@function _size($keys...) {
-  @return val($size, $keys...);
+@function size($keys...) {
+  @return val(vars.$size, $keys...);
 }

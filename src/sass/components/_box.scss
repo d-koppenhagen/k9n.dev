@@ -1,3 +1,8 @@
+@use '../libs/breakpoints';
+@use '../libs/functions';
+@use '../libs/mixins';
+@use '../libs/vendor';
+
 ///
 /// Solid State by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,9 +12,9 @@
 /* Box */
 
 .box {
-  border-radius: _size(border-radius);
-  border: solid 2px _palette(border);
-  margin-bottom: _size(element-margin);
+  border-radius: functions.size(border-radius);
+  border: solid 2px functions.palette(border);
+  margin-bottom: functions.size(element-margin);
   padding: 1.5em;
 
   > :last-child,

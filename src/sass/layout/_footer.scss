@@ -1,3 +1,9 @@
+@use 'sass:color';
+@use '../libs/breakpoints';
+@use '../libs/functions';
+@use '../libs/mixins';
+@use '../libs/vendor';
+
 ///
 /// Solid State by HTML5 UP
 /// html5up.net | @ajlkn
@@ -8,36 +14,36 @@
 
 #footer {
   .inner {
-    @include padding(5em, 0);
-    @include vendor('display', 'flex');
-    @include vendor('flex-direction', 'row');
-    @include vendor('flex-wrap', 'wrap');
+    @include mixins.padding(5em, 0);
+    @include vendor.vendor('display', 'flex');
+    @include vendor.vendor('flex-direction', 'row');
+    @include vendor.vendor('flex-wrap', 'wrap');
     margin: 0 auto;
-    width: _size(inner);
+    width: functions.size(inner);
 
     > * {
       width: 100%;
     }
 
     form {
-      margin: 0 _size(section-spacing, large) 0 0;
-      width: calc(50% - #{_size(section-spacing, large) * 0.5});
+      margin: 0 functions.size(section-spacing, large) 0 0;
+      width: calc(50% - #{functions.size(section-spacing, large) * 0.5});
     }
 
     .contact {
-      width: calc(50% - #{_size(section-spacing, large) * 0.5});
+      width: calc(50% - #{functions.size(section-spacing, large) * 0.5});
     }
 
     .copyright {
-      border-top: solid 2px _palette(border);
+      border-top: solid 2px functions.palette(border);
       list-style: none;
-      margin: (_size(element-margin) * 2) 0 _size(element-margin) 0;
-      padding: _size(element-margin) 0 0 0;
+      margin: (functions.size(element-margin) * 2) 0 functions.size(element-margin) 0;
+      padding: functions.size(element-margin) 0 0 0;
       width: 100%;
 
       li {
-        border-left: solid 2px _palette(border);
-        color: _palette(fg-light);
+        border-left: solid 2px functions.palette(border);
+        color: functions.palette(fg-light);
         display: inline-block;
         font-size: 0.9em;
         line-height: 1;
@@ -58,13 +64,13 @@
     }
   }
 
-  @include breakpoint('<=large') {
-    background-color: _palette(bg);
+  @include breakpoints.breakpoint('<=large') {
+    background-color: functions.palette(bg);
 
     background-image: linear-gradient(
         to top,
-        transparentize(_palette(bg), 0.2),
-        transparentize(_palette(bg), 0.2)
+        color.adjust(functions.palette(bg), $alpha: -0.2),
+        color.adjust(functions.palette(bg), $alpha: -0.2)
       ),
       url('/images/bg.jpg');
 
@@ -72,53 +78,53 @@
 
     background-position: center, center;
 
-    margin-top: (_size(wrapper-edges, large) * -1);
-    padding-top: _size(wrapper-edges, large);
+    margin-top: (functions.size(wrapper-edges, large) * -1);
+    padding-top: functions.size(wrapper-edges, large);
   }
 
-  @include breakpoint('<=medium') {
-    margin-top: (_size(wrapper-edges, medium) * -1);
-    padding-top: _size(wrapper-edges, medium);
+  @include breakpoints.breakpoint('<=medium') {
+    margin-top: (functions.size(wrapper-edges, medium) * -1);
+    padding-top: functions.size(wrapper-edges, medium);
 
     .inner {
-      @include padding(3em, 3em);
+      @include mixins.padding(3em, 3em);
       display: block;
       width: 100%;
 
       form {
         width: 100%;
-        margin: 0 0 (_size(element-margin) * 2) 0;
+        margin: 0 0 (functions.size(element-margin) * 2) 0;
       }
 
       .contact {
         width: 100%;
-        margin: 0 0 (_size(element-margin) * 2) 0;
+        margin: 0 0 (functions.size(element-margin) * 2) 0;
       }
 
       .copyright {
-        margin: (_size(element-margin) * 2) 0 _size(element-margin) 0;
+        margin: (functions.size(element-margin) * 2) 0 functions.size(element-margin) 0;
       }
     }
   }
 
-  @include breakpoint('<=small') {
-    margin-top: (_size(wrapper-edges, small) * -1);
-    padding-top: _size(wrapper-edges, small);
+  @include breakpoints.breakpoint('<=small') {
+    margin-top: (functions.size(wrapper-edges, small) * -1);
+    padding-top: functions.size(wrapper-edges, small);
 
     .inner {
-      @include padding(2em, 2em);
+      @include mixins.padding(2em, 2em);
 
       form {
-        margin: 0 0 (_size(element-margin) * 1.5) 0;
+        margin: 0 0 (functions.size(element-margin) * 1.5) 0;
       }
 
       .contact {
-        margin: 0 0 (_size(element-margin) * 1.5) 0;
+        margin: 0 0 (functions.size(element-margin) * 1.5) 0;
       }
     }
   }
 
-  @include breakpoint('<=xsmall') {
+  @include breakpoints.breakpoint('<=xsmall') {
     .inner {
       .copyright {
         li {
@@ -135,9 +141,9 @@
     }
   }
 
-  @include breakpoint('<=xxsmall') {
+  @include breakpoints.breakpoint('<=xxsmall') {
     .inner {
-      @include padding(2em, 1.5em);
+      @include mixins.padding(2em, 1.5em);
     }
   }
 }

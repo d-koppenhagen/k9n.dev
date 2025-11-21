@@ -1,3 +1,8 @@
+@use '../libs/breakpoints';
+@use '../libs/functions';
+@use '../libs/mixins';
+@use '../libs/vendor';
+
 ///
 /// Solid State by HTML5 UP
 /// html5up.net | @ajlkn
@@ -14,14 +19,14 @@ ul.contact {
     display: flex;
     gap: 0.5rem;
 
-    @include icon;
-    margin: (_size(element-margin) * 0.75) 0;
+    @include mixins.icon;
+    margin: (functions.size(element-margin) * 0.75) 0;
     padding: 0;
     position: relative;
 
     &:before {
       border-radius: 100%;
-      border: solid 2px _palette(border);
+      border: solid 2px functions.palette(border);
       display: inline-block;
       font-size: 0.8em;
       height: 2.5em;
@@ -38,9 +43,9 @@ ul.contact {
     }
   }
 
-  @include breakpoint('<=small') {
+  @include breakpoints.breakpoint('<=small') {
     li {
-      margin: (_size(element-margin) * 0.25) 0 0 0;
+      margin: (functions.size(element-margin) * 0.25) 0 0 0;
     }
   }
 }

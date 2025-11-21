@@ -1,3 +1,7 @@
+@use 'sass:list';
+@use 'sass:math';
+@use 'functions';
+
 /// Makes an element's :before pseudoelement a FontAwesome icon.
 /// @param {string} $content Optional content value to use.
 /// @param {string} $category Optional category to use.
@@ -43,12 +47,12 @@
 
   $x: 0.1em;
 
-  @if unit(_size(element-margin)) == 'rem' {
+  @if math.unit(functions.size(element-margin)) == 'rem' {
     $x: 0.1rem;
   }
 
-  padding: ($tb + nth($pad, 1)) ($lr + nth($pad, 2))
-    max($x, $tb - _size(element-margin) + nth($pad, 3)) ($lr + nth($pad, 4)) #{$important};
+  padding: ($tb + list.nth($pad, 1)) ($lr + list.nth($pad, 2))
+    math.max($x, $tb - functions.size(element-margin) + list.nth($pad, 3)) ($lr + list.nth($pad, 4)) #{$important};
 }
 
 /// Encodes a SVG data URL so IE doesn't choke (via codepen.io/jakob-e/pen/YXXBrp).

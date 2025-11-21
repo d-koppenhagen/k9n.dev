@@ -1,3 +1,9 @@
+@use '../libs/breakpoints';
+@use '../libs/functions';
+@use '../libs/mixins';
+@use '../libs/vendor';
+@use '../libs/html-grid';
+
 ///
 /// Solid State by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,29 +13,29 @@
 /* Row */
 
 .row {
-  @include html-grid(1.75em);
+  @include html-grid.html-grid(1.75em);
 
-  @include breakpoint('<=xlarge') {
-    @include html-grid(1.75em, xlarge);
+  @include breakpoints.breakpoint('<=xlarge') {
+    @include html-grid.html-grid(1.75em, xlarge);
   }
 
-  @include breakpoint('<=large') {
-    @include html-grid(1.75em, large);
+  @include breakpoints.breakpoint('<=large') {
+    @include html-grid.html-grid(1.75em, large);
   }
 
-  @include breakpoint('<=medium') {
-    @include html-grid(1.75em, medium);
+  @include breakpoints.breakpoint('<=medium') {
+    @include html-grid.html-grid(1.75em, medium);
   }
 
-  @include breakpoint('<=small') {
-    @include html-grid(1.25em, small);
+  @include breakpoints.breakpoint('<=small') {
+    @include html-grid.html-grid(1.25em, small);
   }
 
-  @include breakpoint('<=xsmall') {
-    @include html-grid(1.25em, xsmall);
+  @include breakpoints.breakpoint('<=xsmall') {
+    @include html-grid.html-grid(1.25em, xsmall);
   }
 
-  @include breakpoint('<=xxsmall') {
-    @include html-grid(1.25em, xxsmall);
+  @include breakpoints.breakpoint('<=xxsmall') {
+    @include html-grid.html-grid(1.25em, xxsmall);
   }
 }

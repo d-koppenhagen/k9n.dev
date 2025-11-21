@@ -1,4 +1,6 @@
 @use 'sass:math';
+@use 'sass:meta';
+@use 'sass:list';
 
 // html-grid.scss v1.0 | @ajlkn | MIT licensed */
 
@@ -16,7 +18,7 @@
   // Suffixes.
   $suffixes: null;
 
-  @if (type-of($suffix) == 'list') {
+  @if (meta.type-of($suffix) == 'list') {
     $suffixes: $suffix;
   } @else {
     $suffixes: ($suffix);
@@ -26,9 +28,9 @@
   $guttersCols: null;
   $guttersRows: null;
 
-  @if (type-of($gutters) == 'list') {
-    $guttersCols: nth($gutters, 1);
-    $guttersRows: nth($gutters, 2);
+  @if (meta.type-of($gutters) == 'list') {
+    $guttersCols: list.nth($gutters, 1);
+    $guttersRows: list.nth($gutters, 2);
   } @else {
     $guttersCols: $gutters;
     $guttersRows: 0;

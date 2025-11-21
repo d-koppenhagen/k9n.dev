@@ -1,3 +1,9 @@
+@use 'sass:color';
+@use '../libs/breakpoints';
+@use '../libs/functions';
+@use '../libs/mixins';
+@use '../libs/vendor';
+
 ///
 /// Solid State by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,17 +13,17 @@
 /* Header */
 
 nav {
-  font-family: _font(family-heading);
+  font-family: functions.font(family-heading);
   font-size: 0.8em;
-  font-weight: _font(weight-heading-bold);
+  font-weight: functions.font(weight-heading-bold);
   height: 3em;
-  letter-spacing: _font(kern-heading);
+  letter-spacing: functions.font(kern-heading);
   line-height: 3em;
   right: 0.7em;
   text-transform: uppercase;
   top: 0.7em;
   position: fixed;
-  z-index: _misc(z-index-base);
+  z-index: functions.misc(z-index-base);
 
   a,
   button {
@@ -32,34 +38,36 @@ nav {
 
     &.burger-menu {
       cursor: pointer;
-      @include icon(false, solid);
-      @include vendor(
+      @include mixins.icon(false, solid);
+      @include vendor.vendor(
         'transition',
-        'background-color #{_duration(transition)} ease-in-out'
+        'background-color #{functions.duration(transition)} ease-in-out'
       );
-      border-radius: _size(border-radius);
-      box-shadow: inset 0 0 0 2px _palette(border);
+      border-radius: functions.size(border-radius);
+      box-shadow: inset 0 0 0 2px functions.palette(border);
       padding: 0 1.35em;
 
       &:hover {
-        background-color: _palette(border-bg);
+        background-color: functions.palette(border-bg);
       }
 
       &:active {
-        background-color: _palette(border2-bg);
+        background-color: functions.palette(border2-bg);
       }
     }
   }
 }
 
 #header {
-  @include vendor(
+  @include vendor.vendor(
     'transition',
-    'background-color #{_duration(transition)} ease-in-out'
+    'background-color #{functions.duration(transition)} ease-in-out'
   );
-  background-color: transparentize(
-    desaturate(lighten(_palette(bg), 3), 1.5),
-    0.05
+  background-color: color.adjust(
+    functions.palette(bg),
+    $lightness: 3%,
+    $saturation: -1.5%,
+    $alpha: -0.05
   );
   height: 3.5em;
   left: 0;
@@ -68,14 +76,14 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: _misc(z-index-base);
+  z-index: functions.misc(z-index-base);
 
   h1 {
-    @include vendor(
+    @include vendor.vendor(
       'transition',
       (
-        'opacity #{_duration(transition)} ease-in-out',
-        'visibility #{_duration(transition)}'
+        'opacity #{functions.duration(transition)} ease-in-out',
+        'visibility #{functions.duration(transition)}'
       )
     );
     border-bottom: 0;

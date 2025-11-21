@@ -1,3 +1,9 @@
+@use 'sass:color';
+@use '../libs/breakpoints';
+@use '../libs/functions';
+@use '../libs/mixins';
+@use '../libs/vendor';
+
 ///
 /// Solid State by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,23 +13,23 @@
 /* Features */
 
 .features {
-  @include vendor('display', 'flex');
-  @include vendor('flex-wrap', 'wrap');
-  margin: 0 0 _size(element-margin) 0;
+  @include vendor.vendor('display', 'flex');
+  @include vendor.vendor('flex-wrap', 'wrap');
+  margin: 0 0 functions.size(element-margin) 0;
 
   article {
-    @include padding(1.75em, 1.75em);
-    background-color: desaturate(lighten(_palette(bg), 3), 1.5);
-    border-radius: _size(border-radius);
-    margin: (_size(section-spacing, large) * 0.5) _size(section-spacing, large)
-      (_size(section-spacing, large) * 0.5) 0;
+    @include mixins.padding(1.75em, 1.75em);
+    background-color: color.adjust(functions.palette(bg), $lightness: 3%, $saturation: -1.5%);
+    border-radius: functions.size(border-radius);
+    margin: (functions.size(section-spacing, large) * 0.5) functions.size(section-spacing, large)
+      (functions.size(section-spacing, large) * 0.5) 0;
 
     &:nth-child(2n) {
       margin-right: 0;
     }
 
     .image {
-      border-radius: _size(border-radius) _size(border-radius) 0 0;
+      border-radius: functions.size(border-radius) functions.size(border-radius) 0 0;
       display: block;
       margin-bottom: 1.75em;
       margin-left: -1.75em;
@@ -32,24 +38,24 @@
       width: calc(100% + #{3.5em});
 
       img {
-        border-radius: _size(border-radius) _size(border-radius) 0 0;
+        border-radius: functions.size(border-radius) functions.size(border-radius) 0 0;
         width: 100%;
       }
     }
   }
 
-  @include breakpoint('<=medium') {
+  @include breakpoints.breakpoint('<=medium') {
     article {
-      margin: (_size(section-spacing, medium) * 0.5)
-        _size(section-spacing, medium) (_size(section-spacing, medium) * 0.5) 0;
+      margin: (functions.size(section-spacing, medium) * 0.5)
+        functions.size(section-spacing, medium) (functions.size(section-spacing, medium) * 0.5) 0;
     }
   }
 
-  @include breakpoint('<=small') {
+  @include breakpoints.breakpoint('<=small') {
     article {
-      @include padding(1.5em, 1.5em);
-      margin: (_size(section-spacing, small) * 0.5)
-        _size(section-spacing, small) (_size(section-spacing, small) * 0.5) 0;
+      @include mixins.padding(1.5em, 1.5em);
+      margin: (functions.size(section-spacing, small) * 0.5)
+        functions.size(section-spacing, small) (functions.size(section-spacing, small) * 0.5) 0;
 
       .image {
         margin-bottom: 1.5em;
@@ -60,12 +66,12 @@
     }
   }
 
-  @include breakpoint('<=xsmall') {
+  @include breakpoints.breakpoint('<=xsmall') {
     display: block;
 
     article {
       width: 100%;
-      margin: 0 0 _size(element-margin) 0 !important;
+      margin: 0 0 functions.size(element-margin) 0 !important;
     }
   }
 }

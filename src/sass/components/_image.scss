@@ -1,3 +1,8 @@
+@use '../libs/breakpoints';
+@use '../libs/functions';
+@use '../libs/mixins';
+@use '../libs/vendor';
+
 ///
 /// Solid State by HTML5 UP
 /// html5up.net | @ajlkn
@@ -7,13 +12,13 @@
 /* Image */
 
 .image {
-  border-radius: _size(border-radius);
+  border-radius: functions.size(border-radius);
   border: 0;
   display: inline-block;
   position: relative;
 
   img {
-    border-radius: _size(border-radius);
+    border-radius: functions.size(border-radius);
     display: block;
   }
 
@@ -40,7 +45,7 @@
 
   &.fit {
     display: block;
-    margin: 0 0 _size(element-margin) 0;
+    margin: 0 0 functions.size(element-margin) 0;
     width: 100%;
 
     img {
@@ -50,7 +55,7 @@
 
   &.main {
     display: block;
-    margin: 0 0 (_size(element-margin) * 1.5) 0;
+    margin: 0 0 (functions.size(element-margin) * 1.5) 0;
     width: 100%;
 
     img {

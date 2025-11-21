@@ -1,3 +1,10 @@
+@use 'sass:color';
+@use '../libs/breakpoints';
+@use '../libs/functions';
+@use '../libs/mixins';
+@use '../libs/vendor';
+@use '../libs/vars';
+
 ///
 /// Solid State by HTML5 UP
 /// html5up.net | @ajlkn
@@ -6,27 +13,25 @@
 
 /* Menu */
 
-@import '../../sass/libs/vars';
-
 #page-wrapper {
-  @include vendor('transition', 'filter 0.25s ease');
+  @include vendor.vendor('transition', 'filter 0.25s ease');
 }
 
 #menu {
-  @include vendor('align-items', 'center');
-  @include vendor('display', 'flex');
-  @include vendor('justify-content', 'center');
-  @include vendor('pointer-events', 'none');
-  @include vendor(
+  @include vendor.vendor('align-items', 'center');
+  @include vendor.vendor('display', 'flex');
+  @include vendor.vendor('justify-content', 'center');
+  @include vendor.vendor('pointer-events', 'none');
+  @include vendor.vendor(
     'transition',
-    ('opacity #{_duration(menu)} ease', 'visibility #{_duration(menu)}')
+    ('opacity #{functions.duration(menu)} ease', 'visibility #{functions.duration(menu)}')
   );
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-tap-highlight-color: $black;
-  background: transparentize(_palette(bg), 0.2);
+  -webkit-tap-highlight-color: vars.$black;
+  background: color.adjust(functions.palette(bg), $alpha: -0.2);
   cursor: default;
   height: 100%;
   left: 0;
@@ -38,15 +43,15 @@
   width: 100%;
 
   .inner {
-    @include padding(2.5em, 1.5em);
-    @include vendor('transform', 'translateY(0.5em)');
-    @include vendor(
+    @include mixins.padding(2.5em, 1.5em);
+    @include vendor.vendor('transform', 'translateY(0.5em)');
+    @include vendor.vendor(
       'transition',
-      ('opacity #{_duration(menu)} ease', 'transform #{_duration(menu)} ease')
+      ('opacity #{functions.duration(menu)} ease', 'transform #{functions.duration(menu)} ease')
     );
     -webkit-overflow-scrolling: touch;
-    background: _palette(accent);
-    border-radius: _size(border-radius);
+    background: functions.palette(accent);
+    border-radius: functions.size(border-radius);
     display: block;
     max-width: 100%;
     opacity: 0;
@@ -55,7 +60,7 @@
   }
 
   h2 {
-    border-bottom: solid 2px _palette(border);
+    border-bottom: solid 2px functions.palette(border);
     padding-bottom: 1em;
   }
 
@@ -79,32 +84,32 @@
 
   .links {
     list-style: none;
-    margin-bottom: (_size(element-margin) - 0.5em);
+    margin-bottom: (functions.size(element-margin) - 0.5em);
     padding: 0;
 
     li {
       padding: 0;
 
       a {
-        border-radius: _size(border-radius);
+        border-radius: functions.size(border-radius);
         border: 0;
         display: block;
-        font-family: _font(family-heading);
+        font-family: functions.font(family-heading);
         font-size: 0.8em;
-        font-weight: _font(weight-heading);
-        letter-spacing: _font(kern-heading);
+        font-weight: functions.font(weight-heading);
+        letter-spacing: functions.font(kern-heading);
         line-height: 1.85em;
         padding: 0.75em 0;
         text-transform: uppercase;
 
         &:hover {
-          background: saturate(darken(_palette(accent), 3), 1.5);
+          background: color.adjust(functions.palette(accent), $lightness: -3%, $saturation: 1.5%);
         }
       }
     }
   }
 
-  @include breakpoint('<=small') {
+  @include breakpoints.breakpoint('<=small') {
     .inner {
       max-height: 100%;
       overflow-y: auto;
@@ -119,16 +124,16 @@
 
 body.is-menu-visible {
   #page-wrapper {
-    @include vendor('filter', 'blur(1.5px)');
+    @include vendor.vendor('filter', 'blur(1.5px)');
   }
 
   #menu {
-    @include vendor('pointer-events', 'auto');
+    @include vendor.vendor('pointer-events', 'auto');
     opacity: 1;
     visibility: visible;
 
     .inner {
-      @include vendor('transform', 'translateY(0)');
+      @include vendor.vendor('transform', 'translateY(0)');
       opacity: 1;
     }
   }
