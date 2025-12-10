@@ -7,8 +7,8 @@ published: true
 author:
   name: Danny Koppenhagen and Ferdinand Malcher
   mail: mail@k9n.dev
-created: 2025-10-12
-updated: 2025-10-12
+created: 2025-10-13
+updated: 2025-11-19
 publishedAt:
   name: angular-buch.com
   url: https://angular-buch.com/blog/2025-10-signal-forms-part1
