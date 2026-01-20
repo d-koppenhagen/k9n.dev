@@ -1,13 +1,20 @@
-import { ScrollService } from './scroll.service';
 import { isPlatformBrowser } from '@angular/common';
-import { Component, PLATFORM_ID, inject } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  inject,
+  PLATFORM_ID,
+  viewChild,
+} from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { filter, skip } from 'rxjs';
 
 import { ContactComponent } from './components/contact/contact.component';
 import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ScrollService } from './scroll.service';
 
 @Component({
   selector: 'dk-root',
@@ -22,7 +29,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   template: `
     <dk-navbar></dk-navbar>
     <dk-header></dk-header>
-    <main>
+    <main #mainRef>
       <router-outlet></router-outlet>
     </main>
     <dk-contact></dk-contact>
@@ -35,6 +42,7 @@ export class AppComponent {
   readonly router = inject(Router);
   readonly scrollService = inject(ScrollService);
   private platformId = inject(PLATFORM_ID);
+  readonly mainRef = viewChild.required<ElementRef<HTMLElement>>('mainRef');
 
   cookiesAccepted = false;
   isBrowser = false;
@@ -45,6 +53,18 @@ export class AppComponent {
     this.cookiesAccepted = this.isBrowser
       ? Boolean(localStorage.getItem('cookiesAccepted'))
       : true;
+
+    // for a11y: focus <main> landmark after navigation
+    inject(Router)
+      .events.pipe(
+        filter((e) => e instanceof NavigationEnd),
+        skip(1), // skip when page entered first time (deeplink)
+      )
+      .subscribe(() => {
+        const mainEl = this.mainRef().nativeElement;
+        mainEl.setAttribute('tabindex', '-1');
+        mainEl.focus();
+      });
   }
 
   toggleCookiesAccepted() {
