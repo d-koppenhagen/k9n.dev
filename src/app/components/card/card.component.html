@@ -1,7 +1,10 @@
 @if (post(); as post) {
   <article [lang]="post.attributes.language">
     <h3 class="card-header">
-      <a [lang]="post.attributes.language || 'de'" [routerLink]="routeToPost">
+      <a
+        [hreflang]="post.attributes.language || 'de'"
+        [routerLink]="routeToPost"
+      >
         {{ post.attributes.title }}
       </a>
     </h3>

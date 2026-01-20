@@ -76,7 +76,7 @@ import { PostAttributes } from '../../types';
                         'Original veröffentlicht auf ' +
                         post.attributes.publishedAt.name
                       "
-                      [lang]="post.attributes.language || 'de'"
+                      [hreflang]="post.attributes.language || 'de'"
                     >
                       @if (post.attributes.publishedAt.logo) {
                         <img
@@ -91,7 +91,7 @@ import { PostAttributes } from '../../types';
                     Original veröffentlicht auf
                     <a
                       [href]="post.attributes.publishedAt.url"
-                      [lang]="post.attributes.language || 'de'"
+                      [hreflang]="post.attributes.language || 'de'"
                       >{{ post.attributes.publishedAt.name }}</a
                     >.
                   </div>
@@ -104,7 +104,7 @@ import { PostAttributes } from '../../types';
               @if (post.attributes.linked.devTo) {
                 <a
                   [href]="post.attributes.linked.devTo"
-                  [lang]="post.attributes.language || 'de'"
+                  [hreflang]="post.attributes.language || 'de'"
                   >Dev.to</a
                 >
               }
@@ -116,7 +116,7 @@ import { PostAttributes } from '../../types';
               @if (post.attributes.linked.medium) {
                 <a
                   [href]="post.attributes.linked.medium"
-                  [lang]="post.attributes.language || 'de'"
+                  [hreflang]="post.attributes.language || 'de'"
                   >Medium.com</a
                 >
               }
@@ -144,7 +144,7 @@ import { PostAttributes } from '../../types';
               <a
                 class="external-article"
                 [href]="post.attributes.publishedAt.url"
-                [lang]="post.attributes.language || 'de'"
+                [hreflang]="post.attributes.language || 'de'"
                 >&rarr;
                 @if (post.attributes.language === 'en') {
                   Read On:

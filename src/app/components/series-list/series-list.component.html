@@ -5,7 +5,7 @@
       <li>
         <a
           [routerLink]="['..', related.slug]"
-          [lang]="related.attributes.language || 'de'"
+          [hreflang]="related.attributes.language || 'de'"
           routerLinkActive="current"
           ariaCurrentWhenActive="page"
           >{{ related.attributes.title }}</a
