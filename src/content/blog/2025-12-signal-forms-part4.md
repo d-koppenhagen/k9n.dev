@@ -24,6 +24,6 @@ keywords:
   - accessibility
 language: en
 thumbnail:
-  header: https://website-articles.angular-buch.com/2025-12-signal-forms-part4/header-signalforms-part4.jpg
+  header: https://website-articles.angular-buch.com/blog/2025-12-signal-forms-part4/header-signalforms-part4.jpg
 series: angular-signal-forms
 ---

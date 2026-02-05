@@ -23,6 +23,6 @@ keywords:
   - Schema Validation
 language: en
 thumbnail:
-  header: https://website-articles.angular-buch.com/2025-10-signal-forms-part1/header-signalforms-part1.jpg
+  header: https://website-articles.angular-buch.com/blog/2025-10-signal-forms-part1/header-signalforms-part1.jpg
 series: angular-signal-forms
 ---

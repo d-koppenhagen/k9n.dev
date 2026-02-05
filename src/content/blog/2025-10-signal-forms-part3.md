@@ -24,6 +24,6 @@ keywords:
   - ControlValueAccessor
 language: en
 thumbnail:
-  header: https://website-articles.angular-buch.com/2025-10-signal-forms-part3/header-signalforms-part3.jpg
+  header: https://website-articles.angular-buch.com/blog/2025-10-signal-forms-part3/header-signalforms-part3.jpg
 series: angular-signal-forms
 ---
