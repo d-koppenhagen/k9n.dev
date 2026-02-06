@@ -1,0 +1,1120 @@
+<!DOCTYPE html><html lang="de"><head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css" id="fa-auto-css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}</style><link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Apple PWA Support -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-512x512.png">
+    <link href="icons/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Basic Site Information -->
+    <title>k9n.dev | Trusted Web Activitys (TWA) mit Angular</title>
+    
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Danny Koppenhagen">
+
+    <!-- Twitter Card -->
+    
+    
+    
+    
+    
+
+    <!-- Open Graph Profile -->
+    
+    
+    
+    
+    <meta property="profile:first_name" content="Danny">
+    <meta property="profile:last_name" content="Koppenhagen">
+    <meta property="profile:gender" content="male">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#e7e7e7">
+    <script type="module" crossorigin="" src="/assets/index-DPqAJY-c.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DzfkAIf7.css">
+  <style>.menu-dark[_ngcontent-ng-c2099545970] {
+  filter: alpha(opacity=90);
+}
+.menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970] {
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.9;
+  margin: 0px 1px;
+}
+.menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970]:hover, .menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970]:focus {
+  background-color: rgb(67.1351351351, 71.5135135135, 94.8648648649);
+  box-shadow: inset 0 0 0 2px #5e7959;
+}
+.menu-dark[_ngcontent-ng-c2099545970]:focus    > button[_ngcontent-ng-c2099545970] {
+  box-shadow: inset 0 0 0 2px #ada789;
+}
+
+@media screen and (max-width: 480px) {
+  .hidden-small[_ngcontent-ng-c2099545970] {
+    visibility: hidden;
+  }
+}</style><style>.header-title[_ngcontent-ng-c2421498523] {
+  background-image: url("/images/bg-triangles.jpg");
+  background-size: cover;
+  font-size: 5em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.2901960784);
+}
+
+.sub-header-title[_ngcontent-ng-c2421498523] {
+  color: #2e3141;
+  font-size: 1.6em !important;
+  margin-bottom: 0.5em;
+  line-height: 1.3 !important;
+}
+
+.sub-header[_ngcontent-ng-c2421498523] {
+  color: #2e3141;
+  font-size: 1.2em;
+}
+
+#banner[_ngcontent-ng-c2421498523] {
+  background-image: url("/images/dk-header.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-color: #fdfdfd;
+  padding: 9em 0 12em 0;
+  animation: _ngcontent-ng-c2421498523_headerFadeIn 3s;
+}
+
+@keyframes _ngcontent-ng-c2421498523_headerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#logo[_ngcontent-ng-c2421498523] {
+  position: absolute;
+  top: 5px;
+}
+#logo[_ngcontent-ng-c2421498523]   img[_ngcontent-ng-c2421498523] {
+  width: 70px;
+  animation: _ngcontent-ng-c2421498523_move-to-top 1s ease, _ngcontent-ng-c2421498523_rotate 4s ease 1;
+}
+
+#logo[_ngcontent-ng-c2421498523]:focus, 
+h1[_ngcontent-ng-c2421498523]:focus {
+  outline: 1px solid rgba(185, 167, 167, 0.4);
+}
+
+@keyframes _ngcontent-ng-c2421498523_rotate {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+@keyframes _ngcontent-ng-c2421498523_move-to-top {
+  0% {
+    top: 100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  #banner[_ngcontent-ng-c2421498523] {
+    background-position: right -200px top;
+  }
+}
+@media screen and (max-width: 980px) {
+  #banner[_ngcontent-ng-c2421498523] {
+    background-size: contain;
+    padding: 6em 0 10em 0;
+    background-position: right -200px top;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 736px) {
+  .sub-header[_ngcontent-ng-c2421498523] {
+    font-size: 1em !important;
+    padding-right: 110px;
+  }
+  #banner[_ngcontent-ng-c2421498523] {
+    padding: 6em 0 5em 0;
+  }
+}
+@media screen and (max-width: 620px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 3.5em;
+    padding-right: 40vw;
+  }
+  #banner[_ngcontent-ng-c2421498523] {
+    background-size: cover;
+    background-position: right -180px top;
+  }
+}
+@media screen and (max-width: 560px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 3em;
+    padding-right: 50vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    opacity: 0.7;
+    font-size: 2.5em;
+    padding-right: 50vw;
+  }
+}</style><style>@media screen and (min-width: 736px) {
+  ul.contact[_ngcontent-ng-c1148330124] {
+    columns: 2;
+    width: 100% !important;
+  }
+}</style><style>.wrapper[_ngcontent-ng-c2245548422] {
+  margin-top: 0;
+}
+
+h1[_ngcontent-ng-c2245548422] {
+  font-size: 1.4em;
+}
+
+.extra-info[_ngcontent-ng-c2245548422] {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.actions[_ngcontent-ng-c2245548422] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.published-at[_ngcontent-ng-c2245548422], 
+.external-links[_ngcontent-ng-c2245548422], 
+.edit-on-github[_ngcontent-ng-c2245548422] {
+  margin: 30px 0;
+}
+
+.published-at[_ngcontent-ng-c2245548422] {
+  height: 50px;
+}
+
+.published-at[_ngcontent-ng-c2245548422] {
+  display: flex;
+  align-items: center;
+  line-height: 1.2em;
+}
+.published-at[_ngcontent-ng-c2245548422]   .published-at-link[_ngcontent-ng-c2245548422] {
+  text-decoration: none;
+  border: none;
+  min-width: 120px;
+}
+.published-at[_ngcontent-ng-c2245548422]   .published-at-link[_ngcontent-ng-c2245548422]   .published-at-logo[_ngcontent-ng-c2245548422] {
+  padding-right: 20px;
+  max-height: 60px;
+}
+
+.external-article[_ngcontent-ng-c2245548422] {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.extra-section[_ngcontent-ng-c2245548422]   .actions[_ngcontent-ng-c2245548422] {
+  padding-bottom: 2rem;
+}
+
+span.image[_ngcontent-ng-c2245548422]    > img.thumbnail[_ngcontent-ng-c2245548422] {
+  max-width: 80px;
+}
+
+@media screen and (max-width: 560px) {
+  .blog-footer[_ngcontent-ng-c2245548422] {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: #2e3141;
+    opacity: 0.9;
+    z-index: 1;
+    padding: 0 35px;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > h2[_ngcontent-ng-c2245548422], 
+   .blog-footer[_ngcontent-ng-c2245548422]   h3[_ngcontent-ng-c2245548422] {
+    display: none;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > ul[_ngcontent-ng-c2245548422] {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > ul[_ngcontent-ng-c2245548422]    > li[_ngcontent-ng-c2245548422] {
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .extra-info[_ngcontent-ng-c2245548422] {
+    display: block;
+  }
+}
+@media screen and (max-width: 360px) {
+  .blog-footer[_ngcontent-ng-c2245548422] {
+    padding: 0 24px;
+  }
+}
+.blog-header[_ngcontent-ng-c2245548422]   img[_ngcontent-ng-c2245548422] {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 1ch;
+  overflow: hidden;
+  box-shadow: 0 3px 2px hsla(0, 0%, 0%, 0.02), 0 7px 5px hsla(0, 0%, 0%, 0.03), 0 13px 10px hsla(0, 0%, 0%, 0.04), 0 22px 18px hsla(0, 0%, 0%, 0.05), 0 42px 33px hsla(0, 0%, 0%, 0.06), 0 100px 80px hsla(0, 0%, 0%, 0.07);
+  margin-bottom: 1rem;
+}</style><meta name="description" content="Progressive Web Apps sind in den letzten Jahren immer populärer geworden. In diesem Blogpost werde ich Ihnen zeigen, wie Sie Ihre PWA auf einfachem Weg in den Google Play Store für Android bringen können, ohne eine echte Android-App mit Webview zu entwickeln, die lediglich eine Website aufruft."><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@d_koppenhagen"><meta name="twitter:creator" content="@d_koppenhagen"><meta name="twitter:title" content="Trusted Web Activitys (TWA) mit Angular"><meta name="twitter:description" content="Progressive Web Apps sind in den letzten Jahren immer populärer geworden. In diesem Blogpost werde ich Ihnen zeigen, wie Sie Ihre PWA auf einfachem Weg in den Google Play Store für Android bringen können, ohne eine echte Android-App mit Webview zu entwickeln, die lediglich eine Website aufruft."><meta name="twitter:image" content="https://k9n.dev/images/blog/twa/header-twa.jpg"><meta property="og:title" content="Trusted Web Activitys (TWA) mit Angular"><meta property="og:description" content="Progressive Web Apps sind in den letzten Jahren immer populärer geworden. In diesem Blogpost werde ich Ihnen zeigen, wie Sie Ihre PWA auf einfachem Weg in den Google Play Store für Android bringen können, ohne eine echte Android-App mit Webview zu entwickeln, die lediglich eine Website aufruft."><meta name="og:image" content="https://k9n.dev/images/blog/twa/header-twa.jpg"><meta name="og:url" content="https://k9n.dev/blog/2020-11-twa"><style>.article-series[_ngcontent-ng-c3445128104]   li[_ngcontent-ng-c3445128104]:has(.current:not(:hover)) {
+  background-color: rgb(39.2545454545, 62.3454545455, 75.0454545455);
+}</style></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-HY3CPEEH1Z"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HY3CPEEH1Z');
+      </script>
+  <body id="page-wrapper" class="mat-typography"><!--nghm-->
+    <!-- Angular -->
+    <dk-root ng-version="21.0.0" ngh="5" ng-server-context="ssr-analog"><dk-navbar _nghost-ng-c2099545970="" ngh="0"><nav _ngcontent-ng-c2099545970="" id="navigation" class="menu-dark" jsaction="keydown:;"><button _ngcontent-ng-c2099545970="" role="button" aria-label="Menü öffnen" aria-controls="menu" class="burger-menu" aria-expanded="false" jsaction="click:;"><fa-icon _ngcontent-ng-c2099545970="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg></fa-icon></button></nav></dk-navbar><dk-header _nghost-ng-c2421498523="" ngh="1"><header _ngcontent-ng-c2421498523="" id="banner"><div _ngcontent-ng-c2421498523="" class="inner"><a _ngcontent-ng-c2421498523="" routerlink="/" aria-label="Zur Startseite" title="Startseite" id="logo" href="/" jsaction="click:;"><img _ngcontent-ng-c2421498523="" src="images/logo_header.png" alt="Logo"></a><h1 _ngcontent-ng-c2421498523="" aria-label="k9n.dev" class="header-title" jsaction="focus:;blur:;"><span _ngcontent-ng-c2421498523="">k</span><span _ngcontent-ng-c2421498523="" class="headline-expanded">9</span><!----><!----><span _ngcontent-ng-c2421498523="">n.dev</span><!----></h1><p _ngcontent-ng-c2421498523="" class="sub-header-title">Danny Koppenhagen</p><p _ngcontent-ng-c2421498523="" class="sub-header">Entwickler, IT-Berater, Buchautor</p></div></header></dk-header><main><router-outlet></router-outlet><ng-component _nghost-ng-c2245548422="" ngh="4"><article _ngcontent-ng-c2245548422="" class="wrapper alt" lang="de"><div _ngcontent-ng-c2245548422="" class="inner"><h1 _ngcontent-ng-c2245548422="">Trusted Web Activitys (TWA) mit Angular</h1><section _ngcontent-ng-c2245548422="" class="blog-header"><img _ngcontent-ng-c2245548422="" alt="" class="adaptive-glass" src="images/blog/twa/header-twa.jpg"><!----></section><section _ngcontent-ng-c2245548422="" class="extra-section"><div _ngcontent-ng-c2245548422="" class="extra-info"><span _ngcontent-ng-c2245548422=""><time _ngcontent-ng-c2245548422="" datetime="2001-05-15 19:00">Nov 17, 2020</time></span><!----><p _ngcontent-ng-c2245548422="" class="sub-heading">Stichwörter</p></div><div _ngcontent-ng-c2245548422="" class="actions"><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: TWA" jsaction="click:;"> TWA </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Trusted Web Activity" jsaction="click:;"> Trusted Web Activity </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: PWA" jsaction="click:;"> PWA </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Progressive Web App" jsaction="click:;"> Progressive Web App </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular" jsaction="click:;"> Angular </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Android" jsaction="click:;"> Android </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Android Store" jsaction="click:;"> Android Store </button></span><!----></div><div _ngcontent-ng-c2245548422="" class="published-at"><div _ngcontent-ng-c2245548422=""><a _ngcontent-ng-c2245548422="" class="published-at-link" href="https://angular-buch.com/blog/2020-11-twa" hreflang="de" aria-label="Original veröffentlicht auf angular-buch.com"><img _ngcontent-ng-c2245548422="" alt="" class="published-at-logo" src="https://angular-buch.com/assets/img/brand-400.png"><!----></a></div><div _ngcontent-ng-c2245548422=""> Original veröffentlicht auf <a _ngcontent-ng-c2245548422="" href="https://angular-buch.com/blog/2020-11-twa" hreflang="de">angular-buch.com</a>. </div></div><!----></section><!----><!----><dk-series-list _ngcontent-ng-c2245548422="" _nghost-ng-c3445128104="" ngh="2"><section _ngcontent-ng-c3445128104="" class="article-series"><h2 _ngcontent-ng-c3445128104="" class="sub-heading">Artikelserie</h2><ol _ngcontent-ng-c3445128104="" class="alt"><li _ngcontent-ng-c3445128104=""><a _ngcontent-ng-c3445128104="" routerlinkactive="current" ariacurrentwhenactive="page" hreflang="de" href="/blog/2019-07-progressive-web-app" class="" jsaction="click:;">Mach aus deiner Angular-App eine PWA</a></li><li _ngcontent-ng-c3445128104=""><a _ngcontent-ng-c3445128104="" routerlinkactive="current" ariacurrentwhenactive="page" hreflang="de" href="/blog/2020-11-twa" class="current" aria-current="page" jsaction="click:;">Trusted Web Activitys (TWA) mit Angular</a></li><!----></ol></section></dk-series-list><!----><section _ngcontent-ng-c2245548422="" class="blog-content"><analog-markdown _ngcontent-ng-c2245548422="" classes="markdown-content" lang="de" ngh="3" jsaction="click:;"><div class="markdown-content"><p>Progressive Web Apps sind in den letzten Jahren immer populärer geworden.
+Sie erlauben es uns, Webanwendungen auf dem Home-Bildschirm des Smartphones zu installieren und wie eine nativ installierte App zu benutzen.
+Mit einer PWA können wir Daten mithilfe eines Service Workers cachen, um die Anwendung auch offline zu verwenden.
+Weiterhin kann eine PWA im Hintergrund Push-Benachrichtigungen vom Server empfangen und anzeigen.</p><blockquote>
+<p>Wenn Sie noch keine Erfahrung mit der Umsetzung einer Angular-App als PWA haben, schauen Sie sich unseren Blog-Post <a href="blog/2019-07-progressive-web-app"><em>"Mach aus deiner Angular-App eine PWA"</em></a> an oder werfen Sie einen Blick in unser <a href="angular-buch.com"><em>Angular-Buch</em></a>, wo wir dieses Thema detailliert erläutern.</p></blockquote>
+<p>Nach der Entwicklung einer PWA bleibt jedoch eine Hürde bestehen: Nutzer der Anwendung müssen die URL kennen, über welche die PWA abrufbar ist und installiert werden kann.
+Viele Smartphone-Nutzer sind jedoch einen anderen Weg gewohnt, um eine App zu installieren:
+Sie suchen danach in einem App Store wie dem <em>Google Play Store</em> unter Android oder <em>App Store</em> unter iOS.</p><p>In diesem Blogpost wollen wir Ihnen zeigen, wie Sie Ihre PWA auf einfachem Weg in den Google Play Store für Android bringen können, ohne eine echte Android-App mit Webview zu entwickeln, die lediglich eine Website aufruft.</p><blockquote>
+<p><strong>Zur Zeit gibt es noch keine Möglichkeit, PWAs in Apples App Store zu deployen.</strong></p></blockquote>
+<h2 id="trusted-web-activities-vs-webview-integration">Trusted Web Activities vs. Webview-Integration</h2>
+<p>Um PWAs als Android-App bereitzustellen, benötigen wir eine Art App-Wrapper, der schließlich die PWA aufruft und somit unsere Webanwendung darstellen kann.</p><p>In der Vergangenheit wurde dies oft durch Android-Apps umgesetzt, die lediglich einen sogenannten <a href="https://developer.android.com/reference/android/webkit/WebView"><em>WebView</em></a> integrieren.
+Hinter diesem Feature versteckt sich ein integrierter Webbrowser in der Android-App, der lediglich den Inhalt der Website darstellt.
+Dieser Weg funktioniert für eine Vielzahl von Websites, gerät jedoch an seine Grenzen, wenn es sich bei der Website um eine PWA handelt.
+Der Grund: In einem Webview funktionieren die essenziellen Service Worker nicht.
+Somit können wir Features wie die Offlinefähigkeit nicht einfach in die Anwendung integrieren.
+Weiterhin birgt ein Webview ein gewisses Sicherheitsrisiko, weil lediglich die URL den Inhalt der Anwendung bestimmt und keinerlei Überprüfung des tatsächlichen Contents stattfindet.
+Wird also beispielsweise eine Website <em>"gekapert"</em>, bekommt der Nutzer ggf. den Inhalt einer falschen Seite angezeigt.</p><p>Bei einer TWA hingegen wird die PWA lediglich so erweitert, dass sie als Android-App direkt deployt werden kann.
+Über einen Sicherheitsschlüssel kann verifiziert werden, dass die aufgerufene URL zur App passt.</p><h2 id="twas-im-detail">TWAs im Detail</h2>
+<p>Die Grundidee einer TWA ist schnell erklärt: Statt einer vollumfänglichen Android-App, die einen Browser implementiert und eine URL aufruft, wird bei einer TWA leidglich die PWA um eine App-Schicht erweitert, sodass sie im Google Play Store veröffentlicht werden kann.
+Es muss also auch kein eingebetteter Browser in der App integriert werden, sondern es wird auf den vorhandenen Google Chrome Browser zurückgegriffen.
+Voraussetzung hierfür ist, dass auf dem Android-Gerät die Version 72 oder höher von Google Chrome verfügbar ist.
+Beim Öffnen der PWA wird Chrome mit der hinterlegten URL geöffnet, und es werden sämtliche UI-Elemente des Browsers ausgeblendet.
+Im Prinzip passiert also genau das, was auch geschieht, wenn wir eine PWA über die Funktion <em>"Add To Homescreen"</em> auf Smartphone speichern, jedoch in Form einer App, die über den Google Play Store gefunden und installiert werden kann.
+Somit bleiben Features wie Push-Benachrichtigungen, Hintergrundsynchronisierungen, Autofill bei Eingabeformularen, Media Source Extensions oder die Sharing API vollumfänglich erhalten.
+Ein weiterer Vorteil einer solchen TWA ist, dass Session-Daten und der Cache im Google Chrome geteilt werden.
+Haben wir uns also beispielsweise bei unserer Web-Anwendung zuvor im Browser angemeldet, so belibt die Anmeldung in der Android-App (TWA) bestehen.</p><p>Die Bezeichnung "Trusted Web Activity" lässt bereits darauf schließen: TWAs sind <em>trusted</em>, also vertraulich.
+Durch eine spezielle Datei, die mit der Webanwendung ausgeliefert wird und die einen Fingerprint enthält, kann sichergestellt werden, dass die Anwendung vertrauenswürdig ist, und der Inhalt kann somit sicher geladen werden.</p><h2 id="eine-pwa-als-twa-in-den-android-store-bringen">Eine PWA als TWA in den Android Store bringen</h2>
+<p>Genug der Theorie -- wir wollen nun erfahren, wie wir eine PWA im Android Store als TWA bereitstellen können.</p><p>Dafür müssen wir folgende Schritte durchführen:</p><ul>
+<li>Einen Android Developer Account registieren</li>
+<li>Die Android-App in der Google Play Console erstellen</li>
+<li>Die App-Signatur erzeugen</li>
+<li>Den App-Signaturschlüssel in der PWA hinterlegen</li>
+<li>Die TWA mit der <em>Bubblewrap CLI</em> erzeugen</li>
+<li>Die signierte App bauen</li>
+<li>Die App über die Google Play Console veröffentlichen</li>
+</ul>
+<p>Wir wollen als Grundlage für dieses Beispiel die Angular-Anwendung <em>BookMonkey</em> aus dem Angular-Buch verwenden, die bereits als PWA vorliegt.
+Möchten Sie die Schritte selbst nachvollziehen, können Sie die Anwendung über GitHub herunterladen:</p><p><a href="https://github.com/book-monkey4/book-monkey4-pwa">https://github.com/book-monkey4/book-monkey4-pwa</a></p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span>git clone https://ng-buch.de/bm4-pwa.git</span></span></code></pre>
+<p>Die Online-Version der PWA können Sie unter der folgenden URL abrufen:</p><p><a href="https://bm4-pwa.angular-buch.com/">https://bm4-pwa.angular-buch.com/</a></p><p>Weiterhin benötigen Sie für die Erstellung der TWA folgende Voraussetzungen auf dem Entwicklungssystem:</p><ul>
+<li><a href="https://openjdk.java.net/install/">Java SDK 8.0</a></li>
+<li><a href="https://developer.android.com/studio">Android SDK (vorzugsweise Android Studio inkl. SDK)</a></li>
+<li><a href="https://nodejs.org">Node.js 10.0 oder höher</a></li>
+</ul>
+<h3 id="einen-android-developer-account-registrieren">Einen Android Developer Account registrieren</h3>
+<blockquote>
+<p>Sofern Sie bereits einen Account für die <em>Google Play Console</em> besitzen, können Sie diesen Schritt überspringen.</p></blockquote>
+<p>Um eine App im Google Play Store einzustellen, benötigen wir zunächst einen Account für die <em>Google Play Console</em>.
+Den Account können Sie über den folgenden Link registrieren:</p><p><a href="https://play.google.com/apps/publish/signup">https://play.google.com/apps/publish/signup</a></p><p>Bei der Registrierung wird eine einmalige Registrierungsgebühr in Höhe von 25 USD erhoben. Diese Gebühr gilt für sämtliche Apps, die Sie mit dem hinterlegten Google-Account registrieren wollen.</p><p><img src="images/blog/twa/play-register.png" alt="Google Play Console: Registrierung"></p><h3 id="die-android-app-in-der-google-play-console-erstellen">Die Android-App in der Google Play Console erstellen</h3>
+<p>Nach der Registierungs müssen wir uns in der <a href="https://play.google.com/apps/publish"><em>Google Play Console</em> einloggen</a>.
+Anschließend können wir über den Menüpunkt <em>"Alle Apps"</em> mit dem Button <em>"App erstellen"</em> eine neue Anwendung anlegen.
+Hier legen wir den Namen der Anwendung, die Standardsprache, den Anwendungstypen (App oder Spiel) sowie den Preis der Anwendung fest.
+Weiterhin müssen wir den Programmierrichtlinien für Entwickler sowie den Exportbestimmungen der USA zustimmen.</p><p><img src="images/blog/twa/play-create.png" alt="Google Play Console: Eine neue Anwendung erzeugen"></p><p>Danach gelangen wir zum Dashboard für die neue Android-App.
+Hier arbeiten wir uns im folgenden durch die Ersteinrichtung der App durch.
+Jeder abgeschlossene Punkt wird entsprechend in der Liste markiert.
+Alle Einstellungen finden sich auch im Nachhinein links im Menü wieder und können auch noch später angepasst werden.</p><p><img src="images/blog/twa/play-after-create.png" alt="Google Play Console: Dashboard - Ersteinrichtung"></p><ul>
+<li><strong>App-Zugriff</strong>: Hier hinterlegen Sie informationen, die darlegen, wie auf die App bei der Überprüfung vor der Freigabe im Google Play Store zugegriffen werden kann.
+Benötigen die Tester z. B. einen speziellen Account oder Standort oder ist die Anwendung frei zugänglich?</li>
+<li><strong>Anzeigen</strong>: An dieser Stelle geben Sie an, ob ihre App Werbung enthält oder nicht.</li>
+<li><strong>Einstufung des Inhalts</strong>: Sie werden zu einem Fragebogen zur Überprüfung der Altersfreigaben geleitet, den Sie ausfüllen müssen.
+Anschließend erhalten Sie eine Bewertung, die Ihnen die Alterseinstufung der Anwendung für verschiedene Länder angibt.</li>
+<li><strong>Zielgruppe</strong>: An dieser Stelle geben Sie an, welche Zielgruppe (Altersgruppe) von ihrer Anwendung adressiert wird und ob die Anwendung auch für Kinder interessant ist.
+Je nach Auswahl kann es sein, dass Sie zusätzlich eine Datenschutzerklärung hinterlegen müssen.</li>
+<li><strong>App-Kategorie auswählen und Kontaktdaten angeben</strong>: Hier gelangen Sie zu den <em>Play Store Einstellungen</em>.
+Sie legen hier die Kategorie der App fest in der sie später im Play Store auftauchen soll.
+Weiterhin können Sie Tags vergeben und Sie müssen Kontaktdaten für den Store-Eintrag hinterlegen.</li>
+<li><strong>Store-Eintrag einrichten</strong>: Dieser Punkt führt Sie zur Hauptkonfiguration des Eintrags für den Google Play Store.
+Sie müssen hier eine kurze sowie eine vollständige Beschreibung der Anwendung, eine App Icon und Screenshots der Anwendung hinterlegen.</li>
+</ul>
+<p>Haben wir alle Punkte für die Ersteinrichtung abgeschlossen, verschwindet der Abschnitt auf unserem Dashboard und wir können uns der Bereitstellung der App widmen.
+Dafür benötigen wir ein Release und eine App-Signatur.</p><h3 id="die-app-signatur-und-das-release-erzeugen">Die App-Signatur und das Release erzeugen</h3>
+<p>Nach der Ersteinrichtung gilt es unsere App im Play Store bereitzustellen.
+Befinden wir uns auf dem Dashboard, so wird uns eine Übersicht über verschiedene Möglichkeiten zur Veröffentlichung der Anwendung gezeigt.</p><p><img src="images/blog/twa/play-dashboard-release.png" alt="Google Play Console: Dashboard - App veröffentlichen"></p><p>Diese Wege repräsentieren die sogenannten <em>Tracks</em>.
+Ein solcher Track kann verschiedene Ausprägungen haben:</p><ul>
+<li><strong>Interner Test</strong>: Releases, die zum Test für einen bestimmten Personenkreis beispielsweise über einen Link bereitgestellt werden können</li>
+<li><strong>Geschlossener Test</strong>: Releases, die nur bestimmten Personen zum Download als Vorab-Release (Alpha Release) zur Verfügung stehen.</li>
+<li><strong>Offener Test</strong>: Releases, die für jeden Nutzer im Google Play Store bereitgestellt werden, aber als Vorab-Release (Beta Release) gekennzeichnet sind. Offene Tracks können auch auf eine bestimmte Anzahl von Nutzer begrenzt werden</li>
+<li><strong>Vorregistrierung</strong>: Releases, deren Store-Eintrag bereits vor Veröffentlichung der Anwendung erstellt werden soll. Nutzer können sich bereits registrieren und erhalten eine Benachrichtigung, sobald die Anwendung verfügbar ist.</li>
+<li><strong>Produktion</strong>: Releases, die für jeden Nutzer im Google Play Store bereitgestellt werden</li>
+</ul>
+<p>In unserem Szenario wollen wir unsere App direkt bis in den Google Play Store bringen, um zu verifizieren, dass diese auch tatsächlich von allen Nutzern gefunden und installiert werden kann.
+Hierfür nutzen wir den Track für den offenen Test und erstellen ein Beta-Release.
+Dafür klicken wir unter der Überschrift <em>"Beliebigen Nutzern die Registrierung für das Testen deiner App bei Google Play erlauben"</em> auf <em>"Aufgaben einblenden"</em>.
+Hier klicken wir zunächst auf <em>"Länder und Regionen auswählen"</em>.</p><p><img src="images/blog/twa/play-dashboard-open-track.png" alt="Google Play Console: Dashboard - Einen offenen Track anlegen"></p><p>Wir gelangen nun in das Untermenü zur Erstellung eines offenen Test Tracks und legen die Länder fest, in denen unsere Anwendung im Google Play Store verfügbar sein soll.
+Anschließend erstellen wir ein neues Release.</p><p>Im nächsten Schritt benötigen wir nun die App, die wir unter <em>"App Bundles und APKs"</em> hinterlegen müssen.
+Damit diese App jedoch erzeugt und verifiziert werden kann, erzeugen wir zunächst unter dem Abschnitt <em>App-Signatur von Google Play</em> über den Button <em>"Weiter"</em> eine neue App Signatur.</p><p><img src="images/blog/twa/play-beta-sign.png" alt="Google Play Console: Offenes Testrelease erstellen"></p><h3 id="den-app-signaturschlüssel-in-der-pwa-hinterlegen">Den App-Signaturschlüssel in der PWA hinterlegen</h3>
+<p>Wir verlassen zunächst wieder den Menüpunkt zur Erzeugung des Releases und gehen ins Menü <em>"Einrichten"</em> &gt; <em>"App-Signatur"</em>.
+Hier kopieren wir uns den Fingerabdruck des SHA-256-Zertifikats in die Zwischenablage.</p><p><img src="images/blog/twa/play-signature.png" alt="Google Play Console: Kopieren des App-Signaturschlüssels"></p><p>Dieser Fingerabdruck stellt später sicher, dass beim Aufruf der PWA durch unsere TWA verifiziert werden kann, dass die Anwendung <em>trusted</em> ist, also von Google verifiziert.</p><p>Um den Fingerabdruck aufspüren zu können, müssen wir diesen über die spezielle Datei <code>assetlinks.json</code> bereitstellen.
+Weiterhin muss die Datei und ihr Inhalt über die spezielle URL <code>https://my-app.com/.well-known/assetlinks.json</code> aufrufbar sein.</p><p>Dafür erzeugen wir in unserem Angular-Workspace ein neues Verzeichnis <code>.well-known</code> unter <code>src</code>.
+Darin legen wir die Datei <code>assetlinks.json</code> mit dem folgenden Inhalt an:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#E1E4E8">[</span></span>
+<span class="line"><span style="color:#E1E4E8">  {</span></span>
+<span class="line"><span style="color:#79B8FF">    "relation"</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">"delegate_permission/common.handle_all_urls"</span><span style="color:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#79B8FF">    "target"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">      "namespace"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"allfront"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      "package_name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"com.angular_buch.book_monkey4"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      "sha256_cert_fingerprints"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#9ECBFF">        "D1:63:25:CE...A4:FF:79:C0"</span></span>
+<span class="line"><span style="color:#E1E4E8">      ]</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">]</span></span></code></pre>
+<p>Als <code>package_name</code> legen wir die Anwendungs-ID fest, die im Google Play Store eindeutig sein muss und genau auf eine App zeigt.
+Die ID wird in der Regel aus einer Domain gebildet und rückwärts gelistet.
+Sie muss mindestens einen Punkt enthalten, Zeichen hinter einem Punkt dürfen nur Buchstaben sein, und die gesamte ID darf lediglich Alphanumerische Zeichen enthalten.
+Zeichen wie "<code>-</code>" sind nicht erlaubt.
+Alle Regeln zur Definition einer validen ID können Sie der <a href="https://developer.android.com/studio/build/application-id">Android Entwicklerdokumentstion</a> entnehmen.</p><p>Unter <code>sha256_cert_fingerprints</code> müssen wir außerdem den kopierten App-Signaturschlüssel eintragen.</p><p>Jetzt müssen wir der Angular CLI noch beibringen, dass der URL-Pfad <code>/.well-known/assetlinks.json</code> nicht durch den Angular-Router behandelt und umgeleitet werden soll, sondern dass sich dahinter ein statisches Asset verbrigt, das direkt über die URL aufrufbar sein soll.</p><p>Dafür bearbeiten wir die Datei <code>angular.json</code>: Im Abschnitt <code>build</code> &gt; <code>options</code> ergänzen wir den Eintrag <code>assets</code>.
+Dort geben wir an, dass alle Dateien unter <code>src/.well-known</code> über den relativen Pfad <code>/.well-known/</code> bereitgestellt werden sollen:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#6A737D">  // ...</span></span>
+<span class="line"><span style="color:#79B8FF">  "projects"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "book-monkey"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#6A737D">      // ...</span></span>
+<span class="line"><span style="color:#79B8FF">      "architect"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">        "build"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#6A737D">          // ...</span></span>
+<span class="line"><span style="color:#79B8FF">          "options"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#6A737D">            // ...</span></span>
+<span class="line"><span style="color:#79B8FF">            "assets"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#6A737D">              // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">              {</span></span>
+<span class="line"><span style="color:#79B8FF">                "glob"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"**/*"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">                "input"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"src/.well-known/"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">                "output"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/.well-known/"</span></span>
+<span class="line"><span style="color:#E1E4E8">              }</span></span>
+<span class="line"><span style="color:#6A737D">              // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">            ],</span></span>
+<span class="line"><span style="color:#6A737D">            // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">          },</span></span>
+<span class="line"><span style="color:#6A737D">          // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">        },</span></span>
+<span class="line"><span style="color:#6A737D">        // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">      },</span></span>
+<span class="line"><span style="color:#6A737D">      // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">    },</span></span>
+<span class="line"><span style="color:#6A737D">    // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#6A737D">  // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>Wir überprüfen das Ergebnis am Besten, indem wir einen Produktiv-Build ausführen und einen einfachen Webserver starten:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">ng</span><span style="color:#9ECBFF"> build</span><span style="color:#79B8FF"> --prod</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> dist/book-monkey</span></span>
+<span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> http-server</span></span></code></pre>
+<p>Rufen wir nun die URL <code>http://localhost:8080/.well-known/assetlinks.json</code> im Browser auf, sehen wir, dass unsere Datei <code>assetlinks.json</code> dargestellt wird:</p><p><img src="images/blog/twa/assetlinks-browser.png" alt="Test der Auslieferung der Datei assetlinks.json im Browser"></p><p>War der Test erfolgreich, können wir unsere PWA deployen.
+Wichtig ist, dass diese zwingend per <code>HTTPS</code> ausgeleifert werden muss.</p><blockquote>
+<p>Achtung: Nutzen Sie beispielsweise GitHub Pages zur Auslieferung Ihrer Anwendung, so müssen Sie vor dem Deployment im <code>dist</code>-Verzeichnis (<code>dist/book-monkey</code>) eine Datei <code>_config.yml</code> mit dem Inhalt <code>include: [".well-known"]</code> anlegen, da alle Verzeichnisse beginnend mit "<code>.</code>" per Default <a href="https://github.com/keybase/keybase-issues/issues/366#issuecomment-38749201">von GitHub Pages ignoriert werden</a>. Diesen Schritt integrieren Sie am besten in Ihre Deployment-Pipeline.</p></blockquote>
+<p>Überprüfen Sie nach dem Deployment am Besten noch einmal, ob Sie die URL <code>http://mydomain/.well-known/assetlinks.json</code> aufrufen können.
+In unserem Fall wäre das: <a href="https://bm4-pwa.angular-buch.com/.well-known/assetlinks.json"><code>https://bm4-pwa.angular-buch.com/.well-known/assetlinks.json</code></a>.</p><h2 id="die-twa-mit-der-bubblewrap-cli-erzeugen">Die TWA mit der Bubblewrap CLI erzeugen</h2>
+<p>Wir haben nun unsere PWA so vorbereitet, dass sie als TWA genutzt werden kann. Alle nötigen Vorbereitungen in der Google Play Console haben wir getroffen.
+Als nächstes wollen wir die Android-App erstellen, die unsere PWA als TWA aufruft und als eigenständige App kapselt.</p><p>Hierfür nutzen wir die <a href="https://www.npmjs.com/package/@bubblewrap/cli"><em>Bubblewrap CLI</em></a>:
+Wir können das Tool direkt als NPM-Paket über <code>npx</code> aufrufen und so die App erzeugen lassen.
+Der interaktive Wizard führt uns durch das Setup:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">mkdir</span><span style="color:#9ECBFF"> monkey4-pwa-twa-wrapper</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> monkey4-pwa-twa-wrapper</span></span>
+<span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> @bubblewrap/cli</span><span style="color:#9ECBFF"> init</span><span style="color:#79B8FF"> --manifest</span><span style="color:#9ECBFF"> https://bm4-pwa.angular-buch.com/manifest.json</span></span></code></pre>
+<p>Nutzen wir die Bubblewrap CLI zum ersten Mal, so werden wir in den ersten zwei Schritten nach den Verzeichnissen für das <a href="https://openjdk.java.net/">Java OpenJDK</a> und das <a href="https://developer.android.com/studio">AndroidSDK</a> gefragt.
+Hier geben wir die Pfade zu den entsprechenden Verzeichnissen an.
+Unter macOS lauten sie zum Beispiel:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Path to the JDK: /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Path to the Android SDK: /Users/my-user/Library/Android/sdk</span></span></code></pre>
+<blockquote>
+<p>Diese Angaben werden für spätere Installationen in der Datei <code>~/.llama-pack/llama-pack-config.json</code> gespeichert und können bei Bedarf angepasst werden.</p></blockquote>
+<p>Im nächsten Schritt liest die Bubblewrap CLI das Web App Manifest unserer PWA aus und stellt einige Fragen zu den Metadaten der App: Bezeichnung, hinterlegte Icons und Pfade.
+Diese Einstellungen werden in der Regel schon korrekt ausgelesen und müssen nicht manuell angepasst werden:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">init</span><span style="color:#9ECBFF"> Fetching</span><span style="color:#9ECBFF"> Manifest:</span><span style="color:#9ECBFF">  https://bm4-pwa.angular-buch.com/manifest.json</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Domain being opened in the TWA: bm4-pwa.angular-buch.com</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Name of the application: BookMonkey 4 PWA</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Name to be shown on the Android Launcher: BookMonkey</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Color to be used </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> the status bar: </span><span style="color:#6A737D">#DB2828</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Color to be used </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> the splash screen background: </span><span style="color:#6A737D">#FAFAFA</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Relative path to open the TWA: /</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> URL to an image that is at least 512x512px: https://bm4-pwa.angular-buch.com/assets/icons/icon-512x512.png</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> URL to an image that is at least 512x512px to be used when generating maskable icons undefined</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Include app shortcuts</span><span style="color:#F97583">?</span></span>
+<span class="line"><span style="color:#B392F0">  Yes</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Android Package Name (</span><span style="color:#B392F0">or</span><span style="color:#9ECBFF"> Application</span><span style="color:#9ECBFF"> ID</span><span style="color:#E1E4E8">): com.angular_buch.bm4_pwa.twa</span></span></code></pre>
+<p>In der nächsten Abfrage müssen wir den Schlüssel zur Signierung der App angeben.
+Haben wir hier noch keinen Schlüssel erzeugt, werden wir darauf hingewiesen und können einen neuen Schlüssel anlegen.
+Dafür müssen wir einige Infos zum Ersteller des Schlüssels hinterlegen.
+Außerdem müssen wir ein Passwort für den <em>Key Store</em> und eines für den einzelnen <em>Key</em> der Anwendung angeben.
+Dieses benötigen wir später beim Build und beim Signieren der App erneut.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Location of the Signing Key: ./android.keystore</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Key name: android</span></span>
+<span class="line"><span style="color:#79B8FF">...</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Signing Key could not be found at </span><span style="color:#9ECBFF">"./android.keystore"</span><span style="color:#E1E4E8">. Do you want to create one now</span><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Yes</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> First and Last names (</span><span style="color:#B392F0">eg:</span><span style="color:#9ECBFF"> John</span><span style="color:#9ECBFF"> Doe</span><span style="color:#E1E4E8">): John Doe</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Organizational Unit (</span><span style="color:#B392F0">eg:</span><span style="color:#9ECBFF"> Engineering</span><span style="color:#9ECBFF"> Dept</span><span style="color:#E1E4E8">): Engineering Dept</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Organization (</span><span style="color:#B392F0">eg:</span><span style="color:#9ECBFF"> Company</span><span style="color:#9ECBFF"> Name</span><span style="color:#E1E4E8">): My Company</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Country (</span><span style="color:#B392F0">2</span><span style="color:#9ECBFF"> letter</span><span style="color:#9ECBFF"> code</span><span style="color:#E1E4E8">): DE</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Password </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> the Key Store: [hidden]</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Password </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> the Key: [hidden]</span></span>
+<span class="line"><span style="color:#B392F0">keytool</span><span style="color:#9ECBFF"> Signing</span><span style="color:#9ECBFF"> Key</span><span style="color:#9ECBFF"> created</span><span style="color:#9ECBFF"> successfully</span></span>
+<span class="line"><span style="color:#B392F0">init</span></span>
+<span class="line"><span style="color:#B392F0">init</span><span style="color:#9ECBFF"> Project</span><span style="color:#9ECBFF"> generated</span><span style="color:#9ECBFF"> successfully.</span><span style="color:#9ECBFF"> Build</span><span style="color:#9ECBFF"> it</span><span style="color:#9ECBFF"> by</span><span style="color:#9ECBFF"> running</span><span style="color:#9ECBFF"> "@bubblewrap/cli build"</span></span></code></pre>
+<p>Im Ergebnis sollten wir folgende Dateistruktur erhalten:</p><p><img src="images/blog/twa/twa-bubblewrap.png" alt="Dateistruktur nach Erzeugung der TWA mithilfe der Bubblewrap CLI"></p><p>Prinzipiell sind wir damit auch schon fertig.
+Wir müssen nun noch die fertige Android-App (<code>*.apk</code>-Datei) erzeugen.</p><p>Das Ergebnis der TWA-Generierung können Sie auch in folgendem Repository nachvollziehen:</p><p><a href="https://github.com/book-monkey4/book-monkey4-pwa-twa-wrapper">https://github.com/book-monkey4/book-monkey4-pwa-twa-wrapper</a></p><h2 id="die-signierte-app-bauen">Die signierte App bauen</h2>
+<p>Wir können unsere signierte Android-App entwerder direkt mithilfe der Bubblewrap CLI bauen, oder wir nutzen hierfür Android Studio.</p><h3 id="mit-der-bublewrap-cli">Mit der Bublewrap CLI</h3>
+<p>Wir rufen das <code>build</code>-Kommando der Bubblewrap CLI auf.
+Hier müssen wir zunächst das von uns vergebene Passwort für den Key Store und anschließend das Passwort für den konkreten Key eingeben:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> @bubblewrap/cli</span><span style="color:#9ECBFF"> build</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> KeyStore password: </span><span style="color:#F97583">********</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Key password: </span><span style="color:#F97583">********</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Building</span><span style="color:#9ECBFF"> the</span><span style="color:#9ECBFF"> Android-App...</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Zip</span><span style="color:#9ECBFF"> Aligning...</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Checking</span><span style="color:#9ECBFF"> PWA</span><span style="color:#9ECBFF"> Quality</span><span style="color:#9ECBFF"> Criteria...</span></span>
+<span class="line"><span style="color:#B392F0">build</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Check</span><span style="color:#9ECBFF"> the</span><span style="color:#9ECBFF"> full</span><span style="color:#9ECBFF"> PageSpeed</span><span style="color:#9ECBFF"> Insights</span><span style="color:#9ECBFF"> report</span><span style="color:#9ECBFF"> at:</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> -</span><span style="color:#9ECBFF"> https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fbm4-pwa.angular-buch.com%2F</span></span>
+<span class="line"><span style="color:#B392F0">build</span></span>
+<span class="line"><span style="color:#B392F0">build</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Quality</span><span style="color:#9ECBFF"> Criteria</span><span style="color:#9ECBFF"> scores</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Lighthouse</span><span style="color:#9ECBFF"> Performance</span><span style="color:#9ECBFF"> score:</span><span style="color:#9ECBFF"> ...................</span><span style="color:#79B8FF"> 80</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Lighthouse</span><span style="color:#9ECBFF"> PWA</span><span style="color:#9ECBFF"> check:</span><span style="color:#9ECBFF"> ...........................</span><span style="color:#9ECBFF"> NO</span></span>
+<span class="line"><span style="color:#B392F0">build</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Web</span><span style="color:#9ECBFF"> Vitals</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Largest</span><span style="color:#9ECBFF"> Contentful</span><span style="color:#9ECBFF"> Paint</span><span style="color:#E1E4E8"> (LCP) .................. 3.7 s</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Maximum</span><span style="color:#9ECBFF"> Potential</span><span style="color:#9ECBFF"> First</span><span style="color:#9ECBFF"> Input</span><span style="color:#9ECBFF"> Delay</span><span style="color:#E1E4E8"> (Max </span><span style="color:#9ECBFF">FID</span><span style="color:#E1E4E8">) ... 391 ms</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Cumulative</span><span style="color:#9ECBFF"> Layout</span><span style="color:#9ECBFF"> Shift</span><span style="color:#E1E4E8"> (CLS) ................... 0.00</span></span>
+<span class="line"><span style="color:#B392F0">build</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Other</span><span style="color:#9ECBFF"> scores</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Lighthouse</span><span style="color:#9ECBFF"> Accessibility</span><span style="color:#9ECBFF"> score...................</span><span style="color:#79B8FF"> 67</span></span>
+<span class="line"><span style="color:#B392F0">build</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Summary</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Overall</span><span style="color:#9ECBFF"> result:</span><span style="color:#9ECBFF"> .................................</span><span style="color:#9ECBFF"> FAIL</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> WARNING</span><span style="color:#9ECBFF"> PWA</span><span style="color:#9ECBFF"> Quality</span><span style="color:#9ECBFF"> Criteria</span><span style="color:#9ECBFF"> check</span><span style="color:#9ECBFF"> failed.</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Signing...</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Signed</span><span style="color:#9ECBFF"> Android-App</span><span style="color:#9ECBFF"> generated</span><span style="color:#9ECBFF"> at</span><span style="color:#9ECBFF"> "./app-release-signed.apk"</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Digital</span><span style="color:#9ECBFF"> Asset</span><span style="color:#9ECBFF"> Links</span><span style="color:#9ECBFF"> file</span><span style="color:#9ECBFF"> generated</span><span style="color:#9ECBFF"> at</span><span style="color:#9ECBFF"> ./assetlinks.json</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Read</span><span style="color:#9ECBFF"> more</span><span style="color:#9ECBFF"> about</span><span style="color:#9ECBFF"> setting</span><span style="color:#9ECBFF"> up</span><span style="color:#9ECBFF"> Digital</span><span style="color:#9ECBFF"> Asset</span><span style="color:#9ECBFF"> Links</span><span style="color:#9ECBFF"> at</span><span style="color:#9ECBFF"> https://developers.google.com/web/android/trusted-web-activity/quick-start#creating-your-asset-link-file</span></span></code></pre>
+<p>Wenn wir keinen Fehler erhalten, sollte sich die fertige signierte App im Hauptverzeichnis befinden und <code>app-release-signed.apk</code> heißen.</p><p>Vereinzelt kann es dazu kommen, dass wir eine Fehlermeldung wie die folgende erhalten:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span>UnhandledPromiseRejectionWarning: Error: Error calling the PageSpeed Insights API: Error: Failed to run the PageSpeed Insight report</span></span></code></pre>
+<p>In diesem Fall schlägt die Analyse der App fehl, weil beispielsweise die Website gerade nicht erreichbar ist. Wir können den Build erneut aufrufen und das Flag <code>--skipPwaValidation</code> verwenden, um die Überprüfung der PWA zu überspringen.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> @bubblewrap/cli</span><span style="color:#9ECBFF"> build</span><span style="color:#79B8FF"> --skipPwaValidation</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> KeyStore password: </span><span style="color:#F97583">********</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> Key password: </span><span style="color:#F97583">********</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Building</span><span style="color:#9ECBFF"> the</span><span style="color:#9ECBFF"> Android-App...</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Zip</span><span style="color:#9ECBFF"> Aligning...</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Signing...</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Signed</span><span style="color:#9ECBFF"> Android-App</span><span style="color:#9ECBFF"> generated</span><span style="color:#9ECBFF"> at</span><span style="color:#9ECBFF"> "./app-release-signed.apk"</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Digital</span><span style="color:#9ECBFF"> Asset</span><span style="color:#9ECBFF"> Links</span><span style="color:#9ECBFF"> file</span><span style="color:#9ECBFF"> generated</span><span style="color:#9ECBFF"> at</span><span style="color:#9ECBFF"> ./assetlinks.json</span></span>
+<span class="line"><span style="color:#B392F0">build</span><span style="color:#9ECBFF"> Read</span><span style="color:#9ECBFF"> more</span><span style="color:#9ECBFF"> about</span><span style="color:#9ECBFF"> setting</span><span style="color:#9ECBFF"> up</span><span style="color:#9ECBFF"> Digital</span><span style="color:#9ECBFF"> Asset</span><span style="color:#9ECBFF"> Links</span><span style="color:#9ECBFF"> at</span><span style="color:#9ECBFF"> https://developers.google.com/web/android/trusted-web-activity/quick-start#creating-your-asset-link-file</span></span></code></pre>
+<p>Kommt es zu dem nachfolgenden Fehler, prüfen Sie bitte den Pfad unter <code>jdkPath</code> in der Datei <code>~/.llama-pack/llama-pack-config.json</code>.
+Dieser sollte auf das lokale Hauptverzeichnis des Java JDK 8 zeigen.
+Alternativ können Sie den Build mithilfe von Android Studio anstoßen.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">cli</span><span style="color:#9ECBFF"> ERROR</span><span style="color:#9ECBFF"> Command</span><span style="color:#9ECBFF"> failed:</span><span style="color:#9ECBFF"> ./gradlew</span><span style="color:#9ECBFF"> assembleRelease</span><span style="color:#79B8FF"> --stacktrace</span></span></code></pre>
+<h3 id="mithilfe-von-android-studio">Mithilfe von Android Studio</h3>
+<p>Bei dieser Variante öffnen wir zunächst das Projektverzeichnis in Android Studio.
+Nun warten wir ab, bis der automatische Gradle-Build nach dem Öffnen des Projekts durchgelaufen ist.
+Den Fortschritt können wir unten rechts in Android Studio betrachten.
+Anschließend klicken wür im Menü <em>"Build"</em> auf <em>"Generate Signed Bundle / APK"</em>.</p><p><img src="images/blog/twa/android-studio-generate-signed-apk.png" alt="Android Studio: Signierte APK erstellen"></p><p>Wir wählen hier den Punkt <em>"APK"</em> aus und klicken auf <em>"Next"</em>.</p><p><img src="images/blog/twa/android-studio-generate-signed-apk2.png" alt="Android Studio: Signierte APK erstellen"></p><p>Im nächsten Schritt wählen wir den erstellten Keystore (<code>android.keystore</code>) aus dem Projektverzeichnis aus und geben das festgelegte Passwort ein.
+Alternativ können wir auch einen neuen Keystore erstellen.
+Anschließend können wir aus dem Keystore den <em>"Key alias"</em> auswählen (<code>android</code>).
+Auch hier müssen wir das Passwort eingeben, das wir zuvor für den konkreten Key vergeben haben.
+Haben wir alle Angaben korrekt getätigt, gehen wir weiter mit <em>"Next"</em>.</p><p><img src="images/blog/twa/android-studio-generate-signed-apk3.png" alt="Android Studio: Signierte APK erstellen"></p><p>Im nächsten Schritt wählen wir als Build-Variante <em>release</em> aus und setzen die beiden Checkboxen bei <em>"V1 (Jar Signature)"</em> und <em>"V2 (Full APK Signature)"</em>.
+Anschließend können wir die Erzeugung mit <em>"Finish"</em> starten.</p><p><img src="images/blog/twa/android-studio-generate-signed-apk3.png" alt="Android Studio: Signierte APK erstellen"></p><p>Die erzeugte APK befindet sich nun unter <code>./app/release/app-release.apk</code>.</p><blockquote>
+<p>Kommt es beim Erzeugen der signierten APK zu einem Fehler, kann dies ggf. an einem defekten/falschen Keystore liegen. Versuchen Sie in diesem Fall, einen neuen Keystore während der vorherigen Schritte zu erzeugen.</p></blockquote>
+<h2 id="die-app-über-die-google-play-console-veröffentlichen">Die App über die Google Play Console veröffentlichen</h2>
+<p>Im letzten Schritt müssen wir unsere signierte und erzeugte Android-App noch bereitstellen und veröffentlichen.
+Dazu gehen wir in der Google Play Console in das Menü <em>"Test"</em> &gt; <em>"Offene Tests"</em> und öffnen unser zuvor bereits vorbereitetes Release im Abschnitt <em>"Releases</em>", welches im Status <em>"Entwurf"</em> ist durch Klick auf den Button <em>"Bearbeiten"</em>.</p><p>Im nächsten Schritt können wir nun die zuvor erzeugte APK-Datei hochladen.
+Weiterhin geben wir eine Versionsnummer und eine Beschreibung zum Release an.
+Haben wir alles ausgefüllt, klicken wir auf <em>"Überprüfen"</em>.</p><p>Jetzt haben wir es fast geschafft:
+Das Beta-Release wurde erstellt.
+Auf der nächsten Seite können wir die App nun veröffentlichen.</p><p><img src="images/blog/twa/play-beta-release.png" alt="Google Play Console: Das Beta-Release veröffentlichen"></p><p>Haben wir diesen Schritt erledigt, ändert sich unser Menü auf der linken Seite ein wenig, und wir können unter <em>"Übersicht"</em> den aktuellen Status zur Veröffentlichung der Android-App einsehen.
+Bis die App tatsächlich veröffentlicht und freigegeben wird, können ggf. ein paar Tage vergehen.</p><p><img src="images/blog/twa/play-release-overview.png" alt="Google Play Console: Übersicht mit Veröffentlichungsstatus"></p><p>Geschafft! Wir haben nun erfolgreich unsere Angular-PWA in eine Android-App integriert und sie im Google Play Store veröffentlicht.
+Dabei haben wir das Konzept der Trusted Web Activity (TWA) genutzt.
+Nun müssen wir nur noch auf die Freigabe warten, und wir können unsere App im Store finden und installieren.</p><p><strong>Viel Spaß wünschen
+Johannes, Danny und Ferdinand</strong></p></div><!----></analog-markdown><!----><div _ngcontent-ng-c2245548422="" class="edit-on-github"><a _ngcontent-ng-c2245548422="" rel="noopener noreferrer" href="https://github.com/d-koppenhagen/k9n.dev/edit/main/src/content/blog/2020-11-twa.md"> Auf GitHub bearbeiten </a></div><!----></section></div></article><!----></ng-component><!----></main><dk-contact _nghost-ng-c1148330124="" ngh="0"><footer _ngcontent-ng-c1148330124="" id="footer"><div _ngcontent-ng-c1148330124="" id="contact" class="inner"><h2 _ngcontent-ng-c1148330124="" class="major">Kontaktieren Sie mich</h2><p _ngcontent-ng-c1148330124=""> Haben Sie Fragen oder Anregungen? Nehmen Sie gern Kontakt mit mir auf! </p><ul _ngcontent-ng-c1148330124="" class="contact"><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="mailto:mail@k9n.dev">Mail: mail@k9n.dev</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen">GitHub: d-koppenhagen</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="bluesky" class="svg-inline--fa fa-bluesky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" rel="me" href="https://bsky.app/profile/k9n.dev"> Bluesky: k9n.dev </a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="mastodon" class="svg-inline--fa fa-mastodon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" rel="me" href="https://techhub.social/@k9n"> Mastodon: @k9n@techhub.social </a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://www.linkedin.com/in/d-koppenhagen/">LinkedIn: d-koppenhagen</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="xing" class="svg-inline--fa fa-xing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M162.7 210c-1.8 3.3-25.2 44.4-70.1 123.5-4.9 8.3-10.8 12.5-17.7 12.5H9.8c-7.7 0-12.1-7.5-8.5-14.4l69-121.3c.2 0 .2-.1 0-.3l-43.9-75.6c-4.3-7.8.3-14.1 8.5-14.1H100c7.3 0 13.3 4.1 18 12.2l44.7 77.5zM382.6 46.1l-144 253v.3L330.2 466c3.9 7.1.2 14.1-8.5 14.1h-65.2c-7.6 0-13.6-4-18-12.2l-92.4-168.5c3.3-5.8 51.5-90.8 144.8-255.2 4.6-8.1 10.4-12.2 17.5-12.2h65.7c8 0 12.3 6.7 8.5 14.1z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://www.xing.com/profile/Danny_Koppenhagen">Xing: Danny_Koppenhagen</a></li></ul><ul _ngcontent-ng-c1148330124="" class="copyright"><li _ngcontent-ng-c1148330124="">© 2023 by Danny Koppenhagen</li><li _ngcontent-ng-c1148330124="">Design: <a _ngcontent-ng-c1148330124="" href="https://html5up.net">HTML5 UP</a></li><li _ngcontent-ng-c1148330124=""> Vorschläge? Feedback? Bugs? <a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen/k9n.dev/issues"> Stell ein Issue ein</a>, <a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen/k9n.dev/pulls">sende mir einen PR</a> oder <a _ngcontent-ng-c1148330124="" routerlink="/contact" href="/contact" jsaction="click:;">kontaktiere mich</a></li></ul></div></footer></dk-contact><!----></dk-root>
+    <script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["keydown","click"],["focus","blur"]);</script>
+  
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"7":"t0","8":"t1","9":"t2"},"c":{"7":[{"i":"t0","r":1}],"8":[],"9":[{"i":"t2","r":1}]}},{"t":{"5":"t27"},"c":{"5":[{"i":"t27","r":1,"x":2}]}},{"c":{"0":[]}},{"t":{"0":"t18"},"c":{"0":[{"i":"t18","r":1,"t":{"5":"t19","6":"t20","7":"t25","8":"t26","11":"t28","12":"t29"},"c":{"5":[{"i":"t19","r":1}],"6":[{"i":"t20","r":1,"t":{"2":"t21","7":"t22","8":"t23"},"c":{"2":[{"i":"t21","r":1}],"7":[{"i":"t22","r":1,"x":7}],"8":[{"i":"t23","r":1,"t":{"3":"t24"},"c":{"3":[{"i":"t24","r":1}]}}]}}],"7":[],"8":[{"i":"t26","r":1}],"11":[],"12":[{"i":"t29","r":1}]}}]}},{"c":{"4":[{"i":"c2245548422","r":1}],"6":[]},"t":{"6":"t16"}}]}</script></body></html>

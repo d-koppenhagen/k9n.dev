@@ -1,0 +1,1369 @@
+<!DOCTYPE html><html lang="de"><head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css" id="fa-auto-css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}</style><link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Apple PWA Support -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-512x512.png">
+    <link href="icons/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Basic Site Information -->
+    <title>k9n.dev | My Development Setup</title>
+    
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Danny Koppenhagen">
+
+    <!-- Twitter Card -->
+    
+    
+    
+    
+    
+
+    <!-- Open Graph Profile -->
+    
+    
+    
+    
+    <meta property="profile:first_name" content="Danny">
+    <meta property="profile:last_name" content="Koppenhagen">
+    <meta property="profile:gender" content="male">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#e7e7e7">
+    <script type="module" crossorigin="" src="/assets/index-DPqAJY-c.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DzfkAIf7.css">
+  <style>.menu-dark[_ngcontent-ng-c2099545970] {
+  filter: alpha(opacity=90);
+}
+.menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970] {
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.9;
+  margin: 0px 1px;
+}
+.menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970]:hover, .menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970]:focus {
+  background-color: rgb(67.1351351351, 71.5135135135, 94.8648648649);
+  box-shadow: inset 0 0 0 2px #5e7959;
+}
+.menu-dark[_ngcontent-ng-c2099545970]:focus    > button[_ngcontent-ng-c2099545970] {
+  box-shadow: inset 0 0 0 2px #ada789;
+}
+
+@media screen and (max-width: 480px) {
+  .hidden-small[_ngcontent-ng-c2099545970] {
+    visibility: hidden;
+  }
+}</style><style>.header-title[_ngcontent-ng-c2421498523] {
+  background-image: url("/images/bg-triangles.jpg");
+  background-size: cover;
+  font-size: 5em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.2901960784);
+}
+
+.sub-header-title[_ngcontent-ng-c2421498523] {
+  color: #2e3141;
+  font-size: 1.6em !important;
+  margin-bottom: 0.5em;
+  line-height: 1.3 !important;
+}
+
+.sub-header[_ngcontent-ng-c2421498523] {
+  color: #2e3141;
+  font-size: 1.2em;
+}
+
+#banner[_ngcontent-ng-c2421498523] {
+  background-image: url("/images/dk-header.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-color: #fdfdfd;
+  padding: 9em 0 12em 0;
+  animation: _ngcontent-ng-c2421498523_headerFadeIn 3s;
+}
+
+@keyframes _ngcontent-ng-c2421498523_headerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#logo[_ngcontent-ng-c2421498523] {
+  position: absolute;
+  top: 5px;
+}
+#logo[_ngcontent-ng-c2421498523]   img[_ngcontent-ng-c2421498523] {
+  width: 70px;
+  animation: _ngcontent-ng-c2421498523_move-to-top 1s ease, _ngcontent-ng-c2421498523_rotate 4s ease 1;
+}
+
+#logo[_ngcontent-ng-c2421498523]:focus, 
+h1[_ngcontent-ng-c2421498523]:focus {
+  outline: 1px solid rgba(185, 167, 167, 0.4);
+}
+
+@keyframes _ngcontent-ng-c2421498523_rotate {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+@keyframes _ngcontent-ng-c2421498523_move-to-top {
+  0% {
+    top: 100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  #banner[_ngcontent-ng-c2421498523] {
+    background-position: right -200px top;
+  }
+}
+@media screen and (max-width: 980px) {
+  #banner[_ngcontent-ng-c2421498523] {
+    background-size: contain;
+    padding: 6em 0 10em 0;
+    background-position: right -200px top;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 736px) {
+  .sub-header[_ngcontent-ng-c2421498523] {
+    font-size: 1em !important;
+    padding-right: 110px;
+  }
+  #banner[_ngcontent-ng-c2421498523] {
+    padding: 6em 0 5em 0;
+  }
+}
+@media screen and (max-width: 620px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 3.5em;
+    padding-right: 40vw;
+  }
+  #banner[_ngcontent-ng-c2421498523] {
+    background-size: cover;
+    background-position: right -180px top;
+  }
+}
+@media screen and (max-width: 560px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 3em;
+    padding-right: 50vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    opacity: 0.7;
+    font-size: 2.5em;
+    padding-right: 50vw;
+  }
+}</style><style>@media screen and (min-width: 736px) {
+  ul.contact[_ngcontent-ng-c1148330124] {
+    columns: 2;
+    width: 100% !important;
+  }
+}</style><style>.wrapper[_ngcontent-ng-c2245548422] {
+  margin-top: 0;
+}
+
+h1[_ngcontent-ng-c2245548422] {
+  font-size: 1.4em;
+}
+
+.extra-info[_ngcontent-ng-c2245548422] {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.actions[_ngcontent-ng-c2245548422] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.published-at[_ngcontent-ng-c2245548422], 
+.external-links[_ngcontent-ng-c2245548422], 
+.edit-on-github[_ngcontent-ng-c2245548422] {
+  margin: 30px 0;
+}
+
+.published-at[_ngcontent-ng-c2245548422] {
+  height: 50px;
+}
+
+.published-at[_ngcontent-ng-c2245548422] {
+  display: flex;
+  align-items: center;
+  line-height: 1.2em;
+}
+.published-at[_ngcontent-ng-c2245548422]   .published-at-link[_ngcontent-ng-c2245548422] {
+  text-decoration: none;
+  border: none;
+  min-width: 120px;
+}
+.published-at[_ngcontent-ng-c2245548422]   .published-at-link[_ngcontent-ng-c2245548422]   .published-at-logo[_ngcontent-ng-c2245548422] {
+  padding-right: 20px;
+  max-height: 60px;
+}
+
+.external-article[_ngcontent-ng-c2245548422] {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.extra-section[_ngcontent-ng-c2245548422]   .actions[_ngcontent-ng-c2245548422] {
+  padding-bottom: 2rem;
+}
+
+span.image[_ngcontent-ng-c2245548422]    > img.thumbnail[_ngcontent-ng-c2245548422] {
+  max-width: 80px;
+}
+
+@media screen and (max-width: 560px) {
+  .blog-footer[_ngcontent-ng-c2245548422] {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: #2e3141;
+    opacity: 0.9;
+    z-index: 1;
+    padding: 0 35px;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > h2[_ngcontent-ng-c2245548422], 
+   .blog-footer[_ngcontent-ng-c2245548422]   h3[_ngcontent-ng-c2245548422] {
+    display: none;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > ul[_ngcontent-ng-c2245548422] {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > ul[_ngcontent-ng-c2245548422]    > li[_ngcontent-ng-c2245548422] {
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .extra-info[_ngcontent-ng-c2245548422] {
+    display: block;
+  }
+}
+@media screen and (max-width: 360px) {
+  .blog-footer[_ngcontent-ng-c2245548422] {
+    padding: 0 24px;
+  }
+}
+.blog-header[_ngcontent-ng-c2245548422]   img[_ngcontent-ng-c2245548422] {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 1ch;
+  overflow: hidden;
+  box-shadow: 0 3px 2px hsla(0, 0%, 0%, 0.02), 0 7px 5px hsla(0, 0%, 0%, 0.03), 0 13px 10px hsla(0, 0%, 0%, 0.04), 0 22px 18px hsla(0, 0%, 0%, 0.05), 0 42px 33px hsla(0, 0%, 0%, 0.06), 0 100px 80px hsla(0, 0%, 0%, 0.07);
+  margin-bottom: 1rem;
+}</style><meta name="description" content="In this article I will present you what tools I am using during my day-to-day development. Also I will show you a list of extensions and their purpose that help me (and probably you too!) to be more productive."><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@d_koppenhagen"><meta name="twitter:creator" content="@d_koppenhagen"><meta name="twitter:title" content="My Development Setup"><meta name="twitter:description" content="In this article I will present you what tools I am using during my day-to-day development. Also I will show you a list of extensions and their purpose that help me (and probably you too!) to be more productive."><meta name="twitter:image" content="https://k9n.dev/images/blog/dev-setup/dev-setup-header.jpg"><meta property="og:title" content="My Development Setup"><meta property="og:description" content="In this article I will present you what tools I am using during my day-to-day development. Also I will show you a list of extensions and their purpose that help me (and probably you too!) to be more productive."><meta name="og:image" content="https://k9n.dev/images/blog/dev-setup/dev-setup-header.jpg"><meta name="og:url" content="https://k9n.dev/blog/2020-08-my-development-setup"></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-HY3CPEEH1Z"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HY3CPEEH1Z');
+      </script>
+  <body id="page-wrapper" class="mat-typography"><!--nghm-->
+    <!-- Angular -->
+    <dk-root ng-version="21.0.0" ngh="4" ng-server-context="ssr-analog"><dk-navbar _nghost-ng-c2099545970="" ngh="0"><nav _ngcontent-ng-c2099545970="" id="navigation" class="menu-dark" jsaction="keydown:;"><button _ngcontent-ng-c2099545970="" role="button" aria-label="Menü öffnen" aria-controls="menu" class="burger-menu" aria-expanded="false" jsaction="click:;"><fa-icon _ngcontent-ng-c2099545970="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg></fa-icon></button></nav></dk-navbar><dk-header _nghost-ng-c2421498523="" ngh="1"><header _ngcontent-ng-c2421498523="" id="banner"><div _ngcontent-ng-c2421498523="" class="inner"><a _ngcontent-ng-c2421498523="" routerlink="/" aria-label="Zur Startseite" title="Startseite" id="logo" href="/" jsaction="click:;"><img _ngcontent-ng-c2421498523="" src="images/logo_header.png" alt="Logo"></a><h1 _ngcontent-ng-c2421498523="" aria-label="k9n.dev" class="header-title" jsaction="focus:;blur:;"><span _ngcontent-ng-c2421498523="">k</span><span _ngcontent-ng-c2421498523="" class="headline-expanded">9</span><!----><!----><span _ngcontent-ng-c2421498523="">n.dev</span><!----></h1><p _ngcontent-ng-c2421498523="" class="sub-header-title">Danny Koppenhagen</p><p _ngcontent-ng-c2421498523="" class="sub-header">Entwickler, IT-Berater, Buchautor</p></div></header></dk-header><main><router-outlet></router-outlet><ng-component _nghost-ng-c2245548422="" ngh="3"><article _ngcontent-ng-c2245548422="" class="wrapper alt" lang="en"><div _ngcontent-ng-c2245548422="" class="inner"><h1 _ngcontent-ng-c2245548422="">My Development Setup</h1><section _ngcontent-ng-c2245548422="" class="blog-header"><img _ngcontent-ng-c2245548422="" alt="" class="adaptive-glass" src="images/blog/dev-setup/dev-setup-header.jpg"><!----></section><section _ngcontent-ng-c2245548422="" class="extra-section"><div _ngcontent-ng-c2245548422="" class="extra-info"><span _ngcontent-ng-c2245548422=""><time _ngcontent-ng-c2245548422="" datetime="2001-05-15 19:00">Jul 17, 2022</time></span><!----><p _ngcontent-ng-c2245548422="" class="sub-heading">Stichwörter</p></div><div _ngcontent-ng-c2245548422="" class="actions"><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular" jsaction="click:;"> Angular </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Vue.js" jsaction="click:;"> Vue.js </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Console" jsaction="click:;"> Console </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Development" jsaction="click:;"> Development </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Setup" jsaction="click:;"> Setup </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: VSCode" jsaction="click:;"> VSCode </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Visual Studio Code" jsaction="click:;"> Visual Studio Code </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Google Chrome" jsaction="click:;"> Google Chrome </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Extension" jsaction="click:;"> Extension </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: macOS" jsaction="click:;"> macOS </button></span><!----></div><!----></section><!----><section _ngcontent-ng-c2245548422="" class="external-links"><a _ngcontent-ng-c2245548422="" href="https://dev.to/dkoppenhagen/my-development-setup-1ne2" hreflang="en">Dev.to</a><!----><!----><!----></section><!----><!----><section _ngcontent-ng-c2245548422="" class="blog-content"><analog-markdown _ngcontent-ng-c2245548422="" classes="markdown-content" lang="en" ngh="2" jsaction="click:;"><div class="markdown-content"><p>In the following article I will present you what tools I am using during my day-to-day development workflow.
+Also, I will show you a list of extensions and their purpose that will help me and probably you too being more productive.</p><h2 id="introduction-1">Introduction</h2>
+<p>As a developer I always give my best to be productive, to write good and well documented source code and to share my knowledge.
+For all this, I use great tools and extensions that will help me to get the most of it and working faster and cleaner.
+Those tools and extensions help me during my everyday life as a developer for:</p><ul>
+<li>Development of Angular, Vue.js apps,</li>
+<li>sharing knowledge with recordings, GIFs, screenshots, code snippets etc.,</li>
+<li>writing good documentation, and</li>
+<li>being more productive in general.</li>
+</ul>
+<p>Both at work and in my free time I am working on an Apple MacBook Pro.
+But most of the tools and software listed here is available for Windows, macOS and Linux distributions.</p><h2 id="software">Software</h2>
+<p>Let's get started with some basic software that I use.</p><h3 id="iterm2"><a href="https://iterm2.com">iTerm2</a></h3>
+<p>The default Terminal app for macOS fulfills its purpose but for being more productive I can recommend the terminal application <strong><a href="https://iterm2.com">iTerm2</a></strong>.</p><p>I am using iTerm2 since a long time and it's a great tool with lots of configuration options.
+You can create tabs, use profiles and customize styles and layouts.</p><p><img src="images/blog/dev-setup/iterm2.png" alt="Screenshot: iTerm2"></p><h3 id="cakebrew--macos-only"><a href="https://www.cakebrew.com">Cakebrew</a> – macOS only</h3>
+<p>If you are on a Mac, you probably know <strong><a href="https://brew.sh">Homebrew</a></strong> – the package manager for macOS.
+If you don't know Homebrew: You should definitely check it out.
+Personally I prefer to install most of my Software via Homebrew as I can easily manage updates later without having to manually download the packages.
+However, since I don't remember all Homebrew commands all the time and to get an overview of the installed packages, I use a Homebrew GUI called <strong>CakeBrew</strong>.
+This lets me easily update and manage my installed Homebrew packages.</p><p><img src="images/blog/dev-setup/cakebrew.png" alt="Screenshot: CakeBrew"></p><h3 id="nvm"><a href="https://github.com/nvm-sh/nvm">NVM</a></h3>
+<p>Working on multiple projects requires sometimes different environments.
+As a web developer Node.js is essential and should always be up-to-date but sometimes you need to use different versions of Node.js and NPM for different projects.
+NVM (Node Version Manager) let's you easily install and switch between multiple Node.js Versions.
+My recommendation is also to check-in the <code>.nvmrc</code> file in every project to help other team members to use the right version of Node.js automatically.</p><h3 id="fork"><a href="https://git-fork.com">Fork</a></h3>
+<p>As a developer, version control with <a href="https://git-scm.com">Git</a> is essential for your development workflow.
+Personally I do all of the basic operations via the command line, like creating commits, adding files to the staging area, pulling and pushing.
+However, there are some things where I prefer to use a GUI for assistance:</p><ul>
+<li>graphical overview of commits and branches (history)</li>
+<li>interactive rebase</li>
+<li>managing multiple remote repositories</li>
+</ul>
+<p><strong>Fork</strong> is a very nice, clean and powerful Git GUI that helps you to control Git in an easy and interactive way.</p><p><img src="images/blog/dev-setup/fork.png" alt="Screenshot: Fork"></p><h3 id="visual-studio-code"><a href="https://code.visualstudio.com">Visual Studio Code</a></h3>
+<p>In the last years, Microsoft has improved its free IDE <strong>Visual Studio Code</strong> a lot, and with every frequent release it gets even more powerful.
+One of the things that makes <strong>VSCode</strong> such a great IDE is the wide range of available extensions and plugins.
+VSCode is a very universal and adoptable IDE which has great support and tools for lots of programming languages.
+So it doesn't matter if you develop a web application, a mobile app using e.g. Flutter, a C# or a Python app: You can use VSCode for all of that and you don't need to get start using a new specific IDE for each and every specific language.</p><p><img src="images/blog/dev-setup/vscode.png" alt="Screenshot: VSCode"></p><p>Later in this article, I will present you a list of my favorite extensions for VSCode.</p><h3 id="chrome"><a href="https://google.com/chrome">Chrome</a></h3>
+<p>As a web developer, a modern browser like <strong>Google Chrome</strong> is essential.
+In my opinion the developer and debugging tools are more mature compared to <a href="https://www.mozilla.org/firefox">Firefox</a>.
+Chrome is also very up-to-date in terms of the latest JavaScript features and it has a wide range of extensions you can install that will help you to even be more productive developing web applications.</p><p><img src="images/blog/dev-setup/chrome.png" alt="Screenshot: Google Chrome"></p><p>A list of my favorite extensions for Google Chrome can be found further down in this article.</p><h3 id="insomnia"><a href="https://insomnia.rest">Insomnia</a></h3>
+<p>Insomnia is a great and simple tools that's very easy to use when you want to interact with REST or <a href="https://graphql.org">GraphQL</a> endpoints. It has a very simple UI but it's powerful nonetheless.
+You can call endpoints, check their responses and also create batch requests or save your requests for using them later again.
+I personally prefer Insomnia over <a href="https://www.postman.com">Postman</a> which I used before and which is also very powerful.
+However, in my opinion the UI of Postman got a bit confusing during the last years by introducing new features.</p><p><img src="images/blog/dev-setup/insomnia.png" alt="Screenshot: Insomnia"></p><h3 id="drawio"><a href="https://draw.io">draw.io</a></h3>
+<p>From time to time as a developer you need to illustrate things and flows.
+For this, I mostly use <strong>draw.io</strong>. It's available as a web application but also as an installable desktop version.
+Draw.io provides a lot of basic icons and vector graphics for network illustrations, UML, diagrams, engineering icons for circuits and much more.</p><p><img src="images/blog/dev-setup/drawio.png" alt="Screenshot: draw.io"></p><h3 id="recordit"><a href="https://recordit.co">RecordIt</a></h3>
+<p>When I develop extensions for VSCode or other tools I always give my best to present users how to use these tools.
+The best way to present things is in a visual way as a screenshot or a GIF / video screencast.
+This supplements the textual description and thus, can be processed more easily by users.
+<strong>RecordIt</strong> lets you record your screen and create small screencasts that can be shared via a simple URL as a video or GIF.</p><p><img src="images/blog/dev-setup/recordit.png" alt="Screenshot: RecordIt"></p><h3 id="keycastr"><a href="https://github.com/keycastr/keycastr">KeyCastr</a></h3>
+<p>Recording screencasts can be supplemented by displaying the keys you are pressing during the recording.
+This is a great way to present keyboard shortcuts without having to manually explain which keys you're using.
+For that purpose I use the tool <strong>KeyCastr</strong>.</p><p><img src="images/blog/dev-setup/keycastr.png" alt="Screenshot: KeyCastr"></p><h2 id="visual-studio-code-extensions">Visual Studio Code Extensions</h2>
+<p>Since <a href="https://code.visualstudio.com/updates/v1_48">Visual Studio Code Version 1.48.0</a> the Feature <strong>Settings Sync</strong> became stable and available for everyone.
+This feature allows you to sync your settings between different installations of VSCode using your Microsoft or GitHub account.
+When you've installed VSCode on multiple machines and you always want to have the instances in sync, you should definitely <a href="https://code.visualstudio.com/docs/editor/settings-sync">set up this feature</a>.</p><p>The next part is all about the VSCode extensions I am using so let's walk quickly over the plugins I've installed on my VSCode instances:</p><h3 id="appearance">Appearance</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><del><img src="https://coenraads.gallerycdn.vsassets.io/extensions/coenraads/bracket-pair-colorizer-2/0.2.0/1594062809176/Microsoft.VisualStudio.Services.Icons.Default" alt=""></del></td>
+<td><del><strong><a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2">Bracket Pair Colorizer 2</a></strong><br>This tool will colorize opening and closing brackets in different colors, so you get a better overview in your code.</del> <strong>Note:</strong> Visual Studio Code now  <a href="https://code.visualstudio.com/blogs/2021/09/29/bracket-pair-colorization">includes native support for bracket pair colorization</a> which is way faster than using the extension.</td>
+</tr>
+<tr>
+<td><img src="https://naumovs.gallerycdn.vsassets.io/extensions/naumovs/color-highlight/2.3.0/1499789961213/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight">Color Highlight</a></strong><br>After installing this extension it will highlight all valid web color values with their appropriate color so that you can directly see the color.</td>
+</tr>
+<tr>
+<td><img src="https://kisstkondoros.gallerycdn.vsassets.io/extensions/kisstkondoros/vscode-gutter-preview/0.26.2/1591049586324/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview">Image Preview</a></strong><br>After installing this plugin, you will see a little preview image right next to your code line number when a source code line contains a valid image file path.</td>
+</tr>
+<tr>
+<td><img src="https://byi8220.gallerycdn.vsassets.io/extensions/byi8220/indented-block-highlighting/1.0.7/1524962452244/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=byi8220.indented-block-highlighting">Indented Block Highlighting</a></strong><br>This extensions highlights the intented area that contains the cursor.</td>
+</tr>
+<tr>
+<td><img src="https://oderwat.gallerycdn.vsassets.io/extensions/oderwat/indent-rainbow/7.4.0/1552964364054/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow">Indent Rainbow</a></strong><br>This plugin colorizes the different indentation levels. This is especially helpful when writing YAML files or Python applications where the indentations play an important role for the code semantics.</td>
+</tr>
+<tr>
+<td><img src="https://emilast.gallerycdn.vsassets.io/extensions/emilast/logfilehighlighter/2.9.0/1594820309342/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=emilast.LogFileHighlighter">Log File Highlighter</a></strong><br>If you ever have to investigate a bunch of log files you will love this plugin. It highlights log information like the severity or timestamps so it will be easier for you to inspect them.</td>
+</tr>
+<tr>
+<td><img src="https://johnpapa.gallerycdn.vsassets.io/extensions/johnpapa/vscode-peacock/3.8.0/1597093468460/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock">Peacock</a></strong><br>Peacock is great when you are working with multiple VSCode windows at the same time. You can simply colorize them to quickly find out which project is currently open.</td>
+</tr>
+<tr>
+<td><img src="https://mechatroner.gallerycdn.vsassets.io/extensions/mechatroner/rainbow-csv/1.7.1/1596509943679/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv">Rainbow CSV</a></strong><br>This extension will colorize each column in a CSV file in a different color, so you can better read the file contents.</td>
+</tr>
+<tr>
+<td><img src="https://wayou.gallerycdn.vsassets.io/extensions/wayou/vscode-todo-highlight/1.0.4/1532254554587/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight">TODO Highlight</a></strong><br>This extension will highlight <code>TODO</code>, <code>FIXME</code> and some other annotations within comments in your code.</td>
+</tr>
+</tbody></table>
+<!--
+|![]()|**[]()**<br/>|
+-->
+
+<h3 id="docs">Docs</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://asciidoctor.gallerycdn.vsassets.io/extensions/asciidoctor/asciidoctor-vscode/2.8.3/1594560690791/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode">AsciiDoc</a></strong><br>The AsciiDoc Plugin gives you syntax highlighting, a preview and snippets for the <a href="https://asciidoc.org">AsciiDoc</a> format.</td>
+</tr>
+<tr>
+<td><img src="https://d-koppenhagen.gallerycdn.vsassets.io/extensions/d-koppenhagen/vscode-code-review/1.11.0/1598341798822/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=d-koppenhagen.vscode-code-review">Code Review</a></strong><br>This is an extension I wrote by myself. It allows you to create expert reviews / code reviews for a workspace that can be exported as a formatted HTML report or importable CSV/JSON file.<br>This extension is pretty helpful if you are doing for example one-time code reviews for customers or probably students but you don't have direct access to a Gitlab or GitHub repository where you can directly add comments in a merge/pull request.</td>
+</tr>
+<tr>
+<td><img src="https://bierner.gallerycdn.vsassets.io/extensions/bierner/emojisense/0.7.0/1588199773410/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=bierner.emojisense">emojisense</a></strong><br>I personally like using emojis and I use them in <code>README.md</code> files for my open source projects at GitHub. However, one thing I always have to look up are the <a href="https://gist.github.com/rxaviers/7360908">emjoykey</a> for the supported GitHub emojis. With this extension I have an autocompletion and I can search for them.</td>
+</tr>
+<tr>
+<td><img src="https://d-koppenhagen.gallerycdn.vsassets.io/extensions/d-koppenhagen/file-tree-to-text-generator/1.2.1/1568782852679/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=d-koppenhagen.file-tree-to-text-generator">File Tree to Text Generator</a></strong><br>An extension I created by myself: It lets you generate file / directory trees for Markdown, LaTeX, ASCII or even a custom format right from your VSCode file explorer.</td>
+</tr>
+<tr>
+<td><img src="https://bierner.gallerycdn.vsassets.io/extensions/bierner/markdown-mermaid/1.8.1/1597947461090/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid">Markdown Preview Mermaid support</a></strong><br>Have you ever visualized things in your <code>README.md</code> file? Thanks to <a href="https://mermaid-js.github.io/mermaid">Mermaid.js</a> you can easily create beautiful flowcharts, sequence diagrams and more. This plugin enables the preview support in VSCode for mermaid diagrams embedded in your markdown files.</td>
+</tr>
+<tr>
+<td><img src="https://yzhang.gallerycdn.vsassets.io/extensions/yzhang/markdown-all-in-one/3.2.0/1595650433498/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One</a></strong><br>This extension enables some great helpful features when writing Markdown files such as table of contents generation, auto-formatting the document and it gives you a great autocompletion feature.</td>
+</tr>
+</tbody></table>
+<!--
+|![]()|**[]()**<br/>|
+-->
+
+<h3 id="graphics">Graphics</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://hediet.gallerycdn.vsassets.io/extensions/hediet/vscode-drawio/0.7.2/1593456864928/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio">Draw.io Integration</a></strong><br>This extension integrates the <a href="https://draw.io">draw.io</a> editor in VSCode. You can directly edit draw.io associated files.</td>
+</tr>
+<tr>
+<td><img src="https://jock.gallerycdn.vsassets.io/extensions/jock/svg/1.3.8/1596248511766/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=jock.svg">SVG</a></strong><br>This extension will give you SVG code highlight and preview support. You can even export the SVG directly from the preview as a <code>*.png</code> graphic.</td>
+</tr>
+</tbody></table>
+<!--
+|![]()|**[]()**<br/>|
+-->
+
+<h3 id="javascript--typescript">JavaScript / TypeScript</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://dbaeumer.gallerycdn.vsassets.io/extensions/dbaeumer/vscode-eslint/2.1.8/1594861497267/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">ESLint</a></strong><br>This extensions detects your ESLint configuration for code conventions and displays the violations. Furthermore, it offers you to quick fix detected violations against some rules.</td>
+</tr>
+<tr>
+<td><img src="https://wix.gallerycdn.vsassets.io/extensions/wix/vscode-import-cost/2.12.0/1543514109720/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost">Import Cost</a></strong><br>With this plugin installed, projects using webpack will be analyzed for their imports and the bundle size they will have. The resulting size is displayed right next to the import. This helps you to identify very big imported libs.</td>
+</tr>
+<tr>
+<td><img src="https://xabikos.gallerycdn.vsassets.io/extensions/xabikos/javascriptsnippets/1.8.0/1587489699375/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets">JavaScript (ES6) code snippets</a></strong><br>This extension brings some great snippets for JavaScript / TypeScript like a short snippet <code>clg</code> for writing <code>console.log()</code> or <code>imp</code> for <code>import <foo> from '<foo>';</foo></foo></code>.</td>
+</tr>
+<tr>
+<td><img src="https://orta.gallerycdn.vsassets.io/extensions/orta/vscode-jest/3.2.0/1588254430761/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest">Jest</a></strong><br>The Jest extension gives you auto completion and color indicators for successful / failing Jest tests.</td>
+</tr>
+<tr>
+<td><img src="https://zixuanchen.gallerycdn.vsassets.io/extensions/zixuanchen/vitest-explorer/0.2.20/1656816665060/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=ZixuanChen.vitest-explorer">Vitest</a></strong><br>A Test Explorer and helper for Tests using Vite and Vitest.</td>
+</tr>
+<tr>
+<td><img src="https://cmstead.gallerycdn.vsassets.io/extensions/cmstead/jsrefactor/2.20.6/1586404799977/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=cmstead.jsrefactor">JS Refactor</a></strong><br>This extension gives you a lot of JavaScript refactoring utilities like <em>convert to arrow function</em> or <em>rename variable</em>.</td>
+</tr>
+<tr>
+<td><img src="https://cdn.vsassets.io/v/M174_20200820.2/_content/Header/default_icon_128.png" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=ghmcadams.lintlens">LintLens</a></strong><br>With this extension, metadata and usage information for ESLint rules will be displayed beside each rule.</td>
+</tr>
+<tr>
+<td><img src="https://eg2.gallerycdn.vsassets.io/extensions/eg2/vscode-npm-script/0.3.13/1596482164436/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script">npm</a></strong><br>This extension let's you run your NPM scripts right from your <code>package.json</code> file.</td>
+</tr>
+<tr>
+<td><img src="https://richie5um2.gallerycdn.vsassets.io/extensions/richie5um2/vscode-sort-json/1.18.0/1572459185562/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=richie5um2.vscode-sort-json">Sort JSON Objects</a></strong><br>With this extension you can simply right click on a JSON object and sort the items inside.</td>
+</tr>
+<tr>
+<td><img src="https://visualstudioexptteam.gallerycdn.vsassets.io/extensions/visualstudioexptteam/vscodeintellicode/1.2.10/1597190336810/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode">Visual Studio IntelliCode</a></strong><br>Installing this extension will give you an even better IntelliSense which is AI-assisted.</td>
+</tr>
+<tr>
+<td><img src="https://pflannery.gallerycdn.vsassets.io/extensions/pflannery/vscode-versionlens/1.0.8/1592083401206/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens">Version Lens</a></strong><br>With Version Lens you can directly see the currently installed and the latest versions of a package in your <code>package.json</code> file.</td>
+</tr>
+</tbody></table>
+<!--
+|![]()|**[]()**<br/>|
+-->
+
+<h3 id="htmlhandlebarscsssassscssless">HTML/Handlebars/CSS/SASS/SCSS/LESS</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://pranaygp.gallerycdn.vsassets.io/extensions/pranaygp/vscode-css-peek/4.0.0/1595892543531/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek">CSS Peak</a></strong><br>With this extension you can see and edit your CSS definitions from a related stylesheet directly from your HTML files.</td>
+</tr>
+<tr>
+<td><img src="https://zignd.gallerycdn.vsassets.io/extensions/zignd/html-css-class-completion/1.19.0/1558208838135/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion">IntelliSense for CSS class names in HTML</a></strong><br>This plugin gives you auto suggestions for CSS class names in your HTML templates.</td>
+</tr>
+<tr>
+<td><img src="https://maxvanderschee.gallerycdn.vsassets.io/extensions/maxvanderschee/web-accessibility/0.2.82/1584101774211/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=MaxvanderSchee.web-accessibility">Web Accessibility</a></strong><br>Using this plugin helps you to find accessibility violations in your markup and displays hints for <a href="https://www.w3.org/WAI/standards-guidelines/aria/">WAI-ARIA best practices</a>.</td>
+</tr>
+<tr>
+<td><img src="https://stylelint.gallerycdn.vsassets.io/extensions/stylelint/vscode-stylelint/0.85.0/1597235740165/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint">stylelint</a></strong><br>Lint CSS/SCSS/SASS/Less Style definitions</td>
+</tr>
+</tbody></table>
+<!--
+|![]()|**[]()**<br/>|
+-->
+
+<h3 id="angular">Angular</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://angular.gallerycdn.vsassets.io/extensions/angular/ng-template/0.1000.7/1596155297383/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=obenjiro.arrr">Angular Language Service</a></strong><br>When you are developing an <a href="https://angular.io">Angular</a> app, this extension is essential: It gives you quick info, autocompletion and diagnostic information.</td>
+</tr>
+<tr>
+<td><img src="https://github.com/SanderLedegen/vscode-angular-follow-selector/raw/master/images/logo.png" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=sanderledegen.angular-follow-selector">Angular Follow Selector</a></strong><br>This extensions allows you to click on <a href="https://angular.io">Angular</a> selectors in the template  and get redirected to their definition in the component.</td>
+</tr>
+</tbody></table>
+<!--
+|![]()|**[]()**<br/>|
+-->
+
+<h3 id="vuejs">Vue.js</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://vue.gallerycdn.vsassets.io/extensions/vue/volar/0.38.8/1658057859813/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=Vue.volar">Volar</a></strong><br>Volar gives you tooling for <a href="https://vuejs.org/">Vue3</a> development.</td>
+</tr>
+<tr>
+<td><img src="https://octref.gallerycdn.vsassets.io/extensions/octref/vetur/0.26.1/1596770796928/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur">Vetur</a></strong><br>Vetur gives you tooling for <a href="https://v2.vuejs.org/">Vue2</a> development.</td>
+</tr>
+<tr>
+<td><img src="https://dariofuzinato.gallerycdn.vsassets.io/extensions/dariofuzinato/vue-peek/1.0.2/1503254564126/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek">Vue Peak</a></strong><br>This extension gives you <em>Go To Definition</em> and <em>Peek Definition</em> support for <a href="https://vuejs.org/">Vue</a> components.</td>
+</tr>
+</tbody></table>
+<!--
+|![]()|**[]()**<br/>|
+-->
+
+<h3 id="handlebars">Handlebars</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://andrejunges.gallerycdn.vsassets.io/extensions/andrejunges/handlebars/0.4.1/1526248443531/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=andrejunges.Handlebars">Handlebars</a></strong><br>This extension provides you with code snippets for <a href="https://handlebarsjs.com">Handlebars</a> files as well as with syntax highlighting.</td>
+</tr>
+<tr>
+<td><img src="https://greenbyte.gallerycdn.vsassets.io/extensions/greenbyte/handlebars-preview/1.1.2/1597830971683/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=greenbyte.handlebars-preview">Handlebars Preview</a></strong><br>With the Handlebars Preview extension you can put a JSON file right next to your Handlebars template and the plugin will inject the data into the template to display a preview of how it would look like.</td>
+</tr>
+</tbody></table>
+<!--
+|![]()|**[]()**<br/>|
+-->
+
+
+<h3 id="git">Git</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://bee.gallerycdn.vsassets.io/extensions/bee/git-temporal-vscode/1.0.0/1581641807688/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=bee.git-temporal-vscode">Git Temporal</a></strong><br>Git Temporal is a great plugin for interactively searching in your git history based on a timeline. You can even mark ranges on a timeline to see all the changes in between the chosen time range.</td>
+</tr>
+<tr>
+<td><img src="https://eamodio.gallerycdn.vsassets.io/extensions/eamodio/gitlens/10.2.2/1591818157905/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens</a></strong><br>Show the authorship of code lines right next to them. This can help you a lot if you may not understand some part of the code: just check out who created it and ask for support.</td>
+</tr>
+</tbody></table>
+<!--
+|![]()|**[]()**<br/>|
+-->
+
+<h3 id="other">Other</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://sygene.gallerycdn.vsassets.io/extensions/sygene/auto-correct/0.2.1/1582635101990/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=sygene.auto-correct">Auto Correct</a></strong><br>You may be like me and there are some words you'll always spell wrong or you making the same typo all the time. One of my common mistakes is to write <code>seperate</code> instead of <code>separate</code>. With this plugin you can define such words or patterns that will be automatically replaced with the correctly spelled word.</td>
+</tr>
+<tr>
+<td><img src="https://streetsidesoftware.gallerycdn.vsassets.io/extensions/streetsidesoftware/code-spell-checker/1.9.0/1589974448396/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Code Spell Checker</a></strong><br>With this extension your code is checked for common typos and such unknown words will be highlighted as you may know it from Microsoft Word or other text editor software.</td>
+</tr>
+<tr>
+<td><img src="https://mikestead.gallerycdn.vsassets.io/extensions/mikestead/dotenv/1.0.1/1519894859412/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv">DotENV</a></strong><br>This extensions highlights the configuration in <code>.env</code> files</td>
+</tr>
+<tr>
+<td><img src="https://grapecity.gallerycdn.vsassets.io/extensions/grapecity/gc-excelviewer/3.0.40/1597894261914/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer">Excel Viewer</a></strong><br>If you open and edit CSV or Excel files from VSCode, you will probably need this extension. This allows you to display the data in a formatted table that you can sort and filter.</td>
+</tr>
+<tr>
+<td><img src="https://msjsdiag.gallerycdn.vsassets.io/extensions/msjsdiag/debugger-for-chrome/4.12.10/1597702740002/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome">Debugger for Chrome</a></strong><br>This debugger extensions allows you to debug your JavaScript code in the Google Chrome browser from your code editor.</td>
+</tr>
+<tr>
+<td><img src="https://ms-azuretools.gallerycdn.vsassets.io/extensions/ms-azuretools/vscode-docker/1.5.0/1597688601690/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">Docker</a></strong><br>The Docker extension easily lets you create, manage, and debug your applications containerized with Docker. It also gives you IntelliSense for your related Docker configuration files.</td>
+</tr>
+<tr>
+<td><img src="https://editorconfig.gallerycdn.vsassets.io/extensions/editorconfig/editorconfig/0.15.1/1590371230963/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig">EditorConfig</a></strong><br>This plugin will check your workspace for an <a href="https://editorconfig.org">EditorConfig</a> configuration file and applies these settings to your workspace.</td>
+</tr>
+<tr>
+<td><img src="https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.6.1/1555497731217/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a></strong><br>With the Live Server extension you can open an HTML file in the browser and the server watches for changes and refreshes the Browser preview.</td>
+</tr>
+<tr>
+<td><img src="https://nrwl.gallerycdn.vsassets.io/extensions/nrwl/angular-console/13.0.0/1595622774663/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console">Nx Console</a></strong><br>This plugin gives you a UI for <a href="https://nx.dev">Nx Monorepos</a> and the Nx CLI.</td>
+</tr>
+<tr>
+<td><img src="https://christian-kohler.gallerycdn.vsassets.io/extensions/christian-kohler/path-intellisense/2.2.1/1591957111022/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense">Path Intellisense</a></strong><br>This plugin brings you autocompletion for filenames.</td>
+</tr>
+<tr>
+<td><img src="https://pnp.gallerycdn.vsassets.io/extensions/pnp/polacode/0.3.4/1569601471865/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=pnp.polacode">Polacode</a></strong><br>With Polacode you can mark code lines and create screenshots from the selection. This is great for e.g. presentations or sharing stuff on Twitter.</td>
+</tr>
+<tr>
+<td><img src="https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/5.2.1/1598366482789/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">Prettier</a></strong><br><a href="https://prettier.io">Prettier</a> is – in my opinion – the best code formatter especially when working with JavaScript / TypeScript. The extension for Prettier will allow you to set up Prettier as default formatter for VSCode or just for specific programming languages.<br><pre><code>{<br>  "editor.defaultFormatter": "esbenp.prettier-vscode",<br>  "[javascript]": {<br>    "editor.defaultFormatter": "esbenp.prettier-vscode"<br>  }<br>}</code></pre></td>
+</tr>
+<tr>
+<td><img src="https://louiswt.gallerycdn.vsassets.io/extensions/louiswt/regexp-preview/0.1.5/1583773383502/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=louiswt.regexp-preview&amp;WT.mc_id=devcloud-00000-cxa">Regexp Explain</a></strong><br> Running this extension will let you explore regular expressions visually in a realtime preivew editor</td>
+</tr>
+<tr>
+<td><img src="https://knisterpeter.gallerycdn.vsassets.io/extensions/knisterpeter/vscode-commitizen/0.9.3/1595315799607/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-commitizen">Visual Studio Code Commitizen Support</a></strong><br>This plugin adds a command panel for creating <a href="https://www.conventionalcommits.org">Conventional Commits</a> with support.</td>
+</tr>
+<tr>
+<td><img src="https://henrynguyen5-vsc.gallerycdn.vsassets.io/extensions/henrynguyen5-vsc/vsc-nvm/0.0.3/1549657966675/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=henrynguyen5-vsc.vsc-nvm">vsc-nvm</a></strong><br>Automatically use the right Node.js version form the NVM.</td>
+</tr>
+<tr>
+<td><img src="https://redhat.gallerycdn.vsassets.io/extensions/redhat/vscode-yaml/0.10.0/1597935539888/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml">YAML</a></strong><br>This extension gives you a comprehensive YAML language support.</td>
+</tr>
+<tr>
+<td><img src="https://zeplin.gallerycdn.vsassets.io/extensions/zeplin/zeplin/2.1.0/1592227616388/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=zeplin.zeplin">Zeplin</a></strong><br>If you work with <a href="https://zeplin.io">Zeplin</a>, this official plugin provides you with quick access to your designs.</td>
+</tr>
+<tr>
+<td><img src="https://anweber.gallerycdn.vsassets.io/extensions/anweber/vscode-httpyac/5.5.6/1657738649459/Microsoft.VisualStudio.Services.Icons.Default" alt=""></td>
+<td><strong><a href="https://marketplace.visualstudio.com/items?itemName=anweber.vscode-httpyac">httpYac</a></strong><br>This is a very powerful tool to place directly executable API call snippets next to your code. You can even use environment variables for dynamic replacement of part of URLs, headers oder the body of an HTTP call.</td>
+</tr>
+</tbody></table>
+<!--
+|![]()|**[]()**<br/>|
+-->
+
+<h2 id="google-chrome-extensions">Google Chrome Extensions</h2>
+<p>Google Chrome is great and it already brings a lot of possibilities that help developers to improve their web apps.
+However, there are some really great plugins I am using that I can recommend:</p><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://lh3.googleusercontent.com/My9ZJOQeBDEqm2Snb3zQCspE4neCdXNuv6dYuZ9z1DN6T2P52Df7jBNLYA2SKxqN4e6M_V33KESTGknFXcYEXWzJ=w128-h128-e365-rj-sc0x00ffffff" alt=""></td>
+<td><strong><a href="https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh">Angular DevTools</a></strong><br>A must have addon for all Angular Developers that will help you profile and debug and optimize your Angular app.</td>
+</tr>
+<tr>
+<td><img src="https://lh3.googleusercontent.com/frsBSB812N3lty03SJsVY6zR1Y6uqYKb4vISAjRJ8LR2pNpYYmY5iHLBUpctVd29tjEEGPcU0_-RhQSUI3Ru2sGb8Q=w128-h128-e365-rj-sc0x00ffffff" alt=""></td>
+<td><strong><a href="https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg">Vue.js DevTools</a></strong><br>This extension helps you to profile, debug and optimize your Vue app.</td>
+</tr>
+<tr>
+<td><img src="https://lh3.googleusercontent.com/nJRS4ToYWi4cJ_cSgT884h1Ixv0bYD4MWYq3aAa85JY8OKgluXgN7zYd_hbLTNKW8zPfonC9Ig=w128-h128-e365" alt=""></td>
+<td><strong><a href="https://chrome.google.com/webstore/detail/aqua-buddy/kidoeajcechhpbhmbeligfiakhhlchom">Aqua Buddy</a></strong><br>Stay hydrated by using Aqua Buddy! It will notify you to drink some water frequently.</td>
+</tr>
+<tr>
+<td><img src="https://lh3.googleusercontent.com/CzEnlG42oD6E_kIGkLujYfQnz43jx8ml2ezY-rFloQgNDPiB0PRJsLWwn6N4LJZsdpEAHlebDQ=w128-h128-e365" alt=""></td>
+<td><strong><a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd">Axe</a></strong><br>Axe helps you to improve the grade of accessibility of your site.</td>
+</tr>
+<tr>
+<td><img src="https://lh3.googleusercontent.com/8BLPoOrRiXqc_lxLjwjsaqwp3LwfW-1XDf1BmWUVDe5DfqgopAbgKVhZqnfz1IVmMIjHy_u1=w128-h128-e365" alt=""></td>
+<td><strong><a href="https://chrome.google.com/webstore/detail/chrome-capture-screenshot/ggaabchcecdbomdcnbahdfddfikjmphe?hl=en">Chrome Capture</a></strong><br>This extension lets you record and share screenshots, videos and GIFs from a website.</td>
+</tr>
+<tr>
+<td><img src="https://lh3.googleusercontent.com/fSH1EIpxkNfV3-37vG0lVuCuDCMIhRRQS88LRVA6NzazUdB5F7447__B8gEuxp3uH0ecKSCAs7fzpDcLNdCO0DlQ=w128-h128-e365-rj-sc0x00ffffff" alt=""></td>
+<td><strong><a href="https://chrome.google.com/webstore/detail/chrome-regex-search/bpelaihoicobbkgmhcbikncnpacdbknn">Chrome Regex Search</a></strong><br>Ever wanted to search on a site for more complex expressions? With this extension you can search a sites content by entering regular expressions.</td>
+</tr>
+<tr>
+<td><img src="https://lh3.googleusercontent.com/xk2lp5Tkh-hN1SNWxb1lsxyitzwrpsmzdruqEcuymQIq-9DOhMlhkNz14MSJoWvu0jNnCfRX_SZEvpBwtIY5k8jNDQ=w128-h128-e365-rj-sc0x00ffffff" alt=""></td>
+<td><strong><a href="https://chrome.google.com/webstore/detail/export-selective-bookmark/ahgbiciilcpclcekhegbhofljoolnfei">Export Selective Bookmarks</a></strong><br>This extensions lets you select specific directories and bookmarks from all your bookmarks to export them. Perfect if you want to help colleagues to onboard in your team or project.</td>
+</tr>
+<tr>
+<td><img src="https://lh3.googleusercontent.com/u_2WHT7oINbcGWWN0MRxogjDHAPYB9Izk_MUdcF0yukvabP9uEeIGJaFpg2Ac9vv5mrm7A5ZVw=w128-h128-e365" alt=""></td>
+<td><strong><a href="https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe">JSON Viewer Awesome</a></strong><br>This extension will automatically detect and format JSON files once you open them by calling the URL.</td>
+</tr>
+<tr>
+<td><img src="https://lh3.googleusercontent.com/_6Y4tjYdppsZJlWOnAzFy2A8JjGwJpQOvoKocTYMfl66bTJg20mJ6pojdQaUGtvXa9HYurDChQ=w128-h128-e365" alt=""></td>
+<td><strong><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk">Lighthouse</a></strong><br>Lighthouse analyzes your site for performance, accessibility and other common things and gives you a site score as well as some useful information how to improve your site.</td>
+</tr>
+<tr>
+<td><img src="https://lh3.googleusercontent.com/JsB6yUqV6WbFREmfjpdIY6ctrf3IKZfdhWa1BbHiD0MwHvilHzJJdM5TGycosq8_rEdf3FFYXA=w128-h128-e365" alt=""></td>
+<td><strong><a href="https://chrome.google.com/webstore/detail/pesticide-for-chrome/bblbgcheenepgnnajgfpiicnbbdmmooh">Pesticide</a></strong><br>Activating these extension lets you outline all elements on a site so that you can easier analyze paddings, margins and borders.</td>
+</tr>
+<tr>
+<td><img src="https://lh3.googleusercontent.com/ZccCYQft-IxBg8e8B2FsZTPXyu9kYaTKGX4vxVoTVztguJVsrhTlJo_qVd1H1tesz03BxwMdYg=w128-h128-e365" alt=""></td>
+<td><strong><a href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm">Web Developer</a></strong><br>With this extension you will get a toolbox for website manipulation and testing tools. You can e.g. easily disable JavaScript or styles to see how your site behaves.</td>
+</tr>
+</tbody></table>
+<!--
+|![]()|**[]()**<br/>|
+-->
+
+
+<h2 id="scripts-and-other-tools">Scripts and other tools</h2>
+<h3 id="dotfiles">Dotfiles</h3>
+<p>Personally, I like to keep my Mac up-to-date and therefore I will install most of my software via the <a href="https://brew.sh">Homebrew</a> package manager.
+Also, to be more efficient I use the <a href="https://github.com/ohmyzsh/ohmyzsh"><code>oh-my-zsh</code></a> framework for managing my shell configuration.
+Most of my configurations is also published in my GitHub repository called <a href="https://github.com/d-koppenhagen/.dotfiles"><code>.dotfiles</code></a>.</p><h3 id="exclude-all-node_modules-from-timemachine-backups-macos-only">Exclude all <code>node_modules</code> from TimeMachine backups (macOS only)</h3>
+<p>One thing I learned during my career is: <strong>backup, backup, backup</strong>.
+It's better to have one more backup than data loss.
+Fortunately, on a macOS system it's possible to set up Apple's TimeMachine for creating continuous system backups.
+However, backing up everything takes a lot of time and there are things you don't need to back up like directories syncing with a cloud provider like Dropbox, Sharepoint, etc.
+Those directories can easily be <a href="https://osxdaily.com/2012/01/27/exclude-folders-from-time-machine-backups/">excluded from the TimeMachine backup by configuration</a>.
+This will keep the backups smaller and also in case of a restore, the system ready to use after a much shorter time.
+But what about <code>node_modules</code> directories?
+For sure: You can exclude them in the same way, but this is very sophisticated and you always need to remember this step once you create a new project.
+Therefore, I am using a simple script.
+It looks for all <code>node_modules</code> directories in my development directory (<code>~/dev</code> in my case) and excludes them from the backup:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#6A737D">#!/bin/bash</span></span>
+<span class="line"><span style="color:#6A737D"># exclude all `node_modules` folders within the dev directory</span></span>
+<span class="line"><span style="color:#B392F0">find</span><span style="color:#9ECBFF"> "</span><span style="color:#E1E4E8">$HOME</span><span style="color:#9ECBFF">/dev"</span><span style="color:#79B8FF"> -name</span><span style="color:#9ECBFF"> 'node_modules'</span><span style="color:#79B8FF"> -prune</span><span style="color:#79B8FF"> -type</span><span style="color:#9ECBFF"> d</span><span style="color:#79B8FF"> -exec</span><span style="color:#9ECBFF"> tmutil</span><span style="color:#9ECBFF"> addexclusion</span><span style="color:#9ECBFF"> {}</span><span style="color:#79B8FF"> \;</span><span style="color:#79B8FF"> -exec</span><span style="color:#9ECBFF"> tmutil</span><span style="color:#9ECBFF"> isexcluded</span><span style="color:#9ECBFF"> {}</span><span style="color:#79B8FF"> \;</span></span>
+<span class="line"><span style="color:#79B8FF">echo</span><span style="color:#9ECBFF"> "Done. The excluded files won't be part of a time machine backup anymore."</span></span></code></pre>
+<p>To be sure the script updates the list of excluded directories frequently, I added a cronjob:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">crontab</span><span style="color:#79B8FF"> -e</span></span></code></pre>
+<p>The actual cronjob config is the following:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">0</span><span style="color:#79B8FF"> 12</span><span style="color:#79B8FF"> *</span><span style="color:#79B8FF"> *</span><span style="color:#79B8FF"> *</span><span style="color:#9ECBFF">  cd</span><span style="color:#E1E4E8"> $HOME</span><span style="color:#9ECBFF">/dev/.dotfiles</span><span style="color:#E1E4E8"> &amp;&amp; </span><span style="color:#B392F0">./time-machine-excludes.sh</span><span style="color:#6A737D"> # every day at 12:00</span></span></code></pre>
+<h2 id="feedback">Feedback</h2>
+<p>Now as you know my dev setup, it's your turn! Is there any great tool or plugin you can recommend?
+Then just contact me via <a href="mailto:mail@k9n.dev">E-Mail</a> or <a href="https://bsky.app/profile/k9n.dev">Bluesky</a> and let me know!</p><p><strong>Thank you</strong></p><p>Special thanks goes to <a href="https://twitter.com/fmalcher01">Ferdinand Malcher</a> for revising this article.</p><hr>
+
+<p><span>Photo by <a href="https://unsplash.com/@toddquackenbush">Todd Quackenbush</a> on <a href="https://unsplash.com/">Unsplash</a></span></p></div><!----></analog-markdown><!----><div _ngcontent-ng-c2245548422="" class="edit-on-github"><a _ngcontent-ng-c2245548422="" rel="noopener noreferrer" href="https://github.com/d-koppenhagen/k9n.dev/edit/main/src/content/blog/2020-08-my-development-setup.md"> Auf GitHub bearbeiten </a></div><!----></section></div></article><!----></ng-component><!----></main><dk-contact _nghost-ng-c1148330124="" ngh="0"><footer _ngcontent-ng-c1148330124="" id="footer"><div _ngcontent-ng-c1148330124="" id="contact" class="inner"><h2 _ngcontent-ng-c1148330124="" class="major">Kontaktieren Sie mich</h2><p _ngcontent-ng-c1148330124=""> Haben Sie Fragen oder Anregungen? Nehmen Sie gern Kontakt mit mir auf! </p><ul _ngcontent-ng-c1148330124="" class="contact"><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="mailto:mail@k9n.dev">Mail: mail@k9n.dev</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen">GitHub: d-koppenhagen</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="bluesky" class="svg-inline--fa fa-bluesky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" rel="me" href="https://bsky.app/profile/k9n.dev"> Bluesky: k9n.dev </a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="mastodon" class="svg-inline--fa fa-mastodon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" rel="me" href="https://techhub.social/@k9n"> Mastodon: @k9n@techhub.social </a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://www.linkedin.com/in/d-koppenhagen/">LinkedIn: d-koppenhagen</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="xing" class="svg-inline--fa fa-xing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M162.7 210c-1.8 3.3-25.2 44.4-70.1 123.5-4.9 8.3-10.8 12.5-17.7 12.5H9.8c-7.7 0-12.1-7.5-8.5-14.4l69-121.3c.2 0 .2-.1 0-.3l-43.9-75.6c-4.3-7.8.3-14.1 8.5-14.1H100c7.3 0 13.3 4.1 18 12.2l44.7 77.5zM382.6 46.1l-144 253v.3L330.2 466c3.9 7.1.2 14.1-8.5 14.1h-65.2c-7.6 0-13.6-4-18-12.2l-92.4-168.5c3.3-5.8 51.5-90.8 144.8-255.2 4.6-8.1 10.4-12.2 17.5-12.2h65.7c8 0 12.3 6.7 8.5 14.1z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://www.xing.com/profile/Danny_Koppenhagen">Xing: Danny_Koppenhagen</a></li></ul><ul _ngcontent-ng-c1148330124="" class="copyright"><li _ngcontent-ng-c1148330124="">© 2023 by Danny Koppenhagen</li><li _ngcontent-ng-c1148330124="">Design: <a _ngcontent-ng-c1148330124="" href="https://html5up.net">HTML5 UP</a></li><li _ngcontent-ng-c1148330124=""> Vorschläge? Feedback? Bugs? <a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen/k9n.dev/issues"> Stell ein Issue ein</a>, <a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen/k9n.dev/pulls">sende mir einen PR</a> oder <a _ngcontent-ng-c1148330124="" routerlink="/contact" href="/contact" jsaction="click:;">kontaktiere mich</a></li></ul></div></footer></dk-contact><!----></dk-root>
+    <script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["keydown","click"],["focus","blur"]);</script>
+  
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"7":"t0","8":"t1","9":"t2"},"c":{"7":[{"i":"t0","r":1}],"8":[],"9":[{"i":"t2","r":1}]}},{"c":{"0":[]}},{"t":{"0":"t18"},"c":{"0":[{"i":"t18","r":1,"t":{"5":"t19","6":"t20","7":"t25","8":"t26","11":"t28","12":"t29"},"c":{"5":[{"i":"t19","r":1}],"6":[{"i":"t20","r":1,"t":{"2":"t21","7":"t22","8":"t23"},"c":{"2":[{"i":"t21","r":1}],"7":[{"i":"t22","r":1,"x":10}],"8":[]}}],"7":[{"i":"t25","r":1,"t":{"1":"t30","2":"t31","3":"t32"},"c":{"1":[{"i":"t30","r":1}],"2":[],"3":[]}}],"8":[],"11":[],"12":[{"i":"t29","r":1}]}}]}},{"c":{"4":[{"i":"c2245548422","r":1}],"6":[]},"t":{"6":"t16"}}]}</script></body></html>

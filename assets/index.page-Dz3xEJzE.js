@@ -1,0 +1,3 @@
+import{ac as r,ɵ as i,r as c,b as p,v as s,u as l,x as m,J as _}from"./index-DPqAJY-c.js";import{P as d}from"./preview.component-BII8khjR.js";const e=class e{constructor(){this.posts=r(n=>n.filename.includes("/src/content/talks/"))}};e.ɵfac=function(t){return new(t||e)},e.ɵcmp=i({type:e,selectors:[["ng-component"]],decls:5,vars:1,consts:[[1,"wrapper","alt"],[1,"inner"],[1,"major"],["content","talks",3,"posts"]],template:function(t,o){t&1&&(c(0,"section",0)(1,"div",1)(2,"h2",2),p(3,"Meine Talks und Slides"),s(),l(4,"dk-preview",3),s()()),t&2&&(m(4),_("posts",o.posts))},dependencies:[d],styles:[`.wrapper[_ngcontent-%COMP%] {
+      margin-top: 0;
+    }`]});let a=e;export{a as default};

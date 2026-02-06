@@ -1,0 +1,982 @@
+<!DOCTYPE html><html lang="de"><head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css" id="fa-auto-css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}</style><link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Apple PWA Support -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-512x512.png">
+    <link href="icons/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Basic Site Information -->
+    <title>k9n.dev | Dig deeper into static site generation with Scully and use the most out of it</title>
+    
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Danny Koppenhagen">
+
+    <!-- Twitter Card -->
+    
+    
+    
+    
+    
+
+    <!-- Open Graph Profile -->
+    
+    
+    
+    
+    <meta property="profile:first_name" content="Danny">
+    <meta property="profile:last_name" content="Koppenhagen">
+    <meta property="profile:gender" content="male">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#e7e7e7">
+    <script type="module" crossorigin="" src="/assets/index-DPqAJY-c.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DzfkAIf7.css">
+  <style>.menu-dark[_ngcontent-ng-c2099545970] {
+  filter: alpha(opacity=90);
+}
+.menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970] {
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.9;
+  margin: 0px 1px;
+}
+.menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970]:hover, .menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970]:focus {
+  background-color: rgb(67.1351351351, 71.5135135135, 94.8648648649);
+  box-shadow: inset 0 0 0 2px #5e7959;
+}
+.menu-dark[_ngcontent-ng-c2099545970]:focus    > button[_ngcontent-ng-c2099545970] {
+  box-shadow: inset 0 0 0 2px #ada789;
+}
+
+@media screen and (max-width: 480px) {
+  .hidden-small[_ngcontent-ng-c2099545970] {
+    visibility: hidden;
+  }
+}</style><style>.header-title[_ngcontent-ng-c2421498523] {
+  background-image: url("/images/bg-triangles.jpg");
+  background-size: cover;
+  font-size: 5em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.2901960784);
+}
+
+.sub-header-title[_ngcontent-ng-c2421498523] {
+  color: #2e3141;
+  font-size: 1.6em !important;
+  margin-bottom: 0.5em;
+  line-height: 1.3 !important;
+}
+
+.sub-header[_ngcontent-ng-c2421498523] {
+  color: #2e3141;
+  font-size: 1.2em;
+}
+
+#banner[_ngcontent-ng-c2421498523] {
+  background-image: url("/images/dk-header.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-color: #fdfdfd;
+  padding: 9em 0 12em 0;
+  animation: _ngcontent-ng-c2421498523_headerFadeIn 3s;
+}
+
+@keyframes _ngcontent-ng-c2421498523_headerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#logo[_ngcontent-ng-c2421498523] {
+  position: absolute;
+  top: 5px;
+}
+#logo[_ngcontent-ng-c2421498523]   img[_ngcontent-ng-c2421498523] {
+  width: 70px;
+  animation: _ngcontent-ng-c2421498523_move-to-top 1s ease, _ngcontent-ng-c2421498523_rotate 4s ease 1;
+}
+
+#logo[_ngcontent-ng-c2421498523]:focus, 
+h1[_ngcontent-ng-c2421498523]:focus {
+  outline: 1px solid rgba(185, 167, 167, 0.4);
+}
+
+@keyframes _ngcontent-ng-c2421498523_rotate {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+@keyframes _ngcontent-ng-c2421498523_move-to-top {
+  0% {
+    top: 100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  #banner[_ngcontent-ng-c2421498523] {
+    background-position: right -200px top;
+  }
+}
+@media screen and (max-width: 980px) {
+  #banner[_ngcontent-ng-c2421498523] {
+    background-size: contain;
+    padding: 6em 0 10em 0;
+    background-position: right -200px top;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 736px) {
+  .sub-header[_ngcontent-ng-c2421498523] {
+    font-size: 1em !important;
+    padding-right: 110px;
+  }
+  #banner[_ngcontent-ng-c2421498523] {
+    padding: 6em 0 5em 0;
+  }
+}
+@media screen and (max-width: 620px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 3.5em;
+    padding-right: 40vw;
+  }
+  #banner[_ngcontent-ng-c2421498523] {
+    background-size: cover;
+    background-position: right -180px top;
+  }
+}
+@media screen and (max-width: 560px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 3em;
+    padding-right: 50vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    opacity: 0.7;
+    font-size: 2.5em;
+    padding-right: 50vw;
+  }
+}</style><style>@media screen and (min-width: 736px) {
+  ul.contact[_ngcontent-ng-c1148330124] {
+    columns: 2;
+    width: 100% !important;
+  }
+}</style><style>.wrapper[_ngcontent-ng-c2245548422] {
+  margin-top: 0;
+}
+
+h1[_ngcontent-ng-c2245548422] {
+  font-size: 1.4em;
+}
+
+.extra-info[_ngcontent-ng-c2245548422] {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.actions[_ngcontent-ng-c2245548422] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.published-at[_ngcontent-ng-c2245548422], 
+.external-links[_ngcontent-ng-c2245548422], 
+.edit-on-github[_ngcontent-ng-c2245548422] {
+  margin: 30px 0;
+}
+
+.published-at[_ngcontent-ng-c2245548422] {
+  height: 50px;
+}
+
+.published-at[_ngcontent-ng-c2245548422] {
+  display: flex;
+  align-items: center;
+  line-height: 1.2em;
+}
+.published-at[_ngcontent-ng-c2245548422]   .published-at-link[_ngcontent-ng-c2245548422] {
+  text-decoration: none;
+  border: none;
+  min-width: 120px;
+}
+.published-at[_ngcontent-ng-c2245548422]   .published-at-link[_ngcontent-ng-c2245548422]   .published-at-logo[_ngcontent-ng-c2245548422] {
+  padding-right: 20px;
+  max-height: 60px;
+}
+
+.external-article[_ngcontent-ng-c2245548422] {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.extra-section[_ngcontent-ng-c2245548422]   .actions[_ngcontent-ng-c2245548422] {
+  padding-bottom: 2rem;
+}
+
+span.image[_ngcontent-ng-c2245548422]    > img.thumbnail[_ngcontent-ng-c2245548422] {
+  max-width: 80px;
+}
+
+@media screen and (max-width: 560px) {
+  .blog-footer[_ngcontent-ng-c2245548422] {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: #2e3141;
+    opacity: 0.9;
+    z-index: 1;
+    padding: 0 35px;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > h2[_ngcontent-ng-c2245548422], 
+   .blog-footer[_ngcontent-ng-c2245548422]   h3[_ngcontent-ng-c2245548422] {
+    display: none;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > ul[_ngcontent-ng-c2245548422] {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > ul[_ngcontent-ng-c2245548422]    > li[_ngcontent-ng-c2245548422] {
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .extra-info[_ngcontent-ng-c2245548422] {
+    display: block;
+  }
+}
+@media screen and (max-width: 360px) {
+  .blog-footer[_ngcontent-ng-c2245548422] {
+    padding: 0 24px;
+  }
+}
+.blog-header[_ngcontent-ng-c2245548422]   img[_ngcontent-ng-c2245548422] {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 1ch;
+  overflow: hidden;
+  box-shadow: 0 3px 2px hsla(0, 0%, 0%, 0.02), 0 7px 5px hsla(0, 0%, 0%, 0.03), 0 13px 10px hsla(0, 0%, 0%, 0.04), 0 22px 18px hsla(0, 0%, 0%, 0.05), 0 42px 33px hsla(0, 0%, 0%, 0.06), 0 100px 80px hsla(0, 0%, 0%, 0.07);
+  margin-bottom: 1rem;
+}</style><meta name="description" content="In this article about Scully, I will introduce some more advanced features. You will learn how you can setup a custom Markdown module and how you can use AsciiDoc with Scully. I will guide you through the process of how to handle protected routes using a custom route plugin."><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@d_koppenhagen"><meta name="twitter:creator" content="@d_koppenhagen"><meta name="twitter:title" content="Dig deeper into static site generation with Scully and use the most out of it"><meta name="twitter:description" content="In this article about Scully, I will introduce some more advanced features. You will learn how you can setup a custom Markdown module and how you can use AsciiDoc with Scully. I will guide you through the process of how to handle protected routes using a custom route plugin."><meta name="twitter:image" content="https://k9n.dev/images/blog/scully/scully-header2.jpg"><meta property="og:title" content="Dig deeper into static site generation with Scully and use the most out of it"><meta property="og:description" content="In this article about Scully, I will introduce some more advanced features. You will learn how you can setup a custom Markdown module and how you can use AsciiDoc with Scully. I will guide you through the process of how to handle protected routes using a custom route plugin."><meta name="og:image" content="https://k9n.dev/images/blog/scully/scully-header2.jpg"><meta name="og:url" content="https://k9n.dev/blog/2020-03-dig-deeper-into-scully-ssg"><style>.article-series[_ngcontent-ng-c3445128104]   li[_ngcontent-ng-c3445128104]:has(.current:not(:hover)) {
+  background-color: rgb(39.2545454545, 62.3454545455, 75.0454545455);
+}</style></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-HY3CPEEH1Z"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HY3CPEEH1Z');
+      </script>
+  <body id="page-wrapper" class="mat-typography"><!--nghm-->
+    <!-- Angular -->
+    <dk-root ng-version="21.0.0" ngh="5" ng-server-context="ssr-analog"><dk-navbar _nghost-ng-c2099545970="" ngh="0"><nav _ngcontent-ng-c2099545970="" id="navigation" class="menu-dark" jsaction="keydown:;"><button _ngcontent-ng-c2099545970="" role="button" aria-label="Menü öffnen" aria-controls="menu" class="burger-menu" aria-expanded="false" jsaction="click:;"><fa-icon _ngcontent-ng-c2099545970="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg></fa-icon></button></nav></dk-navbar><dk-header _nghost-ng-c2421498523="" ngh="1"><header _ngcontent-ng-c2421498523="" id="banner"><div _ngcontent-ng-c2421498523="" class="inner"><a _ngcontent-ng-c2421498523="" routerlink="/" aria-label="Zur Startseite" title="Startseite" id="logo" href="/" jsaction="click:;"><img _ngcontent-ng-c2421498523="" src="images/logo_header.png" alt="Logo"></a><h1 _ngcontent-ng-c2421498523="" aria-label="k9n.dev" class="header-title" jsaction="focus:;blur:;"><span _ngcontent-ng-c2421498523="">k</span><span _ngcontent-ng-c2421498523="" class="headline-expanded">9</span><!----><!----><span _ngcontent-ng-c2421498523="">n.dev</span><!----></h1><p _ngcontent-ng-c2421498523="" class="sub-header-title">Danny Koppenhagen</p><p _ngcontent-ng-c2421498523="" class="sub-header">Entwickler, IT-Berater, Buchautor</p></div></header></dk-header><main><router-outlet></router-outlet><ng-component _nghost-ng-c2245548422="" ngh="4"><article _ngcontent-ng-c2245548422="" class="wrapper alt" lang="en"><div _ngcontent-ng-c2245548422="" class="inner"><h1 _ngcontent-ng-c2245548422="">Dig deeper into static site generation with Scully and use the most out of it</h1><section _ngcontent-ng-c2245548422="" class="blog-header"><img _ngcontent-ng-c2245548422="" alt="" class="adaptive-glass" src="images/blog/scully/scully-header2.jpg"><!----></section><section _ngcontent-ng-c2245548422="" class="extra-section"><div _ngcontent-ng-c2245548422="" class="extra-info"><span _ngcontent-ng-c2245548422=""><time _ngcontent-ng-c2245548422="" datetime="2001-05-15 19:00">May 18, 2021</time></span><!----><p _ngcontent-ng-c2245548422="" class="sub-heading">Stichwörter</p></div><div _ngcontent-ng-c2245548422="" class="actions"><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular" jsaction="click:;"> Angular </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular CLI" jsaction="click:;"> Angular CLI </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular Schematics" jsaction="click:;"> Angular Schematics </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Scully" jsaction="click:;"> Scully </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: SSR" jsaction="click:;"> SSR </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: SSG" jsaction="click:;"> SSG </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Server-Side Rendering" jsaction="click:;"> Server-Side Rendering </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Static Site Generator" jsaction="click:;"> Static Site Generator </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Pre-rendering" jsaction="click:;"> Pre-rendering </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: JAM Stack" jsaction="click:;"> JAM Stack </button></span><!----></div><!----></section><!----><section _ngcontent-ng-c2245548422="" class="external-links"><a _ngcontent-ng-c2245548422="" href="https://dev.to/dkoppenhagen/dig-deeper-into-static-site-generation-with-scully-and-use-the-most-out-of-it-4cn5" hreflang="en">Dev.to</a><!----> | <!----><a _ngcontent-ng-c2245548422="" href="https://danny-koppenhagen.medium.com/dig-deeper-into-static-site-generation-with-scully-and-use-the-most-out-of-it-ac86f216a6a7" hreflang="en">Medium.com</a><!----></section><!----><dk-series-list _ngcontent-ng-c2245548422="" _nghost-ng-c3445128104="" ngh="2"><section _ngcontent-ng-c3445128104="" class="article-series"><h2 _ngcontent-ng-c3445128104="" class="sub-heading">Artikelserie</h2><ol _ngcontent-ng-c3445128104="" class="alt"><li _ngcontent-ng-c3445128104=""><a _ngcontent-ng-c3445128104="" routerlinkactive="current" ariacurrentwhenactive="page" hreflang="en" href="/blog/2020-01-angular-scully" class="" jsaction="click:;">Create powerful fast pre-rendered Angular Apps using Scully static site generator</a></li><li _ngcontent-ng-c3445128104=""><a _ngcontent-ng-c3445128104="" routerlinkactive="current" ariacurrentwhenactive="page" hreflang="en" href="/blog/2020-03-dig-deeper-into-scully-ssg" class="current" aria-current="page" jsaction="click:;">Dig deeper into static site generation with Scully and use the most out of it</a></li><!----></ol></section></dk-series-list><!----><section _ngcontent-ng-c2245548422="" class="blog-content"><analog-markdown _ngcontent-ng-c2245548422="" classes="markdown-content" lang="en" ngh="3" jsaction="click:;"><div class="markdown-content"><h1 id="dig-deeper-into-static-site-generation-with-scully-and-use-the-most-out-of-it">Dig deeper into static site generation with <em>Scully</em> and use the most out of it</h1>
+<p><strong>If you haven't heard about <em>Scully</em> yet, you should first check out my introduction article about it: <em><a href="/blog/2020-01-angular-scully">»Create powerful fast pre-rendered Angular Apps using Scully static site generator«</a></em>.</strong></p><p>In my <a href="/blog/2020-01-angular-scully">last blog post</a> I gave you a short introduction to <em>Scully</em> and how to easily set up a very simple blogging website that is server-side rendered and ready to be shipped for production.
+In the following article I will introduce some more advanced things you can do with <em>Scully</em>.
+You will learn how you can setup a custom Markdown module or even use Asciidoc instead of Markdown.
+I will guide you through the process of how to handle protected routes using a custom route plugin.</p><blockquote>
+<p>This blog post is based on versions:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span>@scullyio/ng-lib: 1.1.1</span></span>
+<span class="line"><span>@scullyio/init: 1.1.4</span></span>
+<span class="line"><span>@scullyio/scully: 1.1.1</span></span></code></pre>
+</blockquote>
+<hr>
+
+<h2 id="generate-a-post-with-a-meta-data-template">Generate a post with a meta data template</h2>
+<p>As we already created our blogging site using <em>Scully</em>, we want to fill it with content now.
+We already learned how we can use the <code>@scullyio/init:post</code> schematic to easily generate a new blog post.
+Often posts do not only need the content, but also some meta information like <code>thumbnail</code> or <code>author</code>.
+This meta information can be processed by the <code>ScullyRouteService</code> and it will be converted to JSON.
+It can be quite handy to always remember to add such information right after creating a new post.
+To make things easier we can specify a YAML template file with the meta information that will always be added when creating a new blog post using the schematic, like the following one:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#85E89D">description</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&lt;fill in a short description for the overview page&gt;</span></span>
+<span class="line"><span style="color:#85E89D">published</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span></span>
+<span class="line"><span style="color:#85E89D">author</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#85E89D">  name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">Danny Koppenhagen</span></span>
+<span class="line"><span style="color:#85E89D">  mail</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">mail@k9n.dev</span></span>
+<span class="line"><span style="color:#85E89D">updated</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">dd.mm.yyyy</span></span>
+<span class="line"><span style="color:#85E89D">keywords</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#9ECBFF">Angular</span></span>
+<span class="line"><span style="color:#85E89D">language</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">en</span></span>
+<span class="line"><span style="color:#85E89D">thumbnail</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">images/default.jpg</span></span></code></pre>
+<p>We can use the template when calling the <code>@scullyio/init:post</code> schematic:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">ng</span><span style="color:#9ECBFF"> g</span><span style="color:#9ECBFF"> @scullyio/init:post</span><span style="color:#79B8FF"> --name=</span><span style="color:#9ECBFF">"a new post"</span><span style="color:#79B8FF"> --meta-data-file=meta.yml</span></span></code></pre>
+<p>When we check our <code>blog</code> directory now we will see that the schematic added our YAML template to the meta data section of the newly created post file <code>a-new-post.md</code>.</p><blockquote>
+<p>If you have trouble remembering to add the <code>meta-data-file</code> option, just add a script to your <code>package.json</code> without the <code>name</code> option.
+When you call the script using <code>npm run <script-name></script-name></code> you will be prompted to input the file name.</p></blockquote>
+<h2 id="generate-a-custom-markdown-module">Generate a custom Markdown module</h2>
+<p>Let's assume we want to add another module to our blogging website.
+We want to have a <code>projects</code> section in our site that lists some information about current projects we are working on.
+Like for our <code>blog</code> section, we want to easily write our content using Markdown.
+To do so, we can use the <code>@scullyio/init:markdown</code> schematic:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">ng</span><span style="color:#9ECBFF"> g</span><span style="color:#9ECBFF"> @scullyio/init:markdown</span><span style="color:#79B8FF"> --name=projects</span><span style="color:#79B8FF"> --slug=projectId</span><span style="color:#79B8FF"> --sourceDir=projects</span><span style="color:#79B8FF"> --route=projects</span></span></code></pre>
+<p>Let's have a look at the options we set:</p><ul>
+<li><code>name</code>: This is the base name for the generated Angular module that <em>Scully</em> created for us.</li>
+<li><code>slug</code>: Here we define the placeholder name for the URL that will be filled with the basename of the Markdown files.</li>
+<li><code>sourceDir</code>: That's where we will store our Markdown files whose content is rendered by the <em>Scully</em> Markdown file plugin.</li>
+<li><code>route</code>: This is the name for the route before the <code>:slug</code> in the URLs where we can see our rendered content later.</li>
+</ul>
+<blockquote>
+<p>Good to know: Under the hood the <code>@scullyio/init:blog</code> schematic just calls <code>@scullyio/init:markdown</code> with default options set. So in fact it's just a shortcut.</p></blockquote>
+<p>The basic things we need for our projects page are now available.
+Let's have a look at it and see if it's working:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> build</span><span style="color:#6A737D">                   # Angular build</span></span>
+<span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> scully</span><span style="color:#79B8FF"> --</span><span style="color:#79B8FF"> --scanRoutes</span><span style="color:#6A737D">  # generate static build and force checking new routes</span></span>
+<span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> scully</span><span style="color:#9ECBFF"> serve</span><span style="color:#6A737D">            # serve the scully results</span></span></code></pre>
+<p><img src="images/blog/scully/scully-markdown-projects.png" alt="the initial projects post generated with the Markdown schematic"></p><h2 id="the-asciidoc-file-handler-plugin">The <code>AsciiDoc</code> File Handler Plugin</h2>
+<p><em>Scully</em> provides another <em>File Handler Plugin</em> out-of-the-box: The <em>AsciiDoc</em> plugin.
+When you want to put the generated post files in a specific directory (not <code>blog</code>), you can define this via the <code>target</code> option.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">ng</span><span style="color:#9ECBFF"> g</span><span style="color:#9ECBFF"> @scullyio/init:post</span><span style="color:#79B8FF"> --name=</span><span style="color:#9ECBFF">"asciidoc example"</span><span style="color:#79B8FF"> --target=projects</span></span></code></pre>
+<p>The generated file will be a Markdown file initially.
+Let's change the file extension, rename it to <code>*.adoc</code> and add a bit of content after it has been generated:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#E1E4E8">:</span><span style="color:#79B8FF">title</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF"> 2020-01-21-projects</span></span>
+<span class="line"><span style="color:#E1E4E8">:</span><span style="color:#79B8FF">description</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF"> blog description</span></span>
+<span class="line"><span style="color:#E1E4E8">:</span><span style="color:#79B8FF">published</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF"> false</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">= 2020-01-21-projects</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">Let's show some source code!</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">.</span><span style="color:#79B8FF;font-weight:bold">index.html</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">[#src-listing]</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">[source,html]</span></span>
+<span class="line"><span style="color:#E1E4E8">----</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">span</span><span style="color:#E1E4E8">&gt;Hello World!&lt;/</span><span style="color:#85E89D">span</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;/</span><span style="color:#85E89D">div</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">----</span></span></code></pre>
+<p>And finally we build our project again and see if it works:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> build</span><span style="color:#6A737D">                   # Angular build</span></span>
+<span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> scully</span><span style="color:#79B8FF"> --</span><span style="color:#79B8FF"> --scanRoutes</span><span style="color:#6A737D">  # generate static build and force checking new routes</span></span>
+<span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> scully</span><span style="color:#9ECBFF"> serve</span><span style="color:#6A737D">            # serve the scully results</span></span></code></pre>
+<p>Great, as we can see: AsciiDoc files will be rendered as well out-of-the-box.</p><p><img src="images/blog/scully/scully-asciidoc-projects.png" alt="a scully rendered asciidoc file"></p><p>You can also define your own File Handler Plugin for other content formats.
+Check out the <a href="https://scully.io/docs/plugins#file-plugin">official docs</a> for it to see how it works.</p><h2 id="protect-your-routes-with-a-custom-plugin">Protect your routes with a custom plugin</h2>
+<p>Let's assume we have a protected section at our site that should only be visible for specific users.
+For sure we can secure this space using an <a href="https://angular.io/guide/router#milestone-5-route-guards">Angular Route Guard</a> that checks if we have the correct permissions to see the pages.</p><p><em>Scully</em> will by default try to identify all available app routes.
+In fact it will also try to visit the protected pages and pre-render the result.
+When <em>Scully</em> tries to do this, the Angular route guard kicks in and redirects us to an error or login page.
+The page shown after the redirect is the page <em>Scully</em> will see and render.
+This default behaviour is pretty okay, as <em>Scully</em> won't expose any protected information by creating static content from the protected data.
+However, on the other hand, we don't want to pre-render such pages at all, so we need a way to tell <em>Scully</em> what pages to exclude from the rendering.
+Another scenario you can imagine is when a page displays a prompt or a confirm dialog.
+When <em>Scully</em> tries to render such pages it runs into a timeout and cannot render the page:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span>...</span></span>
+<span class="line"><span>Puppeteer error while rendering "/secure" TimeoutError: Navigation timeout of 30000 ms exceeded</span></span></code></pre>
+<p>To prevent <em>Scully</em> from rendering specific pages we can simply create a custom plugin that will skip some routes.</p><p>To do so, we will create a new directory <code>extraPlugin</code> with the file <code>skip.js</code> inside:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#E1E4E8"> { </span><span style="color:#79B8FF">registerPlugin</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">log</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">yellow</span><span style="color:#E1E4E8"> } </span><span style="color:#F97583">=</span><span style="color:#B392F0"> require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'@scullyio/scully'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> skipPlugin</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">route</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">config</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {}) {</span></span>
+<span class="line"><span style="color:#B392F0">  log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">`Skip Route "${</span><span style="color:#B392F0">yellow</span><span style="color:#9ECBFF">(</span><span style="color:#E1E4E8">route</span><span style="color:#9ECBFF">)</span><span style="color:#9ECBFF">}"`</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#79B8FF"> Promise</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">resolve</span><span style="color:#E1E4E8">([]);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#B392F0"> validator</span><span style="color:#F97583"> =</span><span style="color:#F97583"> async</span><span style="color:#FFAB70"> conf</span><span style="color:#F97583"> =&gt;</span><span style="color:#E1E4E8"> [];</span></span>
+<span class="line"><span style="color:#B392F0">registerPlugin</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'router'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'skip'</span><span style="color:#E1E4E8">, skipPlugin, validator);</span></span>
+<span class="line"><span style="color:#79B8FF">module</span><span style="color:#E1E4E8">.</span><span style="color:#79B8FF">exports</span><span style="color:#E1E4E8">.skipPlugin </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> skipPlugin;</span></span></code></pre>
+<p>We will import the function <code>registerPlugin()</code> which will register a new router plugin called <code>skip</code>.
+The last parameter is the plugin function <code>skipPlugin()</code> that will return a promise resolving the routes.
+It receives the route and options for the route that should be handled.
+We will simply return an empty array as we won't proceed routes handled by the plugin.
+We can use the exported <code>log()</code> function from <em>Scully</em> to log the action in a nice way.</p><p>Last but not least we will use the <code>skip</code> plugin in our <code>scully.scully-blog.config.ts</code> configuration file and tell the plugin which routes to handle:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { ScullyConfig } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@scullyio/scully'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">require</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'./extraPlugin/skip'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> const</span><span style="color:#79B8FF"> config</span><span style="color:#F97583">:</span><span style="color:#B392F0"> ScullyConfig</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#6A737D">  // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">  routes: {</span></span>
+<span class="line"><span style="color:#6A737D">    // ...</span></span>
+<span class="line"><span style="color:#9ECBFF">    '/secure'</span><span style="color:#E1E4E8">: { type: </span><span style="color:#9ECBFF">'skip'</span><span style="color:#E1E4E8"> },</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
+<p>Checking the plugin by running <code>npm run scully</code> will output us the following result:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span> ☺   new Angular build imported</span></span>
+<span class="line"><span> ☺   Started servers in background</span></span>
+<span class="line"><span>Finding all routes in application.</span></span>
+<span class="line"><span>...</span></span>
+<span class="line"><span>Skip Route "/secure"</span></span>
+<span class="line"><span>...</span></span></code></pre>
+<p>Perfect! As you can see the route is ignored by <em>Scully</em> now.</p><p>You can have a look at a more detailed example in my <a href="https://github.com/d-koppenhagen/scully-blog-example">scully-blog-example</a> repository.</p><h2 id="conclusion-2">Conclusion</h2>
+<p>In this follow-up article you learned how to add a custom Markdown module to <em>Scully</em> and how you can use the AsciiDoc plugin for rendering <code>adoc</code> files.
+What is more, you can now handle protected routes by using a custom <em>Scully</em> route plugin.</p><p><strong>Thank you</strong></p><p>Special thanks go to <a href="https://twitter.com/jorgeucano">Jorge Cano</a> from the <em>Scully</em> core team and <a href="https://twitter.com/fmalcher01">Ferdinand Malcher</a> for revising this article.</p></div><!----></analog-markdown><!----><div _ngcontent-ng-c2245548422="" class="edit-on-github"><a _ngcontent-ng-c2245548422="" rel="noopener noreferrer" href="https://github.com/d-koppenhagen/k9n.dev/edit/main/src/content/blog/2020-03-dig-deeper-into-scully-ssg.md"> Auf GitHub bearbeiten </a></div><!----></section></div></article><!----></ng-component><!----></main><dk-contact _nghost-ng-c1148330124="" ngh="0"><footer _ngcontent-ng-c1148330124="" id="footer"><div _ngcontent-ng-c1148330124="" id="contact" class="inner"><h2 _ngcontent-ng-c1148330124="" class="major">Kontaktieren Sie mich</h2><p _ngcontent-ng-c1148330124=""> Haben Sie Fragen oder Anregungen? Nehmen Sie gern Kontakt mit mir auf! </p><ul _ngcontent-ng-c1148330124="" class="contact"><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="mailto:mail@k9n.dev">Mail: mail@k9n.dev</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen">GitHub: d-koppenhagen</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="bluesky" class="svg-inline--fa fa-bluesky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" rel="me" href="https://bsky.app/profile/k9n.dev"> Bluesky: k9n.dev </a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="mastodon" class="svg-inline--fa fa-mastodon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" rel="me" href="https://techhub.social/@k9n"> Mastodon: @k9n@techhub.social </a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://www.linkedin.com/in/d-koppenhagen/">LinkedIn: d-koppenhagen</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="xing" class="svg-inline--fa fa-xing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M162.7 210c-1.8 3.3-25.2 44.4-70.1 123.5-4.9 8.3-10.8 12.5-17.7 12.5H9.8c-7.7 0-12.1-7.5-8.5-14.4l69-121.3c.2 0 .2-.1 0-.3l-43.9-75.6c-4.3-7.8.3-14.1 8.5-14.1H100c7.3 0 13.3 4.1 18 12.2l44.7 77.5zM382.6 46.1l-144 253v.3L330.2 466c3.9 7.1.2 14.1-8.5 14.1h-65.2c-7.6 0-13.6-4-18-12.2l-92.4-168.5c3.3-5.8 51.5-90.8 144.8-255.2 4.6-8.1 10.4-12.2 17.5-12.2h65.7c8 0 12.3 6.7 8.5 14.1z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://www.xing.com/profile/Danny_Koppenhagen">Xing: Danny_Koppenhagen</a></li></ul><ul _ngcontent-ng-c1148330124="" class="copyright"><li _ngcontent-ng-c1148330124="">© 2023 by Danny Koppenhagen</li><li _ngcontent-ng-c1148330124="">Design: <a _ngcontent-ng-c1148330124="" href="https://html5up.net">HTML5 UP</a></li><li _ngcontent-ng-c1148330124=""> Vorschläge? Feedback? Bugs? <a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen/k9n.dev/issues"> Stell ein Issue ein</a>, <a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen/k9n.dev/pulls">sende mir einen PR</a> oder <a _ngcontent-ng-c1148330124="" routerlink="/contact" href="/contact" jsaction="click:;">kontaktiere mich</a></li></ul></div></footer></dk-contact><!----></dk-root>
+    <script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["keydown","click"],["focus","blur"]);</script>
+  
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"7":"t0","8":"t1","9":"t2"},"c":{"7":[{"i":"t0","r":1}],"8":[],"9":[{"i":"t2","r":1}]}},{"t":{"5":"t27"},"c":{"5":[{"i":"t27","r":1,"x":2}]}},{"c":{"0":[]}},{"t":{"0":"t18"},"c":{"0":[{"i":"t18","r":1,"t":{"5":"t19","6":"t20","7":"t25","8":"t26","11":"t28","12":"t29"},"c":{"5":[{"i":"t19","r":1}],"6":[{"i":"t20","r":1,"t":{"2":"t21","7":"t22","8":"t23"},"c":{"2":[{"i":"t21","r":1}],"7":[{"i":"t22","r":1,"x":10}],"8":[]}}],"7":[{"i":"t25","r":1,"t":{"1":"t30","2":"t31","3":"t32"},"c":{"1":[{"i":"t30","r":1}],"2":[{"i":"t31","r":1}],"3":[{"i":"t32","r":1}]}}],"8":[{"i":"t26","r":1}],"11":[],"12":[{"i":"t29","r":1}]}}]}},{"c":{"4":[{"i":"c2245548422","r":1}],"6":[]},"t":{"6":"t16"}}]}</script></body></html>

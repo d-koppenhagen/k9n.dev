@@ -1,0 +1,1578 @@
+<!DOCTYPE html><html lang="de"><head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css" id="fa-auto-css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}</style><link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Apple PWA Support -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-512x512.png">
+    <link href="icons/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Basic Site Information -->
+    <title>k9n.dev | Speed up your Angular schematics development with useful helper functions</title>
+    
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Danny Koppenhagen">
+
+    <!-- Twitter Card -->
+    
+    
+    
+    
+    
+
+    <!-- Open Graph Profile -->
+    
+    
+    
+    
+    <meta property="profile:first_name" content="Danny">
+    <meta property="profile:last_name" content="Koppenhagen">
+    <meta property="profile:gender" content="male">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#e7e7e7">
+    <script type="module" crossorigin="" src="/assets/index-DPqAJY-c.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DzfkAIf7.css">
+  <style>.menu-dark[_ngcontent-ng-c2099545970] {
+  filter: alpha(opacity=90);
+}
+.menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970] {
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.9;
+  margin: 0px 1px;
+}
+.menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970]:hover, .menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970]:focus {
+  background-color: rgb(67.1351351351, 71.5135135135, 94.8648648649);
+  box-shadow: inset 0 0 0 2px #5e7959;
+}
+.menu-dark[_ngcontent-ng-c2099545970]:focus    > button[_ngcontent-ng-c2099545970] {
+  box-shadow: inset 0 0 0 2px #ada789;
+}
+
+@media screen and (max-width: 480px) {
+  .hidden-small[_ngcontent-ng-c2099545970] {
+    visibility: hidden;
+  }
+}</style><style>.header-title[_ngcontent-ng-c2421498523] {
+  background-image: url("/images/bg-triangles.jpg");
+  background-size: cover;
+  font-size: 5em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.2901960784);
+}
+
+.sub-header-title[_ngcontent-ng-c2421498523] {
+  color: #2e3141;
+  font-size: 1.6em !important;
+  margin-bottom: 0.5em;
+  line-height: 1.3 !important;
+}
+
+.sub-header[_ngcontent-ng-c2421498523] {
+  color: #2e3141;
+  font-size: 1.2em;
+}
+
+#banner[_ngcontent-ng-c2421498523] {
+  background-image: url("/images/dk-header.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-color: #fdfdfd;
+  padding: 9em 0 12em 0;
+  animation: _ngcontent-ng-c2421498523_headerFadeIn 3s;
+}
+
+@keyframes _ngcontent-ng-c2421498523_headerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#logo[_ngcontent-ng-c2421498523] {
+  position: absolute;
+  top: 5px;
+}
+#logo[_ngcontent-ng-c2421498523]   img[_ngcontent-ng-c2421498523] {
+  width: 70px;
+  animation: _ngcontent-ng-c2421498523_move-to-top 1s ease, _ngcontent-ng-c2421498523_rotate 4s ease 1;
+}
+
+#logo[_ngcontent-ng-c2421498523]:focus, 
+h1[_ngcontent-ng-c2421498523]:focus {
+  outline: 1px solid rgba(185, 167, 167, 0.4);
+}
+
+@keyframes _ngcontent-ng-c2421498523_rotate {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+@keyframes _ngcontent-ng-c2421498523_move-to-top {
+  0% {
+    top: 100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  #banner[_ngcontent-ng-c2421498523] {
+    background-position: right -200px top;
+  }
+}
+@media screen and (max-width: 980px) {
+  #banner[_ngcontent-ng-c2421498523] {
+    background-size: contain;
+    padding: 6em 0 10em 0;
+    background-position: right -200px top;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 736px) {
+  .sub-header[_ngcontent-ng-c2421498523] {
+    font-size: 1em !important;
+    padding-right: 110px;
+  }
+  #banner[_ngcontent-ng-c2421498523] {
+    padding: 6em 0 5em 0;
+  }
+}
+@media screen and (max-width: 620px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 3.5em;
+    padding-right: 40vw;
+  }
+  #banner[_ngcontent-ng-c2421498523] {
+    background-size: cover;
+    background-position: right -180px top;
+  }
+}
+@media screen and (max-width: 560px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 3em;
+    padding-right: 50vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    opacity: 0.7;
+    font-size: 2.5em;
+    padding-right: 50vw;
+  }
+}</style><style>@media screen and (min-width: 736px) {
+  ul.contact[_ngcontent-ng-c1148330124] {
+    columns: 2;
+    width: 100% !important;
+  }
+}</style><style>.wrapper[_ngcontent-ng-c2245548422] {
+  margin-top: 0;
+}
+
+h1[_ngcontent-ng-c2245548422] {
+  font-size: 1.4em;
+}
+
+.extra-info[_ngcontent-ng-c2245548422] {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.actions[_ngcontent-ng-c2245548422] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.published-at[_ngcontent-ng-c2245548422], 
+.external-links[_ngcontent-ng-c2245548422], 
+.edit-on-github[_ngcontent-ng-c2245548422] {
+  margin: 30px 0;
+}
+
+.published-at[_ngcontent-ng-c2245548422] {
+  height: 50px;
+}
+
+.published-at[_ngcontent-ng-c2245548422] {
+  display: flex;
+  align-items: center;
+  line-height: 1.2em;
+}
+.published-at[_ngcontent-ng-c2245548422]   .published-at-link[_ngcontent-ng-c2245548422] {
+  text-decoration: none;
+  border: none;
+  min-width: 120px;
+}
+.published-at[_ngcontent-ng-c2245548422]   .published-at-link[_ngcontent-ng-c2245548422]   .published-at-logo[_ngcontent-ng-c2245548422] {
+  padding-right: 20px;
+  max-height: 60px;
+}
+
+.external-article[_ngcontent-ng-c2245548422] {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.extra-section[_ngcontent-ng-c2245548422]   .actions[_ngcontent-ng-c2245548422] {
+  padding-bottom: 2rem;
+}
+
+span.image[_ngcontent-ng-c2245548422]    > img.thumbnail[_ngcontent-ng-c2245548422] {
+  max-width: 80px;
+}
+
+@media screen and (max-width: 560px) {
+  .blog-footer[_ngcontent-ng-c2245548422] {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: #2e3141;
+    opacity: 0.9;
+    z-index: 1;
+    padding: 0 35px;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > h2[_ngcontent-ng-c2245548422], 
+   .blog-footer[_ngcontent-ng-c2245548422]   h3[_ngcontent-ng-c2245548422] {
+    display: none;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > ul[_ngcontent-ng-c2245548422] {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > ul[_ngcontent-ng-c2245548422]    > li[_ngcontent-ng-c2245548422] {
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .extra-info[_ngcontent-ng-c2245548422] {
+    display: block;
+  }
+}
+@media screen and (max-width: 360px) {
+  .blog-footer[_ngcontent-ng-c2245548422] {
+    padding: 0 24px;
+  }
+}
+.blog-header[_ngcontent-ng-c2245548422]   img[_ngcontent-ng-c2245548422] {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 1ch;
+  overflow: hidden;
+  box-shadow: 0 3px 2px hsla(0, 0%, 0%, 0.02), 0 7px 5px hsla(0, 0%, 0%, 0.03), 0 13px 10px hsla(0, 0%, 0%, 0.04), 0 22px 18px hsla(0, 0%, 0%, 0.05), 0 42px 33px hsla(0, 0%, 0%, 0.06), 0 100px 80px hsla(0, 0%, 0%, 0.07);
+  margin-bottom: 1rem;
+}</style><meta name="description" content="Angular CLI schematics offer us a way to add, scaffold and update app-related files and modules. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal."><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@d_koppenhagen"><meta name="twitter:creator" content="@d_koppenhagen"><meta name="twitter:title" content="Speed up your Angular schematics development with useful helper functions"><meta name="twitter:description" content="Angular CLI schematics offer us a way to add, scaffold and update app-related files and modules. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal."><meta name="twitter:image" content="https://k9n.dev/images/blog/schematics-helpers/schematics-helpers.jpg"><meta property="og:title" content="Speed up your Angular schematics development with useful helper functions"><meta property="og:description" content="Angular CLI schematics offer us a way to add, scaffold and update app-related files and modules. In this article I will guide you through some common but currently undocumented helper functions you can use to achieve your goal."><meta name="og:image" content="https://k9n.dev/images/blog/schematics-helpers/schematics-helpers.jpg"><meta name="og:url" content="https://k9n.dev/blog/2020-09-angular-schematics-common-helpers"></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-HY3CPEEH1Z"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HY3CPEEH1Z');
+      </script>
+  <body id="page-wrapper" class="mat-typography"><!--nghm-->
+    <!-- Angular -->
+    <dk-root ng-version="21.0.0" ngh="4" ng-server-context="ssr-analog"><dk-navbar _nghost-ng-c2099545970="" ngh="0"><nav _ngcontent-ng-c2099545970="" id="navigation" class="menu-dark" jsaction="keydown:;"><button _ngcontent-ng-c2099545970="" role="button" aria-label="Menü öffnen" aria-controls="menu" class="burger-menu" aria-expanded="false" jsaction="click:;"><fa-icon _ngcontent-ng-c2099545970="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg></fa-icon></button></nav></dk-navbar><dk-header _nghost-ng-c2421498523="" ngh="1"><header _ngcontent-ng-c2421498523="" id="banner"><div _ngcontent-ng-c2421498523="" class="inner"><a _ngcontent-ng-c2421498523="" routerlink="/" aria-label="Zur Startseite" title="Startseite" id="logo" href="/" jsaction="click:;"><img _ngcontent-ng-c2421498523="" src="images/logo_header.png" alt="Logo"></a><h1 _ngcontent-ng-c2421498523="" aria-label="k9n.dev" class="header-title" jsaction="focus:;blur:;"><span _ngcontent-ng-c2421498523="">k</span><span _ngcontent-ng-c2421498523="" class="headline-expanded">9</span><!----><!----><span _ngcontent-ng-c2421498523="">n.dev</span><!----></h1><p _ngcontent-ng-c2421498523="" class="sub-header-title">Danny Koppenhagen</p><p _ngcontent-ng-c2421498523="" class="sub-header">Entwickler, IT-Berater, Buchautor</p></div></header></dk-header><main><router-outlet></router-outlet><ng-component _nghost-ng-c2245548422="" ngh="3"><article _ngcontent-ng-c2245548422="" class="wrapper alt" lang="en"><div _ngcontent-ng-c2245548422="" class="inner"><h1 _ngcontent-ng-c2245548422="">Speed up your Angular schematics development with useful helper functions</h1><section _ngcontent-ng-c2245548422="" class="blog-header"><img _ngcontent-ng-c2245548422="" alt="" class="adaptive-glass" src="images/blog/schematics-helpers/schematics-helpers.jpg"><!----></section><section _ngcontent-ng-c2245548422="" class="extra-section"><div _ngcontent-ng-c2245548422="" class="extra-info"><span _ngcontent-ng-c2245548422=""><time _ngcontent-ng-c2245548422="" datetime="2001-05-15 19:00">May 19, 2021</time></span><!----><p _ngcontent-ng-c2245548422="" class="sub-heading">Stichwörter</p></div><div _ngcontent-ng-c2245548422="" class="actions"><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular" jsaction="click:;"> Angular </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular CLI" jsaction="click:;"> Angular CLI </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Schematics" jsaction="click:;"> Schematics </button></span><!----></div><div _ngcontent-ng-c2245548422="" class="published-at"><div _ngcontent-ng-c2245548422=""><a _ngcontent-ng-c2245548422="" class="published-at-link" href="https://indepth.dev/speed-up-your-angular-schematics-development-with-useful-helper-functions" hreflang="en" aria-label="Original veröffentlicht auf inDepth.dev"><img _ngcontent-ng-c2245548422="" alt="" class="published-at-logo" src="images/InDepthdev-white.svg"><!----></a></div><div _ngcontent-ng-c2245548422=""> Original veröffentlicht auf <a _ngcontent-ng-c2245548422="" href="https://indepth.dev/speed-up-your-angular-schematics-development-with-useful-helper-functions" hreflang="en">inDepth.dev</a>. </div></div><!----></section><!----><section _ngcontent-ng-c2245548422="" class="external-links"><a _ngcontent-ng-c2245548422="" href="https://dev.to/dkoppenhagen/speed-up-your-angular-schematics-development-with-useful-helper-functions-1kb2" hreflang="en">Dev.to</a><!----><!----><!----></section><!----><!----><section _ngcontent-ng-c2245548422="" class="blog-content"><analog-markdown _ngcontent-ng-c2245548422="" classes="markdown-content" lang="en" ngh="2" jsaction="click:;"><div class="markdown-content"><p>Angular CLI schematics offer us a way to add, scaffold and update app-related files and modules. However, there are some common things we will probably want integrate in our schematics: updating your <code>package.json</code> file, adding or removing an Angular module or updating component imports.</p><p>Currently, the way of authoring an Angular Schematic is documented <a href="https://angular.io/guide/schematics-authoring">on angular.io</a>.
+However, there is one big thing missing there: the way of integrating typical and repeating tasks.
+The Angular CLI itself uses schematics for e.g. generating modules and components, adding imports or modifying the <code>package.json</code> file.
+Under the hood each of the schematics uses some very common utils which are not yet documented but available for all developers anyway.
+In the past, I've seen some Angular CLI Schematic projects where people were trying to implement almost the same common util methods on their own.
+However, since some of these are already implemented in the Angular CLI, I want to show you some of those typical helpers that you can use for you Angular CLI Schematic project to prevent any pitfalls.</p><h2 id="️-attention-not-officially-supported">⚠️ Attention: not officially supported</h2>
+<p>The helper functions I present you in this article are neither documented nor officially supported, and they may change in the future.
+<a href="https://twitter.com/AlanAgius4">Alan Agius</a>, member of the Angular CLI core team replied in a <a href="https://github.com/angular/angular-cli/issues/15335#issuecomment-660609283">related issue (#15335)</a> for creating a public schematics API reference:</p><blockquote>
+<p>[...] those utils are not considered as part of the public API and might break without warning in any release.</p></blockquote>
+<p>So, there are plans to provide some utilities via a public API but this is still in the planning stage.
+While things evolve, it's my intention to keep this article as up-to-date as possible.</p><blockquote>
+<p>The following Angular CLI schematics util functions are based on the Angular CLI version <code>12.0.0</code>.</p></blockquote>
+<p>If you use these functions and they will break in the future, you can check out the <a href="https://github.com/angular/angular-cli/tree/master/packages/schematics/angular/utility">source code changes</a> for the utility functions and adjust your code.</p><h2 id="-examples-and-playground-on-github">🕹 Examples and playground on GitHub</h2>
+<p>To follow and try out the examples I present you in this article, I <a href="https://github.com/d-koppenhagen/schematics-helpers-playground">prepared a playground repository on GitHub</a>.
+Clone this repo and check out the <code>README.md</code> inside to get started with the playground. 🚀</p><h2 id="create-an-angular-schematics-example-project">Create an Angular schematics example project</h2>
+<p>First things first: We need a project where we can try things out.
+You can either use an existing schematics project or simply create a new blank one:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> @angular-devkit/schematics-cli</span><span style="color:#9ECBFF"> blank</span><span style="color:#79B8FF"> --name=playground</span></span></code></pre>
+<blockquote>
+<p>If you are not familar with the basics of authoring schematics, I recommend you to read the <a href="https://angular.io/guide/schematics-authoring">Angular Docs</a> and the <a href="https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4">blog post <em>"Total Guide To Custom Angular schematics"</em> by Tomas Trajan</a> first as well as the <a href="https://indepth.dev/angular-schematics-from-0-to-publishing-your-own-library-i">article series "Angular Schematics from 0 to publishing your own library" by Natalia Venditto</a> first.</p></blockquote>
+<p>After setting up the new blank project we should have this file available: <code>src/playground/index.ts</code>.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { Rule, SchematicContext, Tree } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> playground</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">_options</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">tree</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Tree</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">_context</span><span style="color:#F97583">:</span><span style="color:#B392F0"> SchematicContext</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'schematic works'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> tree;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>This is the base for the following examples and explanations.
+Please make sure that you can execute the blank schematic by calling it on the console:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> @angular-devkit/schematics-cli</span><span style="color:#9ECBFF"> .:playground</span></span></code></pre>
+<p>or if you installed the schematics CLI globally via <code>npm i @angular-devkit/schematics-cli</code>:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">schematics</span><span style="color:#9ECBFF"> .:playground</span></span></code></pre>
+<p>The <code>.</code> refers to the current directory where our schematics project lives.</p><p><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/playground">Check out the basic example in the playground repository on GitHub</a></p><h3 id="basic-types">Basic types</h3>
+<p>In case you are not familiar with the structure of schematics, I will just explain some very basic things shortly:</p><ul>
+<li>A <strong><code>Tree</code></strong> is the structured virtual representation of every file in the workspace which we apply the schematic to.</li>
+<li>A <strong><code>Rule</code></strong> is called with a <code>Tree</code> and a <code>SchematicContext</code>. The <code>Rule</code> is supposed to make changes on the <code>Tree</code> and returns the adjusted <code>Tree</code>.</li>
+<li>The <strong><code>SchematicContext</code></strong> contains information necessary for the schematics to execute some rules.</li>
+</ul>
+<h3 id="install-the-helpers-from-schematicsangular">Install the helpers from <code>@schematics/angular</code></h3>
+<p>A second thing we need to do is to install the package <code>@schematics/angular</code> which contains all the utils we need for the next steps.
+This package contains all the schematics the Angular CLI uses by itself when running commands like <code>ng generate</code> or <code>ng new</code> etc.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> i</span><span style="color:#79B8FF"> --save</span><span style="color:#9ECBFF"> @schematics/angular</span></span></code></pre>
+<h2 id="changing-the-packagejson-get-add-and-remove-dev--peer--dependencies">Changing the <code>package.json</code>: Get, Add and Remove (dev-, peer-) dependencies</h2>
+<p>A very common thing when authoring a schematic is adding a dependency to the <code>package.json</code> file.
+Of course, we can implement a function that parses and writes to/from our JSON file.
+But why should we solve a problem that's already solved?</p><p>For this, we can use the functions provided by <code>@schematics/angular/utility/dependencies</code> to handle dependency operations.
+The function <code>addPackageJsonDependency()</code> allows us to add a dependency object of type <code>NodeDependency</code> to the <code>package.json</code> file.
+The property <code>type</code> must contain a value of the <code>NodeDependencyType</code> enum.
+Its values represent the different sections of a <code>package.json</code> file:</p><ul>
+<li><code>dependencies</code>,</li>
+<li><code>devDependencies</code>,</li>
+<li><code>peerDependencies</code> and</li>
+<li><code>optionalDependencies</code>.</li>
+</ul>
+<p>The first parameter to this util function is the <code>Tree</code> with all its files.
+The function will not just append the dependency to the appropriate section, it will also insert the dependency at the right position, so that the dependencies list is ordered ascending by its keys.</p><p>We can use the <code>getPackageJsonDependency()</code> function to request the dependency configuration as a <code>NodeDependency</code> object.
+The good thing here is: We don't need to know in which of the sections a dependency is located. It will look up the dependency in sections of the <code>package.json</code> file: <code>dependencies</code>, <code>devDependencies</code>, <code>peerDependencies</code> and <code>optionalDependencies</code>.</p><p>The third function I want to show is <code>removePackageJsonDependency()</code>.
+Just like <code>getPackageJsonDependency()</code>, it can be called with a <code>Tree</code> and the package name and it will remove this dependency from the <code>package.json</code> file.</p><p>By default, all these functions will use the <code>package.json</code> file in the root of the tree, but we can pass a third parameter containing a specific path to another <code>package.json</code> file.</p><p>Last but not least we don't want our users to manually run <code>npm install</code> on the console after adding dependencies.
+Therefore, we can add a new <code>NodePackageInstallTask</code> via the <code>addTask</code> method on our <code>context</code>.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { Rule, SchematicContext, Tree } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { NodePackageInstallTask } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics/tasks'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  NodeDependency,</span></span>
+<span class="line"><span style="color:#E1E4E8">  NodeDependencyType,</span></span>
+<span class="line"><span style="color:#E1E4E8">  getPackageJsonDependency,</span></span>
+<span class="line"><span style="color:#E1E4E8">  addPackageJsonDependency,</span></span>
+<span class="line"><span style="color:#E1E4E8">  removePackageJsonDependency,</span></span>
+<span class="line"><span style="color:#E1E4E8">} </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@schematics/angular/utility/dependencies'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> playground</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">_options</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">tree</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Tree</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">context</span><span style="color:#F97583">:</span><span style="color:#B392F0"> SchematicContext</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> dep</span><span style="color:#F97583">:</span><span style="color:#B392F0"> NodeDependency</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">      type: NodeDependencyType.Dev,</span></span>
+<span class="line"><span style="color:#E1E4E8">      name: </span><span style="color:#9ECBFF">'moment'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      version: </span><span style="color:#9ECBFF">'~2.27.0'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      overwrite: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    };</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">    addPackageJsonDependency</span><span style="color:#E1E4E8">(tree, dep);</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">getPackageJsonDependency</span><span style="color:#E1E4E8">(tree, </span><span style="color:#9ECBFF">'moment'</span><span style="color:#E1E4E8">))</span></span>
+<span class="line"><span style="color:#6A737D">    // { type: 'devDependencies', name: 'moment', version: '~2.27.0' }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">    removePackageJsonDependency</span><span style="color:#E1E4E8">(tree, </span><span style="color:#9ECBFF">'protractor'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">getPackageJsonDependency</span><span style="color:#E1E4E8">(tree, </span><span style="color:#9ECBFF">'protractor'</span><span style="color:#E1E4E8">))</span></span>
+<span class="line"><span style="color:#6A737D">    // null</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    context.</span><span style="color:#B392F0">addTask</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">new</span><span style="color:#B392F0"> NodePackageInstallTask</span><span style="color:#E1E4E8">(), []);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> tree;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>To really check that the <code>NodePackageInstallTask</code> is properly executed, you need to disable the schematics debug mode that's enabled by default during development and local execution:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">schematics</span><span style="color:#9ECBFF"> .:playground</span><span style="color:#79B8FF"> --debug=false</span></span></code></pre>
+<ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/dependencies.ts">Check out the implementation of the dependency operations in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/dependencies">Check out the examples in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="add-content-on-a-specific-position">Add content on a specific position</h2>
+<p>Sometimes we need to change some contents of a file.
+Independently of the type of a file, we can use the <code>InsertChange</code> class.
+This class returns a change object which contains the content to be added and the position where the change is being inserted.</p><p>In the following example we will create a new file called <code>my-file.extension</code> with the content <code>const a = 'foo';</code> inside the virtual tree.
+First, we will instantiate a new <code>InsertChange</code> with the file path, the position where we want to add the change and finally the content we want to add.
+The next step for us is to start the update process for the file using the <code>beginUpdate()</code> method on our tree.
+This method returns an object of type <code>UpdateRecorder</code>.
+We can now use the <code>insertLeft()</code> method and hand over the position and the content (<code>toAdd</code>) from the <code>InsertChange</code>.
+The change is now marked but not proceeded yet.
+To really update the file's content we need to call the <code>commitUpdate()</code> method on our tree with the <code>exportRecorder</code>.
+When we now call <code>tree.get(filePath)</code> we can log the file's content and see that the change has been proceeded.
+To delete a file inside the virtual tree, we can use the <code>delete()</code> method with the file path on the tree.</p><p>Let's have a look at an implementation example:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { Rule, SchematicContext, Tree } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics/'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { InsertChange } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@schematics/angular/utility/change'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> playground</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">_options</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">tree</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Tree</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">_context</span><span style="color:#F97583">:</span><span style="color:#B392F0"> SchematicContext</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> filePath</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'my-file.extension'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    tree.</span><span style="color:#B392F0">create</span><span style="color:#E1E4E8">(filePath, </span><span style="color:#9ECBFF">`const a = 'foo';`</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // insert a new change</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> insertChange</span><span style="color:#F97583"> =</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> InsertChange</span><span style="color:#E1E4E8">(filePath, </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'</span><span style="color:#79B8FF">\n</span><span style="color:#9ECBFF">const b = </span><span style="color:#79B8FF">\'</span><span style="color:#9ECBFF">bar</span><span style="color:#79B8FF">\'</span><span style="color:#9ECBFF">;'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> exportRecorder</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> tree.</span><span style="color:#B392F0">beginUpdate</span><span style="color:#E1E4E8">(filePath);</span></span>
+<span class="line"><span style="color:#E1E4E8">    exportRecorder.</span><span style="color:#B392F0">insertLeft</span><span style="color:#E1E4E8">(insertChange.pos, insertChange.toAdd);</span></span>
+<span class="line"><span style="color:#E1E4E8">    tree.</span><span style="color:#B392F0">commitUpdate</span><span style="color:#E1E4E8">(exportRecorder);</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(tree.</span><span style="color:#B392F0">get</span><span style="color:#E1E4E8">(filePath)?.content.</span><span style="color:#B392F0">toString</span><span style="color:#E1E4E8">())</span></span>
+<span class="line"><span style="color:#6A737D">    // const a = 'foo';</span></span>
+<span class="line"><span style="color:#6A737D">    // const b = 'bar';</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    tree.</span><span style="color:#B392F0">delete</span><span style="color:#E1E4E8">(filePath); </span><span style="color:#6A737D">// cleanup (if not running schematic in debug mode)</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> tree;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/change.ts">Check out the implementation for <code>InsertChange</code> in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/insert">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="determine-relative-path-to-the-project-root">Determine relative path to the project root</h2>
+<p>You might want to determine the relative path to your project root e.g. for using it in a template you want to apply in some location of your application.
+To determine the correct relative import path string for the target, you can use the helper function <code>relativePathToWorkspaceRoot()</code>.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  Rule,</span></span>
+<span class="line"><span style="color:#E1E4E8">  SchematicContext,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Tree,</span></span>
+<span class="line"><span style="color:#E1E4E8">  url,</span></span>
+<span class="line"><span style="color:#E1E4E8">  apply,</span></span>
+<span class="line"><span style="color:#E1E4E8">  template,</span></span>
+<span class="line"><span style="color:#E1E4E8">  mergeWith</span></span>
+<span class="line"><span style="color:#E1E4E8">} </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics/'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { relativePathToWorkspaceRoot } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@schematics/angular/utility/paths'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> playground</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">_options</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">_tree</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Tree</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">_context</span><span style="color:#F97583">:</span><span style="color:#B392F0"> SchematicContext</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> nonRootPathDefinition</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'foo/bar/'</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">// "./foo/bar" | "foo/bar/" work also</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> rootPathDefinition</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> ''</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">// "." | "./" work also</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">relativePathToWorkspaceRoot</span><span style="color:#E1E4E8">(nonRootPathDefinition));</span></span>
+<span class="line"><span style="color:#6A737D">    // "../.."</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">relativePathToWorkspaceRoot</span><span style="color:#E1E4E8">(rootPathDefinition));</span></span>
+<span class="line"><span style="color:#6A737D">    // "."</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> sourceTemplates</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> url</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'./files'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#B392F0"> mergeWith</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#B392F0">      apply</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">        sourceTemplates, [</span></span>
+<span class="line"><span style="color:#B392F0">          template</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">            relativePathToWorkspaceRoot: </span><span style="color:#B392F0">relativePathToWorkspaceRoot</span><span style="color:#E1E4E8">(nonRootPathDefinition),</span></span>
+<span class="line"><span style="color:#E1E4E8">          }),</span></span>
+<span class="line"><span style="color:#E1E4E8">        ]</span></span>
+<span class="line"><span style="color:#E1E4E8">      )</span></span>
+<span class="line"><span style="color:#E1E4E8">    );</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>If you have e.g. a JSON file template in the directory <code>files</code> and you want to insert the path, you can use the helper function in the template as follows:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "foo"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"&lt;%= relativePathToWorkspaceRoot %&gt;/my-file-ref.json"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>For more details about how to use and apply templates in your own schematics, check out the <a href="https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4">blog post by Tomas Trajan: <em>"Total Guide To Custom Angular schematics"</em></a> and the <a href="https://indepth.dev/angular-schematics-from-0-to-publishing-your-own-library-i">article series <em>"Angular Schematics from 0 to publishing your own library"</em> by Natalia Venditto</a>.</p><ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/paths.ts">Check out the implementation for <code>relativePathToWorkspaceRoot()</code> in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/relative-path">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="add-typescript-imports">Add TypeScript imports</h2>
+<p>In the previous section we learned how to add content to some file.
+However, this way for changing a file isn't the best and only works well when we know the exact position where to add some content.
+Now imagine a user changes the format of the file before: This would lead to problems with finding the correct file position.</p><p>In many cases we want to modify TypeScript files and insert code into them.
+And indeed there are also lots of utils that will help us to manage such operations.</p><p>Imagine you want the schematic to import the class <code>Bar</code> in a specific file from the file <code>bar.ts</code>;
+You could simply add the whole import line but there are edge cases:
+What if the target file already contains an import or even a default import from <code>bar.ts</code>.
+In that case we would have multiple import lines for <code>bar.ts</code> which causes problems.</p><p>Luckily there is another great helper that takes care of adding imports or updating existing ones.
+The function <code>insertImport()</code> needs the source file to update and the path to the file followed by the import name and the file path for the import to be added.
+The last parameter is optional – if set to <code>true</code>, the import will be added as a default import.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#79B8FF"> *</span><span style="color:#F97583"> as</span><span style="color:#E1E4E8"> ts </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'typescript'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { Rule, SchematicContext, Tree } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics/'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { insertImport } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@schematics/angular/utility/ast-utils'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { InsertChange } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@schematics/angular/utility/change'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> playground</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">_options</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">tree</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Tree</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">_context</span><span style="color:#F97583">:</span><span style="color:#B392F0"> SchematicContext</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> filePath</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'some-file.ts'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> fileContent</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> `import { Foo } from 'foo';</span></span>
+<span class="line"><span style="color:#9ECBFF">const bar = 'bar;</span></span>
+<span class="line"><span style="color:#9ECBFF">`</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    tree.</span><span style="color:#B392F0">create</span><span style="color:#E1E4E8">(filePath, fileContent);</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> source</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> ts.</span><span style="color:#B392F0">createSourceFile</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">      filePath,</span></span>
+<span class="line"><span style="color:#E1E4E8">      fileContent,</span></span>
+<span class="line"><span style="color:#E1E4E8">      ts.ScriptTarget.Latest,</span></span>
+<span class="line"><span style="color:#79B8FF">      true</span></span>
+<span class="line"><span style="color:#E1E4E8">    );</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> updateRecorder</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> tree.</span><span style="color:#B392F0">beginUpdate</span><span style="color:#E1E4E8">(filePath);</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> change</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> insertImport</span><span style="color:#E1E4E8">(source, filePath, </span><span style="color:#9ECBFF">'Bar'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'./bar'</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (change </span><span style="color:#F97583">instanceof</span><span style="color:#B392F0"> InsertChange</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">      updateRecorder.</span><span style="color:#B392F0">insertRight</span><span style="color:#E1E4E8">(change.pos, change.toAdd);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">    tree.</span><span style="color:#B392F0">commitUpdate</span><span style="color:#E1E4E8">(updateRecorder);</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(tree.</span><span style="color:#B392F0">get</span><span style="color:#E1E4E8">(filePath)?.content.</span><span style="color:#B392F0">toString</span><span style="color:#E1E4E8">())</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> tree;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>The example above will add the content <code>import Bar from './bar';</code> right before the constant.
+As we marked it as default import, the import name is not put in curly braces (<code>{ }</code>).</p><ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/change.ts">Check out the implementation for <code>insertImport()</code> in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/import">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="update-ngmodule">Update <code>NgModule</code></h2>
+<p>Now we know how we can modify TypeScript imports using the util functions.
+However, just importing something isn't enough in most cases.
+There are common things like importing a component and adding it to the <code>NgModule</code> in the <code>declarations</code> array or inserting a module in the <code>imports</code> section.
+Luckily, there are some helpers provided for these operations.
+These function also based on the <code>insertImport()</code> function, so that they will handle existing file imports and just update the import lists accordingly.</p><h3 id="add-a-declaration-to-a-module">Add a declaration to a module</h3>
+<p>The first thing I want to show you is how you can add a component to the <code>declarations</code> of an <code>NgModule</code>.
+For this, let's assume you create a schematic that adds a new <code>DashboardComponent</code> to your project.
+You don't need to add the import manually and then determine the right place to insert the component to the <code>declarations</code> of the <code>NgModule</code>.
+Instead, you can use the <code>addDeclarationToModule()</code> function exported from <code>@schematics/angular/utility/ast-utils</code>.</p><p>In the following example we will create an <code>AppModule</code> from the <code>moduleContent</code> using <code>ts.createSourceFile()</code> first.
+Then we will register the <code>updateRecorder</code> as learned in the examples before.
+Now we call the <code>addDeclarationToModule()</code> function with the source file and the module path followed by the name of the component we want to import and the relative path to the module where we can find the component.
+As a result it returns us an array of <code>Change</code> objects that contain the positions and the contents for the change.
+Finally, we can handle these changes one-by-one by iterating over the array.
+For all changes of type <code>InsertChange</code> we can now call the method <code>updateRecorder.insertleft()</code> with the position of the change and the content to be added.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#79B8FF"> *</span><span style="color:#F97583"> as</span><span style="color:#E1E4E8"> ts </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'typescript'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { Rule, SchematicContext, Tree } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics/'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { addDeclarationToModule } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@schematics/angular/utility/ast-utils'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { InsertChange } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@schematics/angular/utility/change'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> playground</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">_options</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">tree</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Tree</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">_context</span><span style="color:#F97583">:</span><span style="color:#B392F0"> SchematicContext</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> modulePath</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'app.module.ts'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> moduleContent</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> `import { BrowserModule } from '@angular/platform-browser';</span></span>
+<span class="line"><span style="color:#9ECBFF">import { NgModule } from '@angular/core';</span></span>
+<span class="line"><span style="color:#9ECBFF">import { AppComponent } from './app.component';</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">@NgModule({</span></span>
+<span class="line"><span style="color:#9ECBFF">  declarations: [</span></span>
+<span class="line"><span style="color:#9ECBFF">    AppComponent</span></span>
+<span class="line"><span style="color:#9ECBFF">  ],</span></span>
+<span class="line"><span style="color:#9ECBFF">  imports: [</span></span>
+<span class="line"><span style="color:#9ECBFF">    BrowserModule</span></span>
+<span class="line"><span style="color:#9ECBFF">  ],</span></span>
+<span class="line"><span style="color:#9ECBFF">  providers: [],</span></span>
+<span class="line"><span style="color:#9ECBFF">  bootstrap: [AppComponent]</span></span>
+<span class="line"><span style="color:#9ECBFF">})</span></span>
+<span class="line"><span style="color:#9ECBFF">export class AppModule { }</span></span>
+<span class="line"><span style="color:#9ECBFF">`</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    tree.</span><span style="color:#B392F0">create</span><span style="color:#E1E4E8">(modulePath, moduleContent);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> source</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> ts.</span><span style="color:#B392F0">createSourceFile</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">      modulePath,</span></span>
+<span class="line"><span style="color:#E1E4E8">      moduleContent,</span></span>
+<span class="line"><span style="color:#E1E4E8">      ts.ScriptTarget.Latest,</span></span>
+<span class="line"><span style="color:#79B8FF">      true</span></span>
+<span class="line"><span style="color:#E1E4E8">    );</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> updateRecorder</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> tree.</span><span style="color:#B392F0">beginUpdate</span><span style="color:#E1E4E8">(modulePath);</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> changes</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> addDeclarationToModule</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">      source,</span></span>
+<span class="line"><span style="color:#E1E4E8">      modulePath,</span></span>
+<span class="line"><span style="color:#9ECBFF">      'DashboardComponent'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">      './dashboard.component'</span></span>
+<span class="line"><span style="color:#E1E4E8">    ) </span><span style="color:#F97583">as</span><span style="color:#B392F0"> InsertChange</span><span style="color:#E1E4E8">[];</span></span>
+<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">const</span><span style="color:#79B8FF"> change</span><span style="color:#F97583"> of</span><span style="color:#E1E4E8"> changes) {</span></span>
+<span class="line"><span style="color:#F97583">      if</span><span style="color:#E1E4E8"> (change </span><span style="color:#F97583">instanceof</span><span style="color:#B392F0"> InsertChange</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        updateRecorder.</span><span style="color:#B392F0">insertLeft</span><span style="color:#E1E4E8">(change.pos, change.toAdd);</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">    tree.</span><span style="color:#B392F0">commitUpdate</span><span style="color:#E1E4E8">(updateRecorder);</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(tree.</span><span style="color:#B392F0">get</span><span style="color:#E1E4E8">(modulePath)?.content.</span><span style="color:#B392F0">toString</span><span style="color:#E1E4E8">())</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> tree;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>When we execute this schematic now, we can see in the log that the following import line has been added to the file:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#6A737D">/* ... */</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { DashboardComponent } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> './dashboard.component'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">@</span><span style="color:#B392F0">NgModule</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">  declarations: [</span></span>
+<span class="line"><span style="color:#E1E4E8">    AppComponent,</span></span>
+<span class="line"><span style="color:#E1E4E8">    DashboardComponent</span></span>
+<span class="line"><span style="color:#E1E4E8">  ],</span></span>
+<span class="line"><span style="color:#6A737D">  /* ... */</span></span>
+<span class="line"><span style="color:#E1E4E8">})</span></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> class</span><span style="color:#B392F0"> AppModule</span><span style="color:#E1E4E8"> { }</span></span></code></pre>
+<h3 id="ngmodule-add-imports-exports-providers-and-bootstrap"><code>NgModule</code>: add <code>imports</code>, <code>exports</code>, <code>providers</code>, and <code>bootstrap</code></h3>
+<p>Similar to the previous example we can re-export something we imported by using the <code>addExportToModule()</code> function and adding an import to the <code>NgModule</code> by using <code>addImportToModule()</code>.
+We can also modify the <code>providers</code>, and <code>bootstrap</code> arrays by using  <code>addProviderToModule()</code> and  <code>addBootstrapToModule()</code>.
+Again, it will take care of all the things necessary such as extending and creating imports, checking for existing entries in the <code>NgModule</code> metadata and much more.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#6A737D">/* ... */</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  addImportToModule,</span></span>
+<span class="line"><span style="color:#E1E4E8">  addExportToModule,</span></span>
+<span class="line"><span style="color:#E1E4E8">  addProviderToModule,</span></span>
+<span class="line"><span style="color:#E1E4E8">  addBootstrapToModule</span></span>
+<span class="line"><span style="color:#E1E4E8">} </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@schematics/angular/utility/ast-utils'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#6A737D">/* ... */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> playground</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">_options</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">tree</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Tree</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">_context</span><span style="color:#F97583">:</span><span style="color:#B392F0"> SchematicContext</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#6A737D">    /* ... */</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> exportChanges</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> addExportToModule</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">      source,</span></span>
+<span class="line"><span style="color:#E1E4E8">      modulePath,</span></span>
+<span class="line"><span style="color:#9ECBFF">      'FooModule'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">      './foo.module'</span></span>
+<span class="line"><span style="color:#E1E4E8">    ) </span><span style="color:#F97583">as</span><span style="color:#B392F0"> InsertChange</span><span style="color:#E1E4E8">[];</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> importChanges</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> addImportToModule</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">      source,</span></span>
+<span class="line"><span style="color:#E1E4E8">      modulePath,</span></span>
+<span class="line"><span style="color:#9ECBFF">      'BarModule'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">      './bar.module'</span></span>
+<span class="line"><span style="color:#E1E4E8">    ) </span><span style="color:#F97583">as</span><span style="color:#B392F0"> InsertChange</span><span style="color:#E1E4E8">[];</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> providerChanges</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> addProviderToModule</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">      source,</span></span>
+<span class="line"><span style="color:#E1E4E8">      modulePath,</span></span>
+<span class="line"><span style="color:#9ECBFF">      'MyProvider'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">      './my-provider.ts'</span></span>
+<span class="line"><span style="color:#E1E4E8">    ) </span><span style="color:#F97583">as</span><span style="color:#B392F0"> InsertChange</span><span style="color:#E1E4E8">[];</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> bootstrapChanges</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> addBootstrapToModule</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">      source,</span></span>
+<span class="line"><span style="color:#E1E4E8">      modulePath,</span></span>
+<span class="line"><span style="color:#9ECBFF">      'MyComponent'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">      './my.component.ts'</span></span>
+<span class="line"><span style="color:#E1E4E8">    ) </span><span style="color:#F97583">as</span><span style="color:#B392F0">  InsertChange</span><span style="color:#E1E4E8">[];</span></span>
+<span class="line"><span style="color:#6A737D">    /* ... */</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(tree.</span><span style="color:#B392F0">get</span><span style="color:#E1E4E8">(modulePath)?.content.</span><span style="color:#B392F0">toString</span><span style="color:#E1E4E8">())</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> tree;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>Our result will now look like this:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { BrowserModule } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular/platform-browser'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { NgModule } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular/core'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { AppComponent } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> './app.component'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { FooModule } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> './foo.module'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { BarModule } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> './bar.module'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { MyProvider } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> './my-provider.ts'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { MyComponent } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> './my.component.ts'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { BazComponent } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> './baz.component.ts'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">@</span><span style="color:#B392F0">NgModule</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">  declarations: [</span></span>
+<span class="line"><span style="color:#E1E4E8">    AppComponent</span></span>
+<span class="line"><span style="color:#E1E4E8">  ],</span></span>
+<span class="line"><span style="color:#E1E4E8">  imports: [</span></span>
+<span class="line"><span style="color:#E1E4E8">    BrowserModule,</span></span>
+<span class="line"><span style="color:#E1E4E8">    BarModule</span></span>
+<span class="line"><span style="color:#E1E4E8">  ],</span></span>
+<span class="line"><span style="color:#E1E4E8">  providers: [MyProvider],</span></span>
+<span class="line"><span style="color:#E1E4E8">  bootstrap: [MyComponent],</span></span>
+<span class="line"><span style="color:#E1E4E8">  exports: [FooModule]</span></span>
+<span class="line"><span style="color:#E1E4E8">})</span></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> class</span><span style="color:#B392F0"> AppModule</span><span style="color:#E1E4E8"> { }</span></span></code></pre>
+<h3 id="add-route-declarations">Add route declarations</h3>
+<p>Let's have a look at another common scenario: We want our schematic to insert a route definition to a module that calls <code>RouterModule.forRoot()</code> or <code>.forChild()</code> with a route definition array.
+For this, we can use the helper function <code>addRouteDeclarationToModule()</code> which returns a <code>Change</code> object which we need to handle as an <code>InsertChange</code>.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#79B8FF"> *</span><span style="color:#F97583"> as</span><span style="color:#E1E4E8"> ts </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'typescript'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { Rule, SchematicContext, Tree } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics/'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { addRouteDeclarationToModule } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@schematics/angular/utility/ast-utils'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { InsertChange } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@schematics/angular/utility/change'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> playground</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">_options</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">tree</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Tree</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">_context</span><span style="color:#F97583">:</span><span style="color:#B392F0"> SchematicContext</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> modulePath</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> 'my-routing.module.ts'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> moduleContent</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> `import { NgModule } from '@angular/core';</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">    const myRoutes = [</span></span>
+<span class="line"><span style="color:#9ECBFF">      { path: 'foo', component: FooComponent }</span></span>
+<span class="line"><span style="color:#9ECBFF">    ];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">    @NgModule({</span></span>
+<span class="line"><span style="color:#9ECBFF">      imports: [</span></span>
+<span class="line"><span style="color:#9ECBFF">        RouterModule.forChild(myRoutes)</span></span>
+<span class="line"><span style="color:#9ECBFF">      ],</span></span>
+<span class="line"><span style="color:#9ECBFF">    })</span></span>
+<span class="line"><span style="color:#9ECBFF">    export class MyRoutingModule { }</span></span>
+<span class="line"><span style="color:#9ECBFF">`</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    tree.</span><span style="color:#B392F0">create</span><span style="color:#E1E4E8">(modulePath, moduleContent);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> source</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> ts.</span><span style="color:#B392F0">createSourceFile</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">      modulePath,</span></span>
+<span class="line"><span style="color:#E1E4E8">      moduleContent,</span></span>
+<span class="line"><span style="color:#E1E4E8">      ts.ScriptTarget.Latest,</span></span>
+<span class="line"><span style="color:#79B8FF">      true</span></span>
+<span class="line"><span style="color:#E1E4E8">    );</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> updateRecorder</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> tree.</span><span style="color:#B392F0">beginUpdate</span><span style="color:#E1E4E8">(modulePath);</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> change</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> addRouteDeclarationToModule</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">      source,</span></span>
+<span class="line"><span style="color:#9ECBFF">      './src/app'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">      `{ path: 'bar', component: BarComponent }`</span></span>
+<span class="line"><span style="color:#E1E4E8">    ) </span><span style="color:#F97583">as</span><span style="color:#B392F0"> InsertChange</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    updateRecorder.</span><span style="color:#B392F0">insertLeft</span><span style="color:#E1E4E8">(change.pos, change.toAdd);</span></span>
+<span class="line"><span style="color:#E1E4E8">    tree.</span><span style="color:#B392F0">commitUpdate</span><span style="color:#E1E4E8">(updateRecorder);</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(tree.</span><span style="color:#B392F0">get</span><span style="color:#E1E4E8">(modulePath)?.content.</span><span style="color:#B392F0">toString</span><span style="color:#E1E4E8">())</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> tree;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>The example above will insert the route definition object <code>{ path: 'bar', component: BarComponent }</code> into the <code>myRoutes</code> array by finding the variable associated in <code>forRoot()</code> or <code>forChild()</code>.</p><ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/ast-utils.ts">Check out the implementation for ast-utils in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/module">Check out the examples for module operations in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="retrieve-the-angular-workspace-configuration">Retrieve the Angular workspace configuration</h2>
+<p>Each Angular app lives in an Angular workspace containing an <code>angular.json</code> configuration file.
+If we want to get either the path to the workspace configuration file or the configuration from the file itself, we can use the <code>getWorkspacePath()</code> and <code>getWorkspace()</code> functions by passing in the current <code>Tree</code> object.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { Rule, SchematicContext, Tree } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { getWorkspacePath, getWorkspace } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@schematics/angular/utility/config'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> playground</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">_options</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">tree</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Tree</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">_context</span><span style="color:#F97583">:</span><span style="color:#B392F0"> SchematicContext</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#6A737D">    // returns the path to the Angular configuration file</span></span>
+<span class="line"><span style="color:#6A737D">    // ('/angular.json' or probably `.angular.json` for older Angular projects)</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">getWorkspacePath</span><span style="color:#E1E4E8">(tree));</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // returns the whole configuration object from the 'angular.json' file</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">JSON</span><span style="color:#E1E4E8">.</span><span style="color:#B392F0">stringify</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">getWorkspace</span><span style="color:#E1E4E8">(tree), </span><span style="color:#79B8FF">null</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>To try out things locally, we need to execute the schematics from an Angular app root path on our system.
+To do so, navigate into an existing Angular app or create a new one for testing purposes.
+Then, execute the schematic from there by using the relative path to the <code>src/collection.json</code> file and adding the schematic name after the colon (<code>:</code>).</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">ng</span><span style="color:#9ECBFF"> new</span><span style="color:#9ECBFF"> some-test-project</span><span style="color:#79B8FF"> --routing</span><span style="color:#6A737D">  # create a new test project</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> some-test-project</span><span style="color:#6A737D">      # be sure to be in the root of the angular project</span></span>
+<span class="line"><span style="color:#6A737D"># assume the schematics project itself is located relatively to the angular project in '../playground'</span></span>
+<span class="line"><span style="color:#B392F0">schematics</span><span style="color:#9ECBFF"> ../playground/src/collection.json:playground</span><span style="color:#6A737D"> # execute the 'playground' schematic</span></span></code></pre>
+<ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/config.ts">Check out the implementation in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/config">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="get-default-path-for-an-app-inside-the-workspace">Get default path for an app inside the workspace</h2>
+<p>An Angular workspace can contain multiple applications or libraries.
+To find their appropriate main paths, you can use the helper function <code>createDefaultPath()</code>.
+We need to pass in the <code>Tree</code> object and the name of the app or library we want to get the path for.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { Rule, SchematicContext, Tree } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { createDefaultPath } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@schematics/angular/utility/workspace'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> playground</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">_options</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#F97583"> async</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">tree</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Tree</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">_context</span><span style="color:#F97583">:</span><span style="color:#B392F0"> SchematicContext</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> defaultPath</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> createDefaultPath</span><span style="color:#E1E4E8">(tree, </span><span style="color:#9ECBFF">'my-lib'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(defaultPath); </span><span style="color:#6A737D">// '/projects/my-lib/src/lib'</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>Let's create a new library inside our testing Angular app called <code>my-lib</code>, to try it out:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">ng</span><span style="color:#9ECBFF"> g</span><span style="color:#9ECBFF"> lib</span><span style="color:#9ECBFF"> my-lib</span><span style="color:#6A737D">  # create a new library inside the Angular workspace</span></span>
+<span class="line"><span style="color:#6A737D"># assume the schematics project itself is located relatively to the angular project in '../playground'</span></span>
+<span class="line"><span style="color:#B392F0">schematics</span><span style="color:#9ECBFF"> ../playground/src/collection.json:playground</span><span style="color:#6A737D"> # execute the 'playground' schematic</span></span></code></pre>
+<ul>
+<li><a href="https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/workspace.ts">Check out the implementation for <code>createDefaultPath()</code> in detail.</a></li>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/worksapce">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="call-schematics-from-schematics">Call schematics from schematics</h2>
+<p>If you run a schematic, you may come to the point where one schematic should execute another one.
+For example: You create schematics for generating a specific component.
+You also develop a <code>ng add</code> or <code>ng new</code> schematic to set up things for you and create an example component by default.
+In such cases you may want to combine multiple schematics.</p><h3 id="run-local-schematics-using-the-runschematictask">Run local schematics using the <code>RunSchematicTask</code></h3>
+<p>First we want to use the <code>RunSchematicTask</code> class to achieve our goal.
+Let's say we have a collection file like the following:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "$schema"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"../node_modules/@angular-devkit/schematics/collection-schema.json"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "schematics"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "ng-add"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">      "description"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Demo that calls the 'playground' schematic inside"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      "factory"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"./ng-add/index#ngAdd"</span></span>
+<span class="line"><span style="color:#E1E4E8">    },</span></span>
+<span class="line"><span style="color:#79B8FF">    "playground"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">      "description"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"An example schematic."</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      "factory"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"./playground/index#playground"</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>The factory for <code>ng-add</code> is located in <code>src/ng-add/index.ts</code>.
+Then inside this schematic we can call a new <code>RunSchematicTask</code> with the name of the schematic we want to execute and the project name from the Angular workspace.
+To really execute the operation we need to pass the task to the <code>context</code>.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { Rule, SchematicContext, Tree } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { RunSchematicTask } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics/tasks'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> ngAdd</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">_options</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">tree</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Tree</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">_context</span><span style="color:#F97583">:</span><span style="color:#B392F0"> SchematicContext</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">    context.</span><span style="color:#B392F0">addTask</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#F97583">      new</span><span style="color:#B392F0"> RunSchematicTask</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'playground'</span><span style="color:#E1E4E8">, { project: </span><span style="color:#9ECBFF">'test-workspace'</span><span style="color:#E1E4E8"> })</span></span>
+<span class="line"><span style="color:#E1E4E8">    );</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> tree;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>To check if it works we can fill our playground (<code>src/playground/index.ts</code>) schematic as follows and log the call:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { Rule, SchematicContext, Tree } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> playground</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">_options</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> any</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">tree</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Tree</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">_context</span><span style="color:#F97583">:</span><span style="color:#B392F0"> SchematicContext</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">    console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'schematic </span><span style="color:#79B8FF">\'</span><span style="color:#9ECBFF">playground</span><span style="color:#79B8FF">\'</span><span style="color:#9ECBFF"> called'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> tree;</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>If we now run <code>schematics ../playground/src/collection.json:ng-add --debug=false</code> from our example Angular project, we can see that the <code>ng-add</code> schematic has called the <code>playground</code> schematic.</p><p>With this knowledge you can define small atomic schematics that can be executed "standalone" or from another Schematic that combines multiple standalone schematics and calls them with specific parameters.</p><ul>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/ng-add">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h3 id="run-schematics-by-using-the-schematic-and-externalschematic-function">Run schematics by using the <code>schematic()</code> and <code>externalSchematic()</code> function</h3>
+<p>Perfect, we can now execute and combine our schematics.
+But what if we want to combine external schematics developed by others and integrate them in our own schematics?
+Users are lazy, so we don't want to leave it up to them to manually execute some other things before running our schematics.</p><p>Imagine you are working in a big company with multiple different Angular projects.
+This company already has its own standardized UI library, but all the applications are very different and ran by different teams (so not really a use case for a Monorepo).
+However, there are also things they all have in common like a Single Sign-On.
+Also, the basic design always looks similar – at least the header and the footer of all the apps.</p><p>I've often seen companies building a reference implementation for such apps that's then cloned / copied and adjusted by all developers.
+However, there are some problems with this kind of workflow:</p><ul>
+<li>You always have to keep the reference project up-to-date.</li>
+<li>You have to clean up your copy of the project from stuff you don't need.</li>
+<li>You need to tell all teams to copy this reference to keep track of changes and to adjust their copies frequently.</li>
+</ul>
+<p>Thus, a better solution in my opinion is to use schematics for the whole integration and upgrade workflow.
+You can create an <code>ng new</code> schematic that will scaffold the whole project code for you.
+But you don't want to start from scratch, so you probably want to combine things like these:</p><ul>
+<li><code>ng add</code>: Add your schematics to an existing project<ul>
+<li>Corporate UI library (always)</li>
+<li>Single Sign-On (optional)</li>
+<li>Header Component (optional)</li>
+<li>Footer Component (optional)</li>
+</ul>
+</li>
+<li><code>ng new</code>: Create a new project with your company defaults<ul>
+<li>Create the basic application generated by the Angular CLI (<strong><code>externalSchematic</code></strong>)</li>
+<li>Run the <code>ng add</code> Schematic</li>
+</ul>
+</li>
+</ul>
+<p>Alright, we already know how we can achieve most of these things.
+However, there's one thing we haven't learned yet: How to run other (external) schematics?
+We can use the <code>externalSchematic</code> function for this.</p><p>But first things first, let's check if our collection file is ready to start:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "$schema"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"../node_modules/@angular-devkit/schematics/collection-schema.json"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "schematics"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "ng-add"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">      "description"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Call other schematics from the same or other packages"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      "factory"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"./ng-add/index#playground"</span></span>
+<span class="line"><span style="color:#E1E4E8">    },</span></span>
+<span class="line"><span style="color:#79B8FF">    "ng-new"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">      "description"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Execute `ng new` with predefined options and run other stuff"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      "factory"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"./ng-new/index#playground"</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<blockquote>
+<p>Using the special Schematic names <code>ng-add</code> and <code>ng-new</code> let's you later use the schematic by just executing <code>ng add</code>/<code>ng new</code> (instead of other schematics called with <code>ng generate</code>).
+There is also a special Schematic named <code>ng-update</code> which will be called in the end with the <code>ng update</code> Angular CLI command.</p></blockquote>
+<p>After we defined the schema, we can now start to implement our schematics.
+To execute an external Schematic, it must be available in the scope of the project..
+However, since we want to create a completely new project with the <code>ng new</code> Schematic, we don't have any <code>node_modules</code> installed in the target directory where we want to initialize the Angular workspace.
+To run an external command we can use the <a href="https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options"><code>spawn</code> method from <code>child_process</code></a> (available globally for Node.js).
+This creates a new process that executes a command (in our case: <code>npm install @schematics/angular</code>).
+To make things look synchronous we wrap the method call into a Promise and <code>await</code> for the Promise to be resolved.
+Now we listen to the <code>close</code> event from <code>spawn</code> and check that there was no error during install (code equals <code>0</code>).
+If everything worked fine, we will resolve the Promise, otherwise we can throw an error.
+The last step is to <code>chain</code> all of our <code>Rule</code>s:
+We first use the <code>externalSchematic()</code> function to run the <code>ng new</code> Schematic from Angular itself and set up the basic app.
+We will hand over some default options here such a using <code>SCSS</code>, support legacy browsers, strict mode, etc.
+Angulars <code>ng new</code> schematic requires also, that we define the specific version for their schematic to be used.
+In our case we want to use the <code>ng new</code> schematic from the Angular CLI version <code>12.0.0</code>.
+The second call is our <code>ng add</code> Schematic that adds our company specific components, UI libs and so on to the project.</p><blockquote>
+<p>We've already learned how to run a local Schematic by using the <code>RunSchematicTask</code> class that we need to add to our <code>context</code> object.
+In this example we are using the <code>schematic()</code> function to achieve the same goal.
+Why are there two ways? To be honest: I actually don't know.
+I found both implementations in the source code of Angular CLI.</p></blockquote>
+<pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  Rule,</span></span>
+<span class="line"><span style="color:#E1E4E8">  SchematicContext,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Tree,</span></span>
+<span class="line"><span style="color:#E1E4E8">  externalSchematic,</span></span>
+<span class="line"><span style="color:#E1E4E8">  schematic,</span></span>
+<span class="line"><span style="color:#E1E4E8">  chain</span></span>
+<span class="line"><span style="color:#E1E4E8">} </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular-devkit/schematics'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  Schema </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> AngularNgNewSchema,</span></span>
+<span class="line"><span style="color:#E1E4E8">  PackageManager,</span></span>
+<span class="line"><span style="color:#E1E4E8">  Style</span></span>
+<span class="line"><span style="color:#E1E4E8">} </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@schematics/angular/ng-new/schema'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { spawn } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'child_process'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> function</span><span style="color:#B392F0"> playground</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">options</span><span style="color:#F97583">:</span><span style="color:#B392F0"> AngularNgNewSchema</span><span style="color:#E1E4E8">)</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Rule</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">  return</span><span style="color:#F97583"> async</span><span style="color:#E1E4E8"> (</span><span style="color:#FFAB70">_tree</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Tree</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">_context</span><span style="color:#F97583">:</span><span style="color:#B392F0"> SchematicContext</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> angularSchematicsPackage</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> '@schematics/angular'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#79B8FF"> ngNewOptions</span><span style="color:#F97583">:</span><span style="color:#B392F0"> AngularNgNewSchema</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">      version: </span><span style="color:#9ECBFF">'12.0.0'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      name: options.name,</span></span>
+<span class="line"><span style="color:#E1E4E8">      routing: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      strict: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      legacyBrowsers: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      style: Style.Scss,</span></span>
+<span class="line"><span style="color:#E1E4E8">      packageManager: PackageManager.Npm</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    await</span><span style="color:#F97583"> new</span><span style="color:#79B8FF"> Promise</span><span style="color:#E1E4E8">&lt;</span><span style="color:#79B8FF">boolean</span><span style="color:#E1E4E8">&gt;((</span><span style="color:#FFAB70">resolve</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">      console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'📦 Installing packages...'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#B392F0">      spawn</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'npm'</span><span style="color:#E1E4E8">, [</span><span style="color:#9ECBFF">'install'</span><span style="color:#E1E4E8">, angularSchematicsPackage])</span></span>
+<span class="line"><span style="color:#E1E4E8">        .</span><span style="color:#B392F0">on</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'close'</span><span style="color:#E1E4E8">, (</span><span style="color:#FFAB70">code</span><span style="color:#F97583">:</span><span style="color:#79B8FF"> number</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">          if</span><span style="color:#E1E4E8"> (code </span><span style="color:#F97583">===</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">            console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'📦 Packages installed successfully ✅'</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#B392F0">            resolve</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">          } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">            throw</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> Error</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#9ECBFF">              `❌ install Angular schematics from '${</span><span style="color:#E1E4E8">angularSchematicsPackage</span><span style="color:#9ECBFF">}' failed`</span></span>
+<span class="line"><span style="color:#E1E4E8">            );</span></span>
+<span class="line"><span style="color:#E1E4E8">          }</span></span>
+<span class="line"><span style="color:#E1E4E8">        });</span></span>
+<span class="line"><span style="color:#E1E4E8">    });</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#B392F0"> chain</span><span style="color:#E1E4E8">([</span></span>
+<span class="line"><span style="color:#B392F0">      externalSchematic</span><span style="color:#E1E4E8">(angularSchematicsPackage, </span><span style="color:#9ECBFF">'ng-new'</span><span style="color:#E1E4E8">, ngNewOptions),</span></span>
+<span class="line"><span style="color:#B392F0">      schematic</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'ng-add'</span><span style="color:#E1E4E8">, {})</span></span>
+<span class="line"><span style="color:#E1E4E8">    ]);</span></span>
+<span class="line"><span style="color:#E1E4E8">  };</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>When we now run the <code>ng new</code> Schematic from somewhere outside an Angular workspace, we can see that first of all the Angular <code>ng new</code> Schematic is executed with our predefined settings.
+After this, the <code>ng add</code> schematics is called.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">schematics</span><span style="color:#9ECBFF"> ./playground/src/collection.json:ng-new</span><span style="color:#79B8FF"> --debug=false</span></span>
+<span class="line"><span style="color:#B392F0">📦</span><span style="color:#9ECBFF"> Installing</span><span style="color:#9ECBFF"> packages...</span></span>
+<span class="line"><span style="color:#B392F0">📦</span><span style="color:#9ECBFF"> Packages</span><span style="color:#9ECBFF"> installed</span><span style="color:#9ECBFF"> successfully</span><span style="color:#9ECBFF"> ✅</span></span>
+<span class="line"><span style="color:#F97583">?</span><span style="color:#E1E4E8"> What name would you like to use </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> the new workspace and initial project</span><span style="color:#F97583">?</span><span style="color:#E1E4E8"> my-project</span></span>
+<span class="line"><span style="color:#B392F0">CREATE</span><span style="color:#9ECBFF"> my-project/README.md</span><span style="color:#E1E4E8"> (1027 </span><span style="color:#9ECBFF">bytes</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0">CREATE</span><span style="color:#9ECBFF"> my-project/.editorconfig</span><span style="color:#E1E4E8"> (274 </span><span style="color:#9ECBFF">bytes</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0">CREATE</span><span style="color:#9ECBFF"> my-project/.gitignore</span><span style="color:#E1E4E8"> (631 </span><span style="color:#9ECBFF">bytes</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0">CREATE</span><span style="color:#9ECBFF"> my-project/angular.json</span><span style="color:#E1E4E8"> (3812 </span><span style="color:#9ECBFF">bytes</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">...</span></span>
+<span class="line"><span style="color:#B392F0">CREATE</span><span style="color:#9ECBFF"> my-project/src/app/app.component.scss</span><span style="color:#E1E4E8"> (0 </span><span style="color:#9ECBFF">bytes</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0">CREATE</span><span style="color:#9ECBFF"> my-project/src/app/app.component.html</span><span style="color:#E1E4E8"> (25757 </span><span style="color:#9ECBFF">bytes</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0">CREATE</span><span style="color:#9ECBFF"> my-project/src/app/app.component.spec.ts</span><span style="color:#E1E4E8"> (1069 </span><span style="color:#9ECBFF">bytes</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0">CREATE</span><span style="color:#9ECBFF"> my-project/src/app/app.component.ts</span><span style="color:#E1E4E8"> (215 </span><span style="color:#9ECBFF">bytes</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0">CREATE</span><span style="color:#9ECBFF"> my-project/src/app/package.json</span><span style="color:#E1E4E8"> (816 </span><span style="color:#9ECBFF">bytes</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0">CREATE</span><span style="color:#9ECBFF"> my-project/e2e/protractor.conf.js</span><span style="color:#E1E4E8"> (869 </span><span style="color:#9ECBFF">bytes</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0">CREATE</span><span style="color:#9ECBFF"> my-project/e2e/tsconfig.json</span><span style="color:#E1E4E8"> (294 </span><span style="color:#9ECBFF">bytes</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0">CREATE</span><span style="color:#9ECBFF"> my-project/e2e/src/app.e2e-spec.ts</span><span style="color:#E1E4E8"> (643 </span><span style="color:#9ECBFF">bytes</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0">CREATE</span><span style="color:#9ECBFF"> my-project/e2e/src/app.po.ts</span><span style="color:#E1E4E8"> (301 </span><span style="color:#9ECBFF">bytes</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#B392F0">⠏</span><span style="color:#9ECBFF"> Installing</span><span style="color:#9ECBFF"> packages...</span></span>
+<span class="line"><span style="color:#B392F0">✔</span><span style="color:#9ECBFF"> Packages</span><span style="color:#9ECBFF"> installed</span><span style="color:#9ECBFF"> successfully.</span></span>
+<span class="line"><span style="color:#B392F0">schematic</span><span style="color:#9ECBFF"> works</span></span></code></pre>
+<p>After you have deployed the Schematic, you can now execute it by running:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> i</span><span style="color:#79B8FF"> -g</span><span style="color:#9ECBFF"> my-schematic-package-name</span><span style="color:#6A737D"> # install the Schematic so it's available globally</span></span>
+<span class="line"><span style="color:#B392F0">ng</span><span style="color:#9ECBFF"> new</span><span style="color:#9ECBFF"> my-app</span><span style="color:#79B8FF"> --collection=my-schematic-package-name</span><span style="color:#6A737D"> # Run the Angular CLI's `ng new` Schematic with the defined collection</span></span></code></pre>
+<p>Similar to this example you can call the <code>ng add</code> Schematic from the collection if you are in an existing Angular workspace:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">ng</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> my-schematic-package-name</span></span></code></pre>
+<ul>
+<li><a href="https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/ng-new">Check out the example in the playground repository on GitHub</a></li>
+</ul>
+<h2 id="conclusion-3">Conclusion</h2>
+<p>The presented util functions are great and comfortable helpers you can use to create your own Angular CLI schematics.
+However, as they aren't officially published until now, you should keep track of any changes by keeping an eye on the <a href="https://github.com/angular/angular-cli/issues/15335">documentation issue (#15335)</a> and <a href="https://github.com/angular/angular-cli/tree/master/packages/schematics/angular/utility">changes on the related code</a>.</p><h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>getPackageJsonDependency()</code></td>
+<td>Get a package configuration from the <code>package.json</code> (dev-, peer-, optional-) dependencies config.</td>
+</tr>
+<tr>
+<td><code>addPackageJsonDependency()</code></td>
+<td>Add a NPM package to the <code>package.json</code> as (dev-, peer-, optional-) dependency.</td>
+</tr>
+<tr>
+<td><code>removePackageJsonDependency()</code></td>
+<td>Remove a NPM package from the <code>package.json</code> (dev-, peer-, optional-) dependencies.</td>
+</tr>
+<tr>
+<td><code>relativePathToWorkspaceRoot()</code></td>
+<td>Get the relative import path to the root of the workspace for a given file inside the workspace.</td>
+</tr>
+<tr>
+<td><code>insertImport()</code></td>
+<td>Insert an import statement for a file to an existing TypeScript file.</td>
+</tr>
+<tr>
+<td><code>addDeclarationToModule()</code></td>
+<td>Import a declaration (e.g. Component or Directive) and add it to the <code>declarations</code> array of an Angular module.</td>
+</tr>
+<tr>
+<td><code>addImportToModule()</code></td>
+<td>Import an Angular Module and add it to the <code>imports</code> array of another Angular module.</td>
+</tr>
+<tr>
+<td><code>addExportToModule()</code></td>
+<td>Import an Angular Module and add it to the <code>exports</code> array of another Angular module.</td>
+</tr>
+<tr>
+<td><code>addProviderToModule()</code></td>
+<td>Import a service / provider and add it to the <code>providers</code> array of an Angular module.</td>
+</tr>
+<tr>
+<td><code>addBootstrapToModule()</code></td>
+<td>Import a Component and add it to the <code>bootstrap</code> array of an Angular module.</td>
+</tr>
+<tr>
+<td><code>addRouteDeclarationToModule()</code></td>
+<td>Add a route definition to the router configuration in an Angular routing module.</td>
+</tr>
+<tr>
+<td><code>getWorkspacePath()</code></td>
+<td>Retrieve the path to the Angular workspace configuration file (<code>angular.json</code>).</td>
+</tr>
+<tr>
+<td><code>getWorkspace()</code></td>
+<td>Get the configuration object from the Angular workspace configuration file (<code>angular.json</code>)</td>
+</tr>
+<tr>
+<td><code>createDefaultPath()</code></td>
+<td>Get the default application / library path for a project inside an Angular workspace.</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>InsertChange</code></td>
+<td>This class returns a change object with the content to be added and the position where a change is being inserted.</td>
+</tr>
+<tr>
+<td><code>NodePackageInstallTask</code></td>
+<td>A task instance that will perform a <code>npm install</code> once instantiated and added to the <code>context</code> via <code>addTask()</code>.</td>
+</tr>
+<tr>
+<td><code>RunSchematicTask</code></td>
+<td>A task that runs another schematic after instantiation and adding it to the <code>context</code> via <code>addTask()</code>.</td>
+</tr>
+</tbody></table>
+<p><strong>Thank you</strong></p><p>Special thanks goes to <a href="https://twitter.com/mgechev">Minko Gechev</a>, <a href="https://twitter.com/tomastrajan">Tomas Trajan</a> and <a href="https://twitter.com/fmalcher01">Ferdinand Malcher</a> for the feedback and revising this article.</p><hr>
+</div><!----></analog-markdown><!----><div _ngcontent-ng-c2245548422="" class="edit-on-github"><a _ngcontent-ng-c2245548422="" rel="noopener noreferrer" href="https://github.com/d-koppenhagen/k9n.dev/edit/main/src/content/blog/2020-09-angular-schematics-common-helpers.md"> Auf GitHub bearbeiten </a></div><!----></section></div></article><!----></ng-component><!----></main><dk-contact _nghost-ng-c1148330124="" ngh="0"><footer _ngcontent-ng-c1148330124="" id="footer"><div _ngcontent-ng-c1148330124="" id="contact" class="inner"><h2 _ngcontent-ng-c1148330124="" class="major">Kontaktieren Sie mich</h2><p _ngcontent-ng-c1148330124=""> Haben Sie Fragen oder Anregungen? Nehmen Sie gern Kontakt mit mir auf! </p><ul _ngcontent-ng-c1148330124="" class="contact"><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="mailto:mail@k9n.dev">Mail: mail@k9n.dev</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen">GitHub: d-koppenhagen</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="bluesky" class="svg-inline--fa fa-bluesky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" rel="me" href="https://bsky.app/profile/k9n.dev"> Bluesky: k9n.dev </a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="mastodon" class="svg-inline--fa fa-mastodon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" rel="me" href="https://techhub.social/@k9n"> Mastodon: @k9n@techhub.social </a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://www.linkedin.com/in/d-koppenhagen/">LinkedIn: d-koppenhagen</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="xing" class="svg-inline--fa fa-xing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M162.7 210c-1.8 3.3-25.2 44.4-70.1 123.5-4.9 8.3-10.8 12.5-17.7 12.5H9.8c-7.7 0-12.1-7.5-8.5-14.4l69-121.3c.2 0 .2-.1 0-.3l-43.9-75.6c-4.3-7.8.3-14.1 8.5-14.1H100c7.3 0 13.3 4.1 18 12.2l44.7 77.5zM382.6 46.1l-144 253v.3L330.2 466c3.9 7.1.2 14.1-8.5 14.1h-65.2c-7.6 0-13.6-4-18-12.2l-92.4-168.5c3.3-5.8 51.5-90.8 144.8-255.2 4.6-8.1 10.4-12.2 17.5-12.2h65.7c8 0 12.3 6.7 8.5 14.1z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://www.xing.com/profile/Danny_Koppenhagen">Xing: Danny_Koppenhagen</a></li></ul><ul _ngcontent-ng-c1148330124="" class="copyright"><li _ngcontent-ng-c1148330124="">© 2023 by Danny Koppenhagen</li><li _ngcontent-ng-c1148330124="">Design: <a _ngcontent-ng-c1148330124="" href="https://html5up.net">HTML5 UP</a></li><li _ngcontent-ng-c1148330124=""> Vorschläge? Feedback? Bugs? <a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen/k9n.dev/issues"> Stell ein Issue ein</a>, <a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen/k9n.dev/pulls">sende mir einen PR</a> oder <a _ngcontent-ng-c1148330124="" routerlink="/contact" href="/contact" jsaction="click:;">kontaktiere mich</a></li></ul></div></footer></dk-contact><!----></dk-root>
+    <script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["keydown","click"],["focus","blur"]);</script>
+  
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"7":"t0","8":"t1","9":"t2"},"c":{"7":[{"i":"t0","r":1}],"8":[],"9":[{"i":"t2","r":1}]}},{"c":{"0":[]}},{"t":{"0":"t18"},"c":{"0":[{"i":"t18","r":1,"t":{"5":"t19","6":"t20","7":"t25","8":"t26","11":"t28","12":"t29"},"c":{"5":[{"i":"t19","r":1}],"6":[{"i":"t20","r":1,"t":{"2":"t21","7":"t22","8":"t23"},"c":{"2":[{"i":"t21","r":1}],"7":[{"i":"t22","r":1,"x":3}],"8":[{"i":"t23","r":1,"t":{"3":"t24"},"c":{"3":[{"i":"t24","r":1}]}}]}}],"7":[{"i":"t25","r":1,"t":{"1":"t30","2":"t31","3":"t32"},"c":{"1":[{"i":"t30","r":1}],"2":[],"3":[]}}],"8":[],"11":[],"12":[{"i":"t29","r":1}]}}]}},{"c":{"4":[{"i":"c2245548422","r":1}],"6":[]},"t":{"6":"t16"}}]}</script></body></html>

@@ -1,0 +1,1121 @@
+<!DOCTYPE html><html lang="de"><head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css" id="fa-auto-css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}</style><link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Apple PWA Support -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-512x512.png">
+    <link href="icons/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Basic Site Information -->
+    <title>k9n.dev | Create powerful fast pre-rendered Angular Apps using Scully static site generator</title>
+    
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Danny Koppenhagen">
+
+    <!-- Twitter Card -->
+    
+    
+    
+    
+    
+
+    <!-- Open Graph Profile -->
+    
+    
+    
+    
+    <meta property="profile:first_name" content="Danny">
+    <meta property="profile:last_name" content="Koppenhagen">
+    <meta property="profile:gender" content="male">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#e7e7e7">
+    <script type="module" crossorigin="" src="/assets/index-DPqAJY-c.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DzfkAIf7.css">
+  <style>.menu-dark[_ngcontent-ng-c2099545970] {
+  filter: alpha(opacity=90);
+}
+.menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970] {
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.9;
+  margin: 0px 1px;
+}
+.menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970]:hover, .menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970]:focus {
+  background-color: rgb(67.1351351351, 71.5135135135, 94.8648648649);
+  box-shadow: inset 0 0 0 2px #5e7959;
+}
+.menu-dark[_ngcontent-ng-c2099545970]:focus    > button[_ngcontent-ng-c2099545970] {
+  box-shadow: inset 0 0 0 2px #ada789;
+}
+
+@media screen and (max-width: 480px) {
+  .hidden-small[_ngcontent-ng-c2099545970] {
+    visibility: hidden;
+  }
+}</style><style>.header-title[_ngcontent-ng-c2421498523] {
+  background-image: url("/images/bg-triangles.jpg");
+  background-size: cover;
+  font-size: 5em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.2901960784);
+}
+
+.sub-header-title[_ngcontent-ng-c2421498523] {
+  color: #2e3141;
+  font-size: 1.6em !important;
+  margin-bottom: 0.5em;
+  line-height: 1.3 !important;
+}
+
+.sub-header[_ngcontent-ng-c2421498523] {
+  color: #2e3141;
+  font-size: 1.2em;
+}
+
+#banner[_ngcontent-ng-c2421498523] {
+  background-image: url("/images/dk-header.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-color: #fdfdfd;
+  padding: 9em 0 12em 0;
+  animation: _ngcontent-ng-c2421498523_headerFadeIn 3s;
+}
+
+@keyframes _ngcontent-ng-c2421498523_headerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#logo[_ngcontent-ng-c2421498523] {
+  position: absolute;
+  top: 5px;
+}
+#logo[_ngcontent-ng-c2421498523]   img[_ngcontent-ng-c2421498523] {
+  width: 70px;
+  animation: _ngcontent-ng-c2421498523_move-to-top 1s ease, _ngcontent-ng-c2421498523_rotate 4s ease 1;
+}
+
+#logo[_ngcontent-ng-c2421498523]:focus, 
+h1[_ngcontent-ng-c2421498523]:focus {
+  outline: 1px solid rgba(185, 167, 167, 0.4);
+}
+
+@keyframes _ngcontent-ng-c2421498523_rotate {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+@keyframes _ngcontent-ng-c2421498523_move-to-top {
+  0% {
+    top: 100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  #banner[_ngcontent-ng-c2421498523] {
+    background-position: right -200px top;
+  }
+}
+@media screen and (max-width: 980px) {
+  #banner[_ngcontent-ng-c2421498523] {
+    background-size: contain;
+    padding: 6em 0 10em 0;
+    background-position: right -200px top;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 736px) {
+  .sub-header[_ngcontent-ng-c2421498523] {
+    font-size: 1em !important;
+    padding-right: 110px;
+  }
+  #banner[_ngcontent-ng-c2421498523] {
+    padding: 6em 0 5em 0;
+  }
+}
+@media screen and (max-width: 620px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 3.5em;
+    padding-right: 40vw;
+  }
+  #banner[_ngcontent-ng-c2421498523] {
+    background-size: cover;
+    background-position: right -180px top;
+  }
+}
+@media screen and (max-width: 560px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 3em;
+    padding-right: 50vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    opacity: 0.7;
+    font-size: 2.5em;
+    padding-right: 50vw;
+  }
+}</style><style>@media screen and (min-width: 736px) {
+  ul.contact[_ngcontent-ng-c1148330124] {
+    columns: 2;
+    width: 100% !important;
+  }
+}</style><style>.wrapper[_ngcontent-ng-c2245548422] {
+  margin-top: 0;
+}
+
+h1[_ngcontent-ng-c2245548422] {
+  font-size: 1.4em;
+}
+
+.extra-info[_ngcontent-ng-c2245548422] {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-content: baseline;
+}
+
+.actions[_ngcontent-ng-c2245548422] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.published-at[_ngcontent-ng-c2245548422], 
+.external-links[_ngcontent-ng-c2245548422], 
+.edit-on-github[_ngcontent-ng-c2245548422] {
+  margin: 30px 0;
+}
+
+.published-at[_ngcontent-ng-c2245548422] {
+  height: 50px;
+}
+
+.published-at[_ngcontent-ng-c2245548422] {
+  display: flex;
+  align-items: center;
+  line-height: 1.2em;
+}
+.published-at[_ngcontent-ng-c2245548422]   .published-at-link[_ngcontent-ng-c2245548422] {
+  text-decoration: none;
+  border: none;
+  min-width: 120px;
+}
+.published-at[_ngcontent-ng-c2245548422]   .published-at-link[_ngcontent-ng-c2245548422]   .published-at-logo[_ngcontent-ng-c2245548422] {
+  padding-right: 20px;
+  max-height: 60px;
+}
+
+.external-article[_ngcontent-ng-c2245548422] {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.extra-section[_ngcontent-ng-c2245548422]   .actions[_ngcontent-ng-c2245548422] {
+  padding-bottom: 2rem;
+}
+
+span.image[_ngcontent-ng-c2245548422]    > img.thumbnail[_ngcontent-ng-c2245548422] {
+  max-width: 80px;
+}
+
+@media screen and (max-width: 560px) {
+  .blog-footer[_ngcontent-ng-c2245548422] {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: #2e3141;
+    opacity: 0.9;
+    z-index: 1;
+    padding: 0 35px;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > h2[_ngcontent-ng-c2245548422], 
+   .blog-footer[_ngcontent-ng-c2245548422]   h3[_ngcontent-ng-c2245548422] {
+    display: none;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > ul[_ngcontent-ng-c2245548422] {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .blog-footer[_ngcontent-ng-c2245548422]    > ul[_ngcontent-ng-c2245548422]    > li[_ngcontent-ng-c2245548422] {
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .extra-info[_ngcontent-ng-c2245548422] {
+    display: block;
+  }
+}
+@media screen and (max-width: 360px) {
+  .blog-footer[_ngcontent-ng-c2245548422] {
+    padding: 0 24px;
+  }
+}
+.blog-header[_ngcontent-ng-c2245548422]   img[_ngcontent-ng-c2245548422] {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 1ch;
+  overflow: hidden;
+  box-shadow: 0 3px 2px hsla(0, 0%, 0%, 0.02), 0 7px 5px hsla(0, 0%, 0%, 0.03), 0 13px 10px hsla(0, 0%, 0%, 0.04), 0 22px 18px hsla(0, 0%, 0%, 0.05), 0 42px 33px hsla(0, 0%, 0%, 0.06), 0 100px 80px hsla(0, 0%, 0%, 0.07);
+  margin-bottom: 1rem;
+}</style><meta name="description" content="You probably heard of the JAMStack. It is a new way of building websites and apps via static site generators that deliver better performance and higher security. With this blog post, I will show you how you can easily create a blogging app by using the power of Angular and the help of Scully static site generator. It will automatically detect all app routes and create static pages out of them that are ready to ship for production."><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@d_koppenhagen"><meta name="twitter:creator" content="@d_koppenhagen"><meta name="twitter:title" content="Create powerful fast pre-rendered Angular Apps using Scully static site generator"><meta name="twitter:description" content="You probably heard of the JAMStack. It is a new way of building websites and apps via static site generators that deliver better performance and higher security. With this blog post, I will show you how you can easily create a blogging app by using the power of Angular and the help of Scully static site generator. It will automatically detect all app routes and create static pages out of them that are ready to ship for production."><meta name="twitter:image" content="https://k9n.dev/images/blog/scully/scully-header.jpg"><meta property="og:title" content="Create powerful fast pre-rendered Angular Apps using Scully static site generator"><meta property="og:description" content="You probably heard of the JAMStack. It is a new way of building websites and apps via static site generators that deliver better performance and higher security. With this blog post, I will show you how you can easily create a blogging app by using the power of Angular and the help of Scully static site generator. It will automatically detect all app routes and create static pages out of them that are ready to ship for production."><meta name="og:image" content="https://k9n.dev/images/blog/scully/scully-header.jpg"><meta name="og:url" content="https://k9n.dev/blog/2020-01-angular-scully"><style>.article-series[_ngcontent-ng-c3445128104]   li[_ngcontent-ng-c3445128104]:has(.current:not(:hover)) {
+  background-color: rgb(39.2545454545, 62.3454545455, 75.0454545455);
+}</style></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-HY3CPEEH1Z"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HY3CPEEH1Z');
+      </script>
+  <body id="page-wrapper" class="mat-typography"><!--nghm-->
+    <!-- Angular -->
+    <dk-root ng-version="21.0.0" ngh="5" ng-server-context="ssr-analog"><dk-navbar _nghost-ng-c2099545970="" ngh="0"><nav _ngcontent-ng-c2099545970="" id="navigation" class="menu-dark" jsaction="keydown:;"><button _ngcontent-ng-c2099545970="" role="button" aria-label="Menü öffnen" aria-controls="menu" class="burger-menu" aria-expanded="false" jsaction="click:;"><fa-icon _ngcontent-ng-c2099545970="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg></fa-icon></button></nav></dk-navbar><dk-header _nghost-ng-c2421498523="" ngh="1"><header _ngcontent-ng-c2421498523="" id="banner"><div _ngcontent-ng-c2421498523="" class="inner"><a _ngcontent-ng-c2421498523="" routerlink="/" aria-label="Zur Startseite" title="Startseite" id="logo" href="/" jsaction="click:;"><img _ngcontent-ng-c2421498523="" src="images/logo_header.png" alt="Logo"></a><h1 _ngcontent-ng-c2421498523="" aria-label="k9n.dev" class="header-title" jsaction="focus:;blur:;"><span _ngcontent-ng-c2421498523="">k</span><span _ngcontent-ng-c2421498523="" class="headline-expanded">9</span><!----><!----><span _ngcontent-ng-c2421498523="">n.dev</span><!----></h1><p _ngcontent-ng-c2421498523="" class="sub-header-title">Danny Koppenhagen</p><p _ngcontent-ng-c2421498523="" class="sub-header">Entwickler, IT-Berater, Buchautor</p></div></header></dk-header><main><router-outlet></router-outlet><ng-component _nghost-ng-c2245548422="" ngh="4"><article _ngcontent-ng-c2245548422="" class="wrapper alt" lang="en"><div _ngcontent-ng-c2245548422="" class="inner"><h1 _ngcontent-ng-c2245548422="">Create powerful fast pre-rendered Angular Apps using Scully static site generator</h1><section _ngcontent-ng-c2245548422="" class="blog-header"><img _ngcontent-ng-c2245548422="" alt="" class="adaptive-glass" src="images/blog/scully/scully-header.jpg"><!----></section><section _ngcontent-ng-c2245548422="" class="extra-section"><div _ngcontent-ng-c2245548422="" class="extra-info"><span _ngcontent-ng-c2245548422=""><time _ngcontent-ng-c2245548422="" datetime="2001-05-15 19:00">Nov 1, 2021</time></span><!----><p _ngcontent-ng-c2245548422="" class="sub-heading">Stichwörter</p></div><div _ngcontent-ng-c2245548422="" class="actions"><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular" jsaction="click:;"> Angular </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular CLI" jsaction="click:;"> Angular CLI </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Angular Schematics" jsaction="click:;"> Angular Schematics </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Scully" jsaction="click:;"> Scully </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: SSR" jsaction="click:;"> SSR </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: SSG" jsaction="click:;"> SSG </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: Pre-rendering" jsaction="click:;"> Pre-rendering </button></span><span _ngcontent-ng-c2245548422=""><button _ngcontent-ng-c2245548422="" routerlink="/blog" class="button xs" tabindex="0" aria-label="Stichwort: JAM Stack" jsaction="click:;"> JAM Stack </button></span><!----></div><!----></section><!----><section _ngcontent-ng-c2245548422="" class="external-links"><a _ngcontent-ng-c2245548422="" href="https://dev.to/dkoppenhagen/create-powerfull-fast-pre-rendered-angular-apps-using-scully-static-site-generator-31fb" hreflang="en">Dev.to</a><!----> | <!----><a _ngcontent-ng-c2245548422="" href="https://danny-koppenhagen.medium.com/create-powerful-fast-pre-rendered-angular-apps-using-scully-static-site-generator-79832a549787" hreflang="en">Medium.com</a><!----></section><!----><dk-series-list _ngcontent-ng-c2245548422="" _nghost-ng-c3445128104="" ngh="2"><section _ngcontent-ng-c3445128104="" class="article-series"><h2 _ngcontent-ng-c3445128104="" class="sub-heading">Artikelserie</h2><ol _ngcontent-ng-c3445128104="" class="alt"><li _ngcontent-ng-c3445128104=""><a _ngcontent-ng-c3445128104="" routerlinkactive="current" ariacurrentwhenactive="page" hreflang="en" href="/blog/2020-01-angular-scully" class="current" aria-current="page" jsaction="click:;">Create powerful fast pre-rendered Angular Apps using Scully static site generator</a></li><li _ngcontent-ng-c3445128104=""><a _ngcontent-ng-c3445128104="" routerlinkactive="current" ariacurrentwhenactive="page" hreflang="en" href="/blog/2020-03-dig-deeper-into-scully-ssg" class="" jsaction="click:;">Dig deeper into static site generation with Scully and use the most out of it</a></li><!----></ol></section></dk-series-list><!----><section _ngcontent-ng-c2245548422="" class="blog-content"><analog-markdown _ngcontent-ng-c2245548422="" classes="markdown-content" lang="en" ngh="3" jsaction="click:;"><div class="markdown-content"><h1 id="create-powerful-fast-pre-rendered-angular-apps-using-scully-static-site-generator">Create powerful fast pre-rendered Angular Apps using <em>Scully</em> static site generator</h1>
+<p><strong>You probably heard of the JAMStack. It's a new way of building websites and apps via static site generators that deliver better performance and higher security. There have been tools for many platforms, but surprisingly not yet for Angular. These times are finally over. With this blog post, I want to show you how you can easily create an Angular blogging app by to pre-render your complete app.</strong></p><blockquote>
+<p>On <em>Dec 16, 2019</em> the static site generator <em>Scully</em> for Angular <a href="https://www.youtube.com/watch?v=Sh37rIUL-d4">was presented</a>.
+<em>Scully</em> automatically detects all app routes and creates static sites out of it that are ready to ship for production.
+This blog post is based on versions of Angular and Scully:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span>"@angular/core": "~13.0.0",</span></span>
+<span class="line"><span>"@angular/cli": "~13.0.3",</span></span>
+<span class="line"><span>"@scullyio/init": "^2.0.5",</span></span>
+<span class="line"><span>"@scullyio/ng-lib": "^2.0.0",</span></span>
+<span class="line"><span>"@scullyio/scully": "^2.0.0",</span></span>
+<span class="line"><span>"@scullyio/scully-plugin-puppeteer": "^2.0.0",</span></span></code></pre>
+</blockquote>
+<hr>
+
+<h2 id="about-scully">About Scully</h2>
+<p>Scully is a static site generator (SSG) for Angular apps.
+It analyses a compiled Angular app and detects all the routes of the app.
+It will then call every route it found, visit the page in the browser, renders the page and finally put the static rendered page to the file system.
+This process is also known as <strong>pre-rendering</strong> – but with a new approach.
+The result compiled and pre-rendered app ready for shipping to your web server.</p><blockquote>
+<p><strong>Good to know:</strong> <em>Scully</em> does not use <a href="https://angular.io/guide/universal">Angular Universal</a> for the pre-rendering.
+It uses a Chromium browser to visit and check all routes it found.</p></blockquote>
+<p>All pre-rendered pages contain just plain HTML and CSS.
+In fact, when deploying it, a user will be able to instantly access all routes and see the content with almost no delay.
+The resulting sites are very small static sites (just a few KBs) so that even the access from a mobile device with a very low bandwidth is pretty fast.
+It's significantly faster compared to the hundreds of KBs that you are downloading when calling a “normal” Angular app on initial load.</p><p>But that’s not all: Once the pre-rendered page is shipped to the user, <em>Scully</em> loads and bootstraps the “real” Angular app  in the background on top of the existing view.
+In fact <em>Scully</em> will unite two great things:
+The power of pre-rendering and very fast access to sites and the power of a fully functional Single Page Application (SPA) written in Angular.</p><h2 id="get-started">Get started</h2>
+<p>The first thing we have to do is to set up our Angular app.
+As <em>Scully</em> detects the content from the routes, we need to configure the Angular router as well.
+Therefore, we add the appropriate flag <code>--routing</code> (we can also choose this option when the CLI prompts us).</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">npx</span><span style="color:#79B8FF"> -p</span><span style="color:#9ECBFF"> @angular/cli</span><span style="color:#9ECBFF"> ng</span><span style="color:#9ECBFF"> new</span><span style="color:#9ECBFF"> scully-blog</span><span style="color:#79B8FF"> --routing</span><span style="color:#6A737D"> # create an angular workspace</span></span>
+<span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> scully-blog</span><span style="color:#6A737D">  # navigate into the project</span></span></code></pre>
+<p>The next step is to set up our static site generator <em>Scully</em>.
+Therefore, we are using the provided Angular schematic:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">ng</span><span style="color:#9ECBFF"> add</span><span style="color:#9ECBFF"> @scullyio/init</span><span style="color:#6A737D">  # add Scully to the project</span></span></code></pre>
+<p>Et voilà here it is: We now have a very minimalistic Angular app that uses the power of <em>Scully</em> to automatically find all app routes, visit them and generate static pages out of them.
+It's ready for us to preview.
+Let's try it out by building our site and running <em>Scully</em>.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> build</span><span style="color:#6A737D">     # build our Angular app</span></span>
+<span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> scully</span><span style="color:#6A737D">        # let Scully run over our app and build it</span></span>
+<span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> scully</span><span style="color:#9ECBFF"> serve</span><span style="color:#6A737D">  # serve the scully results</span></span></code></pre>
+<blockquote>
+<p><em>Scully</em> will run only once by default. To let <em>Scully</em> run and watch for file changes, just add the <code>--watch</code> option (<code>npx scully --watch</code>).</p></blockquote>
+<p>After <em>Scully</em> has checked our app, it will add the generated static assets to our <code>dist/static</code> directory by default.
+Let's quickly compare the result generated from <em>Scully</em> with the result from the initial Angular build (<code>dist/scully-blog</code>):</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span>dist/</span></span>
+<span class="line"><span>┣ scully-blog/</span></span>
+<span class="line"><span>┃ ┣ assets/</span></span>
+<span class="line"><span>┃ ┣ ...</span></span>
+<span class="line"><span>┃ ┗ styles.ef46db3751d8e999.css</span></span>
+<span class="line"><span>┗ static/</span></span>
+<span class="line"><span>  ┣ assets/</span></span>
+<span class="line"><span>  ┃ ┗ scully-routes.json</span></span>
+<span class="line"><span>  ┣ ...</span></span>
+<span class="line"><span>  ┗ styles.ef46db3751d8e999.css</span></span></code></pre>
+<p>If we take a look at it, except of the file <code>scully-routes.json</code>, that contains the configured routes used by <em>Scully</em>, we don't see any differences between the two builds.
+This is because currently we only have the root route configured, and no further content was created.</p><p>Nonetheless, when running <code>npx scully serve</code> or <code>npx scully --watch</code> we can check out the result by visiting the following URL: <code>localhost:1668</code>.
+This server serves the static generated pages from the <code>dist/static</code> directory like a normal web server (e.g. <em>nginx</em> or <em>apache</em>).</p><h2 id="the-scullylibmodule">The <code>ScullyLibModule</code></h2>
+<p>You may have realized, that after running the <em>Scully</em> schematic, the <code>ScullyLibModule</code> has been added to your <code>AppComponent</code>:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#6A737D">// ...</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { ScullyLibModule } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@scullyio/ng-lib'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">@</span><span style="color:#B392F0">NgModule</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#6A737D">  // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">  imports: [</span></span>
+<span class="line"><span style="color:#6A737D">    // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">    ScullyLibModule</span></span>
+<span class="line"><span style="color:#E1E4E8">  ]</span></span>
+<span class="line"><span style="color:#E1E4E8">})</span></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> class</span><span style="color:#B392F0"> AppModule</span><span style="color:#E1E4E8"> { }</span></span></code></pre>
+<p>This module is used by <em>Scully</em> to hook into the angular router and to determine once the page <em>Scully</em> tries to enter is fully loaded and ready to be rendered by using the <code>IdleMonitorService</code> from <em>Scully</em> internally.
+If we remove the import of the module, <em>Scully</em> will still work, but it takes much longer to render your site as it will use a timeout for accessing the pages.
+So in that case even if a page has been fully loaded, <em>Scully</em> would wait until the timer is expired.</p><h2 id="turn-it-into-a-blog">Turn it into a blog</h2>
+<p>Let’s go a bit further and turn our site into a simple blog that will render our blog posts from separate Markdown documents.
+<em>Scully</em> brings this feature out of the box, and it’s very easy to set it up:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">ng</span><span style="color:#9ECBFF"> g</span><span style="color:#9ECBFF"> @scullyio/init:blog</span><span style="color:#6A737D">                      # setup up the `BlogModule` and related sources</span></span>
+<span class="line"><span style="color:#B392F0">ng</span><span style="color:#9ECBFF"> g</span><span style="color:#9ECBFF"> @scullyio/init:post</span><span style="color:#79B8FF"> --name=</span><span style="color:#9ECBFF">"First post"</span><span style="color:#6A737D">  # create a new blog post</span></span></code></pre>
+<p>After these two steps we can see that <em>Scully</em> has now added the <code>blog</code> directory to our project root.
+Here we can find the markdown files for creating the blog posts — one file for each post.
+We now have two files there: The initially created example file from <em>Scully</em> and this one we created with <code>ng g @scullyio/init:post</code>.</p><h2 id="lets-go-further">Let's go further</h2>
+<p>Now that we've got Scully installed and working, let's modify our Angular app to look more like an actual blog, and not just like the default Angular app.
+Therefore, we want to get rid of the Angular auto generated content in the <code>AppComponent</code> first.
+We can simply delete all the content of <code>app.component.html</code> except of the <code>router-outlet</code>:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">router-outlet</span><span style="color:#E1E4E8">&gt;&lt;/</span><span style="color:#85E89D">router-outlet</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<p>Let’s run the build again and have a look at the results.
+Scully assumes by default the route configuration hasn't changed meanwhile, and it can happen that it's not detecting the new bog entry we just created.
+To be sure it will re-scan the routes, we will pass through the parameter <code>--scan</code>:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> build</span><span style="color:#6A737D">       # Angular build</span></span>
+<span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> scully</span><span style="color:#79B8FF"> --scan</span><span style="color:#6A737D">   # generate static build and force checking new routes</span></span>
+<span class="line"><span style="color:#B392F0">npx</span><span style="color:#9ECBFF"> scully</span><span style="color:#9ECBFF"> serve</span><span style="color:#6A737D">    # serve the scully results</span></span></code></pre>
+<p>When checking out our <code>dist/static</code> directory we can see that there are new subdirectories for the routes of our static blogging sites.
+But what's that: When we will check the directory <code>dist/static/blog/</code>, we see somewhat like this:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span>blog/</span></span>
+<span class="line"><span>┣ ___UNPUBLISHED___k9pg4tmo_2DDScsUiieFlld4R2FwvnJHEBJXcgulw</span></span>
+<span class="line"><span>  ┗ index.html</span></span></code></pre>
+<p>This feels strange, doesn't it?
+But Checking the content of the file <code>index.html</code> inside will tell us it contains actually the content of the just created blog post.
+This is by intention: This <em>Scully</em> schematic created the markdown file with a meta flag called <code>published</code> that is by default set to <code>false</code>.
+The internally used renderer plugin from <em>Scully</em> will handle this flag, and it creates an unguessable name for the route.
+This allows us to create blog post drafts that we can already publish and share by using the link for example to let someone else review the article.
+You can also use this route if you don't care about the route name.
+But normally you would just like to change the metadata in the Markdown file to:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#85E89D">published</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span></span></code></pre>
+<p>After this, run the build process again and the files <code>index.html</code> in <code>dist/static/blog/<post-name>/</post-name></code> contain now our static pages ready to be served.
+When we are visiting the route path <code>/blog/first-post</code> we can see the content of our markdown source file <code>blog/first-post.md</code> is rendered as HTML.</p><p>If you want to prove that the page is actually really pre-rendered, just disable JavaScript by using your Chrome Developer Tools.
+You can reload the page and see that the content is still displayed.
+Awesome, isn't it?</p><p><img src="images/blog/scully/scully-pre-rendered-js-disabled.png" alt="a simple blog created with Scully"></p><blockquote>
+<p>When JavaScript is enabled, <em>Scully</em> configures your static sites in that way, that you will see initially the static content.
+In the background it will bootstrap your Angular app, and refresh the content with it.
+You won't see anything flickering.</p></blockquote>
+<p>Hold on a minute! 😳</p><p>You may have realized: We haven’t written one line of code manually yet, and we have already a fully functional blogging site that’s server site rendered. Isn’t that cool?
+Setting up an Angular based blog has never been easier.</p><blockquote>
+<p><strong>Good to know:</strong> <em>Scully</em> also detects new routes we are adding manually to our app, and it will create static sites for all those pages.</p></blockquote>
+<h2 id="use-the-scullyroutesservice">Use the <code>ScullyRoutesService</code></h2>
+<p>We want to take the next step.
+Now we want to list an overview of all existing blog posts we have and link to their sites in our <code>AppComponent</code>.
+Therefore, we can easily inject the <code>ScullyRoutesService</code>.
+It will return us a list of all routes <em>Scully</em> found with the parsed information as a <code>ScullyRoute</code> array within the <code>available$</code> observable.
+We can easily inject the service and display the information as a list in our <code>AppComponent</code>.</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { Component } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@angular/core'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { ScullyRoutesService, ScullyRoute } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@scullyio/ng-lib'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { Observable } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'rxjs'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">@</span><span style="color:#B392F0">Component</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">  selector: </span><span style="color:#9ECBFF">'app-root'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  templateUrl: </span><span style="color:#9ECBFF">'./app.component.html'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  styleUrls: [</span><span style="color:#9ECBFF">'./app.component.css'</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">})</span></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> class</span><span style="color:#B392F0"> AppComponent</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#FFAB70">  links$</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Observable</span><span style="color:#E1E4E8">&lt;</span><span style="color:#B392F0">ScullyRoute</span><span style="color:#E1E4E8">[]&gt; </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.scully.available$;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  constructor</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">private</span><span style="color:#FFAB70"> scully</span><span style="color:#F97583">:</span><span style="color:#B392F0"> ScullyRoutesService</span><span style="color:#E1E4E8">) {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>To display the results, we can simply use <code>ngFor</code> with the <code>async</code> pipe and list the results.
+A <code>ScullyRoute</code> will give us the routing path inside the <code>route</code> key and all other markdown metadata inside their appropriate key names.
+So we can extend for example our markdown metadata block with more keys (e.g. <code>thumbnail: assets/thumb.jpg</code>) and we can access them via those (<code>blog.thumbnail</code> in our case).
+We can extend <code>app.component.html</code> like this:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">ul</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;</span><span style="color:#85E89D">li</span><span style="color:#B392F0"> *ngFor</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"let link of links$ | async"</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">    &lt;</span><span style="color:#85E89D">a</span><span style="color:#B392F0"> [routerLink]</span><span style="color:#E1E4E8">=</span><span style="color:#9ECBFF">"link.route"</span><span style="color:#E1E4E8">&gt;{{ link.title }}&lt;/</span><span style="color:#85E89D">a</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">  &lt;/</span><span style="color:#85E89D">li</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">&lt;/</span><span style="color:#85E89D">ul</span><span style="color:#E1E4E8">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">hr</span><span style="color:#E1E4E8"> /&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">&lt;</span><span style="color:#85E89D">router-outlet</span><span style="color:#E1E4E8">&gt;&lt;/</span><span style="color:#85E89D">router-outlet</span><span style="color:#E1E4E8">&gt;</span></span></code></pre>
+<p>This will give us a fully routed blog page:</p><p><img src="images/blog/scully/scully-blog.gif" alt="a simple blog created with scully"></p><p>The <code>ScullyRoutesService</code> contains all the available routes in your app.
+In fact, any route that we add to our Angular app will be detected by <em>Scully</em> and made available via the <code>ScullyRoutesService.available$</code> observable.
+To list only blog posts from the <code>blog</code> route and directory we can just filter the result:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#6A737D">/* ... */</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { map, Observable } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'rxjs'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#6A737D">/* ... */</span></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> class</span><span style="color:#B392F0"> AppComponent</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#FFAB70">  links$</span><span style="color:#F97583">:</span><span style="color:#B392F0"> Observable</span><span style="color:#E1E4E8">&lt;</span><span style="color:#B392F0">ScullyRoute</span><span style="color:#E1E4E8">[]&gt; </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> this</span><span style="color:#E1E4E8">.scully.available$.</span><span style="color:#B392F0">pipe</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#B392F0">    map</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">routeList</span><span style="color:#F97583"> =&gt;</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">      return</span><span style="color:#E1E4E8"> routeList.</span><span style="color:#B392F0">filter</span><span style="color:#E1E4E8">((</span><span style="color:#FFAB70">route</span><span style="color:#F97583">:</span><span style="color:#B392F0"> ScullyRoute</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">        route.route.</span><span style="color:#B392F0">startsWith</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">`/blog/`</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">      );</span></span>
+<span class="line"><span style="color:#E1E4E8">    })</span></span>
+<span class="line"><span style="color:#E1E4E8">  );</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">  constructor</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">private</span><span style="color:#FFAB70"> scully</span><span style="color:#F97583">:</span><span style="color:#B392F0"> ScullyRoutesService</span><span style="color:#E1E4E8">) {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>Wow! That was easy, wasn’t it?
+Now you just need to add a bit of styling and content and your blog is ready for getting visited.</p><h2 id="fetch-dynamic-information-from-an-api">Fetch dynamic information from an API</h2>
+<p>As you may have realized: <em>Scully</em> needs a data source to fetch all dynamic routes in an app.
+In case of our blog example <em>Scully</em> uses the <code>:slug</code> router parameter as a placeholder.
+Scully will fill this placeholder with appropriate content to visit and pre-render the site.
+The content for the placeholder comes in our blog example from the files in the <code>/blog</code> directory.
+This has been configured from the schematics we ran before in the file <code>scully.scully-blog.config.ts</code>:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { ScullyConfig } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> '@scullyio/scully'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">/** this loads the default render plugin, remove when switching to something else. */</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#9ECBFF"> '@scullyio/scully-plugin-puppeteer'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> const</span><span style="color:#79B8FF"> config</span><span style="color:#F97583">:</span><span style="color:#B392F0"> ScullyConfig</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  projectRoot: </span><span style="color:#9ECBFF">"./src"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  projectName: </span><span style="color:#9ECBFF">"scully-blog"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  outDir: </span><span style="color:#9ECBFF">'./dist/static'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  routes: {</span></span>
+<span class="line"><span style="color:#9ECBFF">    '/blog/:slug'</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#E1E4E8">      type: </span><span style="color:#9ECBFF">'contentFolder'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">      slug: {</span></span>
+<span class="line"><span style="color:#E1E4E8">        folder: </span><span style="color:#9ECBFF">"./blog"</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">    },</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
+<p>I would like to show a second example.
+Imagine we want to display information about books from an external API.
+So our app needs another route called <code>/books/:isbn</code>.
+To visit this route and pre-render it, we need a way to fill the <code>isbn</code> parameter.
+Luckily <em>Scully</em> helps us with this too.
+We can configure <a href="https://scully.io/docs/plugins#router-plugin"><em>Router Plugin</em></a> that will call an API, fetch the data from it and pluck the <code>isbn</code> from the array of results to fill it in the router parameter.</p><p>In the following example we will use the public service <a href="https://api3.angular-buch.com">BookMonkey API</a> (we provide this service for the readers of our <a href="https://angular-buch.com/">German Angular book</a>) as an API to fetch a list of books:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#6A737D">/* ... */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">export</span><span style="color:#F97583"> const</span><span style="color:#79B8FF"> config</span><span style="color:#F97583">:</span><span style="color:#B392F0"> ScullyConfig</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#6A737D">  /* ... */</span></span>
+<span class="line"><span style="color:#E1E4E8">  routes: {</span></span>
+<span class="line"><span style="color:#6A737D">    /* ... */</span></span>
+<span class="line"><span style="color:#9ECBFF">    '/books/:isbn'</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">      'type'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'json'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">      'isbn'</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#9ECBFF">        'url'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'https://api3.angular-buch.com/books'</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#9ECBFF">        'property'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'isbn'</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
+<p>The result from the API will have this shape:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span style="color:#E1E4E8">[</span></span>
+<span class="line"><span style="color:#E1E4E8">  {</span></span>
+<span class="line"><span style="color:#79B8FF">    "title"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Angular"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "subtitle"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Grundlagen, fortgeschrittene Themen und Best Practices – mit NativeScript und NgRx"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "isbn"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"9783864906466"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#6A737D">    // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#E1E4E8">  {</span></span>
+<span class="line"><span style="color:#79B8FF">    "title"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Angular"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "subtitle"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript - ab Angular 4, inklusive NativeScript und Redux"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "isbn"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"9783864903571"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#6A737D">    // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#6A737D">  // ...</span></span>
+<span class="line"><span style="color:#E1E4E8">]</span></span></code></pre>
+<p>After <em>Scully</em> plucks the ISBN, it will just iterate over the final array: <code>['9783864906466', '9783864903571']</code>.
+In fact, when running <em>Scully</em> using <code>npx scully</code>, it will visit the following routes, <strong>after we have configured the route <code>/books/:isbn</code> in the Angular router</strong> (otherwise non-used routes will be skipped).</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span>/books/9783864906466</span></span>
+<span class="line"><span>/books/9783864903571</span></span></code></pre>
+<p>We can see the result in the log:</p><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code><span class="line"><span>enable reload on port 2667</span></span>
+<span class="line"><span> ☺   new Angular build imported</span></span>
+<span class="line"><span> ☺   Started servers in background</span></span>
+<span class="line"><span>--------------------------------------------------</span></span>
+<span class="line"><span>Watching blog for change.</span></span>
+<span class="line"><span>--------------------------------------------------</span></span>
+<span class="line"><span> ☺   new Angular build imported</span></span>
+<span class="line"><span>Finding all routes in application.</span></span>
+<span class="line"><span>Using stored unhandled routes</span></span>
+<span class="line"><span>Pull in data to create additional routes.</span></span>
+<span class="line"><span>Finding files in folder "/&lt;path&gt;/blog"</span></span>
+<span class="line"><span>Route list created in files:</span></span>
+<span class="line"><span>  "/&lt;path&gt;/src/assets/scully-routes.json",</span></span>
+<span class="line"><span>  "/&lt;path&gt;/dist/static/assets/scully-routes.json",</span></span>
+<span class="line"><span>  "/&lt;path&gt;/dist/scully-blog/assets/scully-routes.json"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Route "/books/9783864903571" rendered into file: "/&lt;path&gt;/dist/static/books/9783864903571/index.html"</span></span>
+<span class="line"><span>Route "/books/9783864906466" rendered into file: "/&lt;path&gt;/dist/static/books/9783864906466/index.html"</span></span>
+<span class="line"><span>Route "/blog/12-27-2019-blog" rendered into file: "/&lt;path&gt;/dist/static/blog/12-27-2019-blog/index.html"</span></span>
+<span class="line"><span>Route "/blog/first-post" rendered into file: "/&lt;path&gt;/dist/static/blog/first-post/index.html"</span></span>
+<span class="line"><span>Route "/" rendered into file: "/&lt;path&gt;/dist/static/index.html"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Generating took 3.3 seconds for 7 pages:</span></span>
+<span class="line"><span>  That is 2.12 pages per second,</span></span>
+<span class="line"><span>  or 473 milliseconds for each page.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Finding routes in the angular app took 0 milliseconds</span></span>
+<span class="line"><span>  Pulling in route-data took 26 milliseconds</span></span>
+<span class="line"><span>  Rendering the pages took 2.58 seconds</span></span></code></pre>
+<p>This is great. We have efficiently pre-rendered normal dynamic content!
+And that was it for today.
+With the shown examples, it's possible to create a full-fledged website with Scully.</p><blockquote>
+<p>Did you know that <strong>this blogpost</strong> and the overall website you are right now reading has also been created using <em>Scully</em>?
+Feel free to check out the sources at:
+<a href="https://github.com/d-koppenhagen/k9n.dev">github.com/d-koppenhagen/k9n.dev</a></p></blockquote>
+<p>If you want to follow all the development steps in detail, check out my provided GitHub repository
+<a href="https://github.com/d-koppenhagen/scully-blog-example">scully-blog-example</a>.</p><h2 id="conclusion-1">Conclusion</h2>
+<p>Scully is an awesome tool if you need a pre-rendered Angular SPA where all routes can be accessed immediately without loading the whole app at once.
+This is a great benefit for users as they don’t need to wait until the bunch of JavaScript has been downloaded to their devices.
+Visitors and <strong>search engines</strong> have instantly access to the sites' information.
+Furthermore, <em>Scully</em> offers a way to create very easily a blog and renders all posts written in Markdown.
+It will handle and pre-render dynamic routes by fetching API data from placeholders and visiting every route filled by this placeholder.</p><p>Compared to "classic" pre-rending by using <a href="https://angular.io/guide/universal">Angular Universal</a>, <em>Scully</em> is much easier to use, and it doesn't require you to write a specific flavor of Angular.
+Also, <em>Scully</em> can easily pre-render hybrid Angular apps or Angular apps with plugins like jQuery in comparison to Angular Universal.
+If you want to compare <em>Scully</em> with Angular Universal in detail, check out the blog post from Sam Vloeberghs: <a href="https://samvloeberghs.be/posts/scully-or-angular-universal-what-is-the-difference">Scully or Angular Universal, what is the difference?</a></p><p>If you want to dig a bit deeper into the features <em>Scully</em> offers, check out my <a href="/blog/2020-03-dig-deeper-into-scully-ssg">second article</a>.</p><p><strong>Thank you</strong></p><p>Special thanks go to <a href="https://twitter.com/aaronfrost">Aaron Frost (Frosty ⛄️)</a> from the <em>Scully</em> core team, <a href="https://twitter.com/fmalcher01">Ferdinand Malcher</a> and <a href="https://twitter.com/JohannesHoppe">Johannes Hoppe</a> for revising this article.</p></div><!----></analog-markdown><!----><div _ngcontent-ng-c2245548422="" class="edit-on-github"><a _ngcontent-ng-c2245548422="" rel="noopener noreferrer" href="https://github.com/d-koppenhagen/k9n.dev/edit/main/src/content/blog/2020-01-angular-scully.md"> Auf GitHub bearbeiten </a></div><!----></section></div></article><!----></ng-component><!----></main><dk-contact _nghost-ng-c1148330124="" ngh="0"><footer _ngcontent-ng-c1148330124="" id="footer"><div _ngcontent-ng-c1148330124="" id="contact" class="inner"><h2 _ngcontent-ng-c1148330124="" class="major">Kontaktieren Sie mich</h2><p _ngcontent-ng-c1148330124=""> Haben Sie Fragen oder Anregungen? Nehmen Sie gern Kontakt mit mir auf! </p><ul _ngcontent-ng-c1148330124="" class="contact"><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="mailto:mail@k9n.dev">Mail: mail@k9n.dev</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen">GitHub: d-koppenhagen</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="bluesky" class="svg-inline--fa fa-bluesky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" rel="me" href="https://bsky.app/profile/k9n.dev"> Bluesky: k9n.dev </a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="mastodon" class="svg-inline--fa fa-mastodon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" rel="me" href="https://techhub.social/@k9n"> Mastodon: @k9n@techhub.social </a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://www.linkedin.com/in/d-koppenhagen/">LinkedIn: d-koppenhagen</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="xing" class="svg-inline--fa fa-xing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M162.7 210c-1.8 3.3-25.2 44.4-70.1 123.5-4.9 8.3-10.8 12.5-17.7 12.5H9.8c-7.7 0-12.1-7.5-8.5-14.4l69-121.3c.2 0 .2-.1 0-.3l-43.9-75.6c-4.3-7.8.3-14.1 8.5-14.1H100c7.3 0 13.3 4.1 18 12.2l44.7 77.5zM382.6 46.1l-144 253v.3L330.2 466c3.9 7.1.2 14.1-8.5 14.1h-65.2c-7.6 0-13.6-4-18-12.2l-92.4-168.5c3.3-5.8 51.5-90.8 144.8-255.2 4.6-8.1 10.4-12.2 17.5-12.2h65.7c8 0 12.3 6.7 8.5 14.1z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://www.xing.com/profile/Danny_Koppenhagen">Xing: Danny_Koppenhagen</a></li></ul><ul _ngcontent-ng-c1148330124="" class="copyright"><li _ngcontent-ng-c1148330124="">© 2023 by Danny Koppenhagen</li><li _ngcontent-ng-c1148330124="">Design: <a _ngcontent-ng-c1148330124="" href="https://html5up.net">HTML5 UP</a></li><li _ngcontent-ng-c1148330124=""> Vorschläge? Feedback? Bugs? <a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen/k9n.dev/issues"> Stell ein Issue ein</a>, <a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen/k9n.dev/pulls">sende mir einen PR</a> oder <a _ngcontent-ng-c1148330124="" routerlink="/contact" href="/contact" jsaction="click:;">kontaktiere mich</a></li></ul></div></footer></dk-contact><!----></dk-root>
+    <script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["keydown","click"],["focus","blur"]);</script>
+  
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"7":"t0","8":"t1","9":"t2"},"c":{"7":[{"i":"t0","r":1}],"8":[],"9":[{"i":"t2","r":1}]}},{"t":{"5":"t27"},"c":{"5":[{"i":"t27","r":1,"x":2}]}},{"c":{"0":[]}},{"t":{"0":"t18"},"c":{"0":[{"i":"t18","r":1,"t":{"5":"t19","6":"t20","7":"t25","8":"t26","11":"t28","12":"t29"},"c":{"5":[{"i":"t19","r":1}],"6":[{"i":"t20","r":1,"t":{"2":"t21","7":"t22","8":"t23"},"c":{"2":[{"i":"t21","r":1}],"7":[{"i":"t22","r":1,"x":8}],"8":[]}}],"7":[{"i":"t25","r":1,"t":{"1":"t30","2":"t31","3":"t32"},"c":{"1":[{"i":"t30","r":1}],"2":[{"i":"t31","r":1}],"3":[{"i":"t32","r":1}]}}],"8":[{"i":"t26","r":1}],"11":[],"12":[{"i":"t29","r":1}]}}]}},{"c":{"4":[{"i":"c2245548422","r":1}],"6":[]},"t":{"6":"t16"}}]}</script></body></html>

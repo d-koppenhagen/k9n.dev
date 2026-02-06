@@ -1,0 +1,1 @@
+import{ɵ as c}from"./index-DPqAJY-c.js";const t=class t{};t.ɵfac=function(e){return new(e||t)},t.ɵcmp=c({type:t,selectors:[["ng-component"]],decls:0,vars:0,template:function(e,a){},encapsulation:2});let n=t;export{n as default};

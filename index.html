@@ -1,0 +1,1096 @@
+<!DOCTYPE html><html lang="de"><head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css" id="fa-auto-css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 6 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 6 Sharp Duotone";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, 0.25));
+  transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(-1 * var(--fa-li-width, 2em));
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  animation-name: fa-beat;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  animation-name: fa-bounce;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  animation-name: fa-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  animation-name: fa-beat-fade;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  animation-name: fa-flip;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  animation-name: fa-shake;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  animation-name: fa-spin;
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-name: fa-spin;
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    animation-delay: -1ms;
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+    transition-delay: 0s;
+    transition-duration: 0s;
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  4% {
+    transform: rotate(15deg);
+  }
+  8%, 24% {
+    transform: rotate(-18deg);
+  }
+  12%, 28% {
+    transform: rotate(18deg);
+  }
+  16% {
+    transform: rotate(-22deg);
+  }
+  20% {
+    transform: rotate(22deg);
+  }
+  32% {
+    transform: rotate(-12deg);
+  }
+  36% {
+    transform: rotate(12deg);
+  }
+  40%, 100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}</style><link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Apple PWA Support -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-512x512.png">
+    <link href="icons/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+    <link href="icons/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="icons/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Basic Site Information -->
+    <title>k9n.dev</title>
+    <meta name="description" content="Danny Koppenhagen: Entwickler, IT-Berater, Buchautor">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Danny Koppenhagen">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@d-koppenhagen">
+    <meta name="twitter:title" content="Danny Koppenhagen: Entwickler, IT-Berater, Buchautor">
+    <meta name="twitter:image" content="https://k9n.dev/images/k9n.png">
+    <meta name="twitter:description" content="📦#nodejs 🅰️#Angular,💡#TypeScript,⚡️#RxJS, ♻️#NgRx, 🔰 #Vue.js 👨🏻‍💻 Developer @dbsystel📕Author @angular_buch https://angular-buch.com, writer @indepth_dev">
+
+    <!-- Open Graph Profile -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="k9n.dev">
+    <meta property="og:url" content="https://k9n.dev">
+    <meta property="og:image" content="https://k9n.dev/images/k9n.png">
+    <meta property="profile:first_name" content="Danny">
+    <meta property="profile:last_name" content="Koppenhagen">
+    <meta property="profile:gender" content="male">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#e7e7e7">
+    <script type="module" crossorigin="" src="/assets/index-DPqAJY-c.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-DzfkAIf7.css">
+  <style>.menu-dark[_ngcontent-ng-c2099545970] {
+  filter: alpha(opacity=90);
+}
+.menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970] {
+  color: #fdfdfd;
+  background-color: #2e3141;
+  opacity: 0.9;
+  margin: 0px 1px;
+}
+.menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970]:hover, .menu-dark[_ngcontent-ng-c2099545970]    > button[_ngcontent-ng-c2099545970]:focus {
+  background-color: rgb(67.1351351351, 71.5135135135, 94.8648648649);
+  box-shadow: inset 0 0 0 2px #5e7959;
+}
+.menu-dark[_ngcontent-ng-c2099545970]:focus    > button[_ngcontent-ng-c2099545970] {
+  box-shadow: inset 0 0 0 2px #ada789;
+}
+
+@media screen and (max-width: 480px) {
+  .hidden-small[_ngcontent-ng-c2099545970] {
+    visibility: hidden;
+  }
+}</style><style>.header-title[_ngcontent-ng-c2421498523] {
+  background-image: url("/images/bg-triangles.jpg");
+  background-size: cover;
+  font-size: 5em;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.2901960784);
+}
+
+.sub-header-title[_ngcontent-ng-c2421498523] {
+  color: #2e3141;
+  font-size: 1.6em !important;
+  margin-bottom: 0.5em;
+  line-height: 1.3 !important;
+}
+
+.sub-header[_ngcontent-ng-c2421498523] {
+  color: #2e3141;
+  font-size: 1.2em;
+}
+
+#banner[_ngcontent-ng-c2421498523] {
+  background-image: url("/images/dk-header.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  background-color: #fdfdfd;
+  padding: 9em 0 12em 0;
+  animation: _ngcontent-ng-c2421498523_headerFadeIn 3s;
+}
+
+@keyframes _ngcontent-ng-c2421498523_headerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#logo[_ngcontent-ng-c2421498523] {
+  position: absolute;
+  top: 5px;
+}
+#logo[_ngcontent-ng-c2421498523]   img[_ngcontent-ng-c2421498523] {
+  width: 70px;
+  animation: _ngcontent-ng-c2421498523_move-to-top 1s ease, _ngcontent-ng-c2421498523_rotate 4s ease 1;
+}
+
+#logo[_ngcontent-ng-c2421498523]:focus, 
+h1[_ngcontent-ng-c2421498523]:focus {
+  outline: 1px solid rgba(185, 167, 167, 0.4);
+}
+
+@keyframes _ngcontent-ng-c2421498523_rotate {
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+@keyframes _ngcontent-ng-c2421498523_move-to-top {
+  0% {
+    top: 100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  #banner[_ngcontent-ng-c2421498523] {
+    background-position: right -200px top;
+  }
+}
+@media screen and (max-width: 980px) {
+  #banner[_ngcontent-ng-c2421498523] {
+    background-size: contain;
+    padding: 6em 0 10em 0;
+    background-position: right -200px top;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 736px) {
+  .sub-header[_ngcontent-ng-c2421498523] {
+    font-size: 1em !important;
+    padding-right: 110px;
+  }
+  #banner[_ngcontent-ng-c2421498523] {
+    padding: 6em 0 5em 0;
+  }
+}
+@media screen and (max-width: 620px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 3.5em;
+    padding-right: 40vw;
+  }
+  #banner[_ngcontent-ng-c2421498523] {
+    background-size: cover;
+    background-position: right -180px top;
+  }
+}
+@media screen and (max-width: 560px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    font-size: 3em;
+    padding-right: 50vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header-title[_ngcontent-ng-c2421498523] {
+    opacity: 0.7;
+    font-size: 2.5em;
+    padding-right: 50vw;
+  }
+}</style><style>@media screen and (min-width: 736px) {
+  ul.contact[_ngcontent-ng-c1148330124] {
+    columns: 2;
+    width: 100% !important;
+  }
+}</style><style>.m0[_ngcontent-ng-c2373437213] {
+      margin: 0;
+    }</style><style>.features[_ngcontent-ng-c531863780] {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 30px 1.75em;
+  grid-auto-flow: row;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  margin-right: 1.7em;
+}
+
+@media screen and (max-width: 800px) {
+  .features[_ngcontent-ng-c531863780] {
+    grid-template-columns: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .features[_ngcontent-ng-c531863780] {
+    margin-right: 0;
+  }
+}</style><style>.image[_ngcontent-ng-c1511599272], 
+.image[_ngcontent-ng-c1511599272]    > img[_ngcontent-ng-c1511599272], 
+.wrapper.spotlight[_ngcontent-ng-c1511599272]   .image[_ngcontent-ng-c1511599272] {
+  border-radius: 0%;
+}
+
+.wrapper.spotlight[_ngcontent-ng-c1511599272]:before {
+  background-color: #3d4051;
+}</style><style>p[_ngcontent-ng-c2213281974] {
+  white-space: pre-wrap;
+}
+
+.about[_ngcontent-ng-c2213281974], 
+.interviews[_ngcontent-ng-c2213281974] {
+  padding-bottom: 30px;
+}
+.about[_ngcontent-ng-c2213281974]   .button-group[_ngcontent-ng-c2213281974], 
+.interviews[_ngcontent-ng-c2213281974]   .button-group[_ngcontent-ng-c2213281974] {
+  display: flex;
+  gap: 1rem;
+}
+
+.text-img[_ngcontent-ng-c2213281974] {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.text-img[_ngcontent-ng-c2213281974]   img[_ngcontent-ng-c2213281974] {
+  max-width: 300px;
+  height: fit-content;
+}
+
+
+
+.grid-container[_ngcontent-ng-c2213281974] {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 30px 1.75em;
+  grid-auto-flow: row;
+  grid-template-areas: "grid-description-1 grid-description-2" "grid-details-1 grid-details-2";
+  margin-bottom: 1.2em;
+}
+
+.grid-description-1[_ngcontent-ng-c2213281974] {
+  grid-area: grid-description-1;
+}
+
+.grid-details-1[_ngcontent-ng-c2213281974] {
+  grid-area: grid-details-1;
+}
+
+.grid-description-2[_ngcontent-ng-c2213281974] {
+  grid-area: grid-description-2;
+}
+
+.grid-details-2[_ngcontent-ng-c2213281974] {
+  grid-area: grid-details-2;
+}
+
+@media screen and (max-width: 800px) {
+  .grid-container[_ngcontent-ng-c2213281974] {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "grid-description-1" "grid-details-1" "grid-description-2" "grid-details-2";
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .button.small[_ngcontent-ng-c2213281974] {
+    padding: 0px 10px;
+  }
+}
+@media screen and (max-width: 736px) {
+  .text-img[_ngcontent-ng-c2213281974] {
+    flex-wrap: wrap;
+  }
+}</style><style>.image[_ngcontent-ng-c293280889], 
+.image[_ngcontent-ng-c293280889]    > img[_ngcontent-ng-c293280889], 
+.wrapper.spotlight[_ngcontent-ng-c293280889]   .image[_ngcontent-ng-c293280889] {
+  border-radius: 0%;
+  max-width: 200px;
+}
+
+.wrapper.spotlight[_ngcontent-ng-c293280889]:nth-child(2n-1)   .inner[_ngcontent-ng-c293280889] {
+  text-align: left;
+}</style><style>
+
+.timeline[_ngcontent-ng-c1589502226] {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+
+.timeline[_ngcontent-ng-c1589502226]::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: rgb(156.2926829268, 155.4268292683, 140.7073170732);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+
+
+.timeline-heading-header[_ngcontent-ng-c1589502226] {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.timeline-heading-info[_ngcontent-ng-c1589502226] {
+  font-size: 0.9em;
+  text-transform: none;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.timeline-heading-info.time[_ngcontent-ng-c1589502226] {
+  font-size: 1.3em;
+}
+
+.timeline-heading[_ngcontent-ng-c1589502226] {
+  font-size: 1.1em;
+  text-transform: none;
+  padding-top: 0.7em;
+}
+
+
+
+.container[_ngcontent-ng-c1589502226] {
+  padding: 10px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  max-height: 200px;
+  list-style: none;
+}
+
+
+
+.container[_ngcontent-ng-c1589502226]::after {
+  content: "";
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  right: -14px;
+  background-color: white;
+  border: 4px solid #848372;
+  top: 25px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+
+.left[_ngcontent-ng-c1589502226] {
+  left: 0;
+}
+
+
+
+.right[_ngcontent-ng-c1589502226] {
+  left: 50%;
+}
+
+
+
+.left[_ngcontent-ng-c1589502226]::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+}
+
+
+
+.right[_ngcontent-ng-c1589502226]::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+}
+
+
+
+.right[_ngcontent-ng-c1589502226]::after {
+  left: -14px;
+}
+
+
+
+.content[_ngcontent-ng-c1589502226] {
+  padding: 0.8em 1em;
+  position: relative;
+  border-radius: 6px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  
+
+  .timeline[_ngcontent-ng-c1589502226]::after {
+    left: 20px;
+  }
+  .content[_ngcontent-ng-c1589502226] {
+    padding-right: 0px;
+  }
+  
+
+  .container[_ngcontent-ng-c1589502226] {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 0px;
+    max-height: unset;
+  }
+  
+
+  .left[_ngcontent-ng-c1589502226]::after, 
+   .right[_ngcontent-ng-c1589502226]::after {
+    left: 6px;
+  }
+  
+
+  .right[_ngcontent-ng-c1589502226] {
+    left: 0%;
+  }
+}</style><style>article[_ngcontent-ng-c1303637800] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+article[_ngcontent-ng-c1303637800]:focus-within   [_ngcontent-ng-c1303637800]:focus {
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+article[_ngcontent-ng-c1303637800]:focus-within:not(:hover) {
+  outline: 1px solid rgb(227, 227, 227);
+  outline-offset: 0;
+}
+article[_ngcontent-ng-c1303637800]:hover {
+  outline: 1px solid #ffffff;
+  outline-offset: 0;
+}
+
+img.card-image[_ngcontent-ng-c1303637800] {
+  height: 180px;
+  object-fit: cover;
+  order: -1;
+}
+
+.card-header[_ngcontent-ng-c1303637800] {
+  margin: 1.5rem 1.5rem 0;
+  min-height: 100px;
+}
+.card-header[_ngcontent-ng-c1303637800]   a[_ngcontent-ng-c1303637800]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.card-header[_ngcontent-ng-c1303637800]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.card-content[_ngcontent-ng-c1303637800] {
+  align-self: flex-start;
+  margin: 0 1.5rem;
+  flex-grow: 1;
+}
+
+footer[_ngcontent-ng-c1303637800] {
+  margin: 1.5rem 1.5rem 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
+footer[_ngcontent-ng-c1303637800]    > img.published-at-logo[_ngcontent-ng-c1303637800] {
+  max-width: 150px;
+  max-height: 50px;
+  padding-bottom: 0.75rem;
+}
+
+
+
+@media screen and (max-width: 980px) {
+  img.card-image[_ngcontent-ng-c1303637800] {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 736px) {
+  img.card-image[_ngcontent-ng-c1303637800] {
+    height: 120px;
+  }
+}</style></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-HY3CPEEH1Z"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HY3CPEEH1Z');
+      </script>
+  <body id="page-wrapper" class="mat-typography"><!--nghm-->
+    <!-- Angular -->
+    <dk-root ng-version="21.0.0" ngh="8" ng-server-context="ssr-analog"><dk-navbar _nghost-ng-c2099545970="" ngh="0"><nav _ngcontent-ng-c2099545970="" id="navigation" class="menu-dark" jsaction="keydown:;"><button _ngcontent-ng-c2099545970="" role="button" aria-label="Menü öffnen" aria-controls="menu" class="burger-menu" aria-expanded="false" jsaction="click:;"><fa-icon _ngcontent-ng-c2099545970="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg></fa-icon></button></nav></dk-navbar><dk-header _nghost-ng-c2421498523="" ngh="1"><header _ngcontent-ng-c2421498523="" id="banner"><div _ngcontent-ng-c2421498523="" class="inner"><a _ngcontent-ng-c2421498523="" routerlink="/" aria-label="Zur Startseite" title="Startseite" id="logo" href="/" jsaction="click:;"><img _ngcontent-ng-c2421498523="" src="images/logo_header.png" alt="Logo"></a><h1 _ngcontent-ng-c2421498523="" aria-label="k9n.dev" class="header-title" jsaction="focus:;blur:;"><span _ngcontent-ng-c2421498523="">k</span><span _ngcontent-ng-c2421498523="" class="headline-expanded">9</span><!----><!----><span _ngcontent-ng-c2421498523="">n.dev</span><!----></h1><p _ngcontent-ng-c2421498523="" class="sub-header-title">Danny Koppenhagen</p><p _ngcontent-ng-c2421498523="" class="sub-header">Entwickler, IT-Berater, Buchautor</p></div></header></dk-header><main><router-outlet></router-outlet><ng-component _nghost-ng-c2373437213="" ngh="0"><section _ngcontent-ng-c2373437213="" class="wrapper alt style1 m0"><div _ngcontent-ng-c2373437213="" class="inner"><h2 _ngcontent-ng-c2373437213="" class="major">Aktuelle Blog Posts</h2><dk-preview _ngcontent-ng-c2373437213="" content="blog" _nghost-ng-c531863780="" ngh="4"><section _ngcontent-ng-c531863780="" class="features"><dk-card _ngcontent-ng-c531863780="" _nghost-ng-c1303637800="" ngh="2"><article _ngcontent-ng-c1303637800="" lang="en"><h3 _ngcontent-ng-c1303637800="" class="card-header"><a _ngcontent-ng-c1303637800="" hreflang="en" href="/blog/2025-12-signal-forms-part4" jsaction="click:;"> Angular Signal Forms Part 4: Metadata and Accessibility Handling </a></h3><div _ngcontent-ng-c1303637800="" class="card-content" lang="en"><p _ngcontent-ng-c1303637800=""> In the previous parts of this series, we've covered the fundamentals of Signal Forms, advanced validation patterns, and modular form architecture. In this final part, we'll explore the power of assigning field metadata. We'll also have a look at how we can automatically add helpful ARIA attributes based on a field state to make our forms even more inclusive and accessible. </p></div><footer _ngcontent-ng-c1303637800=""><img _ngcontent-ng-c1303637800="" alt="" class="published-at-logo" src="https://angular-buch.com/assets/img/brand-400.png"><!----><!----></footer><!----><img _ngcontent-ng-c1303637800="" alt="" class="card-image" src="https://website-articles.angular-buch.com/blog/2025-12-signal-forms-part4/header-signalforms-part4.jpg"></article><!----></dk-card><dk-card _ngcontent-ng-c531863780="" _nghost-ng-c1303637800="" ngh="2"><article _ngcontent-ng-c1303637800="" lang="de"><h3 _ngcontent-ng-c1303637800="" class="card-header"><a _ngcontent-ng-c1303637800="" hreflang="de" href="/blog/2025-11-angular21" jsaction="click:;"> Angular 21 ist da! </a></h3><div _ngcontent-ng-c1303637800="" class="card-content" lang="de"><p _ngcontent-ng-c1303637800=""> Bevor wir uns in den Trubel zum Jahresende stürzen, gibt es Neuigkeiten aus der Angular-Welt: Am 19. November 2025 wurde Angular 21 veröffentlicht! Die wichtigsten Neuigkeiten: Signal Forms, Zoneless Apps, Testing mit Vitest, das neue Paket @angular/aria und mehr Unterstützung für AI-Assistenten. </p></div><footer _ngcontent-ng-c1303637800=""><img _ngcontent-ng-c1303637800="" alt="" class="published-at-logo" src="https://angular-buch.com/assets/img/brand-400.png"><!----><!----></footer><!----><img _ngcontent-ng-c1303637800="" alt="" class="card-image" src="https://website-articles.angular-buch.com/blog/2025-11-angular21/angular21.jpg"></article><!----></dk-card><dk-card _ngcontent-ng-c531863780="" _nghost-ng-c1303637800="" ngh="3"><article _ngcontent-ng-c1303637800="" lang="en"><h3 _ngcontent-ng-c1303637800="" class="card-header"><a _ngcontent-ng-c1303637800="" hreflang="en" href="/blog/2025-11-aria-live" jsaction="click:;"> When Your Live Region Isn't Live: Fixing aria-live in Angular, React, and Vue </a></h3><div _ngcontent-ng-c1303637800="" class="card-content" lang="en"><p _ngcontent-ng-c1303637800=""> Learn how to fix aria-live regions that fail silently in modern SPAs. Discover why screen readers miss your announcements when frameworks recreate DOM elements, understand the difference between polite and assertive announcements, and implement two reliable patterns - local and global live regions - with concrete examples for Angular, Vue, and React applications. </p></div><!----><img _ngcontent-ng-c1303637800="" alt="" class="card-image" src="images/blog/aria-live/aria-live-small.jpg"></article><!----></dk-card><dk-card _ngcontent-ng-c531863780="" _nghost-ng-c1303637800="" ngh="2"><article _ngcontent-ng-c1303637800="" lang="en"><h3 _ngcontent-ng-c1303637800="" class="card-header"><a _ngcontent-ng-c1303637800="" hreflang="en" href="/blog/2025-10-signal-forms-part3" jsaction="click:;"> Angular Signal Forms Part 3: Child Forms, Custom UI Controls and SignalFormsConfig </a></h3><div _ngcontent-ng-c1303637800="" class="card-content" lang="en"><p _ngcontent-ng-c1303637800=""> We covered fundamentals and advanced validation patterns of Signal Forms in Part 1 and Part 2 of this blog series. In this final part, we'll explore two specialized topics that are relevant for large and modular forms: child forms and custom UI controls. Last but not least, we'll have a look at providing a custom SignalFormsConfig. </p></div><footer _ngcontent-ng-c1303637800=""><img _ngcontent-ng-c1303637800="" alt="" class="published-at-logo" src="https://angular-buch.com/assets/img/brand-400.png"><!----><!----></footer><!----><img _ngcontent-ng-c1303637800="" alt="" class="card-image" src="https://website-articles.angular-buch.com/blog/2025-10-signal-forms-part3/header-signalforms-part3.jpg"></article><!----></dk-card><!----><!----><!----></section><ul _ngcontent-ng-c531863780="" class="actions"><li _ngcontent-ng-c531863780=""><a _ngcontent-ng-c531863780="" class="button" href="/blog" jsaction="click:;">Alle anzeigen (29)</a></li></ul><!----></dk-preview></div></section><section _ngcontent-ng-c2373437213="" class="wrapper style3"><div _ngcontent-ng-c2373437213="" class="inner"><h2 _ngcontent-ng-c2373437213="" class="major">Meine Talks &amp; Slides</h2><dk-preview _ngcontent-ng-c2373437213="" content="talks" _nghost-ng-c531863780="" ngh="5"><section _ngcontent-ng-c531863780="" class="features"><dk-card _ngcontent-ng-c531863780="" _nghost-ng-c1303637800="" ngh="2"><article _ngcontent-ng-c1303637800="" lang="de"><h3 _ngcontent-ng-c1303637800="" class="card-header"><a _ngcontent-ng-c1303637800="" hreflang="de" href="/talks/2025-10-10-barrierefreiheit-in-web-projekten" jsaction="click:;"> Zu Gast bei Software-Architektur im Stream: Barrierefreiheit in Web-Projekten – Von der Architektur bis zur Implementierung </a></h3><div _ngcontent-ng-c1303637800="" class="card-content" lang="de"><p _ngcontent-ng-c1303637800=""> Barrierefreiheit ist kein “Nice-to-have” mehr, sondern wird spätestens durch das Barrierefreiheitsstärkungsgesetz (BFSG) seit Mitte 2025 für viele digitale Dienste zur Pflicht. Doch wie integriert man Accessibility erfolgreich in moderne Web-Architekturen? In diesem Stream diskutiere ich zusammen mit Maximilian Franzke und Ralf D. Müller, wie sie barrierefreie Web-Anwendungen entwickeln – von der strategischen Architekturentscheidung bis zur praktischen Umsetzung. </p></div><footer _ngcontent-ng-c1303637800=""><img _ngcontent-ng-c1303637800="" alt="" class="published-at-logo" src="https://raw.githubusercontent.com/ewolff/software-architektur.tv/refs/heads/master/favicon.ico"><!----><!----></footer><!----><img _ngcontent-ng-c1303637800="" alt="" class="card-image" src="https://github.com/ewolff/software-architektur.tv/blob/master/thumbnails/folge282.png?raw=true"></article><!----></dk-card><dk-card _ngcontent-ng-c531863780="" _nghost-ng-c1303637800="" ngh="2"><article _ngcontent-ng-c1303637800="" lang="en"><h3 _ngcontent-ng-c1303637800="" class="card-header"><a _ngcontent-ng-c1303637800="" hreflang="en" href="/talks/2024-01-16-accessibility-in-angular" jsaction="click:;"> Accessibility in Angular – Angulars features for a better and more inclusive web </a></h3><div _ngcontent-ng-c1303637800="" class="card-content" lang="en"><p _ngcontent-ng-c1303637800=""> The Angular Framework brings us some built-in features to help in creating accessible components and applications by wrapping common best practices and techniques. In this talk at the Angular Berlin Meetup, I presented these concepts and features. </p></div><footer _ngcontent-ng-c1303637800=""><img _ngcontent-ng-c1303637800="" alt="" class="published-at-logo" src="https://dbsystel.github.io/tech-stories/images/home.png"><!----><!----></footer><!----><img _ngcontent-ng-c1303637800="" alt="" class="card-image" src="https://techstories.dbsystel.de/images/20240116-a11y-Angular/a11y-angular.png"></article><!----></dk-card><dk-card _ngcontent-ng-c531863780="" _nghost-ng-c1303637800="" ngh="2"><article _ngcontent-ng-c1303637800="" lang="de"><h3 _ngcontent-ng-c1303637800="" class="card-header"><a _ngcontent-ng-c1303637800="" hreflang="de" href="/talks/2023-11-20-einfuehrung-barrierefreiheit-web" jsaction="click:;"> A11y: EAA, BFSG, WCAG, WAI, ARIA, WTF? – it’s for the people stupid! </a></h3><div _ngcontent-ng-c1303637800="" class="card-content" lang="de"><p _ngcontent-ng-c1303637800=""> Accessibility betrifft uns täglich und immer, wenn wir Software verwenden. Es ist an uns, diese umzusetzen. In unserem Talk von der W-JAX am 07.11.2023 zeigen wir euch, wie ihr eure Webanwendungen von Beginn an mit einfachen Mitteln zu einem hohen Grad barrierefrei gestaltet und entwickelt. </p></div><footer _ngcontent-ng-c1303637800=""><img _ngcontent-ng-c1303637800="" alt="" class="published-at-logo" src="https://dbsystel.github.io/tech-stories/images/home.png"><!----><!----></footer><!----><img _ngcontent-ng-c1303637800="" alt="" class="card-image" src="https://dbsystel.github.io/tech-stories/images/home.png"></article><!----></dk-card><!----><!----><!----></section><!----></dk-preview></div></section><dk-publications _ngcontent-ng-c2373437213="" _nghost-ng-c1511599272="" ngh="0"><section _ngcontent-ng-c1511599272="" id="wrapper"><section _ngcontent-ng-c1511599272="" id="one" class="wrapper spotlight style1"><div _ngcontent-ng-c1511599272="" class="inner"><a _ngcontent-ng-c1511599272="" href="https://angular-buch.com" aria-label="Zur Buchwebsite (angular-buch.com)" class="image"><img _ngcontent-ng-c1511599272="" src="images/book-cover-v1m.png" alt="Buchcover: angular-buch.com"></a><div _ngcontent-ng-c1511599272="" class="content"><h2 _ngcontent-ng-c1511599272="" class="major"> Angular: Das Praxisbuch – von den Grundlagen bis zur professionellen Entwicklung mit Signals – ab Angular 22 </h2><p _ngcontent-ng-c1511599272=""> In diesem Praxiseinstieg lernst du Angular inklusive der modernen APIs und Konzepte kennen. Mit einem durchgängigen Beispielprojekt führen die Autoren dich durch die Welt von Angular. Du entwickelst und testest Schritt für Schritt eine professionelle, modulare und barrierefreie Single-Page-Anwendung und lernst Angular im praktischen Einsatz kennen. Auf jeden Umsetzungsschritt folgen außerdem umfangreiche Unit- und Integrationstests. Ausführliche Theorieteile runden das Buch ab und machen es zu deinem praktischen Begleiter im Entwicklungsalltag. </p><a _ngcontent-ng-c1511599272="" href="https://angular-buch.com" class="special">angular-buch.com</a></div></div></section></section></dk-publications><section _ngcontent-ng-c2373437213="" class="wrapper alt style1"><div _ngcontent-ng-c2373437213="" class="inner"><h2 _ngcontent-ng-c2373437213="" class="major">Meine Projekte</h2><dk-preview _ngcontent-ng-c2373437213="" content="projects" _nghost-ng-c531863780="" ngh="4"><section _ngcontent-ng-c531863780="" class="features"><dk-card _ngcontent-ng-c531863780="" _nghost-ng-c1303637800="" ngh="3"><article _ngcontent-ng-c1303637800="" lang="en"><h3 _ngcontent-ng-c1303637800="" class="card-header"><a _ngcontent-ng-c1303637800="" hreflang="en" href="/projects/2023-12-29-analog-publish-gh-pages" jsaction="click:;"> Analog Publish GitHub Pages </a></h3><div _ngcontent-ng-c1303637800="" class="card-content" lang="en"><p _ngcontent-ng-c1303637800=""> When I migrated my personal website/blog to use AnalogJS, I created a GitHub Action which simplifies the deployment at GitHub Pages. </p></div><!----><img _ngcontent-ng-c1303637800="" alt="" class="card-image" src="images/projects/analog-publish-gh-pages-small.png"></article><!----></dk-card><dk-card _ngcontent-ng-c531863780="" _nghost-ng-c1303637800="" ngh="3"><article _ngcontent-ng-c1303637800="" lang="en"><h3 _ngcontent-ng-c1303637800="" class="card-header"><a _ngcontent-ng-c1303637800="" hreflang="en" href="/projects/2023-04-05-vue3-openlayers" jsaction="click:;"> Maintainer: vue3-openlayers </a></h3><div _ngcontent-ng-c1303637800="" class="card-content" lang="en"><p _ngcontent-ng-c1303637800=""> Since April 2023, I am actively maintaining and evolving the vue3-openlayers library — An OpenLayers Wrapper for Vue3. </p></div><!----><img _ngcontent-ng-c1303637800="" alt="" class="card-image" src="images/projects/vue3-openlayers-small.png"></article><!----></dk-card><dk-card _ngcontent-ng-c531863780="" _nghost-ng-c1303637800="" ngh="3"><article _ngcontent-ng-c1303637800="" lang="en"><h3 _ngcontent-ng-c1303637800="" class="card-header"><a _ngcontent-ng-c1303637800="" hreflang="en" href="/projects/2021-09-14-ngx-lipsum" jsaction="click:;"> ngx-lipsum </a></h3><div _ngcontent-ng-c1303637800="" class="card-content" lang="en"><p _ngcontent-ng-c1303637800=""> Easily use lorem ipsum dummy texts in your angular app </p></div><!----><img _ngcontent-ng-c1303637800="" alt="" class="card-image" src="images/projects/ngx-lipsum.svg"></article><!----></dk-card><dk-card _ngcontent-ng-c531863780="" _nghost-ng-c1303637800="" ngh="3"><article _ngcontent-ng-c1303637800="" lang="en"><h3 _ngcontent-ng-c1303637800="" class="card-header"><a _ngcontent-ng-c1303637800="" hreflang="en" href="/projects/2020-09-12-scully-plugin-mermaid" jsaction="click:;"> scully-plugin-mermaid — A PostRenderer Plugin for Mermaid </a></h3><div _ngcontent-ng-c1303637800="" class="card-content" lang="en"><p _ngcontent-ng-c1303637800=""> Add a Scully.io PostRenderer plugin for Mermaid.js graphs, charts and diagrams embedded in Markdown files. </p></div><!----><img _ngcontent-ng-c1303637800="" alt="" class="card-image" src="images/projects/mermaid-small.jpg"></article><!----></dk-card><!----><!----><!----></section><ul _ngcontent-ng-c531863780="" class="actions"><li _ngcontent-ng-c531863780=""><a _ngcontent-ng-c531863780="" class="button" href="/projects" jsaction="click:;">Alle anzeigen (10)</a></li></ul><!----></dk-preview></div></section><dk-about _ngcontent-ng-c2373437213="" _nghost-ng-c2213281974="" ngh="7"><section _ngcontent-ng-c2213281974="" id="about" class="wrapper style2"><div _ngcontent-ng-c2213281974="" class="inner"><h2 _ngcontent-ng-c2213281974="" class="major">Über mich</h2><p _ngcontent-ng-c2213281974=""> Ich bin Danny Koppenhagen: Frontend Entwickler und -Architekt. Ich entwickle seit vielen Jahren nutzerzentrierte Enterprise Webanwendung und bevorzuge die Arbeit im DevOps-Produktionsmodell. Als technologische Basis setze ich auf moderne SPA-Frameworks wie Angular und Vue mit TypeScript. Weiterhin bin ich als Berater im Bereich der Webentwicklung tätig und Maintainer einiger Open Source Projekte. </p><section _ngcontent-ng-c2213281974="" id="about-k9n" class="about"><h3 _ngcontent-ng-c2213281974="" class="major">k9n.dev?</h3><p _ngcontent-ng-c2213281974=""> Warum k9n.dev? Hierbei handelt es sich um ein Numeronym, bei dem die Zahl zwischen den beiden Buchstaben für die Anzahl der ausgelassenen Buchstaben in meinem Nachnamen steht (Vgl.: a11y, i18n, l10n, ...). </p></section><h3 _ngcontent-ng-c2213281974="" class="major">Interviews</h3><section _ngcontent-ng-c2213281974="" class="interviews"><article _ngcontent-ng-c2213281974="" class="text-img"><div _ngcontent-ng-c2213281974=""><h4 _ngcontent-ng-c2213281974=""> IT@DB Podcast Folge #73 vom 18.01.2024: Digitale Barrierefreiheit </h4><p _ngcontent-ng-c2213281974=""> Zusammen mit meinem Kollegen <a _ngcontent-ng-c2213281974="" href="https://techstories.dbsystel.de/blog/profiles/Maximilian-Franzke.html" target="_blank">Maximilian Franzke</a> von der DB Systel, war ich zu Gast beim IT@DB Podcast von <a _ngcontent-ng-c2213281974="" href="https://www.linkedin.com/in/jan-g%C3%B6tze-178516a6/" target="_blank">Jan Götze</a>. Hier haben wir darüber gesprochen, warum es in unserer zunehmend digitalisierten Welt von entscheidender Bedeutung ist, dass wir die Prinzipien der digitalen Barrierefreiheit fest in unserer Gestaltung und Entwicklung von digitalen Produkten verankern. Barrierefreiheit geht weit über bloße Compliance hinaus – es ist die Grundlage für eine inklusive und gerechte Online-Erfahrung! Digitale Barrierefreiheit ermöglicht es Menschen mit unterschiedlichen Fähigkeiten, unabhängig von physischen oder kognitiven Einschränkungen, die gleichen Chancen im digitalen Raum zu nutzen. </p><div _ngcontent-ng-c2213281974="" class="button-group"><a _ngcontent-ng-c2213281974="" href="https://open.spotify.com/episode/4n6qXpYtCZ9UQACbUPNMpG?si=fIldVBQhR_e8Vw4iStiBSw" class="button small"><fa-icon _ngcontent-ng-c2213281974="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="spotify" class="svg-inline--fa fa-spotify" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"></path></svg></fa-icon> Spotify </a><a _ngcontent-ng-c2213281974="" href="https://podcasts.apple.com/de/podcast/digitale-barrierefreiheit-danny-koppenhagen-und-maximilian/id1462447493?i=1000642092259" class="button small"><fa-icon _ngcontent-ng-c2213281974="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="apple" class="svg-inline--fa fa-apple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg></fa-icon> Apple Podcasts </a><a _ngcontent-ng-c2213281974="" href="https://deezer.page.link/MZaQ2c5YqQ28vcdn6" class="button small"><fa-icon _ngcontent-ng-c2213281974="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="deezer" class="svg-inline--fa fa-deezer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M451.46,244.71H576V172H451.46Zm0-173.89v72.67H576V70.82Zm0,275.06H576V273.2H451.46ZM0,447.09H124.54V374.42H0Zm150.47,0H275V374.42H150.47Zm150.52,0H425.53V374.42H301Zm150.47,0H576V374.42H451.46ZM301,345.88H425.53V273.2H301Zm-150.52,0H275V273.2H150.47Zm0-101.17H275V172H150.47Z"></path></svg></fa-icon> Deezer </a></div></div><img _ngcontent-ng-c2213281974="" src="images/it_at_db_podcast_a11y.jpeg" width="300" height="300" alt="Ein lebendiger oranger Hintergrund bildet die Kulisse für kreative Würfel, die in geschickter Anordnung die Worte &quot;Accessible&quot; und &quot;Possible&quot; formen. Die Würfel sind tastbar, mit klaren Strukturen, um die Botschaft haptisch erfahrbar zu machen. Das Bild verweist auf Folge Nummer 73 der Podcastfolge von IT@DB zum Thema &quot;Digitale Barrierefreiheit&quot;"></article><div _ngcontent-ng-c2213281974="" class="grid-container"><article _ngcontent-ng-c2213281974="" class="grid-description-1"><h4 _ngcontent-ng-c2213281974="">#000000 c0ffee Tech-Talk der DB Systel</h4><p _ngcontent-ng-c2213281974=""> Im Mai war ich zu Gast beim #000000 c0ffee Tech-Talk der DB Systel, der Auf Grund der weltweiten Corona Pandemie remote stattfand.\r\n Im Interview spreche ich über meine Erfahrungen mit Vue.js und Angular und gehe darauf ein, welches Framework sich für welche Anwendungszwecke eignet. Außerdem erläutere ich, wie der aktuelle Stand der Technik für Progressive Webapps (PWA) ist. Im letzten Teil sprechen wir über die Anbindung von APIs und über das Architekturmuster "Backend For Frontends" (BFF). </p></article><article _ngcontent-ng-c2213281974="" class="grid-description-2"><h4 _ngcontent-ng-c2213281974="">Interview mit Agiledrop</h4><p _ngcontent-ng-c2213281974=""> Im Interview mit Agiledrop spreche ich über meinen Weg zur Webentwicklung und wie ich dazu kam Co-Autor des deutschsprachigen Angular Buchs zu sein. Weiterhin berichte ich von meinen praktischen Erfahrungen mit Angular und Vue.js und in welchem Fall ich auf Angular oder Vue.js setzen würde. Zum Abschluss gehe ich auf den Static-Site-Generator \"Scully\" und Webcomponents sowie auf meine Erwartungen an die zukünftige Entwicklung im Bereich Webtechnologien ein. </p></article><!----><div _ngcontent-ng-c2213281974="" class="grid-details-2"><!----><!----><div _ngcontent-ng-c2213281974=""></div><!----><a _ngcontent-ng-c2213281974="" href="https://www.agiledrop.com/blog/interview-danny-koppenhagen-vuejs-angular-buch-scully-and-web-components" class="button small">Zum kompletten Interview</a></div></div></section><h3 _ngcontent-ng-c2213281974="" class="major">Mein Werdegang</h3><section _ngcontent-ng-c2213281974="" class="features"><dk-personal-timeline _ngcontent-ng-c2213281974="" _nghost-ng-c1589502226="" ngh="6"><ol _ngcontent-ng-c1589502226="" class="timeline"><li _ngcontent-ng-c1589502226="" class="container hidden list-item left"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2026 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location"> </span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 📘 Angular: Das Praxisbuch (1. Auflage) </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">dpunkt.verlag</span><p _ngcontent-ng-c1589502226="">Von den Grundlagen bis zur professionellen Entwicklung mit Signals.</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item right"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2024 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location">Berlin</span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 💎 DevOps Engineer mit Spezialisierung in Frontend Architektur and Barrierefreiheit </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">DB Systel GmbH</span><p _ngcontent-ng-c1589502226="">Experte für Webtechnologien und barrierefreie Webanwendungen.</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item left"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2023 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location"> </span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 📕 Angular (4. Auflage) </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">dpunkt.verlag</span><p _ngcontent-ng-c1589502226="">Das große Praxisbuch – Grundlagen, fortgeschrittene Themen und Best Practices. Inklusive RxJS, NgRx und a11y.</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item right"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2022 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location">Berlin</span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 💎 Seniorberater &amp; Frontend Architect </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">DB Systel GmbH</span><p _ngcontent-ng-c1589502226="">Entwicklung von Enterprise-Webanwendungen</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item left"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2020 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location"> </span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 📕 Angular (3. Auflage) </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">dpunkt.verlag</span><p _ngcontent-ng-c1589502226="">Grundlagen, fortgeschrittene Themen und Best Practices – inklusive RxJS, NgRx und PWA</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item right"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2019 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location"> </span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 📕 Angular (2. Auflage) </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">dpunkt.verlag</span><p _ngcontent-ng-c1589502226="">Grundlagen, fortgeschrittene Themen und Best Practices – inklusive NativeScript und NgRx</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item left"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2019 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location">Berlin</span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 💎 Spezialist
+Entwickler Und IT-Berater </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">DB Systel GmbH</span><p _ngcontent-ng-c1589502226="">Entwicklung nutzerzentrierter Webanwendungen im Enterprise-Umfeld. Beratung zur Umsetzung von Web-Anwendungen und -Architekturen sowie User Experience (UX) Consulting.</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item right"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2017 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location"> </span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 📕 Angular (1. Auflage) </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">dpunkt.verlag</span><p _ngcontent-ng-c1589502226="">Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item left"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2015 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location">Berlin</span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 🚨 Entwickler TETRA Support Und Umsetzung </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">Deutsche Telekom Healthcare &amp; Security Solutions GmbH</span><p _ngcontent-ng-c1589502226="">Umsetzung von Client- und Serversystemen im Bereich des TETRA-BOS. Administration, Konfiguration, Integration und Test von IT-Systemen.</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item right"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2015 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location">Leipzig</span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 🎓 Bachelor Of Engineering
+Kommunikations- Und Medieninformatik </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">Deutsche Telekom Hochschule für Telekommunikation</span><p _ngcontent-ng-c1589502226="">Netzwerk- und Übertragungstechnik, Software Engineering, IT-Architektur, Protokollengineering sowie Web und Medien-Technologien.</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item left"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2012 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location">Cottbus</span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> ☎️ Sachbearbeiter Technische Kundenberatung </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">Deutsche Telekom Technischer Service GmbH (Customer Competence Center)</span><p _ngcontent-ng-c1589502226="">Second Level Support für VoIP und WLAN Produkte.</p></div></li><li _ngcontent-ng-c1589502226="" class="container hidden list-item right"><div _ngcontent-ng-c1589502226="" class="content"><div _ngcontent-ng-c1589502226="" class="timeline-heading-header"><span _ngcontent-ng-c1589502226="" class="timeline-heading-info time"> 2012 </span><span _ngcontent-ng-c1589502226="" class="timeline-heading-info location">Frankfurt (Oder)</span></div><h4 _ngcontent-ng-c1589502226="" class="timeline-heading"> 🧰 Facharbeiter
+IT-Systemelektroniker </h4><span _ngcontent-ng-c1589502226="" class="timeline-heading-info">Deutschen Telekom AG</span><p _ngcontent-ng-c1589502226="">Informatik, Telekommunikationstechnik sowie Elektrotechnik</p></div></li><!----></ol></dk-personal-timeline></section></div></section></dk-about><dk-meetups _ngcontent-ng-c2373437213="" _nghost-ng-c293280889="" ngh="0"><section _ngcontent-ng-c293280889="" class="wrapper alt spotlight"><div _ngcontent-ng-c293280889="" class="inner"><a _ngcontent-ng-c293280889="" href="https://www.meetup.com/de-DE/Angular-Meetup-Berlin" class="image"><img _ngcontent-ng-c293280889="" src="images/Angular-Berlin_Icon.png" alt="Angular Berlin Logo"></a><div _ngcontent-ng-c293280889="" class="content"><h2 _ngcontent-ng-c293280889="" class="major">Angular Berlin Meetup</h2><p _ngcontent-ng-c293280889=""> Ich bin Co-Organisator des Angular Meetup in Berlin. Dieses findet ca. alle 4-6 Wochen an wechselnden Standorten statt. Neben zwei Talks am Abend steht der Austausch und die Vernetzung mit anderen Entwickler:innen im Vordergrund. </p><a _ngcontent-ng-c293280889="" href="https://www.meetup.com/de-DE/Angular-Meetup-Berlin" class="special">Meetup.com: Angular Berlin</a></div></div></section></dk-meetups></ng-component><!----></main><dk-contact _nghost-ng-c1148330124="" ngh="0"><footer _ngcontent-ng-c1148330124="" id="footer"><div _ngcontent-ng-c1148330124="" id="contact" class="inner"><h2 _ngcontent-ng-c1148330124="" class="major">Kontaktieren Sie mich</h2><p _ngcontent-ng-c1148330124=""> Haben Sie Fragen oder Anregungen? Nehmen Sie gern Kontakt mit mir auf! </p><ul _ngcontent-ng-c1148330124="" class="contact"><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="mailto:mail@k9n.dev">Mail: mail@k9n.dev</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen">GitHub: d-koppenhagen</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="bluesky" class="svg-inline--fa fa-bluesky" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" rel="me" href="https://bsky.app/profile/k9n.dev"> Bluesky: k9n.dev </a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="mastodon" class="svg-inline--fa fa-mastodon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" rel="me" href="https://techhub.social/@k9n"> Mastodon: @k9n@techhub.social </a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://www.linkedin.com/in/d-koppenhagen/">LinkedIn: d-koppenhagen</a></li><li _ngcontent-ng-c1148330124=""><fa-icon _ngcontent-ng-c1148330124="" class="ng-fa-icon" ngh="0"><svg role="img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="xing" class="svg-inline--fa fa-xing" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M162.7 210c-1.8 3.3-25.2 44.4-70.1 123.5-4.9 8.3-10.8 12.5-17.7 12.5H9.8c-7.7 0-12.1-7.5-8.5-14.4l69-121.3c.2 0 .2-.1 0-.3l-43.9-75.6c-4.3-7.8.3-14.1 8.5-14.1H100c7.3 0 13.3 4.1 18 12.2l44.7 77.5zM382.6 46.1l-144 253v.3L330.2 466c3.9 7.1.2 14.1-8.5 14.1h-65.2c-7.6 0-13.6-4-18-12.2l-92.4-168.5c3.3-5.8 51.5-90.8 144.8-255.2 4.6-8.1 10.4-12.2 17.5-12.2h65.7c8 0 12.3 6.7 8.5 14.1z"></path></svg></fa-icon><a _ngcontent-ng-c1148330124="" href="https://www.xing.com/profile/Danny_Koppenhagen">Xing: Danny_Koppenhagen</a></li></ul><ul _ngcontent-ng-c1148330124="" class="copyright"><li _ngcontent-ng-c1148330124="">© 2023 by Danny Koppenhagen</li><li _ngcontent-ng-c1148330124="">Design: <a _ngcontent-ng-c1148330124="" href="https://html5up.net">HTML5 UP</a></li><li _ngcontent-ng-c1148330124=""> Vorschläge? Feedback? Bugs? <a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen/k9n.dev/issues"> Stell ein Issue ein</a>, <a _ngcontent-ng-c1148330124="" href="https://github.com/d-koppenhagen/k9n.dev/pulls">sende mir einen PR</a> oder <a _ngcontent-ng-c1148330124="" routerlink="/contact" href="/contact" jsaction="click:;">kontaktiere mich</a></li></ul></div></footer></dk-contact><!----></dk-root>
+    <script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["keydown","click"],["focus","blur"]);</script>
+  
+
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"7":"t0","8":"t1","9":"t2"},"c":{"7":[{"i":"t0","r":1}],"8":[],"9":[{"i":"t2","r":1}]}},{"t":{"0":"t5"},"c":{"0":[{"i":"t5","r":1,"t":{"7":"t6"},"c":{"7":[{"i":"t6","r":1,"t":{"1":"t7","2":"t8"},"c":{"1":[{"i":"t7","r":1}],"2":[]}}]}}]}},{"t":{"0":"t5"},"c":{"0":[{"i":"t5","r":1,"t":{"7":"t6"},"c":{"7":[]}}]}},{"t":{"1":"t3","2":"t9","3":"t10"},"c":{"1":[{"i":"t3","r":5,"t":{"1":"t4"},"c":{"1":[{"i":"t4","r":1,"x":4}]}}],"2":[],"3":[{"i":"t10","r":1}]}},{"t":{"1":"t3","2":"t9","3":"t10"},"c":{"1":[{"i":"t3","r":4,"t":{"1":"t4"},"c":{"1":[{"i":"t4","r":1,"x":3}]}}],"2":[],"3":[]}},{"t":{"2":"t15"},"c":{"2":[{"i":"t15","r":1,"x":12}]}},{"t":{"48":"t11","50":"t12","51":"t13","52":"t14"},"c":{"48":[],"50":[],"51":[],"52":[{"i":"t13","r":1,"s":0}]}},{"c":{"4":[{"i":"c2373437213","r":1}],"6":[]},"t":{"6":"t16"}}]}</script></body></html>

@@ -1,0 +1,3 @@
+import{ac as a,ɵ as c,r as p,b as i,v as s,u as m,x as l,J as _}from"./index-DPqAJY-c.js";import{P as d}from"./preview.component-BII8khjR.js";const e=class e{constructor(){this.posts=a(n=>n.filename.includes("/src/content/projects/"))}};e.ɵfac=function(t){return new(t||e)},e.ɵcmp=c({type:e,selectors:[["ng-component"]],decls:5,vars:1,consts:[[1,"wrapper","alt"],[1,"inner"],[1,"major"],["content","projects",3,"posts"]],template:function(t,r){t&1&&(p(0,"section",0)(1,"div",1)(2,"h2",2),i(3,"Meine Projekte"),s(),m(4,"dk-preview",3),s()()),t&2&&(l(4),_("posts",r.posts))},dependencies:[d],styles:[`.wrapper[_ngcontent-%COMP%] {
+      margin-top: 0;
+    }`]});let o=e;export{o as default};
