@@ -68,7 +68,7 @@ export class PersonalTimelineComponent {
     },
     {
       location: 'Berlin',
-      when: 'seit 2022',
+      when: '2022',
       what: '💎 Seniorberater & Frontend Architect',
       where: 'DB Systel GmbH',
       info: 'Entwicklung von Enterprise-Webanwendungen',
@@ -79,6 +79,20 @@ export class PersonalTimelineComponent {
       what: '📕 Angular (4. Auflage)',
       where: 'dpunkt.verlag',
       info: 'Das große Praxisbuch – Grundlagen, fortgeschrittene Themen und Best Practices. Inklusive RxJS, NgRx und a11y.',
+    },
+    {
+      location: 'Berlin',
+      when: '2024',
+      what: '💎 DevOps Engineer mit Spezialisierung in Frontend Architektur and Barrierefreiheit',
+      where: 'DB Systel GmbH',
+      info: 'Experte für Webtechnologien und barrierefreie Webanwendungen.',
+    },
+    {
+      location: ' ',
+      when: '2026',
+      what: '📘 Angular: Das Praxisbuch (1. Auflage)',
+      where: 'dpunkt.verlag',
+      info: 'Von den Grundlagen bis zur professionellen Entwicklung mit Signals.',
     },
   ].reverse();
 }

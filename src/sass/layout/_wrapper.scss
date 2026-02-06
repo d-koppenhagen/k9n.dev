@@ -17,7 +17,7 @@
 @mixin wrapper-edges-color($color: black) {
   &:before,
   &:after {
-    background-image: svg-url(
+    background-image: mixins.svg-url(
       '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,100 100,0 100,100" style="fill:#{$color};" /></svg>'
     );
   }
@@ -67,11 +67,16 @@
 
   @include breakpoints.breakpoint('<=large') {
     > header {
-      @include mixins.padding(5em, 0, (4em, 0, functions.size(wrapper-edges, large) * 0.5, 0));
+      @include mixins.padding(
+        5em,
+        0,
+        (4em, 0, functions.size(wrapper-edges, large) * 0.5, 0)
+      );
 
       background-color: functions.palette(bg);
 
-      background-image: linear-gradient(
+      background-image:
+        linear-gradient(
           to top,
           color.adjust(functions.palette(bg), $alpha: -0.2),
           color.adjust(functions.palette(bg), $alpha: -0.2)
@@ -179,7 +184,11 @@
 
   @for $i from 2 through functions.misc(max-wrapper-styles) {
     $j: 3 * ($i - 1);
-    $color: color.adjust(functions.palette(bg), $lightness: $j * 1%, $saturation: -$j * 0.5%);
+    $color: color.adjust(
+      functions.palette(bg),
+      $lightness: $j * 1%,
+      $saturation: -$j * 0.5%
+    );
 
     &.style#{$i} {
       background-color: $color;
@@ -199,7 +208,8 @@
 
     .image {
       border-radius: 100%;
-      margin: 0 functions.size(section-spacing, large) functions.size(element-margin) 0;
+      margin: 0 functions.size(section-spacing, large)
+        functions.size(element-margin) 0;
       width: 22em;
       overflow: hidden;
       -ms-flex: 1;
@@ -222,13 +232,18 @@
       }
 
       .image {
-        margin: 0 0 functions.size(element-margin) functions.size(section-spacing, large);
+        margin: 0 0 functions.size(element-margin)
+          functions.size(section-spacing, large);
       }
     }
 
     @for $i from 2 through functions.misc(max-wrapper-styles) {
       $j: 3 * ($i - 1);
-      $color: color.adjust(functions.palette(accent), $lightness: -$j * 1%, $saturation: $j * 0.5%);
+      $color: color.adjust(
+        functions.palette(accent),
+        $lightness: -$j * 1%,
+        $saturation: $j * 0.5%
+      );
 
       &.style#{$i} {
         background-color: $color;
@@ -261,13 +276,15 @@
 
     &.spotlight {
       .image {
-        margin: 0 functions.size(section-spacing, medium) functions.size(element-margin) 0;
+        margin: 0 functions.size(section-spacing, medium)
+          functions.size(element-margin) 0;
         width: 32em;
       }
 
       &:nth-child(2n - 1) {
         .image {
-          margin: 0 0 functions.size(element-margin) functions.size(section-spacing, medium);
+          margin: 0 0 functions.size(element-margin)
+            functions.size(section-spacing, medium);
         }
       }
     }
@@ -301,12 +318,14 @@
 
       .image {
         width: 19em;
-        margin: 0 functions.size(section-spacing, small) functions.size(element-margin) 0;
+        margin: 0 functions.size(section-spacing, small)
+          functions.size(element-margin) 0;
       }
 
       &:nth-child(2n - 1) {
         .image {
-          margin: 0 0 functions.size(element-margin) functions.size(section-spacing, small);
+          margin: 0 0 functions.size(element-margin)
+            functions.size(section-spacing, small);
         }
       }
     }
