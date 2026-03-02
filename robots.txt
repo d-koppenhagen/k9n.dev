@@ -1,0 +1,4 @@
+user-agent: *
+allow: *
+disallow: /recruitment/
+sitemap: https://k9n.dev/sitemap.xml
