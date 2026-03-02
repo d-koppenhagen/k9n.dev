@@ -142,10 +142,10 @@ import { PostAttributes } from '../../types';
                 {{ post.attributes.description }}
               </div>
               <a
-                class="external-article"
+                class="button read-on"
                 [href]="post.attributes.publishedAt.url"
                 [hreflang]="post.attributes.language || 'de'"
-                >&rarr;
+              >
                 @if (post.attributes.language === 'en') {
                   Read On:
                 } @else {
