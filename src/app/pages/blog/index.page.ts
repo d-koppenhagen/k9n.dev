@@ -47,7 +47,6 @@ import { PostAttributes } from '../../types';
           type="search"
           placeholder="Suche"
           name="demo-name"
-          aria-required="false"
           aria-label="Suche"
         />
 

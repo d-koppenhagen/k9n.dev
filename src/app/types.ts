@@ -1,4 +1,4 @@
-export type PostAttributes = {
+export interface PostAttributes {
   title: string;
   slug?: string;
   draft?: boolean;
@@ -14,31 +14,31 @@ export type PostAttributes = {
   linked: LinkedOptions;
   series?: string;
   related?: RelatedOptions[];
-};
+}
 
-export type Author = {
+export interface Author {
   name: string;
   mail: string;
-};
+}
 
-export type Thumbnail = {
+export interface Thumbnail {
   header: string;
   card: string;
-};
+}
 
-export type PublishedAt = {
+export interface PublishedAt {
   name: string;
   url: string;
   logo: string;
   linkExternal?: boolean;
-};
+}
 
-export type LinkedOptions = {
+export interface LinkedOptions {
   devTo: string;
   medium: string;
-};
+}
 
-export type RelatedOptions = {
+export interface RelatedOptions {
   slug: string;
   title: string;
-};
+}

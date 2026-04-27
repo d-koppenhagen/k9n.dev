@@ -15,7 +15,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavbarComponent {
   private readonly dialog = inject(Dialog);
-  dialogRef = signal<DialogRef<string> | null>(null);
+  readonly dialogRef = signal<DialogRef<string> | null>(null);
   private faLib = inject(FaIconLibrary);
 
   constructor() {
