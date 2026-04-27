@@ -27,21 +27,61 @@ import { PostAttributes } from '../types';
         <dk-preview content="blog" [posts]="blogPosts" [max]="4" />
       </div>
     </section>
-    <section class="wrapper style3">
-      <div class="inner">
-        <h2 class="major">Meine Talks & Slides</h2>
-        <dk-preview content="talks" [posts]="talkPosts" [max]="4" />
-      </div>
-    </section>
-    <dk-publications />
-    <section class="wrapper alt style1">
-      <div class="inner">
-        <h2 class="major">Meine Projekte</h2>
-        <dk-preview content="projects" [posts]="projectPosts" [max]="4" />
-      </div>
-    </section>
-    <dk-about />
-    <dk-meetups />
+    @defer (on viewport; on idle) {
+      <section class="wrapper style3">
+        <div class="inner">
+          <h2 class="major">Meine Talks & Slides</h2>
+          <dk-preview content="talks" [posts]="talkPosts" [max]="4" />
+        </div>
+      </section>
+    } @placeholder {
+      <section class="wrapper style3">
+        <div class="inner">
+          <h2 class="major">Meine Talks & Slides</h2>
+        </div>
+      </section>
+    }
+    @defer (on viewport; on idle) {
+      <dk-publications />
+    } @placeholder {
+      <section class="wrapper style2">
+        <div class="inner">
+          <h2 class="major">Publikationen</h2>
+        </div>
+      </section>
+    }
+    @defer (on viewport; on idle) {
+      <section class="wrapper alt style1">
+        <div class="inner">
+          <h2 class="major">Meine Projekte</h2>
+          <dk-preview content="projects" [posts]="projectPosts" [max]="4" />
+        </div>
+      </section>
+    } @placeholder {
+      <section class="wrapper alt style1">
+        <div class="inner">
+          <h2 class="major">Meine Projekte</h2>
+        </div>
+      </section>
+    }
+    @defer (on viewport; on idle) {
+      <dk-about />
+    } @placeholder {
+      <section class="wrapper style1">
+        <div class="inner">
+          <h2 class="major">Über mich</h2>
+        </div>
+      </section>
+    }
+    @defer (on viewport; on idle) {
+      <dk-meetups />
+    } @placeholder {
+      <section class="wrapper alt style1">
+        <div class="inner">
+          <h2 class="major">Meetups</h2>
+        </div>
+      </section>
+    }
   `,
 })
 export default class HomePage {
