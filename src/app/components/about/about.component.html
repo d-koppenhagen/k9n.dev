@@ -118,13 +118,15 @@
           </div>
         }
         <div class="grid-details-2">
-          @defer (on viewport) {
-            <img
-              src="https://www.agiledrop.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F229922%2F400x500%2F5f11469228%2Frc-angular-interview-3.png&w=2048&q=80"
-              alt="Ein roter Hintergrund mit einem großen Angular-Logo und dem Foto von Danny Koppenhagen auf der rechten Seite"
-            />
-          } @placeholder {
-            <div></div>
+          @if (isBrowser) {
+            @defer (on viewport) {
+              <img
+                src="https://www.agiledrop.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F229922%2F400x500%2F5f11469228%2Frc-angular-interview-3.png&w=2048&q=80"
+                alt="Ein roter Hintergrund mit einem großen Angular-Logo und dem Foto von Danny Koppenhagen auf der rechten Seite"
+              />
+            } @placeholder {
+              <div></div>
+            }
           }
           <a
             class="button small"

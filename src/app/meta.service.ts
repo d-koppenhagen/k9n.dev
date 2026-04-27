@@ -80,7 +80,7 @@ export class MetaService {
     });
     this.meta.updateTag({
       name: 'twitter:image',
-      content: `https://k9n.dev/${post.attributes.thumbnail.header}`,
+      content: `https://k9n.dev/${post.attributes.thumbnail?.header ?? ''}`,
     });
   }
 
@@ -98,7 +98,7 @@ export class MetaService {
     });
     this.meta.updateTag({
       name: 'og:image',
-      content: `https://k9n.dev/${post.attributes.thumbnail.header}`,
+      content: `https://k9n.dev/${post.attributes.thumbnail?.header ?? ''}`,
     });
     this.meta.updateTag({
       name: 'og:url',
