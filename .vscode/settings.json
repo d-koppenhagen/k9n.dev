@@ -1,28 +1,4 @@
 {
-  "peacock.affectActivityBar": true,
-  "peacock.affectTitleBar": true,
-  "peacock.affectStatusBar": true,
-  "peacock.color": "#1c332c",
-  "workbench.colorCustomizations": {
-    "activityBar.background": "#2e5448",
-    "activityBar.activeBackground": "#2e5448",
-    "activityBar.activeBorder": "#cfd3ef",
-    "activityBar.foreground": "#e7e7e7",
-    "activityBar.inactiveForeground": "#e7e7e799",
-    "activityBarBadge.background": "#231729",
-    "activityBarBadge.foreground": "#e7e7e7",
-    "titleBar.activeBackground": "#1c332c",
-    "titleBar.inactiveBackground": "#1c332c99",
-    "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveForeground": "#e7e7e799",
-    "statusBar.background": "#1c332c",
-    "statusBarItem.hoverBackground": "#2e5448",
-    "statusBar.foreground": "#e7e7e7",
-    "sash.hoverBorder": "#2e5448",
-    "statusBarItem.remoteBackground": "#1c332c",
-    "statusBarItem.remoteForeground": "#e7e7e7",
-    "commandCenter.border": "#e7e7e799"
-  },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "cSpell.words": ["Termins"]
