@@ -19,5 +19,5 @@ keywords:
   - accessibility
 language: de
 thumbnail:
-  header: https://github.com/ewolff/software-architektur.tv/blob/master/thumbnails/folge282.png?raw=true
+  header: images/talks/2025-10-10-barrierefreiheit-in-web-projekten/image.png
 ---
