@@ -59,7 +59,7 @@ describe('MetaManager', () => {
 
       // Verify first config tags are present
       expect(meta.getTag("property='og:title'")?.getAttribute('content')).toBe('First Page');
-      expect(meta.getTag("property='og:image'")?.getAttribute('content')).toBe('https://k9n.dev/img/first.jpg');
+      expect(meta.getTag("property='og:image'")?.getAttribute('content')).toBe('https://k9n.dev/de/img/first.jpg');
 
       service.updateMeta(secondConfig);
 
@@ -184,7 +184,7 @@ describe('MetaManager', () => {
 
       expect(meta.getTag("property='og:title'")?.getAttribute('content')).toBe('My Page Title');
       expect(meta.getTag("property='og:description'")?.getAttribute('content')).toBe('My page description');
-      expect(meta.getTag("property='og:url'")?.getAttribute('content')).toBe('https://k9n.dev/my-page');
+      expect(meta.getTag("property='og:url'")?.getAttribute('content')).toBe('https://k9n.dev/de/my-page');
       expect(meta.getTag("property='og:type'")?.getAttribute('content')).toBe('website');
       expect(meta.getTag("property='og:site_name'")?.getAttribute('content')).toBe('k9n.dev');
       expect(meta.getTag("property='og:locale'")?.getAttribute('content')).toBe('de_DE');
@@ -198,7 +198,7 @@ describe('MetaManager', () => {
 
       service.updateMeta(config);
 
-      expect(meta.getTag("property='og:image'")?.getAttribute('content')).toBe('https://k9n.dev/images/hero.jpg');
+      expect(meta.getTag("property='og:image'")?.getAttribute('content')).toBe('https://k9n.dev/de/images/hero.jpg');
       expect(meta.getTag("property='og:image:alt'")?.getAttribute('content')).toBe('Hero image description');
       expect(meta.getTag("property='og:image:width'")?.getAttribute('content')).toBe('1200');
       expect(meta.getTag("property='og:image:height'")?.getAttribute('content')).toBe('630');
@@ -429,7 +429,7 @@ describe('MetaManager', () => {
 
       service.updateMeta(config);
 
-      expect(meta.getTag("name='twitter:image'")?.getAttribute('content')).toBe('https://k9n.dev/images/card.jpg');
+      expect(meta.getTag("name='twitter:image'")?.getAttribute('content')).toBe('https://k9n.dev/de/images/card.jpg');
     });
 
     it('should set twitter:image:alt when image and imageAlt are configured', () => {

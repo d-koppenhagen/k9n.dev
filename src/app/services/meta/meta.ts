@@ -242,13 +242,13 @@ export class MetaManager {
   private setOpenGraphTags(config: PageMeta): void {
     this.meta.updateTag({ property: 'og:title', content: config.title });
     this.meta.updateTag({ property: 'og:description', content: config.description });
-    this.meta.updateTag({ property: 'og:url', content: config.url });
+    this.meta.updateTag({ property: 'og:url', content: this.ensureLocalePrefix(config.url) });
     this.meta.updateTag({ property: 'og:type', content: config.type ?? 'website' });
     this.meta.updateTag({ property: 'og:site_name', content: SITE_CONFIG.siteName });
     this.meta.updateTag({ property: 'og:locale', content: this.localeConfig.ogLocale });
 
     if (config.image) {
-      this.meta.updateTag({ property: 'og:image', content: toAbsoluteUrl(config.image.url) });
+      this.meta.updateTag({ property: 'og:image', content: this.ensureLocalePrefix(toAbsoluteUrl(config.image.url)) });
       if (config.imageAlt) {
         this.meta.updateTag({ property: 'og:image:alt', content: config.imageAlt });
       }
@@ -279,7 +279,7 @@ export class MetaManager {
 
     // twitter:image and twitter:image:alt — only when image is configured
     if (config.image) {
-      this.meta.updateTag({ name: 'twitter:image', content: toAbsoluteUrl(config.image.url) });
+      this.meta.updateTag({ name: 'twitter:image', content: this.ensureLocalePrefix(toAbsoluteUrl(config.image.url)) });
       if (config.imageAlt) {
         this.meta.updateTag({ name: 'twitter:image:alt', content: config.imageAlt });
       }
