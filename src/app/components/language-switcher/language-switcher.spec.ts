@@ -107,8 +107,8 @@ describe('LanguageSwitcher', () => {
     it('should have "de" lang on the Deutsch link and "en" lang on the English link', () => {
       setup('de', '/de/');
       const links = getLinks();
-      const deLink = links.find(l => l.textContent?.trim() === 'Deutsch')!;
-      const enLink = links.find(l => l.textContent?.trim() === 'English')!;
+      const deLink = links.find(l => l.textContent?.trim() === 'DE')!;
+      const enLink = links.find(l => l.textContent?.trim() === 'EN')!;
 
       expect(deLink.getAttribute('lang')).toBe('de');
       expect(enLink.getAttribute('lang')).toBe('en');
