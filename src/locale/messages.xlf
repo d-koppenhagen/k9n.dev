@@ -349,6 +349,38 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="component.publishedAtBanner.ariaLabel" datatype="html">
+        <source>Erstveröffentlichung</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/published-at-banner/published-at-banner.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="component.publishedAtBanner.label" datatype="html">
+        <source>Ursprünglich veröffentlicht auf</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/published-at-banner/published-at-banner.html</context>
+          <context context-type="linenumber">4,8</context>
+        </context-group>
+        <note priority="1" from="description">Originally published at label</note>
+        <note priority="1" from="meaning">label</note>
+      </trans-unit>
+      <trans-unit id="component.publishedAtBanner.crossPosted.ariaLabel" datatype="html">
+        <source>Auch veröffentlicht auf</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/published-at-banner/published-at-banner.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="component.publishedAtBanner.crossPosted.label" datatype="html">
+        <source>Auch verfügbar auf:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/published-at-banner/published-at-banner.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+        <note priority="1" from="description">Also available on label</note>
+        <note priority="1" from="meaning">label</note>
+      </trans-unit>
       <trans-unit id="seriesNav.ariaLabel" datatype="html">
         <source>Beiträge in dieser Serie</source>
         <context-group purpose="location">
@@ -532,7 +564,7 @@
         <source>Beitrag nicht gefunden</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
-          <context context-type="linenumber">62,63</context>
+          <context context-type="linenumber">67,68</context>
         </context-group>
         <note priority="1" from="description">Blog post not found title</note>
         <note priority="1" from="meaning">not found title</note>
@@ -541,7 +573,7 @@
         <source> Der gesuchte Blogbeitrag existiert nicht oder wurde entfernt. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
-          <context context-type="linenumber">64,66</context>
+          <context context-type="linenumber">69,71</context>
         </context-group>
         <note priority="1" from="description">Blog post not found message</note>
         <note priority="1" from="meaning">not found message</note>
@@ -550,7 +582,7 @@
         <source>← Zurück zum Blog</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
-          <context context-type="linenumber">66,69</context>
+          <context context-type="linenumber">71,74</context>
         </context-group>
         <note priority="1" from="description">Back to blog link</note>
         <note priority="1" from="meaning">not found link</note>
@@ -959,7 +991,7 @@
         <source>Projekt nicht gefunden</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/projects/project-detail-page.html</context>
-          <context context-type="linenumber">42,43</context>
+          <context context-type="linenumber">47,48</context>
         </context-group>
         <note priority="1" from="description">Project not found title</note>
         <note priority="1" from="meaning">not found title</note>
@@ -968,7 +1000,7 @@
         <source> Das gesuchte Projekt existiert nicht. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/projects/project-detail-page.html</context>
-          <context context-type="linenumber">44,46</context>
+          <context context-type="linenumber">49,51</context>
         </context-group>
         <note priority="1" from="description">Project not found message</note>
         <note priority="1" from="meaning">not found message</note>
@@ -977,7 +1009,7 @@
         <source>← Zurück zur Startseite</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/projects/project-detail-page.html</context>
-          <context context-type="linenumber">46,49</context>
+          <context context-type="linenumber">51,54</context>
         </context-group>
         <note priority="1" from="description">Back to home link</note>
         <note priority="1" from="meaning">not found link</note>
@@ -986,7 +1018,7 @@
         <source>Status: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/projects/project-detail-page.ts</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">31</context>
         </context-group>
         <note priority="1" from="description">Status label prefix</note>
         <note priority="1" from="meaning">aria label</note>
@@ -1031,14 +1063,14 @@
         <source>Externe Ressourcen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/talks/talk-detail-page.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="page.talkDetail.resources.heading" datatype="html">
         <source>Ressourcen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/talks/talk-detail-page.html</context>
-          <context context-type="linenumber">20,22</context>
+          <context context-type="linenumber">25,27</context>
         </context-group>
         <note priority="1" from="description">Talk resources heading</note>
         <note priority="1" from="meaning">section heading</note>
@@ -1047,7 +1079,7 @@
         <source>Vortrag nicht gefunden</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/talks/talk-detail-page.html</context>
-          <context context-type="linenumber">43,44</context>
+          <context context-type="linenumber">48,49</context>
         </context-group>
         <note priority="1" from="description">Talk not found title</note>
         <note priority="1" from="meaning">not found title</note>
@@ -1056,7 +1088,7 @@
         <source> Der gesuchte Vortrag existiert nicht. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/talks/talk-detail-page.html</context>
-          <context context-type="linenumber">45,47</context>
+          <context context-type="linenumber">50,52</context>
         </context-group>
         <note priority="1" from="description">Talk not found message</note>
         <note priority="1" from="meaning">not found message</note>
@@ -1065,7 +1097,7 @@
         <source>← Zurück zu allen Vorträgen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/talks/talk-detail-page.html</context>
-          <context context-type="linenumber">47,50</context>
+          <context context-type="linenumber">52,55</context>
         </context-group>
         <note priority="1" from="description">Back to talks link</note>
         <note priority="1" from="meaning">not found link</note>
