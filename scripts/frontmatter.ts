@@ -9,10 +9,9 @@
 
 import matter from 'gray-matter';
 import { readFileSync } from 'node:fs';
-import { basename } from 'node:path';
+import { basename, dirname } from 'node:path';
 
 import type { Author, BlogPost, ExternalLink, Project, PublishedAt, Talk, Thumbnail } from '../src/app/models/content.model';
-import { toAbsoluteUrl } from '../src/app/config/site.config';
 
 const DEFAULT_AUTHOR: Author = {
   name: 'Danny Koppenhagen',
@@ -20,10 +19,17 @@ const DEFAULT_AUTHOR: Author = {
 };
 
 /**
- * Derives a slug from a filename by removing the .md extension.
- * E.g. "2025-05-angular20.md" → "2025-05-angular20"
+ * Derives a slug from a file path.
+ * - Folder-based (README.md): uses parent directory name as slug.
+ *   E.g. "src/content/blog/2025-11-aria-live/README.md" → "2025-11-aria-live"
+ * - Flat (.md file): removes the .md extension.
+ *   E.g. "2025-05-angular20.md" → "2025-05-angular20"
  */
 export function deriveSlug(filePath: string): string {
+  const filename = basename(filePath);
+  if (filename === 'README.md') {
+    return basename(dirname(filePath));
+  }
   return basename(filePath, '.md');
 }
 
@@ -54,12 +60,13 @@ export function parseBlogPost(filePath: string): BlogPost | null {
     ? { name: data.author.name, mail: data.author.mail || DEFAULT_AUTHOR.mail }
     : DEFAULT_AUTHOR;
 
-  const thumbnail = parseThumbnail(data.thumbnail);
+  const slug = deriveSlug(filePath);
+  const thumbnail = parseThumbnail(data.thumbnail, slug);
   const draft = data.published === false || data.draft === true;
   const publishedAt = parsePublishedAt(data.publishedAt);
 
   return {
-    slug: deriveSlug(filePath),
+    slug,
     title: String(data.title),
     description: data.description ? String(data.description) : '',
     author,
@@ -113,7 +120,8 @@ export function parseTalk(filePath: string): Talk | null {
     return null;
   }
 
-  const thumbnail = parseThumbnail(data.thumbnail);
+  const slug = deriveSlug(filePath);
+  const thumbnail = parseThumbnail(data.thumbnail, slug, 'images/talks');
   const draft = data.published === false || data.draft === true;
   const links = parseLinks(data.links, data.publishedAt);
   const linkExternal = !!(data.publishedAt && typeof data.publishedAt === 'object'
@@ -122,7 +130,7 @@ export function parseTalk(filePath: string): Talk | null {
   const language = parseContentLanguage(data.language, filePath, 'talk');
 
   return {
-    slug: deriveSlug(filePath),
+    slug,
     title: String(data.title),
     description: data.description ? String(data.description) : '',
     date: toISODate(dateValue),
@@ -163,14 +171,15 @@ export function parseProject(filePath: string): Project | null {
     return null;
   }
 
-  const thumbnail = parseThumbnail(data.thumbnail);
+  const slug = deriveSlug(filePath);
+  const thumbnail = parseThumbnail(data.thumbnail, slug, 'images/projects');
   const draft = data.published === false || data.status === 'draft';
   const status = parseProjectStatus(data.status, draft);
 
   const language = parseContentLanguage(data.language, filePath, 'project');
 
   return {
-    slug: deriveSlug(filePath),
+    slug,
     title: String(data.title),
     description: data.description ? String(data.description) : '',
     created: toISODate(createdValue),
@@ -238,15 +247,37 @@ function toISODate(value: unknown): string {
 
 /**
  * Parses a thumbnail object from frontmatter data.
- * Normalizes relative URLs to absolute URLs using the site base URL.
+ * Resolves relative paths (./file.jpg) using the slug and imageBasePath to construct the served path.
+ * Returns root-relative paths (e.g. /images/blog/<slug>/file.jpg) for local images,
+ * or the original absolute URL for external images.
+ *
+ * @param data - Raw thumbnail data from frontmatter
+ * @param slug - Optional slug for resolving relative paths (e.g. "2025-11-aria-live")
+ * @param imageBasePath - Base path for images (e.g. "images/blog", "images/talks", "images/projects")
  */
-function parseThumbnail(data: unknown): Thumbnail | undefined {
+function parseThumbnail(data: unknown, slug?: string, imageBasePath = 'images/blog'): Thumbnail | undefined {
   if (!data || typeof data !== 'object') return undefined;
   const obj = data as Record<string, unknown>;
   if (!obj.header) return undefined;
+
+  const resolveUrl = (url: string): string => {
+    // Already an absolute URL (external) — return as-is
+    if (url.startsWith('http://') || url.startsWith('https://')) {
+      return url;
+    }
+    // Relative path: ./file.jpg → <imageBasePath>/<slug>/file.jpg
+    if (url.startsWith('./') && slug) {
+      const filename = url.slice(2); // strip "./"
+      return `${imageBasePath}/${slug}/${filename}`;
+    }
+    // Legacy path without ./ prefix (shouldn't exist after migration, but handle gracefully)
+    const path = url.startsWith('/') ? url.slice(1) : url;
+    return path;
+  };
+
   return {
-    header: toAbsoluteUrl(String(obj.header)),
-    card: obj.card ? toAbsoluteUrl(String(obj.card)) : undefined,
+    header: resolveUrl(String(obj.header)),
+    card: obj.card ? resolveUrl(String(obj.card)) : undefined,
   };
 }
 
