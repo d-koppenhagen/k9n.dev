@@ -1,0 +1,64 @@
+<nav class="nav" aria-label="Hauptnavigation" i18n-aria-label="@@nav.ariaLabel">
+      <a routerLink="/" class="nav__brand" aria-label="Startseite - k9n.dev" i18n-aria-label="@@nav.brand.ariaLabel">
+        <span class="nav__brand-text">k9n</span><span class="nav__brand-dot">.</span><span class="nav__brand-text">dev</span>
+      </a>
+
+      <button
+        type="button"
+        class="nav__toggle"
+        [attr.aria-expanded]="mobileMenuOpen()"
+        aria-controls="nav-menu"
+        aria-label="Navigationsmenü umschalten"
+        i18n-aria-label="@@nav.toggle.ariaLabel"
+        (click)="toggleMenu()"
+      >
+        <svg
+          aria-hidden="true"
+          class="nav__toggle-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          @if (mobileMenuOpen()) {
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          } @else {
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          }
+        </svg>
+      </button>
+
+      <ul
+        id="nav-menu"
+        class="nav__list"
+        [class.nav__list--open]="mobileMenuOpen()"
+        role="list"
+      >
+        @for (link of navLinks; track link.path) {
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              [routerLink]="link.path"
+              routerLinkActive="nav__link--active"
+              [routerLinkActiveOptions]="{ exact: link.exact }"
+              #rla="routerLinkActive"
+              [attr.aria-current]="rla.isActive ? 'page' : null"
+              (click)="closeMenu()"
+            >
+              {{ link.label }}
+            </a>
+          </li>
+        }
+        <li class="nav__item nav__item--lang">
+          <app-language-switcher />
+        </li>
+        <li class="nav__item nav__item--theme">
+          <app-theme-switcher />
+        </li>
+      </ul>
+    </nav>

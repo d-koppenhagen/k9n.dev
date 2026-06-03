@@ -1,0 +1,12 @@
+<section class="content-list-page">
+      <header class="content-list-page__header">
+        <h1 class="content-list-page__title">{{ title() }}</h1>
+        <p class="content-list-page__subtitle">{{ subtitle() }}</p>
+      </header>
+
+      <app-content-filter [allTags]="allTags()" />
+
+      <app-content-grid [attr.aria-label]="gridAriaLabel()">
+        <ng-content />
+      </app-content-grid>
+    </section>

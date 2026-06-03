@@ -1,0 +1,106 @@
+@if (seriesItems().length > 1) {
+  <article class="card" ngTabs>
+    <div class="card__sliding-window" [style.transform]="'translateX(-' + slideOffset() + '%)'">
+      @for (item of seriesItems(); track item.routeLink; let i = $index) {
+        <div ngTabPanel [value]="'' + i" class="card__panel">
+          <a class="card__link" [appSmartLink]="item.routeLink" [externalUrl]="item.externalUrl" [hreflang]="item.hreflang" [ariaLabel]="item.title">
+            @if (getThumb(item)) {
+              <div class="card__image-wrapper">
+                <img
+                  [ngSrc]="getThumb(item)!"
+                  alt=""
+                  class="card__image"
+                  width="400"
+                  height="225"
+                />
+                @if (item.externalUrl) {
+                  <span class="card__external-badge" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </span>
+                }
+              </div>
+            }
+            <div class="card__body">
+              <div class="card__meta">
+                <time class="card__date" [attr.datetime]="item.date">{{ item.date }}</time>
+              </div>
+              @switch (headingLevel()) {
+                @case (2) { <h2 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h2> }
+                @default { <h3 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h3> }
+              }
+              <p class="card__description" [attr.lang]="getItemLang(item)">{{ item.description }}</p>
+            </div>
+          </a>
+        </div>
+      }
+    </div>
+    <footer class="card__series">
+      <span class="card__series-label" i18n="card label|Series label@@contentCard.series.label">Serie</span>
+      @if (seriesItems().length > maxVisible) {
+        <button
+          type="button"
+          class="card__series-arrow"
+          (click)="stepPrev()"
+          aria-label="Vorheriger Teil"
+          i18n-aria-label="@@contentCard.series.prev.ariaLabel"
+        >
+          ‹
+        </button>
+      }
+      <div class="card__series-track" #tabTrack>
+        <ul ngTabList [(selectedTab)]="currentTab" [selectionMode]="'follow'" [wrap]="true" class="card__series-tabs">
+          @for (item of seriesItems(); track item.routeLink; let i = $index) {
+            <li ngTab [value]="'' + i" class="card__series-tab">
+              {{ i + 1 }}
+            </li>
+          }
+        </ul>
+      </div>
+      @if (seriesItems().length > maxVisible) {
+        <button
+          type="button"
+          class="card__series-arrow"
+          (click)="stepNext()"
+          aria-label="Nächster Teil"
+          i18n-aria-label="@@contentCard.series.next.ariaLabel"
+        >
+          ›
+        </button>
+      }
+    </footer>
+  </article>
+} @else {
+  <article class="card">
+    <a class="card__link" [appSmartLink]="routeLink()" [externalUrl]="externalUrl()" [hreflang]="hreflang()" [ariaLabel]="title()">
+      @if (thumbnailSrc()) {
+        <div class="card__image-wrapper">
+          <img
+            [ngSrc]="thumbnailSrc()!"
+            alt=""
+            class="card__image"
+            width="400"
+            height="225"
+          />
+          @if (externalUrl()) {
+            <span class="card__external-badge" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </span>
+          }
+        </div>
+      }
+      <div class="card__body">
+        <div class="card__meta">
+          @if (eventName()) {
+            <span class="card__event">{{ eventName() }}</span>
+          }
+          <time class="card__date" [attr.datetime]="date()">{{ date() }}</time>
+        </div>
+        @switch (headingLevel()) {
+          @case (2) { <h2 class="card__title" [attr.lang]="contentLang()">{{ title() }}</h2> }
+          @default { <h3 class="card__title" [attr.lang]="contentLang()">{{ title() }}</h3> }
+        }
+        <p class="card__description" [attr.lang]="contentLang()">{{ description() }}</p>
+      </div>
+    </a>
+  </article>
+}

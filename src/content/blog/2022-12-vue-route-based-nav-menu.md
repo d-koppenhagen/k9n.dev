@@ -8,7 +8,7 @@ author:
 created: 2022-12-19
 updated: 2022-12-19
 keywords:
-  - Vue
+  - Vue.js
   - Vue 3
   - Vue Router
 language: en

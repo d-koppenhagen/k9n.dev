@@ -9,14 +9,15 @@ updated: 2021-12-20
 keywords:
     - Angular
     - Scully
-    - SSR
-    - SSG
+    - SSR (Server-Side Rendering)
+    - SSG (Static Site Generation)
     - 'JAM Stack'
     - TOC
 language: en
 thumbnail:
     header: images/projects/toc.jpg
     card: images/projects/toc-small.jpg
+status: archived
 ---
 
 My [Scully.io](https://scully.io) plugin [`scully-plugin-toc`](https://www.npmjs.com/package/@k9n/scully-plugin-toc) will insert a table of contents (TOC) for your Markdown content automatically.

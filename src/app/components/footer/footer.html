@@ -1,0 +1,36 @@
+<div class="footer-content">
+      <nav aria-label="Footer-Navigation" i18n-aria-label="@@footer.nav.ariaLabel">
+        <ul class="footer-nav">
+          <li>
+            <a routerLink="/about"
+               routerLinkActive="footer-link--active"
+               [attr.aria-current]="aboutLink.isActive ? 'page' : null"
+               #aboutLink="routerLinkActive"
+               i18n="footer link|About page@@footer.nav.about">Über mich</a>
+          </li>
+          <li>
+            <a routerLink="/contact"
+               routerLinkActive="footer-link--active"
+               [attr.aria-current]="contactLink.isActive ? 'page' : null"
+               #contactLink="routerLinkActive"
+               i18n="footer link|Contact page@@footer.nav.contact">Kontakt</a>
+          </li>
+          <li>
+            <a routerLink="/imprint"
+               routerLinkActive="footer-link--active"
+               [attr.aria-current]="imprintLink.isActive ? 'page' : null"
+               #imprintLink="routerLinkActive"
+               i18n="footer link|Imprint page@@footer.nav.imprint">Impressum</a>
+          </li>
+        </ul>
+      </nav>
+      <p class="footer-contribute" i18n="footer contribute|Contribution call-to-action@@footer.contribute">
+        Vorschläge? Feedback? Bugs?
+        <a href="https://github.com/d-koppenhagen/k9n.dev/issues"
+           target="_blank" rel="noopener noreferrer">Stell ein Issue ein</a>,
+        <a href="https://github.com/d-koppenhagen/k9n.dev/pulls"
+           target="_blank" rel="noopener noreferrer">sende einen PR</a>
+        oder <a routerLink="/contact">kontaktiere mich</a>.
+      </p>
+      <p class="footer-copyright" i18n="footer copyright|Copyright notice@@footer.copyright">&copy; {{ currentYear() }} Danny Koppenhagen</p>
+    </div>

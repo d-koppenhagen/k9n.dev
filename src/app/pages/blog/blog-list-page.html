@@ -1,0 +1,24 @@
+<app-content-list-layout
+      [title]="pageTitle"
+      [subtitle]="pageSubtitle"
+      [allTags]="filter.allTags()"
+      [gridAriaLabel]="gridAriaLabel"
+    >
+      @for (post of filter.filteredItems(); track post.slug) {
+        <app-content-card
+          [title]="post.title"
+          [description]="post.description"
+          [date]="post.created"
+          [routeLink]="'/blog/' + post.slug"
+          [thumbnail]="post.thumbnail"
+          [externalUrl]="post.publishedAt?.url"
+          [hreflang]="post.language"
+          [language]="post.language"
+          [seriesName]="post.series ?? ''"
+          [seriesItems]="getSeriesItems(post)"
+          [headingLevel]="2"
+        />
+      } @empty {
+        <p class="content-list-page__empty" i18n="empty state|No blog posts match filter@@page.blog.empty">Keine Beiträge entsprechen deinem Filter.</p>
+      }
+    </app-content-list-layout>

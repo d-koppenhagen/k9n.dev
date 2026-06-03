@@ -1,0 +1,33 @@
+<aside
+  class="cookie-banner"
+  role="alertdialog"
+  aria-labelledby="cookie-banner-title"
+  aria-describedby="cookie-banner-description"
+>
+  <div class="cookie-banner-content">
+    <p id="cookie-banner-title" class="cookie-banner-title" i18n="cookie banner|Cookie banner heading@@cookieBanner.title">
+      🍪 Cookie-Einstellungen
+    </p>
+    <p id="cookie-banner-description" class="cookie-banner-description" i18n="cookie banner|Cookie banner description@@cookieBanner.description">
+      Diese Website nutzt Cookies für Webanalyse (Google Analytics), um die Nutzererfahrung zu verbessern.
+    </p>
+  </div>
+  <div class="cookie-banner-actions">
+    <button
+      type="button"
+      class="cookie-btn cookie-btn-accept"
+      (click)="accept()"
+      i18n="cookie banner|Accept cookies button@@cookieBanner.accept"
+    >
+      Akzeptieren
+    </button>
+    <button
+      type="button"
+      class="cookie-btn cookie-btn-decline"
+      (click)="decline()"
+      i18n="cookie banner|Decline cookies button@@cookieBanner.decline"
+    >
+      Ablehnen
+    </button>
+  </div>
+</aside>

@@ -1,0 +1,62 @@
+:host {
+      display: block;
+      max-width: var(--content-narrow-width);
+      margin-inline: auto;
+      padding: var(--space-3xl) var(--space-md);
+    }
+
+    .page-header {
+      margin-block-end: var(--space-2xl);
+    }
+
+    .page-title {
+      font-size: var(--font-size-2xl);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-block-end: var(--space-sm);
+    }
+
+    .page-subtitle {
+      font-size: var(--font-size-lg);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    .about-section {
+      margin-block-end: var(--space-2xl);
+    }
+
+    .section-title {
+      font-size: var(--font-size-xl);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-block-end: var(--space-md);
+    }
+
+    .subsection-title {
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-block-end: var(--space-sm);
+      margin-block-start: var(--space-xl);
+    }
+
+    .about-text {
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-block-end: var(--space-md);
+    }
+
+    .numeronym-section {
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      background-color: var(--color-surface-elevated);
+      border: 1px solid var(--color-border-subtle);
+      margin-block-end: var(--space-2xl);
+    }
+
+    .numeronym-section p {
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin: 0;
+    }

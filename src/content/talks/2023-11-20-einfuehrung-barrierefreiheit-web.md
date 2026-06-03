@@ -15,9 +15,9 @@ publishedAt:
 keywords:
   - JavaScript
   - Semantic HTML
-  - a11y
   - Barrierefreiheit
-  - accessibility
+  - accessibility (a11y)
+  - Barrierefreiheit
 language: de
 thumbnail:
   header: https://dbsystel.github.io/tech-stories/images/home.png

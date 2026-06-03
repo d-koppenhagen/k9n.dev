@@ -7,13 +7,14 @@ author:
   mail: mail@k9n.dev
 updated: 2023-04-05
 keywords:
-  - Vue
+  - Vue.js
   - Vue3
   - OpenLayers
 language: en
 thumbnail:
   header: images/projects/vue3-openlayers.png
   card: images/projects/vue3-openlayers-small.png
+status: active
 ---
 
 Since April 2023, I am actively maintaining and evolving the [vue3-openlayers library](https://vue3openlayers.netlify.app/) — An OpenLayers Wrapper for Vue3.

@@ -18,8 +18,8 @@ keywords:
   - Forms
   - Signal Forms
   - ARIA
-  - a11y
-  - accessibility
+  - accessibility (a11y)
+  - Barrierefreiheit
   - Focus Handling
 language: de
 thumbnail:

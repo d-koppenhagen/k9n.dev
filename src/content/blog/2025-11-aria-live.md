@@ -8,15 +8,15 @@ author:
 created: 2025-11-04
 updated: 2025-11-04
 keywords:
-  - accessibility
+  - accessibility (a11y)
+  - Barrierefreiheit
   - aria-live
   - screen reader
   - Angular
-  - Vue
+  - Vue.js
   - React
-  - SPA
-  - a11y
-  - CDK
+  - SPA (Single Page Application)
+  - CDK (Component Development Kit)
 language: en
 thumbnail:
   header: images/blog/aria-live/aria-live.jpg

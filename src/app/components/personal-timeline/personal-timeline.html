@@ -1,0 +1,22 @@
+<section class="timeline-section" aria-labelledby="timeline-heading">
+      <h2 id="timeline-heading" class="timeline-section__title" i18n="section heading|Timeline section title@@timeline.title">Timeline</h2>
+      <ol class="timeline" aria-label="Beruflicher Werdegang" i18n-aria-label="@@timeline.ariaLabel">
+        @for (step of steps; track step.when + step.what; let odd = $odd) {
+          <li class="timeline__item" [class.timeline__item--right]="odd">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__connector" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <span class="timeline__year">{{ step.when }}</span>
+                @if (step.location.trim()) {
+                  <span class="timeline__location">{{ step.location }}</span>
+                }
+              </div>
+              <h3 class="timeline__what">{{ step.what }}</h3>
+              <span class="timeline__where">{{ step.where }}</span>
+              <p class="timeline__info">{{ step.info }}</p>
+            </div>
+          </li>
+        }
+      </ol>
+    </section>

@@ -15,8 +15,7 @@ publishedAt:
 keywords:
   - JavaScript
   - TypeScript
-  - a11y
-  - accessibility
+  - accessibility (a11y)
   - Barrierefreiheit
 language: en
 thumbnail:

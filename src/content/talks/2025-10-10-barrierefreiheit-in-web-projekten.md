@@ -15,9 +15,9 @@ publishedAt:
 keywords:
   - Software Architecture
   - Semantic HTML
-  - a11y
-  - accessibility
+  - accessibility (a11y)
+  - Barrierefreiheit
 language: de
 thumbnail:
-  header: images/talks/2025-10-10-barrierefreiheit-in-web-projekten/image.png
+  header: https://github.com/ewolff/software-architektur.tv/blob/master/thumbnails/folge282.png?raw=true
 ---

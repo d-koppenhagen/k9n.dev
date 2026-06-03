@@ -1,0 +1,6 @@
+.content-list-page__empty {
+      color: var(--color-text-muted);
+      font-size: var(--font-size-base);
+      text-align: center;
+      padding: var(--space-2xl);
+    }

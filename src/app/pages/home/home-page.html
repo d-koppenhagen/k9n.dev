@@ -1,0 +1,196 @@
+<section class="hero" aria-labelledby="hero-heading">
+      <img
+        ngSrc="images/hero.png"
+        fill
+        priority
+        sizes="100vw"
+        alt=""
+        aria-hidden="true"
+        class="hero__bg"
+      />
+      <div class="hero__content">
+        <h1 id="hero-heading" class="hero__name">Danny Koppenhagen</h1>
+        <p class="hero__tagline" i18n="hero tagline|Short personal description@@page.home.tagline">
+          Webentwickler, Speaker &amp; Open-Source-Contributor – ich baue moderne
+          Angular-Apps mit Fokus auf Barrierefreiheit und Performance.
+        </p>
+      </div>
+    </section>
+
+    <section class="book-section" aria-labelledby="book-heading">
+      <div class="book-section__inner">
+        <a
+          href="https://angular-buch.com"
+          class="book-section__image-link"
+          aria-label="Zur Buchwebsite (angular-buch.com)"
+          i18n-aria-label="@@page.home.book.link.ariaLabel"
+        >
+          <img
+            src="images/book-cover-v1m.png"
+            alt="Buchcover: Angular – Das Praxisbuch"
+            i18n-alt="@@page.home.book.cover.alt"
+            class="book-section__cover"
+            width="300"
+            height="400"
+          />
+        </a>
+        <div class="book-section__content">
+          <h2 id="book-heading" class="book-section__title" i18n="book title|Angular book title@@page.home.book.title">
+            Angular: Das Praxisbuch – von den Grundlagen bis zur professionellen
+            Entwicklung mit Signals – ab Angular 22
+          </h2>
+          <p class="book-section__description" i18n="book description|Angular book description@@page.home.book.description">
+            In diesem Praxiseinstieg lernst du Angular inklusive der modernen APIs
+            und Konzepte kennen. Mit einem durchgängigen Beispielprojekt führen
+            die Autoren dich durch die Welt von Angular. Du entwickelst und
+            testest Schritt für Schritt eine professionelle, modulare und
+            barrierefreie Single-Page-Anwendung und lernst Angular im praktischen
+            Einsatz kennen. Auf jeden Umsetzungsschritt folgen außerdem
+            umfangreiche Unit- und Integrationstests. Ausführliche Theorieteile
+            runden das Buch ab und machen es zu deinem praktischen Begleiter im
+            Entwicklungsalltag.
+          </p>
+          <a href="https://angular-buch.com" class="book-section__link">
+            angular-buch.com
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    @if (recentBlogPosts.length > 0) {
+      @defer (on viewport) {
+        <section class="content-section" aria-labelledby="blog-heading">
+          <div class="content-section__header">
+            <h2 id="blog-heading" class="content-section__title" i18n="section heading|Recent blog posts heading@@page.home.recentBlog.title">
+              Aktuelle Blogbeiträge
+            </h2>
+            <app-nav-link link="/blog">
+              <ng-container i18n="nav link|View all posts link@@page.home.recentBlog.viewAll">Alle Beiträge</ng-container>
+            </app-nav-link>
+          </div>
+          <app-content-grid>
+            @for (post of recentBlogPosts; track post.slug) {
+              <app-content-card
+                [title]="post.title"
+                [description]="post.description"
+                [date]="post.created"
+                [routeLink]="'/blog/' + post.slug"
+                [thumbnail]="post.thumbnail"
+                [externalUrl]="post.publishedAt?.url"
+                [hreflang]="post.language"
+                [language]="post.language"
+                [seriesName]="post.series ?? ''"
+                [seriesItems]="getSeriesItems(post)"
+              />
+            }
+          </app-content-grid>
+        </section>
+      } @placeholder {
+        <div class="content-section-placeholder" aria-hidden="true"></div>
+      }
+    }
+
+    @if (recentTalks.length > 0) {
+      @defer (on viewport) {
+        <section class="content-section" aria-labelledby="talks-heading">
+          <div class="content-section__header">
+            <h2 id="talks-heading" class="content-section__title" i18n="section heading|Recent talks heading@@page.home.recentTalks.title">
+              Aktuelle Vorträge
+            </h2>
+            <app-nav-link link="/talks">
+              <ng-container i18n="nav link|View all talks link@@page.home.recentTalks.viewAll">Alle Vorträge</ng-container>
+            </app-nav-link>
+          </div>
+          <app-content-grid>
+            @for (talk of recentTalks; track talk.slug) {
+              <app-content-card
+                [title]="talk.title"
+                [description]="talk.description"
+                [date]="talk.date"
+                [routeLink]="'/talks/' + talk.slug"
+                [thumbnail]="talk.thumbnail"
+                [eventName]="talk.event"
+                [language]="talk.language"
+              />
+            }
+          </app-content-grid>
+        </section>
+      } @placeholder {
+        <div class="content-section-placeholder" aria-hidden="true"></div>
+      }
+    }
+
+    <section class="meetup-section" aria-labelledby="meetup-heading">
+      <div class="meetup-section__inner">
+        <a
+          href="https://www.meetup.com/de-DE/Angular-Meetup-Berlin"
+          class="meetup-section__image-link"
+          aria-label="Angular Berlin Meetup auf Meetup.com"
+          i18n-aria-label="@@page.home.meetup.link.ariaLabel"
+        >
+          <img
+            ngSrc="images/Angular-Berlin_Icon.png"
+            alt="Angular Berlin Logo"
+            i18n-alt="@@page.home.meetup.logo.alt"
+            class="meetup-section__logo"
+            width="200"
+            height="200"
+          />
+        </a>
+        <div class="meetup-section__content">
+          <h2 id="meetup-heading" class="meetup-section__title" i18n="section heading|Meetup section title@@page.home.meetup.title">
+            Angular Berlin Meetup
+          </h2>
+          <p class="meetup-section__description" i18n="meetup description|Angular Berlin Meetup description@@page.home.meetup.description">
+            Ich bin Co-Organisator des Angular Meetup in Berlin. Dieses findet ca.
+            alle zwei Monate an wechselnden Standorten statt. Neben zwei Talks am
+            Abend steht der Austausch und die Vernetzung mit anderen
+            Entwickler:innen im Vordergrund.
+          </p>
+          <a
+            href="https://www.meetup.com/de-DE/Angular-Meetup-Berlin"
+            class="meetup-section__link"
+            i18n="meetup link|Meetup link text@@page.home.meetup.linkText"
+          >
+            Meetup.com: Angular Berlin
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    @if (recentProjects.length > 0) {
+      @defer (on viewport) {
+        <section class="content-section" aria-labelledby="projects-heading">
+          <div class="content-section__header">
+            <h2 id="projects-heading" class="content-section__title" i18n="section heading|Recent projects heading@@page.home.recentProjects.title">
+              Aktuelle Projekte
+            </h2>
+            <app-nav-link link="/projects">
+              <ng-container i18n="nav link|View all projects link@@page.home.recentProjects.viewAll">Alle Projekte</ng-container>
+            </app-nav-link>
+          </div>
+          <app-content-grid>
+            @for (project of recentProjects; track project.slug) {
+              <app-content-card
+                [title]="project.title"
+                [description]="project.description"
+                [date]="project.created"
+                [routeLink]="'/projects/' + project.slug"
+                [thumbnail]="project.thumbnail"
+                [language]="project.language"
+              />
+            }
+          </app-content-grid>
+        </section>
+      } @placeholder {
+        <div class="content-section-placeholder" aria-hidden="true"></div>
+      }
+    }
+
+    @defer (on viewport) {
+      <app-personal-timeline />
+    } @placeholder {
+      <div class="content-section-placeholder" aria-hidden="true"></div>
+    }

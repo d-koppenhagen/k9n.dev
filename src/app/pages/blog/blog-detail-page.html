@@ -1,0 +1,68 @@
+@if (post(); as post) {
+      <article class="blog-detail">
+        @if (post.thumbnail) {
+          <div class="blog-detail__hero">
+            <img
+              [src]="post.thumbnail.header"
+              [alt]="post.title"
+              class="blog-detail__hero-image"
+            />
+          </div>
+        }
+
+        <header class="blog-detail__header">
+          <div class="blog-detail__meta">
+            <time class="blog-detail__date" [attr.datetime]="post.created">
+              {{ formatDate(post.created) }}
+            </time>
+            @if (post.updated) {
+              <span class="blog-detail__updated">
+                (<ng-container i18n="meta label|Updated date label@@page.blogDetail.updated">Aktualisiert</ng-container>: <time [attr.datetime]="post.updated">{{ formatDate(post.updated) }}</time>)
+              </span>
+            }
+          </div>
+
+          <h1 class="blog-detail__title" [attr.lang]="contentLang()">{{ post.title }}</h1>
+
+          <div class="blog-detail__author">
+            <span class="blog-detail__author-label" i18n="meta label|Author label@@page.blogDetail.authorLabel">Von</span>
+            <span class="blog-detail__author-name">{{ post.author.name }}</span>
+          </div>
+
+          @if (post.keywords.length > 0) {
+            <ul class="blog-detail__keywords" aria-label="Schlagwörter" i18n-aria-label="@@page.blogDetail.keywords.ariaLabel">
+              @for (keyword of post.keywords; track keyword) {
+                <li class="blog-detail__keyword">{{ keyword }}</li>
+              }
+            </ul>
+          }
+        </header>
+
+        <div class="blog-detail__layout">
+          <aside class="blog-detail__sidebar" aria-label="Artikelnavigation" i18n-aria-label="@@page.blogDetail.sidebar.ariaLabel">
+            <app-table-of-contents [headings]="post.headings" />
+
+            @if (seriesPosts(); as series) {
+              @if (series.length > 1) {
+                <app-series-navigation
+                  [currentSlug]="post.slug"
+                  [seriesPosts]="series"
+                />
+              }
+            }
+          </aside>
+
+          <div class="blog-detail__content" [attr.lang]="contentLang()">
+            <app-markdown-content [content]="post.content" />
+          </div>
+        </div>
+      </article>
+    } @else {
+      <div class="not-found">
+        <h1 class="not-found__title" i18n="not found title|Blog post not found title@@page.blogDetail.notFound.title">Beitrag nicht gefunden</h1>
+        <p class="not-found__message" i18n="not found message|Blog post not found message@@page.blogDetail.notFound.message">
+          Der gesuchte Blogbeitrag existiert nicht oder wurde entfernt.
+        </p>
+        <a class="not-found__link" routerLink="/blog" i18n="not found link|Back to blog link@@page.blogDetail.notFound.backLink">← Zurück zum Blog</a>
+      </div>
+    }

@@ -1,0 +1,179 @@
+:host {
+      display: block;
+    }
+
+    .timeline-section {
+      max-width: var(--content-max-width);
+      margin-inline: auto;
+      padding: var(--space-3xl) var(--space-md);
+    }
+
+    .timeline-section__title {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-2xl);
+    }
+
+    /* Timeline container */
+    .timeline {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    /* Vertical line */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 8px;
+      width: 2px;
+      background-color: var(--color-border);
+    }
+
+    /* Timeline item */
+    .timeline__item {
+      position: relative;
+      padding-left: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+    }
+
+    .timeline__item:last-child {
+      padding-bottom: 0;
+    }
+
+    /* Dot on the line */
+    .timeline__dot {
+      position: absolute;
+      left: 2px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+      border: 3px solid var(--color-background-primary);
+      box-shadow: 0 0 0 2px var(--color-accent);
+      transition: transform var(--transition-base);
+    }
+
+    .timeline__item:hover .timeline__dot {
+      transform: scale(1.5);
+    }
+
+    /* Connector line from card to dot */
+    .timeline__connector {
+      position: absolute;
+      top: 12px;
+      left: 16px;
+      right: calc(100% - var(--space-2xl));
+      height: 2px;
+      background-color: var(--color-border);
+    }
+
+    /* Card */
+    .timeline__card {
+      background-color: var(--color-surface-card);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      transition: box-shadow var(--transition-base);
+    }
+
+    .timeline__card:hover {
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    /* Header row */
+    .timeline__header {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-md);
+      margin-bottom: var(--space-sm);
+    }
+
+    .timeline__year {
+      font-size: var(--font-size-lg);
+      font-weight: 700;
+      color: var(--color-accent);
+    }
+
+    .timeline__location {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-muted);
+    }
+
+    .timeline__what {
+      font-size: var(--font-size-base);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin: 0 0 var(--space-xs);
+      white-space: pre-line;
+    }
+
+    .timeline__where {
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      color: var(--color-text-secondary);
+    }
+
+    .timeline__info {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin: var(--space-sm) 0 0;
+    }
+
+    /* Tablet (768px+): center the line, alternate left/right */
+    @media (min-width: 768px) {
+      .timeline-section {
+        padding: var(--space-4xl) var(--space-lg);
+      }
+
+      .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .timeline__item {
+        width: 50%;
+        padding-left: 0;
+        padding-right: var(--space-2xl);
+        padding-bottom: 0;
+        margin-bottom: -3rem;
+      }
+
+      .timeline__item--right {
+        margin-left: 50%;
+        padding-right: 0;
+        padding-left: var(--space-2xl);
+      }
+
+      .timeline__item:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline__dot {
+        left: auto;
+        right: -0.35em;
+      }
+
+      .timeline__item--right .timeline__dot {
+        left: -0.35em;
+        right: auto;
+      }
+
+      .timeline__connector {
+        left: auto;
+        right: 0.65em;
+        top: 12px;
+        width: calc(var(--space-2xl) - 1em);
+      }
+
+      .timeline__item--right .timeline__connector {
+        right: auto;
+        left: 0.65em;
+      }
+    }

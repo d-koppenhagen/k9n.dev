@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="de" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="app.skipToContent" datatype="html">
+        <source> Zum Inhalt springen
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">2,5</context>
+        </context-group>
+        <note priority="1" from="description">Skip to main content link</note>
+        <note priority="1" from="meaning">skip link</note>
+      </trans-unit>
+      <trans-unit id="app.header.ariaLabel" datatype="html">
+        <source>Seitenheader</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="app.main.ariaLabel" datatype="html">
+        <source>Hauptinhalt</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="app.route.pageLoaded" datatype="html">
+        <source>Seite geladen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+        <note priority="1" from="description">Default page loaded announcement</note>
+        <note priority="1" from="meaning">route announcement</note>
+      </trans-unit>
+      <trans-unit id="contentCard.series.label" datatype="html">
+        <source>Serie</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+        <note priority="1" from="description">Series label</note>
+        <note priority="1" from="meaning">card label</note>
+      </trans-unit>
+      <trans-unit id="contentCard.series.prev.ariaLabel" datatype="html">
+        <source>Vorheriger Teil</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contentCard.series.next.ariaLabel" datatype="html">
+        <source>Nächster Teil</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
+          <context context-type="linenumber">64,65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contentFilter.ariaLabel" datatype="html">
+        <source>Inhalte filtern</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contentFilter.tags.ariaLabel" datatype="html">
+        <source>Nach Tags filtern</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contentFilter.language.ariaLabel" datatype="html">
+        <source>Nach Sprache filtern</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contentFilter.language.legend" datatype="html">
+        <source>Inhaltssprache</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
+          <context context-type="linenumber">55,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contentFilter.search.label" datatype="html">
+        <source>Suche</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
+          <context context-type="linenumber">71,74</context>
+        </context-group>
+        <note priority="1" from="description">Search input label</note>
+        <note priority="1" from="meaning">label</note>
+      </trans-unit>
+      <trans-unit id="contentFilter.search.placeholder" datatype="html">
+        <source>Suchen...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
+          <context context-type="linenumber">76,77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contentFilter.activeFilters.ariaLabel" datatype="html">
+        <source>Aktive Filter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contentFilter.clearAll.ariaLabel" datatype="html">
+        <source>Alle Filter löschen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
+          <context context-type="linenumber">102,103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contentFilter.clearAll.text" datatype="html">
+        <source>Alle löschen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
+          <context context-type="linenumber">106,111</context>
+        </context-group>
+        <note priority="1" from="description">Clear all filters button</note>
+        <note priority="1" from="meaning">button text</note>
+      </trans-unit>
+      <trans-unit id="contentFilter.language.all" datatype="html">
+        <source>Alle</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <note priority="1" from="description">All languages option</note>
+        <note priority="1" from="meaning">content filter</note>
+      </trans-unit>
+      <trans-unit id="contentFilter.tags.placeholder" datatype="html">
+        <source>Nach Tags filtern...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <note priority="1" from="description">Tags placeholder</note>
+        <note priority="1" from="meaning">content filter</note>
+      </trans-unit>
+      <trans-unit id="contentFilter.removeFilter.label" datatype="html">
+        <source>Filter entfernen: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+        <note priority="1" from="description">Remove filter aria label prefix</note>
+        <note priority="1" from="meaning">content filter</note>
+      </trans-unit>
+      <trans-unit id="footer.nav.ariaLabel" datatype="html">
+        <source>Footer-Navigation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.nav.about" datatype="html">
+        <source>Über mich</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.html</context>
+          <context context-type="linenumber">9,12</context>
+        </context-group>
+        <note priority="1" from="description">About page</note>
+        <note priority="1" from="meaning">footer link</note>
+      </trans-unit>
+      <trans-unit id="footer.nav.contact" datatype="html">
+        <source>Kontakt</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.html</context>
+          <context context-type="linenumber">16,19</context>
+        </context-group>
+        <note priority="1" from="description">Contact page</note>
+        <note priority="1" from="meaning">footer link</note>
+      </trans-unit>
+      <trans-unit id="footer.nav.imprint" datatype="html">
+        <source>Impressum</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.html</context>
+          <context context-type="linenumber">23,27</context>
+        </context-group>
+        <note priority="1" from="description">Imprint page</note>
+        <note priority="1" from="meaning">footer link</note>
+      </trans-unit>
+      <trans-unit id="footer.contribute" datatype="html">
+        <source> Vorschläge? Feedback? Bugs? <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://github.com/d-koppenhagen/k9n.dev/issues&quot;
+           target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;"/>Stell ein Issue ein<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_1" equiv-text="&lt;a href=&quot;https://github.com/d-koppenhagen/k9n.dev/pulls&quot;
+           target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;"/>sende einen PR<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> oder <x id="START_LINK_2" equiv-text="&lt;a routerLink=&quot;/contact&quot;&gt;"/>kontaktiere mich<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.html</context>
+          <context context-type="linenumber">28,35</context>
+        </context-group>
+        <note priority="1" from="description">Contribution call-to-action</note>
+        <note priority="1" from="meaning">footer contribute</note>
+      </trans-unit>
+      <trans-unit id="footer.copyright" datatype="html">
+        <source>© <x id="INTERPOLATION" equiv-text="{{ currentYear() }}"/> Danny Koppenhagen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.html</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+        <note priority="1" from="description">Copyright notice</note>
+        <note priority="1" from="meaning">footer copyright</note>
+      </trans-unit>
+      <trans-unit id="languageSwitcher.ariaLabel" datatype="html">
+        <source>Language selection</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/language-switcher/language-switcher.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.ariaLabel" datatype="html">
+        <source>Hauptnavigation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.brand.ariaLabel" datatype="html">
+        <source>Startseite - k9n.dev</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.toggle.ariaLabel" datatype="html">
+        <source>Navigationsmenü umschalten</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.home" datatype="html">
+        <source>Startseite</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Home page</note>
+        <note priority="1" from="meaning">navigation link</note>
+      </trans-unit>
+      <trans-unit id="nav.blog" datatype="html">
+        <source>Blog</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Blog page</note>
+        <note priority="1" from="meaning">navigation link</note>
+      </trans-unit>
+      <trans-unit id="nav.talks" datatype="html">
+        <source>Vorträge</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Talks page</note>
+        <note priority="1" from="meaning">navigation link</note>
+      </trans-unit>
+      <trans-unit id="nav.projects" datatype="html">
+        <source>Projekte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Projects page</note>
+        <note priority="1" from="meaning">navigation link</note>
+      </trans-unit>
+      <trans-unit id="nav.contact" datatype="html">
+        <source>Kontakt</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Contact page</note>
+        <note priority="1" from="meaning">navigation link</note>
+      </trans-unit>
+      <trans-unit id="timeline.title" datatype="html">
+        <source>Timeline</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/personal-timeline/personal-timeline.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+        <note priority="1" from="description">Timeline section title</note>
+        <note priority="1" from="meaning">section heading</note>
+      </trans-unit>
+      <trans-unit id="timeline.ariaLabel" datatype="html">
+        <source>Beruflicher Werdegang</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/personal-timeline/personal-timeline.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seriesNav.ariaLabel" datatype="html">
+        <source>Beiträge in dieser Serie</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/series-navigation/series-navigation.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seriesNav.heading" datatype="html">
+        <source>Serie</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/series-navigation/series-navigation.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+        <note priority="1" from="description">Series navigation heading</note>
+        <note priority="1" from="meaning">section heading</note>
+      </trans-unit>
+      <trans-unit id="toc.ariaLabel" datatype="html">
+        <source>Inhaltsverzeichnis</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/table-of-contents/table-of-contents.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="toc.title" datatype="html">
+        <source>Inhalt</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/table-of-contents/table-of-contents.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+        <note priority="1" from="description">Table of contents heading</note>
+        <note priority="1" from="meaning">section heading</note>
+      </trans-unit>
+      <trans-unit id="theme.group.ariaLabel" datatype="html">
+        <source>Design-Auswahl</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/theme-switcher/theme-switcher.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="theme.light" datatype="html">
+        <source>Hell</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/theme-switcher/theme-switcher.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Light theme</note>
+        <note priority="1" from="meaning">theme option</note>
+      </trans-unit>
+      <trans-unit id="theme.dark" datatype="html">
+        <source>Dunkel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/theme-switcher/theme-switcher.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Dark theme</note>
+        <note priority="1" from="meaning">theme option</note>
+      </trans-unit>
+      <trans-unit id="theme.system" datatype="html">
+        <source>System</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/theme-switcher/theme-switcher.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">System theme</note>
+        <note priority="1" from="meaning">theme option</note>
+      </trans-unit>
+      <trans-unit id="contentListLayout.grid.ariaLabel" datatype="html">
+        <source>Inhaltsliste</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layouts/content-list/content-list-layout.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Default content list grid</note>
+        <note priority="1" from="meaning">aria label</note>
+      </trans-unit>
+      <trans-unit id="page.about.title" datatype="html">
+        <source>Über mich</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">About page title</note>
+        <note priority="1" from="meaning">page title</note>
+      </trans-unit>
+      <trans-unit id="page.about.subtitle" datatype="html">
+        <source>Frontend Architekt · Accessibility · Open Source</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
+          <context context-type="linenumber">4,7</context>
+        </context-group>
+        <note priority="1" from="description">About page subtitle</note>
+        <note priority="1" from="meaning">page subtitle</note>
+      </trans-unit>
+      <trans-unit id="page.about.intro.heading" datatype="html">
+        <source>Einleitung</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+        <note priority="1" from="description">About introduction heading</note>
+        <note priority="1" from="meaning">section heading</note>
+      </trans-unit>
+      <trans-unit id="page.about.intro.p1" datatype="html">
+        <source> Ich bin Danny Koppenhagen – Frontend Architekt bei der DB Systel GmbH, wo ich an großen Webanwendungen für die Deutsche Bahn arbeite. Als Teil eines DevOps-Teams liegt mein Fokus darauf, digitale Produkte barrierefreier und benutzerfreundlicher für alle zu gestalten. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
+          <context context-type="linenumber">10,15</context>
+        </context-group>
+        <note priority="1" from="description">About introduction paragraph 1</note>
+        <note priority="1" from="meaning">about text</note>
+      </trans-unit>
+      <trans-unit id="page.about.intro.p2" datatype="html">
+        <source> Ich arbeite mit modernen Frameworks wie Angular und React und setze mich leidenschaftlich für Accessibility (a11y) und Open Source ein. Mein Wissen teile ich gerne mit der Community – durch Vorträge, Artikel und Beiträge zu Open-Source-Projekten. Außerdem bin ich Co-Autor eines der meistverkauften deutschsprachigen Bücher über Angular. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
+          <context context-type="linenumber">16,22</context>
+        </context-group>
+        <note priority="1" from="description">About introduction paragraph 2</note>
+        <note priority="1" from="meaning">about text</note>
+      </trans-unit>
+      <trans-unit id="page.about.intro.p3" datatype="html">
+        <source> Mir ist es wichtig, Software zu bauen, die nicht nur robust und skalierbar ist, sondern auch intuitiv, inklusiv und Freude bei der Nutzung bereitet. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
+          <context context-type="linenumber">23,28</context>
+        </context-group>
+        <note priority="1" from="description">About introduction paragraph 3</note>
+        <note priority="1" from="meaning">about text</note>
+      </trans-unit>
+      <trans-unit id="page.about.numeronym.heading" datatype="html">
+        <source>k9n.dev?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+        <note priority="1" from="description">Numeronym explanation heading</note>
+        <note priority="1" from="meaning">section title</note>
+      </trans-unit>
+      <trans-unit id="page.about.numeronym.text" datatype="html">
+        <source> Warum k9n.dev? Hierbei handelt es sich um ein Numeronym, bei dem die Zahl zwischen den beiden Buchstaben für die Anzahl der ausgelassenen Buchstaben in meinem Nachnamen steht (Vgl.: a11y, i18n, l10n, ...). </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
+          <context context-type="linenumber">31,36</context>
+        </context-group>
+        <note priority="1" from="description">Numeronym explanation</note>
+        <note priority="1" from="meaning">about text</note>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.updated" datatype="html">
+        <source>Aktualisiert</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">Updated date label</note>
+        <note priority="1" from="meaning">meta label</note>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.authorLabel" datatype="html">
+        <source>Von</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+        <note priority="1" from="description">Author label</note>
+        <note priority="1" from="meaning">meta label</note>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.keywords.ariaLabel" datatype="html">
+        <source>Schlagwörter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.sidebar.ariaLabel" datatype="html">
+        <source>Artikelnavigation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.notFound.title" datatype="html">
+        <source>Beitrag nicht gefunden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+        <note priority="1" from="description">Blog post not found title</note>
+        <note priority="1" from="meaning">not found title</note>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.notFound.message" datatype="html">
+        <source> Der gesuchte Blogbeitrag existiert nicht oder wurde entfernt. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
+          <context context-type="linenumber">64,66</context>
+        </context-group>
+        <note priority="1" from="description">Blog post not found message</note>
+        <note priority="1" from="meaning">not found message</note>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.notFound.backLink" datatype="html">
+        <source>← Zurück zum Blog</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
+          <context context-type="linenumber">66,69</context>
+        </context-group>
+        <note priority="1" from="description">Back to blog link</note>
+        <note priority="1" from="meaning">not found link</note>
+      </trans-unit>
+      <trans-unit id="page.blog.empty" datatype="html">
+        <source>Keine Beiträge entsprechen deinem Filter.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/blog/blog-list-page.html</context>
+          <context context-type="linenumber">22,25</context>
+        </context-group>
+        <note priority="1" from="description">No blog posts match filter</note>
+        <note priority="1" from="meaning">empty state</note>
+      </trans-unit>
+      <trans-unit id="page.blog.title" datatype="html">
+        <source>Blog</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/blog/blog-list-page.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Blog list page title</note>
+        <note priority="1" from="meaning">page title</note>
+      </trans-unit>
+      <trans-unit id="page.blog.subtitle" datatype="html">
+        <source>Gedanken zu Angular, Webentwicklung und modernem Frontend.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/blog/blog-list-page.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Blog list page subtitle</note>
+        <note priority="1" from="meaning">page subtitle</note>
+      </trans-unit>
+      <trans-unit id="page.blog.grid.ariaLabel" datatype="html">
+        <source>Blogbeiträge</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/blog/blog-list-page.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Blog posts grid</note>
+        <note priority="1" from="meaning">aria label</note>
+      </trans-unit>
+      <trans-unit id="page.contact.title" datatype="html">
+        <source>Kontakt</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact-page.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">Contact page title</note>
+        <note priority="1" from="meaning">page title</note>
+      </trans-unit>
+      <trans-unit id="page.contact.subtitle" datatype="html">
+        <source> Schreib mir gerne eine E-Mail oder vernetze dich über Social Media mit mir. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact-page.html</context>
+          <context context-type="linenumber">5,9</context>
+        </context-group>
+        <note priority="1" from="description">Contact page subtitle</note>
+        <note priority="1" from="meaning">page subtitle</note>
+      </trans-unit>
+      <trans-unit id="page.contact.email.heading" datatype="html">
+        <source>E-Mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact-page.html</context>
+          <context context-type="linenumber">10,13</context>
+        </context-group>
+        <note priority="1" from="description">Email section heading</note>
+        <note priority="1" from="meaning">section title</note>
+      </trans-unit>
+      <trans-unit id="page.contact.email.ariaLabel" datatype="html">
+        <source>E-Mail senden an mail at k9n.dev</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact-page.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.contact.social.heading" datatype="html">
+        <source>Soziale Medien</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/contact/contact-page.html</context>
+          <context context-type="linenumber">26,28</context>
+        </context-group>
+        <note priority="1" from="description">Social media heading</note>
+        <note priority="1" from="meaning">section title</note>
+      </trans-unit>
+      <trans-unit id="page.home.tagline" datatype="html">
+        <source> Webentwickler, Speaker &amp; Open-Source-Contributor – ich baue moderne Angular-Apps mit Fokus auf Barrierefreiheit und Performance. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">14,20</context>
+        </context-group>
+        <note priority="1" from="description">Short personal description</note>
+        <note priority="1" from="meaning">hero tagline</note>
+      </trans-unit>
+      <trans-unit id="page.home.book.link.ariaLabel" datatype="html">
+        <source>Zur Buchwebsite (angular-buch.com)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.home.book.cover.alt" datatype="html">
+        <source>Buchcover: Angular – Das Praxisbuch</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.home.book.title" datatype="html">
+        <source> Angular: Das Praxisbuch – von den Grundlagen bis zur professionellen Entwicklung mit Signals – ab Angular 22 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">39,42</context>
+        </context-group>
+        <note priority="1" from="description">Angular book title</note>
+        <note priority="1" from="meaning">book title</note>
+      </trans-unit>
+      <trans-unit id="page.home.book.description" datatype="html">
+        <source> In diesem Praxiseinstieg lernst du Angular inklusive der modernen APIs und Konzepte kennen. Mit einem durchgängigen Beispielprojekt führen die Autoren dich durch die Welt von Angular. Du entwickelst und testest Schritt für Schritt eine professionelle, modulare und barrierefreie Single-Page-Anwendung und lernst Angular im praktischen Einsatz kennen. Auf jeden Umsetzungsschritt folgen außerdem umfangreiche Unit- und Integrationstests. Ausführliche Theorieteile runden das Buch ab und machen es zu deinem praktischen Begleiter im Entwicklungsalltag. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">43,51</context>
+        </context-group>
+        <note priority="1" from="description">Angular book description</note>
+        <note priority="1" from="meaning">book description</note>
+      </trans-unit>
+      <trans-unit id="page.home.recentBlog.title" datatype="html">
+        <source> Aktuelle Blogbeiträge </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">66,69</context>
+        </context-group>
+        <note priority="1" from="description">Recent blog posts heading</note>
+        <note priority="1" from="meaning">section heading</note>
+      </trans-unit>
+      <trans-unit id="page.home.recentBlog.viewAll" datatype="html">
+        <source>Alle Beiträge</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">69,72</context>
+        </context-group>
+        <note priority="1" from="description">View all posts link</note>
+        <note priority="1" from="meaning">nav link</note>
+      </trans-unit>
+      <trans-unit id="page.home.recentTalks.title" datatype="html">
+        <source> Aktuelle Vorträge </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">99,102</context>
+        </context-group>
+        <note priority="1" from="description">Recent talks heading</note>
+        <note priority="1" from="meaning">section heading</note>
+      </trans-unit>
+      <trans-unit id="page.home.recentTalks.viewAll" datatype="html">
+        <source>Alle Vorträge</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">102,105</context>
+        </context-group>
+        <note priority="1" from="description">View all talks link</note>
+        <note priority="1" from="meaning">nav link</note>
+      </trans-unit>
+      <trans-unit id="page.home.meetup.link.ariaLabel" datatype="html">
+        <source>Angular Berlin Meetup auf Meetup.com</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">129,130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.home.meetup.logo.alt" datatype="html">
+        <source>Angular Berlin Logo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">134,135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.home.meetup.title" datatype="html">
+        <source> Angular Berlin Meetup </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">143,145</context>
+        </context-group>
+        <note priority="1" from="description">Meetup section title</note>
+        <note priority="1" from="meaning">section heading</note>
+      </trans-unit>
+      <trans-unit id="page.home.meetup.description" datatype="html">
+        <source> Ich bin Co-Organisator des Angular Meetup in Berlin. Dieses findet ca. alle zwei Monate an wechselnden Standorten statt. Neben zwei Talks am Abend steht der Austausch und die Vernetzung mit anderen Entwickler:innen im Vordergrund. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">146,152</context>
+        </context-group>
+        <note priority="1" from="description">Angular Berlin Meetup description</note>
+        <note priority="1" from="meaning">meetup description</note>
+      </trans-unit>
+      <trans-unit id="page.home.meetup.linkText" datatype="html">
+        <source> Meetup.com: Angular Berlin <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span aria-hidden=&quot;true&quot;&gt;"/>→<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">156,159</context>
+        </context-group>
+        <note priority="1" from="description">Meetup link text</note>
+        <note priority="1" from="meaning">meetup link</note>
+      </trans-unit>
+      <trans-unit id="page.home.recentProjects.title" datatype="html">
+        <source> Aktuelle Projekte </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">168,171</context>
+        </context-group>
+        <note priority="1" from="description">Recent projects heading</note>
+        <note priority="1" from="meaning">section heading</note>
+      </trans-unit>
+      <trans-unit id="page.home.recentProjects.viewAll" datatype="html">
+        <source>Alle Projekte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
+          <context context-type="linenumber">171,174</context>
+        </context-group>
+        <note priority="1" from="description">View all projects link</note>
+        <note priority="1" from="meaning">nav link</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.title" datatype="html">
+        <source>Impressum</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">Imprint page title</note>
+        <note priority="1" from="meaning">page title</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.subtitle" datatype="html">
+        <source>Angaben gemäß § 5 TMG</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">4,7</context>
+        </context-group>
+        <note priority="1" from="description">Imprint page subtitle</note>
+        <note priority="1" from="meaning">page subtitle</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.representedBy.heading" datatype="html">
+        <source>Vertreten durch</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">8,11</context>
+        </context-group>
+        <note priority="1" from="description">Represented by heading</note>
+        <note priority="1" from="meaning">section title</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.email.label" datatype="html">
+        <source>E-Mail:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+        <note priority="1" from="description">Email label</note>
+        <note priority="1" from="meaning">label</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.email.ariaLabel" datatype="html">
+        <source>E-Mail senden an mail at k9n.dev</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.imprint.phone.label" datatype="html">
+        <source>Telefon:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+        <note priority="1" from="description">Phone label</note>
+        <note priority="1" from="meaning">label</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.phone.ariaLabel" datatype="html">
+        <source>Anrufen: +49 151 29134704</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.imprint.disclaimer.heading" datatype="html">
+        <source>Haftungsausschluss</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+        <note priority="1" from="description">Disclaimer heading</note>
+        <note priority="1" from="meaning">section title</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.disclaimer.links.heading" datatype="html">
+        <source>Haftung für Links</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">34,36</context>
+        </context-group>
+        <note priority="1" from="description">Links liability heading</note>
+        <note priority="1" from="meaning">subsection title</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.disclaimer.links.text" datatype="html">
+        <source> Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">37,46</context>
+        </context-group>
+        <note priority="1" from="description">Links liability text</note>
+        <note priority="1" from="meaning">legal text</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.disclaimer.copyright.heading" datatype="html">
+        <source>Urheberrecht</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">51,53</context>
+        </context-group>
+        <note priority="1" from="description">Copyright heading</note>
+        <note priority="1" from="meaning">subsection title</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.disclaimer.copyright.text" datatype="html">
+        <source> Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">54,64</context>
+        </context-group>
+        <note priority="1" from="description">Copyright text</note>
+        <note priority="1" from="meaning">legal text</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.privacy.heading" datatype="html">
+        <source>Datenschutz</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">71,73</context>
+        </context-group>
+        <note priority="1" from="description">Privacy heading</note>
+        <note priority="1" from="meaning">section title</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.privacy.p1" datatype="html">
+        <source> Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">74,80</context>
+        </context-group>
+        <note priority="1" from="description">Privacy text paragraph 1</note>
+        <note priority="1" from="meaning">legal text</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.privacy.p2" datatype="html">
+        <source> Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">82,87</context>
+        </context-group>
+        <note priority="1" from="description">Privacy text paragraph 2</note>
+        <note priority="1" from="meaning">legal text</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.privacy.p3" datatype="html">
+        <source> Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">88,94</context>
+        </context-group>
+        <note priority="1" from="description">Privacy text paragraph 3</note>
+        <note priority="1" from="meaning">legal text</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.analytics.heading" datatype="html">
+        <source>Google Analytics</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">99,101</context>
+        </context-group>
+        <note priority="1" from="description">Analytics heading</note>
+        <note priority="1" from="meaning">section title</note>
+      </trans-unit>
+      <trans-unit id="page.imprint.analytics.text" datatype="html">
+        <source> Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (&quot;Google&quot;). Google Analytics verwendet sog. &quot;Cookies&quot;, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglicht. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website (einschließlich Ihrer IP-Adresse) wird an einen Server von Google in den USA übertragen und dort gespeichert. Google wird diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen. Auch wird Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten der Google in Verbindung bringen. Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website voll umfänglich nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
+          <context context-type="linenumber">102,121</context>
+        </context-group>
+        <note priority="1" from="description">Google Analytics text</note>
+        <note priority="1" from="meaning">legal text</note>
+      </trans-unit>
+      <trans-unit id="page.notFound.message" datatype="html">
+        <source> Die Seite, die du suchst, existiert nicht oder wurde verschoben. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found-page.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+        <note priority="1" from="description">Page not found message</note>
+        <note priority="1" from="meaning">not found message</note>
+      </trans-unit>
+      <trans-unit id="page.notFound.backHome" datatype="html">
+        <source>Zurück zur Startseite</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found/not-found-page.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+        <note priority="1" from="description">Back to home link</note>
+        <note priority="1" from="meaning">not found link</note>
+      </trans-unit>
+      <trans-unit id="page.projectDetail.viewProject" datatype="html">
+        <source> Projekt ansehen ↗ </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-detail-page.html</context>
+          <context context-type="linenumber">31,36</context>
+        </context-group>
+        <note priority="1" from="description">View project link</note>
+        <note priority="1" from="meaning">link text</note>
+      </trans-unit>
+      <trans-unit id="page.projectDetail.notFound.title" datatype="html">
+        <source>Projekt nicht gefunden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-detail-page.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+        <note priority="1" from="description">Project not found title</note>
+        <note priority="1" from="meaning">not found title</note>
+      </trans-unit>
+      <trans-unit id="page.projectDetail.notFound.message" datatype="html">
+        <source> Das gesuchte Projekt existiert nicht. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-detail-page.html</context>
+          <context context-type="linenumber">44,46</context>
+        </context-group>
+        <note priority="1" from="description">Project not found message</note>
+        <note priority="1" from="meaning">not found message</note>
+      </trans-unit>
+      <trans-unit id="page.projectDetail.notFound.backLink" datatype="html">
+        <source>← Zurück zur Startseite</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-detail-page.html</context>
+          <context context-type="linenumber">46,49</context>
+        </context-group>
+        <note priority="1" from="description">Back to home link</note>
+        <note priority="1" from="meaning">not found link</note>
+      </trans-unit>
+      <trans-unit id="page.projectDetail.status.label" datatype="html">
+        <source>Status: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/project-detail-page.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Status label prefix</note>
+        <note priority="1" from="meaning">aria label</note>
+      </trans-unit>
+      <trans-unit id="page.projects.empty" datatype="html">
+        <source>Keine Projekte entsprechen deinem Filter.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/projects-list-page.html</context>
+          <context context-type="linenumber">18,21</context>
+        </context-group>
+        <note priority="1" from="description">No projects match filter</note>
+        <note priority="1" from="meaning">empty state</note>
+      </trans-unit>
+      <trans-unit id="page.projects.title" datatype="html">
+        <source>Projekte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/projects-list-page.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Projects list page title</note>
+        <note priority="1" from="meaning">page title</note>
+      </trans-unit>
+      <trans-unit id="page.projects.subtitle" datatype="html">
+        <source>Open-Source-Tools, Bibliotheken und Nebenprojekte, die ich gebaut oder zu denen ich beigetragen habe.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/projects-list-page.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Projects list page subtitle</note>
+        <note priority="1" from="meaning">page subtitle</note>
+      </trans-unit>
+      <trans-unit id="page.projects.grid.ariaLabel" datatype="html">
+        <source>Projektliste</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/projects/projects-list-page.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Projects list grid</note>
+        <note priority="1" from="meaning">aria label</note>
+      </trans-unit>
+      <trans-unit id="page.talkDetail.resources.ariaLabel" datatype="html">
+        <source>Externe Ressourcen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/talks/talk-detail-page.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.talkDetail.resources.heading" datatype="html">
+        <source>Ressourcen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/talks/talk-detail-page.html</context>
+          <context context-type="linenumber">20,22</context>
+        </context-group>
+        <note priority="1" from="description">Talk resources heading</note>
+        <note priority="1" from="meaning">section heading</note>
+      </trans-unit>
+      <trans-unit id="page.talkDetail.notFound.title" datatype="html">
+        <source>Vortrag nicht gefunden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/talks/talk-detail-page.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+        <note priority="1" from="description">Talk not found title</note>
+        <note priority="1" from="meaning">not found title</note>
+      </trans-unit>
+      <trans-unit id="page.talkDetail.notFound.message" datatype="html">
+        <source> Der gesuchte Vortrag existiert nicht. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/talks/talk-detail-page.html</context>
+          <context context-type="linenumber">45,47</context>
+        </context-group>
+        <note priority="1" from="description">Talk not found message</note>
+        <note priority="1" from="meaning">not found message</note>
+      </trans-unit>
+      <trans-unit id="page.talkDetail.notFound.backLink" datatype="html">
+        <source>← Zurück zu allen Vorträgen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/talks/talk-detail-page.html</context>
+          <context context-type="linenumber">47,50</context>
+        </context-group>
+        <note priority="1" from="description">Back to talks link</note>
+        <note priority="1" from="meaning">not found link</note>
+      </trans-unit>
+      <trans-unit id="page.talks.empty" datatype="html">
+        <source>Keine Vorträge entsprechen deinem Filter.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/talks/talks-list-page.html</context>
+          <context context-type="linenumber">19,22</context>
+        </context-group>
+        <note priority="1" from="description">No talks match filter</note>
+        <note priority="1" from="meaning">empty state</note>
+      </trans-unit>
+      <trans-unit id="page.talks.title" datatype="html">
+        <source>Vorträge</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/talks/talks-list-page.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Talks list page title</note>
+        <note priority="1" from="meaning">page title</note>
+      </trans-unit>
+      <trans-unit id="page.talks.subtitle" datatype="html">
+        <source>Konferenzvorträge und Präsentationen zu Angular, Webentwicklung und moderner Frontend-Architektur.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/talks/talks-list-page.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Talks list page subtitle</note>
+        <note priority="1" from="meaning">page subtitle</note>
+      </trans-unit>
+      <trans-unit id="page.talks.grid.ariaLabel" datatype="html">
+        <source>Vortragsliste</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/talks/talks-list-page.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Talks list grid</note>
+        <note priority="1" from="meaning">aria label</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
