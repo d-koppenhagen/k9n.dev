@@ -25,6 +25,7 @@ describe('LanguageSwitcher', () => {
             get location() {
               return {
                 get pathname() { return mockPathname; },
+                set pathname(value: string) { mockPathname = value; },
                 set href(value: string) { mockLocationHref = value; },
                 get href() { return `https://k9n.dev${mockPathname}`; },
               };

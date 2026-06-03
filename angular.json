@@ -24,6 +24,7 @@
           "options": {
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
+            "polyfills": ["@angular/localize/init"],
             "assets": [
               {
                 "glob": "**/*",
@@ -107,9 +108,7 @@
         },
         "test": {
           "builder": "@angular/build:unit-test",
-          "options": {
-            "setupFiles": ["src/test-setup.ts"]
-          }
+          "options": {}
         }
       }
     }

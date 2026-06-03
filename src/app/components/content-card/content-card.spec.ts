@@ -66,7 +66,8 @@ describe('ContentCard', () => {
     const time = fixture.nativeElement.querySelector('time');
     expect(time).toBeTruthy();
     expect(time.getAttribute('datetime')).toBe('2025-01-15');
-    expect(time.textContent.trim()).toBe('2025-01-15');
+    // DatePipe with 'mediumDate' format and 'de' locale renders as 'dd.MM.yyyy'
+    expect(time.textContent.trim()).toBe('15.01.2025');
   });
 
   it('should not render event name when not provided', () => {
@@ -85,11 +86,12 @@ describe('ContentCard', () => {
     expect(event.textContent.trim()).toBe('NG-DE 2025');
   });
 
-  it('should not render image when no thumbnail is provided', () => {
+  it('should render fallback image when no thumbnail is provided', () => {
     const fixture = TestBed.createComponent(TestHostComponent);
     fixture.detectChanges();
     const img = fixture.nativeElement.querySelector('img');
-    expect(img).toBeNull();
+    expect(img).toBeTruthy();
+    expect(img.getAttribute('src')).toContain('images/bg1.jpg');
   });
 
   it('should render image with descriptive alt text when thumbnail is provided', () => {
