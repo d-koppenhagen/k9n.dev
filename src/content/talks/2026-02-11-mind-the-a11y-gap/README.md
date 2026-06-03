@@ -10,7 +10,6 @@ updated: 2026-02-11
 publishedAt:
   name: Leipzig.js Meetup
   url: https://www.meetup.com/de-de/leipzig-js/events/312880071/
-  logo: https://secure.meetupstatic.com/next/images/logo/meetup-logo.webp
   linkExternal: true
 keywords:
   - JavaScript
