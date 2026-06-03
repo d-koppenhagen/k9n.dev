@@ -91,13 +91,15 @@ export class ContentCard {
     return '' + (idx >= 0 ? idx : 0);
   });
 
+  private readonly FALLBACK_THUMBNAIL = 'images/bg1.jpg';
+
   protected readonly thumbnailSrc = computed(() => {
     const thumb = this.thumbnail();
-    return thumb?.card ?? thumb?.header ?? null;
+    return thumb?.card ?? thumb?.header ?? this.FALLBACK_THUMBNAIL;
   });
 
-  protected getThumb(item: SeriesItem): string | null {
-    return item.thumbnail?.card ?? item.thumbnail?.header ?? null;
+  protected getThumb(item: SeriesItem): string {
+    return item.thumbnail?.card ?? item.thumbnail?.header ?? this.FALLBACK_THUMBNAIL;
   }
 
   protected getItemLang(item: SeriesItem): string | null {
