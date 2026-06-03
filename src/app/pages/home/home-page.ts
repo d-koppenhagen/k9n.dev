@@ -31,6 +31,8 @@ export class HomePage {
       description: 'Web developer, speaker & open source contributor \u2014 building modern Angular apps with a focus on accessibility and performance.',
       url: 'https://k9n.dev',
       type: 'website',
+      image: { url: 'images/dk.jpg', width: 431, height: 450 },
+      imageAlt: 'Danny Koppenhagen',
     });
 
     const personSchema: JsonLdPerson = {
