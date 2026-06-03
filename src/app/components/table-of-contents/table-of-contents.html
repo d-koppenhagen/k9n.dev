@@ -3,8 +3,7 @@
       <ul class="toc__list" role="list">
         @for (heading of headings(); track heading.id) {
           <li class="toc__item" [class.toc__item--h3]="heading.level === 3">
-            <a class="toc__link" [href]="'#' + heading.id">
-              {{ heading.text }}
+            <a class="toc__link" [href]="'#' + heading.id" [innerHTML]="heading.text">
             </a>
           </li>
         }
