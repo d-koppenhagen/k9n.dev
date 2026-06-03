@@ -16,7 +16,7 @@
     "build": "ng build",
     "build:content": "npx tsx scripts/build-content.ts",
     "build:deploy": "npm run build:content && ng build && npx tsx scripts/post-build.ts",
-    "preview": "npm run build:deploy && npm run serve:preview",
+    "preview": "ng extract-i18n && npm run build:deploy && npm run serve:preview",
     "serve:preview": "npx tsx scripts/serve-static.ts",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

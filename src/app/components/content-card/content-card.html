@@ -21,13 +21,29 @@
               </div>
             }
             <div class="card__body">
-              <div class="card__meta">
-                <time class="card__date" [attr.datetime]="item.date">{{ item.date }}</time>
+              <div class="card__header-row">
+                <div class="card__header-text">
+                  <div class="card__meta">
+                    <time class="card__date" [attr.datetime]="item.date">{{ item.date }}</time>
+                  </div>
+                  @switch (headingLevel()) {
+                    @case (2) { <h2 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h2> }
+                    @default { <h3 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h3> }
+                  }
+                </div>
+                @if (item.publishedAt?.logo) {
+                  <span class="card__published-at">
+                    <img
+                      class="card__published-at-logo"
+                      [src]="item.publishedAt.logo"
+                      [alt]="''"
+                      width="96"
+                      height="96"
+                    />
+                    <span class="visually-hidden" i18n="card label|Published at source@@contentCard.publishedAt.seriesLabel">Veröffentlicht auf {{ item.publishedAt.name }}</span>
+                  </span>
+                }
               </div>
-              @switch (headingLevel()) {
-                @case (2) { <h2 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h2> }
-                @default { <h3 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h3> }
-              }
               <p class="card__description" [attr.lang]="getItemLang(item)">{{ item.description }}</p>
             </div>
           </a>
@@ -89,16 +105,32 @@
         </div>
       }
       <div class="card__body">
-        <div class="card__meta">
-          @if (eventName()) {
-            <span class="card__event">{{ eventName() }}</span>
+        <div class="card__header-row">
+          <div class="card__header-text">
+            <div class="card__meta">
+              @if (eventName()) {
+                <span class="card__event">{{ eventName() }}</span>
+              }
+              <time class="card__date" [attr.datetime]="date()">{{ date() }}</time>
+            </div>
+            @switch (headingLevel()) {
+              @case (2) { <h2 class="card__title" [attr.lang]="contentLang()">{{ title() }}</h2> }
+              @default { <h3 class="card__title" [attr.lang]="contentLang()">{{ title() }}</h3> }
+            }
+          </div>
+          @if (publishedAt()?.logo) {
+            <span class="card__published-at">
+              <img
+                class="card__published-at-logo"
+                [src]="publishedAt()!.logo!"
+                [alt]="''"
+                width="96"
+                height="96"
+              />
+              <span class="visually-hidden" i18n="card label|Published at source@@contentCard.publishedAt.label">Veröffentlicht auf {{ publishedAt()!.name }}</span>
+            </span>
           }
-          <time class="card__date" [attr.datetime]="date()">{{ date() }}</time>
         </div>
-        @switch (headingLevel()) {
-          @case (2) { <h2 class="card__title" [attr.lang]="contentLang()">{{ title() }}</h2> }
-          @default { <h3 class="card__title" [attr.lang]="contentLang()">{{ title() }}</h3> }
-        }
         <p class="card__description" [attr.lang]="contentLang()">{{ description() }}</p>
       </div>
     </a>

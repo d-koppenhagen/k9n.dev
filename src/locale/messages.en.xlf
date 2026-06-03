@@ -32,6 +32,14 @@
         <source>Nächster Teil</source>
         <target>Next part</target>
       </trans-unit>
+      <trans-unit id="contentCard.publishedAt.label" datatype="html">
+        <source>Veröffentlicht auf <x id="INTERPOLATION" equiv-text="{{ publishedAt()!.name }}"/></source>
+        <target>Published on <x id="INTERPOLATION" equiv-text="{{ publishedAt()!.name }}"/></target>
+      </trans-unit>
+      <trans-unit id="contentCard.publishedAt.seriesLabel" datatype="html">
+        <source>Veröffentlicht auf <x id="INTERPOLATION" equiv-text="{{ item.publishedAt.name }}"/></source>
+        <target>Published on <x id="INTERPOLATION" equiv-text="{{ item.publishedAt.name }}"/></target>
+      </trans-unit>
       <trans-unit id="contentFilter.ariaLabel" datatype="html">
         <source>Inhalte filtern</source>
         <target>Filter content</target>

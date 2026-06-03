@@ -105,6 +105,32 @@
   white-space: nowrap;
 }
 
+.card__published-at {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.card__published-at-logo {
+  width: 7rem;
+  max-height: 5rem;
+  object-fit: contain;
+}
+
+.card__header-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.card__header-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  flex-grow: 1;
+  min-width: 0;
+}
+
 .card__title {
   margin: 0;
   font-size: var(--font-size-lg);
@@ -186,7 +212,7 @@
   outline-offset: -3px;
 }
 
-.card__series-tab[aria-selected="true"] {
+.card__series-tab[aria-selected='true'] {
   background-color: var(--color-accent-active);
   color: #fff;
   font-weight: 700;

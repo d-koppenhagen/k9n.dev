@@ -126,6 +126,7 @@ export function parseTalk(filePath: string): Talk | null {
   const links = parseLinks(data.links, data.publishedAt);
   const linkExternal = !!(data.publishedAt && typeof data.publishedAt === 'object'
     && (data.publishedAt as Record<string, unknown>).linkExternal === true);
+  const publishedAt = parsePublishedAt(data.publishedAt);
 
   const language = parseContentLanguage(data.language, filePath, 'talk');
 
@@ -141,6 +142,7 @@ export function parseTalk(filePath: string): Talk | null {
     draft,
     linkExternal: linkExternal || undefined,
     language,
+    publishedAt,
     content, // Raw markdown body
   };
 }
@@ -175,6 +177,7 @@ export function parseProject(filePath: string): Project | null {
   const thumbnail = parseThumbnail(data.thumbnail, slug, 'images/projects');
   const draft = data.published === false || data.status === 'draft';
   const status = parseProjectStatus(data.status, draft);
+  const publishedAt = parsePublishedAt(data.publishedAt);
 
   const language = parseContentLanguage(data.language, filePath, 'project');
 
@@ -188,6 +191,7 @@ export function parseProject(filePath: string): Project | null {
     thumbnail,
     status,
     language,
+    publishedAt,
     content, // Raw markdown body
   };
 }

@@ -8,9 +8,9 @@ author:
 created: 2020-09-14
 updated: 2021-05-19
 publishedAt:
-  name: inDepth.dev
-  url: https://indepth.dev/speed-up-your-angular-schematics-development-with-useful-helper-functions
-  logo: images/InDepthdev-white.svg
+  name: Angular.love
+  url: https://angular.love/speed-up-your-angular-schematics-development-with-useful-helper-functions
+  logo: https://meetup.angular.love/app/uploads/2019/07/GradientLogo.png
 keywords:
   - Angular
   - 'Angular CLI'
@@ -60,7 +60,7 @@ You can either use an existing schematics project or simply create a new blank o
 npx @angular-devkit/schematics-cli blank --name=playground
 ```
 
-> If you are not familar with the basics of authoring schematics, I recommend you to read the [Angular Docs](https://angular.io/guide/schematics-authoring) and the [blog post _"Total Guide To Custom Angular schematics"_ by Tomas Trajan](https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4) first as well as the [article series "Angular Schematics from 0 to publishing your own library" by Natalia Venditto](https://indepth.dev/angular-schematics-from-0-to-publishing-your-own-library-i) first.
+> If you are not familar with the basics of authoring schematics, I recommend you to read the [Angular Docs](https://angular.io/guide/schematics-authoring) and the [blog post _"Total Guide To Custom Angular schematics"_ by Tomas Trajan](https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4) first as well as the [article series "Angular Schematics from 0 to publishing your own library" by Natalia Venditto](https://angular.love/angular-schematics-from-0-to-publishing-your-own-library-i) first.
 
 After setting up the new blank project we should have this file available: `src/playground/index.ts`.
 
@@ -277,7 +277,7 @@ If you have e.g. a JSON file template in the directory `files` and you want to i
 }
 ```
 
-For more details about how to use and apply templates in your own schematics, check out the [blog post by Tomas Trajan: _"Total Guide To Custom Angular schematics"_](https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4) and the [article series _"Angular Schematics from 0 to publishing your own library"_ by Natalia Venditto](https://indepth.dev/angular-schematics-from-0-to-publishing-your-own-library-i).
+For more details about how to use and apply templates in your own schematics, check out the [blog post by Tomas Trajan: _"Total Guide To Custom Angular schematics"_](https://medium.com/@tomastrajan/total-guide-to-custom-angular-schematics-5c50cf90cdb4) and the [article series _"Angular Schematics from 0 to publishing your own library"_ by Natalia Venditto](https://angular.love/angular-schematics-from-0-to-publishing-your-own-library-i).
 
 - [Check out the implementation for `relativePathToWorkspaceRoot()` in detail.](https://github.com/angular/angular-cli/blob/master/packages/schematics/angular/utility/paths.ts)
 - [Check out the example in the playground repository on GitHub](https://github.com/d-koppenhagen/schematics-helpers-playground/tree/master/playground/src/relative-path)

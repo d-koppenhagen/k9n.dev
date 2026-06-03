@@ -62,6 +62,7 @@ export class BlogListPage {
       thumbnail: p.thumbnail,
       date: p.created,
       description: p.description,
+      publishedAt: p.publishedAt,
     }));
     this.seriesCache.set(post.series, items);
     return items;
