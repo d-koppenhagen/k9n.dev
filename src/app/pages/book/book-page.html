@@ -1,0 +1,79 @@
+<section class="book-hero" aria-labelledby="book-heading">
+  <div class="book-hero__inner">
+    <a
+      href="https://angular-buch.com"
+      class="book-hero__image-link"
+      aria-label="Zur Buchwebsite (angular-buch.com)"
+      i18n-aria-label="@@page.book.cover.ariaLabel"
+    >
+      <img
+        ngSrc="images/book-cover-v1m.png"
+        alt="Buchcover: Angular – Das Praxisbuch"
+        i18n-alt="@@page.book.cover.alt"
+        class="book-hero__cover"
+        width="400"
+        height="500"
+        priority
+      />
+    </a>
+    <div class="book-hero__content">
+      <h1 id="book-heading" class="book-hero__title" i18n="book page title|Angular book title@@page.book.title">
+        Angular: Das Praxisbuch
+      </h1>
+      <p class="book-hero__subtitle" i18n="book page subtitle|Book subtitle@@page.book.subtitle">
+        Von den Grundlagen bis zur professionellen Entwicklung mit Signals – ab Angular 22
+      </p>
+      <p class="book-hero__authors" i18n="book authors|Book authors@@page.book.authors">
+        Danny Koppenhagen, Ferdinand Malcher, Johannes Hoppe
+      </p>
+      <p class="book-hero__publisher" i18n="book publisher info|Publisher and edition@@page.book.publisher">
+        1. Auflage · dpunkt.verlag · 2026
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="book-details" aria-labelledby="book-description-heading">
+  <h2 id="book-description-heading" class="visually-hidden" i18n="@@page.book.description.heading">Über das Buch</h2>
+  <div class="book-details__inner">
+    <div class="book-details__description">
+      <p i18n="book long description|Detailed book description@@page.book.description.paragraph1">
+        In diesem Praxiseinstieg lernst du Angular inklusive der modernen APIs
+        und Konzepte kennen. Mit einem durchgängigen Beispielprojekt führen
+        die Autoren dich durch die Welt von Angular. Du entwickelst und
+        testest Schritt für Schritt eine professionelle, modulare und
+        barrierefreie Single-Page-Anwendung und lernst Angular im praktischen
+        Einsatz kennen.
+      </p>
+      <p i18n="book long description continued|Detailed book description@@page.book.description.paragraph2">
+        Auf jeden Umsetzungsschritt folgen außerdem umfangreiche Unit- und
+        Integrationstests. Ausführliche Theorieteile runden das Buch ab und
+        machen es zu deinem praktischen Begleiter im Entwicklungsalltag.
+      </p>
+    </div>
+
+    <ul class="book-details__topics" aria-label="Themen im Buch" i18n-aria-label="@@page.book.topics.ariaLabel">
+      <li i18n="@@page.book.topic.signals">Signals & Reaktive State-Verwaltung</li>
+      <li i18n="@@page.book.topic.components">Standalone Components</li>
+      <li i18n="@@page.book.topic.forms">Signal Forms</li>
+      <li i18n="@@page.book.topic.routing">Routing & Lazy Loading</li>
+      <li i18n="@@page.book.topic.http">HTTP & Data Fetching mit httpResource</li>
+      <li i18n="@@page.book.topic.testing">Testing mit Vitest</li>
+      <li i18n="@@page.book.topic.a11y">Barrierefreiheit (Accessibility)</li>
+      <li i18n="@@page.book.topic.rxjs">RxJS & Observables</li>
+    </ul>
+  </div>
+</section>
+
+<section class="book-cta" aria-labelledby="book-cta-heading">
+  <div class="book-cta__inner">
+    <h2 id="book-cta-heading" class="book-cta__title" i18n="@@page.book.cta.title">Mehr erfahren</h2>
+    <p class="book-cta__text" i18n="@@page.book.cta.text">
+      Auf der Buchwebsite findest du alle Informationen, Leseproben und den direkten Link zum Verlag.
+    </p>
+    <a href="https://angular-buch.com" class="book-cta__link">
+      angular-buch.com
+      <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>

@@ -39,6 +39,7 @@ export class MetaManager {
     this.setTwitterCardTags(config);
     this.setLlmMeta(config);
     this.setArticleMeta(config);
+    this.setBookMeta(config);
   }
 
   injectJsonLd(schema: JsonLdSchema): void {
@@ -96,6 +97,19 @@ export class MetaManager {
     while (articleTag) {
       this.meta.removeTagElement(articleTag);
       articleTag = this.meta.getTag("property='article:tag'");
+    }
+    // Remove book-specific meta tags
+    this.meta.removeTag("property='book:isbn'");
+    this.meta.removeTag("property='book:release_date'");
+    let bookAuthor = this.meta.getTag("property='book:author'");
+    while (bookAuthor) {
+      this.meta.removeTagElement(bookAuthor);
+      bookAuthor = this.meta.getTag("property='book:author'");
+    }
+    let bookTag = this.meta.getTag("property='book:tag'");
+    while (bookTag) {
+      this.meta.removeTagElement(bookTag);
+      bookTag = this.meta.getTag("property='book:tag'");
     }
     this.meta.removeTag("name='twitter:card'");
     this.meta.removeTag("name='twitter:title'");
@@ -355,6 +369,32 @@ export class MetaManager {
     // Set article:author (Req 9.4)
     if (config.author) {
       this.meta.updateTag({ property: 'article:author', content: config.author });
+    }
+  }
+
+  private setBookMeta(config: PageMeta): void {
+    if (config.type !== 'book') {
+      return;
+    }
+
+    if (config.bookIsbn) {
+      this.meta.updateTag({ property: 'book:isbn', content: config.bookIsbn });
+    }
+
+    if (config.bookReleaseDate) {
+      this.meta.updateTag({ property: 'book:release_date', content: config.bookReleaseDate });
+    }
+
+    if (config.bookAuthors?.length) {
+      for (const author of config.bookAuthors) {
+        this.meta.addTag({ property: 'book:author', content: author });
+      }
+    }
+
+    if (config.bookTags?.length) {
+      for (const tag of config.bookTags) {
+        this.meta.addTag({ property: 'book:tag', content: tag });
+      }
     }
   }
 }

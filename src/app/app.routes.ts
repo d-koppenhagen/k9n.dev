@@ -57,6 +57,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'book',
+    loadComponent: () =>
+      import('./pages/book/book-page').then(
+        (m) => m.BookPage,
+      ),
+  },
+  {
     path: 'contact',
     loadComponent: () =>
       import('./pages/contact/contact-page').then(

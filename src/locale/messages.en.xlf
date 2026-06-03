@@ -146,6 +146,10 @@
         <source>Projekte</source>
         <target>Projects</target>
       </trans-unit>
+      <trans-unit id="nav.book" datatype="html">
+        <source>Buch</source>
+        <target>Book</target>
+      </trans-unit>
       <trans-unit id="nav.contact" datatype="html">
         <source>Kontakt</source>
         <target>Contact</target>
@@ -521,6 +525,86 @@
       <trans-unit id="component.publishedAtBanner.crossPosted.label" datatype="html">
         <source>Auch verfügbar auf:</source>
         <target>Also available on:</target>
+      </trans-unit>
+      <trans-unit id="page.book.cover.ariaLabel" datatype="html">
+        <source>Zur Buchwebsite (angular-buch.com)</source>
+        <target>Visit book website (angular-buch.com)</target>
+      </trans-unit>
+      <trans-unit id="page.book.cover.alt" datatype="html">
+        <source>Buchcover: Angular – Das Praxisbuch</source>
+        <target>Book cover: Angular – The Practical Guide</target>
+      </trans-unit>
+      <trans-unit id="page.book.title" datatype="html">
+        <source> Angular: Das Praxisbuch </source>
+        <target> Angular: The Practical Guide </target>
+      </trans-unit>
+      <trans-unit id="page.book.subtitle" datatype="html">
+        <source> Von den Grundlagen bis zur professionellen Entwicklung mit Signals – ab Angular 22 </source>
+        <target> From fundamentals to professional development with Signals – from Angular 22 </target>
+      </trans-unit>
+      <trans-unit id="page.book.authors" datatype="html">
+        <source> Danny Koppenhagen, Ferdinand Malcher, Johannes Hoppe </source>
+        <target> Danny Koppenhagen, Ferdinand Malcher, Johannes Hoppe </target>
+      </trans-unit>
+      <trans-unit id="page.book.publisher" datatype="html">
+        <source> 1. Auflage · dpunkt.verlag · 2026 </source>
+        <target> 1st Edition · dpunkt.verlag · 2026 </target>
+      </trans-unit>
+      <trans-unit id="page.book.description.heading" datatype="html">
+        <source>Über das Buch</source>
+        <target>About the Book</target>
+      </trans-unit>
+      <trans-unit id="page.book.description.paragraph1" datatype="html">
+        <source> In diesem Praxiseinstieg lernst du Angular inklusive der modernen APIs und Konzepte kennen. Mit einem durchgängigen Beispielprojekt führen die Autoren dich durch die Welt von Angular. Du entwickelst und testest Schritt für Schritt eine professionelle, modulare und barrierefreie Single-Page-Anwendung und lernst Angular im praktischen Einsatz kennen. </source>
+        <target> In this practical introduction you'll get to know Angular including its modern APIs and concepts. With a continuous example project, the authors guide you through the world of Angular. You'll develop and test a professional, modular, and accessible single-page application step by step and learn Angular in practical use. </target>
+      </trans-unit>
+      <trans-unit id="page.book.description.paragraph2" datatype="html">
+        <source> Auf jeden Umsetzungsschritt folgen außerdem umfangreiche Unit- und Integrationstests. Ausführliche Theorieteile runden das Buch ab und machen es zu deinem praktischen Begleiter im Entwicklungsalltag. </source>
+        <target> Each implementation step is followed by extensive unit and integration tests. Comprehensive theory sections round off the book and make it your practical companion in everyday development. </target>
+      </trans-unit>
+      <trans-unit id="page.book.topics.ariaLabel" datatype="html">
+        <source>Themen im Buch</source>
+        <target>Topics in the book</target>
+      </trans-unit>
+      <trans-unit id="page.book.topic.signals" datatype="html">
+        <source>Signals &amp; Reaktive State-Verwaltung</source>
+        <target>Signals &amp; Reactive State Management</target>
+      </trans-unit>
+      <trans-unit id="page.book.topic.components" datatype="html">
+        <source>Standalone Components</source>
+        <target>Standalone Components</target>
+      </trans-unit>
+      <trans-unit id="page.book.topic.forms" datatype="html">
+        <source>Signal Forms</source>
+        <target>Signal Forms</target>
+      </trans-unit>
+      <trans-unit id="page.book.topic.routing" datatype="html">
+        <source>Routing &amp; Lazy Loading</source>
+        <target>Routing &amp; Lazy Loading</target>
+      </trans-unit>
+      <trans-unit id="page.book.topic.http" datatype="html">
+        <source>HTTP &amp; Data Fetching mit httpResource</source>
+        <target>HTTP &amp; Data Fetching with httpResource</target>
+      </trans-unit>
+      <trans-unit id="page.book.topic.testing" datatype="html">
+        <source>Testing mit Vitest</source>
+        <target>Testing with Vitest</target>
+      </trans-unit>
+      <trans-unit id="page.book.topic.a11y" datatype="html">
+        <source>Barrierefreiheit (Accessibility)</source>
+        <target>Accessibility (a11y)</target>
+      </trans-unit>
+      <trans-unit id="page.book.topic.rxjs" datatype="html">
+        <source>RxJS &amp; Observables</source>
+        <target>RxJS &amp; Observables</target>
+      </trans-unit>
+      <trans-unit id="page.book.cta.title" datatype="html">
+        <source>Mehr erfahren</source>
+        <target>Learn More</target>
+      </trans-unit>
+      <trans-unit id="page.book.cta.text" datatype="html">
+        <source> Auf der Buchwebsite findest du alle Informationen, Leseproben und den direkten Link zum Verlag. </source>
+        <target> On the book website you'll find all the information, sample chapters, and a direct link to the publisher. </target>
       </trans-unit>
     </body>
   </file>

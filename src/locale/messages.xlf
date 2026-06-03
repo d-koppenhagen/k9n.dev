@@ -324,11 +324,20 @@
         <note priority="1" from="description">Projects page</note>
         <note priority="1" from="meaning">navigation link</note>
       </trans-unit>
+      <trans-unit id="nav.book" datatype="html">
+        <source>Buch</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Book page</note>
+        <note priority="1" from="meaning">navigation link</note>
+      </trans-unit>
       <trans-unit id="nav.contact" datatype="html">
         <source>Kontakt</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/navigation/navigation.ts</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">32</context>
         </context-group>
         <note priority="1" from="description">Contact page</note>
         <note priority="1" from="meaning">navigation link</note>
@@ -622,6 +631,158 @@
         </context-group>
         <note priority="1" from="description">Blog posts grid</note>
         <note priority="1" from="meaning">aria label</note>
+      </trans-unit>
+      <trans-unit id="page.book.cover.ariaLabel" datatype="html">
+        <source>Zur Buchwebsite (angular-buch.com)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.cover.alt" datatype="html">
+        <source>Buchcover: Angular – Das Praxisbuch</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.title" datatype="html">
+        <source> Angular: Das Praxisbuch </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+        <note priority="1" from="description">Angular book title</note>
+        <note priority="1" from="meaning">book page title</note>
+      </trans-unit>
+      <trans-unit id="page.book.subtitle" datatype="html">
+        <source> Von den Grundlagen bis zur professionellen Entwicklung mit Signals – ab Angular 22 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+        <note priority="1" from="description">Book subtitle</note>
+        <note priority="1" from="meaning">book page subtitle</note>
+      </trans-unit>
+      <trans-unit id="page.book.authors" datatype="html">
+        <source> Danny Koppenhagen, Ferdinand Malcher, Johannes Hoppe </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">27,29</context>
+        </context-group>
+        <note priority="1" from="description">Book authors</note>
+        <note priority="1" from="meaning">book authors</note>
+      </trans-unit>
+      <trans-unit id="page.book.publisher" datatype="html">
+        <source> 1. Auflage · dpunkt.verlag · 2026 </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">30,36</context>
+        </context-group>
+        <note priority="1" from="description">Publisher and edition</note>
+        <note priority="1" from="meaning">book publisher info</note>
+      </trans-unit>
+      <trans-unit id="page.book.description.heading" datatype="html">
+        <source>Über das Buch</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.description.paragraph1" datatype="html">
+        <source> In diesem Praxiseinstieg lernst du Angular inklusive der modernen APIs und Konzepte kennen. Mit einem durchgängigen Beispielprojekt führen die Autoren dich durch die Welt von Angular. Du entwickelst und testest Schritt für Schritt eine professionelle, modulare und barrierefreie Single-Page-Anwendung und lernst Angular im praktischen Einsatz kennen. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">41,48</context>
+        </context-group>
+        <note priority="1" from="description">Detailed book description</note>
+        <note priority="1" from="meaning">book long description</note>
+      </trans-unit>
+      <trans-unit id="page.book.description.paragraph2" datatype="html">
+        <source> Auf jeden Umsetzungsschritt folgen außerdem umfangreiche Unit- und Integrationstests. Ausführliche Theorieteile runden das Buch ab und machen es zu deinem praktischen Begleiter im Entwicklungsalltag. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">49,55</context>
+        </context-group>
+        <note priority="1" from="description">Detailed book description</note>
+        <note priority="1" from="meaning">book long description continued</note>
+      </trans-unit>
+      <trans-unit id="page.book.topics.ariaLabel" datatype="html">
+        <source>Themen im Buch</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.topic.signals" datatype="html">
+        <source>Signals &amp; Reaktive State-Verwaltung</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.topic.components" datatype="html">
+        <source>Standalone Components</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.topic.forms" datatype="html">
+        <source>Signal Forms</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.topic.routing" datatype="html">
+        <source>Routing &amp; Lazy Loading</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.topic.http" datatype="html">
+        <source>HTTP &amp; Data Fetching mit httpResource</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.topic.testing" datatype="html">
+        <source>Testing mit Vitest</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">61,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.topic.a11y" datatype="html">
+        <source>Barrierefreiheit (Accessibility)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.topic.rxjs" datatype="html">
+        <source>RxJS &amp; Observables</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">63,66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.cta.title" datatype="html">
+        <source>Mehr erfahren</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">70,71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.cta.text" datatype="html">
+        <source> Auf der Buchwebsite findest du alle Informationen, Leseproben und den direkten Link zum Verlag. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
+          <context context-type="linenumber">72,74</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="page.contact.title" datatype="html">
         <source>Kontakt</source>

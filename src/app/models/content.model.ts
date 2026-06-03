@@ -102,7 +102,7 @@ export interface PageMeta {
   url: string;          // absolute URL of the page
 
   // Optional
-  type?: 'website' | 'article';
+  type?: 'website' | 'article' | 'book';
   image?: PageMetaImage;
   imageAlt?: string;    // max 125 characters
   locale?: string;      // e.g. "de_DE"
@@ -113,4 +113,10 @@ export interface PageMeta {
   keywords?: string[];     // max 10 items
   canonicalUrl?: string;
   draft?: boolean;
+
+  // Book-specific (og:type = book)
+  bookIsbn?: string;
+  bookReleaseDate?: string;  // ISO 8601
+  bookAuthors?: string[];    // profile URLs or names
+  bookTags?: string[];
 }

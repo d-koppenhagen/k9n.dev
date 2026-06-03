@@ -38,4 +38,20 @@ export interface JsonLdWebSite {
   };
 }
 
-export type JsonLdSchema = JsonLdPerson | JsonLdArticle | JsonLdCollectionPage | JsonLdWebSite;
+export interface JsonLdBook {
+  '@context': 'https://schema.org';
+  '@type': 'Book';
+  name: string;
+  description: string;
+  isbn: string;
+  author: Array<{ '@type': 'Person'; name: string; url?: string }>;
+  publisher: { '@type': 'Organization'; name: string };
+  inLanguage: string;
+  numberOfPages?: number;
+  bookEdition?: string;
+  datePublished: string;
+  image?: string;
+  url?: string;
+}
+
+export type JsonLdSchema = JsonLdPerson | JsonLdArticle | JsonLdCollectionPage | JsonLdWebSite | JsonLdBook;
