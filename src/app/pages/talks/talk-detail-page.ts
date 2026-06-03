@@ -11,13 +11,14 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 import { DatePipe } from '@angular/common';
 import { MarkdownContent } from '../../components/markdown-content/markdown-content';
+import { PublishedAtBanner } from '../../components/published-at-banner/published-at-banner';
 import { MetaManager } from '../../services/meta/meta';
 import { Content } from '../../services/content/content';
 
 @Component({
   selector: 'app-talk-detail-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MarkdownContent, DatePipe],
+  imports: [MarkdownContent, PublishedAtBanner, DatePipe],
   templateUrl: './talk-detail-page.html',
   styleUrl: './talk-detail-page.css',
 })

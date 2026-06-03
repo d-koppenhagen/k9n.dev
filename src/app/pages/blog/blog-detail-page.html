@@ -54,6 +54,11 @@
 
           <div class="blog-detail__content" [attr.lang]="contentLang()">
             <app-markdown-content [content]="post.content" />
+
+            <app-published-at-banner
+              [publishedAt]="post.publishedAt"
+              [linked]="post.linked"
+            />
           </div>
         </div>
       </article>

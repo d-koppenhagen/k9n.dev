@@ -506,6 +506,22 @@
         <source>Vortragsliste</source>
         <target>Talks list</target>
       </trans-unit>
+      <trans-unit id="component.publishedAtBanner.ariaLabel" datatype="html">
+        <source>Erstveröffentlichung</source>
+        <target>Original publication</target>
+      </trans-unit>
+      <trans-unit id="component.publishedAtBanner.label" datatype="html">
+        <source>Ursprünglich veröffentlicht auf</source>
+        <target>Originally published on</target>
+      </trans-unit>
+      <trans-unit id="component.publishedAtBanner.crossPosted.ariaLabel" datatype="html">
+        <source>Auch veröffentlicht auf</source>
+        <target>Also published on</target>
+      </trans-unit>
+      <trans-unit id="component.publishedAtBanner.crossPosted.label" datatype="html">
+        <source>Auch verfügbar auf:</source>
+        <target>Also available on:</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
