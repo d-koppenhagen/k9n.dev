@@ -11,7 +11,7 @@ import matter from 'gray-matter';
 import { readFileSync } from 'node:fs';
 import { basename, dirname } from 'node:path';
 
-import type { Author, BlogPost, ExternalLink, Project, PublishedAt, Talk, Thumbnail } from '../src/app/models/content.model';
+import type { Author, BlogPost, ExternalLink, LinkedPlatform, Project, PublishedAt, Talk, Thumbnail } from '../src/app/models/content.model';
 
 const DEFAULT_AUTHOR: Author = {
   name: 'Danny Koppenhagen',
@@ -64,6 +64,7 @@ export function parseBlogPost(filePath: string): BlogPost | null {
   const thumbnail = parseThumbnail(data.thumbnail, slug);
   const draft = data.published === false || data.draft === true;
   const publishedAt = parsePublishedAt(data.publishedAt);
+  const linked = parseLinked(data.linked);
 
   return {
     slug,
@@ -78,6 +79,7 @@ export function parseBlogPost(filePath: string): BlogPost | null {
     draft,
     language: data.language === 'de' || data.language === 'en' ? data.language : undefined,
     publishedAt,
+    linked: linked.length > 0 ? linked : undefined,
     content, // Raw markdown body — rendering happens in task 7.3
     headings: [], // Populated during markdown rendering (task 7.3)
   };
@@ -127,6 +129,7 @@ export function parseTalk(filePath: string): Talk | null {
   const linkExternal = !!(data.publishedAt && typeof data.publishedAt === 'object'
     && (data.publishedAt as Record<string, unknown>).linkExternal === true);
   const publishedAt = parsePublishedAt(data.publishedAt);
+  const linked = parseLinked(data.linked);
 
   const language = parseContentLanguage(data.language, filePath, 'talk');
 
@@ -143,6 +146,7 @@ export function parseTalk(filePath: string): Talk | null {
     linkExternal: linkExternal || undefined,
     language,
     publishedAt,
+    linked: linked.length > 0 ? linked : undefined,
     content, // Raw markdown body
   };
 }
@@ -178,6 +182,7 @@ export function parseProject(filePath: string): Project | null {
   const draft = data.published === false || data.status === 'draft';
   const status = parseProjectStatus(data.status, draft);
   const publishedAt = parsePublishedAt(data.publishedAt);
+  const linked = parseLinked(data.linked);
 
   const language = parseContentLanguage(data.language, filePath, 'project');
 
@@ -192,6 +197,7 @@ export function parseProject(filePath: string): Project | null {
     status,
     language,
     publishedAt,
+    linked: linked.length > 0 ? linked : undefined,
     content, // Raw markdown body
   };
 }
@@ -306,6 +312,39 @@ function parsePublishedAt(data: unknown): PublishedAt | undefined {
     logo: obj.logo ? String(obj.logo) : undefined,
     linkExternal: obj.linkExternal === true ? true : undefined,
   };
+}
+
+/**
+ * Known platform keys mapped to human-readable labels.
+ */
+const PLATFORM_LABELS: Record<string, string> = {
+  devTo: 'DEV.to',
+  medium: 'Medium',
+  hashnode: 'Hashnode',
+  twitter: 'Twitter',
+};
+
+/**
+ * Parses the `linked` field from frontmatter.
+ * The field is a record of platform keys to URLs (e.g. { devTo: "...", medium: "..." }).
+ * Returns a normalized array of LinkedPlatform objects.
+ */
+function parseLinked(data: unknown): LinkedPlatform[] {
+  if (!data || typeof data !== 'object' || Array.isArray(data)) return [];
+  const obj = data as Record<string, unknown>;
+  const result: LinkedPlatform[] = [];
+
+  for (const [key, value] of Object.entries(obj)) {
+    if (typeof value === 'string' && value.trim()) {
+      result.push({
+        platform: key,
+        url: value.trim(),
+        label: PLATFORM_LABELS[key] ?? key,
+      });
+    }
+  }
+
+  return result;
 }
 
 /**

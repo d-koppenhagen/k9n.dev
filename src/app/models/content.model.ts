@@ -26,6 +26,12 @@ export interface PublishedAt {
   linkExternal?: boolean;
 }
 
+export interface LinkedPlatform {
+  platform: string;
+  url: string;
+  label: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -39,6 +45,7 @@ export interface BlogPost {
   draft: boolean;
   language?: 'de' | 'en';
   publishedAt?: PublishedAt;
+  linked?: LinkedPlatform[];
   content: string; // Pre-rendered HTML
   headings: Heading[]; // For TOC generation
 }
@@ -56,6 +63,7 @@ export interface Talk {
   linkExternal?: boolean;
   language?: 'de' | 'en';
   publishedAt?: PublishedAt;
+  linked?: LinkedPlatform[];
   content: string; // Pre-rendered HTML
 }
 
@@ -70,6 +78,7 @@ export interface Project {
   status: 'active' | 'maintained' | 'archived' | 'draft';
   language?: 'de' | 'en';
   publishedAt?: PublishedAt;
+  linked?: LinkedPlatform[];
   content: string; // Pre-rendered HTML
 }
 

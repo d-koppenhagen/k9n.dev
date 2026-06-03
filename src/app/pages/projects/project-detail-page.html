@@ -35,6 +35,11 @@
 
         <div class="project-detail__content" [attr.lang]="contentLang()">
           <app-markdown-content [content]="project.content" />
+
+          <app-published-at-banner
+            [publishedAt]="project.publishedAt"
+            [linked]="project.linked"
+          />
         </div>
       </article>
     } @else {

@@ -15,6 +15,11 @@
           <app-markdown-content [content]="talk.content" />
         </div>
 
+        <app-published-at-banner
+          [publishedAt]="talk.publishedAt"
+          [linked]="talk.linked"
+        />
+
         @if (talk.links && talk.links.length > 0) {
           <aside class="talk-detail__links" aria-label="Externe Ressourcen" i18n-aria-label="@@page.talkDetail.resources.ariaLabel">
             <h2 class="talk-detail__links-heading" i18n="section heading|Talk resources heading@@page.talkDetail.resources.heading">Ressourcen</h2>

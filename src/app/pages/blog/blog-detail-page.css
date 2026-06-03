@@ -62,6 +62,9 @@
       font-size: var(--font-size-sm);
       color: var(--color-text-secondary);
       margin-block-end: var(--space-lg);
+      display: flex;
+      gap: var(--space-sm);
+      justify-content: center;
     }
 
     .blog-detail__author-label {

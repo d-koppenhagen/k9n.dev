@@ -1,0 +1,48 @@
+@if (publishedAt(); as pub) {
+  <aside class="published-at" aria-label="Erstveröffentlichung" i18n-aria-label="@@component.publishedAtBanner.ariaLabel">
+    <p class="published-at__text">
+      <span class="published-at__label" i18n="label|Originally published at label@@component.publishedAtBanner.label">Ursprünglich veröffentlicht auf</span>
+      <a
+        class="published-at__link"
+        [href]="pub.url"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @if (pub.logo) {
+          <img
+            class="published-at__logo"
+            [src]="pub.logo"
+            [alt]="pub.name"
+            width="24"
+            height="24"
+          />
+        }
+        <span class="published-at__name">{{ pub.name }}</span>
+        <span class="published-at__icon" aria-hidden="true">↗</span>
+      </a>
+    </p>
+  </aside>
+}
+
+@if (linked(); as links) {
+  @if (links.length > 0) {
+    <aside class="cross-posted" aria-label="Auch veröffentlicht auf" i18n-aria-label="@@component.publishedAtBanner.crossPosted.ariaLabel">
+      <p class="cross-posted__label" i18n="label|Also available on label@@component.publishedAtBanner.crossPosted.label">Auch verfügbar auf:</p>
+      <ul class="cross-posted__list">
+        @for (link of links; track link.platform) {
+          <li class="cross-posted__item">
+            <a
+              class="cross-posted__link"
+              [href]="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="cross-posted__name">{{ link.label }}</span>
+              <span class="cross-posted__icon" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        }
+      </ul>
+    </aside>
+  }
+}

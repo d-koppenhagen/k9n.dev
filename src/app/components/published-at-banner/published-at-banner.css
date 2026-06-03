@@ -1,0 +1,110 @@
+/* Published At Banner */
+.published-at {
+  margin-block-start: var(--space-2xl);
+  padding: var(--space-lg);
+  background-color: var(--color-surface-elevated);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.published-at__text {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.published-at__label {
+  color: var(--color-text-muted);
+}
+
+.published-at__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-weight: 600;
+  color: var(--color-interactive);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.published-at__link:hover {
+  color: var(--color-interactive-hover);
+}
+
+.published-at__link:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.published-at__logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+.published-at__icon {
+  font-size: var(--font-size-xs);
+}
+
+/* Cross-posted Links */
+.cross-posted {
+  margin-block-start: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-surface-elevated);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.cross-posted__label {
+  margin: 0 0 var(--space-sm) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.cross-posted__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.cross-posted__item {
+  display: inline-flex;
+}
+
+.cross-posted__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-interactive);
+  text-decoration: none;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--color-tag-bg);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.cross-posted__link:hover {
+  background-color: var(--color-accent-subtle);
+  color: var(--color-interactive-hover);
+}
+
+.cross-posted__link:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.cross-posted__icon {
+  font-size: var(--font-size-xs);
+}
