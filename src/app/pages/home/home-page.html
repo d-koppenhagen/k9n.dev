@@ -80,6 +80,7 @@
                 [externalUrl]="post.publishedAt?.url"
                 [hreflang]="post.language"
                 [language]="post.language"
+                [publishedAt]="post.publishedAt"
                 [seriesName]="post.series ?? ''"
                 [seriesItems]="getSeriesItems(post)"
               />
@@ -112,6 +113,7 @@
                 [thumbnail]="talk.thumbnail"
                 [eventName]="talk.event"
                 [language]="talk.language"
+                [publishedAt]="talk.publishedAt"
               />
             }
           </app-content-grid>
@@ -180,6 +182,7 @@
                 [routeLink]="'/projects/' + project.slug"
                 [thumbnail]="project.thumbnail"
                 [language]="project.language"
+                [publishedAt]="project.publishedAt"
               />
             }
           </app-content-grid>

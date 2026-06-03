@@ -55,6 +55,7 @@ export interface Talk {
   draft: boolean;
   linkExternal?: boolean;
   language?: 'de' | 'en';
+  publishedAt?: PublishedAt;
   content: string; // Pre-rendered HTML
 }
 
@@ -68,6 +69,7 @@ export interface Project {
   thumbnail?: Thumbnail;
   status: 'active' | 'maintained' | 'archived' | 'draft';
   language?: 'de' | 'en';
+  publishedAt?: PublishedAt;
   content: string; // Pre-rendered HTML
 }
 

@@ -20,6 +20,12 @@ export interface CardThumbnail {
   card?: string;
 }
 
+export interface CardPublishedAt {
+  name: string;
+  url: string;
+  logo?: string;
+}
+
 export interface SeriesItem {
   title: string;
   routeLink: string;
@@ -29,6 +35,7 @@ export interface SeriesItem {
   thumbnail?: CardThumbnail;
   date: string;
   description: string;
+  publishedAt?: CardPublishedAt;
 }
 
 @Component({
@@ -48,6 +55,7 @@ export class ContentCard {
   readonly hreflang = input<string>();
   readonly language = input<string>();
   readonly eventName = input<string>();
+  readonly publishedAt = input<CardPublishedAt>();
   readonly headingLevel = input<2 | 3>(3);
   readonly seriesName = input<string>('');
   readonly seriesItems = input<SeriesItem[]>([]);

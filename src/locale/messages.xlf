@@ -30,16 +30,25 @@
         <source>Seite geladen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.ts</context>
-          <context context-type="linenumber">80</context>
+          <context context-type="linenumber">90</context>
         </context-group>
         <note priority="1" from="description">Default page loaded announcement</note>
         <note priority="1" from="meaning">route announcement</note>
+      </trans-unit>
+      <trans-unit id="contentCard.publishedAt.seriesLabel" datatype="html">
+        <source>Veröffentlicht auf <x id="INTERPOLATION" equiv-text="{{ item.publishedAt.name }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+        <note priority="1" from="description">Published at source</note>
+        <note priority="1" from="meaning">card label</note>
       </trans-unit>
       <trans-unit id="contentCard.series.label" datatype="html">
         <source>Serie</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
-          <context context-type="linenumber">38,40</context>
+          <context context-type="linenumber">54,56</context>
         </context-group>
         <note priority="1" from="description">Series label</note>
         <note priority="1" from="meaning">card label</note>
@@ -48,15 +57,24 @@
         <source>Vorheriger Teil</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
-          <context context-type="linenumber">44,45</context>
+          <context context-type="linenumber">60,61</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contentCard.series.next.ariaLabel" datatype="html">
         <source>Nächster Teil</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
-          <context context-type="linenumber">64,65</context>
+          <context context-type="linenumber">80,81</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="contentCard.publishedAt.label" datatype="html">
+        <source>Veröffentlicht auf <x id="INTERPOLATION" equiv-text="{{ publishedAt()!.name }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
+          <context context-type="linenumber">130,131</context>
+        </context-group>
+        <note priority="1" from="description">Published at source</note>
+        <note priority="1" from="meaning">card label</note>
       </trans-unit>
       <trans-unit id="contentFilter.ariaLabel" datatype="html">
         <source>Inhalte filtern</source>
@@ -151,6 +169,42 @@
         </context-group>
         <note priority="1" from="description">Remove filter aria label prefix</note>
         <note priority="1" from="meaning">content filter</note>
+      </trans-unit>
+      <trans-unit id="cookieBanner.title" datatype="html">
+        <source> 🍪 Cookie-Einstellungen </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cookie-banner/cookie-banner.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+        <note priority="1" from="description">Cookie banner heading</note>
+        <note priority="1" from="meaning">cookie banner</note>
+      </trans-unit>
+      <trans-unit id="cookieBanner.description" datatype="html">
+        <source> Diese Website nutzt Cookies für Webanalyse (Google Analytics), um die Nutzererfahrung zu verbessern. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cookie-banner/cookie-banner.html</context>
+          <context context-type="linenumber">12,17</context>
+        </context-group>
+        <note priority="1" from="description">Cookie banner description</note>
+        <note priority="1" from="meaning">cookie banner</note>
+      </trans-unit>
+      <trans-unit id="cookieBanner.accept" datatype="html">
+        <source> Akzeptieren </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cookie-banner/cookie-banner.html</context>
+          <context context-type="linenumber">22,26</context>
+        </context-group>
+        <note priority="1" from="description">Accept cookies button</note>
+        <note priority="1" from="meaning">cookie banner</note>
+      </trans-unit>
+      <trans-unit id="cookieBanner.decline" datatype="html">
+        <source> Ablehnen </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/cookie-banner/cookie-banner.html</context>
+          <context context-type="linenumber">30,34</context>
+        </context-group>
+        <note priority="1" from="description">Decline cookies button</note>
+        <note priority="1" from="meaning">cookie banner</note>
       </trans-unit>
       <trans-unit id="footer.nav.ariaLabel" datatype="html">
         <source>Footer-Navigation</source>
@@ -505,7 +559,7 @@
         <source>Keine Beiträge entsprechen deinem Filter.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/blog/blog-list-page.html</context>
-          <context context-type="linenumber">22,25</context>
+          <context context-type="linenumber">23,26</context>
         </context-group>
         <note priority="1" from="description">No blog posts match filter</note>
         <note priority="1" from="meaning">empty state</note>
@@ -643,7 +697,7 @@
         <source> Aktuelle Vorträge </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
-          <context context-type="linenumber">99,102</context>
+          <context context-type="linenumber">100,103</context>
         </context-group>
         <note priority="1" from="description">Recent talks heading</note>
         <note priority="1" from="meaning">section heading</note>
@@ -652,7 +706,7 @@
         <source>Alle Vorträge</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
-          <context context-type="linenumber">102,105</context>
+          <context context-type="linenumber">103,106</context>
         </context-group>
         <note priority="1" from="description">View all talks link</note>
         <note priority="1" from="meaning">nav link</note>
@@ -661,21 +715,21 @@
         <source>Angular Berlin Meetup auf Meetup.com</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
-          <context context-type="linenumber">129,130</context>
+          <context context-type="linenumber">131,132</context>
         </context-group>
       </trans-unit>
       <trans-unit id="page.home.meetup.logo.alt" datatype="html">
         <source>Angular Berlin Logo</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
-          <context context-type="linenumber">134,135</context>
+          <context context-type="linenumber">136,137</context>
         </context-group>
       </trans-unit>
       <trans-unit id="page.home.meetup.title" datatype="html">
         <source> Angular Berlin Meetup </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
-          <context context-type="linenumber">143,145</context>
+          <context context-type="linenumber">145,147</context>
         </context-group>
         <note priority="1" from="description">Meetup section title</note>
         <note priority="1" from="meaning">section heading</note>
@@ -684,7 +738,7 @@
         <source> Ich bin Co-Organisator des Angular Meetup in Berlin. Dieses findet ca. alle zwei Monate an wechselnden Standorten statt. Neben zwei Talks am Abend steht der Austausch und die Vernetzung mit anderen Entwickler:innen im Vordergrund. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
-          <context context-type="linenumber">146,152</context>
+          <context context-type="linenumber">148,154</context>
         </context-group>
         <note priority="1" from="description">Angular Berlin Meetup description</note>
         <note priority="1" from="meaning">meetup description</note>
@@ -693,7 +747,7 @@
         <source> Meetup.com: Angular Berlin <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span aria-hidden=&quot;true&quot;&gt;"/>→<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
-          <context context-type="linenumber">156,159</context>
+          <context context-type="linenumber">158,161</context>
         </context-group>
         <note priority="1" from="description">Meetup link text</note>
         <note priority="1" from="meaning">meetup link</note>
@@ -702,7 +756,7 @@
         <source> Aktuelle Projekte </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
-          <context context-type="linenumber">168,171</context>
+          <context context-type="linenumber">170,173</context>
         </context-group>
         <note priority="1" from="description">Recent projects heading</note>
         <note priority="1" from="meaning">section heading</note>
@@ -711,7 +765,7 @@
         <source>Alle Projekte</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
-          <context context-type="linenumber">171,174</context>
+          <context context-type="linenumber">173,176</context>
         </context-group>
         <note priority="1" from="description">View all projects link</note>
         <note priority="1" from="meaning">nav link</note>
@@ -941,7 +995,7 @@
         <source>Keine Projekte entsprechen deinem Filter.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/projects/projects-list-page.html</context>
-          <context context-type="linenumber">18,21</context>
+          <context context-type="linenumber">19,22</context>
         </context-group>
         <note priority="1" from="description">No projects match filter</note>
         <note priority="1" from="meaning">empty state</note>
@@ -1020,7 +1074,7 @@
         <source>Keine Vorträge entsprechen deinem Filter.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/talks/talks-list-page.html</context>
-          <context context-type="linenumber">19,22</context>
+          <context context-type="linenumber">20,23</context>
         </context-group>
         <note priority="1" from="description">No talks match filter</note>
         <note priority="1" from="meaning">empty state</note>
