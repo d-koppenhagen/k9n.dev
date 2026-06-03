@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, effect, inject, LOCALE_ID
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
+import { DatePipe } from '@angular/common';
 import { MarkdownContent } from '../../components/markdown-content/markdown-content';
 import { TableOfContents } from '../../components/table-of-contents/table-of-contents';
 import { SeriesNavigation } from '../../components/series-navigation/series-navigation';
@@ -13,7 +14,7 @@ import { JsonLdArticle } from '../../models/json-ld.model';
 @Component({
   selector: 'app-blog-detail-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MarkdownContent, TableOfContents, SeriesNavigation, RouterLink],
+  imports: [MarkdownContent, TableOfContents, SeriesNavigation, RouterLink, DatePipe],
   templateUrl: './blog-detail-page.html',
   styleUrl: './blog-detail-page.css',
 })
@@ -80,16 +81,6 @@ export class BlogDetailPage {
         };
         this.metaService.injectJsonLd(articleSchema);
       }
-    });
-  }
-
-  formatDate(isoDate: string): string {
-    const [year, month, day] = isoDate.split('-').map(Number);
-    const date = new Date(year, month - 1, day);
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
     });
   }
 }

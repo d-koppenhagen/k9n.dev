@@ -15,7 +15,7 @@
               {{ project.status }}
             </span>
             <time class="project-detail__date" [attr.datetime]="project.created">
-              {{ project.created }}
+              {{ project.created | date:'mediumDate' }}
             </time>
           </div>
           <h1 class="project-detail__title" [attr.lang]="contentLang()">{{ project.title }}</h1>

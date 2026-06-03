@@ -4,7 +4,7 @@
           <div class="talk-detail__meta">
             <span class="talk-detail__event">{{ talk.event }}</span>
             <time class="talk-detail__date" [attr.datetime]="talk.date">{{
-              talk.date
+              talk.date | date:'mediumDate'
             }}</time>
           </div>
           <h1 class="talk-detail__title" [attr.lang]="contentLang()">{{ talk.title }}</h1>
