@@ -26,8 +26,11 @@ const CONTENT_DIR = join(ROOT_DIR, 'src', 'content');
 const OUTPUT_DIR = join(ROOT_DIR, 'src', 'app', 'content');
 
 /**
- * Scans a directory for .md files and returns their full paths.
- * Returns an empty array if the directory doesn't exist.
+ * Scans a directory for markdown content files.
+ * Supports two structures:
+ * - Flat: dir/post-slug.md
+ * - Folder-based: dir/post-slug/README.md
+ * Returns full paths to the markdown files.
  */
 function scanMarkdownFiles(dir: string): string[] {
   if (!existsSync(dir)) {
@@ -35,9 +38,22 @@ function scanMarkdownFiles(dir: string): string[] {
     return [];
   }
 
-  return readdirSync(dir)
-    .filter((file) => file.endsWith('.md'))
-    .map((file) => join(dir, file));
+  const results: string[] = [];
+
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    if (entry.isFile() && entry.name.endsWith('.md')) {
+      // Flat structure: dir/post-slug.md
+      results.push(join(dir, entry.name));
+    } else if (entry.isDirectory()) {
+      // Folder-based structure: dir/post-slug/README.md
+      const readmePath = join(dir, entry.name, 'README.md');
+      if (existsSync(readmePath)) {
+        results.push(readmePath);
+      }
+    }
+  }
+
+  return results;
 }
 
 /**
@@ -59,8 +75,8 @@ async function processBlogPosts(): Promise<BlogPost[]> {
     // Check for duplicate slugs
     if (isDuplicateSlug(tracker, post.slug, filePath)) continue;
 
-    // Render markdown content
-    const { html, headings } = await renderMarkdown(post.content);
+    // Render markdown content (pass slug for relative image path resolution)
+    const { html, headings } = await renderMarkdown(post.content, post.slug);
     post.content = html;
     post.headings = headings;
 
@@ -92,8 +108,8 @@ async function processTalks(): Promise<Talk[]> {
     // Check for duplicate slugs
     if (isDuplicateSlug(tracker, talk.slug, filePath)) continue;
 
-    // Render markdown content
-    const { html } = await renderMarkdown(talk.content);
+    // Render markdown content (pass slug for relative image path resolution)
+    const { html } = await renderMarkdown(talk.content, talk.slug, 'images/talks');
     talk.content = html;
 
     talks.push(talk);
@@ -124,8 +140,8 @@ async function processProjects(): Promise<Project[]> {
     // Check for duplicate slugs
     if (isDuplicateSlug(tracker, project.slug, filePath)) continue;
 
-    // Render markdown content
-    const { html } = await renderMarkdown(project.content);
+    // Render markdown content (pass slug for relative image path resolution)
+    const { html } = await renderMarkdown(project.content, project.slug, 'images/projects');
     project.content = html;
 
     projects.push(project);

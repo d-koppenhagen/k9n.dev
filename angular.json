@@ -28,6 +28,21 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*.{jpg,jpeg,png,gif,svg,webp,avif}",
+                "input": "src/content/blog",
+                "output": "images/blog"
+              },
+              {
+                "glob": "**/*.{jpg,jpeg,png,gif,svg,webp,avif}",
+                "input": "src/content/talks",
+                "output": "images/talks"
+              },
+              {
+                "glob": "**/*.{jpg,jpeg,png,gif,svg,webp,avif}",
+                "input": "src/content/projects",
+                "output": "images/projects"
               }
             ],
             "styles": [

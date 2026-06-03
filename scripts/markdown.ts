@@ -82,13 +82,35 @@ function isInternalUrl(href: string): boolean {
 }
 
 /**
+ * Custom marked extension that resolves relative image paths (./file.jpg)
+ * to the correct served path (/<imageBasePath>/<slug>/file.jpg).
+ */
+function relativeImageExtension(slug?: string, imageBasePath = 'images/blog'): MarkedExtension {
+  return {
+    renderer: {
+      image({ href, title, text }: Tokens.Image): string {
+        let resolvedHref = href;
+        if (slug && href.startsWith('./')) {
+          const filename = href.slice(2);
+          resolvedHref = `${imageBasePath}/${slug}/${filename}`;
+        }
+        const titleAttr = title ? ` title="${title}"` : '';
+        return `<img src="${resolvedHref}" alt="${text}"${titleAttr}>`;
+      },
+    },
+  };
+}
+
+/**
  * Renders a markdown string to HTML with syntax highlighting, heading IDs,
  * external link attributes, and TOC heading extraction.
  *
  * @param markdownBody - The markdown content to render (without frontmatter)
+ * @param slug - Optional slug for resolving relative image paths
+ * @param imageBasePath - Base path for images (default: "images/blog")
  * @returns The rendered HTML and extracted h2/h3 headings for TOC
  */
-export async function renderMarkdown(markdownBody: string): Promise<RenderResult> {
+export async function renderMarkdown(markdownBody: string, slug?: string, imageBasePath = 'images/blog'): Promise<RenderResult> {
   const highlighter = await getHighlighter();
 
   // Reset heading list for each render call (marked-gfm-heading-id uses global state)
@@ -123,6 +145,7 @@ export async function renderMarkdown(markdownBody: string): Promise<RenderResult
       },
     }),
     externalLinksExtension(),
+    relativeImageExtension(slug, imageBasePath),
   );
 
   let html: string;

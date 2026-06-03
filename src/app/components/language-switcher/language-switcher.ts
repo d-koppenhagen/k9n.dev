@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject, LOCALE_ID } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { SUPPORTED_LOCALES, type LocaleConfig, SITE_CONFIG } from '../../config/site.config';
+import { SUPPORTED_LOCALES, type LocaleConfig } from '../../config/site.config';
 import { swapLocaleInPath } from '../../services/locale/locale';
 
 @Component({
@@ -37,6 +37,6 @@ export class LanguageSwitcher {
     }
 
     const targetPath = swapLocaleInPath(window.location.pathname, locale);
-    window.location.href = `${SITE_CONFIG.baseUrl}${targetPath}`;
+    window.location.pathname = targetPath;
   }
 }

@@ -69,7 +69,7 @@ This is the content.
     expect(result!.created).toBe('2025-01-15');
     expect(result!.updated).toBe('2025-01-20');
     expect(result!.keywords).toEqual(['Angular', 'Testing']);
-    expect(result!.thumbnail).toEqual({ header: 'https://k9n.dev/images/test-header.jpg', card: 'https://k9n.dev/images/test-card.jpg' });
+    expect(result!.thumbnail).toEqual({ header: 'images/test-header.jpg', card: 'images/test-card.jpg' });
     expect(result!.series).toBe('test-series');
     expect(result!.draft).toBe(false);
     expect(result!.language).toBe('en');
