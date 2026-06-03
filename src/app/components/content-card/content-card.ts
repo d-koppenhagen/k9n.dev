@@ -11,7 +11,7 @@ import {
   PLATFORM_ID,
   viewChild,
 } from '@angular/core';
-import { isPlatformBrowser, NgOptimizedImage } from '@angular/common';
+import { DatePipe, isPlatformBrowser, NgOptimizedImage } from '@angular/common';
 import { Tabs, TabList, Tab, TabPanel } from '@angular/aria/tabs';
 import { SmartLink } from '../../directives/smart-link/smart-link';
 
@@ -41,7 +41,7 @@ export interface SeriesItem {
 @Component({
   selector: 'app-content-card',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgOptimizedImage, SmartLink, Tabs, TabList, Tab, TabPanel],
+  imports: [NgOptimizedImage, SmartLink, Tabs, TabList, Tab, TabPanel, DatePipe],
   templateUrl: './content-card.html',
   styleUrl: './content-card.css',
 })

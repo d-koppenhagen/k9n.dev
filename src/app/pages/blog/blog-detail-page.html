@@ -13,11 +13,11 @@
         <header class="blog-detail__header">
           <div class="blog-detail__meta">
             <time class="blog-detail__date" [attr.datetime]="post.created">
-              {{ formatDate(post.created) }}
+              {{ post.created | date:'mediumDate' }}
             </time>
             @if (post.updated) {
               <span class="blog-detail__updated">
-                (<ng-container i18n="meta label|Updated date label@@page.blogDetail.updated">Aktualisiert</ng-container>: <time [attr.datetime]="post.updated">{{ formatDate(post.updated) }}</time>)
+                (<ng-container i18n="meta label|Updated date label@@page.blogDetail.updated">Aktualisiert</ng-container>: <time [attr.datetime]="post.updated">{{ post.updated | date:'mediumDate' }}</time>)
               </span>
             }
           </div>
