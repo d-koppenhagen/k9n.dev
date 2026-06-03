@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, LOCALE_ID } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, UpperCasePipe } from '@angular/common';
 import { SUPPORTED_LOCALES, type LocaleConfig } from '../../config/site.config';
 import { swapLocaleInPath } from '../../services/locale/locale';
 
@@ -8,6 +8,7 @@ import { swapLocaleInPath } from '../../services/locale/locale';
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './language-switcher.html',
   styleUrl: './language-switcher.css',
+  imports: [UpperCasePipe]
 })
 export class LanguageSwitcher {
   private readonly document = inject(DOCUMENT);
