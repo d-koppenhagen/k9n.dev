@@ -11,11 +11,11 @@ keywords:
   - Accessibility
   - ARIA
   - HTML
-  - a11y
 language: en
 thumbnail:
   header: images/projects/eslint-plugin-prefer-implicit.png
   card: images/projects/eslint-plugin-prefer-implicit.png
+status: active
 ---
 
 Modern HTML already provides rich, implicit semantics. However, many codebases add redundant or even harmful ARIA attributes and roles.

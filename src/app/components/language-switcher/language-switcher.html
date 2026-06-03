@@ -1,0 +1,14 @@
+<nav class="language-switcher" aria-label="Language selection" i18n-aria-label="@@languageSwitcher.ariaLabel">
+  @for (locale of locales; track locale.code) {
+    <a
+      class="language-switcher__link"
+      [class.language-switcher__link--active]="isActive(locale)"
+      [attr.lang]="locale.code"
+      [attr.aria-current]="isActive(locale) ? 'true' : null"
+      [attr.href]="getTargetUrl(locale)"
+      (click)="switchTo(locale); $event.preventDefault()"
+    >
+      {{ locale.label }}
+    </a>
+  }
+</nav>

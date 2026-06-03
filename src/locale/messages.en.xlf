@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="de" target-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="app.skipToContent" datatype="html">
+        <source> Zum Inhalt springen
+</source>
+        <target> Skip to content
+</target>
+      </trans-unit>
+      <trans-unit id="app.header.ariaLabel" datatype="html">
+        <source>Seitenheader</source>
+        <target>Site header</target>
+      </trans-unit>
+      <trans-unit id="app.main.ariaLabel" datatype="html">
+        <source>Hauptinhalt</source>
+        <target>Main content</target>
+      </trans-unit>
+      <trans-unit id="app.route.pageLoaded" datatype="html">
+        <source>Seite geladen</source>
+        <target>Page loaded</target>
+      </trans-unit>
+      <trans-unit id="contentCard.series.label" datatype="html">
+        <source>Serie</source>
+        <target>Series</target>
+      </trans-unit>
+      <trans-unit id="contentCard.series.prev.ariaLabel" datatype="html">
+        <source>Vorheriger Teil</source>
+        <target>Previous part</target>
+      </trans-unit>
+      <trans-unit id="contentCard.series.next.ariaLabel" datatype="html">
+        <source>Nächster Teil</source>
+        <target>Next part</target>
+      </trans-unit>
+      <trans-unit id="contentFilter.ariaLabel" datatype="html">
+        <source>Inhalte filtern</source>
+        <target>Filter content</target>
+      </trans-unit>
+      <trans-unit id="contentFilter.tags.ariaLabel" datatype="html">
+        <source>Nach Tags filtern</source>
+        <target>Filter by tags</target>
+      </trans-unit>
+      <trans-unit id="contentFilter.language.ariaLabel" datatype="html">
+        <source>Nach Sprache filtern</source>
+        <target>Filter by language</target>
+      </trans-unit>
+      <trans-unit id="contentFilter.language.legend" datatype="html">
+        <source>Inhaltssprache</source>
+        <target>Content language</target>
+      </trans-unit>
+      <trans-unit id="contentFilter.search.label" datatype="html">
+        <source>Suche</source>
+        <target>Search</target>
+      </trans-unit>
+      <trans-unit id="contentFilter.search.placeholder" datatype="html">
+        <source>Suchen...</source>
+        <target>Search...</target>
+      </trans-unit>
+      <trans-unit id="contentFilter.activeFilters.ariaLabel" datatype="html">
+        <source>Aktive Filter</source>
+        <target>Active filters</target>
+      </trans-unit>
+      <trans-unit id="contentFilter.clearAll.ariaLabel" datatype="html">
+        <source>Alle Filter löschen</source>
+        <target>Clear all filters</target>
+      </trans-unit>
+      <trans-unit id="contentFilter.clearAll.text" datatype="html">
+        <source>Alle löschen</source>
+        <target>Clear all</target>
+      </trans-unit>
+      <trans-unit id="contentFilter.language.all" datatype="html">
+        <source>Alle</source>
+        <target>All</target>
+      </trans-unit>
+      <trans-unit id="contentFilter.tags.placeholder" datatype="html">
+        <source>Nach Tags filtern...</source>
+        <target>Filter by tags...</target>
+      </trans-unit>
+      <trans-unit id="contentFilter.removeFilter.label" datatype="html">
+        <source>Filter entfernen: </source>
+        <target>Remove filter: </target>
+      </trans-unit>
+      <trans-unit id="footer.nav.ariaLabel" datatype="html">
+        <source>Footer-Navigation</source>
+        <target>Footer navigation</target>
+      </trans-unit>
+      <trans-unit id="footer.nav.about" datatype="html">
+        <source>Über mich</source>
+        <target>About</target>
+      </trans-unit>
+      <trans-unit id="footer.nav.contact" datatype="html">
+        <source>Kontakt</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="footer.nav.imprint" datatype="html">
+        <source>Impressum</source>
+        <target>Imprint</target>
+      </trans-unit>
+      <trans-unit id="footer.contribute" datatype="html">
+        <source> Vorschläge? Feedback? Bugs? <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;https://github.com/d-koppenhagen/k9n.dev/issues&quot;
+           target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;"/>Stell ein Issue ein<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_1" equiv-text="&lt;a href=&quot;https://github.com/d-koppenhagen/k9n.dev/pulls&quot;
+           target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;"/>sende einen PR<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> oder <x id="START_LINK_2" equiv-text="&lt;a routerLink=&quot;/contact&quot;&gt;"/>kontaktiere mich<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. </source>
+        <target> Suggestions? Feedback? Bugs? <x id="START_LINK" ctype="x-a"/>File an issue<x id="CLOSE_LINK" ctype="x-a"/>, <x id="START_LINK_1"/>send a PR<x id="CLOSE_LINK" ctype="x-a"/> or <x id="START_LINK_2"/>contact me<x id="CLOSE_LINK" ctype="x-a"/>. </target>
+      </trans-unit>
+      <trans-unit id="footer.copyright" datatype="html">
+        <source>© <x id="INTERPOLATION" equiv-text="{{ currentYear() }}"/> Danny Koppenhagen</source>
+        <target>© <x id="INTERPOLATION"/> Danny Koppenhagen</target>
+      </trans-unit>
+      <trans-unit id="languageSwitcher.ariaLabel" datatype="html">
+        <source>Language selection</source>
+        <target>Language selection</target>
+      </trans-unit>
+      <trans-unit id="nav.ariaLabel" datatype="html">
+        <source>Hauptnavigation</source>
+        <target>Main navigation</target>
+      </trans-unit>
+      <trans-unit id="nav.brand.ariaLabel" datatype="html">
+        <source>Startseite - k9n.dev</source>
+        <target>Home - k9n.dev</target>
+      </trans-unit>
+      <trans-unit id="nav.toggle.ariaLabel" datatype="html">
+        <source>Navigationsmenü umschalten</source>
+        <target>Toggle navigation menu</target>
+      </trans-unit>
+      <trans-unit id="nav.home" datatype="html">
+        <source>Startseite</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="nav.blog" datatype="html">
+        <source>Blog</source>
+        <target>Blog</target>
+      </trans-unit>
+      <trans-unit id="nav.talks" datatype="html">
+        <source>Vorträge</source>
+        <target>Talks</target>
+      </trans-unit>
+      <trans-unit id="nav.projects" datatype="html">
+        <source>Projekte</source>
+        <target>Projects</target>
+      </trans-unit>
+      <trans-unit id="nav.contact" datatype="html">
+        <source>Kontakt</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="timeline.title" datatype="html">
+        <source>Timeline</source>
+        <target>Timeline</target>
+      </trans-unit>
+      <trans-unit id="timeline.ariaLabel" datatype="html">
+        <source>Beruflicher Werdegang</source>
+        <target>Professional career</target>
+      </trans-unit>
+      <trans-unit id="seriesNav.ariaLabel" datatype="html">
+        <source>Beiträge in dieser Serie</source>
+        <target>Posts in this series</target>
+      </trans-unit>
+      <trans-unit id="seriesNav.heading" datatype="html">
+        <source>Serie</source>
+        <target>Series</target>
+      </trans-unit>
+      <trans-unit id="toc.ariaLabel" datatype="html">
+        <source>Inhaltsverzeichnis</source>
+        <target>Table of contents</target>
+      </trans-unit>
+      <trans-unit id="toc.title" datatype="html">
+        <source>Inhalt</source>
+        <target>Contents</target>
+      </trans-unit>
+      <trans-unit id="theme.group.ariaLabel" datatype="html">
+        <source>Design-Auswahl</source>
+        <target>Theme selection</target>
+      </trans-unit>
+      <trans-unit id="theme.light" datatype="html">
+        <source>Hell</source>
+        <target>Light</target>
+      </trans-unit>
+      <trans-unit id="theme.dark" datatype="html">
+        <source>Dunkel</source>
+        <target>Dark</target>
+      </trans-unit>
+      <trans-unit id="theme.system" datatype="html">
+        <source>System</source>
+        <target>System</target>
+      </trans-unit>
+      <trans-unit id="contentListLayout.grid.ariaLabel" datatype="html">
+        <source>Inhaltsliste</source>
+        <target>Content list</target>
+      </trans-unit>
+      <trans-unit id="page.about.title" datatype="html">
+        <source>Über mich</source>
+        <target>About Me</target>
+      </trans-unit>
+      <trans-unit id="page.about.subtitle" datatype="html">
+        <source>Frontend Architekt · Accessibility · Open Source</source>
+        <target>Frontend Architect · Accessibility · Open Source</target>
+      </trans-unit>
+      <trans-unit id="page.about.intro.heading" datatype="html">
+        <source>Einleitung</source>
+        <target>Introduction</target>
+      </trans-unit>
+      <trans-unit id="page.about.intro.p1" datatype="html">
+        <source> Ich bin Danny Koppenhagen – Frontend Architekt bei der DB Systel GmbH, wo ich an großen Webanwendungen für die Deutsche Bahn arbeite. Als Teil eines DevOps-Teams liegt mein Fokus darauf, digitale Produkte barrierefreier und benutzerfreundlicher für alle zu gestalten. </source>
+        <target> I'm Danny Koppenhagen – Frontend Architect at DB Systel GmbH, where I work on large-scale web applications for Deutsche Bahn. As part of a DevOps team, my focus is on making digital products more accessible and user-friendly for everyone. </target>
+      </trans-unit>
+      <trans-unit id="page.about.intro.p2" datatype="html">
+        <source> Ich arbeite mit modernen Frameworks wie Angular und React und setze mich leidenschaftlich für Accessibility (a11y) und Open Source ein. Mein Wissen teile ich gerne mit der Community – durch Vorträge, Artikel und Beiträge zu Open-Source-Projekten. Außerdem bin ich Co-Autor eines der meistverkauften deutschsprachigen Bücher über Angular. </source>
+        <target> I work with modern frameworks like Angular and React and am passionate about accessibility (a11y) and open source. I love sharing my knowledge with the community – through talks, articles, and contributions to open-source projects. I'm also co-author of one of the best-selling German-language books on Angular. </target>
+      </trans-unit>
+      <trans-unit id="page.about.intro.p3" datatype="html">
+        <source> Mir ist es wichtig, Software zu bauen, die nicht nur robust und skalierbar ist, sondern auch intuitiv, inklusiv und Freude bei der Nutzung bereitet. </source>
+        <target> I believe in building software that is not only robust and scalable, but also intuitive, inclusive, and a joy to use. </target>
+      </trans-unit>
+      <trans-unit id="page.about.numeronym.heading" datatype="html">
+        <source>k9n.dev?</source>
+        <target>k9n.dev?</target>
+      </trans-unit>
+      <trans-unit id="page.about.numeronym.text" datatype="html">
+        <source> Warum k9n.dev? Hierbei handelt es sich um ein Numeronym, bei dem die Zahl zwischen den beiden Buchstaben für die Anzahl der ausgelassenen Buchstaben in meinem Nachnamen steht (Vgl.: a11y, i18n, l10n, ...). </source>
+        <target> Why k9n.dev? It's a numeronym where the number between the two letters represents the count of omitted letters in my last name (cf.: a11y, i18n, l10n, ...). </target>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.updated" datatype="html">
+        <source>Aktualisiert</source>
+        <target>Updated</target>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.authorLabel" datatype="html">
+        <source>Von</source>
+        <target>By</target>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.keywords.ariaLabel" datatype="html">
+        <source>Schlagwörter</source>
+        <target>Keywords</target>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.sidebar.ariaLabel" datatype="html">
+        <source>Artikelnavigation</source>
+        <target>Article navigation</target>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.notFound.title" datatype="html">
+        <source>Beitrag nicht gefunden</source>
+        <target>Post Not Found</target>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.notFound.message" datatype="html">
+        <source> Der gesuchte Blogbeitrag existiert nicht oder wurde entfernt. </source>
+        <target> The blog post you're looking for doesn't exist or has been removed. </target>
+      </trans-unit>
+      <trans-unit id="page.blogDetail.notFound.backLink" datatype="html">
+        <source>← Zurück zum Blog</source>
+        <target>← Back to Blog</target>
+      </trans-unit>
+      <trans-unit id="page.blog.empty" datatype="html">
+        <source>Keine Beiträge entsprechen deinem Filter.</source>
+        <target>No posts match your filter.</target>
+      </trans-unit>
+      <trans-unit id="page.blog.title" datatype="html">
+        <source>Blog</source>
+        <target>Blog</target>
+      </trans-unit>
+      <trans-unit id="page.blog.subtitle" datatype="html">
+        <source>Gedanken zu Angular, Webentwicklung und modernem Frontend.</source>
+        <target>Thoughts on Angular, web development, and building for the modern web.</target>
+      </trans-unit>
+      <trans-unit id="page.blog.grid.ariaLabel" datatype="html">
+        <source>Blogbeiträge</source>
+        <target>Blog posts</target>
+      </trans-unit>
+      <trans-unit id="page.contact.title" datatype="html">
+        <source>Kontakt</source>
+        <target>Get in Touch</target>
+      </trans-unit>
+      <trans-unit id="page.contact.subtitle" datatype="html">
+        <source> Schreib mir gerne eine E-Mail oder vernetze dich über Social Media mit mir. </source>
+        <target> Feel free to reach out via email or connect with me on social media. </target>
+      </trans-unit>
+      <trans-unit id="page.contact.email.heading" datatype="html">
+        <source>E-Mail</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="page.contact.email.ariaLabel" datatype="html">
+        <source>E-Mail senden an mail at k9n.dev</source>
+        <target>Send email to mail at k9n.dev</target>
+      </trans-unit>
+      <trans-unit id="page.contact.social.heading" datatype="html">
+        <source>Soziale Medien</source>
+        <target>Social Media</target>
+      </trans-unit>
+      <trans-unit id="page.home.tagline" datatype="html">
+        <source> Webentwickler, Speaker &amp; Open-Source-Contributor – ich baue moderne Angular-Apps mit Fokus auf Barrierefreiheit und Performance. </source>
+        <target> Web developer, speaker &amp; open source contributor — building modern Angular apps with a focus on accessibility and performance. </target>
+      </trans-unit>
+      <trans-unit id="page.home.book.link.ariaLabel" datatype="html">
+        <source>Zur Buchwebsite (angular-buch.com)</source>
+        <target>Visit book website (angular-buch.com)</target>
+      </trans-unit>
+      <trans-unit id="page.home.book.cover.alt" datatype="html">
+        <source>Buchcover: Angular – Das Praxisbuch</source>
+        <target>Book cover: Angular – Das Praxisbuch</target>
+      </trans-unit>
+      <trans-unit id="page.home.book.title" datatype="html">
+        <source> Angular: Das Praxisbuch – von den Grundlagen bis zur professionellen Entwicklung mit Signals – ab Angular 22 </source>
+        <target> Angular: The Practical Guide – from fundamentals to professional development with Signals – from Angular 22 </target>
+      </trans-unit>
+      <trans-unit id="page.home.book.description" datatype="html">
+        <source> In diesem Praxiseinstieg lernst du Angular inklusive der modernen APIs und Konzepte kennen. Mit einem durchgängigen Beispielprojekt führen die Autoren dich durch die Welt von Angular. Du entwickelst und testest Schritt für Schritt eine professionelle, modulare und barrierefreie Single-Page-Anwendung und lernst Angular im praktischen Einsatz kennen. Auf jeden Umsetzungsschritt folgen außerdem umfangreiche Unit- und Integrationstests. Ausführliche Theorieteile runden das Buch ab und machen es zu deinem praktischen Begleiter im Entwicklungsalltag. </source>
+        <target> In this practical introduction you'll get to know Angular including its modern APIs and concepts. With a continuous example project, the authors guide you through the world of Angular. You'll develop and test a professional, modular, and accessible single-page application step by step and learn Angular in practical use. Each implementation step is followed by extensive unit and integration tests. Comprehensive theory sections round off the book and make it your practical companion in everyday development. </target>
+      </trans-unit>
+      <trans-unit id="page.home.recentBlog.title" datatype="html">
+        <source> Aktuelle Blogbeiträge </source>
+        <target> Recent Blog Posts </target>
+      </trans-unit>
+      <trans-unit id="page.home.recentBlog.viewAll" datatype="html">
+        <source>Alle Beiträge</source>
+        <target>View all posts</target>
+      </trans-unit>
+      <trans-unit id="page.home.recentTalks.title" datatype="html">
+        <source> Aktuelle Vorträge </source>
+        <target> Recent Talks </target>
+      </trans-unit>
+      <trans-unit id="page.home.recentTalks.viewAll" datatype="html">
+        <source>Alle Vorträge</source>
+        <target>View all talks</target>
+      </trans-unit>
+      <trans-unit id="page.home.meetup.link.ariaLabel" datatype="html">
+        <source>Angular Berlin Meetup auf Meetup.com</source>
+        <target>Angular Berlin Meetup on Meetup.com</target>
+      </trans-unit>
+      <trans-unit id="page.home.meetup.logo.alt" datatype="html">
+        <source>Angular Berlin Logo</source>
+        <target>Angular Berlin Logo</target>
+      </trans-unit>
+      <trans-unit id="page.home.meetup.title" datatype="html">
+        <source> Angular Berlin Meetup </source>
+        <target> Angular Berlin Meetup </target>
+      </trans-unit>
+      <trans-unit id="page.home.meetup.description" datatype="html">
+        <source> Ich bin Co-Organisator des Angular Meetup in Berlin. Dieses findet ca. alle zwei Monate an wechselnden Standorten statt. Neben zwei Talks am Abend steht der Austausch und die Vernetzung mit anderen Entwickler:innen im Vordergrund. </source>
+        <target> I'm co-organizer of the Angular Meetup in Berlin. It takes place approximately every two months at changing venues. In addition to two talks in the evening, the focus is on exchange and networking with other developers. </target>
+      </trans-unit>
+      <trans-unit id="page.home.meetup.linkText" datatype="html">
+        <source> Meetup.com: Angular Berlin <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span aria-hidden=&quot;true&quot;&gt;"/>→<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> Meetup.com: Angular Berlin <x id="START_TAG_SPAN" ctype="x-span"/>→<x id="CLOSE_TAG_SPAN" ctype="x-span"/></target>
+      </trans-unit>
+      <trans-unit id="page.home.recentProjects.title" datatype="html">
+        <source> Aktuelle Projekte </source>
+        <target> Recent Projects </target>
+      </trans-unit>
+      <trans-unit id="page.home.recentProjects.viewAll" datatype="html">
+        <source>Alle Projekte</source>
+        <target>View all projects</target>
+      </trans-unit>
+      <trans-unit id="page.imprint.title" datatype="html">
+        <source>Impressum</source>
+        <target>Imprint</target>
+      </trans-unit>
+      <trans-unit id="page.imprint.subtitle" datatype="html">
+        <source>Angaben gemäß § 5 TMG</source>
+        <target>Information according to § 5 TMG</target>
+      </trans-unit>
+      <trans-unit id="page.imprint.representedBy.heading" datatype="html">
+        <source>Vertreten durch</source>
+        <target>Represented by</target>
+      </trans-unit>
+      <trans-unit id="page.imprint.email.label" datatype="html">
+        <source>E-Mail:</source>
+        <target>Email:</target>
+      </trans-unit>
+      <trans-unit id="page.imprint.email.ariaLabel" datatype="html">
+        <source>E-Mail senden an mail at k9n.dev</source>
+        <target>Send email to mail at k9n.dev</target>
+      </trans-unit>
+      <trans-unit id="page.imprint.phone.label" datatype="html">
+        <source>Telefon:</source>
+        <target>Phone:</target>
+      </trans-unit>
+      <trans-unit id="page.imprint.phone.ariaLabel" datatype="html">
+        <source>Anrufen: +49 151 29134704</source>
+        <target>Call +49 151 29134704</target>
+      </trans-unit>
+      <trans-unit id="page.imprint.disclaimer.heading" datatype="html">
+        <source>Haftungsausschluss</source>
+        <target>Disclaimer</target>
+      </trans-unit>
+      <trans-unit id="page.imprint.disclaimer.links.heading" datatype="html">
+        <source>Haftung für Links</source>
+        <target>Liability for links</target>
+      </trans-unit>
+      <trans-unit id="page.imprint.disclaimer.links.text" datatype="html">
+        <source> Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen. </source>
+        <target> Our website contains links to external third-party websites over whose content we have no influence. We therefore cannot accept any liability for this third-party content. The respective provider or operator of the linked pages is always responsible for their content. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, permanent monitoring of the linked pages is unreasonable without concrete evidence of a legal violation. If we become aware of any legal violations, we will remove such links immediately. </target>
+      </trans-unit>
+      <trans-unit id="page.imprint.disclaimer.copyright.heading" datatype="html">
+        <source>Urheberrecht</source>
+        <target>Copyright</target>
+      </trans-unit>
+      <trans-unit id="page.imprint.disclaimer.copyright.text" datatype="html">
+        <source> Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen. </source>
+        <target> The content and works created by the site operators on these pages are subject to German copyright law. Reproduction, editing, distribution, and any kind of use beyond the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. If we become aware of any infringements, we will remove such content immediately. </target>
+      </trans-unit>
+      <trans-unit id="page.imprint.privacy.heading" datatype="html">
+        <source>Datenschutz</source>
+        <target>Privacy</target>
+      </trans-unit>
+      <trans-unit id="page.imprint.privacy.p1" datatype="html">
+        <source> Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. </source>
+        <target> The use of our website is generally possible without providing personal data. Where personal data (such as name, address, or email addresses) is collected on our pages, this is always done on a voluntary basis as far as possible. This data will not be passed on to third parties without your express consent. </target>
+      </trans-unit>
+      <trans-unit id="page.imprint.privacy.p2" datatype="html">
+        <source> Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. </source>
+        <target> We point out that data transmission on the Internet (e.g., communication by email) can have security gaps. Complete protection of data against access by third parties is not possible. </target>
+      </trans-unit>
+      <trans-unit id="page.imprint.privacy.p3" datatype="html">
+        <source> Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor. </source>
+        <target> The use of contact data published within the framework of the imprint obligation by third parties for sending unsolicited advertising and information materials is hereby expressly prohibited. The operators of the pages expressly reserve the right to take legal action in the event of unsolicited sending of advertising information, such as spam emails. </target>
+      </trans-unit>
+      <trans-unit id="page.imprint.analytics.heading" datatype="html">
+        <source>Google Analytics</source>
+        <target>Google Analytics</target>
+      </trans-unit>
+      <trans-unit id="page.imprint.analytics.text" datatype="html">
+        <source> Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (&quot;Google&quot;). Google Analytics verwendet sog. &quot;Cookies&quot;, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglicht. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website (einschließlich Ihrer IP-Adresse) wird an einen Server von Google in den USA übertragen und dort gespeichert. Google wird diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen. Auch wird Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten der Google in Verbindung bringen. Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website voll umfänglich nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden. </source>
+        <target> This website uses Google Analytics, a web analytics service provided by Google Inc. ("Google"). Google Analytics uses "cookies", text files that are stored on your computer and that allow an analysis of your use of the website. The information generated by the cookie about your use of this website (including your IP address) is transmitted to and stored by Google on servers in the United States. Google will use this information for the purpose of evaluating your use of the website, compiling reports on website activity for website operators, and providing other services relating to website activity and internet usage. Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google's behalf. Google will in no case associate your IP address with any other data held by Google. You may refuse the use of cookies by selecting the appropriate settings on your browser; however, please note that if you do this, you may not be able to use the full functionality of this website. By using this website, you consent to the processing of data about you by Google in the manner and for the purposes set out above. </target>
+      </trans-unit>
+      <trans-unit id="page.notFound.message" datatype="html">
+        <source> Die Seite, die du suchst, existiert nicht oder wurde verschoben. </source>
+        <target> The page you're looking for doesn't exist or has been moved. </target>
+      </trans-unit>
+      <trans-unit id="page.notFound.backHome" datatype="html">
+        <source>Zurück zur Startseite</source>
+        <target>Back to Home</target>
+      </trans-unit>
+      <trans-unit id="page.projectDetail.viewProject" datatype="html">
+        <source> Projekt ansehen ↗ </source>
+        <target> View Project ↗ </target>
+      </trans-unit>
+      <trans-unit id="page.projectDetail.notFound.title" datatype="html">
+        <source>Projekt nicht gefunden</source>
+        <target>Project Not Found</target>
+      </trans-unit>
+      <trans-unit id="page.projectDetail.notFound.message" datatype="html">
+        <source> Das gesuchte Projekt existiert nicht. </source>
+        <target> The project you're looking for doesn't exist. </target>
+      </trans-unit>
+      <trans-unit id="page.projectDetail.notFound.backLink" datatype="html">
+        <source>← Zurück zur Startseite</source>
+        <target>← Back to Home</target>
+      </trans-unit>
+      <trans-unit id="page.projectDetail.status.label" datatype="html">
+        <source>Status: </source>
+        <target>Status: </target>
+      </trans-unit>
+      <trans-unit id="page.projects.empty" datatype="html">
+        <source>Keine Projekte entsprechen deinem Filter.</source>
+        <target>No projects match your filter.</target>
+      </trans-unit>
+      <trans-unit id="page.projects.title" datatype="html">
+        <source>Projekte</source>
+        <target>Projects</target>
+      </trans-unit>
+      <trans-unit id="page.projects.subtitle" datatype="html">
+        <source>Open-Source-Tools, Bibliotheken und Nebenprojekte, die ich gebaut oder zu denen ich beigetragen habe.</source>
+        <target>Open source tools, libraries, and side projects I've built or contributed to.</target>
+      </trans-unit>
+      <trans-unit id="page.projects.grid.ariaLabel" datatype="html">
+        <source>Projektliste</source>
+        <target>Projects list</target>
+      </trans-unit>
+      <trans-unit id="page.talkDetail.resources.ariaLabel" datatype="html">
+        <source>Externe Ressourcen</source>
+        <target>External resources</target>
+      </trans-unit>
+      <trans-unit id="page.talkDetail.resources.heading" datatype="html">
+        <source>Ressourcen</source>
+        <target>Resources</target>
+      </trans-unit>
+      <trans-unit id="page.talkDetail.notFound.title" datatype="html">
+        <source>Vortrag nicht gefunden</source>
+        <target>Talk Not Found</target>
+      </trans-unit>
+      <trans-unit id="page.talkDetail.notFound.message" datatype="html">
+        <source> Der gesuchte Vortrag existiert nicht. </source>
+        <target> The talk you're looking for doesn't exist. </target>
+      </trans-unit>
+      <trans-unit id="page.talkDetail.notFound.backLink" datatype="html">
+        <source>← Zurück zu allen Vorträgen</source>
+        <target>← Back to all talks</target>
+      </trans-unit>
+      <trans-unit id="page.talks.empty" datatype="html">
+        <source>Keine Vorträge entsprechen deinem Filter.</source>
+        <target>No talks match your filter.</target>
+      </trans-unit>
+      <trans-unit id="page.talks.title" datatype="html">
+        <source>Vorträge</source>
+        <target>Talks</target>
+      </trans-unit>
+      <trans-unit id="page.talks.subtitle" datatype="html">
+        <source>Konferenzvorträge und Präsentationen zu Angular, Webentwicklung und moderner Frontend-Architektur.</source>
+        <target>Conference talks and presentations on Angular, web development, and modern frontend architecture.</target>
+      </trans-unit>
+      <trans-unit id="page.talks.grid.ariaLabel" datatype="html">
+        <source>Vortragsliste</source>
+        <target>Talks list</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

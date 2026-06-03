@@ -13,7 +13,7 @@ publishedAt:
   logo: https://dbsystel.github.io/tech-stories/images/home.png
   linkExternal: true
 keywords:
-  - Vue
+  - Vue.js
   - Vue 2
   - Vue 3
   - Migration

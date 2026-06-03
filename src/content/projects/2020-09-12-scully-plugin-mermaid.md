@@ -9,14 +9,15 @@ updated: 2021-12-20
 keywords:
   - Angular
   - Scully
-  - SSR
-  - SSG
+  - SSR (Server-Side Rendering)
+  - SSG (Static Site Generation)
   - JAM Stack
   - Mermaid
 language: en
 thumbnail:
   header: images/projects/mermaid.jpg
   card: images/projects/mermaid-small.jpg
+status: archived
 ---
 
 My [Scully.io](https://scully.io) plugin [`scully-plugin-mermaid`](https://www.npmjs.com/package/@k9n/scully-plugin-mermaid) will provide a PostRenderer for [Mermaid.js](https://mermaid-js.github.io/) graphs, charts and diagrams embedded in Markdown files.

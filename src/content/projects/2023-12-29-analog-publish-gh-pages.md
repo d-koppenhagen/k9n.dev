@@ -10,12 +10,13 @@ keywords:
   - AnalogJS
   - GitHub Pages
   - Angular
-  - SSG
-  - SSR
+  - SSG (Static Site Generation)
+  - SSR (Server-Side Rendering)
 language: en
 thumbnail:
   header: images/projects/analog-publish-gh-pages.png
   card: images/projects/analog-publish-gh-pages-small.png
+status: active
 ---
 
 When I migrated my personal website/blog (this site) to use [AnalogJS](https://analogjs.org/) in December 2023, I created a GitHub Action which simplifies the deployment at GitHub Pages.

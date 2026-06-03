@@ -12,8 +12,8 @@ keywords:
   - Angular CLI
   - Angular Schematics
   - Scully
-  - SSR
-  - SSG
+  - SSR (Server-Side Rendering)
+  - SSG (Static Site Generation)
   - Pre-rendering
   - JAM Stack
 linked:

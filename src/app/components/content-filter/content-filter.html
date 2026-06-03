@@ -1,0 +1,110 @@
+<div class="content-filter" role="search" aria-label="Inhalte filtern" i18n-aria-label="@@contentFilter.ariaLabel">
+      <!-- Row: multiselect + search input -->
+      <div class="content-filter__row">
+        @if (allTags().length > 0) {
+          <div class="content-filter__multiselect">
+            <div
+              #trigger
+              ngCombobox
+              #combobox="ngCombobox"
+              [(expanded)]="isExpanded"
+              class="content-filter__select"
+              aria-label="Nach Tags filtern"
+              i18n-aria-label="@@contentFilter.tags.ariaLabel"
+            >
+              <span class="content-filter__select-label">
+                {{ tagsDisplayValue() }}
+              </span>
+              <span class="content-filter__arrow" aria-hidden="true">▾</span>
+            </div>
+
+            <ng-template ngComboboxPopup [combobox]="combobox">
+              <ng-template
+                cdkConnectedOverlay
+                [cdkConnectedOverlayOrigin]="trigger"
+                [cdkConnectedOverlayOpen]="true"
+                [cdkConnectedOverlayMinWidth]="200"
+              >
+                <div
+                  ngComboboxWidget
+                  #listbox="ngListbox"
+                  ngListbox
+                  [multi]="true"
+                  selectionMode="explicit"
+                  [(value)]="selectedTagValues"
+                  [activeDescendant]="listbox.activeDescendant()"
+                  class="content-filter__popup"
+                >
+                  @for (tag of allTags(); track tag) {
+                    <div ngOption [value]="tag" [label]="tag" class="content-filter__option">
+                      <span class="content-filter__option-text">{{ tag }}</span>
+                      <span
+                        class="content-filter__option-check"
+                        aria-hidden="true"
+                      >✓</span>
+                    </div>
+                  }
+                </div>
+              </ng-template>
+            </ng-template>
+          </div>
+        }
+
+        <!-- Language filter toggle group -->
+        <fieldset class="content-filter__language" role="radiogroup" aria-label="Nach Sprache filtern" i18n-aria-label="@@contentFilter.language.ariaLabel">
+          <legend class="visually-hidden" i18n="@@contentFilter.language.legend">Inhaltssprache</legend>
+          @for (option of languageOptions; track option.value) {
+            <button
+              type="button"
+              class="content-filter__language-btn"
+              [class.content-filter__language-btn--active]="language() === option.value"
+              [attr.aria-pressed]="language() === option.value"
+              [attr.lang]="option.value"
+              (click)="setLanguage(option.value)"
+            >
+              {{ option.label }}
+            </button>
+          }
+        </fieldset>
+
+        <div class="content-filter__search">
+          <label for="search-input" class="visually-hidden" i18n="label|Search input label@@contentFilter.search.label">Suche</label>
+          <input
+            id="search-input"
+            class="content-filter__input"
+            type="search"
+            placeholder="Suchen..."
+            i18n-placeholder="@@contentFilter.search.placeholder"
+            [formField]="filterForm.search"
+            (input)="onSearchInput()"
+          />
+        </div>
+      </div>
+
+      <!-- Selected tags + clear all -->
+      @if (selectedTagValues().length > 0) {
+        <div class="content-filter__active-filters">
+          <div class="content-filter__selected-tags" aria-label="Aktive Filter" i18n-aria-label="@@contentFilter.activeFilters.ariaLabel">
+            @for (tag of selectedTagValues(); track tag) {
+              <button
+                class="content-filter__chip"
+                (click)="removeTag(tag)"
+                [attr.aria-label]="removeFilterLabel + tag"
+              >
+                {{ tag }}
+                <span class="content-filter__chip-remove" aria-hidden="true">×</span>
+              </button>
+            }
+          </div>
+          <button
+            class="content-filter__clear-all"
+            (click)="clearAll()"
+            aria-label="Alle Filter löschen"
+            i18n-aria-label="@@contentFilter.clearAll.ariaLabel"
+          >
+            <span class="content-filter__clear-icon" aria-hidden="true">✕</span>
+            <span class="content-filter__clear-text" i18n="button text|Clear all filters button@@contentFilter.clearAll.text">Alle löschen</span>
+          </button>
+        </div>
+      }
+    </div>

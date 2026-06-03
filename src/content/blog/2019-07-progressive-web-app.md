@@ -14,8 +14,7 @@ publishedAt:
   url: https://angular-buch.com/blog/2019-07-progressive-web-app
   logo: https://angular-buch.com/assets/img/brand-400.png
 keywords:
-  - PWA
-  - Progressive Web App
+  - PWA (Progressive Web App)
   - Angular
   - Service Worker
   - Web App Manifest

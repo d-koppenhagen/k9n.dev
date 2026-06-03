@@ -1,0 +1,49 @@
+@if (talk(); as talk) {
+      <article class="talk-detail">
+        <header class="talk-detail__header">
+          <div class="talk-detail__meta">
+            <span class="talk-detail__event">{{ talk.event }}</span>
+            <time class="talk-detail__date" [attr.datetime]="talk.date">{{
+              talk.date
+            }}</time>
+          </div>
+          <h1 class="talk-detail__title" [attr.lang]="contentLang()">{{ talk.title }}</h1>
+          <p class="talk-detail__description" [attr.lang]="contentLang()">{{ talk.description }}</p>
+        </header>
+
+        <div [attr.lang]="contentLang()">
+          <app-markdown-content [content]="talk.content" />
+        </div>
+
+        @if (talk.links && talk.links.length > 0) {
+          <aside class="talk-detail__links" aria-label="Externe Ressourcen" i18n-aria-label="@@page.talkDetail.resources.ariaLabel">
+            <h2 class="talk-detail__links-heading" i18n="section heading|Talk resources heading@@page.talkDetail.resources.heading">Ressourcen</h2>
+            <ul class="talk-detail__links-list">
+              @for (link of talk.links; track link.url) {
+                <li>
+                  <a
+                    [href]="link.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="talk-detail__link"
+                  >
+                    {{ link.label }}
+                    <span class="talk-detail__link-icon" aria-hidden="true"
+                      >↗</span
+                    >
+                  </a>
+                </li>
+              }
+            </ul>
+          </aside>
+        }
+      </article>
+    } @else {
+      <section class="not-found">
+        <h1 class="not-found__title" i18n="not found title|Talk not found title@@page.talkDetail.notFound.title">Vortrag nicht gefunden</h1>
+        <p class="not-found__text" i18n="not found message|Talk not found message@@page.talkDetail.notFound.message">
+          Der gesuchte Vortrag existiert nicht.
+        </p>
+        <a href="/talks" class="not-found__link" i18n="not found link|Back to talks link@@page.talkDetail.notFound.backLink">← Zurück zu allen Vorträgen</a>
+      </section>
+    }

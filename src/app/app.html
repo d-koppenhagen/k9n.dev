@@ -1,0 +1,37 @@
+<a class="skip-to-content" href="#main-content" (click)="skipToContent($event)" i18n="skip link|Skip to main content link@@app.skipToContent">
+  Zum Inhalt springen
+</a>
+
+<header class="site-header" role="banner" aria-label="Seitenheader" i18n-aria-label="@@app.header.ariaLabel">
+  <div class="header-content">
+    <app-navigation />
+  </div>
+</header>
+
+<main
+  #mainContent
+  id="main-content"
+  class="site-main"
+  tabindex="-1"
+  aria-label="Hauptinhalt"
+  i18n-aria-label="@@app.main.ariaLabel"
+>
+  <router-outlet />
+</main>
+
+<app-footer />
+
+@if (showCookieBanner()) {
+  <app-cookie-banner (consentGiven)="handleCookieConsent($event)" />
+}
+
+<div
+  class="visually-hidden"
+  aria-live="polite"
+  aria-atomic="true"
+  role="status"
+>
+  {{ routeAnnouncement() }}
+</div>
+
+

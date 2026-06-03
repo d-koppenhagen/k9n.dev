@@ -17,6 +17,7 @@ language: en
 thumbnail:
   header: images/projects/ngx-lipsum.svg
   card: images/projects/ngx-lipsum.svg
+status: maintained
 ---
 
 My Angular package [**ngx-lipsum**](https://www.npmjs.com/package/ngx-lipsum) let's you easily fill your angular app with dummy texts for demo or prototyping purpose.

@@ -17,8 +17,8 @@ keywords:
   - JavaScript
   - TypeScript
   - Semantic HTML
-  - a11y
-  - accessibility
+  - accessibility (a11y)
+  - Barrierefreiheit
 language: en
 thumbnail:
   header: https://techstories.dbsystel.de/images/20240116-a11y-Angular/a11y-angular.png

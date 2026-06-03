@@ -14,6 +14,7 @@ language: en
 thumbnail:
   header: images/projects/code-review.jpg
   card: images/projects/code-review-small.jpg
+status: maintained
 ---
 
 It my job it happens from time to time that customers asking me about doing an expert review by checking their source code.

@@ -1,0 +1,274 @@
+:host {
+      display: block;
+    }
+
+    /* Hero Section — mobile-first */
+    .hero {
+      position: relative;
+      background-color: var(--color-hero-bg);
+      color: var(--color-hero-text);
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-3xl) var(--space-md);
+      padding-bottom: var(--space-4xl);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+    }
+
+    /* Overlay to preserve text contrast over the image */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: color-mix(in srgb, var(--color-hero-bg) 65%, transparent);
+      z-index: 1;
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: var(--content-narrow-width);
+    }
+
+    .hero__name {
+      font-size: var(--font-size-3xl);
+      font-weight: 800;
+      margin-bottom: var(--space-lg);
+      color: var(--color-hero-text);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .hero__tagline {
+      font-size: var(--font-size-lg);
+      color: var(--color-hero-text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Book Section — mobile-first, overlaps into hero */
+    .book-section {
+      background-color: var(--color-surface-elevated);
+      padding: var(--space-3xl) var(--space-md);
+      padding-top: 0;
+    }
+
+    .book-section__inner {
+      max-width: var(--content-max-width);
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2xl);
+    }
+
+    .book-section__image-link {
+      flex-shrink: 0;
+      margin-top: -30%;
+      transition: transform var(--transition-base);
+      z-index: 3;
+    }
+
+    .book-section__image-link:hover {
+      transform: translateY(-4px);
+    }
+
+    .book-section__cover {
+      width: 200px;
+      height: auto;
+      display: block;
+    }
+
+    .book-section__content {
+      text-align: center;
+    }
+
+    .book-section__title {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-lg);
+    }
+
+    .book-section__description {
+      font-size: var(--font-size-base);
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--space-lg);
+    }
+
+    .book-section__link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: var(--font-size-base);
+      font-weight: 600;
+      color: var(--color-interactive);
+      transition: color var(--transition-fast);
+    }
+
+    .book-section__link:hover {
+      color: var(--color-interactive-hover);
+    }
+
+    /* Content Sections — mobile-first */
+    .content-section {
+      max-width: var(--content-max-width);
+      margin-inline: auto;
+      padding: var(--space-3xl) var(--space-md);
+    }
+
+    .content-section__header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .content-section__title {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin: 0;
+    }
+
+    /* Placeholder for deferred content */
+    .content-section-placeholder {
+      min-height: 200px;
+    }
+
+    /* Meetup Section */
+    .meetup-section {
+      background-color: var(--color-surface-elevated);
+      padding: var(--space-3xl) var(--space-md);
+    }
+
+    .meetup-section__inner {
+      max-width: var(--content-max-width);
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-xl);
+      text-align: center;
+    }
+
+    .meetup-section__image-link {
+      flex-shrink: 0;
+      transition: transform var(--transition-base);
+    }
+
+    .meetup-section__image-link:hover {
+      transform: scale(1.05);
+    }
+
+    .meetup-section__logo {
+      width: 150px;
+      height: auto;
+    }
+
+    .meetup-section__title {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .meetup-section__description {
+      font-size: var(--font-size-base);
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--space-md);
+    }
+
+    .meetup-section__link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-size: var(--font-size-base);
+      font-weight: 600;
+      color: var(--color-interactive);
+      transition: color var(--transition-fast);
+    }
+
+    .meetup-section__link:hover {
+      color: var(--color-interactive-hover);
+    }
+
+    /* Tablet small (576px+) */
+    @media (min-width: 576px) {
+      .book-section__image-link {
+        margin-top: -15%;
+      }
+    }
+
+    /* Tablet (768px+) */
+    @media (min-width: 768px) {
+      .hero {
+        min-height: var(--hero-min-height);
+        padding: var(--space-4xl) var(--space-lg);
+      }
+
+      .book-section {
+        padding: var(--space-4xl) var(--space-lg);
+      }
+
+      .book-section__inner {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--space-3xl);
+      }
+
+      .book-section__cover {
+        width: 250px;
+      }
+
+      .book-section__content {
+        text-align: left;
+      }
+
+      .content-section {
+        padding: var(--space-4xl) var(--space-lg);
+      }
+
+      .content-section__header {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: var(--space-md);
+      }
+
+      .meetup-section {
+        padding: var(--space-4xl) var(--space-lg);
+      }
+
+      .meetup-section__inner {
+        flex-direction: row;
+        text-align: left;
+        gap: var(--space-2xl);
+      }
+
+      .meetup-section__logo {
+        width: 200px;
+      }
+    }
+
+    /* Desktop (1024px+) */
+    @media (min-width: 1024px) {
+      .book-section__image-link {
+        margin-top: -30%;
+      }
+
+      .book-section__cover {
+        width: 300px;
+      }
+    }

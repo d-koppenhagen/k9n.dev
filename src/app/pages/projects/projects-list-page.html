@@ -1,0 +1,20 @@
+<app-content-list-layout
+      [title]="pageTitle"
+      [subtitle]="pageSubtitle"
+      [allTags]="filter.allTags()"
+      [gridAriaLabel]="gridAriaLabel"
+    >
+      @for (project of filter.filteredItems(); track project.slug) {
+        <app-content-card
+          [title]="project.title"
+          [description]="project.description"
+          [date]="project.created"
+          [routeLink]="'/projects/' + project.slug"
+          [thumbnail]="project.thumbnail"
+          [language]="project.language"
+          [headingLevel]="2"
+        />
+      } @empty {
+        <p class="content-list-page__empty" i18n="empty state|No projects match filter@@page.projects.empty">Keine Projekte entsprechen deinem Filter.</p>
+      }
+    </app-content-list-layout>

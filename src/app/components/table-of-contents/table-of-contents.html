@@ -1,0 +1,12 @@
+<nav class="toc" aria-label="Inhaltsverzeichnis" i18n-aria-label="@@toc.ariaLabel">
+      <h2 class="toc__title" i18n="section heading|Table of contents heading@@toc.title">Inhalt</h2>
+      <ul class="toc__list" role="list">
+        @for (heading of headings(); track heading.id) {
+          <li class="toc__item" [class.toc__item--h3]="heading.level === 3">
+            <a class="toc__link" [href]="'#' + heading.id">
+              {{ heading.text }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>

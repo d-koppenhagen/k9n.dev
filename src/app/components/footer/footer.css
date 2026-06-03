@@ -1,0 +1,99 @@
+:host {
+      display: block;
+      border-top: 1px solid var(--color-border);
+      background-color: var(--color-surface);
+      padding: var(--space-2xl) var(--space-md);
+      margin-top: var(--space-4xl);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: var(--space-md) var(--space-lg);
+      text-align: center;
+      justify-content: center;
+      max-width: var(--content-max-width);
+      margin-inline: auto;
+    }
+
+    /* Navigation */
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm) var(--space-lg);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer-nav a {
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-size: var(--font-size-sm);
+      font-weight: 500;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--radius-sm);
+      transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast);
+    }
+
+    .footer-nav a:hover {
+      color: var(--color-accent);
+      background-color: var(--color-accent-subtle);
+    }
+
+    .footer-nav a:focus-visible {
+      outline: 3px solid var(--color-focus-ring);
+      outline-offset: 2px;
+    }
+
+    .footer-nav a.footer-link--active {
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+
+    /* Contribute section */
+    .footer-contribute {
+      color: var(--color-text-muted);
+      font-size: var(--font-size-xs);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .footer-contribute a {
+      color: var(--color-interactive);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color var(--transition-fast);
+    }
+
+    .footer-contribute a:hover {
+      color: var(--color-interactive-hover);
+    }
+
+    .footer-contribute a:focus-visible {
+      outline: 3px solid var(--color-focus-ring);
+      outline-offset: 2px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Copyright */
+    .footer-copyright {
+      color: var(--color-text-muted);
+      font-size: var(--font-size-xs);
+      margin: 0;
+    }
+
+    /* Desktop */
+    @media (min-width: 768px) {
+      :host {
+        padding: var(--space-3xl) var(--space-lg);
+      }
+
+      .footer-content {
+        justify-content: space-between;
+        text-align: start;
+      }
+    }
