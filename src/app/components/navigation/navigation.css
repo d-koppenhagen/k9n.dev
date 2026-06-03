@@ -7,16 +7,14 @@
     }
 
     .nav__brand {
-      font-size: var(--font-size-lg);
-      font-weight: 800;
-      color: var(--color-text-primary);
+      display: inline-flex;
+      align-items: center;
       text-decoration: none;
       white-space: nowrap;
-      letter-spacing: -0.03em;
     }
 
     .nav__brand:hover {
-      color: var(--color-accent);
+      opacity: 0.8;
     }
 
     .nav__brand:focus-visible {
@@ -25,8 +23,10 @@
       border-radius: var(--radius-sm);
     }
 
-    .nav__brand-dot {
-      color: var(--color-accent);
+    .nav__brand-logo {
+      height: 3rem;
+      width: 3rem;
+      border-radius: var(--radius-sm);
     }
 
     /* Mobile-first: toggle visible by default, aligned right */
