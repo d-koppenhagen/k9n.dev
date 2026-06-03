@@ -6,9 +6,11 @@
       [attr.lang]="locale.code"
       [attr.aria-current]="isActive(locale) ? 'true' : null"
       [attr.href]="getTargetUrl(locale)"
+      [attr.aria-label]="locale.label"
+      [title]="locale.label"
       (click)="switchTo(locale); $event.preventDefault()"
     >
-      {{ locale.label }}
+      {{ locale.code | uppercase }}
     </a>
   }
 </nav>

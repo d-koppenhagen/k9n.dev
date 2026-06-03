@@ -78,6 +78,15 @@
       display: flex;
     }
 
+    .nav__item--lang {
+      display: flex;
+      justify-content: center;
+      padding-block: var(--space-sm);
+      border-top: 1px solid var(--color-border-subtle);
+      margin-top: var(--space-sm);
+      padding-top: var(--space-md);
+    }
+
     .nav__item--theme {
       margin-inline-start: 0;
       padding-inline-start: 0;
@@ -124,8 +133,8 @@
       .nav {
         display: flex;
         align-items: center;
-        gap: var(--space-xl);
-        height: var(--nav-height);
+        column-gap: var(--space-md);
+        min-height: var(--nav-height);
       }
 
       .nav__toggle {
@@ -135,27 +144,62 @@
       .nav__list {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
-        width: auto;
-        padding: 0;
-        gap: var(--space-xs);
+        justify-content: flex-end;
+        flex: 1;
+        padding: var(--space-xs) 0;
+        row-gap: var(--space-sm);
+        column-gap: var(--space-xs);
         border-top: none;
-        margin-inline-start: auto;
       }
 
+      .nav__item--lang,
       .nav__item--theme {
-        margin-inline-start: var(--space-sm);
-        padding-inline-start: var(--space-sm);
-        border-inline-start: 1px solid var(--color-border-subtle);
         border-top: none;
         margin-top: 0;
         padding-top: 0;
         padding-block: 0;
+        flex-shrink: 0;
+      }
+
+      .nav__item--theme {
+        padding-inline-start: var(--space-sm);
+        border-inline-start: 1px solid var(--color-border-subtle);
       }
 
       .nav__link {
         display: inline-flex;
         min-height: unset;
         font-size: var(--font-size-sm);
+        white-space: nowrap;
+      }
+    }
+
+    /* Medium desktop: force utility items to second row */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .nav__list::before {
+        content: '';
+        flex-basis: 100%;
+        order: 1;
+      }
+
+      .nav__item--lang {
+        order: 2;
+      }
+
+      .nav__item--theme {
+        order: 3;
+      }
+    }
+
+    /* Wide desktop: single row, auto-push utility items right */
+    @media (min-width: 1024px) {
+      .nav {
+        column-gap: var(--space-xl);
+      }
+
+      .nav__item--lang {
+        margin-inline-start: auto;
       }
     }
