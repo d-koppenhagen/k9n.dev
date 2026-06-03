@@ -21,7 +21,7 @@ links:
   - url: https://deezer.page.link/MZaQ2c5YqQ28vcdn6
     label: Deezer
 thumbnail:
-  header: images/talks/2024-01-18-digitale-barrierefreiheit-it-at-db-podcast/image.png
+  header: images/talks/2024-01-18-digitale-barrierefreiheit-it-at-db-podcast/it_at_db_podcast_a11y.jpg
 ---
 
 Zusammen mit meinem Kollegen [Maximilian Franzke](https://techstories.dbsystel.de/blog/profiles/Maximilian-Franzke.html) von der DB Systel, war ich zu Gast beim IT@DB Podcast von [Jan Götze](https://www.linkedin.com/in/jan-g%C3%B6tze-178516a6/).
