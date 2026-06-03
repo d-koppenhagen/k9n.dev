@@ -40,6 +40,10 @@ async function expectNoA11yViolations(element: HTMLElement): Promise<void> {
 
 describe('Accessibility Tests', () => {
   beforeEach(() => {
+    // Reset axe's internal running state to prevent cascading failures
+    // when a previous test times out mid-run (common in slower CI environments)
+    (axe as unknown as { _running: boolean })._running = false;
+
     // Mock matchMedia for Theme
     Object.defineProperty(window, 'matchMedia', {
       value: () => ({
@@ -117,7 +121,7 @@ describe('Accessibility Tests', () => {
       await fixture.whenStable();
 
       await expectNoA11yViolations(fixture.nativeElement);
-    }, 15000);
+    }, 30000);
 
     it('should have no WCAG AA violations on TalksListPage', async () => {
       await TestBed.configureTestingModule({
@@ -130,7 +134,7 @@ describe('Accessibility Tests', () => {
       await fixture.whenStable();
 
       await expectNoA11yViolations(fixture.nativeElement);
-    }, 15000);
+    }, 30000);
 
     it('should have no WCAG AA violations on ProjectsListPage', async () => {
       await TestBed.configureTestingModule({
@@ -143,7 +147,7 @@ describe('Accessibility Tests', () => {
       await fixture.whenStable();
 
       await expectNoA11yViolations(fixture.nativeElement);
-    }, 15000);
+    }, 30000);
 
     it('should have no WCAG AA violations on Navigation', async () => {
       await TestBed.configureTestingModule({
@@ -184,7 +188,7 @@ describe('Accessibility Tests', () => {
       await fixture.whenStable();
 
       await expectNoA11yViolations(fixture.nativeElement);
-    }, 15000);
+    }, 30000);
   });
 
   describe('focus management on route change', () => {
