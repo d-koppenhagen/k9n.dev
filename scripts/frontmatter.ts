@@ -12,10 +12,11 @@ import { readFileSync } from 'node:fs';
 import { basename, dirname } from 'node:path';
 
 import type { Author, BlogPost, ExternalLink, LinkedPlatform, Project, PublishedAt, Talk, Thumbnail } from '../src/app/models/content.model';
+import { AUTHOR } from '../src/data/author';
 
 const DEFAULT_AUTHOR: Author = {
-  name: 'Danny Koppenhagen',
-  mail: 'mail@k9n.dev',
+  name: AUTHOR.name,
+  mail: AUTHOR.email,
 };
 
 /**

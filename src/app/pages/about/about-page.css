@@ -7,6 +7,17 @@
 
     .page-header {
       margin-block-end: var(--space-2xl);
+      text-align: center;
+    }
+
+    .profile-image-wrapper {
+      margin-block-end: var(--space-lg);
+    }
+
+    .profile-image {
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--color-border-subtle);
     }
 
     .page-title {

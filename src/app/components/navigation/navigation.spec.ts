@@ -50,12 +50,12 @@ describe('Navigation', () => {
 
     it('should render all navigation links', () => {
       const links = fixture.nativeElement.querySelectorAll('.nav__link');
-      expect(links.length).toBe(5);
+      expect(links.length).toBe(6);
 
       const labels = Array.from(links).map(
         (link: unknown) => (link as HTMLElement).textContent?.trim(),
       );
-      expect(labels).toEqual(['Startseite', 'Blog', 'Vorträge', 'Projekte', 'Kontakt']);
+      expect(labels).toEqual(['Startseite', 'Blog', 'Vorträge', 'Projekte', 'Buch', 'Kontakt']);
     });
 
     it('should include the theme switcher', () => {

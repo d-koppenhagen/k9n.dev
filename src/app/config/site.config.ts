@@ -1,3 +1,5 @@
+import { AUTHOR } from '../../data/author';
+
 /**
  * Locale configuration for supported languages.
  */
@@ -26,13 +28,13 @@ export const DEFAULT_LOCALE: LocaleConfig = SUPPORTED_LOCALES[0];
  * Used by both the Angular app (runtime) and build scripts.
  */
 export const SITE_CONFIG = {
-  baseUrl: 'https://k9n.dev',
-  siteName: 'k9n.dev',
+  baseUrl: AUTHOR.url,
+  siteName: AUTHOR.siteName,
   locales: SUPPORTED_LOCALES,
   defaultLocale: DEFAULT_LOCALE,
   author: {
-    name: 'Danny Koppenhagen',
-    mail: 'mail@k9n.dev',
+    name: AUTHOR.name,
+    mail: AUTHOR.email,
   },
 } as const;
 

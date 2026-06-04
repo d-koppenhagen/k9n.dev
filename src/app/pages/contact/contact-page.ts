@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MetaManager } from '../../services/meta/meta';
 import { SmartLink } from '../../directives/smart-link/smart-link';
+import { AUTHOR } from '../../../data/author';
 
 @Component({
   selector: 'app-contact-page',
@@ -15,8 +16,8 @@ export class ContactPage {
   constructor() {
     this.metaService.updateMeta({
       title: 'Contact',
-      description: 'Get in touch with Danny Koppenhagen via email or social media.',
-      url: 'https://k9n.dev/contact',
+      description: `Get in touch with ${AUTHOR.name} via email or social media.`,
+      url: `${AUTHOR.url}/contact`,
       type: 'website',
     });
   }

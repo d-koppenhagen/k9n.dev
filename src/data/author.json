@@ -1,0 +1,68 @@
+{
+  "name": "Danny Koppenhagen",
+  "email": "mail@k9n.dev",
+  "url": "https://k9n.dev",
+  "siteName": "k9n.dev",
+  "jobTitle": {
+    "de": "Frontend Architekt",
+    "en": "Frontend Architect"
+  },
+  "company": "DB Systel GmbH",
+  "tagline": {
+    "de": "Webentwickler, Speaker & Open-Source-Contributor – ich baue moderne Angular-Apps mit Fokus auf Barrierefreiheit und Performance.",
+    "en": "Web developer, speaker & open source contributor — building modern Angular apps with a focus on accessibility and performance."
+  },
+  "subtitle": {
+    "de": "Frontend Architekt · Accessibility · Open Source",
+    "en": "Frontend Architect · Accessibility · Open Source"
+  },
+  "description": {
+    "de": "Über Danny Koppenhagen – Frontend Architekt bei DB Systel, Fokus auf Accessibility und Open Source. Co-Autor des Angular-Buchs.",
+    "en": "About Danny Koppenhagen – Frontend Architect at DB Systel, focused on accessibility and open source. Co-author of the Angular book."
+  },
+  "llmsDescription": "Personal website and blog of Danny Koppenhagen — Software Engineer, Angular expert, and speaker.",
+  "bio": {
+    "de": [
+      "Ich bin Danny Koppenhagen – Frontend Architekt bei der DB Systel GmbH, wo ich an großen Webanwendungen für die Deutsche Bahn arbeite. Als Teil eines DevOps-Teams liegt mein Fokus darauf, digitale Produkte barrierefreier und benutzerfreundlicher für alle zu gestalten.",
+      "Ich arbeite mit modernen Frameworks wie Angular und React und setze mich leidenschaftlich für Accessibility (a11y) und Open Source ein. Mein Wissen teile ich gerne mit der Community – durch Vorträge, Artikel und Beiträge zu Open-Source-Projekten. Außerdem bin ich Co-Autor eines der meistverkauften deutschsprachigen Bücher über Angular.",
+      "Mir ist es wichtig, Software zu bauen, die nicht nur robust und skalierbar ist, sondern auch intuitiv, inklusiv und Freude bei der Nutzung bereitet."
+    ],
+    "en": [
+      "I'm Danny Koppenhagen – Frontend Architect at DB Systel GmbH, where I work on large-scale web applications for Deutsche Bahn. As part of a DevOps team, my focus is on making digital products more accessible and user-friendly for everyone.",
+      "I work with modern frameworks like Angular and React and am passionate about accessibility (a11y) and open source. I love sharing my knowledge with the community – through talks, articles, and contributions to open-source projects. I'm also co-author of one of the best-selling German-language books on Angular.",
+      "I believe in building software that is not only robust and scalable, but also intuitive, inclusive, and a joy to use."
+    ]
+  },
+  "social": {
+    "github": {
+      "url": "https://github.com/d-koppenhagen",
+      "handle": "d-koppenhagen"
+    },
+    "bluesky": {
+      "url": "https://bsky.app/profile/k9n.dev",
+      "handle": "@k9n.dev"
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/d-koppenhagen",
+      "handle": "d-koppenhagen"
+    },
+    "mastodon": {
+      "url": "https://mastodon.social/@dkoppenhagen",
+      "handle": "@dkoppenhagen"
+    },
+    "xing": {
+      "url": "https://www.xing.com/profile/Danny_Koppenhagen",
+      "handle": "Danny_Koppenhagen"
+    }
+  },
+  "legal": {
+    "address": "Birkenwerderstraße 30A, 13439 Berlin, Germany",
+    "phone": "+49 (0)151 29134704"
+  },
+  "image": {
+    "url": "images/dk.jpg",
+    "width": 431,
+    "height": 450,
+    "alt": "Danny Koppenhagen"
+  }
+}

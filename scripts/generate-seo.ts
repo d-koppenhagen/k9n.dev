@@ -10,8 +10,9 @@
 
 import type { BlogPost, Project, Talk } from '../src/app/models/content.model';
 import { SUPPORTED_LOCALES } from '../src/app/config/site.config';
+import { AUTHOR } from '../src/data/author';
 
-const BASE_URL = 'https://k9n.dev';
+const BASE_URL = AUTHOR.url;
 
 export interface SitemapEntry {
   /** The path without locale prefix (e.g., '/blog/my-post') */
@@ -165,14 +166,14 @@ export function generateLlmsTxt(
 
   // Description
   lines.push(
-    '> Personal website and blog of Danny Koppenhagen — Software Engineer, Angular expert, and speaker.',
+    `> ${AUTHOR.llmsDescription}`,
   );
   lines.push('');
 
   // Author section
   lines.push('## Author');
   lines.push('');
-  lines.push('- Danny Koppenhagen');
+  lines.push(`- ${AUTHOR.name}`);
   lines.push(`- ${BASE_URL}/contact`);
   lines.push('');
 

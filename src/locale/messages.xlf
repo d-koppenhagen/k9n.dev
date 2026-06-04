@@ -285,7 +285,7 @@
         <source>Navigationsmenü umschalten</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/navigation/navigation.html</context>
-          <context context-type="linenumber">11,12</context>
+          <context context-type="linenumber">16,17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="nav.home" datatype="html">
@@ -566,14 +566,14 @@
         <source>Artikelnavigation</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="page.blogDetail.notFound.title" datatype="html">
         <source>Beitrag nicht gefunden</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
-          <context context-type="linenumber">67,68</context>
+          <context context-type="linenumber">69,70</context>
         </context-group>
         <note priority="1" from="description">Blog post not found title</note>
         <note priority="1" from="meaning">not found title</note>
@@ -582,7 +582,7 @@
         <source> Der gesuchte Blogbeitrag existiert nicht oder wurde entfernt. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
-          <context context-type="linenumber">69,71</context>
+          <context context-type="linenumber">71,73</context>
         </context-group>
         <note priority="1" from="description">Blog post not found message</note>
         <note priority="1" from="meaning">not found message</note>
@@ -591,7 +591,7 @@
         <source>← Zurück zum Blog</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.html</context>
-          <context context-type="linenumber">71,74</context>
+          <context context-type="linenumber">73,76</context>
         </context-group>
         <note priority="1" from="description">Back to blog link</note>
         <note priority="1" from="meaning">not found link</note>

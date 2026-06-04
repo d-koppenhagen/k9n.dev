@@ -7,6 +7,7 @@ import { NavLink } from '../../components/nav-link/nav-link';
 import { ContentGrid } from '../../layouts/content-grid/content-grid';
 import { PersonalTimeline } from '../../components/personal-timeline/personal-timeline';
 import { BlogPost } from '../../models/content.model';
+import { AUTHOR } from '../../../data/author';
 import { JsonLdPerson } from '../../models/json-ld.model';
 import { SITE_CONFIG } from '../../config/site.config';
 
@@ -27,23 +28,23 @@ export class HomePage {
 
   constructor() {
     this.metaService.updateMeta({
-      title: 'Danny Koppenhagen - Developer, Speaker, Author',
-      description: 'Web developer, speaker & open source contributor \u2014 building modern Angular apps with a focus on accessibility and performance.',
-      url: 'https://k9n.dev',
+      title: `${AUTHOR.name} - Developer, Speaker, Author`,
+      description: AUTHOR.tagline.en,
+      url: AUTHOR.url,
       type: 'website',
-      image: { url: 'images/dk.jpg', width: 431, height: 450 },
-      imageAlt: 'Danny Koppenhagen',
+      image: { url: AUTHOR.image.url, width: AUTHOR.image.width, height: AUTHOR.image.height },
+      imageAlt: AUTHOR.image.alt,
     });
 
     const personSchema: JsonLdPerson = {
       '@context': 'https://schema.org',
       '@type': 'Person',
-      name: SITE_CONFIG.author.name,
+      name: AUTHOR.name,
       url: SITE_CONFIG.baseUrl,
-      jobTitle: 'Web Developer',
+      jobTitle: AUTHOR.jobTitle.en,
       sameAs: [
-        'https://github.com/d-koppenhagen',
-        'https://www.linkedin.com/in/danny-koppenhagen',
+        AUTHOR.social.github.url,
+        AUTHOR.social.linkedin.url,
       ],
     };
     this.metaService.injectJsonLd(personSchema);
