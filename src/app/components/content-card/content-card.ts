@@ -71,8 +71,10 @@ export class ContentCard {
     return lang && lang !== this.localeId ? lang : null;
   });
 
+  private isInitialTab = true;
+
   constructor() {
-    // Scroll the active tab into view when it changes
+    // Scroll the active tab into view within the tab track container
     effect(() => {
       const tab = this.currentTab();
       if (!this.isBrowser) return;
@@ -81,7 +83,15 @@ export class ContentCard {
       const idx = parseInt(tab, 10);
       if (isNaN(idx)) return;
       const tabEl = trackEl.querySelector(`[role="tab"]:nth-child(${idx + 1})`) as HTMLElement;
-      if (tabEl?.scrollIntoView) {
+      if (!tabEl) return;
+
+      if (this.isInitialTab) {
+        // On initial render: position the tab track without scrolling the page
+        this.isInitialTab = false;
+        const scrollLeft = tabEl.offsetLeft - trackEl.offsetLeft - (trackEl.clientWidth - tabEl.clientWidth) / 2;
+        trackEl.scrollLeft = Math.max(0, scrollLeft);
+      } else {
+        // On user-initiated tab changes: smooth scroll within the container
         tabEl.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
       }
     });
