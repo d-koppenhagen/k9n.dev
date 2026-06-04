@@ -32,7 +32,9 @@
           @if (post.keywords.length > 0) {
             <ul class="blog-detail__keywords" aria-label="Schlagwörter" i18n-aria-label="@@page.blogDetail.keywords.ariaLabel">
               @for (keyword of post.keywords; track keyword) {
-                <li class="blog-detail__keyword">{{ keyword }}</li>
+                <li class="blog-detail__keyword">
+                  <a routerLink="/blog" [queryParams]="{ tags: keyword }">{{ keyword }}</a>
+                </li>
               }
             </ul>
           }
