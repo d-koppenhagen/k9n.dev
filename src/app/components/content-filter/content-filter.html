@@ -60,9 +60,11 @@
               [class.content-filter__language-btn--active]="language() === option.value"
               [attr.aria-pressed]="language() === option.value"
               [attr.lang]="option.value"
+              [attr.aria-label]="option.label"
+              [title]="option.value ? option.label : ''"
               (click)="setLanguage(option.value)"
             >
-              {{ option.label }}
+              {{ (option.value | uppercase) || option.label }}
             </button>
           }
         </fieldset>

@@ -249,14 +249,14 @@
     }
 
     .content-filter__language-btn--active {
-      background-color: var(--color-interactive);
-      color: #ffffff;
+      background-color: var(--color-accent-active);
+      color: #fff;
       font-weight: 600;
     }
 
     .content-filter__language-btn--active:hover {
-      background-color: var(--color-interactive-hover);
-      color: #ffffff;
+      background-color: var(--color-accent-active);
+      color: #fff;
     }
 
     /* Desktop */

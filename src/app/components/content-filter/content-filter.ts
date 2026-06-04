@@ -13,6 +13,7 @@ import { linkedQueryParam } from 'ngxtension/linked-query-param';
 import { Combobox, ComboboxPopup, ComboboxWidget } from '@angular/aria/combobox';
 import { Listbox, Option } from '@angular/aria/listbox';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-content-filter',
@@ -25,6 +26,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
     Listbox,
     Option,
     OverlayModule,
+    UpperCasePipe
   ],
   templateUrl: './content-filter.html',
   styleUrl: './content-filter.css',
