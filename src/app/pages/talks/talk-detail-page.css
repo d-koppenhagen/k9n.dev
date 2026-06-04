@@ -23,7 +23,7 @@
     }
 
     .talk-detail__event::after {
-      content: '\u00b7';
+      content: '\00b7';
       margin-inline-start: var(--space-sm);
       color: var(--color-text-muted);
     }
