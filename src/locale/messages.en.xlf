@@ -530,33 +530,13 @@
         <source>Zur Buchwebsite (angular-buch.com)</source>
         <target>Visit book website (angular-buch.com)</target>
       </trans-unit>
-      <trans-unit id="page.book.cover.alt" datatype="html">
-        <source>Buchcover: Angular – Das Praxisbuch</source>
-        <target>Book cover: Angular – The Practical Guide</target>
-      </trans-unit>
-      <trans-unit id="page.book.title" datatype="html">
-        <source> Angular: Das Praxisbuch </source>
-        <target> Angular: The Practical Guide </target>
-      </trans-unit>
-      <trans-unit id="page.book.subtitle" datatype="html">
-        <source> Von den Grundlagen bis zur professionellen Entwicklung mit Signals – ab Angular 22 </source>
-        <target> From fundamentals to professional development with Signals – from Angular 22 </target>
-      </trans-unit>
-      <trans-unit id="page.book.authors" datatype="html">
-        <source> Danny Koppenhagen, Ferdinand Malcher, Johannes Hoppe </source>
-        <target> Danny Koppenhagen, Ferdinand Malcher, Johannes Hoppe </target>
-      </trans-unit>
-      <trans-unit id="page.book.publisher" datatype="html">
-        <source> 1. Auflage · dpunkt.verlag · 2026 </source>
-        <target> 1st Edition · dpunkt.verlag · 2026 </target>
-      </trans-unit>
       <trans-unit id="page.book.description.heading" datatype="html">
         <source>Über das Buch</source>
         <target>About the Book</target>
       </trans-unit>
       <trans-unit id="page.book.description.paragraph1" datatype="html">
         <source> In diesem Praxiseinstieg lernst du Angular inklusive der modernen APIs und Konzepte kennen. Mit einem durchgängigen Beispielprojekt führen die Autoren dich durch die Welt von Angular. Du entwickelst und testest Schritt für Schritt eine professionelle, modulare und barrierefreie Single-Page-Anwendung und lernst Angular im praktischen Einsatz kennen. </source>
-        <target> In this practical introduction you'll get to know Angular including its modern APIs and concepts. With a continuous example project, the authors guide you through the world of Angular. You'll develop and test a professional, modular, and accessible single-page application step by step and learn Angular in practical use. </target>
+        <target> In this German-language practical introduction you'll get to know Angular including its modern APIs and concepts. With a continuous example project, the authors guide you through the world of Angular. You'll develop and test a professional, modular, and accessible single-page application step by step and learn Angular in practical use. </target>
       </trans-unit>
       <trans-unit id="page.book.description.paragraph2" datatype="html">
         <source> Auf jeden Umsetzungsschritt folgen außerdem umfangreiche Unit- und Integrationstests. Ausführliche Theorieteile runden das Buch ab und machen es zu deinem praktischen Begleiter im Entwicklungsalltag. </source>
@@ -605,6 +585,10 @@
       <trans-unit id="page.book.cta.text" datatype="html">
         <source> Auf der Buchwebsite findest du alle Informationen, Leseproben und den direkten Link zum Verlag. </source>
         <target> On the book website you'll find all the information, sample chapters, and a direct link to the publisher. </target>
+      </trans-unit>
+      <trans-unit id="page.book.meta.description" datatype="html">
+        <source>Das deutschsprachige Angular-Buch – von den Grundlagen bis zur professionellen Entwicklung mit Signals. Von Danny Koppenhagen, Ferdinand Malcher und Johannes Hoppe.</source>
+        <target>A German-language guide to Angular — from fundamentals to professional development with Signals. By Danny Koppenhagen, Ferdinand Malcher, and Johannes Hoppe.</target>
       </trans-unit>
     </body>
   </file>

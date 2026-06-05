@@ -17,7 +17,7 @@ export class BookPage {
   constructor() {
     this.metaService.updateMeta({
       title: 'Angular: Das Praxisbuch',
-      description: 'Von den Grundlagen bis zur professionellen Entwicklung mit Signals. Das deutschsprachige Angular-Buch von Danny Koppenhagen, Ferdinand Malcher und Johannes Hoppe.',
+      description: $localize`:meta description for book page@@page.book.meta.description:Das deutschsprachige Angular-Buch – von den Grundlagen bis zur professionellen Entwicklung mit Signals. Von Danny Koppenhagen, Ferdinand Malcher und Johannes Hoppe.`,
       url: `${SITE_CONFIG.baseUrl}/book`,
       type: 'book',
       image: { url: 'images/book-cover-v1m.png', width: 400, height: 500 },

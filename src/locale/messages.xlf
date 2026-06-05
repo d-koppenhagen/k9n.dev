@@ -108,7 +108,7 @@
         <source>Suche</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
-          <context context-type="linenumber">71,74</context>
+          <context context-type="linenumber">73,76</context>
         </context-group>
         <note priority="1" from="description">Search input label</note>
         <note priority="1" from="meaning">label</note>
@@ -117,28 +117,28 @@
         <source>Suchen...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
-          <context context-type="linenumber">76,77</context>
+          <context context-type="linenumber">78,79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contentFilter.activeFilters.ariaLabel" datatype="html">
         <source>Aktive Filter</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
-          <context context-type="linenumber">87</context>
+          <context context-type="linenumber">89</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contentFilter.clearAll.ariaLabel" datatype="html">
         <source>Alle Filter löschen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
-          <context context-type="linenumber">102,103</context>
+          <context context-type="linenumber">104,105</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contentFilter.clearAll.text" datatype="html">
         <source>Alle löschen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
-          <context context-type="linenumber">106,111</context>
+          <context context-type="linenumber">108,113</context>
         </context-group>
         <note priority="1" from="description">Clear all filters button</note>
         <note priority="1" from="meaning">button text</note>
@@ -147,7 +147,7 @@
         <source>Alle</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-filter/content-filter.ts</context>
-          <context context-type="linenumber">50</context>
+          <context context-type="linenumber">52</context>
         </context-group>
         <note priority="1" from="description">All languages option</note>
         <note priority="1" from="meaning">content filter</note>
@@ -156,7 +156,7 @@
         <source>Nach Tags filtern...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-filter/content-filter.ts</context>
-          <context context-type="linenumber">73</context>
+          <context context-type="linenumber">75</context>
         </context-group>
         <note priority="1" from="description">Tags placeholder</note>
         <note priority="1" from="meaning">content filter</note>
@@ -165,7 +165,7 @@
         <source>Filter entfernen: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-filter/content-filter.ts</context>
-          <context context-type="linenumber">82</context>
+          <context context-type="linenumber">84</context>
         </context-group>
         <note priority="1" from="description">Remove filter aria label prefix</note>
         <note priority="1" from="meaning">content filter</note>
@@ -465,11 +465,20 @@
         <note priority="1" from="description">Default content list grid</note>
         <note priority="1" from="meaning">aria label</note>
       </trans-unit>
+      <trans-unit id="page.about.profile.alt" datatype="html">
+        <source>Danny Koppenhagen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+        <note priority="1" from="description">Profile image alt text</note>
+        <note priority="1" from="meaning">image alt</note>
+      </trans-unit>
       <trans-unit id="page.about.title" datatype="html">
         <source>Über mich</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
-          <context context-type="linenumber">3,4</context>
+          <context context-type="linenumber">14,15</context>
         </context-group>
         <note priority="1" from="description">About page title</note>
         <note priority="1" from="meaning">page title</note>
@@ -478,7 +487,7 @@
         <source>Frontend Architekt · Accessibility · Open Source</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
-          <context context-type="linenumber">4,7</context>
+          <context context-type="linenumber">15,18</context>
         </context-group>
         <note priority="1" from="description">About page subtitle</note>
         <note priority="1" from="meaning">page subtitle</note>
@@ -487,7 +496,7 @@
         <source>Einleitung</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
-          <context context-type="linenumber">8,9</context>
+          <context context-type="linenumber">19,20</context>
         </context-group>
         <note priority="1" from="description">About introduction heading</note>
         <note priority="1" from="meaning">section heading</note>
@@ -496,7 +505,7 @@
         <source> Ich bin Danny Koppenhagen – Frontend Architekt bei der DB Systel GmbH, wo ich an großen Webanwendungen für die Deutsche Bahn arbeite. Als Teil eines DevOps-Teams liegt mein Fokus darauf, digitale Produkte barrierefreier und benutzerfreundlicher für alle zu gestalten. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
-          <context context-type="linenumber">10,15</context>
+          <context context-type="linenumber">21,26</context>
         </context-group>
         <note priority="1" from="description">About introduction paragraph 1</note>
         <note priority="1" from="meaning">about text</note>
@@ -505,7 +514,7 @@
         <source> Ich arbeite mit modernen Frameworks wie Angular und React und setze mich leidenschaftlich für Accessibility (a11y) und Open Source ein. Mein Wissen teile ich gerne mit der Community – durch Vorträge, Artikel und Beiträge zu Open-Source-Projekten. Außerdem bin ich Co-Autor eines der meistverkauften deutschsprachigen Bücher über Angular. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
-          <context context-type="linenumber">16,22</context>
+          <context context-type="linenumber">27,33</context>
         </context-group>
         <note priority="1" from="description">About introduction paragraph 2</note>
         <note priority="1" from="meaning">about text</note>
@@ -514,7 +523,7 @@
         <source> Mir ist es wichtig, Software zu bauen, die nicht nur robust und skalierbar ist, sondern auch intuitiv, inklusiv und Freude bei der Nutzung bereitet. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
-          <context context-type="linenumber">23,28</context>
+          <context context-type="linenumber">34,39</context>
         </context-group>
         <note priority="1" from="description">About introduction paragraph 3</note>
         <note priority="1" from="meaning">about text</note>
@@ -523,7 +532,7 @@
         <source>k9n.dev?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
-          <context context-type="linenumber">29,31</context>
+          <context context-type="linenumber">40,42</context>
         </context-group>
         <note priority="1" from="description">Numeronym explanation heading</note>
         <note priority="1" from="meaning">section title</note>
@@ -532,7 +541,7 @@
         <source> Warum k9n.dev? Hierbei handelt es sich um ein Numeronym, bei dem die Zahl zwischen den beiden Buchstaben für die Anzahl der ausgelassenen Buchstaben in meinem Nachnamen steht (Vgl.: a11y, i18n, l10n, ...). </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/about/about-page.html</context>
-          <context context-type="linenumber">31,36</context>
+          <context context-type="linenumber">42,47</context>
         </context-group>
         <note priority="1" from="description">Numeronym explanation</note>
         <note priority="1" from="meaning">about text</note>
@@ -639,49 +648,6 @@
           <context context-type="linenumber">6,7</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="page.book.cover.alt" datatype="html">
-        <source>Buchcover: Angular – Das Praxisbuch</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
-          <context context-type="linenumber">11,12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="page.book.title" datatype="html">
-        <source> Angular: Das Praxisbuch </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
-          <context context-type="linenumber">21,23</context>
-        </context-group>
-        <note priority="1" from="description">Angular book title</note>
-        <note priority="1" from="meaning">book page title</note>
-      </trans-unit>
-      <trans-unit id="page.book.subtitle" datatype="html">
-        <source> Von den Grundlagen bis zur professionellen Entwicklung mit Signals – ab Angular 22 </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
-          <context context-type="linenumber">24,26</context>
-        </context-group>
-        <note priority="1" from="description">Book subtitle</note>
-        <note priority="1" from="meaning">book page subtitle</note>
-      </trans-unit>
-      <trans-unit id="page.book.authors" datatype="html">
-        <source> Danny Koppenhagen, Ferdinand Malcher, Johannes Hoppe </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
-          <context context-type="linenumber">27,29</context>
-        </context-group>
-        <note priority="1" from="description">Book authors</note>
-        <note priority="1" from="meaning">book authors</note>
-      </trans-unit>
-      <trans-unit id="page.book.publisher" datatype="html">
-        <source> 1. Auflage · dpunkt.verlag · 2026 </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
-          <context context-type="linenumber">30,36</context>
-        </context-group>
-        <note priority="1" from="description">Publisher and edition</note>
-        <note priority="1" from="meaning">book publisher info</note>
-      </trans-unit>
       <trans-unit id="page.book.description.heading" datatype="html">
         <source>Über das Buch</source>
         <context-group purpose="location">
@@ -783,6 +749,14 @@
           <context context-type="sourcefile">src/app/pages/book/book-page.html</context>
           <context context-type="linenumber">72,74</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="page.book.meta.description" datatype="html">
+        <source>Das deutschsprachige Angular-Buch – von den Grundlagen bis zur professionellen Entwicklung mit Signals. Von Danny Koppenhagen, Ferdinand Malcher und Johannes Hoppe.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/book/book-page.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">meta description for book page</note>
       </trans-unit>
       <trans-unit id="page.contact.title" datatype="html">
         <source>Kontakt</source>
