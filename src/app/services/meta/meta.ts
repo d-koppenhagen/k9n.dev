@@ -304,40 +304,40 @@ export class MetaManager {
   }
 
   private setLlmMeta(config: PageMeta): void {
-    // citation_public_url — always set to canonical URL (Req 8.1)
+    // citation_public_url — always set to canonical URL
     const canonicalUrl = config.canonicalUrl ?? config.url;
     const cleanUrl = canonicalUrl.split('?')[0].split('#')[0];
     this.meta.updateTag({ name: 'citation_public_url', content: this.ensureLocalePrefix(cleanUrl) });
 
     // For article-type pages (blog posts), set citation and Dublin Core tags
     if (config.type === 'article') {
-      // citation_title (Req 8.6)
+      // citation_title
       if (config.title) {
         this.meta.updateTag({ name: 'citation_title', content: config.title });
       }
 
-      // citation_author (Req 8.6)
+      // citation_author
       if (config.author) {
         this.meta.updateTag({ name: 'citation_author', content: config.author });
       }
 
-      // Dublin Core: dc.title (Req 8.2)
+      // Dublin Core: dc.title
       if (config.title) {
         this.meta.updateTag({ name: 'dc.title', content: config.title });
       }
 
-      // Dublin Core: dc.creator (Req 8.2)
+      // Dublin Core: dc.creator
       if (config.author) {
         this.meta.updateTag({ name: 'dc.creator', content: config.author });
       }
 
-      // Dublin Core: dc.date — ISO 8601 YYYY-MM-DD (Req 8.2)
+      // Dublin Core: dc.date — ISO 8601 YYYY-MM-DD
       if (config.publishedTime) {
         const dateOnly = config.publishedTime.slice(0, 10);
         this.meta.updateTag({ name: 'dc.date', content: dateOnly });
       }
 
-      // Dublin Core: dc.description (Req 8.2)
+      // Dublin Core: dc.description
       if (config.description) {
         this.meta.updateTag({ name: 'dc.description', content: config.description });
       }
@@ -349,24 +349,24 @@ export class MetaManager {
       return;
     }
 
-    // Set article:published_time (Req 2.3)
+    // Set article:published_time
     if (config.publishedTime) {
       this.meta.updateTag({ property: 'article:published_time', content: config.publishedTime });
     }
 
-    // Set article:modified_time (Req 2.3)
+    // Set article:modified_time
     if (config.modifiedTime) {
       this.meta.updateTag({ property: 'article:modified_time', content: config.modifiedTime });
     }
 
-    // Set article:tag for each keyword (Req 2.4)
+    // Set article:tag for each keyword
     if (config.keywords?.length) {
       for (const keyword of config.keywords) {
         this.meta.addTag({ property: 'article:tag', content: keyword });
       }
     }
 
-    // Set article:author (Req 9.4)
+    // Set article:author
     if (config.author) {
       this.meta.updateTag({ property: 'article:author', content: config.author });
     }

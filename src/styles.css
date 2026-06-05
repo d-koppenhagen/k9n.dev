@@ -212,7 +212,7 @@ svg {
 }
 
 /* --------------------------------------------------------------------------
-   1.4 Responsive Layout — Fluid, no horizontal overflow (Req 11.1, 11.4, 11.5)
+   1.4 Responsive Layout — Fluid, no horizontal overflow
    -------------------------------------------------------------------------- */
 
 /* Prevent horizontal scrolling at all viewport widths from 320px */
@@ -265,7 +265,7 @@ pre {
 }
 
 /* --------------------------------------------------------------------------
-   1.5 Touch Targets — 44x44px minimum below 768px (Req 11.3)
+   1.5 Touch Targets — 44x44px minimum below 768px
    Mobile-first: base styles enforce touch targets, desktop removes them
    -------------------------------------------------------------------------- */
 
