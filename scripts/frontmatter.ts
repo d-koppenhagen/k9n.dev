@@ -81,8 +81,8 @@ export function parseBlogPost(filePath: string): BlogPost | null {
     language: data.language === 'de' || data.language === 'en' ? data.language : undefined,
     publishedAt,
     linked: linked.length > 0 ? linked : undefined,
-    content, // Raw markdown body — rendering happens in task 7.3
-    headings: [], // Populated during markdown rendering (task 7.3)
+    content,
+    headings: [],
   };
 }
 
