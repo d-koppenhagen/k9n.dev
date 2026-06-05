@@ -817,22 +817,6 @@
           <context context-type="linenumber">25,26</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="page.home.book.cover.alt" datatype="html">
-        <source>Buchcover: Angular – Das Praxisbuch</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
-          <context context-type="linenumber">30,31</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="page.home.book.title" datatype="html">
-        <source> Angular: Das Praxisbuch – von den Grundlagen bis zur professionellen Entwicklung mit Signals – ab Angular 22 </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
-          <context context-type="linenumber">39,42</context>
-        </context-group>
-        <note priority="1" from="description">Angular book title</note>
-        <note priority="1" from="meaning">book title</note>
-      </trans-unit>
       <trans-unit id="page.home.book.description" datatype="html">
         <source> In diesem Praxiseinstieg lernst du Angular inklusive der modernen APIs und Konzepte kennen. Mit einem durchgängigen Beispielprojekt führen die Autoren dich durch die Welt von Angular. Du entwickelst und testest Schritt für Schritt eine professionelle, modulare und barrierefreie Single-Page-Anwendung und lernst Angular im praktischen Einsatz kennen. Auf jeden Umsetzungsschritt folgen außerdem umfangreiche Unit- und Integrationstests. Ausführliche Theorieteile runden das Buch ab und machen es zu deinem praktischen Begleiter im Entwicklungsalltag. </source>
         <context-group purpose="location">
