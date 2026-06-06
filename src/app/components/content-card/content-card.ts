@@ -12,7 +12,7 @@ import {
   viewChild,
 } from '@angular/core';
 import { DatePipe, isPlatformBrowser, NgOptimizedImage } from '@angular/common';
-import { Tabs, TabList, Tab, TabPanel } from '@angular/aria/tabs';
+import { Tabs, TabList, Tab, TabPanel, TabContent } from '@angular/aria/tabs';
 import { SmartLink } from '../../directives/smart-link/smart-link';
 
 export interface CardThumbnail {
@@ -41,7 +41,7 @@ export interface SeriesItem {
 @Component({
   selector: 'app-content-card',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgOptimizedImage, SmartLink, Tabs, TabList, Tab, TabPanel, DatePipe],
+  imports: [NgOptimizedImage, SmartLink, Tabs, TabList, Tab, TabPanel, TabContent, DatePipe],
   templateUrl: './content-card.html',
   styleUrl: './content-card.css',
 })

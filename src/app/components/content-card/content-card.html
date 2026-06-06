@@ -2,51 +2,53 @@
   <article class="card" ngTabs>
     <div class="card__sliding-window" [style.transform]="'translateX(-' + slideOffset() + '%)'">
       @for (item of seriesItems(); track item.routeLink; let i = $index) {
-        <div ngTabPanel [value]="'' + i" class="card__panel">
-          <a class="card__link" [appSmartLink]="item.routeLink" [externalUrl]="item.externalUrl" [hreflang]="item.hreflang" [ariaLabel]="item.title">
-            @if (getThumb(item)) {
-              <div class="card__image-wrapper">
-                <img
-                  [ngSrc]="getThumb(item)!"
-                  alt=""
-                  class="card__image"
-                  fill
-                  [priority]="priority()"
-                />
-                @if (item.externalUrl) {
-                  <span class="card__external-badge" aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  </span>
-                }
-              </div>
-            }
-            <div class="card__body">
-              <div class="card__header-row">
-                <div class="card__header-text">
-                  <div class="card__meta">
-                    <time class="card__date" [attr.datetime]="item.date">{{ item.date | date:'mediumDate' }}</time>
-                  </div>
-                  @switch (headingLevel()) {
-                    @case (2) { <h2 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h2> }
-                    @default { <h3 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h3> }
+        <div ngTabPanel [value]="'' + i" [preserveContent]="true" class="card__panel">
+          <ng-template ngTabContent>
+            <a class="card__link" [appSmartLink]="item.routeLink" [externalUrl]="item.externalUrl" [hreflang]="item.hreflang" [ariaLabel]="item.title">
+              @if (getThumb(item)) {
+                <div class="card__image-wrapper">
+                  <img
+                    [ngSrc]="getThumb(item)!"
+                    alt=""
+                    class="card__image"
+                    fill
+                    [priority]="priority()"
+                  />
+                  @if (item.externalUrl) {
+                    <span class="card__external-badge" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </span>
                   }
                 </div>
-                @if (item.publishedAt?.logo) {
-                  <span class="card__published-at">
-                    <img
-                      class="card__published-at-logo"
-                      [src]="item.publishedAt.logo"
-                      [alt]="''"
-                      width="96"
-                      height="96"
-                    />
-                    <span class="visually-hidden" i18n="card label|Published at source@@contentCard.publishedAt.seriesLabel">Veröffentlicht auf {{ item.publishedAt.name }}</span>
-                  </span>
-                }
+              }
+              <div class="card__body">
+                <div class="card__header-row">
+                  <div class="card__header-text">
+                    <div class="card__meta">
+                      <time class="card__date" [attr.datetime]="item.date">{{ item.date | date:'mediumDate' }}</time>
+                    </div>
+                    @switch (headingLevel()) {
+                      @case (2) { <h2 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h2> }
+                      @default { <h3 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h3> }
+                    }
+                  </div>
+                  @if (item.publishedAt?.logo) {
+                    <span class="card__published-at">
+                      <img
+                        class="card__published-at-logo"
+                        [src]="item.publishedAt.logo"
+                        [alt]="''"
+                        width="96"
+                        height="96"
+                      />
+                      <span class="visually-hidden" i18n="card label|Published at source@@contentCard.publishedAt.seriesLabel">Veröffentlicht auf {{ item.publishedAt.name }}</span>
+                    </span>
+                  }
+                </div>
+                <p class="card__description" [attr.lang]="getItemLang(item)">{{ item.description }}</p>
               </div>
-              <p class="card__description" [attr.lang]="getItemLang(item)">{{ item.description }}</p>
-            </div>
-          </a>
+            </a>
+          </ng-template>
         </div>
       }
     </div>
