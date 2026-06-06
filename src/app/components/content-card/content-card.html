@@ -10,8 +10,7 @@
                   [ngSrc]="getThumb(item)!"
                   alt=""
                   class="card__image"
-                  width="400"
-                  height="225"
+                  fill
                 />
                 @if (item.externalUrl) {
                   <span class="card__external-badge" aria-hidden="true">
@@ -94,8 +93,7 @@
             [ngSrc]="thumbnailSrc()!"
             alt=""
             class="card__image"
-            width="400"
-            height="225"
+            fill
           />
           @if (externalUrl()) {
             <span class="card__external-badge" aria-hidden="true">
