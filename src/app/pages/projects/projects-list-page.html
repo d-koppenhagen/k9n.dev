@@ -4,7 +4,7 @@
       [allTags]="filter.allTags()"
       [gridAriaLabel]="gridAriaLabel"
     >
-      @for (project of filter.filteredItems(); track project.slug) {
+      @for (project of filter.filteredItems(); track project.slug; let isFirst = $first) {
         <app-content-card
           [title]="project.title"
           [description]="project.description"
@@ -14,6 +14,7 @@
           [language]="project.language"
           [publishedAt]="project.publishedAt"
           [headingLevel]="2"
+          [priority]="isFirst"
         />
       } @empty {
         <p class="content-list-page__empty" i18n="empty state|No projects match filter@@page.projects.empty">Keine Projekte entsprechen deinem Filter.</p>

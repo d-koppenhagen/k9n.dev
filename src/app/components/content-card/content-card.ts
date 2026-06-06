@@ -57,6 +57,7 @@ export class ContentCard {
   readonly eventName = input<string>();
   readonly publishedAt = input<CardPublishedAt>();
   readonly headingLevel = input<2 | 3>(3);
+  readonly priority = input(false);
   readonly seriesName = input<string>('');
   readonly seriesItems = input<SeriesItem[]>([]);
 

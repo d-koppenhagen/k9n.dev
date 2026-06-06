@@ -4,7 +4,7 @@
       [allTags]="filter.allTags()"
       [gridAriaLabel]="gridAriaLabel"
     >
-      @for (talk of filter.filteredItems(); track talk.slug) {
+      @for (talk of filter.filteredItems(); track talk.slug; let isFirst = $first) {
         <app-content-card
           [title]="talk.title"
           [description]="talk.description"
@@ -15,6 +15,7 @@
           [language]="talk.language"
           [publishedAt]="talk.publishedAt"
           [headingLevel]="2"
+          [priority]="isFirst"
         />
       } @empty {
         <p class="content-list-page__empty" i18n="empty state|No talks match filter@@page.talks.empty">Keine Vorträge entsprechen deinem Filter.</p>

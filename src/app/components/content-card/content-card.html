@@ -11,6 +11,7 @@
                   alt=""
                   class="card__image"
                   fill
+                  [priority]="priority()"
                 />
                 @if (item.externalUrl) {
                   <span class="card__external-badge" aria-hidden="true">
@@ -94,6 +95,7 @@
             alt=""
             class="card__image"
             fill
+            [priority]="priority()"
           />
           @if (externalUrl()) {
             <span class="card__external-badge" aria-hidden="true">
