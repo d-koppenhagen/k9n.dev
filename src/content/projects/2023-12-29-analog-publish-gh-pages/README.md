@@ -16,7 +16,7 @@ language: en
 thumbnail:
   header: ./analog-publish-gh-pages.png
   card: ./analog-publish-gh-pages-small.png
-status: active
+status: maintained
 ---
 
 When I migrated my personal website/blog (this site) to use [AnalogJS](https://analogjs.org/) in December 2023, I created a GitHub Action which simplifies the deployment at GitHub Pages.
