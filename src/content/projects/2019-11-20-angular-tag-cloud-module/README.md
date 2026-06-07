@@ -15,7 +15,7 @@ language: en
 thumbnail:
   header: ./angular-tag-cloud-module.png
   card: ./angular-tag-cloud-module-small.png
-status: active
+status: maintained
 ---
 
 My project **angular-tag-cloud-module** gives you an Angular module for setting up a tag cloud / word cloud easily.
