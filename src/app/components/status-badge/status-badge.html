@@ -1,0 +1,9 @@
+<span
+  class="status-badge"
+  [class.status-badge--active]="status() === 'active'"
+  [class.status-badge--maintained]="status() === 'maintained'"
+  [class.status-badge--archived]="status() === 'archived'"
+>
+  <span class="status-badge__icon" aria-hidden="true">{{ icon() }}</span>
+  {{ status() }}
+</span>

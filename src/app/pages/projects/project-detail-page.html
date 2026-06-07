@@ -2,18 +2,7 @@
       <article class="project-detail">
         <header class="project-detail__header">
           <div class="project-detail__meta">
-            <span
-              class="status-badge"
-              [class.status-badge--active]="project.status === 'active'"
-              [class.status-badge--maintained]="
-                project.status === 'maintained'
-              "
-              [class.status-badge--archived]="project.status === 'archived'"
-              [attr.aria-label]="statusLabel + project.status"
-            >
-              <span class="status-badge__icon" aria-hidden="true">{{ getStatusIcon(project.status) }}</span>
-              {{ project.status }}
-            </span>
+            <app-status-badge [status]="project.status" />
             <time class="project-detail__date" [attr.datetime]="project.created">
               {{ project.created | date:'mediumDate' }}
             </time>

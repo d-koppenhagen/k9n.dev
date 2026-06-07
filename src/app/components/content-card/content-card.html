@@ -110,6 +110,9 @@
         <div class="card__header-row">
           <div class="card__header-text">
             <div class="card__meta">
+              @if (status()) {
+                <app-status-badge [status]="status()!" />
+              }
               @if (eventName()) {
                 <span class="card__event">{{ eventName() }}</span>
               }

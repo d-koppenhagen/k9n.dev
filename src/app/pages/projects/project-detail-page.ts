@@ -12,13 +12,14 @@ import { map } from 'rxjs';
 import { DatePipe } from '@angular/common';
 import { MarkdownContent } from '../../components/markdown-content/markdown-content';
 import { PublishedAtBanner } from '../../components/published-at-banner/published-at-banner';
+import { StatusBadge } from '../../components/status-badge/status-badge';
 import { MetaManager } from '../../services/meta/meta';
 import { Content } from '../../services/content/content';
 
 @Component({
   selector: 'app-project-detail-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MarkdownContent, PublishedAtBanner, DatePipe],
+  imports: [MarkdownContent, PublishedAtBanner, StatusBadge, DatePipe],
   templateUrl: './project-detail-page.html',
   styleUrl: './project-detail-page.css',
 })
@@ -27,8 +28,6 @@ export class ProjectDetailPage {
   private readonly metaService = inject(MetaManager);
   private readonly contentService = inject(Content);
   private readonly localeId = inject(LOCALE_ID);
-
-  protected readonly statusLabel = $localize`:aria label|Status label prefix@@page.projectDetail.status.label:Status: `;
 
   private readonly slug = toSignal(
     this.route.paramMap.pipe(map((params) => params.get('slug'))),
@@ -57,14 +56,5 @@ export class ProjectDetailPage {
         });
       }
     });
-  }
-
-  protected getStatusIcon(status: string): string {
-    switch (status) {
-      case 'active': return '\u25cf';
-      case 'maintained': return '\u25d0';
-      case 'archived': return '\u25cb';
-      default: return '\u25cf';
-    }
   }
 }

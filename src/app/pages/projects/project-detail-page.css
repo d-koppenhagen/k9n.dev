@@ -68,39 +68,6 @@
       padding-block-start: var(--space-2xl);
     }
 
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-xs);
-      padding: var(--space-xs) var(--space-sm);
-      font-size: var(--font-size-xs);
-      font-weight: 600;
-      text-transform: capitalize;
-      border-radius: var(--radius-sm);
-      background-color: var(--color-tag-bg);
-      color: var(--color-tag-text);
-    }
-
-    .status-badge__icon {
-      font-size: 0.625rem;
-      line-height: 1;
-    }
-
-    .status-badge--active {
-      background-color: rgba(34, 139, 34, 0.1);
-      color: #1a8c1a;
-    }
-
-    .status-badge--maintained {
-      background-color: var(--color-tag-bg);
-      color: var(--color-tag-text);
-    }
-
-    .status-badge--archived {
-      background-color: rgba(128, 128, 128, 0.1);
-      color: #6b6b6b;
-    }
-
     .not-found {
       max-width: var(--content-narrow-width);
       margin-inline: auto;

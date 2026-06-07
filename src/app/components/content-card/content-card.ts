@@ -14,6 +14,7 @@ import {
 import { DatePipe, isPlatformBrowser, NgOptimizedImage } from '@angular/common';
 import { Tabs, TabList, Tab, TabPanel, TabContent } from '@angular/aria/tabs';
 import { SmartLink } from '../../directives/smart-link/smart-link';
+import { StatusBadge, ProjectStatus } from '../status-badge/status-badge';
 
 export interface CardThumbnail {
   header: string;
@@ -41,7 +42,7 @@ export interface SeriesItem {
 @Component({
   selector: 'app-content-card',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgOptimizedImage, SmartLink, Tabs, TabList, Tab, TabPanel, TabContent, DatePipe],
+  imports: [NgOptimizedImage, SmartLink, StatusBadge, Tabs, TabList, Tab, TabPanel, TabContent, DatePipe],
   templateUrl: './content-card.html',
   styleUrl: './content-card.css',
 })
@@ -58,6 +59,7 @@ export class ContentCard {
   readonly publishedAt = input<CardPublishedAt>();
   readonly headingLevel = input<2 | 3>(3);
   readonly priority = input(false);
+  readonly status = input<ProjectStatus>();
   readonly seriesName = input<string>('');
   readonly seriesItems = input<SeriesItem[]>([]);
 
