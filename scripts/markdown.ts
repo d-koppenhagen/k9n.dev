@@ -127,6 +127,11 @@ export async function renderMarkdown(markdownBody: string, slug?: string, imageB
           return `<pre><code>${escapeHtml(code)}</code></pre>`;
         }
 
+        // Mermaid blocks: output as <pre class="mermaid"> for client-side rendering
+        if (lang === 'mermaid') {
+          return `<pre class="mermaid">${escapeHtml(code)}</pre>`;
+        }
+
         try {
           const loadedLangs = highlighter.getLoadedLanguages();
           if (!loadedLangs.includes(lang as never)) {
