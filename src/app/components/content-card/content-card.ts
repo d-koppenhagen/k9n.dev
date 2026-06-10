@@ -112,6 +112,13 @@ export class ContentCard {
     return '' + (idx >= 0 ? idx : 0);
   });
 
+  protected readonly isUpcoming = computed(() => {
+    const dateStr = this.date();
+    if (!dateStr) return false;
+    const eventDate = new Date(dateStr + 'T23:59:59');
+    return eventDate > new Date();
+  });
+
   private readonly FALLBACK_THUMBNAIL = 'images/bg1.jpg';
 
   protected readonly thumbnailSrc = computed(() => {

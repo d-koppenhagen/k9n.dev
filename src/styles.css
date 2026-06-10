@@ -90,6 +90,8 @@
   --color-hero-text-secondary: rgba(255, 255, 255, 0.7);
   --color-tag-bg: rgba(60, 53, 153, 0.08);
   --color-tag-text: #3C3599;
+  --color-upcoming-bg: rgba(29, 78, 216, 0.1);
+  --color-upcoming-text: #1d4ed8;
 }
 
 /* Dark Mode — Deep editorial dark with violet accents */
@@ -117,6 +119,8 @@
   --color-hero-text-secondary: rgba(240, 238, 245, 0.7);
   --color-tag-bg: rgba(157, 150, 240, 0.15);
   --color-tag-text: #b8b2f5;
+  --color-upcoming-bg: rgba(147, 197, 253, 0.12);
+  --color-upcoming-text: #93c5fd;
 }
 
 /* --------------------------------------------------------------------------

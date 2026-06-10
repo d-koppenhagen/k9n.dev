@@ -32,6 +32,17 @@
       color: var(--color-text-muted);
     }
 
+    .talk-detail__upcoming-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: var(--space-xs) var(--space-sm);
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      background-color: var(--color-upcoming-bg);
+      color: var(--color-upcoming-text);
+    }
+
     .talk-detail__title {
       font-size: var(--font-size-2xl);
       font-weight: 800;

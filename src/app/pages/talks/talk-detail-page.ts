@@ -43,6 +43,13 @@ export class TalkDetailPage {
     return t?.language && t.language !== this.localeId ? t.language : null;
   });
 
+  protected readonly isUpcoming = computed(() => {
+    const t = this.talk();
+    if (!t) return false;
+    const eventDate = new Date(t.date + 'T23:59:59');
+    return eventDate > new Date();
+  });
+
   constructor() {
     effect(() => {
       const currentTalk = this.talk();

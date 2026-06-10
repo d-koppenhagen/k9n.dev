@@ -1185,6 +1185,24 @@
           <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="page.talkDetail.upcoming.badge" datatype="html">
+        <source>Bevorstehend</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/talks/talk-detail-page.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Upcoming event badge</note>
+        <note priority="1" from="meaning">badge label</note>
+      </trans-unit>
+      <trans-unit id="contentCard.upcoming.badge" datatype="html">
+        <source>Bevorstehend</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+        <note priority="1" from="description">Upcoming event badge</note>
+        <note priority="1" from="meaning">badge label</note>
+      </trans-unit>
       <trans-unit id="page.talkDetail.resources.heading" datatype="html">
         <source>Ressourcen</source>
         <context-group purpose="location">

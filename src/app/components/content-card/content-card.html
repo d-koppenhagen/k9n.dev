@@ -110,6 +110,9 @@
         <div class="card__header-row">
           <div class="card__header-text">
             <div class="card__meta">
+              @if (isUpcoming()) {
+                <span class="card__upcoming-badge" i18n="badge label|Upcoming event badge@@contentCard.upcoming.badge">Bevorstehend</span>
+              }
               @if (status()) {
                 <app-status-badge [status]="status()!" />
               }

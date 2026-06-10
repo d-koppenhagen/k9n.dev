@@ -470,6 +470,14 @@
         <source>Externe Ressourcen</source>
         <target>External resources</target>
       </trans-unit>
+      <trans-unit id="page.talkDetail.upcoming.badge" datatype="html">
+        <source>Bevorstehend</source>
+        <target>Upcoming</target>
+      </trans-unit>
+      <trans-unit id="contentCard.upcoming.badge" datatype="html">
+        <source>Bevorstehend</source>
+        <target>Upcoming</target>
+      </trans-unit>
       <trans-unit id="page.talkDetail.resources.heading" datatype="html">
         <source>Ressourcen</source>
         <target>Resources</target>

@@ -2,6 +2,9 @@
       <article class="talk-detail">
         <header class="talk-detail__header">
           <div class="talk-detail__meta">
+            @if (isUpcoming()) {
+              <span class="talk-detail__upcoming-badge" i18n="badge label|Upcoming event badge@@page.talkDetail.upcoming.badge">Bevorstehend</span>
+            }
             <span class="talk-detail__event">{{ talk.event }}</span>
             <time class="talk-detail__date" [attr.datetime]="talk.date">{{
               talk.date | date:'mediumDate'
