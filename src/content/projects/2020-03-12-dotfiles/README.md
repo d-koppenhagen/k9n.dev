@@ -1,20 +1,23 @@
 ---
-title: .dotfiles — My default configuration files for macOS
-description: I collected all my .bash, .zsh, .vscode, .vim, macOS, homebrew and iterm configuration files in one repository for easily setup a new macOS system with a great developer experience.
+title: .dotfiles — My macOS Development Environment
+description: A comprehensive dotfiles repository for bootstrapping a fully configured macOS development environment — from shell, editor, and Git to Homebrew packages, macOS system preferences, and iTerm2.
 published: true
 author:
   name: Danny Koppenhagen
   mail: mail@k9n.dev
-updated: 2020-03-12T00:00:00.000Z
+updated: 2026-06-12
 keywords:
+  - dotfiles
   - zsh
   - bash
   - vscode
-  - Visual Studio Code
   - vim
   - macOS
-  - iterm
   - iterm2
+  - homebrew
+  - developer-setup
+  - shell
+  - git
 language: en
 thumbnail:
   header: ./dotfiles-header.jpg
@@ -22,6 +25,16 @@ thumbnail:
 status: active
 ---
 
-I collected all my `.bash`, `.zsh`, `.vscode`, `.vim`, _macOS_, [_homebrew_](https://brew.sh) and [_iterm2_](https://www.iterm2.com) configuration files in one repository for an easy setup of a new macOS system with and having a great developer experience.
+My `.dotfiles` repository is a one-stop solution for bootstrapping a complete macOS development environment from scratch. It bundles shell configuration (Zsh, Oh My Zsh, plugins, aliases, functions), editor settings, Git config with commit templates, Vim setup, Homebrew packages, macOS system preferences, and iTerm2 configuration — all orchestrated by a single setup script.
 
-Check out the official documentation and all stored configurations on [Github](https://github.com/d-koppenhagen/.dotfiles).
+## Highlights
+
+- **One-command setup** — `setup-dotfiles.sh` installs Homebrew, all packages from a `Brewfile`, symlinks dotfiles, sets up Oh My Zsh, SDKMAN, and editor settings automatically.
+- **Backup workflow** — Easily export your current state (Brewfile, extensions, settings) before migrating to a new Mac.
+- **Editor-ready** — Includes shared `settings.json` for VS Code, plus an extension install script.
+- **Shell power** — Zsh config with useful aliases, custom functions (e.g. `killport`), fnm for Node.js version management, and SDKMAN for Java.
+- **macOS tuning** — Script for Finder, Dock, Trackpad, screenshot folder, hot corners and more.
+- **Modular & private** — Local overrides (`.zshrc.local`, `settings.local.json`, `setup-dotfiles.local.sh`) are gitignored so sensitive values stay out of the repo.
+- **Git best practices** — Preconfigured `.gitconfig` with aliases, colors, LFS, pull rebase, and an Angular Commit Format template.
+
+Check out the full documentation and all stored configurations on [GitHub](https://github.com/d-koppenhagen/.dotfiles).
