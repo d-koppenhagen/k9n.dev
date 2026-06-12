@@ -56,3 +56,6 @@ Thumbs.db
 
 # Playwright
 .playwright-mcp
+
+*storybook.log
+storybook-static
