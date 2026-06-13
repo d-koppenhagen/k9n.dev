@@ -40,6 +40,8 @@ export class BlogDetailPage {
     return p?.language && p.language !== this.localeId ? p.language : null;
   });
 
+  protected readonly filterByTagLabel = $localize`:aria label|Filter blog posts by tag@@page.blogDetail.keyword.ariaLabel:Beiträge filtern nach: `;
+
   readonly seriesPosts = computed(() => {
     const currentPost = this.post();
     if (!currentPost?.series) {

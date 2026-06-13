@@ -242,6 +242,10 @@
         <source>Schlagwörter</source>
         <target>Keywords</target>
       </trans-unit>
+      <trans-unit id="page.blogDetail.keyword.ariaLabel" datatype="html">
+        <source>Beiträge filtern nach: </source>
+        <target>Filter posts by: </target>
+      </trans-unit>
       <trans-unit id="page.blogDetail.sidebar.ariaLabel" datatype="html">
         <source>Artikelnavigation</source>
         <target>Article navigation</target>
