@@ -4,7 +4,7 @@
       [itemCount]="seriesItems().length"
       [(selectedIndex)]="currentSlide"
     >
-      @for (item of seriesItems(); track item.routeLink) {
+      @for (item of seriesItems(); track item.routeLink; let idx = $index) {
         <div class="card__panel">
           <a class="card__link" [appSmartLink]="item.routeLink" [externalUrl]="item.externalUrl" [hreflang]="item.hreflang" [ariaLabel]="item.title">
             @if (getThumb(item)) {
@@ -14,7 +14,7 @@
                   alt=""
                   class="card__image"
                   fill
-                  [priority]="priority()"
+                  [priority]="priority() && idx === currentSlide()"
                 />
                 @if (item.externalUrl) {
                   <span class="card__external-badge" aria-hidden="true">
