@@ -8,6 +8,42 @@
         <target> Skip to content
 </target>
       </trans-unit>
+      <trans-unit id="layout.articleDetail.sidebar.ariaLabel" datatype="html">
+        <source>Artikelnavigation</source>
+        <target>Article navigation</target>
+      </trans-unit>
+      <trans-unit id="page.about.profile.alt" datatype="html">
+        <source>Danny Koppenhagen</source>
+        <target>Danny Koppenhagen</target>
+      </trans-unit>
+      <trans-unit id="cookieBanner.title" datatype="html">
+        <source> 🍪 Cookie-Einstellungen </source>
+        <target> 🍪 Cookie Settings </target>
+      </trans-unit>
+      <trans-unit id="cookieBanner.description" datatype="html">
+        <source> Diese Website nutzt Cookies für Webanalyse (Google Analytics), um die Nutzererfahrung zu verbessern. </source>
+        <target> This website uses cookies for web analytics (Google Analytics) to improve the user experience. </target>
+      </trans-unit>
+      <trans-unit id="cookieBanner.accept" datatype="html">
+        <source> Akzeptieren </source>
+        <target> Accept </target>
+      </trans-unit>
+      <trans-unit id="cookieBanner.decline" datatype="html">
+        <source> Ablehnen </source>
+        <target> Decline </target>
+      </trans-unit>
+      <trans-unit id="seriesPaginationCarousel.prev.ariaLabel" datatype="html">
+        <source>Vorheriger Teil</source>
+        <target>Previous part</target>
+      </trans-unit>
+      <trans-unit id="seriesPaginationCarousel.next.ariaLabel" datatype="html">
+        <source>Nächster Teil</source>
+        <target>Next part</target>
+      </trans-unit>
+      <trans-unit id="statusBadge.ariaLabel" datatype="html">
+        <source>Status: </source>
+        <target>Status: </target>
+      </trans-unit>
       <trans-unit id="app.header.ariaLabel" datatype="html">
         <source>Seitenheader</source>
         <target>Site header</target>
