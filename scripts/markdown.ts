@@ -36,7 +36,7 @@ let highlighterInstance: Highlighter | null = null;
 async function getHighlighter(): Promise<Highlighter> {
   if (!highlighterInstance) {
     highlighterInstance = await createHighlighter({
-      themes: ['github-dark-dimmed'],
+      themes: ['github-dark-high-contrast'],
       langs: ['typescript', 'javascript', 'tsx', 'jsx', 'html', 'css', 'json', 'bash', 'markdown', 'yaml', 'shell', 'xml', 'scss', 'diff'],
     });
   }
@@ -141,7 +141,7 @@ export async function renderMarkdown(markdownBody: string, slug?: string, imageB
 
           return highlighter.codeToHtml(code, {
             lang,
-            theme: 'github-dark-dimmed',
+            theme: 'github-dark-high-contrast',
           });
         } catch {
           // Fallback: render as plain preformatted text on any error
