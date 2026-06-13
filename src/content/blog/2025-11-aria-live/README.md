@@ -161,7 +161,9 @@ However, if you have a region where elements are frequently added and removed (l
 You can also combine values for fine control:
 
 ```html
-<div aria-live="assertive" aria-relevant="additions removals text">Error occurred</div>
+<div aria-live="assertive" aria-relevant="additions removals text">
+  Error occurred
+</div>
 ```
 
 ### `aria-atomic` — Controlling *How Much* Gets Announced
@@ -205,6 +207,7 @@ For chat messages, you'd typically use `aria-live="polite"` with `aria-atomic="f
 ```
 
 In short:
+
 - **`aria-live`** defines *when* to speak (or not at all with `off`)
 - **`aria-relevant`** defines *what* to speak
 - **`aria-atomic`** defines *how much* to speak
@@ -228,7 +231,9 @@ Instead, keep it mounted and update its text content when something changes.
 
 ```html
 <!-- Angular -->
-<div aria-live="polite" aria-relevant="text" [hidden]="!showMessage">{{ message }}</div>
+<div aria-live="polite" aria-relevant="text" [hidden]="!showMessage">
+  {{ message }}
+</div>
 
 <!-- Vue example -->
 <div aria-live="polite" aria-relevant="text" v-show="showMessage">
@@ -236,7 +241,9 @@ Instead, keep it mounted and update its text content when something changes.
 </div>
 
 <!-- React -->
-<div aria-live="polite" aria-relevant="text" hidden={!showMessage}>{message}</div>
+<div aria-live="polite" aria-relevant="text" hidden={!showMessage}>
+  {message}
+</div>
 ```
 
 ✅ **Pros**
@@ -265,8 +272,14 @@ Think of it like a message bus for screen readers.
 
 ```html
 <!-- template for your root component or index.html -->
-<div id="aria-live-polite" aria-live="polite" aria-atomic="true" class="sr-only"></div>
-<div id="aria-live-assertive" aria-live="assertive" aria-atomic="true" class="sr-only"></div>
+<div id="aria-live-polite"
+  class="sr-only"
+  aria-live="polite"
+  aria-atomic="true"></div>
+<div id="aria-live-assertive"
+  class="sr-only"
+  aria-live="assertive"
+  aria-atomic="true"></div>
 ```
 
 To actually hide this live regions visually, you should use a [common CSS implementation](https://css-tricks.com/inclusively-hidden/) which makes it hidden but accessible and ensures screen readers will pick it up:
@@ -338,7 +351,10 @@ export class SaveButton {
   #liveAnnouncer = inject(LiveAnnouncer);
 
   onSave() {
-    this.#liveAnnouncer.announce('Settings saved successfully.', 'polite');
+    this.#liveAnnouncer.announce(
+      'Settings saved successfully.',
+      'polite',
+    );
   }
 }
 ```
@@ -378,7 +394,7 @@ After that, place the component containing the global live region(s) in your mai
 <!-- App.vue -->
 <template>
   <VueAnnouncer class="sr-only" />
-  ...
+  <!-- ... -->
 </template>
 ```
 
