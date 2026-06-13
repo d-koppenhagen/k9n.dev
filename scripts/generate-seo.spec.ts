@@ -385,4 +385,10 @@ describe('generateRobotsTxt', () => {
 
     expect(output).toContain('User-agent: *');
   });
+
+  it('should disallow crawling the hiring page', () => {
+    const output = generateRobotsTxt();
+
+    expect(output).toContain('Disallow: /*/hiring');
+  });
 });

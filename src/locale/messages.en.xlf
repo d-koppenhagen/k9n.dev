@@ -594,6 +594,94 @@
         <source>Das deutschsprachige Angular-Buch – von den Grundlagen bis zur professionellen Entwicklung mit Signals. Von Danny Koppenhagen, Ferdinand Malcher und Johannes Hoppe.</source>
         <target>A German-language guide to Angular — from fundamentals to professional development with Signals. By Danny Koppenhagen, Ferdinand Malcher, and Johannes Hoppe.</target>
       </trans-unit>
+      <trans-unit id="page.hiring.title" datatype="html">
+        <source>Hallo Recruiter!</source>
+        <target>Dear Recruiter!</target>
+      </trans-unit>
+      <trans-unit id="page.hiring.subtitle" datatype="html">
+        <source>Danke für deine Nachricht. Bitte lies dir diese Seite durch, bevor du dich erneut meldest.</source>
+        <target>Thanks for your message. Please read this page before reaching out again.</target>
+      </trans-unit>
+      <trans-unit id="page.hiring.intro.heading" datatype="html">
+        <source>Einleitung</source>
+        <target>Introduction</target>
+      </trans-unit>
+      <trans-unit id="page.hiring.intro.p1" datatype="html">
+        <source> Vielen Dank für deine Nachricht. Neue und spannende Möglichkeiten interessieren mich immer. Als Software-Entwickler kannst du dir sicher vorstellen, dass ich ein hohes Aufkommen an Anfragen über Mail, LinkedIn, XING usw. erhalte – eine privilegierte Position, für die ich dankbar bin. </source>
+        <target> Thanks for your message. I'm always interested in hearing about new and exciting opportunities. As a software engineer, I'm sure you can imagine that I receive a high volume of recruiter messages via email, LinkedIn, XING, etc. It's a wonderful position of privilege and I'm thankful for it. </target>
+      </trans-unit>
+      <trans-unit id="page.hiring.intro.p2" datatype="html">
+        <source> Das bedeutet allerdings, dass ich nicht mit jeder Person telefonieren kann. Viele eingehende Nachrichten passen leider überhaupt nicht zu meinem Profil. </source>
+        <target> However, this means I don't have the time to hop on a call with everyone who reaches out. A lot of the time, incoming messages represent a very poor fit indeed. </target>
+      </trans-unit>
+      <trans-unit id="page.hiring.intro.p3" datatype="html">
+        <source> Um frühzeitig passende Angebote von unqualifizierten Anfragen zu unterscheiden, bitte ich dich zu prüfen, ob die angebotene Position die folgenden Anforderungen erfüllt. </source>
+        <target> To filter out matching opportunities from unqualified messages early on, please verify that the position you're offering meets the following requirements. </target>
+      </trans-unit>
+      <trans-unit id="page.hiring.requirements.heading" datatype="html">
+        <source> Meine Anforderungen </source>
+        <target> My Requirements </target>
+      </trans-unit>
+      <trans-unit id="page.hiring.req.tech" datatype="html">
+        <source> Position mit <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>JavaScript/TypeScript<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> und <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Frontend- oder Fullstack-Entwicklung/-Architektur<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> </source>
+        <target> Position related to <x id="START_TAG_STRONG" ctype="x-strong"/>JavaScript/TypeScript<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> and <x id="START_TAG_STRONG" ctype="x-strong"/>frontend or fullstack development/architecture<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> </target>
+      </trans-unit>
+      <trans-unit id="page.hiring.req.hours" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Flexible Arbeitszeiten<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> sind selbstverständlich</source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong"/>Flexible working hours<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> are a given</target>
+      </trans-unit>
+      <trans-unit id="page.hiring.req.vacation" datatype="html">
+        <source>Mindestens <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>30 Tage Urlaub<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> pro Jahr</source>
+        <target>At least <x id="START_TAG_STRONG" ctype="x-strong"/>30 days of annual vacation<x id="CLOSE_TAG_STRONG" ctype="x-strong"/></target>
+      </trans-unit>
+      <trans-unit id="page.hiring.req.remote" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>100% Remote<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> oder Standort <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Berlin<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> mit mindestens <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>3 Tagen Home-Office<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> pro Woche</source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong"/>100% remote<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> or based in <x id="START_TAG_STRONG" ctype="x-strong"/>Berlin<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> with at least <x id="START_TAG_STRONG" ctype="x-strong"/>3 days of home office<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> per week</target>
+      </trans-unit>
+      <trans-unit id="page.hiring.req.salary" datatype="html">
+        <source>Jahresgehalt ab <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>110.000 EUR<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <target>Annual salary of <x id="START_TAG_STRONG" ctype="x-strong"/>EUR 110,000<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> or more</target>
+      </trans-unit>
+      <trans-unit id="page.hiring.req.training" datatype="html">
+        <source>Mindestens <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>2.000 EUR jährliches Weiterbildungsbudget<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> (Konferenzen, Events, Trainings)</source>
+        <target>At least <x id="START_TAG_STRONG" ctype="x-strong"/>EUR 2,000 annual training budget<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> (conferences, events, trainings)</target>
+      </trans-unit>
+      <trans-unit id="page.hiring.req.culture" datatype="html">
+        <source>Flache Hierarchien in einer <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>gesunden und ausgeglichenen<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Arbeitsatmosphäre</source>
+        <target>Low hierarchies in a <x id="START_TAG_STRONG" ctype="x-strong"/>healthy and balanced<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> working atmosphere</target>
+      </trans-unit>
+      <trans-unit id="page.hiring.req.nodefense" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Keine Verbindung<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> zur Rüstungsindustrie</source>
+        <target><x id="START_TAG_STRONG" ctype="x-strong"/>No connection<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> to the defense industry</target>
+      </trans-unit>
+      <trans-unit id="page.hiring.req.contract" datatype="html">
+        <source>Ein <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>unbefristeter Arbeitsvertrag<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <target>A <x id="START_TAG_STRONG" ctype="x-strong"/>permanent employment contract<x id="CLOSE_TAG_STRONG" ctype="x-strong"/></target>
+      </trans-unit>
+      <trans-unit id="page.hiring.closing.heading" datatype="html">
+        <source>Nächste Schritte</source>
+        <target>Next Steps</target>
+      </trans-unit>
+      <trans-unit id="page.hiring.closing.p1" datatype="html">
+        <source> Wenn <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>alle oder mindestens 90%<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> dieser Anforderungen auf das Angebot zutreffen, kannst du mich gerne erneut kontaktieren. Bitte sende mir dann den <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Firmennamen<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>, eine <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Stellenbeschreibung<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> und die <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Gesamtvergütung<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> für die Position mit. </source>
+        <target> If <x id="START_TAG_STRONG" ctype="x-strong"/>all or at least 90%<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> of these requirements match the offer, feel free to contact me again. Please include the <x id="START_TAG_STRONG" ctype="x-strong"/>company name<x id="CLOSE_TAG_STRONG" ctype="x-strong"/>, a <x id="START_TAG_STRONG" ctype="x-strong"/>job description<x id="CLOSE_TAG_STRONG" ctype="x-strong"/>, and <x id="START_TAG_STRONG" ctype="x-strong"/>total compensation details<x id="CLOSE_TAG_STRONG" ctype="x-strong"/> for the role. </target>
+      </trans-unit>
+      <trans-unit id="page.hiring.closing.p2" datatype="html">
+        <source> Ich schätze die Arbeit engagierter Recruiter sehr. Ohne einen strukturierten Filter wäre das Sortieren seriöser Angebote von Spam allerdings ein Vollzeitjob. </source>
+        <target> I very much appreciate the work of talented and engaged recruiters. However, sorting serious opportunities from spam would be a full-time job without a structured filter. </target>
+      </trans-unit>
+      <trans-unit id="page.hiring.closing.signature" datatype="html">
+        <source> Danke für dein Verständnis.<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;"/>Beste Grüße, Danny </source>
+        <target> Thanks for your understanding.<x id="LINE_BREAK" ctype="lb"/>Best regards, Danny </target>
+      </trans-unit>
+      <trans-unit id="page.hiring.meta.title" datatype="html">
+        <source>Für Recruiter</source>
+        <target>For Recruiters</target>
+      </trans-unit>
+      <trans-unit id="page.hiring.meta.description" datatype="html">
+        <source>Informationen für Recruiter und Talent Scouts zu meinen Anforderungen an neue Positionen.</source>
+        <target>Information for recruiters and talent scouts about my requirements for new positions.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -64,6 +64,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'hiring',
+    loadComponent: () =>
+      import('./pages/hiring/hiring-page').then(
+        (m) => m.HiringPage,
+      ),
+  },
+  {
     path: 'contact',
     loadComponent: () =>
       import('./pages/contact/contact-page').then(

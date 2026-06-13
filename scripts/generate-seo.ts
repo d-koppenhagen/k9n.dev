@@ -126,13 +126,13 @@ export function generateSitemap(
 /**
  * Generates a robots.txt string.
  *
- * Permits all crawlers to access all paths (no Disallow rules)
+ * Permits all crawlers to access all paths except explicitly disallowed ones
  * and references the sitemap location.
  *
  * Conforms to the Robots Exclusion Protocol syntax (one directive per line, Field: Value).
  */
 export function generateRobotsTxt(): string {
-  return `User-agent: *\nSitemap: ${BASE_URL}/sitemap.xml\n`;
+  return `User-agent: *\nDisallow: /*/hiring\nSitemap: ${BASE_URL}/sitemap.xml\n`;
 }
 
 /**
