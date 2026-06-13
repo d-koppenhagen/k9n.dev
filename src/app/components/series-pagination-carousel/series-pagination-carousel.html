@@ -1,0 +1,49 @@
+<div class="carousel__viewport">
+  <div class="carousel__sliding-window" [style.transform]="slideTransform()">
+    <ng-content />
+  </div>
+</div>
+
+<footer class="carousel__footer">
+  <span class="carousel__label">{{ label() }}</span>
+  @if (showArrows()) {
+    <button
+      type="button"
+      class="carousel__arrow"
+      (click)="stepPrev()"
+      aria-label="Vorheriger Teil"
+      i18n-aria-label="@@seriesPaginationCarousel.prev.ariaLabel"
+    >
+      ‹
+    </button>
+  }
+  <div class="carousel__track" #tabTrack>
+    <ul class="carousel__tabs" role="tablist">
+      @for (i of items(); track i) {
+        <li
+          role="tab"
+          class="carousel__tab"
+          [class.carousel__tab--selected]="i === selectedIndex()"
+          [attr.aria-selected]="i === selectedIndex()"
+          (click)="selectTab(i)"
+          (keydown.enter)="selectTab(i)"
+          (keydown.space)="selectTab(i)"
+          [tabindex]="i === selectedIndex() ? 0 : -1"
+        >
+          {{ i + 1 }}
+        </li>
+      }
+    </ul>
+  </div>
+  @if (showArrows()) {
+    <button
+      type="button"
+      class="carousel__arrow"
+      (click)="stepNext()"
+      aria-label="Nächster Teil"
+      i18n-aria-label="@@seriesPaginationCarousel.next.ariaLabel"
+    >
+      ›
+    </button>
+  }
+</footer>

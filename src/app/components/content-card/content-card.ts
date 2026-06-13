@@ -2,19 +2,15 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
-  effect,
-  ElementRef,
   inject,
   input,
   linkedSignal,
   LOCALE_ID,
-  PLATFORM_ID,
-  viewChild,
 } from '@angular/core';
-import { DatePipe, isPlatformBrowser, NgOptimizedImage } from '@angular/common';
-import { Tabs, TabList, Tab, TabPanel, TabContent } from '@angular/aria/tabs';
+import { DatePipe, NgOptimizedImage } from '@angular/common';
 import { SmartLink } from '../../directives/smart-link/smart-link';
 import { StatusBadge, ProjectStatus } from '../status-badge/status-badge';
+import { SeriesPaginationCarousel } from '../series-pagination-carousel/series-pagination-carousel';
 
 export interface CardThumbnail {
   header: string;
@@ -42,7 +38,7 @@ export interface SeriesItem {
 @Component({
   selector: 'app-content-card',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgOptimizedImage, SmartLink, StatusBadge, Tabs, TabList, Tab, TabPanel, TabContent, DatePipe],
+  imports: [NgOptimizedImage, SmartLink, StatusBadge, SeriesPaginationCarousel, DatePipe],
   templateUrl: './content-card.html',
   styleUrl: './content-card.css',
 })
@@ -63,10 +59,7 @@ export class ContentCard {
   readonly seriesName = input<string>('');
   readonly seriesItems = input<SeriesItem[]>([]);
 
-  protected readonly maxVisible = 3;
-  protected readonly currentTab = linkedSignal(() => this.initialTab());
-  private readonly tabTrack = viewChild<ElementRef<HTMLElement>>('tabTrack');
-  private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+  protected readonly currentSlide = linkedSignal(() => this.initialSlide());
   private readonly localeId = inject(LOCALE_ID);
 
   protected readonly contentLang = computed(() => {
@@ -74,42 +67,10 @@ export class ContentCard {
     return lang && lang !== this.localeId ? lang : null;
   });
 
-  private isInitialTab = true;
-
-  constructor() {
-    // Scroll the active tab into view within the tab track container
-    effect(() => {
-      const tab = this.currentTab();
-      if (!this.isBrowser) return;
-      const trackEl = this.tabTrack()?.nativeElement;
-      if (!trackEl) return;
-      const idx = parseInt(tab, 10);
-      if (isNaN(idx)) return;
-      const tabEl = trackEl.querySelector(`[role="tab"]:nth-child(${idx + 1})`) as HTMLElement;
-      if (!tabEl) return;
-
-      if (this.isInitialTab) {
-        // On initial render: position the tab track without scrolling the page
-        this.isInitialTab = false;
-        const scrollLeft = tabEl.offsetLeft - trackEl.offsetLeft - (trackEl.clientWidth - tabEl.clientWidth) / 2;
-        trackEl.scrollLeft = Math.max(0, scrollLeft);
-      } else {
-        // On user-initiated tab changes: smooth scroll within the container
-        tabEl.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
-      }
-    });
-  }
-
-  protected readonly slideOffset = computed(() => {
-    const tab = this.currentTab();
-    const idx = parseInt(tab, 10);
-    return isNaN(idx) ? 0 : idx * 100;
-  });
-
-  protected readonly initialTab = computed(() => {
+  protected readonly initialSlide = computed(() => {
     const items = this.seriesItems();
     const idx = items.findIndex((item) => item.routeLink === this.routeLink());
-    return '' + (idx >= 0 ? idx : 0);
+    return idx >= 0 ? idx : 0;
   });
 
   protected readonly isUpcoming = computed(() => {
@@ -132,19 +93,5 @@ export class ContentCard {
 
   protected getItemLang(item: SeriesItem): string | null {
     return item.language && item.language !== this.localeId ? item.language : null;
-  }
-
-  protected stepPrev(): void {
-    const items = this.seriesItems();
-    const idx = parseInt(this.currentTab(), 10);
-    const prev = (idx - 1 + items.length) % items.length;
-    this.currentTab.set('' + prev);
-  }
-
-  protected stepNext(): void {
-    const items = this.seriesItems();
-    const idx = parseInt(this.currentTab(), 10);
-    const next = (idx + 1) % items.length;
-    this.currentTab.set('' + next);
   }
 }
