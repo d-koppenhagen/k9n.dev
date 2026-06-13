@@ -20,7 +20,7 @@ export class BookPage {
       description: $localize`:meta description for book page@@page.book.meta.description:Das deutschsprachige Angular-Buch – von den Grundlagen bis zur professionellen Entwicklung mit Signals. Von Danny Koppenhagen, Ferdinand Malcher und Johannes Hoppe.`,
       url: `${SITE_CONFIG.baseUrl}/book`,
       type: 'book',
-      image: { url: 'images/book-cover-v1m.png', width: 400, height: 500 },
+      image: { url: 'images/book-cover-v1m.webp', width: 400, height: 500 },
       imageAlt: 'Buchcover: Angular – Das Praxisbuch',
       bookIsbn: '978-3-86490-599-1',
       bookReleaseDate: '2026-06-01',
@@ -48,7 +48,7 @@ export class BookPage {
       numberOfPages: 700,
       bookEdition: '1. Auflage',
       datePublished: '2026-06-01',
-      image: `${SITE_CONFIG.baseUrl}/images/book-cover-v1m.png`,
+      image: `${SITE_CONFIG.baseUrl}/images/book-cover-v1m.webp`,
       url: 'https://angular-buch.com',
     };
     this.metaService.injectJsonLd(bookSchema);
