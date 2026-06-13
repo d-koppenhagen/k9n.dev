@@ -190,12 +190,11 @@ async function buildContent(): Promise<void> {
     mkdirSync(OUTPUT_DIR, { recursive: true });
   }
 
-  // Process all content types
-  const [blogPosts, talks, projects] = await Promise.all([
-    processBlogPosts(),
-    processTalks(),
-    processProjects(),
-  ]);
+  // Process content types sequentially to avoid race conditions
+  // in marked-gfm-heading-id's global heading state
+  const blogPosts = await processBlogPosts();
+  const talks = await processTalks();
+  const projects = await processProjects();
 
   // Write generated TypeScript files
   writeGeneratedFile('blog-posts.generated.ts', 'BlogPost', 'BLOG_POSTS', blogPosts);

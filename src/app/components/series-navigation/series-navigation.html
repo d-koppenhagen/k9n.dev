@@ -1,26 +1,29 @@
 @if (sortedPosts().length > 1) {
-      <nav class="series-nav" aria-label="Beiträge in dieser Serie" i18n-aria-label="@@seriesNav.ariaLabel">
-        <h2 class="series-nav__heading" i18n="section heading|Series navigation heading@@seriesNav.heading">Serie</h2>
-        <ol class="series-nav__list">
-          @for (post of sortedPosts(); track post.slug) {
-            <li class="series-nav__item">
-              @if (post.slug === currentSlug()) {
-                <span
-                  class="series-nav__link series-nav__link--current"
-                  aria-current="page"
-                >
-                  {{ post.title }}
-                </span>
-              } @else {
-                <a
-                  class="series-nav__link"
-                  [routerLink]="['/blog', post.slug]"
-                >
-                  {{ post.title }}
-                </a>
-              }
-            </li>
+  <nav
+    class="series-nav"
+    aria-label="Beiträge in dieser Serie"
+    i18n-aria-label="@@seriesNav.ariaLabel"
+  >
+    <h2
+      class="series-nav__heading"
+      i18n="section heading|Series navigation heading@@seriesNav.heading"
+    >
+      Serie
+    </h2>
+    <ol class="series-nav__list">
+      @for (post of sortedPosts(); track post.slug) {
+        <li class="series-nav__item">
+          @if (post.slug === currentSlug()) {
+            <span class="series-nav__link series-nav__link--current" aria-current="page">
+              {{ post.title }}
+            </span>
+          } @else {
+            <a class="series-nav__link" [routerLink]="['/blog', post.slug]">
+              {{ post.title }}
+            </a>
           }
-        </ol>
-      </nav>
-    }
+        </li>
+      }
+    </ol>
+  </nav>
+}
