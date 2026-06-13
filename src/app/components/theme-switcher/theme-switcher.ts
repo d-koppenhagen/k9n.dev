@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Theme } from '../../services/theme/theme';
 
 type ThemeOption = 'light' | 'dark' | 'system';
@@ -14,7 +14,7 @@ export class ThemeSwitcher {
 
   protected readonly preference = this.themeService.preference;
 
-  protected readonly options: ReadonlyArray<{ value: ThemeOption; label: string }> = [
+  protected readonly options: readonly { value: ThemeOption; label: string }[] = [
     { value: 'light', label: $localize`:theme option|Light theme@@theme.light:Hell` },
     { value: 'dark', label: $localize`:theme option|Dark theme@@theme.dark:Dunkel` },
     { value: 'system', label: $localize`:theme option|System theme@@theme.system:System` },

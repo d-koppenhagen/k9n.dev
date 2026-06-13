@@ -7,7 +7,7 @@ describe('Theme', () => {
   let service: Theme;
   let mockDocument: Document;
   let mockLocalStorage: Record<string, string>;
-  let mediaQueryListeners: Array<(event: MediaQueryListEvent) => void>;
+  let mediaQueryListeners: ((event: MediaQueryListEvent) => void)[];
   let mockMediaQueryMatches: boolean;
 
   function createMockMediaQueryList(matches: boolean): MediaQueryList {
@@ -17,9 +17,9 @@ describe('Theme', () => {
       addEventListener: (_event: string, listener: (event: MediaQueryListEvent) => void) => {
         mediaQueryListeners.push(listener);
       },
-      removeEventListener: () => {},
-      addListener: () => {},
-      removeListener: () => {},
+      removeEventListener: vi.fn(),
+      addListener: vi.fn(),
+      removeListener: vi.fn(),
       onchange: null,
       dispatchEvent: () => false,
     } as unknown as MediaQueryList;
@@ -43,7 +43,7 @@ describe('Theme', () => {
 
     // Mock matchMedia
     Object.defineProperty(window, 'matchMedia', {
-      value: (query: string) => createMockMediaQueryList(mockMediaQueryMatches),
+      value: () => createMockMediaQueryList(mockMediaQueryMatches),
       writable: true,
       configurable: true,
     });
@@ -221,7 +221,7 @@ describe('Theme', () => {
         value: {
           getItem: () => null,
           setItem: () => { throw new Error('QuotaExceededError'); },
-          removeItem: () => {},
+          removeItem: () => vi.fn(),
         },
         writable: true,
         configurable: true,

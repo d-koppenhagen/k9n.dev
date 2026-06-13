@@ -176,6 +176,7 @@ export class MetaManager {
   private setHreflangLinks(config: PageMeta): void {
     // Extract the path portion from the page URL (without baseUrl)
     const pageUrl = config.url;
+    // eslint-disable-next-line no-useless-assignment
     let pagePath = '';
     if (pageUrl.startsWith(SITE_CONFIG.baseUrl)) {
       pagePath = pageUrl.slice(SITE_CONFIG.baseUrl.length);

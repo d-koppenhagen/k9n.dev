@@ -19,7 +19,7 @@ export class Theme {
   readonly preference = this.userPreference.asReadonly();
 
   private mediaQuery: MediaQueryList | null = null;
-  private readonly mediaQueryListener = (_event: MediaQueryListEvent) => {
+  private readonly mediaQueryListener = () => {
     if (this.userPreference() === 'system') {
       this.applyResolvedTheme();
     }

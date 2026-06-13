@@ -23,7 +23,7 @@ interface NavLink {
 export class Navigation {
   protected readonly mobileMenuOpen = signal(false);
 
-  protected readonly navLinks: ReadonlyArray<NavLink> = [
+  protected readonly navLinks: readonly NavLink[] = [
     { path: '/', label: $localize`:navigation link|Home page@@nav.home:Startseite`, exact: true },
     { path: '/blog', label: $localize`:navigation link|Blog page@@nav.blog:Blog`, exact: false },
     { path: '/talks', label: $localize`:navigation link|Talks page@@nav.talks:Vorträge`, exact: false },

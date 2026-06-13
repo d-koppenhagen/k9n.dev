@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { provideRouter, Router } from '@angular/router';
+import { provideRouter } from '@angular/router';
 import { ContentCard, CardThumbnail } from './content-card';
 import { Component, LOCALE_ID } from '@angular/core';
 

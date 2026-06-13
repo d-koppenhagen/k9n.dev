@@ -1,49 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { Content } from './content';
-import type { BlogPost, Talk, Project } from '../../models/content.model';
-
-// Mock data factories
-function createBlogPost(overrides: Partial<BlogPost> = {}): BlogPost {
-  return {
-    slug: 'test-post',
-    title: 'Test Post',
-    description: 'A test blog post',
-    author: { name: 'Test Author', mail: 'test@example.com' },
-    created: '2024-06-15',
-    keywords: ['test'],
-    draft: false,
-    content: '<p>Test content</p>',
-    headings: [],
-    ...overrides,
-  };
-}
-
-function createTalk(overrides: Partial<Talk> = {}): Talk {
-  return {
-    slug: 'test-talk',
-    title: 'Test Talk',
-    description: 'A test talk',
-    date: '2024-06-15',
-    event: 'Test Conference',
-    keywords: ['test'],
-    draft: false,
-    content: '<p>Talk content</p>',
-    ...overrides,
-  };
-}
-
-function createProject(overrides: Partial<Project> = {}): Project {
-  return {
-    slug: 'test-project',
-    title: 'Test Project',
-    description: 'A test project',
-    created: '2024-06-15',
-    keywords: ['test'],
-    status: 'active',
-    content: '<p>Project content</p>',
-    ...overrides,
-  };
-}
 
 describe('Content', () => {
   let service: Content;

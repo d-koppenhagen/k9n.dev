@@ -44,7 +44,7 @@ export interface JsonLdBook {
   name: string;
   description: string;
   isbn: string;
-  author: Array<{ '@type': 'Person'; name: string; url?: string }>;
+  author: { '@type': 'Person'; name: string; url?: string }[];
   publisher: { '@type': 'Organization'; name: string };
   inLanguage: string;
   numberOfPages?: number;

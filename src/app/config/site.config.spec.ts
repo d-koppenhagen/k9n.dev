@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE, LocaleConfig, SITE_CONFIG, SUPPORTED_LOCALES } from './site.config';
+import { DEFAULT_LOCALE, SITE_CONFIG, SUPPORTED_LOCALES } from './site.config';
 
 describe('Site Configuration', () => {
   describe('SUPPORTED_LOCALES', () => {

@@ -11,7 +11,6 @@ class MockThemeSwitcherComponent {}
 class DummyComponent {}
 
 describe('Navigation', () => {
-  let component: Navigation;
   let fixture: ComponentFixture<Navigation>;
   let router: Router;
 

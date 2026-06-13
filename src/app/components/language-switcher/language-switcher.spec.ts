@@ -8,6 +8,7 @@ describe('LanguageSwitcher', () => {
   let fixture: ComponentFixture<LanguageSwitcher>;
   let nativeElement: HTMLElement;
   let mockLocalStorage: Record<string, string>;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let mockLocationHref: string;
   let mockPathname: string;
 
