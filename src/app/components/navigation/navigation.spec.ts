@@ -34,7 +34,6 @@ describe('Navigation', () => {
       .compileComponents();
 
     fixture = TestBed.createComponent(Navigation);
-    component = fixture.componentInstance;
     router = TestBed.inject(Router);
     await router.navigateByUrl('/');
     fixture.detectChanges();
