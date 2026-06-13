@@ -77,6 +77,7 @@ export function generateSitemap(
   entries.push({ path: '/blog', priority: 0.8 });
   entries.push({ path: '/talks', priority: 0.8 });
   entries.push({ path: '/projects', priority: 0.8 });
+  entries.push({ path: '/book', priority: 0.7 });
   entries.push({ path: '/contact', priority: 0.6 });
   entries.push({ path: '/imprint', priority: 0.6 });
 
@@ -185,6 +186,7 @@ export function generateLlmsTxt(
     lines.push(`- ${BASE_URL}/${locale.code}/blog`);
     lines.push(`- ${BASE_URL}/${locale.code}/talks`);
     lines.push(`- ${BASE_URL}/${locale.code}/projects`);
+    lines.push(`- ${BASE_URL}/${locale.code}/book`);
   }
   lines.push('');
 
