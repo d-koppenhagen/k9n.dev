@@ -76,6 +76,7 @@
   --color-accent-hover: #2b2670;
   --color-accent-active: #3C3599;
   --color-accent-subtle: rgba(60, 53, 153, 0.08);
+  --color-text-on-accent: #ffffff;
   --color-border: #e8e5f0;
   --color-border-subtle: #f0edf5;
   --color-interactive: #3C3599;
@@ -107,6 +108,7 @@
   --color-accent-hover: #b8b2f5;
   --color-accent-active: #5a4bd6;
   --color-accent-subtle: rgba(157, 150, 240, 0.12);
+  --color-text-on-accent: #0f0f1a;
   --color-border: #2a2a42;
   --color-border-subtle: #1f1f35;
   --color-interactive: #b8b2f5;
@@ -207,7 +209,7 @@ svg {
   padding: var(--space-sm) var(--space-md);
   font-size: var(--font-size-sm);
   font-weight: 600;
-  color: var(--color-background-primary);
+  color: var(--color-text-on-accent);
   background-color: var(--color-accent);
   border-radius: var(--radius-md);
   text-decoration: none;
