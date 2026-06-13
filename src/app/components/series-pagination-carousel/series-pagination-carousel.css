@@ -1,10 +1,12 @@
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .carousel__viewport {
   overflow: hidden;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  flex: 1;
 }
 
 .carousel__sliding-window {
@@ -24,7 +26,6 @@
   padding: var(--space-sm) var(--space-lg);
   border-top: 1px solid var(--color-border-subtle);
   background-color: var(--color-surface-elevated);
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 }
 
 .carousel__label {
