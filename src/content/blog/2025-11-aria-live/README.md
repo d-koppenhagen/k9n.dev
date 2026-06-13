@@ -55,25 +55,6 @@ By the end, you'll know how to make sure your live regions stay *truly live* —
 
 ---
 
-<!-- omit from toc -->
-## Table of Contents
-
-- [Understanding Why Live Region Breaks in SPAs](#understanding-why-live-region-breaks-in-spas)
-- [Understanding ARIA Attributes for dynamic announcements](#understanding-aria-attributes-for-dynamic-announcements)
-  - [Polite vs. Assertive — Choosing the Right "Voice"](#polite-vs-assertive--choosing-the-right-voice)
-  - [`aria-relevant` — Controlling *What* Triggers an Announcement](#aria-relevant--controlling-what-triggers-an-announcement)
-  - [`aria-atomic` — Controlling *How Much* Gets Announced](#aria-atomic--controlling-how-much-gets-announced)
-- [The Two Main Solutions](#the-two-main-solutions)
-  - [Local Live Regions](#local-live-regions)
-  - [Global Live Region](#global-live-region)
-- [Implementing Reliable Live Regions in Angular, Vue, and React](#implementing-reliable-live-regions-in-angular-vue-and-react)
-  - [Angular](#angular)
-  - [Vue 3](#vue-3)
-  - [React](#react)
-- [Conclusion](#conclusion)
-
----
-
 ## Understanding Why Live Region Breaks in SPAs
 
 At its core, an `aria-live` region is easily explained:
