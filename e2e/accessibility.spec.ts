@@ -15,12 +15,21 @@ const pages = [
   '/book',
 ];
 
-for (const path of pages) {
-  test(`${path} should have no accessibility violations`, async ({ page }) => {
-    await page.goto(path);
+const themes = ['light', 'dark'] as const;
 
-    const results = await new AxeBuilder({ page }).analyze();
+for (const theme of themes) {
+  for (const path of pages) {
+    test(`[${theme}] ${path} should have no accessibility violations`, async ({ page }) => {
+      await page.emulateMedia({ colorScheme: theme });
+      await page.addInitScript((t) => {
+        localStorage.setItem('theme-preference', t);
+      }, theme);
+      await page.goto(path, { waitUntil: 'networkidle' });
+      await page.locator(`html[data-theme="${theme}"]`).waitFor({ timeout: 5000 });
 
-    expect(results.violations).toEqual([]);
-  });
+      const results = await new AxeBuilder({ page }).analyze();
+
+      expect(results.violations).toEqual([]);
+    });
+  }
 }

@@ -92,6 +92,8 @@
   --color-tag-text: #3C3599;
   --color-upcoming-bg: rgba(29, 78, 216, 0.1);
   --color-upcoming-text: #1d4ed8;
+  --color-status-active: #146c32;
+  --color-status-archived: #555555;
 }
 
 /* Dark Mode — Deep editorial dark with violet accents */
@@ -107,8 +109,8 @@
   --color-accent-subtle: rgba(157, 150, 240, 0.12);
   --color-border: #2a2a42;
   --color-border-subtle: #1f1f35;
-  --color-interactive: #9d96f0;
-  --color-interactive-hover: #b8b2f5;
+  --color-interactive: #b8b2f5;
+  --color-interactive-hover: #d0cbfa;
   --color-surface: #1a1a2e;
   --color-surface-elevated: #24243c;
   --color-surface-card: #1f1f35;
@@ -121,6 +123,8 @@
   --color-tag-text: #b8b2f5;
   --color-upcoming-bg: rgba(147, 197, 253, 0.12);
   --color-upcoming-text: #93c5fd;
+  --color-status-active: #4ade80;
+  --color-status-archived: #9ca3af;
 }
 
 /* --------------------------------------------------------------------------

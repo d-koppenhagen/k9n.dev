@@ -53,7 +53,7 @@
 
 .cookie-btn-accept {
   background-color: var(--color-accent);
-  color: #ffffff;
+  color: var(--color-background-primary);
 }
 
 .cookie-btn-accept:hover {

@@ -18,7 +18,7 @@
 
 .status-badge--active {
   background-color: rgba(34, 139, 34, 0.1);
-  color: #137a13;
+  color: var(--color-status-active, #15803d);
 }
 
 .status-badge--maintained {
@@ -28,5 +28,5 @@
 
 .status-badge--archived {
   background-color: rgba(128, 128, 128, 0.1);
-  color: #6b6b6b;
+  color: var(--color-status-archived, #555555);
 }
