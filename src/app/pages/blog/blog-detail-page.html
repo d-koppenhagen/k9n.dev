@@ -1,12 +1,15 @@
 @if (post(); as post) {
-  <article class="blog-detail">
+  <app-article-detail-layout [showSidebar]="hasSidebar()">
     @if (post.thumbnail) {
-      <div class="blog-detail__hero">
-        <img [src]="post.thumbnail.header" [alt]="post.title" class="blog-detail__hero-image" />
-      </div>
+      <img
+        slot="hero"
+        [src]="post.thumbnail.header"
+        [alt]="post.title"
+        class="blog-detail__hero-image"
+      />
     }
 
-    <header class="blog-detail__header">
+    <div slot="header">
       <div class="blog-detail__meta">
         <time class="blog-detail__date" [attr.datetime]="post.created">
           {{ post.created | date: 'mediumDate' }}
@@ -51,30 +54,24 @@
           }
         </ul>
       }
-    </header>
-
-    <div class="blog-detail__layout">
-      <aside
-        class="blog-detail__sidebar"
-        aria-label="Artikelnavigation"
-        i18n-aria-label="@@page.blogDetail.sidebar.ariaLabel"
-      >
-        <app-table-of-contents [headings]="post.headings" />
-
-        @if (seriesPosts(); as series) {
-          @if (series.length > 1) {
-            <app-series-navigation [currentSlug]="post.slug" [seriesPosts]="series" />
-          }
-        }
-      </aside>
-
-      <div class="blog-detail__content" [attr.lang]="contentLang()">
-        <app-markdown-content [content]="post.content" />
-
-        <app-published-at-banner [publishedAt]="post.publishedAt" [linked]="post.linked" />
-      </div>
     </div>
-  </article>
+
+    <div slot="content" class="blog-detail__content" [attr.lang]="contentLang()">
+      <app-markdown-content [content]="post.content" />
+
+      <app-published-at-banner [publishedAt]="post.publishedAt" [linked]="post.linked" />
+    </div>
+
+    <div slot="sidebar">
+      <app-table-of-contents [headings]="post.headings" />
+
+      @if (seriesPosts(); as series) {
+        @if (series.length > 1) {
+          <app-series-navigation [currentSlug]="post.slug" [seriesPosts]="series" />
+        }
+      }
+    </div>
+  </app-article-detail-layout>
 } @else {
   <div class="not-found">
     <h1

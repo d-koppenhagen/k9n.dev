@@ -13,13 +13,14 @@ import { DatePipe } from '@angular/common';
 import { MarkdownContent } from '../../components/markdown-content/markdown-content';
 import { PublishedAtBanner } from '../../components/published-at-banner/published-at-banner';
 import { StatusBadge } from '../../components/status-badge/status-badge';
+import { ContentDetailLayout } from '../../layouts/content-detail-layout/content-detail-layout';
 import { MetaManager } from '../../services/meta/meta';
 import { Content } from '../../services/content/content';
 
 @Component({
   selector: 'app-project-detail-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MarkdownContent, PublishedAtBanner, StatusBadge, DatePipe],
+  imports: [MarkdownContent, PublishedAtBanner, StatusBadge, ContentDetailLayout, DatePipe],
   templateUrl: './project-detail-page.html',
   styleUrl: './project-detail-page.css',
 })

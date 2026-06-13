@@ -1,0 +1,78 @@
+/* Mobile-first base styles */
+.article-detail-layout {
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+  padding-block-end: var(--space-4xl);
+}
+
+.article-detail-layout__hero {
+  margin-inline: calc(-1 * var(--space-md));
+  margin-block-end: var(--space-2xl);
+  overflow: hidden;
+  max-width: calc(100% + 2 * var(--space-md));
+  border-radius: 0;
+}
+
+.article-detail-layout__hero:empty {
+  display: none;
+}
+
+.article-detail-layout__header {
+  max-width: var(--content-narrow-width);
+  margin-inline: auto;
+  margin-block-end: var(--space-3xl);
+  text-align: center;
+}
+
+.article-detail-layout__body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+}
+
+.article-detail-layout__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.article-detail-layout__content {
+  min-width: 0;
+}
+
+/* Desktop: wider padding, rounded hero */
+@media (min-width: 768px) {
+  .article-detail-layout {
+    padding-inline: var(--space-lg);
+  }
+
+  .article-detail-layout__hero {
+    margin-inline: calc(-1 * var(--space-lg));
+    max-width: calc(100% + 2 * var(--space-lg));
+    border-radius: var(--radius-lg);
+  }
+}
+
+/* Large desktop: 2-column layout with sticky sidebar */
+@media (min-width: 1024px) {
+  :host(.article-detail-layout--with-sidebar) .article-detail-layout__body,
+  app-article-detail-layout.article-detail-layout--with-sidebar .article-detail-layout__body {
+    grid-template-columns: 1fr 280px;
+  }
+
+  :host(.article-detail-layout--with-sidebar) .article-detail-layout__sidebar,
+  app-article-detail-layout.article-detail-layout--with-sidebar .article-detail-layout__sidebar {
+    order: 1;
+    position: sticky;
+    top: calc(var(--nav-height) + var(--space-lg));
+    align-self: start;
+  }
+
+  :host(.article-detail-layout--with-sidebar) .article-detail-layout__content,
+  app-article-detail-layout.article-detail-layout--with-sidebar .article-detail-layout__content {
+    order: 0;
+  }
+}

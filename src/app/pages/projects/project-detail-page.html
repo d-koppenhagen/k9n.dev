@@ -1,42 +1,42 @@
 @if (project(); as project) {
-      <article class="project-detail">
-        <header class="project-detail__header">
-          <div class="project-detail__meta">
-            <app-status-badge [status]="project.status" />
-            <time class="project-detail__date" [attr.datetime]="project.created">
-              {{ project.created | date:'mediumDate' }}
-            </time>
-          </div>
-          <h1 class="project-detail__title" [attr.lang]="contentLang()">{{ project.title }}</h1>
-          <p class="project-detail__description" [attr.lang]="contentLang()">{{ project.description }}</p>
-          @if (project.url) {
-            <a
-              class="project-detail__link"
-              [href]="project.url"
-              target="_blank"
-              rel="noopener noreferrer"
-              i18n="link text|View project link@@page.projectDetail.viewProject"
-            >
-              Projekt ansehen ↗
-            </a>
-          }
-        </header>
+  <app-content-detail-layout>
+    <div slot="header">
+      <div class="project-detail__meta">
+        <app-status-badge [status]="project.status" />
+        <time class="project-detail__date" [attr.datetime]="project.created">
+          {{ project.created | date:'mediumDate' }}
+        </time>
+      </div>
+      <h1 class="project-detail__title" [attr.lang]="contentLang()">{{ project.title }}</h1>
+      <p class="project-detail__description" [attr.lang]="contentLang()">{{ project.description }}</p>
+      @if (project.url) {
+        <a
+          class="project-detail__link"
+          [href]="project.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          i18n="link text|View project link@@page.projectDetail.viewProject"
+        >
+          Projekt ansehen ↗
+        </a>
+      }
+    </div>
 
-        <div class="project-detail__content" [attr.lang]="contentLang()">
-          <app-markdown-content [content]="project.content" />
+    <div slot="content" [attr.lang]="contentLang()">
+      <app-markdown-content [content]="project.content" />
 
-          <app-published-at-banner
-            [publishedAt]="project.publishedAt"
-            [linked]="project.linked"
-          />
-        </div>
-      </article>
-    } @else {
-      <section class="not-found">
-        <h1 class="not-found__title" i18n="not found title|Project not found title@@page.projectDetail.notFound.title">Projekt nicht gefunden</h1>
-        <p class="not-found__text" i18n="not found message|Project not found message@@page.projectDetail.notFound.message">
-          Das gesuchte Projekt existiert nicht.
-        </p>
-        <a class="not-found__link" href="/" i18n="not found link|Back to home link@@page.projectDetail.notFound.backLink">← Zurück zur Startseite</a>
-      </section>
-    }
+      <app-published-at-banner
+        [publishedAt]="project.publishedAt"
+        [linked]="project.linked"
+      />
+    </div>
+  </app-content-detail-layout>
+} @else {
+  <section class="not-found">
+    <h1 class="not-found__title" i18n="not found title|Project not found title@@page.projectDetail.notFound.title">Projekt nicht gefunden</h1>
+    <p class="not-found__text" i18n="not found message|Project not found message@@page.projectDetail.notFound.message">
+      Das gesuchte Projekt existiert nicht.
+    </p>
+    <a class="not-found__link" href="/" i18n="not found link|Back to home link@@page.projectDetail.notFound.backLink">← Zurück zur Startseite</a>
+  </section>
+}

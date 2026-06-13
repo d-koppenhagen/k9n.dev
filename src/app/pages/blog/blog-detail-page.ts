@@ -7,6 +7,7 @@ import { MarkdownContent } from '../../components/markdown-content/markdown-cont
 import { TableOfContents } from '../../components/table-of-contents/table-of-contents';
 import { SeriesNavigation } from '../../components/series-navigation/series-navigation';
 import { PublishedAtBanner } from '../../components/published-at-banner/published-at-banner';
+import { ArticleDetailLayout } from '../../layouts/article-detail-layout/article-detail-layout';
 import { MetaManager } from '../../services/meta/meta';
 import { Content } from '../../services/content/content';
 import { SITE_CONFIG, toAbsoluteUrl } from '../../config/site.config';
@@ -15,7 +16,7 @@ import { JsonLdArticle } from '../../models/json-ld.model';
 @Component({
   selector: 'app-blog-detail-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MarkdownContent, TableOfContents, SeriesNavigation, PublishedAtBanner, RouterLink, DatePipe],
+  imports: [MarkdownContent, TableOfContents, SeriesNavigation, PublishedAtBanner, ArticleDetailLayout, RouterLink, DatePipe],
   templateUrl: './blog-detail-page.html',
   styleUrl: './blog-detail-page.css',
 })
@@ -49,6 +50,12 @@ export class BlogDetailPage {
     }
     const posts = this.contentService.getBlogPostsBySeries(currentPost.series);
     return posts.map(p => ({ slug: p.slug, title: p.title, created: p.created }));
+  });
+
+  protected readonly hasSidebar = computed(() => {
+    const currentPost = this.post();
+    if (!currentPost) return false;
+    return (currentPost.headings?.length > 0) || (this.seriesPosts().length > 1);
   });
 
   constructor() {

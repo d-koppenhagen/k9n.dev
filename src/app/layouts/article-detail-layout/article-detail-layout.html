@@ -1,0 +1,25 @@
+<article class="article-detail-layout">
+  <div class="article-detail-layout__hero">
+    <ng-content select="[slot=hero]" />
+  </div>
+
+  <header class="article-detail-layout__header">
+    <ng-content select="[slot=header]" />
+  </header>
+
+  <div class="article-detail-layout__body">
+    <div class="article-detail-layout__content">
+      <ng-content select="[slot=content]" />
+    </div>
+
+    @if (showSidebar()) {
+      <aside
+        class="article-detail-layout__sidebar"
+        aria-label="Artikelnavigation"
+        i18n-aria-label="@@layout.articleDetail.sidebar.ariaLabel"
+      >
+        <ng-content select="[slot=sidebar]" />
+      </aside>
+    }
+  </div>
+</article>
