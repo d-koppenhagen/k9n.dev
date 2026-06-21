@@ -5,7 +5,7 @@ published: true
 author:
   name: Danny Koppenhagen
   mail: mail@k9n.dev
-updated: 2026-06-19
+updated: 2026-06-21
 keywords:
   - Accessibility
   - a11y
@@ -30,13 +30,16 @@ The platform is entirely client-side, so there is no backend required. All progr
 
 ![Screenshot of the Practica11y challenge interface](./practica11y_screenshot.png)
 
-## Highlights
+## Features
 
 - **Interactive challenges** solved right in the browser with a built-in Monaco editor
 - **Live accessibility analysis** powered by `axe-core` and `dom-accessibility-api`
-- **Accessibility tree visualization**, keyboard and focus analysis
+- **Accessibility tree visualization** to inspect the semantic structure of a solution
+- **Virtual screen reader** that simulates how a screen reader announces the preview, with step, auto-play and speed controls (powered by Guidepup and the Web Speech API)
+- **Keyboard and focus analysis** to surface focus traps, tab order and non-focusable interactive elements
 - **Sandboxed live preview** of the user's solution
-- **Gamification** with progress tracking to keep learning motivating
+- **Instant feedback** via per-challenge validators
+- **Gamification** with XP, levels and achievements, plus local progress tracking to keep learning motivating
 
 ## Tech Stack
 
