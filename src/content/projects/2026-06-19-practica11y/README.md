@@ -36,6 +36,7 @@ The platform is entirely client-side, so there is no backend required. All progr
 - **Live accessibility analysis** powered by `axe-core` and `dom-accessibility-api`
 - **Accessibility tree visualization** to inspect the semantic structure of a solution
 - **Virtual screen reader** that simulates how a screen reader announces the preview, with step, auto-play and speed controls (powered by Guidepup and the Web Speech API)
+- **Color contrast checker** that lets learners pick elements in the live preview to inspect foreground/background contrast ratios against WCAG 2.1 AA and AAA thresholds
 - **Keyboard and focus analysis** to surface focus traps, tab order and non-focusable interactive elements
 - **Sandboxed live preview** of the user's solution
 - **Instant feedback** via per-challenge validators
