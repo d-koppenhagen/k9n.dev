@@ -180,6 +180,23 @@ function generateTid(): string {
 
 async function syncPublication(session: SessionResponse): Promise<void> {
   const rkey = AUTHOR.atproto.publicationRkey;
+
+  // --recreate: delete any existing publication records with wrong rkeys
+  if (RECREATE) {
+    const existingPubs = await listRecords(session, 'site.standard.publication');
+    for (const record of existingPubs) {
+      const existingRkey = record.uri.split('/').pop()!;
+      if (existingRkey !== rkey) {
+        if (DRY_RUN) {
+          console.log(`[DRY RUN] Would delete old publication record: ${existingRkey}`);
+        } else {
+          await deleteRecord(session, 'site.standard.publication', existingRkey);
+          console.log(`  ✗ Deleted old publication record: ${existingRkey}`);
+        }
+      }
+    }
+  }
+
   const record = {
     $type: 'site.standard.publication',
     url: AUTHOR.url,

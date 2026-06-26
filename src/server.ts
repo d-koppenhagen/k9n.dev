@@ -30,7 +30,7 @@ const angularApp = new AngularNodeAppEngine();
  */
 app.get('/.well-known/site.standard.publication', (_req, res) => {
   res.type('text/plain').send(
-    'at://did:plc:b3o2mm5bb3s36dzzbgtaa3st/site.standard.publication/self\n',
+    'at://did:plc:b3o2mm5bb3s36dzzbgtaa3st/site.standard.publication/3mp7srpj6uceg\n',
   );
 });
 

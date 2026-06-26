@@ -25,7 +25,7 @@ thumbnail:
   header: ./pwaheader.jpg
   card: ./pwaheader-small.jpg
 series: angular-pwa
-atprotoRkey: "3mp7sarotpktf"
+atprotoRkey: "3mp7stsk6j2rn"
 ---
 
 Immer häufiger stößt man im Webumfeld auf den Begriff der Progessive Web App – kurz: PWA. Doch was genau steckt dahinter und welche Vorteile hat eine PWA gegenüber einer herkömmlichen Webanwendung oder einer App?

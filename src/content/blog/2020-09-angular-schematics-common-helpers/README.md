@@ -21,7 +21,7 @@ thumbnail:
   card: ./schematics-helpers-small.jpg
 linked:
   devTo: https://dev.to/dkoppenhagen/speed-up-your-angular-schematics-development-with-useful-helper-functions-1kb2
-atprotoRkey: "3mp7saqrl6spv"
+atprotoRkey: "3mp7stqso5ccw"
 ---
 
 Angular CLI schematics offer us a way to add, scaffold and update app-related files and modules. However, there are some common things we will probably want integrate in our schematics: updating your `package.json` file, adding or removing an Angular module or updating component imports.
