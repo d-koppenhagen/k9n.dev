@@ -81,6 +81,7 @@ export function parseBlogPost(filePath: string): BlogPost | null {
     language: data.language === 'de' || data.language === 'en' ? data.language : undefined,
     publishedAt,
     linked: linked.length > 0 ? linked : undefined,
+    atprotoRkey: data.atprotoRkey ? String(data.atprotoRkey) : undefined,
     content,
     headings: [],
   };

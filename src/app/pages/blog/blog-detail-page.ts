@@ -12,6 +12,7 @@ import { MetaManager } from '../../services/meta/meta';
 import { Content } from '../../services/content/content';
 import { SITE_CONFIG, toAbsoluteUrl } from '../../config/site.config';
 import { JsonLdArticle } from '../../models/json-ld.model';
+import { AUTHOR } from '../../../data/author';
 
 @Component({
   selector: 'app-blog-detail-page',
@@ -77,6 +78,9 @@ export class BlogDetailPage {
           publishedTime: currentPost.created,
           modifiedTime: currentPost.updated,
           keywords: currentPost.keywords,
+          atprotoDocumentUri: currentPost.atprotoRkey
+            ? `at://${AUTHOR.atproto.did}/site.standard.document/${currentPost.atprotoRkey}`
+            : undefined,
         });
 
         const articleSchema: JsonLdArticle = {

@@ -24,6 +24,7 @@ thumbnail:
   card: ./dev-setup-header-small.jpg
 linked:
   devTo: https://dev.to/dkoppenhagen/my-development-setup-1ne2
+atprotoRkey: "1il5n1f423okk"
 ---
 
 In the following article I will present you what tools I am using during my day-to-day development workflow.

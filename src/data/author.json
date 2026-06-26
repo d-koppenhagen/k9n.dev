@@ -33,6 +33,10 @@
       "I believe in building software that is not only robust and scalable, but also intuitive, inclusive, and a joy to use."
     ]
   },
+  "atproto": {
+    "did": "did:plc:b3o2mm5bb3s36dzzbgtaa3st",
+    "publicationRkey": "self"
+  },
   "social": {
     "github": {
       "url": "https://github.com/d-koppenhagen",

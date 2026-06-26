@@ -26,6 +26,11 @@ export interface AuthorImage {
   alt: string;
 }
 
+export interface AtprotoConfig {
+  did: string;
+  publicationRkey: string;
+}
+
 export interface AuthorData {
   name: string;
   email: string;
@@ -41,6 +46,7 @@ export interface AuthorData {
     de: string[];
     en: string[];
   };
+  atproto: AtprotoConfig;
   social: {
     github: SocialProfile;
     bluesky: SocialProfile;

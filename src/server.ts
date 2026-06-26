@@ -25,6 +25,16 @@ const angularApp = new AngularNodeAppEngine();
  */
 
 /**
+ * AT Protocol (standard.site) publication verification endpoint.
+ * Returns the AT-URI as plain text for any locale path prefix.
+ */
+app.get('/.well-known/site.standard.publication', (_req, res) => {
+  res.type('text/plain').send(
+    'at://did:plc:b3o2mm5bb3s36dzzbgtaa3st/site.standard.publication/self\n',
+  );
+});
+
+/**
  * Serve static files from /browser
  */
 app.use(
@@ -32,6 +42,7 @@ app.use(
     maxAge: '1y',
     index: false,
     redirect: false,
+    dotfiles: 'allow',
   }),
 );
 

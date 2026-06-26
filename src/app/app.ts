@@ -42,6 +42,7 @@ export class App implements AfterViewInit, OnDestroy {
 
   constructor() {
     this.metaService.injectWebsiteJsonLd();
+    this.metaService.injectPublicationLink();
 
     if (isPlatformBrowser(this.platformId)) {
       const consent = this.analytics.getConsent();

@@ -46,6 +46,7 @@ export interface BlogPost {
   language?: 'de' | 'en';
   publishedAt?: PublishedAt;
   linked?: LinkedPlatform[];
+  atprotoRkey?: string; // AT Protocol document record key for standard.site verification
   content: string; // Pre-rendered HTML
   headings: Heading[]; // For TOC generation
 }
@@ -119,4 +120,7 @@ export interface PageMeta {
   bookReleaseDate?: string;  // ISO 8601
   bookAuthors?: string[];    // profile URLs or names
   bookTags?: string[];
+
+  // AT Protocol (standard.site) verification
+  atprotoDocumentUri?: string;  // AT-URI for document verification link tag
 }

@@ -6,6 +6,7 @@ import { PageMeta } from '../../models/content.model';
 import { JsonLdSchema } from '../../models/json-ld.model';
 import { SITE_CONFIG, SUPPORTED_LOCALES, toAbsoluteUrl } from '../../config/site.config';
 import { addLocalePrefix, resolveLocale } from '../locale/locale';
+import { AUTHOR } from '../../../data/author';
 
 @Service()
 export class MetaManager {
@@ -20,6 +21,8 @@ export class MetaManager {
   private hreflangLinks: HTMLLinkElement[] = [];
   private jsonLdScripts: HTMLScriptElement[] = [];
   private websiteJsonLdScript: HTMLScriptElement | null = null;
+  private publicationLink: HTMLLinkElement | null = null;
+  private documentLink: HTMLLinkElement | null = null;
 
   constructor() {
     const rendererFactory = inject(RendererFactory2);
@@ -40,6 +43,7 @@ export class MetaManager {
     this.setLlmMeta(config);
     this.setArticleMeta(config);
     this.setBookMeta(config);
+    this.setAtprotoDocumentLink(config);
   }
 
   injectJsonLd(schema: JsonLdSchema): void {
@@ -75,6 +79,23 @@ export class MetaManager {
     this.renderer.appendChild(script, text);
     this.renderer.appendChild(this.document.head, script);
     this.websiteJsonLdScript = script;
+  }
+
+  /**
+   * Injects the <link rel="site.standard.publication"> discovery hint into the <head>.
+   * Called once at app startup. Points to the AT Protocol publication record.
+   */
+  injectPublicationLink(): void {
+    // Guard against duplicate injection
+    if (this.publicationLink) {
+      return;
+    }
+
+    const atUri = `at://${AUTHOR.atproto.did}/site.standard.publication/${AUTHOR.atproto.publicationRkey}`;
+    this.publicationLink = this.renderer.createElement('link');
+    this.renderer.setAttribute(this.publicationLink, 'rel', 'site.standard.publication');
+    this.renderer.setAttribute(this.publicationLink, 'href', atUri);
+    this.renderer.appendChild(this.document.head, this.publicationLink);
   }
 
   private cleanup(): void {
@@ -141,6 +162,12 @@ export class MetaManager {
 
     // Remove page-specific JSON-LD scripts (preserve WebSite schema)
     this.removePageJsonLd();
+
+    // Remove AT Protocol document link
+    if (this.documentLink) {
+      this.renderer.removeChild(this.document.head, this.documentLink);
+      this.documentLink = null;
+    }
   }
 
   private removePageJsonLd(): void {
@@ -397,5 +424,20 @@ export class MetaManager {
         this.meta.addTag({ property: 'book:tag', content: tag });
       }
     }
+  }
+
+  /**
+   * Injects a <link rel="site.standard.document"> tag for AT Protocol document verification.
+   * Only added when the page config provides an atprotoDocumentUri.
+   */
+  private setAtprotoDocumentLink(config: PageMeta): void {
+    if (!config.atprotoDocumentUri) {
+      return;
+    }
+
+    this.documentLink = this.renderer.createElement('link');
+    this.renderer.setAttribute(this.documentLink, 'rel', 'site.standard.document');
+    this.renderer.setAttribute(this.documentLink, 'href', config.atprotoDocumentUri);
+    this.renderer.appendChild(this.document.head, this.documentLink);
   }
 }

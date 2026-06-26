@@ -64,3 +64,6 @@ storybook-static
 /test-results/
 /playwright-report/
 /playwright/.cache/
+
+# Dotenv
+.env.local
