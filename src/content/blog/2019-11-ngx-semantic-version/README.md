@@ -31,7 +31,7 @@ language: en
 thumbnail:
   header: ./ngx-semantic-version-header.jpg
   card: ./ngx-semantic-version-header-small.jpg
-atprotoRkey: "1il5n1fmpn8mu"
+atprotoRkey: "3mp7sarkjzccz"
 ---
 
 **In this article I will introduce the new tool `ngx-semantic-version`.

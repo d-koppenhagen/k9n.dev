@@ -26,7 +26,7 @@ thumbnail:
   header: ./scully-header2.jpg
   card: ./scully-header2-small.jpg
 series: scully
-atprotoRkey: "1il5n1fam10v2"
+atprotoRkey: "3mp7sar62m2nd"
 ---
 
 # Dig deeper into static site generation with _Scully_ and use the most out of it

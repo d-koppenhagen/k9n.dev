@@ -33,6 +33,7 @@ const PDS_URL = process.env['ATPROTO_PDS'] || 'https://bsky.social';
 const HANDLE = process.env['ATPROTO_HANDLE'];
 const PASSWORD = process.env['ATPROTO_PASSWORD'];
 const DRY_RUN = process.env['DRY_RUN'] === 'true';
+const RECREATE = process.argv.includes('--recreate');
 
 interface SessionResponse {
   did: string;
@@ -97,6 +98,30 @@ async function putRecord(
   return res.json() as Promise<RecordResponse>;
 }
 
+async function deleteRecord(
+  session: SessionResponse,
+  collection: string,
+  rkey: string,
+): Promise<void> {
+  const res = await fetch(`${PDS_URL}/xrpc/com.atproto.repo.deleteRecord`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${session.accessJwt}`,
+    },
+    body: JSON.stringify({
+      repo: session.did,
+      collection,
+      rkey,
+    }),
+  });
+
+  if (!res.ok) {
+    const error = await res.text();
+    throw new Error(`deleteRecord failed for ${collection}/${rkey}: ${res.status} ${error}`);
+  }
+}
+
 async function listRecords(
   session: SessionResponse,
   collection: string,
@@ -131,13 +156,26 @@ async function listRecords(
 
 /**
  * Generates a TID (Timestamp Identifier) for use as an rkey.
- * TIDs are base32-sortable timestamps used in AT Protocol.
+ * TIDs are 13-character base32-sortable encoded 64-bit integers.
+ * Format: 53 bits microsecond timestamp + 10 bits random clock ID.
+ * Alphabet: 234567abcdefghijklmnopqrstuvwxyz
  */
 function generateTid(): string {
-  const now = BigInt(Date.now()) * 1000n; // microseconds
-  const clockId = BigInt(Math.floor(Math.random() * 1024));
-  const tid = (now << 10n) | clockId;
-  return tid.toString(32).padStart(13, '2');
+  const B32_CHARSET = '234567abcdefghijklmnopqrstuvwxyz';
+
+  const timestampMicros = BigInt(Date.now()) * 1000n;
+  const clockId = BigInt(Math.floor(Math.random() * 1024)); // 10 bits
+  const tid64 = (timestampMicros << 10n) | clockId;
+
+  // Encode as 13-character base32-sortable string
+  let encoded = '';
+  let value = tid64;
+  for (let i = 0; i < 13; i++) {
+    encoded = B32_CHARSET[Number(value & 31n)] + encoded;
+    value >>= 5n;
+  }
+
+  return encoded;
 }
 
 async function syncPublication(session: SessionResponse): Promise<void> {
@@ -164,7 +202,7 @@ async function syncPublication(session: SessionResponse): Promise<void> {
 }
 
 async function syncDocuments(session: SessionResponse): Promise<number> {
-  // Get existing document records to avoid duplicates
+  // Get existing document records
   const existingRecords = await listRecords(session, 'site.standard.document');
   const existingByPath = new Map<string, string>();
 
@@ -174,6 +212,22 @@ async function syncDocuments(session: SessionResponse): Promise<number> {
       const rkey = record.uri.split('/').pop()!;
       existingByPath.set(path, rkey);
     }
+  }
+
+  // --recreate: delete all existing document records first
+  if (RECREATE && existingRecords.length > 0) {
+    console.log(`Deleting ${existingRecords.length} existing document record(s)...`);
+    for (const record of existingRecords) {
+      const rkey = record.uri.split('/').pop()!;
+      if (DRY_RUN) {
+        console.log(`  [DRY RUN] Would delete record: ${rkey}`);
+      } else {
+        await deleteRecord(session, 'site.standard.document', rkey);
+        console.log(`  ✗ Deleted: ${rkey}`);
+      }
+    }
+    // Clear the map so all posts get new records
+    existingByPath.clear();
   }
 
   const publicationUri = `at://${session.did}/site.standard.publication/${AUTHOR.atproto.publicationRkey}`;
@@ -189,15 +243,15 @@ async function syncDocuments(session: SessionResponse): Promise<number> {
     let rkey: string;
     let isNew = false;
 
-    if (post.atprotoRkey) {
+    if (!RECREATE && post.atprotoRkey) {
       // Post already has an rkey assigned — just update the record
       rkey = post.atprotoRkey;
-    } else if (existingByPath.has(docPath)) {
+    } else if (!RECREATE && existingByPath.has(docPath)) {
       // Record already exists on PDS but frontmatter is missing the rkey
       rkey = existingByPath.get(docPath)!;
       frontmatterUpdates.push({ slug: post.slug, rkey });
     } else {
-      // New record needed
+      // New record needed (or --recreate forces fresh TIDs)
       rkey = generateTid();
       isNew = true;
       frontmatterUpdates.push({ slug: post.slug, rkey });
@@ -320,7 +374,9 @@ async function main(): Promise<void> {
 
   console.log(`Syncing standard.site records to ${PDS_URL}...`);
   console.log(`Handle: ${HANDLE}`);
-  if (DRY_RUN) console.log('Mode: DRY RUN (no changes will be made)\n');
+  if (DRY_RUN) console.log('Mode: DRY RUN (no changes will be made)');
+  if (RECREATE) console.log('Mode: RECREATE (deleting all existing document records first)');
+  console.log();
 
   const session = await createSession();
   console.log(`Authenticated as ${session.did}\n`);

@@ -24,7 +24,7 @@ thumbnail:
   header: ./scully-header.jpg
   card: ./scully-header-small.jpg
 series: scully
-atprotoRkey: "1il5n1fgig87c"
+atprotoRkey: "3mp7sarecsckb"
 ---
 
 # Create powerful fast pre-rendered Angular Apps using _Scully_ static site generator

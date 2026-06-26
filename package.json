@@ -22,6 +22,7 @@
     "build:deploy": "npm run build:content && ng build && npx tsx scripts/post-build.ts",
     "atproto:sync": "node --env-file=.env.local node_modules/.bin/tsx scripts/atproto-sync.ts",
     "atproto:sync:dry": "DRY_RUN=true node --env-file=.env.local node_modules/.bin/tsx scripts/atproto-sync.ts",
+    "atproto:sync:recreate": "node --env-file=.env.local node_modules/.bin/tsx scripts/atproto-sync.ts --recreate",
     "i18n:extract": "ng extract-i18n --output-path=src/locale",
     "preview": "npm run i18n:extract && npm run build:deploy && npm run serve:preview",
     "serve:preview": "npx tsx scripts/serve-static.ts",

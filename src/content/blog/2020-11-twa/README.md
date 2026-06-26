@@ -21,7 +21,7 @@ thumbnail:
   header: ./header-twa.jpg
   card: ./header-twa-small.jpg
 series: angular-pwa
-atprotoRkey: "1il5n1emoaolg"
+atprotoRkey: "3mp7saqlbzc3n"
 ---
 
 Progressive Web Apps sind in den letzten Jahren immer populärer geworden.
