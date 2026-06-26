@@ -365,6 +365,27 @@ function generateRedirectHtml(targetUrl: string): string {
 `;
 }
 
+/**
+ * Copies .well-known files to the dist root for AT Protocol (standard.site) verification.
+ * The Angular build places these under locale prefixes (/de/.well-known/, /en/.well-known/),
+ * but the spec requires them at the domain root: /.well-known/site.standard.publication
+ */
+function copyWellKnown(): void {
+  const wellKnownSource = join(ROOT_DIR, 'public', '.well-known');
+  if (!existsSync(wellKnownSource)) {
+    return;
+  }
+
+  const wellKnownDest = join(DIST_DIR, '.well-known');
+  mkdirSync(wellKnownDest, { recursive: true });
+
+  const pubFile = join(wellKnownSource, 'site.standard.publication');
+  if (existsSync(pubFile)) {
+    copyFileSync(pubFile, join(wellKnownDest, 'site.standard.publication'));
+    console.log('[post-build] Copied .well-known/site.standard.publication to dist root.');
+  }
+}
+
 function postBuild(): void {
   console.log('[post-build] Starting post-build processing...');
 
@@ -379,6 +400,7 @@ function postBuild(): void {
   generateRedirectPage();
   generateLegacyRedirects();
   generateSeoFiles();
+  copyWellKnown();
 
   console.log('[post-build] Post-build processing complete.');
 }

@@ -30,7 +30,7 @@
         <source>Seite geladen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.ts</context>
-          <context context-type="linenumber">90</context>
+          <context context-type="linenumber">91</context>
         </context-group>
         <note priority="1" from="description">Default page loaded announcement</note>
         <note priority="1" from="meaning">route announcement</note>
@@ -627,7 +627,7 @@
         <source>Beiträge filtern nach: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/blog/blog-detail-page.ts</context>
-          <context context-type="linenumber">44</context>
+          <context context-type="linenumber">45</context>
         </context-group>
         <note priority="1" from="description">Filter blog posts by tag</note>
         <note priority="1" from="meaning">aria label</note>
@@ -1308,7 +1308,7 @@
         <source> Die Seite, die du suchst, existiert nicht oder wurde verschoben. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/not-found/not-found-page.html</context>
-          <context context-type="linenumber">4,6</context>
+          <context context-type="linenumber">7,12</context>
         </context-group>
         <note priority="1" from="description">Page not found message</note>
         <note priority="1" from="meaning">not found message</note>
@@ -1317,7 +1317,7 @@
         <source>Zurück zur Startseite</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/not-found/not-found-page.html</context>
-          <context context-type="linenumber">6,8</context>
+          <context context-type="linenumber">13,16</context>
         </context-group>
         <note priority="1" from="description">Back to home link</note>
         <note priority="1" from="meaning">not found link</note>
