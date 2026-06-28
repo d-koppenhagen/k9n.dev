@@ -8,6 +8,8 @@ import {
   inject,
   input,
   Injector,
+  signal,
+  viewChild,
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Theme } from '../../services/theme/theme';
@@ -25,6 +27,17 @@ export class MarkdownContent {
   private readonly theme = inject(Theme);
 
   readonly content = input.required<string>();
+
+  /** Lightbox state */
+  protected readonly lightboxSrc = signal<string | null>(null);
+  protected readonly lightboxAlt = signal<string>('');
+  protected readonly lightboxAriaLabel = computed(
+    () => $localize`:aria label|Image lightbox dialog@@markdownContent.lightbox.ariaLabel:Bildvorschau: ` + this.lightboxAlt(),
+  );
+  protected readonly closeLightboxLabel = $localize`:aria label|Close lightbox button@@markdownContent.lightbox.close:Bildvorschau schließen`;
+
+  private readonly dialogRef = viewChild<ElementRef<HTMLDialogElement>>('lightboxDialog');
+  private triggerElement: HTMLElement | null = null;
 
   /** Original mermaid source code per block, preserved for re-rendering on theme change. */
   private mermaidSources: string[] = [];
@@ -46,10 +59,74 @@ export class MarkdownContent {
         void this.reRenderMermaid(resolvedTheme);
       }
     });
+
+    // Set up lightbox after content is rendered to DOM
+    effect(() => {
+      this.content(); // track content changes
+      afterNextRender(() => this.setupImageLightbox(), { injector: this.injector });
+    });
   }
 
   private scheduleMermaidRender(): void {
     afterNextRender(() => this.renderMermaidDiagrams(), { injector: this.injector });
+  }
+
+  /** Makes content images interactive and opens the lightbox on click/keyboard activation. */
+  private setupImageLightbox(): void {
+    const el = this.elementRef.nativeElement;
+    const images = el.querySelectorAll<HTMLImageElement>('.markdown-content img');
+
+    for (const img of images) {
+      // Skip already-setup images and mermaid diagrams
+      if (img.classList.contains('lightbox-trigger')) continue;
+      if (img.closest('pre.mermaid')) continue;
+
+      img.setAttribute('role', 'button');
+      img.setAttribute('tabindex', '0');
+      img.setAttribute(
+        'aria-label',
+        $localize`:aria label|Enlarge image button@@markdownContent.lightbox.enlarge:Bild vergrößern: ` + (img.alt || ''),
+      );
+      img.classList.add('lightbox-trigger');
+
+      img.addEventListener('click', () => this.openLightbox(img));
+      img.addEventListener('keydown', (e: KeyboardEvent) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.openLightbox(img);
+        }
+      });
+    }
+  }
+
+  protected openLightbox(img: HTMLImageElement): void {
+    this.triggerElement = img;
+    this.lightboxSrc.set(img.src);
+    this.lightboxAlt.set(img.alt || '');
+
+    const dialog = this.dialogRef()?.nativeElement;
+    if (dialog && !dialog.open) {
+      dialog.showModal();
+    }
+  }
+
+  protected closeLightbox(): void {
+    const dialog = this.dialogRef()?.nativeElement;
+    dialog?.close();
+  }
+
+  protected closeLightboxOnBackdrop(event: MouseEvent): void {
+    const dialog = this.dialogRef()?.nativeElement;
+    if (event.target === dialog) {
+      dialog.close();
+    }
+  }
+
+  protected onDialogClose(): void {
+    // Return focus to the trigger image
+    this.triggerElement?.focus();
+    this.triggerElement = null;
+    this.lightboxSrc.set(null);
   }
 
   private async renderMermaidDiagrams(): Promise<void> {

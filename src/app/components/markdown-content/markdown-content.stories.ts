@@ -57,3 +57,15 @@ export const ShortContent: Story = {
     content: '<p>A short paragraph of text for a minimal content block.</p>',
   },
 };
+
+export const WithImages: Story = {
+  args: {
+    content: `
+<h2 id="gallery">Image Gallery</h2>
+<p>Click on any image below to open it in a lightbox.</p>
+<p><img src="https://picsum.photos/seed/angular1/800/400" alt="Sample landscape image" /></p>
+<p>Some text between images to show mixed content.</p>
+<p><img src="https://picsum.photos/seed/angular2/600/600" alt="Sample square image" /></p>
+`,
+  },
+};

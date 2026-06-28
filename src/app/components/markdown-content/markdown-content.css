@@ -63,6 +63,75 @@
     /* Images */
     :host ::ng-deep img { display: block; max-width: 100%; height: auto; border-radius: var(--radius-md); margin-block: var(--space-lg); }
 
+    /* Zoomable images in content */
+    :host ::ng-deep img.lightbox-trigger {
+      cursor: zoom-in;
+      transition: box-shadow var(--transition-fast);
+    }
+    :host ::ng-deep img.lightbox-trigger:hover { box-shadow: var(--shadow-card-hover); }
+    :host ::ng-deep img.lightbox-trigger:focus-visible { outline: 3px solid var(--color-focus-ring); outline-offset: 2px; }
+
+    /* Image Lightbox Dialog */
+    .image-lightbox {
+      border: none;
+      background: transparent;
+      padding: 0;
+      max-width: 95vw;
+      max-height: 95vh;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      margin: auto;
+      opacity: 0;
+      transform: scale(0.92);
+      transition-property: opacity, transform, display, overlay;
+      transition-duration: 0.25s;
+      transition-timing-function: ease-out;
+      transition-behavior: allow-discrete;
+    }
+    .image-lightbox[open] {
+      opacity: 1;
+      transform: scale(1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @starting-style { opacity: 0; transform: scale(0.92); }
+    }
+    .image-lightbox::backdrop {
+      background-color: rgba(0, 0, 0, 0);
+      backdrop-filter: blur(0);
+      transition: background-color 0.25s ease-out, backdrop-filter 0.25s ease-out, display 0.25s allow-discrete, overlay 0.25s allow-discrete;
+    }
+    .image-lightbox[open]::backdrop {
+      background-color: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(4px);
+      @starting-style { background-color: rgba(0, 0, 0, 0); backdrop-filter: blur(0); }
+    }
+    .lightbox-image { display: block; max-width: 90vw; max-height: 85vh; width: auto; height: auto; object-fit: contain; border-radius: var(--radius-md); }
+    .lightbox-close {
+      position: absolute;
+      top: var(--space-sm);
+      right: var(--space-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      cursor: pointer;
+      transition: background var(--transition-fast);
+    }
+    .lightbox-close:hover { background: rgba(255, 255, 255, 0.3); }
+    .lightbox-close:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .image-lightbox { transform: none; transition-duration: 0.1s; }
+      .image-lightbox[open] { transform: none; @starting-style { transform: none; } }
+    }
+
     /* Tables */
     :host ::ng-deep table { width: 100%; margin-block-end: var(--space-xl); border-collapse: collapse; font-size: var(--font-size-sm); display: block; overflow-x: auto; }
     :host ::ng-deep thead { border-bottom: 2px solid var(--color-border); }
