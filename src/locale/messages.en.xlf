@@ -718,15 +718,15 @@
         <source>Informationen für Recruiter und Talent Scouts zu meinen Anforderungen an neue Positionen.</source>
         <target>Information for recruiters and talent scouts about my requirements for new positions.</target>
       </trans-unit>
-      <trans-unit id="markdownContent.lightbox.ariaLabel" datatype="html">
+      <trans-unit id="imageLightbox.ariaLabel" datatype="html">
         <source>Bildvorschau: </source>
         <target>Image preview: </target>
       </trans-unit>
-      <trans-unit id="markdownContent.lightbox.close" datatype="html">
+      <trans-unit id="imageLightbox.close" datatype="html">
         <source>Bildvorschau schließen</source>
         <target>Close image preview</target>
       </trans-unit>
-      <trans-unit id="markdownContent.lightbox.enlarge" datatype="html">
+      <trans-unit id="imageLightbox.enlarge" datatype="html">
         <source>Bild vergrößern: </source>
         <target>Enlarge image: </target>
       </trans-unit>

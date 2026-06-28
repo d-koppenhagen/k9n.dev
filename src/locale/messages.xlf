@@ -253,29 +253,29 @@
           <context context-type="linenumber">1</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="markdownContent.lightbox.ariaLabel" datatype="html">
+      <trans-unit id="imageLightbox.ariaLabel" datatype="html">
         <source>Bildvorschau: </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/markdown-content/markdown-content.ts</context>
-          <context context-type="linenumber">37</context>
+          <context context-type="sourcefile">src/app/components/image-lightbox/image-lightbox.ts</context>
+          <context context-type="linenumber">42</context>
         </context-group>
         <note priority="1" from="description">Image lightbox dialog</note>
         <note priority="1" from="meaning">aria label</note>
       </trans-unit>
-      <trans-unit id="markdownContent.lightbox.close" datatype="html">
+      <trans-unit id="imageLightbox.close" datatype="html">
         <source>Bildvorschau schließen</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/markdown-content/markdown-content.ts</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="sourcefile">src/app/components/image-lightbox/image-lightbox.ts</context>
+          <context context-type="linenumber">45</context>
         </context-group>
         <note priority="1" from="description">Close lightbox button</note>
         <note priority="1" from="meaning">aria label</note>
       </trans-unit>
-      <trans-unit id="markdownContent.lightbox.enlarge" datatype="html">
+      <trans-unit id="imageLightbox.enlarge" datatype="html">
         <source>Bild vergrößern: </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/markdown-content/markdown-content.ts</context>
-          <context context-type="linenumber">88</context>
+          <context context-type="sourcefile">src/app/components/image-lightbox/image-lightbox.ts</context>
+          <context context-type="linenumber">72</context>
         </context-group>
         <note priority="1" from="description">Enlarge image button</note>
         <note priority="1" from="meaning">aria label</note>
