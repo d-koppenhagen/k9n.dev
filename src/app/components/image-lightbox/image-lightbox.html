@@ -1,7 +1,9 @@
+<!-- eslint-disable-next-line @angular-eslint/template/interactive-supports-focus -->
 <dialog
   #lightboxDialog
   class="image-lightbox"
   (click)="closeLightboxOnBackdrop($event)"
+  (keydown.escape)="closeLightbox()"
   (close)="onDialogClose()"
   [attr.aria-label]="lightboxAriaLabel()"
 >
