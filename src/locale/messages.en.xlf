@@ -395,8 +395,8 @@
         <target>Imprint</target>
       </trans-unit>
       <trans-unit id="page.imprint.subtitle" datatype="html">
-        <source>Angaben gemäß § 5 TMG</source>
-        <target>Information according to § 5 TMG</target>
+        <source>Angaben gemäß § 5 DDG</source>
+        <target>Information according to § 5 DDG</target>
       </trans-unit>
       <trans-unit id="page.imprint.representedBy.heading" datatype="html">
         <source>Vertreten durch</source>

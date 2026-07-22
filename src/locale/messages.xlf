@@ -1183,7 +1183,7 @@
         <note priority="1" from="meaning">page title</note>
       </trans-unit>
       <trans-unit id="page.imprint.subtitle" datatype="html">
-        <source>Angaben gemäß § 5 TMG</source>
+        <source>Angaben gemäß § 5 DDG</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/imprint/imprint-page.html</context>
           <context context-type="linenumber">4,7</context>
