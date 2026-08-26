@@ -53,7 +53,7 @@ describe('Navigation', () => {
       const labels = Array.from(links).map(
         (link: unknown) => (link as HTMLElement).textContent?.trim(),
       );
-      expect(labels).toEqual(['Startseite', 'Blog', 'Vorträge', 'Projekte', 'Buch', 'Kontakt']);
+      expect(labels).toEqual(['Startseite', 'Blog', 'Vorträge & Interviews', 'Projekte', 'Buch', 'Kontakt']);
     });
 
     it('should include the theme switcher', () => {
