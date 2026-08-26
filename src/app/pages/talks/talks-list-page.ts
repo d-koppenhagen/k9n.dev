@@ -18,7 +18,7 @@ export class TalksListPage {
 
   readonly filter = createContentFilter(this.contentService.talks);
 
-  protected readonly pageTitle = $localize`:page title|Talks list page title@@page.talks.title:Vorträge`;
+  protected readonly pageTitle = $localize`:page title|Talks list page title@@page.talks.title:Vorträge & Interviews`;
   protected readonly pageSubtitle = $localize`:page subtitle|Talks list page subtitle@@page.talks.subtitle:Konferenzvorträge und Präsentationen zu Angular, Webentwicklung und moderner Frontend-Architektur.`;
   protected readonly gridAriaLabel = $localize`:aria label|Talks list grid@@page.talks.grid.ariaLabel:Vortragsliste`;
 

@@ -355,8 +355,8 @@
         <target>View all posts</target>
       </trans-unit>
       <trans-unit id="page.home.recentTalks.title" datatype="html">
-        <source> Aktuelle Vorträge </source>
-        <target> Recent Talks </target>
+        <source> Aktuelle Vorträge &amp; Interviews </source>
+        <target> Recent Talks &amp; Interviews </target>
       </trans-unit>
       <trans-unit id="page.home.recentTalks.viewAll" datatype="html">
         <source>Alle Vorträge</source>
@@ -539,8 +539,8 @@
         <target>No talks match your filter.</target>
       </trans-unit>
       <trans-unit id="page.talks.title" datatype="html">
-        <source>Vorträge</source>
-        <target>Talks</target>
+        <source>Vorträge &amp; Interviews</source>
+        <target>Talks &amp; Interviews</target>
       </trans-unit>
       <trans-unit id="page.talks.subtitle" datatype="html">
         <source>Konferenzvorträge und Präsentationen zu Angular, Webentwicklung und moderner Frontend-Architektur.</source>

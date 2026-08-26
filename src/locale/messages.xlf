@@ -1097,7 +1097,7 @@
         <note priority="1" from="meaning">nav link</note>
       </trans-unit>
       <trans-unit id="page.home.recentTalks.title" datatype="html">
-        <source> Aktuelle Vorträge </source>
+        <source> Aktuelle Vorträge &amp; Interviews </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home-page.html</context>
           <context context-type="linenumber">100,103</context>
@@ -1483,7 +1483,7 @@
         <note priority="1" from="meaning">empty state</note>
       </trans-unit>
       <trans-unit id="page.talks.title" datatype="html">
-        <source>Vorträge</source>
+        <source>Vorträge &amp; Interviews</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/talks/talks-list-page.ts</context>
           <context context-type="linenumber">21</context>
