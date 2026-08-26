@@ -11,6 +11,8 @@
           [date]="talk.date"
           [routeLink]="'/talks/' + talk.slug"
           [thumbnail]="talk.thumbnail"
+          [externalUrl]="talk.publishedAt?.linkExternal ? talk.publishedAt?.url : undefined"
+          [hreflang]="talk.language"
           [eventName]="talk.event"
           [language]="talk.language"
           [publishedAt]="talk.publishedAt"

@@ -24,7 +24,7 @@ export class TalksListPage {
 
   constructor() {
     this.metaService.updateMeta({
-      title: 'Talks',
+      title: 'Talks & Interviews',
       description: 'Conference talks and presentations on Angular, web development, and modern frontend architecture.',
       url: 'https://k9n.dev/talks',
       type: 'website',

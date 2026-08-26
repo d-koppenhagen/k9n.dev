@@ -26,7 +26,7 @@ export class Navigation {
   protected readonly navLinks: readonly NavLink[] = [
     { path: '/', label: $localize`:navigation link|Home page@@nav.home:Startseite`, exact: true },
     { path: '/blog', label: $localize`:navigation link|Blog page@@nav.blog:Blog`, exact: false },
-    { path: '/talks', label: $localize`:navigation link|Talks page@@nav.talks:Vorträge`, exact: false },
+    { path: '/talks', label: $localize`:navigation link|Talks page@@nav.talks:Vorträge & Interviews`, exact: false },
     { path: '/projects', label: $localize`:navigation link|Projects page@@nav.projects:Projekte`, exact: false },
     { path: '/book', label: $localize`:navigation link|Book page@@nav.book:Buch`, exact: false },
     { path: '/contact', label: $localize`:navigation link|Contact page@@nav.contact:Kontakt`, exact: false },

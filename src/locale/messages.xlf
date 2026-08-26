@@ -39,7 +39,16 @@
         <source>Veröffentlicht auf <x id="INTERPOLATION" equiv-text="{{ item.publishedAt.name }}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
-          <context context-type="linenumber">46,47</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+        <note priority="1" from="description">Published at source</note>
+        <note priority="1" from="meaning">card label</note>
+      </trans-unit>
+      <trans-unit id="contentCard.publishedAt.label" datatype="html">
+        <source>Veröffentlicht auf <x id="INTERPOLATION" equiv-text="{{ publishedAt()!.name }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
+          <context context-type="linenumber">87,88</context>
         </context-group>
         <note priority="1" from="description">Published at source</note>
         <note priority="1" from="meaning">card label</note>
@@ -48,19 +57,10 @@
         <source>Bevorstehend</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
-          <context context-type="linenumber">81,84</context>
+          <context context-type="linenumber">93,96</context>
         </context-group>
         <note priority="1" from="description">Upcoming event badge</note>
         <note priority="1" from="meaning">badge label</note>
-      </trans-unit>
-      <trans-unit id="contentCard.publishedAt.label" datatype="html">
-        <source>Veröffentlicht auf <x id="INTERPOLATION" equiv-text="{{ publishedAt()!.name }}"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
-          <context context-type="linenumber">105,106</context>
-        </context-group>
-        <note priority="1" from="description">Published at source</note>
-        <note priority="1" from="meaning">card label</note>
       </trans-unit>
       <trans-unit id="contentFilter.ariaLabel" datatype="html">
         <source>Inhalte filtern</source>
@@ -246,18 +246,11 @@
         <note priority="1" from="description">Copyright notice</note>
         <note priority="1" from="meaning">footer copyright</note>
       </trans-unit>
-      <trans-unit id="languageSwitcher.ariaLabel" datatype="html">
-        <source>Language selection</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/language-switcher/language-switcher.html</context>
-          <context context-type="linenumber">1</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="imageLightbox.ariaLabel" datatype="html">
         <source>Bildvorschau: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/image-lightbox/image-lightbox.ts</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">41</context>
         </context-group>
         <note priority="1" from="description">Image lightbox dialog</note>
         <note priority="1" from="meaning">aria label</note>
@@ -275,10 +268,17 @@
         <source>Bild vergrößern: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/image-lightbox/image-lightbox.ts</context>
-          <context context-type="linenumber">72</context>
+          <context context-type="linenumber">76</context>
         </context-group>
         <note priority="1" from="description">Enlarge image button</note>
         <note priority="1" from="meaning">aria label</note>
+      </trans-unit>
+      <trans-unit id="languageSwitcher.ariaLabel" datatype="html">
+        <source>Language selection</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/language-switcher/language-switcher.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="nav.ariaLabel" datatype="html">
         <source>Hauptnavigation</source>

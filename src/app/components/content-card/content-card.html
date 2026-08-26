@@ -25,15 +25,6 @@
             }
             <div class="card__body">
               <div class="card__header-row">
-                <div class="card__header-text">
-                  <div class="card__meta">
-                    <time class="card__date" [attr.datetime]="item.date">{{ item.date | date:'mediumDate' }}</time>
-                  </div>
-                  @switch (headingLevel()) {
-                    @case (2) { <h2 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h2> }
-                    @default { <h3 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h3> }
-                  }
-                </div>
                 @if (item.publishedAt?.logo) {
                   <span class="card__published-at">
                     <img
@@ -46,6 +37,15 @@
                     <span class="visually-hidden" i18n="card label|Published at source@@contentCard.publishedAt.seriesLabel">Veröffentlicht auf {{ item.publishedAt.name }}</span>
                   </span>
                 }
+                <div class="card__header-text">
+                  <div class="card__meta">
+                    <time class="card__date" [attr.datetime]="item.date">{{ item.date | date:'mediumDate' }}</time>
+                  </div>
+                  @switch (headingLevel()) {
+                    @case (2) { <h2 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h2> }
+                    @default { <h3 class="card__title" [attr.lang]="getItemLang(item)">{{ item.title }}</h3> }
+                  }
+                </div>
               </div>
               <p class="card__description" [attr.lang]="getItemLang(item)">{{ item.description }}</p>
             </div>
@@ -75,6 +75,18 @@
       }
       <div class="card__body">
         <div class="card__header-row">
+          @if (publishedAt()?.logo) {
+            <span class="card__published-at">
+              <img
+                class="card__published-at-logo"
+                [src]="publishedAt()!.logo!"
+                [alt]="''"
+                width="96"
+                height="96"
+              />
+              <span class="visually-hidden" i18n="card label|Published at source@@contentCard.publishedAt.label">Veröffentlicht auf {{ publishedAt()!.name }}</span>
+            </span>
+          }
           <div class="card__header-text">
             <div class="card__meta">
               @if (isUpcoming()) {
@@ -93,18 +105,6 @@
               @default { <h3 class="card__title" [attr.lang]="contentLang()">{{ title() }}</h3> }
             }
           </div>
-          @if (publishedAt()?.logo) {
-            <span class="card__published-at">
-              <img
-                class="card__published-at-logo"
-                [src]="publishedAt()!.logo!"
-                [alt]="''"
-                width="96"
-                height="96"
-              />
-              <span class="visually-hidden" i18n="card label|Published at source@@contentCard.publishedAt.label">Veröffentlicht auf {{ publishedAt()!.name }}</span>
-            </span>
-          }
         </div>
         <p class="card__description" [attr.lang]="contentLang()">{{ description() }}</p>
       </div>

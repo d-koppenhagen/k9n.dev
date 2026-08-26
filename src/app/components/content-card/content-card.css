@@ -52,6 +52,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: right;
 }
 
 .card__external-badge {
@@ -101,9 +102,10 @@
 }
 
 .card__published-at {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
+  float: right;
+  margin-left: var(--space-xs);
+  margin-bottom: var(--space-xs);
+  text-align: right;
 }
 
 .card__published-at-logo {
@@ -113,21 +115,15 @@
 }
 
 .card__header-row {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-md);
+  display: block;
 }
 
 .card__header-text {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  flex-grow: 1;
-  min-width: 0;
+  display: block;
 }
 
 .card__title {
-  margin: 0;
+  margin: var(--space-sm) 0 0;
   font-size: var(--font-size-lg);
   font-weight: 700;
   color: var(--color-text-primary);
