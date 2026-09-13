@@ -109,9 +109,10 @@
 }
 
 .card__published-at-logo {
-  width: 7rem;
+  max-width: 7rem;
   max-height: 5rem;
   object-fit: contain;
+  object-position: right;
 }
 
 .card__header-row {
