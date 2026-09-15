@@ -12,8 +12,7 @@ const config: StorybookConfig = {
   framework: {
     name: '@storybook/angular-vite',
     options: {
-      compodoc: true,
-      compodocArgs: ['-e', 'json', '-d', '.'],
+      compodoc: false,
     },
   },
 };
