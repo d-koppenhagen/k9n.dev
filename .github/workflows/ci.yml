@@ -1,0 +1,15 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Checks
+    uses: ./.github/workflows/checks.yml
