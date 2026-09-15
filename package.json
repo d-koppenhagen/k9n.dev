@@ -70,7 +70,7 @@
     "@storybook/addon-docs": "10.6.0",
     "@storybook/angular-vite": "10.6.0",
     "@types/express": "5.0.6",
-    "@types/node": "22.20.2",
+    "@types/node": "24.13.4",
     "angular-eslint": "22.5.0",
     "axe-core": "4.13.0",
     "eslint": "10.10.0",
