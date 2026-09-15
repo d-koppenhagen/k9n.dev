@@ -24,7 +24,11 @@ for (const theme of themes) {
       await page.addInitScript((t) => {
         localStorage.setItem('theme-preference', t);
       }, theme);
-      await page.goto(path, { waitUntil: 'networkidle' });
+      // Avoid `networkidle`: several content pages (e.g. /talks) load thumbnails
+      // and publisher logos from third-party domains that can hang or respond
+      // slowly on CI, so the network never becomes idle within the timeout.
+      // Waiting for the DOM plus the applied theme is enough for the a11y scan.
+      await page.goto(path, { waitUntil: 'domcontentloaded' });
       await page.locator(`html[data-theme="${theme}"]`).waitFor({ timeout: 5000 });
 
       const results = await new AxeBuilder({ page }).analyze();
