@@ -20,22 +20,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22.x'
-          cache: 'npm'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build content
-        run: npm run build:content
+        run: pnpm run build:content
 
       - name: Build application
-        run: npx ng build
+        run: pnpm exec ng build
 
       - name: Post-build processing
-        run: npx tsx scripts/post-build.ts
+        run: pnpm exec tsx scripts/post-build.ts
 
       - name: Upload Pages artifact
         if: github.ref == 'refs/heads/main'
@@ -48,57 +51,66 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22.x'
-          cache: 'npm'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Run lint
-        run: npm run lint
+        run: pnpm run lint
 
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22.x'
-          cache: 'npm'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build content
-        run: npm run build:content
+        run: pnpm run build:content
 
       - name: Run tests
-        run: npx ng test --no-watch
+        run: pnpm exec ng test --no-watch
 
   e2e:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22.x'
-          cache: 'npm'
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps
+        run: pnpm exec playwright install --with-deps
 
       - name: Build content
-        run: npm run build:content
+        run: pnpm run build:content
 
       - name: Run e2e tests
-        run: npx playwright test
+        run: pnpm exec playwright test
 
       - name: Upload Playwright report
         uses: actions/upload-artifact@v4

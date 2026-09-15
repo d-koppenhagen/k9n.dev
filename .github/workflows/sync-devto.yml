@@ -8,10 +8,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@master
         with:
           find: 'DEVTO_API_KEY'
           replace: ${{ secrets.DEVTO_API_KEY }}
           include: 'scripts/devto-update.js' # Replace with real API Key
-      - run: cd scripts && npm ci && node devto-update.js
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run devto update
+        working-directory: scripts
+        run: node devto-update.js

@@ -5,15 +5,15 @@ This guide covers local development setup for [k9n.dev](https://k9n.dev), an Ang
 ## Prerequisites
 
 - Node.js (LTS)
-- npm (comes with Node.js)
-- Angular CLI (`npx ng` or install globally)
+- [pnpm](https://pnpm.io) — this project's package manager, pinned via Corepack. Enable it once with `corepack enable pnpm` (Corepack ships with Node.js). `npm install` is blocked by an `only-allow pnpm` guard.
+- Angular CLI (`pnpm exec ng` or install globally)
 
 ## Getting Started
 
 ```bash
-npm install
-npm run build:content   # Generate content manifests from Markdown
-ng serve                # Start dev server (German locale)
+pnpm install
+pnpm run build:content   # Generate content manifests from Markdown
+pnpm start               # Start dev server (German locale)
 ```
 
 Open `http://localhost:4200/` — the app reloads on file changes.
@@ -24,10 +24,10 @@ Open `http://localhost:4200/` — the app reloads on file changes.
 |--------|-------------|
 | `ng serve` | Dev server (German locale, default) |
 | `ng serve --configuration=development-en` | Dev server (English locale) |
-| `npm run preview` | Full production build + local preview server (both locales, redirects) |
-| `npm run serve:preview` | Serve existing production build without rebuilding |
-| `npm run build:content` | Parse Markdown content and generate TypeScript manifests |
-| `npm run build:deploy` | Full production build: content → Angular build (both locales) → post-build |
+| `pnpm run preview` | Full production build + local preview server (both locales, redirects) |
+| `pnpm run serve:preview` | Serve existing production build without rebuilding |
+| `pnpm run build:content` | Parse Markdown content and generate TypeScript manifests |
+| `pnpm run build:deploy` | Full production build: content → Angular build (both locales) → post-build |
 | `ng build` | Production build (both locale bundles) |
 | `ng test` | Run unit tests (Vitest) |
 | `ng extract-i18n` | Extract translatable messages to `src/locale/messages.xlf` |
@@ -133,7 +133,7 @@ ng serve --configuration=development-en
 #### 5. Preview both locales together (production-like)
 
 ```bash
-npm run preview
+pnpm run preview
 ```
 
 Ein Befehl — baut die komplette Produktionsversion und startet einen lokalen Server auf `http://localhost:4200`:
@@ -146,7 +146,7 @@ Ein Befehl — baut die komplette Produktionsversion und startet einen lokalen S
 Falls du nur den Server ohne erneuten Build starten willst:
 
 ```bash
-npm run serve:preview
+pnpm run serve:preview
 ```
 
 #### 6. Build both locales
@@ -188,7 +188,7 @@ language: en
 ng test
 
 # Script unit tests (frontmatter, SEO generation, redirect page, etc.)
-npx vitest run scripts/
+pnpm exec vitest run scripts/
 ```
 
 Tests use Vitest. Angular tests run via the `@angular/build:unit-test` builder. Script tests run directly with Vitest.
@@ -198,7 +198,7 @@ Tests use Vitest. Angular tests run via the `@angular/build:unit-test` builder. 
 The full deployment build pipeline:
 
 ```bash
-npm run build:deploy
+pnpm run build:deploy
 ```
 
 This runs:

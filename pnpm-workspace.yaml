@@ -1,0 +1,18 @@
+packages:
+  - scripts
+
+# Supply-chain security: only these dependencies are allowed to run
+# lifecycle/build scripts. All are legitimate tools that need native
+# binaries or build steps. Any newly added package with build scripts
+# must be reviewed and approved explicitly via `pnpm approve-builds`.
+allowBuilds:
+  '@compodoc/compodoc': true # documentation generator (compodoc CLI)
+  '@parcel/watcher': true # native file watcher used by the Angular/Vite build
+  esbuild: true # native bundler binary
+  lmdb: true # native key/value store used by the Angular build cache
+  msgpackr-extract: true # native msgpack accelerator
+
+# Quarantine window (in minutes) before a freshly published version may be
+# installed. 1440 = 24h. Most compromised releases are pulled within hours,
+# so this blocks the most common supply-chain attack vector.
+minimumReleaseAge: 1440

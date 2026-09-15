@@ -56,16 +56,18 @@ Blog posts, talks, and projects are written in Markdown with YAML frontmatter. T
 
 ## Quick Start
 
+This project uses [pnpm](https://pnpm.io) as its package manager (pinned via Corepack). Enable it once with `corepack enable pnpm`.
+
 ```bash
-npm install
-npm run build:content
-ng serve
+pnpm install
+pnpm run build:content
+pnpm start
 ```
 
 ## Production Preview (lokal)
 
 ```bash
-npm run preview
+pnpm run preview
 ```
 
 Baut die komplette Produktionsversion (beide Locales, SEO-Dateien, Legacy-Redirects) und startet einen lokalen Server auf `http://localhost:4200` — identisch zum Deployment-Verhalten inkl. 301-Redirects für alte URLs ohne Locale-Prefix.
