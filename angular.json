@@ -117,7 +117,10 @@
         },
         "test": {
           "builder": "@angular/build:unit-test",
-          "options": {}
+          "options": {
+            "setupFiles": ["src/test-setup.ts"],
+            "providersFile": "src/test-providers.ts"
+          }
         },
         "storybook": {
           "builder": "@storybook/angular-vite:start-storybook",
