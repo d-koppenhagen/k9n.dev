@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@analogjs/vite-plugin-angular": "2.7.2",
-    "@angular-devkit/architect": "0.2200.9",
+    "@angular-devkit/architect": "0.2201.8",
     "@angular-devkit/build-angular": "22.1.8",
     "@angular-devkit/core": "22.1.8",
     "@angular/build": "22.1.8",
@@ -72,7 +72,7 @@
     "@storybook/angular-vite": "10.6.0",
     "@types/express": "5.0.6",
     "@types/node": "22.20.2",
-    "angular-eslint": "22.0.0",
+    "angular-eslint": "22.5.0",
     "axe-core": "4.13.0",
     "eslint": "10.10.0",
     "fast-check": "4.10.0",
