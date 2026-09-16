@@ -1,4 +1,5 @@
 import '@angular/localize/init';
+import '../src/styles.css';
 import type { Preview } from '@storybook/angular-vite';
 import { applicationConfig } from '@storybook/angular-vite';
 import { provideRouter } from '@angular/router';
