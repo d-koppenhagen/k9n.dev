@@ -121,7 +121,9 @@ describe('Accessibility Tests', () => {
       await fixture.whenStable();
 
       await expectNoA11yViolations(fixture.nativeElement);
-    }, 30000);
+      // Blog has the largest content set, so the axe-core DOM scan is the
+      // heaviest of all list pages and can exceed 30s on slower CI runners.
+    }, 60000);
 
     it('should have no WCAG AA violations on TalksListPage', async () => {
       await TestBed.configureTestingModule({
@@ -134,7 +136,7 @@ describe('Accessibility Tests', () => {
       await fixture.whenStable();
 
       await expectNoA11yViolations(fixture.nativeElement);
-    }, 30000);
+    }, 60000);
 
     it('should have no WCAG AA violations on ProjectsListPage', async () => {
       await TestBed.configureTestingModule({
@@ -147,7 +149,7 @@ describe('Accessibility Tests', () => {
       await fixture.whenStable();
 
       await expectNoA11yViolations(fixture.nativeElement);
-    }, 30000);
+    }, 60000);
 
     it('should have no WCAG AA violations on Navigation', async () => {
       await TestBed.configureTestingModule({
