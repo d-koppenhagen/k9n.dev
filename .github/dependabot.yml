@@ -14,6 +14,18 @@ updates:
           - '@schematics/angular'
           - 'angular-eslint'
           - 'rxjs'
+        update-types:
+          - 'minor'
+          - 'patch'
+      angular-major:
+        patterns:
+          - '@angular/*'
+          - '@angular-devkit/*'
+          - '@schematics/angular'
+          - 'angular-eslint'
+          - 'rxjs'
+        update-types:
+          - 'major'
       other:
         patterns:
           - '*'
@@ -26,17 +38,6 @@ updates:
         update-types:
           - 'minor'
           - 'patch'
-      other-major:
-        patterns:
-          - '*'
-        exclude-patterns:
-          - '@angular/*'
-          - '@angular-devkit/*'
-          - '@schematics/angular'
-          - 'angular-eslint'
-          - 'rxjs'
-        update-types:
-          - 'major'
     open-pull-requests-limit: 10
 
   - package-ecosystem: 'github-actions'

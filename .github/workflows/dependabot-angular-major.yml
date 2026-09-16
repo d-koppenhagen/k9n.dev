@@ -1,0 +1,55 @@
+name: Dependabot Angular Major
+
+on: pull_request
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  angular-major-draft:
+    name: Draft PR for Angular Major Updates
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - name: Fetch Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Convert PR to draft
+        if: steps.metadata.outputs.dependency-group == 'angular-major'
+        env:
+          PR_NODE_ID: ${{ github.event.pull_request.node_id }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api graphql -f query='
+            mutation($id: ID!) {
+              convertPullRequestToDraft(input: { pullRequestId: $id }) {
+                pullRequest { isDraft }
+              }
+            }' -f id="$PR_NODE_ID"
+
+      - name: Add guidance comment
+        if: steps.metadata.outputs.dependency-group == 'angular-major'
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr comment "$PR_URL" --body "$(cat <<'EOF'
+          ## ⚠️ Angular Major Update
+
+          Dieser PR wurde automatisch als **Draft** markiert, weil er ein Angular-**Major**-Update enthält.
+
+          Bitte führe das Update **nicht** über diesen Dependabot-PR durch. Angular-Major-Updates sollten lokal mit der Angular CLI durchgeführt werden, damit die zugehörigen Migrations-Schematics ausgeführt werden:
+
+          ```bash
+          ng update @angular/core @angular/cli
+          ```
+
+          Prüfe die Ausgabe von `ng update` auf weitere Pakete (z. B. `angular-eslint`) und folge den Hinweisen des [Angular Update Guide](https://angular.dev/update-guide).
+
+          Nach dem lokalen Update kann dieser PR geschlossen werden.
+          EOF
+          )"
