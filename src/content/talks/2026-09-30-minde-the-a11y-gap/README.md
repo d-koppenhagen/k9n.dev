@@ -29,6 +29,7 @@ In dieser Session zeige ich anhand konkreter Beispiele aus der Praxis, welche ty
 
 <iframe
   src="https://d-koppenhagen.github.io/2026-09-30_Basta_Mind_the_A11y_Gap/"
+  title="Präsentation: Mind the A11y Gap"
   width="100%"
   height="500px"
   style="border: none; margin-bottom: 2rem;"
