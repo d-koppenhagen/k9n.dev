@@ -1,6 +1,6 @@
 ---
 title: "Mind the A11y Gap: Die häufigsten Fallstricke bei der Umsetzung barrierefreier Webanwendungen"
-description: "In dieser Session auf der BASTA! Mainz 2026 zeige ich, welche Accessibility-Stolperfallen in modernen Webanwendungen lauern und wie wir sie mit praktischen Techniken und Tools überbrücken können."
+description: "Die BASTA! ist eine unabhängige Konferenz für .NET, Web und KI-Innovationen im deutschsprachigen Raum in Mainz. In der Session auf der zeige ich, welche Accessibility-Stolperfallen in modernen Webanwendungen lauern und wie wir sie mit praktischen Techniken und Tools überbrücken können."
 published: true
 author:
   name: Danny Koppenhagen
@@ -20,6 +20,8 @@ language: de
 thumbnail:
   header: ./bridging-a11y.png
 ---
+
+> **TL;DR** Hier geht's zu den Talk-Slides:<br/>[d-koppenhagen.github.io/2026-09-30_Basta_Mind_the_A11y_Gap](https://d-koppenhagen.github.io/2026-09-30_Basta_Mind_the_A11y_Gap/)
 
 ## Über die BASTA!
 
