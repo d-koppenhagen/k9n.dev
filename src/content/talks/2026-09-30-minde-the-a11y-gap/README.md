@@ -21,20 +21,26 @@ thumbnail:
   header: ./bridging-a11y.png
 ---
 
-> **TL;DR** Hier geht's zu den Talk-Slides:<br/>[d-koppenhagen.github.io/2026-09-30_Basta_Mind_the_A11y_Gap](https://d-koppenhagen.github.io/2026-09-30_Basta_Mind_the_A11y_Gap/)
-
-## Über die BASTA!
-
-Die [BASTA!](https://basta.net/mainz/) ist die führende unabhängige Konferenz für .NET, Web und KI-Innovationen im deutschsprachigen Raum. Sie findet regelmäßig in Frankfurt und Mainz statt und bietet Workshops, Sessions und Keynotes zu Themen rund um moderne Softwareentwicklung.
-
-## Abstract
-
 Barrierefreiheit ist weit mehr als eine Checkliste – es geht darum, das Web für alle Menschen nutzbar zu machen. Spätestens mit dem Barrierefreiheitsstärkungsgesetz (BFSG), das seit Mitte 2025 greift, ist digitale Barrierefreiheit für viele digitale Produkte zur Pflicht geworden.
 
 Doch zwischen Theorie und Praxis klafft oft eine Lücke: Die WCAG-Richtlinien sind umfangreich, die Toolchain vielfältig und die tatsächlichen Auswirkungen auf Nutzer:innen mit Behinderungen für viele Entwickler:innen abstrakt.
 
 In dieser Session zeige ich anhand konkreter Beispiele aus der Praxis, welche typischen Accessibility-Stolperfallen in modernen Webanwendungen lauern – von fehlerhafter Semantik über mangelhaftes Fokus-Management bis hin zu unzugänglichen Custom Components. Gleichzeitig stelle ich praktische Techniken und Tools vor, mit denen wir als Entwickler:innen diese Lücke überbrücken und barrierefreie Webanwendungen von Grund auf richtig umsetzen können.
 
-- [Präsentation (Slidev Slides)](https://d-koppenhagen.github.io/2026-09-30_Basta_Mind_the_A11y_Gap/)
+<iframe
+  src="https://d-koppenhagen.github.io/2026-09-30_Basta_Mind_the_A11y_Gap/"
+  width="100%"
+  height="500px"
+  style="border: none; margin-bottom: 2rem;"
+  allowfullscreen>
+</iframe>
+
+### Links
+
+- [Präsentation (Vollbildmodus)](https://d-koppenhagen.github.io/2026-09-30_Basta_Mind_the_A11y_Gap/)
 - [Source Code](https://github.com/d-koppenhagen/2026-09-30_Basta_Mind_the_A11y_Gap)
 - [Session Details (BASTA!)](https://basta.net/user-interface/bridging-accessibility-pitfalls/)
+
+## Über die BASTA!
+
+Die [BASTA!](https://basta.net/mainz/) ist die führende unabhängige Konferenz für .NET, Web und KI-Innovationen im deutschsprachigen Raum. Sie findet regelmäßig in Frankfurt und Mainz statt und bietet Workshops, Sessions und Keynotes zu Themen rund um moderne Softwareentwicklung.
