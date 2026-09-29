@@ -123,7 +123,7 @@
     }
 
     .nav__link--active {
-      color: var(--color-accent);
+      color: var(--color-interactive-hover);
       background-color: var(--color-accent-subtle);
       font-weight: 600;
     }

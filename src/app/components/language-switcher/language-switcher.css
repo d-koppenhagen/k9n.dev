@@ -30,7 +30,7 @@
 
 .language-switcher__link--active {
   background-color: var(--color-surface);
-  color: var(--color-accent);
+  color: var(--color-interactive-hover);
   box-shadow: var(--shadow-sm);
   cursor: default;
 }
