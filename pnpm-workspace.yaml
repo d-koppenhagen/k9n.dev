@@ -16,3 +16,7 @@ allowBuilds:
 # installed. 1440 = 24h. Most compromised releases are pulled within hours,
 # so this blocks the most common supply-chain attack vector.
 minimumReleaseAge: 1440
+
+# define NPM registry explicit to no have conflicts with global settings
+registries:
+  default: https://registry.npmjs.org/

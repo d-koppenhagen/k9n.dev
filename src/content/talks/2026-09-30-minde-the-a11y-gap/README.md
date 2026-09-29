@@ -9,10 +9,6 @@ created: 2026-09-30
 updated: 2026-09-30
 date: 2026-09-30
 event: "BASTA! Mainz 2026"
-publishedAt:
-  name: "BASTA! Mainz 2026"
-  url: https://basta.net/user-interface/bridging-accessibility-pitfalls/
-  linkExternal: true
 keywords:
   - JavaScript
   - TypeScript
@@ -37,4 +33,6 @@ Doch zwischen Theorie und Praxis klafft oft eine Lücke: Die WCAG-Richtlinien si
 
 In dieser Session zeige ich anhand konkreter Beispiele aus der Praxis, welche typischen Accessibility-Stolperfallen in modernen Webanwendungen lauern – von fehlerhafter Semantik über mangelhaftes Fokus-Management bis hin zu unzugänglichen Custom Components. Gleichzeitig stelle ich praktische Techniken und Tools vor, mit denen wir als Entwickler:innen diese Lücke überbrücken und barrierefreie Webanwendungen von Grund auf richtig umsetzen können.
 
+- [Präsentation (Slidev Slides)](https://d-koppenhagen.github.io/2026-09-30_Basta_Mind_the_A11y_Gap/)
+- [Source Code](https://github.com/d-koppenhagen/2026-09-30_Basta_Mind_the_A11y_Gap)
 - [Session Details (BASTA!)](https://basta.net/user-interface/bridging-accessibility-pitfalls/)
