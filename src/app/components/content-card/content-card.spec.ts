@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { ContentCard, CardThumbnail } from './content-card';
+import { ContentCard, CardThumbnail, SeriesItem } from './content-card';
 import { Component, LOCALE_ID } from '@angular/core';
 
 @Component({
@@ -13,6 +13,9 @@ import { Component, LOCALE_ID } from '@angular/core';
       [thumbnail]="thumbnail"
       [eventName]="eventName"
       [language]="language"
+      [priority]="priority"
+      [seriesName]="seriesName"
+      [seriesItems]="seriesItems"
     />
   `,
   imports: [ContentCard],
@@ -25,6 +28,9 @@ class TestHostComponent {
   thumbnail: CardThumbnail | undefined = undefined;
   eventName: string | undefined = undefined;
   language: string | undefined = undefined;
+  priority = false;
+  seriesName = '';
+  seriesItems: SeriesItem[] = [];
 }
 
 describe('ContentCard', () => {
@@ -167,6 +173,77 @@ describe('ContentCard', () => {
       const description = fixture.nativeElement.querySelector('.card__description');
       expect(title.getAttribute('lang')).toBeNull();
       expect(description.getAttribute('lang')).toBeNull();
+    });
+  });
+
+  describe('series variant', () => {
+    const seriesItems: SeriesItem[] = [
+      {
+        title: 'Part 1',
+        routeLink: '/blog/part-1',
+        date: '2025-01-15',
+        description: 'First part',
+        thumbnail: { header: '/assets/images/part-1.jpg', card: '/assets/images/part-1.jpg' },
+      },
+      {
+        title: 'Part 2',
+        routeLink: '/blog/part-2',
+        date: '2025-02-15',
+        description: 'Second part',
+        thumbnail: { header: '/assets/images/part-2.jpg', card: '/assets/images/part-2.jpg' },
+      },
+      {
+        title: 'Part 3',
+        routeLink: '/blog/part-3',
+        date: '2025-03-15',
+        description: 'Third part',
+        thumbnail: { header: '/assets/images/part-3.jpg', card: '/assets/images/part-3.jpg' },
+      },
+    ];
+
+    it('should render the series carousel when more than one item is provided', () => {
+      const fixture = TestBed.createComponent(TestHostComponent);
+      fixture.componentInstance.seriesName = 'My Series';
+      fixture.componentInstance.seriesItems = seriesItems;
+      fixture.componentInstance.routeLink = '/blog/part-2';
+      fixture.detectChanges();
+      const carousel = fixture.nativeElement.querySelector('app-series-pagination-carousel');
+      expect(carousel).toBeTruthy();
+      const panels = fixture.nativeElement.querySelectorAll('.card__panel');
+      expect(panels.length).toBe(3);
+    });
+
+    it('should NOT change priority bindings when the selected slide changes (regression: NG02953)', () => {
+      // The carousel smooth-scrolls the active tab into view when the index
+      // changes. jsdom does not implement scrollIntoView, so stub it to isolate
+      // the behavior under test (priority binding stability).
+      Element.prototype.scrollIntoView = () => {};
+
+      const fixture = TestBed.createComponent(TestHostComponent);
+      const host = fixture.componentInstance;
+      host.priority = true;
+      host.seriesName = 'My Series';
+      host.seriesItems = seriesItems;
+      // Current article is the second item, so initial slide index is 1.
+      host.routeLink = '/blog/part-2';
+      fixture.detectChanges();
+
+      const readPriorities = () =>
+        Array.from(
+          fixture.nativeElement.querySelectorAll('img.card__image'),
+        ).map((img) => (img as HTMLImageElement).getAttribute('fetchpriority'));
+
+      const priorityAfterInit = readPriorities();
+
+      // Navigating the carousel changes the selected slide. The priority binding
+      // must stay stable, otherwise NgOptimizedImage throws NG02953 and the
+      // carousel controls become unusable.
+      const card = fixture.debugElement.children[0].children[0].componentInstance as ContentCard;
+      // currentSlide is a linkedSignal backing the carousel selection.
+      (card as unknown as { currentSlide: { set: (v: number) => void } }).currentSlide.set(2);
+      fixture.detectChanges();
+
+      expect(readPriorities()).toEqual(priorityAfterInit);
     });
   });
 

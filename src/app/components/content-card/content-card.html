@@ -14,7 +14,7 @@
                   alt=""
                   class="card__image"
                   fill
-                  [priority]="priority() && idx === currentSlide()"
+                  [priority]="priority() && idx === initialSlide()"
                 />
                 @if (item.externalUrl) {
                   <span class="card__external-badge" aria-hidden="true">
