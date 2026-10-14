@@ -217,6 +217,7 @@ describe('ContentCard', () => {
       // The carousel smooth-scrolls the active tab into view when the index
       // changes. jsdom does not implement scrollIntoView, so stub it to isolate
       // the behavior under test (priority binding stability).
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       Element.prototype.scrollIntoView = () => {};
 
       const fixture = TestBed.createComponent(TestHostComponent);
