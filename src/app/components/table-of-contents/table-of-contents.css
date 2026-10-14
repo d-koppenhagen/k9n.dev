@@ -5,6 +5,18 @@
       border: 1px solid var(--color-border-subtle);
     }
 
+    /* Constrain the TOC to the viewport space below the sticky header so it
+       never runs off-screen; scroll internally when the list is longer.
+       --nav-height = sticky header height; the sidebar sits at
+       top: calc(var(--nav-height) + var(--space-lg)). */
+    @media (min-width: 1024px) {
+      .toc {
+        max-height: calc(100dvh - var(--nav-height) - 2 * var(--space-lg));
+        overflow-y: auto;
+        overscroll-behavior: contain;
+      }
+    }
+
     .toc__title {
       font-size: var(--font-size-sm);
       font-weight: 600;

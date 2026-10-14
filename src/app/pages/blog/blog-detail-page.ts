@@ -56,7 +56,9 @@ export class BlogDetailPage {
   protected readonly hasSidebar = computed(() => {
     const currentPost = this.post();
     if (!currentPost) return false;
-    return (currentPost.headings?.length > 0) || (this.seriesPosts().length > 1);
+    // The sidebar now only holds the table of contents. Series navigation
+    // moved into the content flow, so it no longer forces a sidebar.
+    return (currentPost.headings?.length ?? 0) > 0;
   });
 
   constructor() {

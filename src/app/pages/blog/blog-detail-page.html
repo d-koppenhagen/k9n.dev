@@ -57,6 +57,16 @@
     </div>
 
     <div slot="content" class="blog-detail__content" [attr.lang]="contentLang()">
+      @if (seriesPosts(); as series) {
+        @if (series.length > 1) {
+          <app-series-navigation
+            class="blog-detail__series"
+            [currentSlug]="post.slug"
+            [seriesPosts]="series"
+          />
+        }
+      }
+
       <app-markdown-content [content]="post.content" />
 
       <app-published-at-banner [publishedAt]="post.publishedAt" [linked]="post.linked" />
@@ -64,12 +74,6 @@
 
     <div slot="sidebar">
       <app-table-of-contents [headings]="post.headings" />
-
-      @if (seriesPosts(); as series) {
-        @if (series.length > 1) {
-          <app-series-navigation [currentSlug]="post.slug" [seriesPosts]="series" />
-        }
-      }
     </div>
   </app-article-detail-layout>
 } @else {

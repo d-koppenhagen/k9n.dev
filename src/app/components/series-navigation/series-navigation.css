@@ -6,7 +6,7 @@
     }
 
     .series-nav__heading {
-      margin-block-end: var(--space-md);
+      margin-block: 0 var(--space-md);
       font-size: var(--font-size-sm);
       font-weight: 700;
       text-transform: uppercase;
@@ -19,47 +19,65 @@
       margin: 0;
       padding: 0;
       counter-reset: series;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
     }
 
+    /* Each item is a selectable row with a leading ordinal counter. */
     .series-nav__item {
       counter-increment: series;
-      position: relative;
-      padding-inline-start: var(--space-lg);
-      padding-block: var(--space-sm);
-    }
-
-    .series-nav__item::before {
-      content: counter(series) ".";
-      position: absolute;
-      inset-inline-start: 0;
-      font-size: var(--font-size-sm);
-      font-weight: 600;
-      color: var(--color-text-muted);
-    }
-
-    .series-nav__item + .series-nav__item {
-      border-block-start: 1px solid var(--color-border-subtle);
+      margin: 0;
     }
 
     .series-nav__link {
-      display: block;
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--radius-sm);
       font-size: var(--font-size-sm);
-      color: var(--color-interactive);
+      line-height: 1.4;
+      color: var(--color-text-secondary);
       text-decoration: none;
+      transition: background-color var(--transition-fast),
+                  color var(--transition-fast);
+    }
+
+    /* Ordinal number rendered as a counter before the title. */
+    .series-nav__link::before {
+      content: counter(series) ".";
+      flex-shrink: 0;
+      min-width: 1.25em;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      color: var(--color-text-muted);
       transition: color var(--transition-fast);
     }
 
-    .series-nav__link:hover {
+    /* Hover / focus state for the selectable (link) rows. */
+    .series-nav__link:where(a):hover {
+      background-color: var(--color-accent-subtle);
+      color: var(--color-interactive-hover);
+    }
+
+    .series-nav__link:where(a):hover::before {
       color: var(--color-interactive-hover);
     }
 
     .series-nav__link:focus-visible {
       outline: 3px solid var(--color-focus-ring);
       outline-offset: 2px;
-      border-radius: var(--radius-sm);
     }
 
+    /* Active (current) entry: highlighted, non-interactive. */
     .series-nav__link--current {
+      background-color: var(--color-accent-subtle);
       color: var(--color-text-primary);
       font-weight: 600;
+      cursor: default;
+    }
+
+    .series-nav__link--current::before {
+      color: var(--color-accent);
     }

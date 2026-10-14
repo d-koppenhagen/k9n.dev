@@ -9,7 +9,7 @@ import {
   viewChild,
   PLATFORM_ID,
 } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, ViewportScroller } from '@angular/common';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 import { Title } from '@angular/platform-browser';
@@ -32,6 +32,7 @@ export class App implements AfterViewInit, OnDestroy {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly metaService = inject(MetaManager);
   private readonly analytics = inject(Analytics);
+  private readonly viewportScroller = inject(ViewportScroller);
 
   protected readonly mainContent = viewChild<ElementRef<HTMLElement>>('mainContent');
   protected readonly routeAnnouncement = signal('');
@@ -55,6 +56,20 @@ export class App implements AfterViewInit, OnDestroy {
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
+
+    // Offset the router's anchor scrolling by the sticky header height so that
+    // fragment targets (e.g. table-of-contents links) are not hidden behind
+    // the header. `scroll-padding-top` only covers native hash loads; the
+    // router scrolls programmatically via scrollIntoView, which ignores it.
+    // The offset is read live from the rendered header so it stays correct
+    // across breakpoints. The extra gap matches --space-md (1rem).
+    this.viewportScroller.setOffset(() => {
+      const header = document.querySelector<HTMLElement>('header.site-header');
+      const headerHeight = header?.offsetHeight ?? 0;
+      const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+      const gap = rootFontSize; // --space-md: 1rem
+      return [0, headerHeight + gap];
+    });
 
     this.previousPath = this.router.url.split('?')[0];
 

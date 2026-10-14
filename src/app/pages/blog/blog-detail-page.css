@@ -95,6 +95,12 @@
   min-width: 0;
 }
 
+/* Series navigation now sits between the article header and the body text. */
+.blog-detail__series {
+  display: block;
+  margin-block-end: var(--space-2xl);
+}
+
 /* Not Found State */
 .not-found {
   max-width: var(--content-narrow-width);

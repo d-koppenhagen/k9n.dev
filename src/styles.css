@@ -145,6 +145,10 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* Offset anchor scroll targets (TOC links, fragments) so the sticky header
+     does not cover the targeted heading. Matches the sticky header height
+     (--nav-height) plus a bit of breathing room. */
+  scroll-padding-top: calc(var(--nav-height) + var(--space-md));
 }
 
 body {
@@ -225,13 +229,17 @@ svg {
    1.4 Responsive Layout — Fluid, no horizontal overflow
    -------------------------------------------------------------------------- */
 
-/* Prevent horizontal scrolling at all viewport widths from 320px */
+/* Prevent horizontal scrolling at all viewport widths from 320px.
+   Use `overflow-x: clip` instead of `hidden`: `hidden` turns the element into a
+   scroll container, which breaks `position: sticky` descendants (the sticky
+   header). `clip` prevents horizontal overflow without creating a scroll
+   container, so the sticky header keeps working. Baseline since 2022. */
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   min-width: 320px;
 }
 
