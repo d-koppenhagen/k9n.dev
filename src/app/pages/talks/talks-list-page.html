@@ -9,6 +9,7 @@
           [title]="talk.title"
           [description]="talk.description"
           [date]="talk.date"
+          [slug]="talk.slug"
           [routeLink]="'/talks/' + talk.slug"
           [thumbnail]="talk.thumbnail"
           [externalUrl]="talk.publishedAt?.linkExternal ? talk.publishedAt?.url : undefined"

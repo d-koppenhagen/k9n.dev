@@ -9,6 +9,7 @@
           [title]="post.title"
           [description]="post.description"
           [date]="post.created"
+          [slug]="post.slug"
           [routeLink]="'/blog/' + post.slug"
           [thumbnail]="post.thumbnail"
           [externalUrl]="post.publishedAt?.url"

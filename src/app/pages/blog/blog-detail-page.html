@@ -6,12 +6,19 @@
         [src]="post.thumbnail.header"
         [alt]="post.title"
         class="blog-detail__hero-image"
+        [style.view-transition-name]="'vt-image-' + post.slug"
+        [style.view-transition-class]="'vt-image'"
       />
     }
 
     <div slot="header">
       <div class="blog-detail__meta">
-        <time class="blog-detail__date" [attr.datetime]="post.created">
+        <time
+          class="blog-detail__date"
+          [attr.datetime]="post.created"
+          [style.view-transition-name]="'vt-date-' + post.slug"
+          [style.view-transition-class]="'vt-date'"
+        >
           {{ post.created | date: 'mediumDate' }}
         </time>
         @if (post.updated) {
@@ -24,7 +31,12 @@
         }
       </div>
 
-      <h1 class="blog-detail__title" [attr.lang]="contentLang()">{{ post.title }}</h1>
+      <h1
+        class="blog-detail__title"
+        [attr.lang]="contentLang()"
+        [style.view-transition-name]="'vt-title-' + post.slug"
+        [style.view-transition-class]="'vt-title'"
+      >{{ post.title }}</h1>
 
       <div class="blog-detail__author">
         <span

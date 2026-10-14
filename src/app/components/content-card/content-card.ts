@@ -47,6 +47,7 @@ export class ContentCard {
   readonly description = input.required<string>();
   readonly date = input.required<string>();
   readonly routeLink = input.required<string>();
+  readonly slug = input<string>('');
   readonly thumbnail = input<CardThumbnail>();
   readonly externalUrl = input<string>();
   readonly hreflang = input<string>();

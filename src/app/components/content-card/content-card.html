@@ -65,6 +65,8 @@
             class="card__image"
             fill
             [priority]="priority()"
+            [style.view-transition-name]="'vt-image-' + slug()"
+            [style.view-transition-class]="'vt-image'"
           />
           @if (externalUrl()) {
             <span class="card__external-badge" aria-hidden="true">
@@ -98,11 +100,16 @@
               @if (eventName()) {
                 <span class="card__event">{{ eventName() }}</span>
               }
-              <time class="card__date" [attr.datetime]="date()">{{ date() | date:'mediumDate' }}</time>
+              <time
+                class="card__date"
+                [attr.datetime]="date()"
+                [style.view-transition-name]="'vt-date-' + slug()"
+                [style.view-transition-class]="'vt-date'"
+              >{{ date() | date:'mediumDate' }}</time>
             </div>
             @switch (headingLevel()) {
-              @case (2) { <h2 class="card__title" [attr.lang]="contentLang()">{{ title() }}</h2> }
-              @default { <h3 class="card__title" [attr.lang]="contentLang()">{{ title() }}</h3> }
+              @case (2) { <h2 class="card__title" [attr.lang]="contentLang()" [style.view-transition-name]="'vt-title-' + slug()" [style.view-transition-class]="'vt-title'">{{ title() }}</h2> }
+              @default { <h3 class="card__title" [attr.lang]="contentLang()" [style.view-transition-name]="'vt-title-' + slug()" [style.view-transition-class]="'vt-title'">{{ title() }}</h3> }
             }
           </div>
         </div>

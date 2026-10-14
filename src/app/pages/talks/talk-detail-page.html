@@ -1,16 +1,33 @@
 @if (talk(); as talk) {
   <app-content-detail-layout>
     <div slot="header">
+      @if (talk.thumbnail) {
+        <img
+          [src]="talk.thumbnail.header"
+          [alt]="talk.title"
+          class="talk-detail__hero-image"
+          [style.view-transition-name]="'vt-image-' + talk.slug"
+          [style.view-transition-class]="'vt-image'"
+        />
+      }
       <div class="talk-detail__meta">
         @if (isUpcoming()) {
           <span class="talk-detail__upcoming-badge" i18n="badge label|Upcoming event badge@@page.talkDetail.upcoming.badge">Bevorstehend</span>
         }
         <span class="talk-detail__event">{{ talk.event }}</span>
-        <time class="talk-detail__date" [attr.datetime]="talk.date">{{
-          talk.date | date:'mediumDate'
-        }}</time>
+        <time
+          class="talk-detail__date"
+          [attr.datetime]="talk.date"
+          [style.view-transition-name]="'vt-date-' + talk.slug"
+          [style.view-transition-class]="'vt-date'"
+        >{{ talk.date | date:'mediumDate' }}</time>
       </div>
-      <h1 class="talk-detail__title" [attr.lang]="contentLang()">{{ talk.title }}</h1>
+      <h1
+        class="talk-detail__title"
+        [attr.lang]="contentLang()"
+        [style.view-transition-name]="'vt-title-' + talk.slug"
+        [style.view-transition-class]="'vt-title'"
+      >{{ talk.title }}</h1>
       <p class="talk-detail__description" [attr.lang]="contentLang()">{{ talk.description }}</p>
     </div>
 

@@ -1,13 +1,32 @@
 @if (project(); as project) {
   <app-content-detail-layout>
     <div slot="header">
+      @if (project.thumbnail) {
+        <img
+          [src]="project.thumbnail.header"
+          [alt]="project.title"
+          class="project-detail__hero-image"
+          [style.view-transition-name]="'vt-image-' + project.slug"
+          [style.view-transition-class]="'vt-image'"
+        />
+      }
       <div class="project-detail__meta">
         <app-status-badge [status]="project.status" />
-        <time class="project-detail__date" [attr.datetime]="project.created">
+        <time
+          class="project-detail__date"
+          [attr.datetime]="project.created"
+          [style.view-transition-name]="'vt-date-' + project.slug"
+          [style.view-transition-class]="'vt-date'"
+        >
           {{ project.created | date:'mediumDate' }}
         </time>
       </div>
-      <h1 class="project-detail__title" [attr.lang]="contentLang()">{{ project.title }}</h1>
+      <h1
+        class="project-detail__title"
+        [attr.lang]="contentLang()"
+        [style.view-transition-name]="'vt-title-' + project.slug"
+        [style.view-transition-class]="'vt-title'"
+      >{{ project.title }}</h1>
       <p class="project-detail__description" [attr.lang]="contentLang()">{{ project.description }}</p>
       @if (project.url) {
         <a

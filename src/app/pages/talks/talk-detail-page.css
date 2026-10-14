@@ -1,4 +1,14 @@
 /* Talk-specific styles (layout is handled by ContentDetailLayout) */
+.talk-detail__hero-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-lg);
+  margin-block-end: var(--space-xl);
+}
+
 .talk-detail__meta {
   display: flex;
   align-items: center;
