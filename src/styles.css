@@ -370,12 +370,12 @@ input[type="reset"] {
 }
 
 /* Shared-element morph for list → detail navigation (Blog, Talks, Projects).
-   The browser interpolates position/size via ::view-transition-group; we only
-   set duration/easing and let old/new cross-fade. No transform keyframes here —
+   Only the title and date morph (shared view-transition-name keyed by slug);
+   the browser interpolates position/size via ::view-transition-group. The image
+   is intentionally left to the default cross-fade. No transform keyframes here —
    custom transforms would break the morph. */
 @media (prefers-reduced-motion: no-preference) {
   ::view-transition-group(.vt-title),
-  ::view-transition-group(.vt-image),
   ::view-transition-group(.vt-date) {
     animation-duration: 500ms;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

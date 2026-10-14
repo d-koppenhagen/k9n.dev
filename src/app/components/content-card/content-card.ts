@@ -92,6 +92,17 @@ export class ContentCard {
     return item.thumbnail?.card ?? item.thumbnail?.header ?? this.FALLBACK_THUMBNAIL;
   }
 
+  /**
+   * Derives the slug of a series slide from its internal route link so that the
+   * active slide can share a `view-transition-name` with the matching detail page.
+   * External items (absolute URLs) have no internal detail route, so they get no name.
+   */
+  protected getItemSlug(item: SeriesItem): string | null {
+    if (item.externalUrl) return null;
+    const segments = item.routeLink.split('/').filter(Boolean);
+    return segments.at(-1) ?? null;
+  }
+
   protected getItemLang(item: SeriesItem): string | null {
     return item.language && item.language !== this.localeId ? item.language : null;
   }
