@@ -71,7 +71,6 @@
   border-radius: var(--radius-sm);
   min-height: 44px;
   display: inline-flex;
-  align-items: center;
   transition: background-color var(--transition-fast);
 }
 
@@ -80,6 +79,8 @@
 }
 
 .blog-detail__keyword a {
+  display: inline-flex;
+  align-items: center;
   color: var(--color-tag-text);
   text-decoration: none;
   padding: var(--space-xs) var(--space-sm);
