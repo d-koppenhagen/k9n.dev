@@ -1,0 +1,61 @@
+<svg viewBox="0 0 760 452" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cmp-title cmp-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="cmp-title">aria-live region workaround versus the native ariaNotify() API</title>
+  <desc id="cmp-desc">The aria-live region workaround needs five steps: the app has a message, it finds the hidden live region, clears its text, writes the new text after a delay, which the screen reader finally reads. The native ariaNotify approach needs two steps: the app calls ariaNotify with a message, and the screen reader speaks it.</desc>
+  <defs>
+    <marker id="cmp-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6b6b85"/>
+    </marker>
+  </defs>
+
+  <!-- panel -->
+  <rect x="1" y="1" width="758" height="450" rx="16" fill="#ffffff" stroke="#d9d4e6" stroke-width="1.5"/>
+
+  <!-- Left column: the workaround -->
+  <text x="190" y="42" text-anchor="middle" fill="#4a4a68" font-size="15" font-weight="700" letter-spacing="0.02em">aria-live region · the workaround</text>
+
+  <g font-size="13" fill="#1a1a2e">
+    <rect x="40" y="62" width="300" height="44" rx="10" fill="#ebe9f7" stroke="#cbc6ea"/>
+    <text x="190" y="89" text-anchor="middle">App has something to announce</text>
+
+    <rect x="40" y="130" width="300" height="44" rx="10" fill="#f8f7fc" stroke="#e3e0ee"/>
+    <text x="190" y="157" text-anchor="middle">Find the hidden live region</text>
+
+    <rect x="40" y="198" width="300" height="44" rx="10" fill="#f8f7fc" stroke="#e3e0ee"/>
+    <text x="190" y="225" text-anchor="middle">Clear its text content</text>
+
+    <rect x="40" y="266" width="300" height="44" rx="10" fill="#f8f7fc" stroke="#e3e0ee"/>
+    <text x="190" y="293" text-anchor="middle">Write new text after a delay</text>
+
+    <rect x="40" y="334" width="300" height="58" rx="10" fill="#f8f7fc" stroke="#e3e0ee"/>
+    <text x="190" y="360" text-anchor="middle">DOM mutation observed, then</text>
+    <text x="190" y="378" text-anchor="middle" font-weight="700" fill="#3C3599">screen reader reads the node</text>
+  </g>
+  <g stroke="#6b6b85" stroke-width="1.5" marker-end="url(#cmp-arrow)">
+    <line x1="190" y1="106" x2="190" y2="126"/>
+    <line x1="190" y1="174" x2="190" y2="194"/>
+    <line x1="190" y1="242" x2="190" y2="262"/>
+    <line x1="190" y1="310" x2="190" y2="330"/>
+  </g>
+
+  <!-- Divider -->
+  <line x1="390" y1="62" x2="390" y2="392" stroke="#d9d4e6" stroke-width="1.5" stroke-dasharray="4 6"/>
+
+  <!-- Right column: the native API -->
+  <text x="575" y="42" text-anchor="middle" fill="#4a4a68" font-size="15" font-weight="700" letter-spacing="0.02em">ariaNotify() · the native API</text>
+
+  <g font-size="13" fill="#1a1a2e">
+    <rect x="425" y="62" width="300" height="44" rx="10" fill="#ebe9f7" stroke="#cbc6ea"/>
+    <text x="575" y="89" text-anchor="middle">App has something to announce</text>
+
+    <rect x="425" y="198" width="300" height="48" rx="10" fill="#3C3599" stroke="#2b2670"/>
+    <text x="575" y="219" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#ffffff" font-size="12.5" font-weight="700">ariaNotify('message')</text>
+    <text x="575" y="236" text-anchor="middle" fill="#e4e2f6" font-size="11">one call, any time</text>
+
+    <rect x="425" y="334" width="300" height="44" rx="10" fill="#f8f7fc" stroke="#e3e0ee"/>
+    <text x="575" y="361" text-anchor="middle" font-weight="700" fill="#3C3599">Screen reader speaks it</text>
+  </g>
+  <g stroke="#6b6b85" stroke-width="1.5" marker-end="url(#cmp-arrow)">
+    <line x1="575" y1="106" x2="575" y2="194"/>
+    <line x1="575" y1="246" x2="575" y2="330"/>
+  </g>
+</svg>

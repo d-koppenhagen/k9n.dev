@@ -1,0 +1,38 @@
+<svg viewBox="0 0 720 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="prio-title prio-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="prio-title">How normal and high priority announcements are timed</title>
+  <desc id="prio-desc">A timeline comparison of the two priorities. With normal priority, a new announcement waits until the screen reader finishes what it is currently saying, then plays. With high priority, the new announcement interrupts the current speech and plays immediately.</desc>
+
+  <!-- panel -->
+  <rect x="1" y="1" width="718" height="248" rx="16" fill="#ffffff" stroke="#d9d4e6" stroke-width="1.5"/>
+
+  <!-- normal row -->
+  <text x="30" y="56" fill="#4a4a68" font-size="13" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">normal</text>
+  <text x="30" y="73" fill="#6b6b85" font-size="10.5">waits its turn</text>
+
+  <rect x="160" y="40" width="230" height="34" rx="7" fill="#f8f7fc" stroke="#e3e0ee"/>
+  <text x="275" y="61" text-anchor="middle" fill="#1a1a2e" font-size="12">current speech</text>
+
+  <rect x="400" y="40" width="230" height="34" rx="7" fill="#ebe9f7" stroke="#3C3599"/>
+  <text x="515" y="61" text-anchor="middle" fill="#3C3599" font-size="12" font-weight="700">your announcement</text>
+
+  <!-- divider -->
+  <line x1="160" y1="108" x2="630" y2="108" stroke="#e3e0ee" stroke-width="1" stroke-dasharray="3 5"/>
+
+  <!-- high row -->
+  <text x="30" y="160" fill="#4a4a68" font-size="13" font-weight="700" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">high</text>
+  <text x="30" y="177" fill="#6b6b85" font-size="10.5">interrupts</text>
+
+  <rect x="160" y="144" width="120" height="34" rx="7" fill="#f8f7fc" stroke="#e3e0ee"/>
+  <text x="220" y="165" text-anchor="middle" fill="#1a1a2e" font-size="12">current…</text>
+
+  <rect x="280" y="144" width="230" height="34" rx="7" fill="#3C3599" stroke="#2b2670"/>
+  <text x="395" y="165" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">your announcement</text>
+
+  <line x1="280" y1="134" x2="280" y2="188" stroke="#c0392b" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="280" y="206" text-anchor="middle" fill="#c0392b" font-size="10.5" font-weight="700">cuts in here</text>
+
+  <!-- time axis -->
+  <line x1="160" y1="228" x2="630" y2="228" stroke="#6b6b85" stroke-width="1.5"/>
+  <path d="M630 228 L622 224 L622 232 z" fill="#6b6b85"/>
+  <text x="645" y="232" fill="#6b6b85" font-size="11" font-style="italic">time</text>
+</svg>

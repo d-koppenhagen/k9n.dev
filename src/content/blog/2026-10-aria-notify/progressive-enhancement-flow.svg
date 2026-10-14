@@ -1,0 +1,51 @@
+<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="pe-title pe-desc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <title id="pe-title">Decision flow for the announce() wrapper</title>
+  <desc id="pe-desc">A single announce call checks whether ariaNotify exists on document. If yes, on modern browsers, it calls the native document.ariaNotify with a priority. If no, on older browsers, it falls back to announceViaLiveRegion. Both paths end in the same screen reader announcement.</desc>
+  <defs>
+    <marker id="pe-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6b6b85"/>
+    </marker>
+  </defs>
+
+  <!-- panel -->
+  <rect x="1" y="1" width="718" height="378" rx="16" fill="#ffffff" stroke="#d9d4e6" stroke-width="1.5"/>
+
+  <!-- Entry -->
+  <rect x="260" y="28" width="200" height="46" rx="10" fill="#ebe9f7" stroke="#cbc6ea"/>
+  <text x="360" y="50" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#1a1a2e" font-size="12.5">announce(message,</text>
+  <text x="360" y="66" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#1a1a2e" font-size="12.5">assertive)</text>
+
+  <!-- Decision diamond -->
+  <polygon points="360,104 470,158 360,212 250,158" fill="#f8f7fc" stroke="#cbc6ea"/>
+  <text x="360" y="154" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#1a1a2e" font-size="12">'ariaNotify'</text>
+  <text x="360" y="171" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#1a1a2e" font-size="12">in document?</text>
+
+  <!-- Branch labels -->
+  <text x="205" y="194" text-anchor="middle" fill="#146c32" font-size="12" font-weight="700">yes</text>
+  <text x="195" y="210" text-anchor="middle" fill="#6b6b85" font-size="10.5">modern browser</text>
+  <text x="520" y="194" text-anchor="middle" fill="#4a4a68" font-size="12" font-weight="700">no</text>
+  <text x="528" y="210" text-anchor="middle" fill="#6b6b85" font-size="10.5">older browser</text>
+
+  <!-- Native path -->
+  <rect x="40" y="234" width="280" height="52" rx="10" fill="#3C3599" stroke="#2b2670"/>
+  <text x="180" y="256" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#ffffff" font-size="12">document.ariaNotify(</text>
+  <text x="180" y="272" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#ffffff" font-size="12">message, { priority })</text>
+
+  <!-- Fallback path -->
+  <rect x="400" y="234" width="280" height="52" rx="10" fill="#f8f7fc" stroke="#e3e0ee"/>
+  <text x="540" y="256" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#1a1a2e" font-size="12">announceViaLiveRegion(</text>
+  <text x="540" y="272" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#1a1a2e" font-size="12">message, assertive)</text>
+
+  <!-- Outcome -->
+  <rect x="250" y="314" width="220" height="44" rx="10" fill="#ebe9f7" stroke="#3C3599"/>
+  <text x="360" y="341" text-anchor="middle" fill="#3C3599" font-size="13" font-weight="700">Screen reader announcement</text>
+
+  <!-- Connectors -->
+  <g stroke="#6b6b85" stroke-width="1.5" fill="none" marker-end="url(#pe-arrow)">
+    <line x1="360" y1="74" x2="360" y2="100"/>
+    <path d="M250 158 L180 158 L180 230"/>
+    <path d="M470 158 L540 158 L540 230"/>
+    <path d="M180 286 L180 336 L246 336"/>
+    <path d="M540 286 L540 336 L474 336"/>
+  </g>
+</svg>
