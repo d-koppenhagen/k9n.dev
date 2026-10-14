@@ -21,6 +21,9 @@ thumbnail:
   header: ./aria-notify.png
   card: ./aria-notify-small.png
 series: aria-live
+linked:
+  devTo: 'https://dev.to/dkoppenhagen/announcing-without-a-live-region-meet-the-arianotify-api-4211'
+  medium: 'https://danny-koppenhagen.medium.com/announcing-without-a-live-region-meet-the-arianotify-api-a1185a285616'
 atprotoRkey: "3mxt454sbzc7v"
 ---
 
