@@ -5,8 +5,8 @@ published: true
 author:
   name: 'Danny Koppenhagen'
   mail: mail@k9n.dev
-created: 2026-10-13
-updated: 2026-10-13
+created: 2026-10-14
+updated: 2026-10-14
 keywords:
   - accessibility (a11y)
   - Barrierefreiheit
