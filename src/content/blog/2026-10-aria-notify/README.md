@@ -21,6 +21,7 @@ thumbnail:
   header: ./aria-notify.png
   card: ./aria-notify-small.png
 series: aria-live
+atprotoRkey: "3mxt454sbzc7v"
 ---
 
 For years, getting a screen reader to say something at just the right moment meant fighting the DOM. You'd mount a hidden `aria-live` region when the page loaded, keep it alive no matter what your framework did to the surrounding markup, and then clear and rewrite its text content on a timer just to coax out a single announcement. It worked often enough to rely on, but it was fiddly, easy to break, and surrounded by edge cases. If you've read the companion piece on [why live regions fail silently in SPAs](/blog/2025-11-aria-live), you know exactly how many ways there are to get it wrong.
