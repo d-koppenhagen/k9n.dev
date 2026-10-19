@@ -77,7 +77,7 @@ export class ContentCard {
   protected readonly isUpcoming = computed(() => {
     const dateStr = this.date();
     if (!dateStr) return false;
-    const eventDate = new Date(dateStr + 'T23:59:59');
+    const eventDate = new Date(dateStr + 'T00:00:00');
     return eventDate > new Date();
   });
 
