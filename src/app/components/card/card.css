@@ -1,0 +1,87 @@
+/* Base look shared by every card: radius, smooth transitions, subtle border.
+   The subtle border applies to non-interactive cards; `--interactive`
+   overrides it with the full border token below. */
+:host {
+  display: block;
+  border: 1px solid var(--color-border-subtle);
+  transition:
+    box-shadow var(--transition-base),
+    border-color var(--transition-base),
+    background-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+/* Radius scale: `radius='md'` (default) reproduces the historical look. */
+:host(.card--radius-md) {
+  border-radius: var(--radius-md);
+}
+
+:host(.card--radius-lg) {
+  border-radius: var(--radius-lg);
+}
+
+/* The state/variant classes live on the host element, so they must be
+   written with :host(...) — a bare `.card--x` selector would be scoped to
+   projected content and never match the host. */
+
+/* Surface background */
+:host(.card--elevated) {
+  background-color: var(--color-surface-elevated);
+}
+
+:host(.card--card) {
+  background-color: var(--color-surface-card);
+}
+
+/* Interactive cards carry the full border at rest and react to the wrapped
+   link's hover/focus: border -> interactive, lifted background and shadow.
+   This keeps the real focusable <a> inside while the box reflects its state. */
+:host(.card--interactive) {
+  border: 1px solid var(--color-border);
+}
+
+:host(.card--interactive:has(a:hover)),
+:host(.card--interactive:has(a:focus-visible)) {
+  border-color: var(--color-interactive);
+  background-color: var(--color-surface-elevated);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Passive elevate: shadow only on hover, no border/background change. */
+:host(.card--hover-elevate):hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Lift: resting shadow plus a shadow + upward nudge on hover. Orthogonal to
+   the interactive/hover-elevate affordances above. */
+:host(.card--lift) {
+  box-shadow: var(--shadow-card);
+}
+
+:host(.card--lift):hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+/* Box-level focus ring: reflects a focus-visible descendant on the whole box. */
+:host(.card--focus-ring:has(:focus-visible)) {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Padding scale */
+:host(.card--pad-none) {
+  padding: 0;
+}
+
+:host(.card--pad-sm) {
+  padding: var(--space-sm) var(--space-md);
+}
+
+:host(.card--pad-md) {
+  padding: var(--space-md) var(--space-lg);
+}
+
+:host(.card--pad-lg) {
+  padding: var(--space-lg);
+}

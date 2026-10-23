@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Card } from '../card/card';
 
 interface TimelineStep {
   location: string;
@@ -11,6 +12,7 @@ interface TimelineStep {
 @Component({
   selector: 'app-personal-timeline',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [Card],
   templateUrl: './personal-timeline.html',
   styleUrl: './personal-timeline.css',
 })

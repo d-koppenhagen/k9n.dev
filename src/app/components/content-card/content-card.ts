@@ -11,6 +11,7 @@ import { DatePipe, NgOptimizedImage } from '@angular/common';
 import { SmartLink } from '../../directives/smart-link/smart-link';
 import { StatusBadge, ProjectStatus } from '../status-badge/status-badge';
 import { SeriesPaginationCarousel } from '../series-pagination-carousel/series-pagination-carousel';
+import { Card } from '../card/card';
 
 export interface CardThumbnail {
   header: string;
@@ -38,7 +39,7 @@ export interface SeriesItem {
 @Component({
   selector: 'app-content-card',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgOptimizedImage, SmartLink, StatusBadge, SeriesPaginationCarousel, DatePipe],
+  imports: [NgOptimizedImage, SmartLink, StatusBadge, SeriesPaginationCarousel, DatePipe, Card],
   templateUrl: './content-card.html',
   styleUrl: './content-card.css',
 })

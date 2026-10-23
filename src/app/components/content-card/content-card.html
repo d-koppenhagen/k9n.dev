@@ -1,5 +1,6 @@
 @if (seriesItems().length > 1) {
-  <article class="card">
+  <app-card variant="card" radius="lg" [lift]="true" [focusRing]="true" padding="none">
+    <article class="card-inner">
     <app-series-pagination-carousel
       [itemCount]="seriesItems().length"
       [(selectedIndex)]="currentSlide"
@@ -58,9 +59,11 @@
         </div>
       }
     </app-series-pagination-carousel>
-  </article>
+    </article>
+  </app-card>
 } @else {
-  <article class="card">
+  <app-card variant="card" radius="lg" [lift]="true" [focusRing]="true" padding="none">
+    <article class="card-inner">
     <a class="card__link" [appSmartLink]="routeLink()" [externalUrl]="externalUrl()" [hreflang]="hreflang()" [ariaLabel]="title()">
       @if (thumbnailSrc()) {
         <div class="card__image-wrapper">
@@ -119,5 +122,6 @@
         <p class="card__description" [attr.lang]="contentLang()">{{ description() }}</p>
       </div>
     </a>
-  </article>
+    </article>
+  </app-card>
 }

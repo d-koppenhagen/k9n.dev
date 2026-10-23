@@ -5,7 +5,7 @@
           <li class="timeline__item" [class.timeline__item--right]="odd">
             <div class="timeline__dot" aria-hidden="true"></div>
             <div class="timeline__connector" aria-hidden="true"></div>
-            <div class="timeline__card">
+            <app-card variant="card" [hoverElevate]="true" [interactive]="false" padding="lg">
               <div class="timeline__header">
                 <span class="timeline__year">{{ step.when }}</span>
                 @if (step.location.trim()) {
@@ -15,7 +15,7 @@
               <h3 class="timeline__what">{{ step.what }}</h3>
               <span class="timeline__where">{{ step.where }}</span>
               <p class="timeline__info">{{ step.info }}</p>
-            </div>
+            </app-card>
           </li>
         }
       </ol>

@@ -1,20 +1,13 @@
-.card {
+/* Layout wrapper inside app-card. The box look (border, radius, resting/hover
+   shadow, hover transform, focus outline) now comes from app-card. This inner
+   wrapper owns the flex column layout and clips the top image corners to the
+   same radius app-card applies on its host (radius="lg" -> --radius-lg). */
+.card-inner {
   display: flex;
   flex-direction: column;
   height: 100%;
   border-radius: var(--radius-lg);
-  background-color: var(--color-surface-card);
-  border: 1px solid var(--color-border-subtle);
-  box-shadow: var(--shadow-card);
   overflow: hidden;
-  transition:
-    box-shadow var(--transition-base),
-    transform var(--transition-base);
-}
-
-.card:hover {
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-2px);
 }
 
 .card__link {
@@ -24,11 +17,6 @@
   text-decoration: none;
   color: inherit;
   outline: none;
-}
-
-.card:has(:focus-visible) {
-  outline: 3px solid var(--color-focus-ring);
-  outline-offset: 2px;
 }
 
 /* Panel styling for series carousel slides */

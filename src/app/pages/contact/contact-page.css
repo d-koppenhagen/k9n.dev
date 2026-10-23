@@ -69,35 +69,32 @@
       }
     }
 
+    /* Each social link is wrapped in an <app-card [interactive]="true">, which
+       owns the box visuals (surface, border, radius, padding) and reproduces
+       the hover (border -> interactive, lifted bg, shadow) via :has(a:hover).
+       Make the Card stretch to fill its <li>. */
+    .social-link-item app-card {
+      display: block;
+      width: 100%;
+    }
+
+    /* The anchor stays the focusable/clickable element and fills the Card's
+       padding box; it only carries layout + typography now. */
     .social-link {
       display: flex;
       align-items: center;
       gap: var(--space-md);
       width: 100%;
-      padding: var(--space-md) var(--space-lg);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--color-border);
-      background-color: var(--color-surface-card);
       color: var(--color-text-primary);
       text-decoration: none;
       font-size: var(--font-size-base);
       font-weight: 500;
-      transition:
-        border-color var(--transition-fast),
-        box-shadow var(--transition-fast),
-        background-color var(--transition-fast);
     }
 
     .social-link > span {
       display: flex;
       flex-direction: column;
       min-width: 0;
-    }
-
-    .social-link:hover {
-      border-color: var(--color-interactive);
-      box-shadow: var(--shadow-card-hover);
-      background-color: var(--color-surface-elevated);
     }
 
     .social-link:focus-visible {

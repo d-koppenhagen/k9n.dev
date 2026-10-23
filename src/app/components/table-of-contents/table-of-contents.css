@@ -1,9 +1,5 @@
-.toc {
-      padding: var(--space-lg);
-      background-color: var(--color-surface-elevated);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--color-border-subtle);
-    }
+/* Box visuals (padding, surface, radius, border) now come from the wrapping
+   <app-card>. The .toc <nav> remains the internal scroll container below. */
 
     /* Constrain the TOC to the viewport space below the sticky header so it
        never runs off-screen; scroll internally when the list is longer.

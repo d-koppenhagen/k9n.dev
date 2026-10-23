@@ -103,18 +103,22 @@
   gap: var(--space-sm);
 }
 
-.book-details__topics li {
+/* The <li> is a plain grid cell now; box visuals live on the wrapping
+   <app-card variant="elevated" padding="sm">, which fills the cell. */
+.book-details__topics app-card {
+  display: block;
+}
+
+/* Inner wrapper keeps the ✓ marker + text in a row inside the block Card. */
+.book-topic {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
   font-size: var(--font-size-base);
   color: var(--color-text-primary);
-  padding: var(--space-sm) var(--space-md);
-  background-color: var(--color-surface-elevated);
-  border-radius: var(--radius-md);
 }
 
-.book-details__topics li::before {
+.book-topic::before {
   content: '✓';
   color: var(--color-accent);
   font-weight: 700;

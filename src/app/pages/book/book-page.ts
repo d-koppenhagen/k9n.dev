@@ -3,11 +3,12 @@ import { NgOptimizedImage } from '@angular/common';
 import { MetaManager } from '../../services/meta/meta';
 import { SITE_CONFIG } from '../../config/site.config';
 import { JsonLdBook } from '../../models/json-ld.model';
+import { Card } from '../../components/card/card';
 
 @Component({
   selector: 'app-book-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, Card],
   templateUrl: './book-page.html',
   styleUrl: './book-page.css',
 })

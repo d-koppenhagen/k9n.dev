@@ -1,12 +1,13 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MetaManager } from '../../services/meta/meta';
 import { SmartLink } from '../../directives/smart-link/smart-link';
+import { Card } from '../../components/card/card';
 import { AUTHOR } from '../../../data/author';
 
 @Component({
   selector: 'app-contact-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SmartLink],
+  imports: [SmartLink, Card],
   templateUrl: './contact-page.html',
   styleUrl: './contact-page.css',
 })

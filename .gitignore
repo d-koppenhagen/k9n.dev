@@ -52,7 +52,7 @@ Thumbs.db
 
 # AI Config
 .kiro/
-.agents/skills/
+.agents/
 
 # Playwright
 .playwright-mcp

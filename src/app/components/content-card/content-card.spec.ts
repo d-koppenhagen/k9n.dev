@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
 import { ContentCard, CardThumbnail, SeriesItem } from './content-card';
 import { Component, LOCALE_ID } from '@angular/core';
@@ -239,7 +240,8 @@ describe('ContentCard', () => {
       // Navigating the carousel changes the selected slide. The priority binding
       // must stay stable, otherwise NgOptimizedImage throws NG02953 and the
       // carousel controls become unusable.
-      const card = fixture.debugElement.children[0].children[0].componentInstance as ContentCard;
+      const card = fixture.debugElement.query(By.directive(ContentCard))
+        .componentInstance as ContentCard;
       // currentSlide is a linkedSignal backing the carousel selection.
       (card as unknown as { currentSlide: { set: (v: number) => void } }).currentSlide.set(2);
       fixture.detectChanges();
