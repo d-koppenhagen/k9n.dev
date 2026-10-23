@@ -6,7 +6,7 @@
       [attr.lang]="locale.code"
       [attr.aria-current]="isActive(locale) ? 'true' : null"
       [attr.href]="getTargetUrl(locale)"
-      [attr.aria-label]="locale.label"
+      [attr.aria-label]="(locale.code | uppercase) + ' – ' + locale.label"
       [title]="locale.label"
       (click)="switchTo(locale); $event.preventDefault()"
     >
