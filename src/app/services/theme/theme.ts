@@ -55,7 +55,35 @@ export class Theme {
 
     if (isPlatformBrowser(this.platformId)) {
       this.document.documentElement.setAttribute('data-theme', resolved);
+      this.updateThemeColorMeta();
     }
+  }
+
+  /**
+   * Keeps the `theme-color` meta tag in sync with the active theme so that the
+   * browser UI (e.g. the iOS Safari address bar) matches the app background.
+   *
+   * The color is read from the `--color-background-primary` design token at
+   * runtime — after `data-theme` has been applied — so the value never needs to
+   * be duplicated in TypeScript.
+   */
+  private updateThemeColorMeta(): void {
+    const backgroundColor = getComputedStyle(this.document.documentElement)
+      .getPropertyValue('--color-background-primary')
+      .trim();
+
+    if (!backgroundColor) {
+      return;
+    }
+
+    let meta = this.document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+    if (!meta) {
+      meta = this.document.createElement('meta');
+      meta.setAttribute('name', 'theme-color');
+      this.document.head.appendChild(meta);
+    }
+
+    meta.setAttribute('content', backgroundColor);
   }
 
   private resolveTheme(): ResolvedTheme {
