@@ -326,10 +326,6 @@
         <source>E-Mail</source>
         <target>Email</target>
       </trans-unit>
-      <trans-unit id="page.contact.email.ariaLabel" datatype="html">
-        <source>E-Mail senden an mail at k9n.dev</source>
-        <target>Send email to mail at k9n.dev</target>
-      </trans-unit>
       <trans-unit id="page.contact.social.heading" datatype="html">
         <source>Soziale Medien</source>
         <target>Social Media</target>
@@ -405,10 +401,6 @@
       <trans-unit id="page.imprint.email.label" datatype="html">
         <source>E-Mail:</source>
         <target>Email:</target>
-      </trans-unit>
-      <trans-unit id="page.imprint.email.ariaLabel" datatype="html">
-        <source>E-Mail senden an mail at k9n.dev</source>
-        <target>Send email to mail at k9n.dev</target>
       </trans-unit>
       <trans-unit id="page.imprint.phone.label" datatype="html">
         <source>Telefon:</source>
