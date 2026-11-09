@@ -7,7 +7,10 @@
     >
       @for (item of seriesItems(); track item.routeLink; let idx = $index) {
         <div class="card__panel">
-          <a class="card__link" [appSmartLink]="item.routeLink" [externalUrl]="item.externalUrl" [hreflang]="item.hreflang" [ariaLabel]="item.title">
+          <a class="card__link" [appSmartLink]="item.routeLink" [externalUrl]="item.externalUrl" [hreflang]="item.hreflang">
+            @if (item.externalUrl) {
+              <span class="visually-hidden" i18n="link hint|Opens in a new tab hint@@contentCard.opensInNewTab.hint">öffnet in einem neuen Tab</span>
+            }
             @if (getThumb(item)) {
               <div class="card__image-wrapper">
                 <img
@@ -64,7 +67,10 @@
 } @else {
   <app-card variant="card" radius="lg" [lift]="true" [focusRing]="true" padding="none">
     <article class="card-inner">
-    <a class="card__link" [appSmartLink]="routeLink()" [externalUrl]="externalUrl()" [hreflang]="hreflang()" [ariaLabel]="title()">
+    <a class="card__link" [appSmartLink]="routeLink()" [externalUrl]="externalUrl()" [hreflang]="hreflang()">
+      @if (externalUrl()) {
+        <span class="visually-hidden" i18n="link hint|Opens in a new tab hint@@contentCard.opensInNewTab.hint">öffnet in einem neuen Tab</span>
+      }
       @if (thumbnailSrc()) {
         <div class="card__image-wrapper">
           <img

@@ -35,11 +35,24 @@
         <note priority="1" from="description">Default page loaded announcement</note>
         <note priority="1" from="meaning">route announcement</note>
       </trans-unit>
+      <trans-unit id="contentCard.opensInNewTab.hint" datatype="html">
+        <source>öffnet in einem neuen Tab</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
+          <context context-type="linenumber">12,15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
+          <context context-type="linenumber">72,75</context>
+        </context-group>
+        <note priority="1" from="description">Opens in a new tab hint</note>
+        <note priority="1" from="meaning">link hint</note>
+      </trans-unit>
       <trans-unit id="contentCard.publishedAt.seriesLabel" datatype="html">
         <source>Veröffentlicht auf <x id="INTERPOLATION" equiv-text="{{ item.publishedAt.name }}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
-          <context context-type="linenumber">38,39</context>
+          <context context-type="linenumber">41,42</context>
         </context-group>
         <note priority="1" from="description">Published at source</note>
         <note priority="1" from="meaning">card label</note>
@@ -48,7 +61,7 @@
         <source>Veröffentlicht auf <x id="INTERPOLATION" equiv-text="{{ publishedAt()!.name }}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
-          <context context-type="linenumber">95,96</context>
+          <context context-type="linenumber">101,102</context>
         </context-group>
         <note priority="1" from="description">Published at source</note>
         <note priority="1" from="meaning">card label</note>
@@ -57,7 +70,7 @@
         <source>Bevorstehend</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-card/content-card.html</context>
-          <context context-type="linenumber">101,104</context>
+          <context context-type="linenumber">107,110</context>
         </context-group>
         <note priority="1" from="description">Upcoming event badge</note>
         <note priority="1" from="meaning">badge label</note>

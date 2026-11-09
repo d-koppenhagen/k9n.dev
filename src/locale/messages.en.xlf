@@ -68,6 +68,10 @@
         <source>Nächster Teil</source>
         <target>Next part</target>
       </trans-unit>
+      <trans-unit id="contentCard.opensInNewTab.hint" datatype="html">
+        <source>öffnet in einem neuen Tab</source>
+        <target>opens in a new tab</target>
+      </trans-unit>
       <trans-unit id="contentCard.publishedAt.label" datatype="html">
         <source>Veröffentlicht auf <x id="INTERPOLATION" equiv-text="{{ publishedAt()!.name }}"/></source>
         <target>Published on <x id="INTERPOLATION" equiv-text="{{ publishedAt()!.name }}"/></target>
