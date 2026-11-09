@@ -129,12 +129,15 @@ describe('ContentCard', () => {
     expect(article).toBeTruthy();
   });
 
-  it('should have a link with aria-label matching the title', () => {
+  it('should derive the link accessible name from its content (the title)', () => {
     const fixture = TestBed.createComponent(TestHostComponent);
     fixture.detectChanges();
     const link = fixture.nativeElement.querySelector('a.card__link');
     expect(link).toBeTruthy();
-    expect(link.getAttribute('aria-label')).toBe('Test Post Title');
+    // The link no longer carries an aria-label; its accessible name comes from
+    // its content so the visible title is not overridden for screen readers.
+    expect(link.getAttribute('aria-label')).toBeNull();
+    expect(link.textContent).toContain('Test Post Title');
   });
 
   it('should link to the correct route', () => {
