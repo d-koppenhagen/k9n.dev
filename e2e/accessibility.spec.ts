@@ -31,6 +31,32 @@ for (const theme of themes) {
       await page.goto(path, { waitUntil: 'domcontentloaded' });
       await page.locator(`html[data-theme="${theme}"]`).waitFor({ timeout: 5000 });
 
+      // Wait for a settled paint before scanning. The theme is applied via a
+      // `data-theme` attribute whose tokens drive CSS transitions (e.g. the
+      // interactive cards animate their `background-color`). Scanning on the
+      // very next frame can catch a mid-transition background, which makes
+      // axe's color-contrast heuristic blend against a half-applied color and
+      // report false positives. Waiting for web fonts to finish loading and
+      // for any running transitions to complete gives axe a stable surface to
+      // measure — without resorting to `networkidle`, which hangs on slow
+      // third-party thumbnails.
+      await page.evaluate(async () => {
+        await document.fonts.ready;
+        const transitioning = Array.from(document.querySelectorAll('*')).map(
+          (el) =>
+            Promise.race([
+              new Promise<void>((resolve) =>
+                el.addEventListener('transitionend', () => resolve(), { once: true }),
+              ),
+              new Promise<void>((resolve) => setTimeout(resolve, 500)),
+            ]),
+        );
+        await Promise.all([
+          ...transitioning,
+          new Promise<void>((resolve) => requestAnimationFrame(() => resolve())),
+        ]);
+      });
+
       // Exclude the contents of embedded slide decks (e.g. reveal.js talks
       // rendered inside an <iframe>). These are third-party pages we cannot
       // change, so their internal a11y issues (like `nested-interactive`)
