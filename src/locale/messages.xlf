@@ -103,11 +103,29 @@
           <context context-type="linenumber">55,56</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="contentFilter.language.de" datatype="html">
+        <source>Deutsch</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
+          <context context-type="linenumber">68,70</context>
+        </context-group>
+        <note priority="1" from="description">German language name</note>
+        <note priority="1" from="meaning">language name</note>
+      </trans-unit>
+      <trans-unit id="contentFilter.language.en" datatype="html">
+        <source>English</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
+          <context context-type="linenumber">70,74</context>
+        </context-group>
+        <note priority="1" from="description">English language name</note>
+        <note priority="1" from="meaning">language name</note>
+      </trans-unit>
       <trans-unit id="contentFilter.search.label" datatype="html">
         <source>Suche</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
-          <context context-type="linenumber">73,76</context>
+          <context context-type="linenumber">77,80</context>
         </context-group>
         <note priority="1" from="description">Search input label</note>
         <note priority="1" from="meaning">label</note>
@@ -116,28 +134,28 @@
         <source>Suchen...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
-          <context context-type="linenumber">78,79</context>
+          <context context-type="linenumber">82,83</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contentFilter.activeFilters.ariaLabel" datatype="html">
         <source>Aktive Filter</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
-          <context context-type="linenumber">89</context>
+          <context context-type="linenumber">93</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contentFilter.clearAll.ariaLabel" datatype="html">
         <source>Alle Filter löschen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
-          <context context-type="linenumber">104,105</context>
+          <context context-type="linenumber">108,109</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contentFilter.clearAll.text" datatype="html">
         <source>Alle löschen</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/content-filter/content-filter.html</context>
-          <context context-type="linenumber">108,113</context>
+          <context context-type="linenumber">112,117</context>
         </context-group>
         <note priority="1" from="description">Clear all filters button</note>
         <note priority="1" from="meaning">button text</note>

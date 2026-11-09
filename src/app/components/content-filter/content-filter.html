@@ -60,11 +60,15 @@
               [class.content-filter__language-btn--active]="language() === option.value"
               [attr.aria-pressed]="language() === option.value"
               [attr.lang]="option.value"
-              [attr.aria-label]="option.label"
               [title]="option.value ? option.label : ''"
               (click)="setLanguage(option.value)"
             >
               {{ (option.value | uppercase) || option.label }}
+              @if (option.value === 'de') {
+                <span class="visually-hidden" i18n="language name|German language name@@contentFilter.language.de">Deutsch</span>
+              } @else if (option.value === 'en') {
+                <span class="visually-hidden" i18n="language name|English language name@@contentFilter.language.en">English</span>
+              }
             </button>
           }
         </fieldset>

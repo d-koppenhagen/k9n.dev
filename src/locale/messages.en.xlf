@@ -96,6 +96,14 @@
         <source>Inhaltssprache</source>
         <target>Content language</target>
       </trans-unit>
+      <trans-unit id="contentFilter.language.de" datatype="html">
+        <source>Deutsch</source>
+        <target>German</target>
+      </trans-unit>
+      <trans-unit id="contentFilter.language.en" datatype="html">
+        <source>English</source>
+        <target>English</target>
+      </trans-unit>
       <trans-unit id="contentFilter.search.label" datatype="html">
         <source>Suche</source>
         <target>Search</target>
