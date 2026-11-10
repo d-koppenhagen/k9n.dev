@@ -4925,8 +4925,8 @@ packages:
       uglify-js:
         optional: true
 
-  moment@2.27.0:
-    resolution: {integrity: sha512-al0MUK7cpIcglMv3YF13qSgdAIqxHTO7brRtaz3DlSULbqfazqkc5kEjNrLDOM7fsjshoFIihnU8snrP7zUvhQ==}
+  moment@2.31.0:
+    resolution: {integrity: sha512-0acOTfMiWOheYS4eoWb80yYMb/JLvVv9SHbs2PehaDzfUG0Bw855SKyk0IKTnPGa5+U2bmi3W68l1+sGLX/pvw==}
 
   mrmime@2.0.1:
     resolution: {integrity: sha512-Y3wQdFg2Va6etvQ5I82yUhGdsKrcYox6p7FfL1LbK2J4V01F9TGlepTIhnK24t7koZibmg82KGglhA1XK5IsLQ==}
@@ -10754,7 +10754,7 @@ snapshots:
     dependencies:
       commander: 4.1.1
       lodash.truncate: 4.4.2
-      moment: 2.27.0
+      moment: 2.31.0
       yaml-front-matter: 4.1.0
 
   marked-gfm-heading-id@4.1.4(marked@18.1.2):
@@ -10900,7 +10900,7 @@ snapshots:
       postcss: 8.5.28
       uglify-js: 3.19.3
 
-  moment@2.27.0: {}
+  moment@2.31.0: {}
 
   mrmime@2.0.1: {}
 
