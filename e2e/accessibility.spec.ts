@@ -40,8 +40,22 @@ for (const theme of themes) {
       // for any running transitions to complete gives axe a stable surface to
       // measure — without resorting to `networkidle`, which hangs on slow
       // third-party thumbnails.
+      //
+      // Mobile Safari (WebKit mobile emulation) schedules paints less
+      // predictably, so waiting for a single animation frame after the
+      // transitions occasionally still scans a not-yet-committed paint and
+      // reports a transient color-contrast false positive. To make the scan
+      // deterministic on every project we additionally:
+      //   1. use the Web Animations API (`getAnimations`) to wait for every
+      //      running transition/animation to actually `finished`, not just the
+      //      first `transitionend` that fires, and
+      //   2. settle across two animation frames plus a short fixed delay so the
+      //      browser has committed the final paint before axe measures colors.
       await page.evaluate(async () => {
         await document.fonts.ready;
+
+        // Wait for in-flight transitions to end (legacy event-based race kept
+        // as a floor) ...
         const transitioning = Array.from(document.querySelectorAll('*')).map(
           (el) =>
             Promise.race([
@@ -51,10 +65,28 @@ for (const theme of themes) {
               new Promise<void>((resolve) => setTimeout(resolve, 500)),
             ]),
         );
-        await Promise.all([
-          ...transitioning,
-          new Promise<void>((resolve) => requestAnimationFrame(() => resolve())),
-        ]);
+        // ... and, more robustly, for every active animation/transition to
+        // reach its finished state. `getAnimations` returns the real running
+        // animations, so this resolves exactly when the paint is stable rather
+        // than when the first unrelated transition happens to end.
+        const animations = document
+          .getAnimations({ subtree: true })
+          .map((animation) =>
+            Promise.race([
+              animation.finished.catch(() => undefined),
+              new Promise<void>((resolve) => setTimeout(resolve, 500)),
+            ]),
+          );
+
+        await Promise.all([...transitioning, ...animations]);
+
+        // Settle across two animation frames so the final style/paint is
+        // committed, then a short deterministic delay as a cross-engine guard
+        // (Mobile Safari commits paints a tick later than the desktop engines).
+        await new Promise<void>((resolve) =>
+          requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+        );
+        await new Promise<void>((resolve) => setTimeout(resolve, 100));
       });
 
       // Exclude the contents of embedded slide decks (e.g. reveal.js talks

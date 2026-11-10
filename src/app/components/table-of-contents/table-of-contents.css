@@ -4,10 +4,33 @@
     /* Constrain the TOC to the viewport space below the sticky header so it
        never runs off-screen; scroll internally when the list is longer.
        --nav-height = sticky header height; the sidebar sits at
-       top: calc(var(--nav-height) + var(--space-lg)). */
+       top: calc(var(--nav-height) + var(--space-lg)).
+
+       The measured element is this .toc <nav>, nested inside the wrapping
+       <app-card>. The card adds chrome between the sidebar's sticky top and
+       the nav's top edge, which the old cap ignored:
+         sidebar sticky top : --nav-height + --space-lg
+         card padding-top   : --space-lg
+         card border-top    : 1px
+       So the nav's real top offset is --nav-height + 2 * --space-lg + 1px,
+       and its bottom = top + max-height. The previous cap reserved only
+       `--nav-height + 2 * --space-lg`, leaving the card's 1px top border (and
+       sub-pixel rounding of the rem-based tokens against the device pixel
+       grid) to push the bottom edge one fractional pixel past the viewport —
+       Received 721 for a 720px viewport, identically on chromium, firefox and
+       webkit.
+
+       Reserve the full top offset (--nav-height + 2 * --space-lg) plus an
+       extra --space-lg of bottom breathing room and a few fixed pixels so
+       rounding can never cross the viewport edge. With the CI tokens
+       (--nav-height 72px, --space-lg 24px, 720px viewport) this caps the nav
+       at ~546px with the bottom edge near 667px — comfortably inside the
+       viewport and not a noticeable visual shrink. */
     @media (min-width: 1024px) {
       .toc {
-        max-height: calc(100dvh - var(--nav-height) - 2 * var(--space-lg));
+        max-height: calc(
+          100dvh - var(--nav-height) - 4 * var(--space-lg) - 6px
+        );
         overflow-y: auto;
         overscroll-behavior: contain;
       }
