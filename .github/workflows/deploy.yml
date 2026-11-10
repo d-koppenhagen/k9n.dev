@@ -9,6 +9,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: write
 
 concurrency:
   group: pages
@@ -50,6 +51,21 @@ jobs:
         run: pnpm exec tsx scripts/post-build.ts
 
       - uses: actions/configure-pages@v6
+
+      # On a re-run, a `github-pages` artifact from a previous attempt can linger
+      # in the same run. `actions/deploy-pages` then fails with
+      # "Multiple artifacts named github-pages were unexpectedly found".
+      # Remove any pre-existing `github-pages` artifact before uploading a fresh one.
+      - name: Delete stale Pages artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts" \
+            --jq '.artifacts[] | select(.name=="github-pages") | .id' \
+          | while read -r id; do
+              echo "Deleting stale github-pages artifact $id"
+              gh api -X DELETE "repos/${GITHUB_REPOSITORY}/actions/artifacts/$id"
+            done
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
