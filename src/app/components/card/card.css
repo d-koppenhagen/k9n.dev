@@ -3,6 +3,7 @@
    overrides it with the full border token below. */
 :host {
   display: block;
+  height: 100%;
   border: 1px solid var(--color-border-subtle);
   transition:
     box-shadow var(--transition-base),
